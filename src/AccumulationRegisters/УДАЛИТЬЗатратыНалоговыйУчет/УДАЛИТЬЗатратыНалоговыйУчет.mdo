@@ -1,0 +1,238 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:AccumulationRegister xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:core="http://g5.1c.ru/v8/dt/mcore" xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="d555016b-e8ed-4668-bb60-a55cd125c058">
+  <producedTypes>
+    <selectionType typeId="6e1aba9b-d2e7-4639-abb8-a08a879024c8" valueTypeId="6e2c05c3-d8ca-4109-a63a-b0d412f6be6c"/>
+    <listType typeId="ce820006-8e57-4bf2-983d-d46bdebf5013" valueTypeId="badeacd6-adc3-4ebd-a873-a8595a64db11"/>
+    <managerType typeId="220c6bb3-4884-4725-8ead-88e275f3547c" valueTypeId="bc66044a-bc2c-43e5-bedf-651af22ef48f"/>
+    <recordSetType typeId="10f62b0a-03e6-4aca-96ff-c43116d06a9e" valueTypeId="846e87b4-593f-4ebd-b5e0-9426beef6bdf"/>
+    <recordKeyType typeId="a7a9c247-8e3c-46cd-96af-2bc14ff34970" valueTypeId="ed05151d-98b2-474b-8a99-17332f561bf4"/>
+    <recordType typeId="6f1347d3-d8cb-425c-83f1-c342348ac09c" valueTypeId="a266560b-b2af-4e9f-b99b-a5f0bbc84554"/>
+  </producedTypes>
+  <name>УДАЛИТЬЗатратыНалоговыйУчет</name>
+  <synonym>
+    <key>ru</key>
+    <value>Затраты (налоговый учет)</value>
+  </synonym>
+  <comment>(Регл)</comment>
+  <enableTotalsSplitting>true</enableTotalsSplitting>
+  <resources uuid="894d7aba-6fbd-4e21-841c-f8173682d3b6">
+    <name>Сумма</name>
+    <synonym>
+      <key>ru</key>
+      <value>Сумма</value>
+    </synonym>
+    <type>
+      <types>Number</types>
+      <numberQualifiers>
+        <precision>15</precision>
+        <scale>2</scale>
+      </numberQualifiers>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+  </resources>
+  <resources uuid="aca1f18a-de47-4f53-b4e5-54054f4cfe71">
+    <name>СуммаВР</name>
+    <synonym>
+      <key>ru</key>
+      <value>Сумма валовых расходов</value>
+    </synonym>
+    <type>
+      <types>Number</types>
+      <numberQualifiers>
+        <precision>15</precision>
+        <scale>2</scale>
+      </numberQualifiers>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+  </resources>
+  <resources uuid="f025a03d-449d-469c-bbe8-d1fb6b08a99c">
+    <name>НДСВходящий</name>
+    <synonym>
+      <key>ru</key>
+      <value>НДС входящий</value>
+    </synonym>
+    <type>
+      <types>Number</types>
+      <numberQualifiers>
+        <precision>15</precision>
+        <scale>2</scale>
+      </numberQualifiers>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+  </resources>
+  <resources uuid="6661a2d4-ef03-49fe-8e2d-cd93b1a83943">
+    <name>НДСКредит</name>
+    <synonym>
+      <key>ru</key>
+      <value>НДС кредит</value>
+    </synonym>
+    <type>
+      <types>Number</types>
+      <numberQualifiers>
+        <precision>15</precision>
+        <scale>2</scale>
+      </numberQualifiers>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+  </resources>
+  <attributes uuid="5ed7f61e-21a3-4c7f-b4d8-587082582f93">
+    <name>СписаниеПартий</name>
+    <synonym>
+      <key>ru</key>
+      <value>Списание партий</value>
+    </synonym>
+    <type>
+      <types>Boolean</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+  </attributes>
+  <attributes uuid="9b8cb06d-ddc3-47be-aaf1-e246aa80254e">
+    <name>КодОперации</name>
+    <synonym>
+      <key>ru</key>
+      <value>Код операции</value>
+    </synonym>
+    <type>
+      <types>EnumRef.КодыОперацийЗатраты</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+  </attributes>
+  <attributes uuid="27fa30da-fe55-4376-9738-05d214e341a0">
+    <name>ВидРегламентнойОперации</name>
+    <synonym>
+      <key>ru</key>
+      <value>Вид регламентной операции</value>
+    </synonym>
+    <type>
+      <types>EnumRef.ВидыРегламентныхОпераций</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+  </attributes>
+  <attributes uuid="fd4f991c-dddd-4786-b4f6-2846a3b1ff2f">
+    <name>НалоговоеНазначениеПоФакту</name>
+    <synonym>
+      <key>ru</key>
+      <value>Налоговое назначение по факту</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.НалоговыеНазначенияАктивовИЗатрат</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+  </attributes>
+  <dimensions uuid="489944c9-81c4-4021-b8cc-bd66cffd94b5">
+    <name>Организация</name>
+    <synonym>
+      <key>ru</key>
+      <value>Организация</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.Организации</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <useInTotals>true</useInTotals>
+  </dimensions>
+  <dimensions uuid="75f37a6c-11b5-4a2e-b344-79b291a9e317">
+    <name>Подразделение</name>
+    <synonym>
+      <key>ru</key>
+      <value>Подразделение</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.ПодразделенияОрганизаций</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <useInTotals>true</useInTotals>
+  </dimensions>
+  <dimensions uuid="73a07057-93b9-4985-9c97-0b572f1d7591">
+    <name>СтатьяЗатрат</name>
+    <synonym>
+      <key>ru</key>
+      <value>Статья затрат</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.СтатьиЗатрат</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <indexing>Index</indexing>
+    <fullTextSearch>Use</fullTextSearch>
+    <useInTotals>true</useInTotals>
+  </dimensions>
+  <dimensions uuid="d0ee6a2c-57a9-43ee-a01f-33c360282efd">
+    <name>НоменклатурнаяГруппа</name>
+    <synonym>
+      <key>ru</key>
+      <value>Номенклатурная группа</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.НоменклатурныеГруппы</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <useInTotals>true</useInTotals>
+  </dimensions>
+  <dimensions uuid="d90dade0-25ef-46d2-a42b-98a9f79f0b94">
+    <name>Заказ</name>
+    <synonym>
+      <key>ru</key>
+      <value>Заказ</value>
+    </synonym>
+    <type>
+      <types>DocumentRef.ЗаказНаПроизводство</types>
+      <types>DocumentRef.ЗаказПокупателя</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <useInTotals>true</useInTotals>
+  </dimensions>
+  <dimensions uuid="7f9ccc57-c6cf-4e84-9d32-780e6580aa9e">
+    <name>НалоговоеНазначение</name>
+    <synonym>
+      <key>ru</key>
+      <value>Налоговое назначение</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.НалоговыеНазначенияАктивовИЗатрат</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <useInTotals>true</useInTotals>
+  </dimensions>
+  <dimensions uuid="1fc5d74a-e660-48fa-bd1f-b2823b316e36">
+    <name>СчетУчетаБУ</name>
+    <synonym>
+      <key>ru</key>
+      <value>Счет учета (БУ)</value>
+    </synonym>
+    <type>
+      <types>ChartOfAccountsRef.Хозрасчетный</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <useInTotals>true</useInTotals>
+  </dimensions>
+</mdclass:AccumulationRegister>

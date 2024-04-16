@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:EventSubscription xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="bc0bcfee-f98e-48b5-99c0-937ba82affa4">
+  <name>ПроверкаВидаВзаиморасчетовВПлатежныхДокументах</name>
+  <synonym>
+    <key>ru</key>
+    <value>Проверка вида взаиморасчетов в платежных документах</value>
+  </synonym>
+  <source>
+    <types>DocumentObject.ПлатежноеПоручениеВходящее</types>
+    <types>DocumentObject.ПриходныйКассовыйОрдер</types>
+    <types>DocumentObject.РасходныйКассовыйОрдер</types>
+    <types>DocumentObject.ПлатежноеПоручениеИсходящее</types>
+  </source>
+  <event>Posting</event>
+  <handler>CommonModule.ПроведениеДокументов.ПроверкаВидаВзаиморасчетовВПлатежныхДокументахОбработкаПроведения</handler>
+</mdclass:EventSubscription>

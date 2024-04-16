@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:InformationRegister xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:core="http://g5.1c.ru/v8/dt/mcore" xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="d9b7bd33-3353-464d-ac4c-5a911f8c62a8">
+  <producedTypes>
+    <selectionType typeId="e824b1cd-5e26-480b-97f2-9e6b31afa8f0" valueTypeId="1ee3cfd1-2235-40e8-80d4-d2d613ce8121"/>
+    <listType typeId="6b8ab8c4-0cca-4ae2-b976-423d5917d8dd" valueTypeId="01b1b78b-0060-4b23-8491-78dd5ffe3bee"/>
+    <managerType typeId="c7e07033-12e4-46bd-ba35-dba067462a75" valueTypeId="338a68cc-c0be-4af0-84f2-9211fb5a0407"/>
+    <recordSetType typeId="d445d37b-f79a-4bc1-bca9-6300817f5bae" valueTypeId="47924c07-7c94-429b-a1f1-32aefd6b3014"/>
+    <recordKeyType typeId="0986e116-9a98-456d-b853-adaadc236414" valueTypeId="cd11baae-2f5a-48b2-b0fc-6af46fa23d11"/>
+    <recordType typeId="71abf213-a62c-4a9c-9482-49b9e5429405" valueTypeId="be2bf818-7469-48db-88f1-ddbf08479556"/>
+    <recordManagerType typeId="7491ad4a-6864-49a2-a5cb-0dab34b00760" valueTypeId="8a5664b2-3824-45bd-bd5d-3048bfb47789"/>
+  </producedTypes>
+  <name>ГрафикиРаботыПоСменам</name>
+  <synonym>
+    <key>ru</key>
+    <value>Графики работы по сменам</value>
+  </synonym>
+  <comment>(Упр)</comment>
+  <editType>InDialog</editType>
+  <includeHelpInContents>true</includeHelpInContents>
+  <help>
+    <pages>
+      <lang>ru</lang>
+    </pages>
+  </help>
+  <resources uuid="9d8378ad-f39b-4eff-b373-462b16d4d4da">
+    <name>Часы</name>
+    <synonym>
+      <key>ru</key>
+      <value>Часы</value>
+    </synonym>
+    <type>
+      <types>Number</types>
+      <numberQualifiers>
+        <precision>5</precision>
+        <scale>2</scale>
+        <nonNegative>true</nonNegative>
+      </numberQualifiers>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:UndefinedValue"/>
+  </resources>
+  <resources uuid="d01806f6-200b-4e4f-a0b1-67de2858fe22">
+    <name>ВечерниеЧасы</name>
+    <synonym>
+      <key>ru</key>
+      <value>Вечерние часы</value>
+    </synonym>
+    <type>
+      <types>Number</types>
+      <numberQualifiers>
+        <precision>5</precision>
+        <scale>2</scale>
+        <nonNegative>true</nonNegative>
+      </numberQualifiers>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:UndefinedValue"/>
+  </resources>
+  <resources uuid="29f7ee16-c2e3-4331-b124-126ebe9a0a1b">
+    <name>НочныеЧасы</name>
+    <synonym>
+      <key>ru</key>
+      <value>Ночные часы</value>
+    </synonym>
+    <type>
+      <types>Number</types>
+      <numberQualifiers>
+        <precision>5</precision>
+        <scale>2</scale>
+        <nonNegative>true</nonNegative>
+      </numberQualifiers>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:UndefinedValue"/>
+  </resources>
+  <dimensions uuid="b5cadae7-7cb0-4a58-94d1-87932ca5e0cd">
+    <name>ГрафикРаботы</name>
+    <synonym>
+      <key>ru</key>
+      <value>График работы</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.ГрафикиРаботы</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <denyIncompleteValues>true</denyIncompleteValues>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillFromFillingValue>true</fillFromFillingValue>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <master>true</master>
+    <mainFilter>true</mainFilter>
+  </dimensions>
+  <dimensions uuid="32e56a7e-f054-40a0-86b1-344c7ee4d2fa">
+    <name>Смена</name>
+    <synonym>
+      <key>ru</key>
+      <value>Смена</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.ГрафикиРаботы</types>
+      <types>CatalogRef.Смены</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <mainFilter>true</mainFilter>
+  </dimensions>
+  <dimensions uuid="93c9912e-4113-4296-91a0-1596193354db">
+    <name>Дата</name>
+    <synonym>
+      <key>ru</key>
+      <value>Дата</value>
+    </synonym>
+    <type>
+      <types>Date</types>
+      <dateQualifiers>
+        <dateFractions>Date</dateFractions>
+      </dateQualifiers>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <denyIncompleteValues>true</denyIncompleteValues>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <mainFilter>true</mainFilter>
+  </dimensions>
+</mdclass:InformationRegister>

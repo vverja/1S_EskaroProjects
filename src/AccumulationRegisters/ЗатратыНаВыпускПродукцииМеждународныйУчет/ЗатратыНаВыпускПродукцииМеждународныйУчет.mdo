@@ -1,0 +1,324 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:AccumulationRegister xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:core="http://g5.1c.ru/v8/dt/mcore" xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="493ef77a-8ec5-442b-b707-08c37f041b48">
+  <producedTypes>
+    <selectionType typeId="ccb4e614-2496-44ae-bc42-b90d04850d39" valueTypeId="a9cf156b-fa96-47d2-917b-ebf2363f31b9"/>
+    <listType typeId="361df472-ad13-49d4-8c13-2c506807d181" valueTypeId="5c626908-2e73-4daf-a21f-bbb2bf0891f4"/>
+    <managerType typeId="24f8847f-c7f7-41de-8592-1c4395022e00" valueTypeId="e5645d5a-c01f-4728-a5a6-3d9ff7af6b08"/>
+    <recordSetType typeId="3f26a6ba-989b-4ffa-8a53-1d22bba2f54a" valueTypeId="7cc20969-fe90-49e7-a7d8-fcfd201865a4"/>
+    <recordKeyType typeId="28c45c27-3bfe-4a28-8788-09be314f6dd7" valueTypeId="9d3a1675-b9f5-4448-9f96-62e7382bbc61"/>
+    <recordType typeId="1965b5ad-fb8f-4f58-a9e6-5f4bc71994b8" valueTypeId="cd96f056-de05-45a4-a4a6-2cfb00cea111"/>
+  </producedTypes>
+  <name>ЗатратыНаВыпускПродукцииМеждународныйУчет</name>
+  <synonym>
+    <key>ru</key>
+    <value>Затраты на выпуск продукции (международный учет)</value>
+  </synonym>
+  <comment>(Упр)</comment>
+  <registerType>Turnovers</registerType>
+  <enableTotalsSplitting>true</enableTotalsSplitting>
+  <resources uuid="d864f8e0-a176-4102-88be-4000944bae11">
+    <name>Количество</name>
+    <synonym>
+      <key>ru</key>
+      <value>Количество</value>
+    </synonym>
+    <type>
+      <types>Number</types>
+      <numberQualifiers>
+        <precision>15</precision>
+        <scale>3</scale>
+      </numberQualifiers>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+  </resources>
+  <resources uuid="a21cc1d0-467d-4ca4-a667-811df6a30376">
+    <name>Сумма</name>
+    <synonym>
+      <key>ru</key>
+      <value>Сумма</value>
+    </synonym>
+    <type>
+      <types>Number</types>
+      <numberQualifiers>
+        <precision>15</precision>
+        <scale>2</scale>
+      </numberQualifiers>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+  </resources>
+  <attributes uuid="bf3fa536-a83c-4bde-832f-5feb80ecb7de">
+    <name>КодОперации</name>
+    <synonym>
+      <key>ru</key>
+      <value>Код операции</value>
+    </synonym>
+    <type>
+      <types>EnumRef.КодыОперацийЗатратыНаВыпускПродукции</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <indexing>Index</indexing>
+    <fullTextSearch>Use</fullTextSearch>
+  </attributes>
+  <attributes uuid="707e73df-6168-4aae-8aba-30f45a807856">
+    <name>ЗатратыВстречногоВыпуска</name>
+    <synonym>
+      <key>ru</key>
+      <value>Затраты встречного выпуска</value>
+    </synonym>
+    <comment>(Общ)</comment>
+    <type>
+      <types>Boolean</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+  </attributes>
+  <attributes uuid="ce6f625c-625a-4863-a43e-fc17e2d5db8a">
+    <name>КосвенныеЗатраты</name>
+    <synonym>
+      <key>ru</key>
+      <value>Косвенные затраты</value>
+    </synonym>
+    <type>
+      <types>Boolean</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+  </attributes>
+  <dimensions uuid="3d65d3a9-f0fd-4e1b-aa7c-19ad8b6b4751">
+    <name>Организация</name>
+    <synonym>
+      <key>ru</key>
+      <value>Организация</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.Организации</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+  </dimensions>
+  <dimensions uuid="56fc114b-2bff-4c93-9c87-13d91f794ebb">
+    <name>Подразделение</name>
+    <synonym>
+      <key>ru</key>
+      <value>Подразделение</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.ПодразделенияОрганизаций</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <indexing>Index</indexing>
+    <fullTextSearch>Use</fullTextSearch>
+  </dimensions>
+  <dimensions uuid="f33b48a1-8c5b-41d8-af41-8067a5fe1e1f">
+    <name>НоменклатурнаяГруппа</name>
+    <synonym>
+      <key>ru</key>
+      <value>Номенклатурная группа</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.НоменклатурныеГруппы</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+  </dimensions>
+  <dimensions uuid="2b5841ef-685d-4acb-8532-c1ac5e5cb207">
+    <name>СчетУчета</name>
+    <synonym>
+      <key>ru</key>
+      <value>Счет учета</value>
+    </synonym>
+    <type>
+      <types>ChartOfAccountsRef.Международный</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+  </dimensions>
+  <dimensions uuid="17c07461-0f38-439f-9091-d87c7a023e79">
+    <name>Продукция</name>
+    <synonym>
+      <key>ru</key>
+      <value>Продукция</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.Номенклатура</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+  </dimensions>
+  <dimensions uuid="14393d04-21ab-40c1-90fa-6c6c64a21a1c">
+    <name>ХарактеристикаПродукции</name>
+    <synonym>
+      <key>ru</key>
+      <value>Характеристика продукции</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.ХарактеристикиНоменклатуры</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+  </dimensions>
+  <dimensions uuid="cb91590e-6359-42e8-b5d4-0c7771768c3d">
+    <name>СерияПродукции</name>
+    <synonym>
+      <key>ru</key>
+      <value>Серия продукции</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.СерииНоменклатуры</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+  </dimensions>
+  <dimensions uuid="92416b3d-5d79-40e1-852c-e6ad98d161de">
+    <name>Спецификация</name>
+    <synonym>
+      <key>ru</key>
+      <value>Спецификация</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.СпецификацииНоменклатуры</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+  </dimensions>
+  <dimensions uuid="6bc9e36e-e134-41ab-bbc6-ea75d98e2e26">
+    <name>Заказ</name>
+    <synonym>
+      <key>ru</key>
+      <value>Заказ</value>
+    </synonym>
+    <type>
+      <types>DocumentRef.ЗаказНаПроизводство</types>
+      <types>DocumentRef.ЗаказПокупателя</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+  </dimensions>
+  <dimensions uuid="db50fde6-39e2-406d-b9fe-12d520562c51">
+    <name>ДокументВыпуска</name>
+    <synonym>
+      <key>ru</key>
+      <value>Документ выпуска</value>
+    </synonym>
+    <type>
+      <types>DocumentRef.АктОбОказанииПроизводственныхУслуг</types>
+      <types>DocumentRef.ОтчетПроизводстваЗаСмену</types>
+      <types>DocumentRef.ПоступлениеТоваровИзПереработки</types>
+      <types>DocumentRef.КомплектацияНоменклатуры</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+  </dimensions>
+  <dimensions uuid="0a3144d6-915e-41f6-a83f-1e3f2e834f2b">
+    <name>СтатьяЗатрат</name>
+    <synonym>
+      <key>ru</key>
+      <value>Статья затрат</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.СтатьиЗатрат</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+  </dimensions>
+  <dimensions uuid="a96e672b-88b1-47a0-8471-4030b09cb6a1">
+    <name>Затрата</name>
+    <synonym>
+      <key>ru</key>
+      <value>Затрата</value>
+    </synonym>
+    <type>
+      <types>EnumRef.ХарактерЗатрат</types>
+      <types>CatalogRef.СпособыРаспределенияЗатратНаВыпуск</types>
+      <types>CatalogRef.Номенклатура</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <indexing>Index</indexing>
+    <fullTextSearch>Use</fullTextSearch>
+  </dimensions>
+  <dimensions uuid="bf6725ce-53d7-4ead-8fd5-ec01326a897c">
+    <name>ХарактеристикаЗатраты</name>
+    <synonym>
+      <key>ru</key>
+      <value>Характеристика затраты</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.ХарактеристикиНоменклатуры</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+  </dimensions>
+  <dimensions uuid="501832c6-159a-449f-8170-952d67f15024">
+    <name>СерияЗатраты</name>
+    <synonym>
+      <key>ru</key>
+      <value>Серия затраты</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.СерииНоменклатуры</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+  </dimensions>
+  <dimensions uuid="a273a5a2-3008-45a7-9d3e-924b3ef2a272">
+    <name>НоменклатурнаяГруппаНЗП</name>
+    <synonym>
+      <key>ru</key>
+      <value>Номенклатурная группа НЗП</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.НоменклатурныеГруппы</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+  </dimensions>
+  <dimensions uuid="10f2eec5-5a71-44d8-b3bc-be4cc7e6b51b">
+    <name>ЗаказНЗП</name>
+    <synonym>
+      <key>ru</key>
+      <value>Заказ НЗП</value>
+    </synonym>
+    <type>
+      <types>DocumentRef.ЗаказНаПроизводство</types>
+      <types>DocumentRef.ЗаказПокупателя</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+  </dimensions>
+  <dimensions uuid="bfff1f34-2033-4e12-99dd-c6f42161dea9">
+    <name>ПодразделениеНЗП</name>
+    <synonym>
+      <key>ru</key>
+      <value>Подразделение НЗП</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.ПодразделенияОрганизаций</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+  </dimensions>
+</mdclass:AccumulationRegister>

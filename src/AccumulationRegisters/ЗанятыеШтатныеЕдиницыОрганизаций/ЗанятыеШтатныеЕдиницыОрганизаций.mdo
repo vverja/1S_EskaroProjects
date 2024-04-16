@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:AccumulationRegister xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:core="http://g5.1c.ru/v8/dt/mcore" xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="129e8f8c-e899-4ada-bb8f-92feb90c5b45">
+  <producedTypes>
+    <selectionType typeId="ef190942-63e7-4f8f-89ba-644dd8fbe5fe" valueTypeId="e0312538-d09f-4e1f-a8c9-2c26361eae8c"/>
+    <listType typeId="89e48c24-273f-4f49-a9a3-71a0764125f0" valueTypeId="597042da-6db3-4170-9bcc-016df8573a8e"/>
+    <managerType typeId="9ca19123-ea40-455d-8c99-55dcd1d358e6" valueTypeId="c6a70c23-def4-4926-bff6-ca0b25e98a2d"/>
+    <recordSetType typeId="5de042e9-0288-495a-962f-a18590c65ca4" valueTypeId="bb1c9d50-6754-44bf-af71-86f35466ec84"/>
+    <recordKeyType typeId="4aea01d2-c363-4da4-bb1c-bff3914e7ac8" valueTypeId="8702309b-4f94-448b-9df8-36bf11a31a4d"/>
+    <recordType typeId="1e97b154-dd15-4de4-b8e0-4039f8ccbe34" valueTypeId="fb4be6a2-3094-4a05-9a6a-8dbfc9b82362"/>
+  </producedTypes>
+  <name>ЗанятыеШтатныеЕдиницыОрганизаций</name>
+  <synonym>
+    <key>ru</key>
+    <value>Занятые штатные единицы организаций</value>
+  </synonym>
+  <comment>(Регл)</comment>
+  <defaultListForm>AccumulationRegister.ЗанятыеШтатныеЕдиницыОрганизаций.Form.ФормаСписка</defaultListForm>
+  <enableTotalsSplitting>true</enableTotalsSplitting>
+  <resources uuid="4bb2ad66-056f-4961-974e-d5cc4d63e7ef">
+    <name>КоличествоСтавок</name>
+    <synonym>
+      <key>ru</key>
+      <value>Количество ставок</value>
+    </synonym>
+    <type>
+      <types>Number</types>
+      <numberQualifiers>
+        <precision>7</precision>
+        <scale>2</scale>
+        <nonNegative>true</nonNegative>
+      </numberQualifiers>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+  </resources>
+  <dimensions uuid="2612fa10-d113-4247-906c-c7a5d5ca4592">
+    <name>ПодразделениеОрганизации</name>
+    <synonym>
+      <key>ru</key>
+      <value>Подразделение организации</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.ПодразделенияОрганизаций</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <useInTotals>true</useInTotals>
+  </dimensions>
+  <dimensions uuid="25462226-7dda-4b37-b4ed-41765516758c">
+    <name>Должность</name>
+    <synonym>
+      <key>ru</key>
+      <value>Должность</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.ДолжностиОрганизаций</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <useInTotals>true</useInTotals>
+  </dimensions>
+  <forms uuid="3fd56afa-0fe9-4099-8869-9dcf04ad09b7">
+    <name>ФормаСписка</name>
+    <synonym>
+      <key>ru</key>
+      <value>Форма списка</value>
+    </synonym>
+    <formType>Ordinary</formType>
+    <usePurposes>PersonalComputer</usePurposes>
+    <usePurposes>MobileDevice</usePurposes>
+  </forms>
+</mdclass:AccumulationRegister>

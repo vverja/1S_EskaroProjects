@@ -1,0 +1,174 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:AccumulationRegister xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:core="http://g5.1c.ru/v8/dt/mcore" xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="48cd23f3-c408-4b64-9c46-41aa75a5eefc">
+  <producedTypes>
+    <selectionType typeId="b52af9a7-ca53-41d1-8305-55138791e4de" valueTypeId="318fd16d-5caf-4d99-aefd-9f1a474f9ec1"/>
+    <listType typeId="a45a7428-f894-4d02-b0c3-43bef5ffbe5e" valueTypeId="af19cc98-cb90-42fd-b9ee-2d19e3dc00e5"/>
+    <managerType typeId="39386818-bbf7-4d2c-a469-3bb49b7e7585" valueTypeId="bcca8392-e4e5-42aa-a278-0c334869b60d"/>
+    <recordSetType typeId="1571aae9-f07b-4876-b5e4-5ba6fbc32f5a" valueTypeId="1e657753-97c8-4f3e-879b-4201d7ba7035"/>
+    <recordKeyType typeId="2d158b41-1f13-4dac-8905-535dd9f0e4f4" valueTypeId="2c2936da-5f3b-4d0d-801a-5a5f0f495daf"/>
+    <recordType typeId="682fe177-a60f-46a5-b58d-206f85b3992c" valueTypeId="44ac36ce-0077-48e0-88c6-8e517b649f24"/>
+  </producedTypes>
+  <name>УдалитьРезервированиеТовараВЯчейках</name>
+  <synonym>
+    <key>ru</key>
+    <value>Удалить резервирование товара в ячейках</value>
+  </synonym>
+  <standardAttributes>
+    <dataHistory>Use</dataHistory>
+    <name>RecordType</name>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </standardAttributes>
+  <standardAttributes>
+    <dataHistory>Use</dataHistory>
+    <name>Active</name>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </standardAttributes>
+  <standardAttributes>
+    <dataHistory>Use</dataHistory>
+    <name>LineNumber</name>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </standardAttributes>
+  <standardAttributes>
+    <dataHistory>Use</dataHistory>
+    <name>Recorder</name>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </standardAttributes>
+  <standardAttributes>
+    <dataHistory>Use</dataHistory>
+    <name>Period</name>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fillChecking>ShowError</fillChecking>
+    <fullTextSearch>Use</fullTextSearch>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </standardAttributes>
+  <dataLockControlMode>Managed</dataLockControlMode>
+  <enableTotalsSplitting>true</enableTotalsSplitting>
+  <resources uuid="94738495-b90d-4779-ba59-6b0ffd1f6bd9">
+    <name>КоличествоЕХО</name>
+    <synonym>
+      <key>ru</key>
+      <value>Количество ЕХО</value>
+    </synonym>
+    <comment>(в единицах хранения остатков)</comment>
+    <type>
+      <types>Number</types>
+      <numberQualifiers>
+        <precision>15</precision>
+        <scale>3</scale>
+        <nonNegative>true</nonNegative>
+      </numberQualifiers>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+  </resources>
+  <resources uuid="b9f5ad6d-2747-4b38-93bf-12f5d032a609">
+    <name>УдалитьКоличество</name>
+    <synonym>
+      <key>ru</key>
+      <value>Удалить количество</value>
+    </synonym>
+    <type>
+      <types>Number</types>
+      <numberQualifiers>
+        <precision>15</precision>
+        <scale>3</scale>
+        <nonNegative>true</nonNegative>
+      </numberQualifiers>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+  </resources>
+  <dimensions uuid="8bc664ff-3706-41ed-a2b5-3d1525ff53c9">
+    <name>Склад</name>
+    <synonym>
+      <key>ru</key>
+      <value>Склад</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.Склады</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fillChecking>ShowError</fillChecking>
+    <fullTextSearch>Use</fullTextSearch>
+    <useInTotals>true</useInTotals>
+  </dimensions>
+  <dimensions uuid="a4b018ab-3c74-41e0-a51e-bfdff676f226">
+    <name>Ячейка</name>
+    <synonym>
+      <key>ru</key>
+      <value>Ячейка</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.СкладскиеЯчейки</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fillChecking>ShowError</fillChecking>
+    <fullTextSearch>Use</fullTextSearch>
+    <useInTotals>true</useInTotals>
+  </dimensions>
+  <dimensions uuid="e35dc549-ab93-44f9-ad10-9c14690c94fe">
+    <name>Номенклатура</name>
+    <synonym>
+      <key>ru</key>
+      <value>Номенклатура</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.Номенклатура</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fillChecking>ShowError</fillChecking>
+    <fullTextSearch>Use</fullTextSearch>
+    <useInTotals>true</useInTotals>
+  </dimensions>
+  <dimensions uuid="38396739-5671-4b98-b3ee-c233be6d9514">
+    <name>УдалитьЕдиница</name>
+    <synonym>
+      <key>ru</key>
+      <value>Удалить единица</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.ЕдиницыИзмерения</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fillChecking>ShowError</fillChecking>
+    <fullTextSearch>Use</fullTextSearch>
+    <useInTotals>true</useInTotals>
+  </dimensions>
+  <dimensions uuid="19b1192e-b93b-4eaa-bbdb-9f7b27ade4ed">
+    <name>УдалитьНомерПаллета</name>
+    <synonym>
+      <key>ru</key>
+      <value>Удалить номер паллета</value>
+    </synonym>
+    <type>
+      <types>Number</types>
+      <numberQualifiers>
+        <precision>8</precision>
+        <nonNegative>true</nonNegative>
+      </numberQualifiers>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <useInTotals>true</useInTotals>
+  </dimensions>
+</mdclass:AccumulationRegister>

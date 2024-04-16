@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:AccumulationRegister xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:core="http://g5.1c.ru/v8/dt/mcore" xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="24e1cb5f-8a4d-4fca-aca3-2123bd7d0795">
+  <producedTypes>
+    <selectionType typeId="c1a8c360-a033-4c3a-be4c-a62a9f5a94c9" valueTypeId="597c9a93-213b-4085-9bbe-2b318c62352a"/>
+    <listType typeId="d858464a-6f61-43b3-947f-544b9b28b0bf" valueTypeId="1a7991f6-89cb-496d-9d55-c14e1be38014"/>
+    <managerType typeId="74842ffb-1f4e-495f-99c0-fbbc76452f2d" valueTypeId="f2d09c33-a354-4a75-a9cb-aea13a837797"/>
+    <recordSetType typeId="2ae4ecf8-1470-452c-9175-f6f4cc5c2e96" valueTypeId="6c2bf978-139e-488c-a7c9-fd8d3d76da44"/>
+    <recordKeyType typeId="de0e947f-97c9-4e34-a18f-4fcc1d1bc9e5" valueTypeId="96326d44-6022-496f-a0d5-d5e499cd8a21"/>
+    <recordType typeId="f1e5daa5-edac-41a2-8a28-9f8d6e6f0a19" valueTypeId="db9e321f-1aa2-42e5-8f8e-1e214f9c3a69"/>
+  </producedTypes>
+  <name>ПродажиНалоговыйУчет</name>
+  <synonym>
+    <key>ru</key>
+    <value>Продажи налоговый учет</value>
+  </synonym>
+  <synonym>
+    <key>uk</key>
+    <value>Продажі податковий облік</value>
+  </synonym>
+  <enableTotalsSplitting>true</enableTotalsSplitting>
+  <resources uuid="2b60c1bd-0b26-483b-afde-6f4e7476c995">
+    <name>СуммаВзаиморасчетов</name>
+    <synonym>
+      <key>ru</key>
+      <value>Сумма взаиморасчетов</value>
+    </synonym>
+    <synonym>
+      <key>uk</key>
+      <value>Сума взаєморозрахунків регл</value>
+    </synonym>
+    <type>
+      <types>Number</types>
+      <numberQualifiers>
+        <precision>15</precision>
+        <scale>2</scale>
+      </numberQualifiers>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+  </resources>
+  <dimensions uuid="42ef70f7-a317-4a97-8f1b-01bbfbf51e38">
+    <name>Организация</name>
+    <synonym>
+      <key>ru</key>
+      <value>Организация</value>
+    </synonym>
+    <synonym>
+      <key>uk</key>
+      <value>Організація</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.Организации</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <useInTotals>true</useInTotals>
+  </dimensions>
+  <dimensions uuid="ab3d42ae-52b1-4e7c-b810-e7dd528e76b7">
+    <name>ДоговорКонтрагента</name>
+    <synonym>
+      <key>ru</key>
+      <value>Договор контрагента</value>
+    </synonym>
+    <synonym>
+      <key>uk</key>
+      <value>Договір контрагента</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.ДоговорыКонтрагентов</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <useInTotals>true</useInTotals>
+  </dimensions>
+  <dimensions uuid="81301b96-3603-4633-a65c-61b1dd3967b7">
+    <name>Сделка</name>
+    <synonym>
+      <key>ru</key>
+      <value>Сделка</value>
+    </synonym>
+    <type>
+      <types>DocumentRef.СчетНаОплатуПоставщика</types>
+      <types>DocumentRef.ЗаказПоставщику</types>
+      <types>DocumentRef.ЗаказПокупателя</types>
+      <types>DocumentRef.СчетНаОплатуПокупателю</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <useInTotals>true</useInTotals>
+  </dimensions>
+  <dimensions uuid="f664f69e-0cd1-4d04-bf5f-8762e3cbd0f0">
+    <name>Событие</name>
+    <synonym>
+      <key>ru</key>
+      <value>Событие</value>
+    </synonym>
+    <synonym>
+      <key>uk</key>
+      <value>Подія</value>
+    </synonym>
+    <type>
+      <types>EnumRef.СобытияПродажиНалоговыйУчет</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <useInTotals>true</useInTotals>
+  </dimensions>
+  <dimensions uuid="286831ed-a802-4642-9002-19f938457a81">
+    <name>ВозвратнаяТара</name>
+    <synonym>
+      <key>ru</key>
+      <value>Возвратная тара</value>
+    </synonym>
+    <synonym>
+      <key>uk</key>
+      <value>Зворотна тара</value>
+    </synonym>
+    <type>
+      <types>Boolean</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <useInTotals>true</useInTotals>
+  </dimensions>
+</mdclass:AccumulationRegister>

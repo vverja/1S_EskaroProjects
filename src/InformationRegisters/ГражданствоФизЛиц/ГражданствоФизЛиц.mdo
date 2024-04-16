@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:InformationRegister xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:core="http://g5.1c.ru/v8/dt/mcore" xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="db613307-3312-46a4-81ee-0ded5f366cb4">
+  <producedTypes>
+    <selectionType typeId="e7b4919a-a196-4f95-8217-eafe4046eb5c" valueTypeId="2d368138-28ad-432c-8d25-0c73f148dfb9"/>
+    <listType typeId="da35b5d5-2639-45b0-9d17-612689d215da" valueTypeId="8707dd28-a460-48e2-a74b-69d5a7993eb9"/>
+    <managerType typeId="b4f4aebe-b18f-4959-856f-260c71895bb2" valueTypeId="48b8ceec-aa6b-4c4e-a2fb-48f9302ff4fe"/>
+    <recordSetType typeId="c528ed62-1c06-4e6f-94da-fb5593280900" valueTypeId="d8a2cf18-ea92-4c6a-8876-1ab820466342"/>
+    <recordKeyType typeId="c392a4fe-bb20-40de-bfea-5b4b1a40a5ea" valueTypeId="d8d258f7-2141-45e7-a75c-a45c2e2518b5"/>
+    <recordType typeId="207cef92-d023-4f23-ac69-b1451a2316e9" valueTypeId="6ed513ab-72e1-45f0-8f11-d96631cd1da0"/>
+    <recordManagerType typeId="60b9991d-d742-410a-a78c-69ee6a587d61" valueTypeId="3f1611ee-a710-4f8f-9192-89894aca42fc"/>
+  </producedTypes>
+  <name>ГражданствоФизЛиц</name>
+  <synonym>
+    <key>ru</key>
+    <value>Гражданство физического лица</value>
+  </synonym>
+  <comment>(Общ)</comment>
+  <editType>InDialog</editType>
+  <defaultRecordForm>InformationRegister.ГражданствоФизЛиц.Form.ФормаЗаписи</defaultRecordForm>
+  <defaultListForm>InformationRegister.ГражданствоФизЛиц.Form.ФормаСписка</defaultListForm>
+  <informationRegisterPeriodicity>Day</informationRegisterPeriodicity>
+  <mainFilterOnPeriod>true</mainFilterOnPeriod>
+  <resources uuid="e2bb6aa5-43dc-47e6-afcf-a3975542fb1e">
+    <name>Страна</name>
+    <synonym>
+      <key>ru</key>
+      <value>Страна</value>
+    </synonym>
+    <comment>(Общ)</comment>
+    <type>
+      <types>CatalogRef.КлассификаторСтранМира</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:UndefinedValue"/>
+  </resources>
+  <resources uuid="49b90389-0ba1-4099-aadd-32bfac639667">
+    <name>НеИмеетПравоНаПенсию</name>
+    <synonym>
+      <key>ru</key>
+      <value>Не имеет право на пенсию</value>
+    </synonym>
+    <comment>(Регл)</comment>
+    <type>
+      <types>Boolean</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:UndefinedValue"/>
+  </resources>
+  <resources uuid="71878580-517d-41cc-801a-a98b48f3412b">
+    <name>НеЯвляетсяНалоговымРезидентом</name>
+    <synonym>
+      <key>ru</key>
+      <value>Не является налоговым резидентом</value>
+    </synonym>
+    <comment>(Регл)</comment>
+    <type>
+      <types>Boolean</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:UndefinedValue"/>
+  </resources>
+  <dimensions uuid="61065de7-7ceb-4f2b-837d-9743750cb8fc">
+    <name>ФизЛицо</name>
+    <synonym>
+      <key>ru</key>
+      <value>Физическое лицо</value>
+    </synonym>
+    <comment>(Общ)</comment>
+    <type>
+      <types>CatalogRef.ФизическиеЛица</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <denyIncompleteValues>true</denyIncompleteValues>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillFromFillingValue>true</fillFromFillingValue>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <master>true</master>
+    <mainFilter>true</mainFilter>
+  </dimensions>
+  <forms uuid="f32ae50c-662e-4d68-b7ed-411513fd8ac1">
+    <name>ФормаСписка</name>
+    <synonym>
+      <key>ru</key>
+      <value>Форма списка</value>
+    </synonym>
+    <formType>Ordinary</formType>
+    <usePurposes>PersonalComputer</usePurposes>
+    <usePurposes>MobileDevice</usePurposes>
+  </forms>
+  <forms uuid="1a3e669b-cdf3-4722-908a-5a36284399d1">
+    <name>ФормаЗаписи</name>
+    <synonym>
+      <key>ru</key>
+      <value>Форма записи</value>
+    </synonym>
+    <formType>Ordinary</formType>
+    <usePurposes>PersonalComputer</usePurposes>
+    <usePurposes>MobileDevice</usePurposes>
+  </forms>
+  <forms uuid="5e0ddfef-eaea-42fe-9c5a-5f8fe0410691">
+    <name>ФормаЗаписиДополнительная</name>
+    <synonym>
+      <key>ru</key>
+      <value>Форма записи дополнительная</value>
+    </synonym>
+    <formType>Ordinary</formType>
+    <usePurposes>PersonalComputer</usePurposes>
+    <usePurposes>MobileDevice</usePurposes>
+  </forms>
+</mdclass:InformationRegister>

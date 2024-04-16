@@ -1,0 +1,229 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:BusinessProcess xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:core="http://g5.1c.ru/v8/dt/mcore" xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="c9193071-3016-4155-850f-9ac617c712a2">
+  <producedTypes>
+    <objectType typeId="986341fd-f4b6-4040-ae93-f455e23a2220" valueTypeId="300933e5-9699-4b0c-9fac-6ae9798be471"/>
+    <refType typeId="28cdf150-a3e8-4070-b869-9a88d07518ac" valueTypeId="4dcfe4b0-c9c6-4a38-aec3-664fcf379d0e"/>
+    <selectionType typeId="44ce0843-ca84-4e6b-a6c6-0869744b440e" valueTypeId="0c0213c4-e770-4fb3-b148-7084c4c478a1"/>
+    <listType typeId="3dd374c6-c4c8-4c53-869e-a4ed761f2626" valueTypeId="f250b56a-79d8-457b-b448-a1463a4185d5"/>
+    <managerType typeId="aee7c243-5e1d-4705-89ea-6f476b1b0a3c" valueTypeId="8f74f6b9-0e8a-4561-8d1a-6f0c6c08f671"/>
+    <routePointRef typeId="1d47d7ac-ab65-45f3-803a-f23776dfe3e3" valueTypeId="e92886d6-e362-469d-8520-67dc74123b19"/>
+  </producedTypes>
+  <name>ЗакрытиеМесяца</name>
+  <synonym>
+    <key>ru</key>
+    <value>Закрытие месяца</value>
+  </synonym>
+  <inputByString>BusinessProcess.ЗакрытиеМесяца.StandardAttribute.Number</inputByString>
+  <fullTextSearchOnInputByString>DontUse</fullTextSearchOnInputByString>
+  <createOnInput>DontUse</createOnInput>
+  <help>
+    <pages>
+      <lang>ru</lang>
+    </pages>
+  </help>
+  <fullTextSearch>Use</fullTextSearch>
+  <editType>InDialog</editType>
+  <defaultObjectForm>BusinessProcess.ЗакрытиеМесяца.Form.ФормаБизнесПроцесса</defaultObjectForm>
+  <defaultListForm>BusinessProcess.ЗакрытиеМесяца.Form.ФормаСписка</defaultListForm>
+  <numberType>String</numberType>
+  <numberLength>9</numberLength>
+  <checkUnique>true</checkUnique>
+  <autonumbering>true</autonumbering>
+  <task>Task.РегламентныеОперацииЗакрытияМесяца</task>
+  <attributes uuid="da9a8e13-921c-47fe-93d0-63c2858a19d5">
+    <name>ПериодРегистрации</name>
+    <synonym>
+      <key>ru</key>
+      <value>Период регистрации</value>
+    </synonym>
+    <type>
+      <types>Date</types>
+      <dateQualifiers>
+        <dateFractions>Date</dateFractions>
+      </dateQualifiers>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+  </attributes>
+  <attributes uuid="b7da075b-e0e4-49bf-9cf2-bd5bc937d9fd">
+    <name>Организация</name>
+    <synonym>
+      <key>ru</key>
+      <value>Организация</value>
+    </synonym>
+    <comment>Организация для регламентного учета</comment>
+    <type>
+      <types>CatalogRef.Организации</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+  </attributes>
+  <attributes uuid="3e46a775-5299-4a41-b42a-632a666e4e87">
+    <name>ОтражатьВУправленческомУчете</name>
+    <synonym>
+      <key>ru</key>
+      <value>Отражать в управленческом учете</value>
+    </synonym>
+    <type>
+      <types>Boolean</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+  </attributes>
+  <attributes uuid="6c77eef6-95cf-4d3f-b62d-dad7804bebee">
+    <name>ОтражатьВБухгалтерскомУчете</name>
+    <synonym>
+      <key>ru</key>
+      <value>Отражать в бухгалтерском учете</value>
+    </synonym>
+    <type>
+      <types>Boolean</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+  </attributes>
+  <attributes uuid="aa08bafa-9eef-453b-969a-bc21017775a5">
+    <name>УДАЛИТЬОтражатьВНалоговомУчете</name>
+    <synonym>
+      <key>ru</key>
+      <value>УДАЛИТЬОтражать в налоговом учете</value>
+    </synonym>
+    <type>
+      <types>Boolean</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+  </attributes>
+  <attributes uuid="7c5a14a3-66fb-4b33-bdfc-9b6515d680a5">
+    <name>НастройкаЗакрытияМесяца</name>
+    <synonym>
+      <key>ru</key>
+      <value>Настройка закрытия месяца</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.НастройкиЗакрытияМесяца</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+  </attributes>
+  <tabularSections uuid="530f7c70-4c52-429d-97d4-ee50acc443fc">
+    <producedTypes>
+      <objectType typeId="ed746d5a-a9a5-4391-9965-9ebac28aa3a9" valueTypeId="4d39deb1-e6a3-4663-b190-bd2905317026"/>
+      <rowType typeId="83baa246-d240-49fa-9473-14747995c257" valueTypeId="a6d0c08f-6060-4365-8e70-dea3fbfee54d"/>
+    </producedTypes>
+    <name>РегламентныеОперации</name>
+    <synonym>
+      <key>ru</key>
+      <value>Регламентные операции</value>
+    </synonym>
+    <attributes uuid="9a2233ed-2242-4b7c-8e8d-43d69b7df382">
+      <name>РегламентнаяОперация</name>
+      <synonym>
+        <key>ru</key>
+        <value>Регламентная операция</value>
+      </synonym>
+      <type>
+        <types>BusinessProcessRoutePointRef.ЗакрытиеМесяца</types>
+      </type>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <dataHistory>Use</dataHistory>
+      <fullTextSearch>Use</fullTextSearch>
+    </attributes>
+    <attributes uuid="c5645723-69cb-4df7-b91f-46120f3a005e">
+      <name>Ответственный</name>
+      <synonym>
+        <key>ru</key>
+        <value>Ответственный</value>
+      </synonym>
+      <type>
+        <types>CatalogRef.ГруппыПользователей</types>
+        <types>CatalogRef.Пользователи</types>
+      </type>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <dataHistory>Use</dataHistory>
+      <fullTextSearch>Use</fullTextSearch>
+    </attributes>
+    <attributes uuid="9c1c87b7-5051-4922-aebe-6e5e503c97d8">
+      <name>Использовать</name>
+      <synonym>
+        <key>ru</key>
+        <value>Использовать</value>
+      </synonym>
+      <type>
+        <types>Boolean</types>
+      </type>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <dataHistory>Use</dataHistory>
+      <fullTextSearch>Use</fullTextSearch>
+    </attributes>
+  </tabularSections>
+  <forms uuid="23453f14-a2c0-4b50-aec9-7556223cdec9">
+    <name>ФормаСписка</name>
+    <synonym>
+      <key>ru</key>
+      <value>Форма списка</value>
+    </synonym>
+    <formType>Ordinary</formType>
+    <usePurposes>PersonalComputer</usePurposes>
+    <usePurposes>MobileDevice</usePurposes>
+  </forms>
+  <forms uuid="7ad11157-6e10-41f9-a2cf-0b71def40a37">
+    <name>ФормаБизнесПроцесса</name>
+    <synonym>
+      <key>ru</key>
+      <value>Форма бизнес процесса</value>
+    </synonym>
+    <formType>Ordinary</formType>
+    <usePurposes>PersonalComputer</usePurposes>
+    <usePurposes>MobileDevice</usePurposes>
+  </forms>
+  <forms uuid="cc358864-a32a-46cd-bc47-357f1d0a61fb">
+    <name>ФормаПередСтартом</name>
+    <synonym>
+      <key>ru</key>
+      <value>Форма перед стартом</value>
+    </synonym>
+    <formType>Ordinary</formType>
+    <usePurposes>PersonalComputer</usePurposes>
+    <usePurposes>MobileDevice</usePurposes>
+  </forms>
+  <forms uuid="eed6af97-b65d-4d99-98a2-ad8240b03ce9">
+    <name>ФормаИзмененияОтветственного</name>
+    <synonym>
+      <key>ru</key>
+      <value>Форма изменения ответственного</value>
+    </synonym>
+    <formType>Ordinary</formType>
+    <usePurposes>PersonalComputer</usePurposes>
+    <usePurposes>MobileDevice</usePurposes>
+  </forms>
+  <templates uuid="9d05e696-e145-4e81-8623-c79f6907e3aa">
+    <name>МакетВстроеннойСправки</name>
+    <synonym>
+      <key>ru</key>
+      <value>Макет встроенной справки</value>
+    </synonym>
+    <templateType>TextDocument</templateType>
+  </templates>
+</mdclass:BusinessProcess>

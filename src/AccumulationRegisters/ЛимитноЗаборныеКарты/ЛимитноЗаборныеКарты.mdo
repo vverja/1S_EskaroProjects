@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:AccumulationRegister xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:core="http://g5.1c.ru/v8/dt/mcore" xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="6a10bde2-a385-4163-afab-4ae88309f756">
+  <producedTypes>
+    <selectionType typeId="7580b65d-833a-40f4-8cc0-bcaef13da703" valueTypeId="984168e8-29a7-435f-b5df-ad4d55caa349"/>
+    <listType typeId="d4cf6b0e-244b-4540-9658-8daf1e3337a9" valueTypeId="dc990fd4-2845-44fd-b7e9-cc13f2eac7f6"/>
+    <managerType typeId="cada8fc1-d8be-446f-8fc8-9e0293ed3f76" valueTypeId="80273536-b7eb-44a8-a6db-dec577903741"/>
+    <recordSetType typeId="0ffe85af-0c78-4143-966b-e9c50e662134" valueTypeId="6ca4461d-2cf2-4220-9a32-ee205badb19e"/>
+    <recordKeyType typeId="241526b4-54ec-44ab-9194-12dca1ccd2dd" valueTypeId="287debdc-83c5-4158-bf18-5dc1c4279651"/>
+    <recordType typeId="206abfc8-3711-4eeb-8a84-1d825ff7d3c4" valueTypeId="6980b7bd-dd7b-410c-8052-8ffbc23f7056"/>
+  </producedTypes>
+  <name>ЛимитноЗаборныеКарты</name>
+  <synonym>
+    <key>ru</key>
+    <value>Лимитно заборные карты</value>
+  </synonym>
+  <comment>(Упр)</comment>
+  <registerType>Turnovers</registerType>
+  <enableTotalsSplitting>true</enableTotalsSplitting>
+  <resources uuid="1af9f8f7-97f9-4ecd-9fc8-0616fafd9e47">
+    <name>Отпущено</name>
+    <synonym>
+      <key>ru</key>
+      <value>Отпущено</value>
+    </synonym>
+    <type>
+      <types>Number</types>
+      <numberQualifiers>
+        <precision>15</precision>
+        <scale>3</scale>
+      </numberQualifiers>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+  </resources>
+  <resources uuid="869b9c66-ff8b-41ee-bb31-4616b0f897da">
+    <name>ОтпущеноСверхЛимита</name>
+    <synonym>
+      <key>ru</key>
+      <value>Отпущено сверх лимита</value>
+    </synonym>
+    <type>
+      <types>Number</types>
+      <numberQualifiers>
+        <precision>15</precision>
+        <scale>3</scale>
+      </numberQualifiers>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+  </resources>
+  <resources uuid="e24e151b-33d4-4827-b8ff-6997719ae205">
+    <name>Возвращено</name>
+    <synonym>
+      <key>ru</key>
+      <value>Возвращено</value>
+    </synonym>
+    <type>
+      <types>Number</types>
+      <numberQualifiers>
+        <precision>15</precision>
+        <scale>3</scale>
+      </numberQualifiers>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+  </resources>
+  <dimensions uuid="44b61764-013d-46d1-acd1-84dd8cbd1c47">
+    <name>Номенклатура</name>
+    <synonym>
+      <key>ru</key>
+      <value>Номенклатура</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.Номенклатура</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <useInTotals>true</useInTotals>
+  </dimensions>
+  <dimensions uuid="68ff597a-ee45-4ebb-af27-0c0ac16d1d9b">
+    <name>ХарактеристикаНоменклатуры</name>
+    <synonym>
+      <key>ru</key>
+      <value>Характеристика номенклатуры</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.ХарактеристикиНоменклатуры</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <useInTotals>true</useInTotals>
+  </dimensions>
+  <dimensions uuid="f4c842e7-96c1-45e6-a0d5-a632efd046f8">
+    <name>Склад</name>
+    <synonym>
+      <key>ru</key>
+      <value>Склад</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.Склады</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <useInTotals>true</useInTotals>
+  </dimensions>
+  <dimensions uuid="e9ae6e1f-1146-4b54-acf8-f75211efe8aa">
+    <name>Подразделение</name>
+    <synonym>
+      <key>ru</key>
+      <value>Подразделение</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.Подразделения</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <useInTotals>true</useInTotals>
+  </dimensions>
+</mdclass:AccumulationRegister>

@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:WebService xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:core="http://g5.1c.ru/v8/dt/mcore" xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="493bf394-1356-4f8b-a1d8-54e38c509e24">
+  <name>TA</name>
+  <synonym>
+    <key>ru</key>
+    <value>TA</value>
+  </synonym>
+  <namespace>TA</namespace>
+  <xdtoPackages xsi:type="core:StringValue">
+    <value>http://v8.1c.ru/8.1/data-composition-system/details</value>
+  </xdtoPackages>
+  <xdtoPackages xsi:type="core:StringValue">
+    <value>http://v8.1c.ru/8.1/data/core</value>
+  </xdtoPackages>
+  <xdtoPackages xsi:type="core:StringValue">
+    <value>http://v8.1c.ru/8.2/data/spreadsheet</value>
+  </xdtoPackages>
+  <descriptorFileName>TA.1cws</descriptorFileName>
+  <sessionMaxAge>20</sessionMaxAge>
+  <operations uuid="3e6e86cd-783b-47de-9ede-b02e47843f29">
+    <name>ВыполнитьОбмен</name>
+    <synonym>
+      <key>ru</key>
+      <value>Выполнить обмен</value>
+    </synonym>
+    <xdtoReturningValueType>
+      <name>ValueStorage</name>
+      <nsUri>http://v8.1c.ru/8.1/data/core</nsUri>
+    </xdtoReturningValueType>
+    <nillable>true</nillable>
+    <procedureName>ВыполнитьОбмен</procedureName>
+    <dataLockControlMode>Managed</dataLockControlMode>
+  </operations>
+  <operations uuid="0c200f41-b11d-45fa-bf24-a4f81ccbd801">
+    <name>ПолучитьОтчет</name>
+    <synonym>
+      <key>ru</key>
+      <value>Получить отчет</value>
+    </synonym>
+    <xdtoReturningValueType>
+      <name>SpreadsheetDocument</name>
+      <nsUri>http://v8.1c.ru/8.2/data/spreadsheet</nsUri>
+    </xdtoReturningValueType>
+    <nillable>true</nillable>
+    <procedureName>ПолучитьОтчет</procedureName>
+    <dataLockControlMode>Managed</dataLockControlMode>
+    <parameters uuid="c511ed63-59e1-4596-909f-65caf063a75a">
+      <name>ДатаНачала</name>
+      <synonym>
+        <key>ru</key>
+        <value>Дата начала</value>
+      </synonym>
+      <xdtoValueType>
+        <name>date</name>
+        <nsUri>http://www.w3.org/2001/XMLSchema</nsUri>
+      </xdtoValueType>
+    </parameters>
+    <parameters uuid="2060e22f-a004-453a-a153-ba7df066a8f7">
+      <name>ДатаОкончания</name>
+      <synonym>
+        <key>ru</key>
+        <value>Дата окончания</value>
+      </synonym>
+      <xdtoValueType>
+        <name>date</name>
+        <nsUri>http://www.w3.org/2001/XMLSchema</nsUri>
+      </xdtoValueType>
+    </parameters>
+    <parameters uuid="57e7e62c-d8df-4679-bea8-e4713c246ce2">
+      <name>СтрокаИнформацииРасшифровки</name>
+      <synonym>
+        <key>ru</key>
+        <value>Строка информации расшифровки</value>
+      </synonym>
+      <xdtoValueType>
+        <name>string</name>
+        <nsUri>http://www.w3.org/2001/XMLSchema</nsUri>
+      </xdtoValueType>
+      <transferDirection>Out</transferDirection>
+    </parameters>
+  </operations>
+</mdclass:WebService>

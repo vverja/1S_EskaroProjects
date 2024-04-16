@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:AccumulationRegister xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:core="http://g5.1c.ru/v8/dt/mcore" xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="c3d83216-0718-4e22-836a-d4a795acdf46">
+  <producedTypes>
+    <selectionType typeId="0b51ca12-2385-4870-9031-436a04e27a36" valueTypeId="e0c4e868-19cd-44b7-842d-f47ce43f6715"/>
+    <listType typeId="e85c7964-f0cc-4ff9-8764-1158c897db89" valueTypeId="807645a9-752c-4b99-b49c-709479ce26d6"/>
+    <managerType typeId="92bbe72e-9deb-4386-a528-08884e3e9fc9" valueTypeId="d5da185a-da93-4e19-8811-eb08177d09bf"/>
+    <recordSetType typeId="df7294c6-2ad0-4b10-b179-f2bdc6249010" valueTypeId="5154e821-c9fe-4895-beb7-2b971b3f5529"/>
+    <recordKeyType typeId="416a12ed-9d45-447d-8db7-ace940be1425" valueTypeId="33d10eef-7de2-4548-a9d6-dbfe1f25f9f2"/>
+    <recordType typeId="cc0614e4-e6b3-4d57-a259-342d971104a2" valueTypeId="62d2f175-9911-4716-8895-1313b209f6e4"/>
+  </producedTypes>
+  <name>кпкПланыПродаж</name>
+  <synonym>
+    <key>ru</key>
+    <value>Планы продаж по агентам</value>
+  </synonym>
+  <registerType>Turnovers</registerType>
+  <includeHelpInContents>true</includeHelpInContents>
+  <help>
+    <pages>
+      <lang>ru</lang>
+    </pages>
+  </help>
+  <standardAttributes>
+    <dataHistory>Use</dataHistory>
+    <name>Active</name>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </standardAttributes>
+  <standardAttributes>
+    <dataHistory>Use</dataHistory>
+    <name>LineNumber</name>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </standardAttributes>
+  <standardAttributes>
+    <dataHistory>Use</dataHistory>
+    <name>Recorder</name>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </standardAttributes>
+  <standardAttributes>
+    <dataHistory>Use</dataHistory>
+    <name>Period</name>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fillChecking>ShowError</fillChecking>
+    <fullTextSearch>Use</fullTextSearch>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </standardAttributes>
+  <resources uuid="ba42f00e-4420-43b5-9abf-599547e6c9fd">
+    <name>Количество</name>
+    <synonym>
+      <key>ru</key>
+      <value>Количество</value>
+    </synonym>
+    <type>
+      <types>Number</types>
+      <numberQualifiers>
+        <precision>15</precision>
+        <scale>3</scale>
+      </numberQualifiers>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+  </resources>
+  <resources uuid="77f478f6-e404-46e6-81c1-0e454b7b9ff6">
+    <name>Сумма</name>
+    <synonym>
+      <key>ru</key>
+      <value>Сумма</value>
+    </synonym>
+    <type>
+      <types>Number</types>
+      <numberQualifiers>
+        <precision>15</precision>
+        <scale>2</scale>
+      </numberQualifiers>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+  </resources>
+  <dimensions uuid="8270f479-d6a7-4648-a6a5-3626a1e2964a">
+    <name>Агент</name>
+    <synonym>
+      <key>ru</key>
+      <value>Агент</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.ФизическиеЛица</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <useInTotals>true</useInTotals>
+  </dimensions>
+  <dimensions uuid="61992a76-23fa-4334-91e6-3b7b64c7e61c">
+    <name>НоменклатурнаяГруппа</name>
+    <synonym>
+      <key>ru</key>
+      <value>Номенклатурная группа</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.НоменклатурныеГруппы</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <denyIncompleteValues>true</denyIncompleteValues>
+    <fullTextSearch>Use</fullTextSearch>
+    <useInTotals>true</useInTotals>
+  </dimensions>
+  <dimensions uuid="f8932fb4-9ee1-4378-9705-8da95c994d36">
+    <name>ДокументПланирования</name>
+    <synonym>
+      <key>ru</key>
+      <value>Документ планирования</value>
+    </synonym>
+    <type>
+      <types>DocumentRef.кпкПланПосещений</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <denyIncompleteValues>true</denyIncompleteValues>
+    <fullTextSearch>Use</fullTextSearch>
+    <useInTotals>true</useInTotals>
+  </dimensions>
+  <templates uuid="f289b0d1-f9b9-4e83-841e-4a34a2cf3dc2">
+    <name>ПараметрыОтчетов</name>
+    <synonym>
+      <key>ru</key>
+      <value>Параметры отчетов оп регистру</value>
+    </synonym>
+  </templates>
+</mdclass:AccumulationRegister>

@@ -1,0 +1,237 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:Document xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:core="http://g5.1c.ru/v8/dt/mcore" xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="c762cd5a-f49f-4a61-803c-c6a3eb55d005">
+  <producedTypes>
+    <objectType typeId="b6cd08a7-f78c-48f5-b4a4-1b15dd67ee97" valueTypeId="e7d7197e-d472-4a78-b11f-7840e883d46e"/>
+    <refType typeId="43b3ef5c-fc2b-417f-b8e5-5158ee21e063" valueTypeId="c078f809-5d61-4171-90de-700c5b389b61"/>
+    <selectionType typeId="20a84711-a1da-421f-b88b-a39488d3b48b" valueTypeId="ed3842d2-fceb-4bf4-9753-046d932ce2be"/>
+    <listType typeId="f0e79a86-1a8b-414a-832e-8c8f9a3d50b1" valueTypeId="def7367a-6283-4f81-99f8-77ccc9c572e5"/>
+    <managerType typeId="cbd6db84-fb35-41e0-b5c1-b4889bf85f56" valueTypeId="a635c77f-09be-47d7-aecb-6a8ded55593f"/>
+  </producedTypes>
+  <name>ОтсутствиеНаРаботе</name>
+  <synonym>
+    <key>ru</key>
+    <value>Отсутствие на работе</value>
+  </synonym>
+  <comment>(Упр)</comment>
+  <inputByString>Document.ОтсутствиеНаРаботе.StandardAttribute.Number</inputByString>
+  <fullTextSearchOnInputByString>DontUse</fullTextSearchOnInputByString>
+  <createOnInput>Use</createOnInput>
+  <includeHelpInContents>true</includeHelpInContents>
+  <help>
+    <pages>
+      <lang>ru</lang>
+    </pages>
+  </help>
+  <fullTextSearch>Use</fullTextSearch>
+  <numberType>String</numberType>
+  <numberLength>11</numberLength>
+  <numberPeriodicity>Year</numberPeriodicity>
+  <checkUnique>true</checkUnique>
+  <autonumbering>true</autonumbering>
+  <defaultObjectForm>Document.ОтсутствиеНаРаботе.Form.ФормаДокумента</defaultObjectForm>
+  <defaultListForm>Document.ОтсутствиеНаРаботе.Form.ФормаСписка</defaultListForm>
+  <defaultChoiceForm>Document.ОтсутствиеНаРаботе.Form.ФормаВыбора</defaultChoiceForm>
+  <realTimePosting>Deny</realTimePosting>
+  <registerRecordsDeletion>AutoDelete</registerRecordsDeletion>
+  <registerRecordsWritingOnPost>WriteModified</registerRecordsWritingOnPost>
+  <sequenceFilling>AutoFillOff</sequenceFilling>
+  <registerRecords>InformationRegister.ПериодыСостоянийРаботников</registerRecords>
+  <registerRecords>InformationRegister.НамеченныеСобытияПоПерсоналу</registerRecords>
+  <registerRecords>InformationRegister.СостояниеРаботников</registerRecords>
+  <registerRecords>AccumulationRegister.ЗанятыеРабочиеМеста</registerRecords>
+  <attributes uuid="d89cee19-c7fc-45d1-8899-a5adee14460d">
+    <name>Комментарий</name>
+    <synonym>
+      <key>ru</key>
+      <value>Комментарий</value>
+    </synonym>
+    <comment>Любая дополнительная информация</comment>
+    <type>
+      <types>String</types>
+      <stringQualifiers/>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+  </attributes>
+  <attributes uuid="38ad297d-4d93-4cd6-99a0-8ecb9dd22314">
+    <name>Ответственный</name>
+    <synonym>
+      <key>ru</key>
+      <value>Ответственный</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.Пользователи</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+  </attributes>
+  <attributes uuid="14ed780f-65ac-4ad2-990a-ef5d126ac815">
+    <name>КраткийСоставДокумента</name>
+    <synonym>
+      <key>ru</key>
+      <value>Краткий состав документа</value>
+    </synonym>
+    <type>
+      <types>String</types>
+      <stringQualifiers>
+        <length>100</length>
+      </stringQualifiers>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+  </attributes>
+  <forms uuid="690e00f0-4bf1-418c-839a-61c2d854ab9e">
+    <name>ФормаДокумента</name>
+    <synonym>
+      <key>ru</key>
+      <value>Форма документа</value>
+    </synonym>
+    <formType>Ordinary</formType>
+    <usePurposes>PersonalComputer</usePurposes>
+    <usePurposes>MobileDevice</usePurposes>
+  </forms>
+  <forms uuid="0a9dc902-5174-4d82-a979-b9674fa757af">
+    <name>ФормаСписка</name>
+    <synonym>
+      <key>ru</key>
+      <value>Форма списка</value>
+    </synonym>
+    <formType>Ordinary</formType>
+    <usePurposes>PersonalComputer</usePurposes>
+    <usePurposes>MobileDevice</usePurposes>
+  </forms>
+  <forms uuid="b4e70e47-93cd-4744-9f56-d1e6a3cbfd39">
+    <name>ФормаВыбора</name>
+    <synonym>
+      <key>ru</key>
+      <value>Форма выбора</value>
+    </synonym>
+    <formType>Ordinary</formType>
+    <usePurposes>PersonalComputer</usePurposes>
+    <usePurposes>MobileDevice</usePurposes>
+  </forms>
+  <tabularSections uuid="b8cde4e1-5ed3-4882-b65b-6b0b7f9cb067">
+    <producedTypes>
+      <objectType typeId="98720dc1-0a6f-48ca-b8d7-aa0ce5633377" valueTypeId="aa49dcfd-ee44-4775-943a-1840b232bd12"/>
+      <rowType typeId="3924c6de-1ae2-4d9a-8921-4b5bcd485f09" valueTypeId="166b9758-c34d-4006-ad1a-702fb07a2cb3"/>
+    </producedTypes>
+    <name>Работники</name>
+    <synonym>
+      <key>ru</key>
+      <value>Работники</value>
+    </synonym>
+    <attributes uuid="4ce68645-483f-4fdc-a86c-3462a4758eb0">
+      <name>Сотрудник</name>
+      <synonym>
+        <key>ru</key>
+        <value>Сотрудник</value>
+      </synonym>
+      <type>
+        <types>CatalogRef.СотрудникиОрганизаций</types>
+      </type>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <dataHistory>Use</dataHistory>
+      <fullTextSearch>Use</fullTextSearch>
+    </attributes>
+    <attributes uuid="13f388fa-7ff4-40e8-a994-6d3b56c130b2">
+      <name>ДатаНачала</name>
+      <synonym>
+        <key>ru</key>
+        <value>Дата начала</value>
+      </synonym>
+      <type>
+        <types>Date</types>
+        <dateQualifiers>
+          <dateFractions>Date</dateFractions>
+        </dateQualifiers>
+      </type>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <dataHistory>Use</dataHistory>
+      <fullTextSearch>Use</fullTextSearch>
+    </attributes>
+    <attributes uuid="8e8fc849-1d34-4a61-9d6a-28cda0d1357e">
+      <name>ДатаОкончания</name>
+      <synonym>
+        <key>ru</key>
+        <value>Дата окончания</value>
+      </synonym>
+      <type>
+        <types>Date</types>
+        <dateQualifiers>
+          <dateFractions>Date</dateFractions>
+        </dateQualifiers>
+      </type>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <dataHistory>Use</dataHistory>
+      <fullTextSearch>Use</fullTextSearch>
+    </attributes>
+    <attributes uuid="3f16ff14-55cb-4e97-8ffc-e3e81a3274b7">
+      <name>ПричинаОтсутствия</name>
+      <synonym>
+        <key>ru</key>
+        <value>Причина отсутствия</value>
+      </synonym>
+      <type>
+        <types>EnumRef.ПричиныОтсутствияНаРаботе</types>
+      </type>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <dataHistory>Use</dataHistory>
+      <fullTextSearch>Use</fullTextSearch>
+    </attributes>
+    <attributes uuid="a007d4c0-4c03-4522-a3f5-490f4c31fedc">
+      <name>ОсвобождатьСтавку</name>
+      <synonym>
+        <key>ru</key>
+        <value>Освобождать ставку</value>
+      </synonym>
+      <type>
+        <types>Boolean</types>
+      </type>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <dataHistory>Use</dataHistory>
+      <fullTextSearch>Use</fullTextSearch>
+    </attributes>
+    <attributes uuid="f6943d9c-34f8-4b48-947d-e6f636ebc64e">
+      <name>ФизЛицо</name>
+      <synonym>
+        <key>ru</key>
+        <value>Физическое лицо</value>
+      </synonym>
+      <type>
+        <types>CatalogRef.ФизическиеЛица</types>
+      </type>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <dataHistory>Use</dataHistory>
+      <fullTextSearch>Use</fullTextSearch>
+    </attributes>
+    <attributes uuid="ffb890c0-d73b-4cb6-837b-14c0697dd197">
+      <name>НапомнитьПоЗавершении</name>
+      <synonym>
+        <key>ru</key>
+        <value>Напомнить по завершении</value>
+      </synonym>
+      <type>
+        <types>Boolean</types>
+      </type>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <dataHistory>Use</dataHistory>
+      <fullTextSearch>Use</fullTextSearch>
+    </attributes>
+  </tabularSections>
+</mdclass:Document>

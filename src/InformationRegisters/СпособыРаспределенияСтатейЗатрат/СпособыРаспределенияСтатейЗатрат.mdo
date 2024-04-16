@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:InformationRegister xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:core="http://g5.1c.ru/v8/dt/mcore" xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="3bc8d06c-f1c4-491c-8ea4-168321f31e35">
+  <producedTypes>
+    <selectionType typeId="8aa64662-9625-41a2-a2d2-8b278ac7f289" valueTypeId="419b7f06-d230-415e-a475-871e1843d410"/>
+    <listType typeId="19a456c5-00af-4d2d-95b1-857e05798143" valueTypeId="9348529a-5cbc-4e95-84e0-84602e3e3346"/>
+    <managerType typeId="999bad37-c2a0-46f8-a6ed-086f45dfa5f6" valueTypeId="019ea94c-bd6c-4893-a962-d7b6b8d62867"/>
+    <recordSetType typeId="84b9ac58-2e39-4b7a-82a3-b952c50307fb" valueTypeId="0515d529-2efe-4896-b06f-0462d899fe31"/>
+    <recordKeyType typeId="cbd1922f-3eb3-479e-a4fd-b43a8993fdd2" valueTypeId="90241347-038e-4016-b093-fd83a8d6d698"/>
+    <recordType typeId="aab9b5ee-6b00-40c3-a727-4be239fdff13" valueTypeId="a1be9071-1875-408d-ba34-6b854f492bc2"/>
+    <recordManagerType typeId="0d962e00-dea0-4edb-b7c3-8b77bc969707" valueTypeId="fdfb5347-9dd7-474e-b03b-849d90355627"/>
+  </producedTypes>
+  <name>СпособыРаспределенияСтатейЗатрат</name>
+  <synonym>
+    <key>ru</key>
+    <value>Способы распределения статей затрат</value>
+  </synonym>
+  <comment>(Упр)</comment>
+  <useStandardCommands>true</useStandardCommands>
+  <defaultListForm>InformationRegister.СпособыРаспределенияСтатейЗатрат.Form.ФормаСписка</defaultListForm>
+  <auxiliaryListForm>InformationRegister.СпособыРаспределенияСтатейЗатрат.Form.ФормаСпискаУправляемая</auxiliaryListForm>
+  <informationRegisterPeriodicity>Month</informationRegisterPeriodicity>
+  <mainFilterOnPeriod>true</mainFilterOnPeriod>
+  <help>
+    <pages>
+      <lang>ru</lang>
+    </pages>
+  </help>
+  <resources uuid="6e4f8100-4862-4729-b3bc-e8580d811c30">
+    <name>СпособРаспределения</name>
+    <synonym>
+      <key>ru</key>
+      <value>Способ распределения</value>
+    </synonym>
+    <type>
+      <types>EnumRef.СпособыРаспределенияЗатрат</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:UndefinedValue"/>
+  </resources>
+  <resources uuid="b5911830-ff91-4a18-97fb-605c03a2e485">
+    <name>НеРаспределять</name>
+    <synonym>
+      <key>ru</key>
+      <value>Не распределять</value>
+    </synonym>
+    <type>
+      <types>Boolean</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:UndefinedValue"/>
+  </resources>
+  <resources uuid="3769fd62-ba38-42bf-9846-c6ce50b8edf3">
+    <name>СпособРаспределенияЗатрат</name>
+    <synonym>
+      <key>ru</key>
+      <value>Способ распределения затрат</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.СпособыРаспределенияЗатратНаВыпуск</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:UndefinedValue"/>
+  </resources>
+  <resources uuid="664e9588-3bcf-480e-8f78-fa14cdd807b0">
+    <name>ХарактерРаспределенияЗатрат</name>
+    <synonym>
+      <key>ru</key>
+      <value>Характер распределения затрат</value>
+    </synonym>
+    <type>
+      <types>EnumRef.ХарактерРаспределенияЗатрат</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:UndefinedValue"/>
+  </resources>
+  <dimensions uuid="1c8f1a7d-a796-4e1b-b263-f67f9708ee94">
+    <name>СтатьяЗатрат</name>
+    <synonym>
+      <key>ru</key>
+      <value>Статья затрат</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.СтатьиЗатрат</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <master>true</master>
+    <mainFilter>true</mainFilter>
+  </dimensions>
+  <dimensions uuid="a9a3ba45-de6e-4805-ad82-ce62aede5285">
+    <name>Подразделение</name>
+    <synonym>
+      <key>ru</key>
+      <value>Подразделение</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.Подразделения</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <master>true</master>
+    <mainFilter>true</mainFilter>
+  </dimensions>
+  <forms uuid="f7cff4e7-cb77-4550-a10c-17ca7f0cc50e">
+    <name>ФормаСписка</name>
+    <synonym>
+      <key>ru</key>
+      <value>Форма списка</value>
+    </synonym>
+    <formType>Ordinary</formType>
+    <usePurposes>PersonalComputer</usePurposes>
+    <usePurposes>MobileDevice</usePurposes>
+  </forms>
+  <forms uuid="7cc55bcb-becd-47db-8458-179053433bbc">
+    <name>ФормаСпискаУправляемая</name>
+    <synonym>
+      <key>ru</key>
+      <value>Форма списка управляемая</value>
+    </synonym>
+    <usePurposes>PersonalComputer</usePurposes>
+    <usePurposes>MobileDevice</usePurposes>
+  </forms>
+</mdclass:InformationRegister>

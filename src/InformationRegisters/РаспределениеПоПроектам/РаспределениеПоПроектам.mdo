@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:InformationRegister xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:core="http://g5.1c.ru/v8/dt/mcore" xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="95dec056-eb5b-4fe5-af52-038e366baeed">
+  <producedTypes>
+    <selectionType typeId="06cb145c-3f5a-4b3c-94d0-88f33e5055f0" valueTypeId="a910daa6-1fc7-4fee-a61d-76a7bc645864"/>
+    <listType typeId="e5c79911-de99-47b7-b194-2cba85f2f020" valueTypeId="7879333c-2f4b-447e-85c2-965953753dff"/>
+    <managerType typeId="12e02a24-193e-47ca-b16e-3e78a89746f1" valueTypeId="c6ea0d37-4a89-4680-9e0b-1c41f975ba09"/>
+    <recordSetType typeId="e54db03d-f2ae-43ff-8ed4-2e7aa17a46ff" valueTypeId="496e060e-dcb3-41fb-ab50-cc088b08df8a"/>
+    <recordKeyType typeId="20a16b6f-3846-49a0-bf12-9dffafcf2ad3" valueTypeId="2ec23285-5e8e-40ce-b32c-d4594988c121"/>
+    <recordType typeId="e1b6e01d-5d73-46c2-abd6-ce54bd27802e" valueTypeId="7876e46c-ef49-4233-ac09-ab2fd73d12b7"/>
+    <recordManagerType typeId="46a4ee2c-ecf6-4e06-b296-90fef5804490" valueTypeId="566b8225-e982-46ea-a7a7-2aeb4a26e332"/>
+  </producedTypes>
+  <name>РаспределениеПоПроектам</name>
+  <synonym>
+    <key>ru</key>
+    <value>Распределение по проектам</value>
+  </synonym>
+  <defaultListForm>InformationRegister.РаспределениеПоПроектам.Form.ФормаСписка</defaultListForm>
+  <informationRegisterPeriodicity>Month</informationRegisterPeriodicity>
+  <writeMode>RecorderSubordinate</writeMode>
+  <resources uuid="1b709d38-9f55-4074-9aa4-75d35ea0b142">
+    <name>ДоляРаспределения</name>
+    <synonym>
+      <key>ru</key>
+      <value>Доля распределения</value>
+    </synonym>
+    <type>
+      <types>Number</types>
+      <numberQualifiers>
+        <precision>15</precision>
+        <scale>3</scale>
+        <nonNegative>true</nonNegative>
+      </numberQualifiers>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:UndefinedValue"/>
+  </resources>
+  <dimensions uuid="86111ca3-ce13-429a-997a-8cdebf8fbcdc">
+    <name>ВидРаспределения</name>
+    <synonym>
+      <key>ru</key>
+      <value>Вид распределения</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.ВидыРаспределенияПоПроектам</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <mainFilter>true</mainFilter>
+  </dimensions>
+  <dimensions uuid="1300bd02-3afc-49b8-a4c9-80232f1430bd">
+    <name>Проект</name>
+    <synonym>
+      <key>ru</key>
+      <value>Проект</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.Проекты</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <mainFilter>true</mainFilter>
+  </dimensions>
+  <forms uuid="ea9cb230-1921-41bf-b997-5f3a2d2ee6d2">
+    <name>ФормаСписка</name>
+    <synonym>
+      <key>ru</key>
+      <value>Форма списка</value>
+    </synonym>
+    <formType>Ordinary</formType>
+    <usePurposes>PersonalComputer</usePurposes>
+    <usePurposes>MobileDevice</usePurposes>
+  </forms>
+</mdclass:InformationRegister>

@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:WebService xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:core="http://g5.1c.ru/v8/dt/mcore" xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="bc975045-7b11-44d0-b289-335c3d59dccb">
+  <name>TaskExchange</name>
+  <synonym>
+    <key>ru</key>
+    <value>Task exchange</value>
+  </synonym>
+  <namespace>http://work.eskaro.com.ua/Exchange</namespace>
+  <xdtoPackages xsi:type="core:ReferenceValue">
+    <value>XDTOPackage.TaskExchange</value>
+  </xdtoPackages>
+  <xdtoPackages xsi:type="core:StringValue">
+    <value>http://v8.1c.ru/8.1/data/core</value>
+  </xdtoPackages>
+  <descriptorFileName>TaskExchange.1cws</descriptorFileName>
+  <sessionMaxAge>20</sessionMaxAge>
+  <operations uuid="ef77476c-8f83-4240-a611-4aea22ea1a9a">
+    <name>НачатьОбмен</name>
+    <synonym>
+      <key>ru</key>
+      <value>Начать обмен</value>
+    </synonym>
+    <xdtoReturningValueType>
+      <name>string</name>
+      <nsUri>http://www.w3.org/2001/XMLSchema</nsUri>
+    </xdtoReturningValueType>
+    <nillable>true</nillable>
+    <procedureName>НачатьОбмен</procedureName>
+    <dataLockControlMode>Managed</dataLockControlMode>
+    <parameters uuid="0ed8b41f-5936-4284-b896-f0033984c772">
+      <name>КодУзла</name>
+      <synonym>
+        <key>ru</key>
+        <value>Код узла</value>
+      </synonym>
+      <xdtoValueType>
+        <name>string</name>
+        <nsUri>http://www.w3.org/2001/XMLSchema</nsUri>
+      </xdtoValueType>
+      <nillable>true</nillable>
+    </parameters>
+    <parameters uuid="7701fc89-bbfc-442f-bf45-f9138ad6baf8">
+      <name>НомерПринятого</name>
+      <synonym>
+        <key>ru</key>
+        <value>Номер принятого</value>
+      </synonym>
+      <xdtoValueType>
+        <name>decimal</name>
+        <nsUri>http://www.w3.org/2001/XMLSchema</nsUri>
+      </xdtoValueType>
+      <nillable>true</nillable>
+    </parameters>
+    <parameters uuid="a17eb0d2-a1da-4d67-b6ff-a10c9c7adaca">
+      <name>НомерОтправленного</name>
+      <synonym>
+        <key>ru</key>
+        <value>Номер отправленного</value>
+      </synonym>
+      <xdtoValueType>
+        <name>decimal</name>
+        <nsUri>http://www.w3.org/2001/XMLSchema</nsUri>
+      </xdtoValueType>
+      <nillable>true</nillable>
+    </parameters>
+  </operations>
+  <operations uuid="8dfff882-b5f1-422e-9ded-ca119fa64ded">
+    <name>ПолучитьДанные</name>
+    <synonym>
+      <key>ru</key>
+      <value>Получить данные</value>
+    </synonym>
+    <xdtoReturningValueType>
+      <name>ValueStorage</name>
+      <nsUri>http://v8.1c.ru/8.1/data/core</nsUri>
+    </xdtoReturningValueType>
+    <procedureName>ПолучитьДанные</procedureName>
+    <dataLockControlMode>Managed</dataLockControlMode>
+    <parameters uuid="febf762b-3096-4cce-86cb-88daa240f361">
+      <name>КодУзла</name>
+      <synonym>
+        <key>ru</key>
+        <value>Код узла</value>
+      </synonym>
+      <xdtoValueType>
+        <name>string</name>
+        <nsUri>http://www.w3.org/2001/XMLSchema</nsUri>
+      </xdtoValueType>
+      <nillable>true</nillable>
+    </parameters>
+  </operations>
+  <operations uuid="db2d8c55-f4ce-449f-9535-77adb2baa995">
+    <name>ЗаписатьДанные</name>
+    <synonym>
+      <key>ru</key>
+      <value>Записать данные</value>
+    </synonym>
+    <xdtoReturningValueType>
+      <name>string</name>
+      <nsUri>http://www.w3.org/2001/XMLSchema</nsUri>
+    </xdtoReturningValueType>
+    <nillable>true</nillable>
+    <procedureName>ЗаписатьДанные</procedureName>
+    <dataLockControlMode>Managed</dataLockControlMode>
+    <parameters uuid="521acc7a-d3f2-42b7-b275-00d82c85f170">
+      <name>КодУзла</name>
+      <synonym>
+        <key>ru</key>
+        <value>Код узла</value>
+      </synonym>
+      <xdtoValueType>
+        <name>string</name>
+        <nsUri>http://www.w3.org/2001/XMLSchema</nsUri>
+      </xdtoValueType>
+      <nillable>true</nillable>
+    </parameters>
+    <parameters uuid="592b7b16-9c76-4a26-9fa6-8bfb83cf0407">
+      <name>ДанныеМобильногоПриложения</name>
+      <synonym>
+        <key>ru</key>
+        <value>Данные мобильного приложения</value>
+      </synonym>
+      <xdtoValueType>
+        <name>ValueStorage</name>
+        <nsUri>http://v8.1c.ru/8.1/data/core</nsUri>
+      </xdtoValueType>
+    </parameters>
+  </operations>
+</mdclass:WebService>

@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:AccumulationRegister xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:core="http://g5.1c.ru/v8/dt/mcore" xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="0d01a7cf-0d32-4ef1-bc59-d5d8e586744c">
+  <producedTypes>
+    <selectionType typeId="9605b528-d546-4a09-98c8-971022b3145e" valueTypeId="3788390f-0f39-44d6-a2e4-31dee160bbe9"/>
+    <listType typeId="af444594-3b84-4944-b8ba-c868a7f5159b" valueTypeId="8fb66a19-0058-4af4-8f50-7d92e6bafb05"/>
+    <managerType typeId="e5acc971-4f2e-4f6b-970d-01af15f357d4" valueTypeId="90c58e21-d873-41e7-ba1e-04bd37f16b2b"/>
+    <recordSetType typeId="b6efdc38-68e8-4782-b07f-7790188629e4" valueTypeId="671892e7-edc9-4e41-b8c3-891e35cdc127"/>
+    <recordKeyType typeId="a035465b-6c07-4fff-b370-5e1b2a59a44e" valueTypeId="475100c3-dafb-4173-b50a-82fd8b5d9ed4"/>
+    <recordType typeId="5ddda878-b816-4569-b043-3d292329d50f" valueTypeId="01245fe9-491d-4636-83be-d6ddb6dbb88a"/>
+  </producedTypes>
+  <name>КорректировкиСтроительствоОбъектовОсновныхСредствНалоговыйУчет</name>
+  <synonym>
+    <key>ru</key>
+    <value>Корректировки строительство объектов основных средств налоговый учет</value>
+  </synonym>
+  <comment>(Регл) Накапливает данные о необходимости корректировать налоговый кредит по результатам фактического использования (принятия к учету) объектов строительства</comment>
+  <enableTotalsSplitting>true</enableTotalsSplitting>
+  <resources uuid="aa8174f3-f4df-4c2f-a8e4-cd398b9490ba">
+    <name>НДСКредит</name>
+    <synonym>
+      <key>ru</key>
+      <value>НДСКредит</value>
+    </synonym>
+    <type>
+      <types>Number</types>
+      <numberQualifiers>
+        <precision>15</precision>
+        <scale>2</scale>
+      </numberQualifiers>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+  </resources>
+  <resources uuid="7e845e6c-2c47-4823-8c5a-aac9b97b0471">
+    <name>НДСКредитПоФакту</name>
+    <synonym>
+      <key>ru</key>
+      <value>НДСКредит по факту</value>
+    </synonym>
+    <type>
+      <types>Number</types>
+      <numberQualifiers>
+        <precision>15</precision>
+        <scale>2</scale>
+      </numberQualifiers>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+  </resources>
+  <attributes uuid="42d1224d-661c-429e-9c39-7cde5740cc68">
+    <name>КодОперации</name>
+    <synonym>
+      <key>ru</key>
+      <value>Код операции</value>
+    </synonym>
+    <type>
+      <types>EnumRef.КодыОперацийКорректировкиИспользованияНалоговыйУчет</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+  </attributes>
+  <attributes uuid="f6773890-047d-4cea-96a0-d44d42ab84f8">
+    <name>НДСКредитПодтвержденный</name>
+    <synonym>
+      <key>ru</key>
+      <value>НДС кредит подтвержденный</value>
+    </synonym>
+    <type>
+      <types>Number</types>
+      <numberQualifiers>
+        <precision>15</precision>
+        <scale>2</scale>
+      </numberQualifiers>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+  </attributes>
+  <attributes uuid="e694efb5-fcda-4f78-86ef-e33770acd6c8">
+    <name>СтатьяДекларацииНДС</name>
+    <synonym>
+      <key>ru</key>
+      <value>Статья декларации НДС</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.СтатьиНалоговыхДеклараций</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+  </attributes>
+  <dimensions uuid="25e9bede-24d7-4c82-a701-32368af00e2e">
+    <name>Организация</name>
+    <synonym>
+      <key>ru</key>
+      <value>Организация</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.Организации</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <denyIncompleteValues>true</denyIncompleteValues>
+    <fullTextSearch>Use</fullTextSearch>
+    <useInTotals>true</useInTotals>
+  </dimensions>
+  <dimensions uuid="883687d5-c566-422b-89d4-624e5965fd6f">
+    <name>ОбъектСтроительства</name>
+    <synonym>
+      <key>ru</key>
+      <value>Объект строительства</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.ОбъектыСтроительства</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <useInTotals>true</useInTotals>
+  </dimensions>
+  <dimensions uuid="1cdcbe09-453f-4660-9a3b-58085696309f">
+    <name>НалоговоеНазначение</name>
+    <synonym>
+      <key>ru</key>
+      <value>Налоговое назначение</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.НалоговыеНазначенияАктивовИЗатрат</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <useInTotals>true</useInTotals>
+  </dimensions>
+  <dimensions uuid="730f32f3-c594-43e9-bdb2-71888a746664">
+    <name>НалоговоеНазначениеПоФакту</name>
+    <synonym>
+      <key>ru</key>
+      <value>Налоговое назначение по факту</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.НалоговыеНазначенияАктивовИЗатрат</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <useInTotals>true</useInTotals>
+  </dimensions>
+</mdclass:AccumulationRegister>

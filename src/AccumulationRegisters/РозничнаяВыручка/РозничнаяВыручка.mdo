@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:AccumulationRegister xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:core="http://g5.1c.ru/v8/dt/mcore" xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="ad180e0c-b7cf-46cb-8f9f-3b0ba93ea7c9">
+  <producedTypes>
+    <selectionType typeId="0abd719e-78fc-4c3b-a5b9-55e7ff5114f7" valueTypeId="5e0c0dbf-7041-40f3-a939-2170da1e9004"/>
+    <listType typeId="674b1c3f-19eb-41ff-bcd1-17f4ff1bea85" valueTypeId="a64797cd-bf70-4f47-b5a6-b476addcee6b"/>
+    <managerType typeId="d79112f6-edc2-48ba-a1fb-5dedb0f62048" valueTypeId="63e57251-90a6-40f0-a42f-489b6e5d4cfc"/>
+    <recordSetType typeId="cb9f07c2-ab41-4a87-bfcc-c2728fb86a38" valueTypeId="137b8aa4-1fbb-4aad-b1cf-aed82f57585c"/>
+    <recordKeyType typeId="0550f90c-a8ff-4433-b42e-16f601b77e91" valueTypeId="18d4db03-924d-467d-bc3c-48d7c37b5a0a"/>
+    <recordType typeId="ea6491e5-62d1-4379-a4a8-79428c30ade3" valueTypeId="8043af31-083d-4a27-a65f-ef983448aa2f"/>
+  </producedTypes>
+  <name>РозничнаяВыручка</name>
+  <synonym>
+    <key>ru</key>
+    <value>Розничная выручка</value>
+  </synonym>
+  <comment>(Упр)</comment>
+  <enableTotalsSplitting>true</enableTotalsSplitting>
+  <resources uuid="b7248263-4488-4b4e-9e1a-8158c6cc19c8">
+    <name>Сумма</name>
+    <synonym>
+      <key>ru</key>
+      <value>Сумма</value>
+    </synonym>
+    <comment>Сумма в валюте ведения бухгалтерского  учета со всеми налогами</comment>
+    <type>
+      <types>Number</types>
+      <numberQualifiers>
+        <precision>15</precision>
+        <scale>2</scale>
+      </numberQualifiers>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+  </resources>
+  <attributes uuid="6813a3ff-0eed-4036-94c9-2012afebf731">
+    <name>Подразделение</name>
+    <synonym>
+      <key>ru</key>
+      <value>Подразделение</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.Подразделения</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+  </attributes>
+  <dimensions uuid="00b0246f-9d5a-4acf-ae6c-c2d3ac591735">
+    <name>РозничнаяТочка</name>
+    <synonym>
+      <key>ru</key>
+      <value>Розничная точка</value>
+    </synonym>
+    <comment>Розничная точка: касса ККМ или НТТ</comment>
+    <type>
+      <types>CatalogRef.КассыККМ</types>
+      <types>CatalogRef.Склады</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <useInTotals>true</useInTotals>
+  </dimensions>
+</mdclass:AccumulationRegister>

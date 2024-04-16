@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:AccumulationRegister xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:core="http://g5.1c.ru/v8/dt/mcore" xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="16bb8a2d-c679-4085-97d6-231a276bf582">
+  <producedTypes>
+    <selectionType typeId="bf2a23fe-5ffb-4cfc-96bc-1b6babe9ff38" valueTypeId="bb79ca96-92b9-409d-a33e-f48f2812cf7d"/>
+    <listType typeId="95c1a281-c2f0-4701-b2f7-6fb7a52a4ba7" valueTypeId="44e30492-ec3a-4780-9fc3-7fb27bfbbf2b"/>
+    <managerType typeId="f0e3fa63-ee17-43d1-987d-3b70feaa9cae" valueTypeId="cf06b5e5-3056-4878-821c-49fc0d12ab20"/>
+    <recordSetType typeId="342fdf67-924a-4225-b7e5-651988dedb68" valueTypeId="dc905764-6b09-4094-b608-e5088cd247bc"/>
+    <recordKeyType typeId="ddc075b4-b070-4aa8-ad8a-d9cf9d92c84f" valueTypeId="a2302bca-fa4d-46d1-8cf4-85de8c9b1026"/>
+    <recordType typeId="125172b3-63b6-4c1e-96f7-f7861bef5ba0" valueTypeId="96a02707-2731-47a8-ac60-abbc6823cf0b"/>
+  </producedTypes>
+  <name>ВзаиморасчетыСДепонентамиОрганизаций</name>
+  <synonym>
+    <key>ru</key>
+    <value>Взаиморасчеты с депонентами организаций</value>
+  </synonym>
+  <defaultListForm>AccumulationRegister.ВзаиморасчетыСДепонентамиОрганизаций.Form.ФормаСписка</defaultListForm>
+  <enableTotalsSplitting>true</enableTotalsSplitting>
+  <resources uuid="d03898ef-73e9-4578-bf2c-62a103627699">
+    <name>Сумма</name>
+    <synonym>
+      <key>ru</key>
+      <value>Сумма</value>
+    </synonym>
+    <type>
+      <types>Number</types>
+      <numberQualifiers>
+        <precision>15</precision>
+        <scale>2</scale>
+        <nonNegative>true</nonNegative>
+      </numberQualifiers>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+  </resources>
+  <dimensions uuid="ae465a49-27f6-4708-bde1-04feae0be8d5">
+    <name>Организация</name>
+    <synonym>
+      <key>ru</key>
+      <value>Организация</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.Организации</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <denyIncompleteValues>true</denyIncompleteValues>
+    <fullTextSearch>Use</fullTextSearch>
+    <useInTotals>true</useInTotals>
+  </dimensions>
+  <dimensions uuid="1bba2497-54c9-4c73-b9e4-7500c7cb55f6">
+    <name>Ведомость</name>
+    <synonym>
+      <key>ru</key>
+      <value>Ведомость</value>
+    </synonym>
+    <type>
+      <types>DocumentRef.ЗарплатаКВыплатеОрганизаций</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <denyIncompleteValues>true</denyIncompleteValues>
+    <fullTextSearch>Use</fullTextSearch>
+    <useInTotals>true</useInTotals>
+  </dimensions>
+  <dimensions uuid="80509819-5f41-42fe-9e27-d3f7215cbc81">
+    <name>Сотрудник</name>
+    <synonym>
+      <key>ru</key>
+      <value>Сотрудник</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.СотрудникиОрганизаций</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <denyIncompleteValues>true</denyIncompleteValues>
+    <fullTextSearch>Use</fullTextSearch>
+    <useInTotals>true</useInTotals>
+  </dimensions>
+  <forms uuid="85a99d01-c5ba-43da-a6e5-bb3b491e1c23">
+    <name>ФормаСписка</name>
+    <synonym>
+      <key>ru</key>
+      <value>Форма списка</value>
+    </synonym>
+    <formType>Ordinary</formType>
+    <usePurposes>PersonalComputer</usePurposes>
+    <usePurposes>MobileDevice</usePurposes>
+  </forms>
+</mdclass:AccumulationRegister>

@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:DataProcessor xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:core="http://g5.1c.ru/v8/dt/mcore" xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="69ecbb4e-454f-43a4-8ca6-4781f82c22e4">
+  <producedTypes>
+    <objectType typeId="bf6c3ad6-a64a-4435-a802-5ffab4a87f91" valueTypeId="f50f418c-a67a-4ac8-be2a-7f2f6c6dd820"/>
+    <managerType typeId="af9aec3e-95cc-454e-bd77-2c4026d269e2" valueTypeId="add3b15f-7448-4e65-942f-bf3b5c2a0fc7"/>
+  </producedTypes>
+  <name>РегламентноеВосстановлениеСостоянияРасчетовОрганизаций</name>
+  <synonym>
+    <key>ru</key>
+    <value>Восстановление последовательности расчетов</value>
+  </synonym>
+  <comment>(Регл) Выделение авансов, пересчет суммовых разниц и корректировок при расчетах в у.е., восстановление последовательности документов по расчетам с контрагентами.</comment>
+  <defaultForm>DataProcessor.РегламентноеВосстановлениеСостоянияРасчетовОрганизаций.Form.Форма</defaultForm>
+  <help>
+    <pages>
+      <lang>ru</lang>
+    </pages>
+  </help>
+  <attributes uuid="207fff35-7e5b-4723-8f08-25723c7f0356">
+    <name>Организация</name>
+    <synonym>
+      <key>ru</key>
+      <value>Организация</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.Организации</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </attributes>
+  <attributes uuid="ea014d5b-6638-4486-a5cd-aa0911ab88a8">
+    <name>ДатаАктуализации</name>
+    <synonym>
+      <key>ru</key>
+      <value>Дата актуализации</value>
+    </synonym>
+    <type>
+      <types>Date</types>
+      <dateQualifiers>
+        <dateFractions>Date</dateFractions>
+      </dateQualifiers>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </attributes>
+  <attributes uuid="75ceef0b-5864-428d-a995-b2daa9b993f9">
+    <name>АвансыПоПриобретению</name>
+    <synonym>
+      <key>ru</key>
+      <value>Восстановление расчетов. Приобретение.</value>
+    </synonym>
+    <type>
+      <types>Boolean</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </attributes>
+  <attributes uuid="2702d1d2-1c4a-4b31-ac1d-f9857051a2f5">
+    <name>АвансыПоРеализации</name>
+    <synonym>
+      <key>ru</key>
+      <value>Восстановление расчетов. Реализация.</value>
+    </synonym>
+    <type>
+      <types>Boolean</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </attributes>
+  <attributes uuid="1d6bf643-1392-4333-9ff2-0f67c04dc9a6">
+    <name>ПереоценкаВалютныхСчетовВДокументе</name>
+    <synonym>
+      <key>ru</key>
+      <value>Переоценка валютных счетов в документе</value>
+    </synonym>
+    <type>
+      <types>Boolean</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </attributes>
+  <tabularSections uuid="7bb78bfd-72e1-47da-ac79-e3ad02a817a1">
+    <producedTypes>
+      <objectType typeId="823f3943-a2c7-4931-81f6-ba6894c829b3" valueTypeId="6a13c995-d13b-48c1-b053-3981a8920fb6"/>
+      <rowType typeId="353079a0-fa57-43fa-b905-9e3f9c59f1dd" valueTypeId="8df93806-ccc0-4516-845d-8834e0117e7a"/>
+    </producedTypes>
+    <name>ТабОрганизаций</name>
+    <synonym>
+      <key>ru</key>
+      <value>Список организаций</value>
+    </synonym>
+    <attributes uuid="4d86f5b4-9c7e-4edb-88aa-4f38a07e4185">
+      <name>Пометка</name>
+      <synonym>
+        <key>ru</key>
+        <value>Пометка</value>
+      </synonym>
+      <type>
+        <types>Boolean</types>
+      </type>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <fillValue xsi:type="core:UndefinedValue"/>
+    </attributes>
+    <attributes uuid="28883be1-9b6f-457e-9272-4801322e1353">
+      <name>Организация</name>
+      <synonym>
+        <key>ru</key>
+        <value>Организация</value>
+      </synonym>
+      <type>
+        <types>CatalogRef.Организации</types>
+      </type>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <fillValue xsi:type="core:UndefinedValue"/>
+    </attributes>
+    <attributes uuid="ffab55d2-01db-4369-b928-52e5838a7cd2">
+      <name>ГраницаПриобретений</name>
+      <synonym>
+        <key>ru</key>
+        <value>Граница по приобретению</value>
+      </synonym>
+      <type>
+        <types>String</types>
+        <stringQualifiers/>
+      </type>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <fillValue xsi:type="core:UndefinedValue"/>
+    </attributes>
+    <attributes uuid="142b6d5e-dfea-48ce-aa41-7d1a16aed10d">
+      <name>ГраницаРеализаций</name>
+      <synonym>
+        <key>ru</key>
+        <value>Граница по реализации</value>
+      </synonym>
+      <type>
+        <types>String</types>
+        <stringQualifiers/>
+      </type>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <fillValue xsi:type="core:UndefinedValue"/>
+    </attributes>
+  </tabularSections>
+  <forms uuid="732e6e74-f8ed-4774-9388-8bf8d3510c93">
+    <name>Форма</name>
+    <synonym>
+      <key>ru</key>
+      <value>Форма</value>
+    </synonym>
+    <formType>Ordinary</formType>
+    <usePurposes>PersonalComputer</usePurposes>
+    <usePurposes>MobileDevice</usePurposes>
+  </forms>
+</mdclass:DataProcessor>

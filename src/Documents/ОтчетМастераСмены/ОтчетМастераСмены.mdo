@@ -1,0 +1,751 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:Document xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:core="http://g5.1c.ru/v8/dt/mcore" xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="577d1c0e-dc7c-44cf-b0e3-1e12a4dafbfb">
+  <producedTypes>
+    <objectType typeId="1968d2ba-c47f-4a6f-afe6-e1754fda3de8" valueTypeId="26f418d2-6ed8-4faa-8731-ef514d3e5db8"/>
+    <refType typeId="5acd4705-63b3-479e-80d0-3aeca314770c" valueTypeId="75b9c317-f80b-4528-9c22-1110f84d1f59"/>
+    <selectionType typeId="08f40044-dbf2-4a91-b19e-f4436f0903c5" valueTypeId="74668557-c39b-49f0-be17-9e409bdc4049"/>
+    <listType typeId="2bb883f0-2039-450d-9e98-9a9f189d23aa" valueTypeId="90d8e381-aa1f-402d-95d8-5c212d47b559"/>
+    <managerType typeId="d4273a0f-4b81-45b0-a02e-e6001b64ce0a" valueTypeId="b3ce31c2-bac7-4aaf-aef5-98f8b965067d"/>
+  </producedTypes>
+  <name>ОтчетМастераСмены</name>
+  <synonym>
+    <key>ru</key>
+    <value>Отчет мастера смены</value>
+  </synonym>
+  <comment>(Упр)</comment>
+  <useStandardCommands>true</useStandardCommands>
+  <inputByString>Document.ОтчетМастераСмены.StandardAttribute.Number</inputByString>
+  <fullTextSearchOnInputByString>DontUse</fullTextSearchOnInputByString>
+  <basedOn>Document.ОтчетОСоставеСмены</basedOn>
+  <createOnInput>Use</createOnInput>
+  <includeHelpInContents>true</includeHelpInContents>
+  <help>
+    <pages>
+      <lang>ru</lang>
+    </pages>
+  </help>
+  <fullTextSearch>Use</fullTextSearch>
+  <objectPresentation>
+    <key>ru</key>
+    <value>Отчет мастера смены</value>
+  </objectPresentation>
+  <extendedObjectPresentation>
+    <key>ru</key>
+    <value>Отчет мастера смены</value>
+  </extendedObjectPresentation>
+  <listPresentation>
+    <key>ru</key>
+    <value>Отчеты мастера смены</value>
+  </listPresentation>
+  <extendedListPresentation>
+    <key>ru</key>
+    <value>Отчеты мастера смены</value>
+  </extendedListPresentation>
+  <explanation>
+    <key>ru</key>
+    <value>Документы отражают сведения о выпуске продукции, израсходованных материалах, технологических параметрах выпуска продукции</value>
+  </explanation>
+  <numberType>String</numberType>
+  <numberLength>11</numberLength>
+  <numberPeriodicity>Year</numberPeriodicity>
+  <checkUnique>true</checkUnique>
+  <autonumbering>true</autonumbering>
+  <defaultObjectForm>Document.ОтчетМастераСмены.Form.ФормаДокумента</defaultObjectForm>
+  <defaultListForm>Document.ОтчетМастераСмены.Form.ФормаСписка</defaultListForm>
+  <defaultChoiceForm>Document.ОтчетМастераСмены.Form.ФормаВыбора</defaultChoiceForm>
+  <auxiliaryObjectForm>Document.ОтчетМастераСмены.Form.ФормаДокументаУправляемая</auxiliaryObjectForm>
+  <auxiliaryListForm>Document.ОтчетМастераСмены.Form.ФормаСпискаУправляемая</auxiliaryListForm>
+  <registerRecordsDeletion>AutoDeleteOff</registerRecordsDeletion>
+  <registerRecords>AccumulationRegister.МатериалыВПроизводстве</registerRecords>
+  <postInPrivilegedMode>true</postInPrivilegedMode>
+  <unpostInPrivilegedMode>true</unpostInPrivilegedMode>
+  <attributes uuid="1105eda8-3f7a-4f26-9a6c-fc9ab9b59838">
+    <name>Подразделение</name>
+    <synonym>
+      <key>ru</key>
+      <value>Подразделение</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.Подразделения</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fillChecking>ShowError</fillChecking>
+    <fillFromFillingValue>true</fillFromFillingValue>
+    <fillValue xsi:type="core:ReferenceValue">
+      <value>Catalog.Подразделения.EmptyRef</value>
+    </fillValue>
+    <indexing>Index</indexing>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+  </attributes>
+  <attributes uuid="15aed843-f342-4cfb-96c3-eab73dfbfc25">
+    <name>Ответственный</name>
+    <synonym>
+      <key>ru</key>
+      <value>Ответственный</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.Пользователи</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fillChecking>ShowError</fillChecking>
+    <fillFromFillingValue>true</fillFromFillingValue>
+    <fillValue xsi:type="core:ReferenceValue">
+      <value>Catalog.Пользователи.EmptyRef</value>
+    </fillValue>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+  </attributes>
+  <attributes uuid="c733e2a5-5add-4b10-9988-5369ad2aedc4">
+    <name>Смена</name>
+    <synonym>
+      <key>ru</key>
+      <value>Смена</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.Смены</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fillChecking>ShowError</fillChecking>
+    <fillFromFillingValue>true</fillFromFillingValue>
+    <fillValue xsi:type="core:ReferenceValue">
+      <value>Catalog.Смены.EmptyRef</value>
+    </fillValue>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+  </attributes>
+  <attributes uuid="fbdb520a-0586-48cb-a1e5-a38cf2dc7210">
+    <name>Комментарий</name>
+    <synonym>
+      <key>ru</key>
+      <value>Комментарий</value>
+    </synonym>
+    <comment>Любая дополнительная информация</comment>
+    <type>
+      <types>String</types>
+      <stringQualifiers/>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+  </attributes>
+  <attributes uuid="f8f5c833-c20d-4f5c-a79c-3e5683681291">
+    <name>ГраницаСмены</name>
+    <synonym>
+      <key>ru</key>
+      <value>Граница смены</value>
+    </synonym>
+    <type>
+      <types>Date</types>
+      <dateQualifiers/>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <indexing>Index</indexing>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+  </attributes>
+  <forms uuid="96a48b89-7a91-4fa6-b428-adbcd2bab99d">
+    <name>ФормаДокумента</name>
+    <synonym>
+      <key>ru</key>
+      <value>Форма документа</value>
+    </synonym>
+    <formType>Ordinary</formType>
+    <usePurposes>PersonalComputer</usePurposes>
+    <usePurposes>MobileDevice</usePurposes>
+  </forms>
+  <forms uuid="e4d840e0-1892-4349-9d4d-3cd526f30c4e">
+    <name>ФормаСписка</name>
+    <synonym>
+      <key>ru</key>
+      <value>Форма списка</value>
+    </synonym>
+    <formType>Ordinary</formType>
+    <usePurposes>PersonalComputer</usePurposes>
+    <usePurposes>MobileDevice</usePurposes>
+  </forms>
+  <forms uuid="b0dc9763-e2c8-44b6-86d8-8d341d5cebdf">
+    <name>ФормаВыбора</name>
+    <synonym>
+      <key>ru</key>
+      <value>Форма выбора</value>
+    </synonym>
+    <formType>Ordinary</formType>
+    <usePurposes>PersonalComputer</usePurposes>
+    <usePurposes>MobileDevice</usePurposes>
+  </forms>
+  <forms uuid="bfec404b-c27d-4b13-8404-1a38c996589d">
+    <name>ФормаДокументаУправляемая</name>
+    <synonym>
+      <key>ru</key>
+      <value>Форма документа управляемая</value>
+    </synonym>
+    <usePurposes>PersonalComputer</usePurposes>
+    <usePurposes>MobileDevice</usePurposes>
+  </forms>
+  <forms uuid="0d4b61cb-1d63-4ba9-8657-451a6c849f38">
+    <name>ФормаСпискаУправляемая</name>
+    <synonym>
+      <key>ru</key>
+      <value>Форма списка управляемая</value>
+    </synonym>
+    <usePurposes>PersonalComputer</usePurposes>
+    <usePurposes>MobileDevice</usePurposes>
+  </forms>
+  <tabularSections uuid="40e2072c-2a70-4e16-9978-6eb26f52f2cb">
+    <producedTypes>
+      <objectType typeId="728607b9-f447-40d7-ba93-81c1cbf53636" valueTypeId="869608ac-5eda-447b-b645-8ee1953bc6e7"/>
+      <rowType typeId="daf6f93c-0ad2-46a7-8d95-bd0b3d51722d" valueTypeId="b4ac7ff1-7717-4535-be74-1a69122e4af8"/>
+    </producedTypes>
+    <name>Выпуск</name>
+    <synonym>
+      <key>ru</key>
+      <value>Выпуск</value>
+    </synonym>
+    <attributes uuid="f18e9ffe-ffa5-4376-992e-1718fa0807db">
+      <name>Номенклатура</name>
+      <synonym>
+        <key>ru</key>
+        <value>Номенклатура</value>
+      </synonym>
+      <type>
+        <types>CatalogRef.Номенклатура</types>
+      </type>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <fillChecking>ShowError</fillChecking>
+      <dataHistory>Use</dataHistory>
+      <fullTextSearch>Use</fullTextSearch>
+    </attributes>
+    <attributes uuid="49698cba-f4e3-48c4-97a2-43595818ec4a">
+      <name>Количество</name>
+      <synonym>
+        <key>ru</key>
+        <value>Количество</value>
+      </synonym>
+      <type>
+        <types>Number</types>
+        <numberQualifiers>
+          <precision>15</precision>
+          <scale>3</scale>
+          <nonNegative>true</nonNegative>
+        </numberQualifiers>
+      </type>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <dataHistory>Use</dataHistory>
+      <fullTextSearch>Use</fullTextSearch>
+    </attributes>
+    <attributes uuid="37d77473-9560-45ce-a33a-482cd22fd679">
+      <name>ЕдиницаИзмерения</name>
+      <synonym>
+        <key>ru</key>
+        <value>Единица измерения</value>
+      </synonym>
+      <type>
+        <types>CatalogRef.ЕдиницыИзмерения</types>
+      </type>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <fillChecking>ShowError</fillChecking>
+      <choiceParameterLinks>
+        <name>Отбор.Владелец</name>
+        <field>Document.ОтчетМастераСмены.TabularSection.Выпуск.Attribute.Номенклатура</field>
+      </choiceParameterLinks>
+      <dataHistory>Use</dataHistory>
+      <fullTextSearch>Use</fullTextSearch>
+    </attributes>
+    <attributes uuid="940e99e3-f882-41a2-b145-2890045a606f">
+      <name>Коэффициент</name>
+      <synonym>
+        <key>ru</key>
+        <value>Коэффициент</value>
+      </synonym>
+      <type>
+        <types>Number</types>
+        <numberQualifiers>
+          <precision>10</precision>
+          <scale>3</scale>
+          <nonNegative>true</nonNegative>
+        </numberQualifiers>
+      </type>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <dataHistory>Use</dataHistory>
+      <fullTextSearch>Use</fullTextSearch>
+    </attributes>
+    <attributes uuid="54cb13d0-4203-419c-b819-28c8cd64ed50">
+      <name>ХарактеристикаНоменклатуры</name>
+      <synonym>
+        <key>ru</key>
+        <value>Характеристика номенклатуры</value>
+      </synonym>
+      <type>
+        <types>CatalogRef.ХарактеристикиНоменклатуры</types>
+      </type>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <choiceParameterLinks>
+        <name>Отбор.Владелец</name>
+        <field>Document.ОтчетМастераСмены.TabularSection.Выпуск.Attribute.Номенклатура</field>
+      </choiceParameterLinks>
+      <dataHistory>Use</dataHistory>
+      <fullTextSearch>Use</fullTextSearch>
+    </attributes>
+    <attributes uuid="57bfd408-3601-47df-919c-daa4d8c7e3fe">
+      <name>СерияНоменклатуры</name>
+      <synonym>
+        <key>ru</key>
+        <value>Серия номенклатуры</value>
+      </synonym>
+      <type>
+        <types>CatalogRef.СерииНоменклатуры</types>
+      </type>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <choiceParameterLinks>
+        <name>Отбор.Владелец</name>
+        <field>Document.ОтчетМастераСмены.TabularSection.Выпуск.Attribute.Номенклатура</field>
+      </choiceParameterLinks>
+      <dataHistory>Use</dataHistory>
+      <fullTextSearch>Use</fullTextSearch>
+    </attributes>
+    <attributes uuid="dfd34d43-379e-45c1-8333-3c8b93ba5f2e">
+      <name>НомерПартии</name>
+      <synonym>
+        <key>ru</key>
+        <value>Номер партии</value>
+      </synonym>
+      <type>
+        <types>String</types>
+        <stringQualifiers>
+          <length>20</length>
+        </stringQualifiers>
+      </type>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <dataHistory>Use</dataHistory>
+      <fullTextSearch>Use</fullTextSearch>
+    </attributes>
+    <attributes uuid="26d572ae-6acb-43c1-bf80-99b27f8661d1">
+      <name>ВремяВыпуска</name>
+      <synonym>
+        <key>ru</key>
+        <value>Время выпуска</value>
+      </synonym>
+      <type>
+        <types>Date</types>
+        <dateQualifiers>
+          <dateFractions>Time</dateFractions>
+        </dateQualifiers>
+      </type>
+      <format>
+        <key>ru</key>
+        <value>ДФ=ЧЧ:мм</value>
+      </format>
+      <editFormat>
+        <key>ru</key>
+        <value>ДФ=ЧЧ:мм</value>
+      </editFormat>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <dataHistory>Use</dataHistory>
+      <fullTextSearch>Use</fullTextSearch>
+    </attributes>
+    <attributes uuid="df8ca14a-d66a-4592-aef8-dfb5fdf7c61e">
+      <name>Спецификация</name>
+      <synonym>
+        <key>ru</key>
+        <value>Спецификация</value>
+      </synonym>
+      <comment>(Общ)</comment>
+      <type>
+        <types>CatalogRef.СпецификацииНоменклатуры</types>
+      </type>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <dataHistory>Use</dataHistory>
+      <fullTextSearch>Use</fullTextSearch>
+    </attributes>
+    <attributes uuid="cf7670b5-0726-4c09-a4eb-7c8cae9b04cb">
+      <name>КлючСвязи</name>
+      <synonym>
+        <key>ru</key>
+        <value>Ключ связи</value>
+      </synonym>
+      <comment>(ключ строки)</comment>
+      <type>
+        <types>Number</types>
+        <numberQualifiers>
+          <precision>5</precision>
+          <nonNegative>true</nonNegative>
+        </numberQualifiers>
+      </type>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <dataHistory>Use</dataHistory>
+      <indexing>Index</indexing>
+      <fullTextSearch>Use</fullTextSearch>
+    </attributes>
+  </tabularSections>
+  <tabularSections uuid="5ab4a692-2d85-4ebb-bb26-17f999e954d0">
+    <producedTypes>
+      <objectType typeId="b3b6dd85-9407-43d7-94b8-7c795b4a34cd" valueTypeId="b81c0d67-3f24-41a2-a6a7-b5bcc02bfdb7"/>
+      <rowType typeId="d14dfeb8-b4ca-4b92-980f-e857ddb8e699" valueTypeId="ad100767-bc7b-4328-8989-94655281268c"/>
+    </producedTypes>
+    <name>ТехнологическиеПараметры</name>
+    <synonym>
+      <key>ru</key>
+      <value>Технологические параметры</value>
+    </synonym>
+    <attributes uuid="e74657f1-31ac-41a5-b90a-14c346857a52">
+      <name>ВидПараметра</name>
+      <synonym>
+        <key>ru</key>
+        <value>Вид параметра</value>
+      </synonym>
+      <type>
+        <types>CatalogRef.ВидыПараметровВыпускаПродукции</types>
+      </type>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <dataHistory>Use</dataHistory>
+      <fullTextSearch>Use</fullTextSearch>
+    </attributes>
+    <attributes uuid="6b1900fb-b80d-4f25-ac55-32faf32749b3">
+      <name>Значение</name>
+      <synonym>
+        <key>ru</key>
+        <value>Значение</value>
+      </synonym>
+      <type>
+        <types>Number</types>
+        <numberQualifiers>
+          <precision>15</precision>
+          <scale>3</scale>
+        </numberQualifiers>
+      </type>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <dataHistory>Use</dataHistory>
+      <fullTextSearch>Use</fullTextSearch>
+    </attributes>
+  </tabularSections>
+  <tabularSections uuid="c60ad294-5fe5-4a68-9343-fa712e8be481">
+    <producedTypes>
+      <objectType typeId="5dd66eb9-ec4d-4aca-b834-59a2262fd291" valueTypeId="88851f89-0c85-4f5a-a899-fea8045303fe"/>
+      <rowType typeId="427b13e4-a5a7-40cf-81bc-c5e96cc538fe" valueTypeId="317f9e82-5fe3-4c28-ae9e-72e5e2cf1831"/>
+    </producedTypes>
+    <name>РасходМатериалов</name>
+    <synonym>
+      <key>ru</key>
+      <value>Расход материалов</value>
+    </synonym>
+    <comment>(Общ)</comment>
+    <attributes uuid="246d6d57-8fd6-4e5a-a20b-a0a4308ab7ec">
+      <name>Номенклатура</name>
+      <synonym>
+        <key>ru</key>
+        <value>Материал</value>
+      </synonym>
+      <comment>(Общ)</comment>
+      <type>
+        <types>CatalogRef.Номенклатура</types>
+      </type>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <fillChecking>ShowError</fillChecking>
+      <choiceParameters>
+        <name>Отбор.Набор</name>
+        <value xsi:type="core:BooleanValue"/>
+      </choiceParameters>
+      <choiceParameters>
+        <name>Отбор.Услуга</name>
+        <value xsi:type="core:BooleanValue"/>
+      </choiceParameters>
+      <dataHistory>Use</dataHistory>
+      <fullTextSearch>Use</fullTextSearch>
+    </attributes>
+    <attributes uuid="1d37971a-57bb-4c2c-8c1c-c4fa60d6953d">
+      <name>ХарактеристикаНоменклатуры</name>
+      <synonym>
+        <key>ru</key>
+        <value>Характеристика номенклатуры</value>
+      </synonym>
+      <comment>(Общ)</comment>
+      <type>
+        <types>CatalogRef.ХарактеристикиНоменклатуры</types>
+      </type>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <choiceParameterLinks>
+        <name>Отбор.Владелец</name>
+        <field>Document.ОтчетМастераСмены.TabularSection.РасходМатериалов.Attribute.Номенклатура</field>
+      </choiceParameterLinks>
+      <dataHistory>Use</dataHistory>
+      <fullTextSearch>Use</fullTextSearch>
+    </attributes>
+    <attributes uuid="27a5b430-0d80-48bd-bb78-d8993ee4e3ec">
+      <name>СерияНоменклатуры</name>
+      <synonym>
+        <key>ru</key>
+        <value>Серия номенклатуры</value>
+      </synonym>
+      <comment>(Общ)</comment>
+      <type>
+        <types>CatalogRef.СерииНоменклатуры</types>
+      </type>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <choiceParameterLinks>
+        <name>Отбор.Владелец</name>
+        <field>Document.ОтчетМастераСмены.TabularSection.РасходМатериалов.Attribute.Номенклатура</field>
+      </choiceParameterLinks>
+      <dataHistory>Use</dataHistory>
+      <fullTextSearch>Use</fullTextSearch>
+    </attributes>
+    <attributes uuid="79dad7c4-9724-46e8-9e0f-911f7a00fd34">
+      <name>ЕдиницаИзмерения</name>
+      <synonym>
+        <key>ru</key>
+        <value>Единица измерения</value>
+      </synonym>
+      <comment>(Общ)</comment>
+      <type>
+        <types>CatalogRef.ЕдиницыИзмерения</types>
+      </type>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <fillChecking>ShowError</fillChecking>
+      <choiceParameterLinks>
+        <name>Отбор.Владелец</name>
+        <field>Document.ОтчетМастераСмены.TabularSection.РасходМатериалов.Attribute.Номенклатура</field>
+      </choiceParameterLinks>
+      <dataHistory>Use</dataHistory>
+      <fullTextSearch>Use</fullTextSearch>
+    </attributes>
+    <attributes uuid="51849d95-83af-4042-a565-b60abe47190f">
+      <name>Коэффициент</name>
+      <synonym>
+        <key>ru</key>
+        <value>Коэффициент</value>
+      </synonym>
+      <comment>(Общ)</comment>
+      <type>
+        <types>Number</types>
+        <numberQualifiers>
+          <precision>10</precision>
+          <scale>3</scale>
+          <nonNegative>true</nonNegative>
+        </numberQualifiers>
+      </type>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <dataHistory>Use</dataHistory>
+      <fullTextSearch>Use</fullTextSearch>
+    </attributes>
+    <attributes uuid="cfa1c0e8-af0a-43cf-8575-b35a23978191">
+      <name>КоличествоПоНормативу</name>
+      <synonym>
+        <key>ru</key>
+        <value>Количество по нормативу</value>
+      </synonym>
+      <type>
+        <types>Number</types>
+        <numberQualifiers>
+          <precision>15</precision>
+          <scale>3</scale>
+          <nonNegative>true</nonNegative>
+        </numberQualifiers>
+      </type>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <dataHistory>Use</dataHistory>
+      <fullTextSearch>Use</fullTextSearch>
+    </attributes>
+    <attributes uuid="74368630-6587-40ec-aceb-83571061f301">
+      <name>Количество</name>
+      <synonym>
+        <key>ru</key>
+        <value>Количество</value>
+      </synonym>
+      <comment>(Общ)</comment>
+      <type>
+        <types>Number</types>
+        <numberQualifiers>
+          <precision>15</precision>
+          <scale>3</scale>
+          <nonNegative>true</nonNegative>
+        </numberQualifiers>
+      </type>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <dataHistory>Use</dataHistory>
+      <fullTextSearch>Use</fullTextSearch>
+    </attributes>
+    <attributes uuid="4ff21789-bb0d-4241-be88-174e4dcf540b">
+      <name>Продукция</name>
+      <synonym>
+        <key>ru</key>
+        <value>Продукция</value>
+      </synonym>
+      <type>
+        <types>CatalogRef.Номенклатура</types>
+      </type>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <dataHistory>Use</dataHistory>
+      <fullTextSearch>Use</fullTextSearch>
+    </attributes>
+    <attributes uuid="4288dec8-2855-4972-a004-0ee20d031ead">
+      <name>ХарактеристикаПродукции</name>
+      <synonym>
+        <key>ru</key>
+        <value>Характеристика продукции</value>
+      </synonym>
+      <type>
+        <types>CatalogRef.ХарактеристикиНоменклатуры</types>
+      </type>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <choiceParameterLinks>
+        <name>Отбор.Владелец</name>
+        <field>Document.ОтчетМастераСмены.TabularSection.РасходМатериалов.Attribute.Продукция</field>
+      </choiceParameterLinks>
+      <dataHistory>Use</dataHistory>
+      <fullTextSearch>Use</fullTextSearch>
+    </attributes>
+    <attributes uuid="53465a6f-863c-4e14-b819-f0724232c2ef">
+      <name>СерияПродукции</name>
+      <synonym>
+        <key>ru</key>
+        <value>Серия продукции</value>
+      </synonym>
+      <type>
+        <types>CatalogRef.СерииНоменклатуры</types>
+      </type>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <choiceParameterLinks>
+        <name>Отбор.Владелец</name>
+        <field>Document.ОтчетМастераСмены.TabularSection.РасходМатериалов.Attribute.Продукция</field>
+      </choiceParameterLinks>
+      <dataHistory>Use</dataHistory>
+      <fullTextSearch>Use</fullTextSearch>
+    </attributes>
+    <attributes uuid="ad66cc67-6315-4c6f-8f7b-40fae6aa6481">
+      <name>Спецификация</name>
+      <synonym>
+        <key>ru</key>
+        <value>Спецификация</value>
+      </synonym>
+      <comment>(Общ)</comment>
+      <type>
+        <types>CatalogRef.СпецификацииНоменклатуры</types>
+      </type>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <dataHistory>Use</dataHistory>
+      <fullTextSearch>Use</fullTextSearch>
+    </attributes>
+  </tabularSections>
+  <tabularSections uuid="399c5fa6-a4b0-4047-962e-f0b9b20afe25">
+    <producedTypes>
+      <objectType typeId="7171ca6c-0712-417a-a237-826b56e35e59" valueTypeId="b257e97a-51f2-4c0d-ac06-bfa0218f152a"/>
+      <rowType typeId="aa18d855-9be2-4feb-9d6b-4a513c29bb55" valueTypeId="20b1bbde-1628-4250-9b8c-f5e1492946fd"/>
+    </producedTypes>
+    <name>ПараметрыВыпуска</name>
+    <synonym>
+      <key>ru</key>
+      <value>Параметры выпуска</value>
+    </synonym>
+    <attributes uuid="7751e835-0191-4375-b77f-efe6d65ee8b5">
+      <name>ВидПараметра</name>
+      <synonym>
+        <key>ru</key>
+        <value>Вид параметра</value>
+      </synonym>
+      <type>
+        <types>CatalogRef.ВидыПараметровВыпускаПродукции</types>
+      </type>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <dataHistory>Use</dataHistory>
+      <fullTextSearch>Use</fullTextSearch>
+    </attributes>
+    <attributes uuid="093269ee-22cd-40fc-91b4-8a24709060c8">
+      <name>КлючСвязи</name>
+      <synonym>
+        <key>ru</key>
+        <value>Ключ связи</value>
+      </synonym>
+      <type>
+        <types>Number</types>
+        <numberQualifiers>
+          <precision>5</precision>
+          <nonNegative>true</nonNegative>
+        </numberQualifiers>
+      </type>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <dataHistory>Use</dataHistory>
+      <indexing>Index</indexing>
+      <fullTextSearch>Use</fullTextSearch>
+    </attributes>
+    <attributes uuid="e9460f3b-75d4-4330-aade-d5526ef2b392">
+      <name>Значение</name>
+      <synonym>
+        <key>ru</key>
+        <value>Значение</value>
+      </synonym>
+      <type>
+        <types>Number</types>
+        <numberQualifiers>
+          <precision>15</precision>
+          <scale>3</scale>
+        </numberQualifiers>
+      </type>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <dataHistory>Use</dataHistory>
+      <fullTextSearch>Use</fullTextSearch>
+    </attributes>
+  </tabularSections>
+  <templates uuid="2dab98c5-1a1f-4691-86bd-404efc416694">
+    <name>ОтчетМастераСмены</name>
+    <synonym>
+      <key>ru</key>
+      <value>Отчет мастера смены</value>
+    </synonym>
+  </templates>
+  <commands uuid="5adbc60e-a6e9-44fe-9c7b-186c989bd689">
+    <name>ПечатьОтчетМастераСмены</name>
+    <synonym>
+      <key>ru</key>
+      <value>Отчет мастера смены</value>
+    </synonym>
+    <group>CommandGroup.Печать</group>
+    <commandParameterType>
+      <types>DocumentRef.ОтчетМастераСмены</types>
+    </commandParameterType>
+    <parameterUseMode>Multiple</parameterUseMode>
+    <representation>Auto</representation>
+  </commands>
+  <commands uuid="729cf30a-157d-41ab-8346-2d5e2051a68e">
+    <name>СоздатьПоНастройке</name>
+    <synonym>
+      <key>ru</key>
+      <value>Отчет мастера смены (по настройке)</value>
+    </synonym>
+    <group>ActionsPanelCreate</group>
+    <commandParameterType/>
+    <representation>Auto</representation>
+  </commands>
+</mdclass:Document>

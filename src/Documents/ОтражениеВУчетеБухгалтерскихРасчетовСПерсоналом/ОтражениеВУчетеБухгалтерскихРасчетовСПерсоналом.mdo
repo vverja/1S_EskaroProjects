@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:Document xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:core="http://g5.1c.ru/v8/dt/mcore" xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="b82f592b-e587-4132-bbde-608dd07caf9b">
+  <producedTypes>
+    <objectType typeId="ab0c009b-7652-4f2f-a0ed-839b67a068fb" valueTypeId="f971326d-630b-4996-a3f1-f27de91b0f07"/>
+    <refType typeId="22deb90e-768d-4bf0-8c0a-baadbff514f4" valueTypeId="367b5107-4458-4241-9e95-a5ac71499d23"/>
+    <selectionType typeId="4e0d1e20-fe60-405c-bb6f-8940e6b2273c" valueTypeId="db974963-fa88-40e3-af0e-e4ad0e0fb2ad"/>
+    <listType typeId="423b44a9-b148-44d6-90e7-61a3ad953f6f" valueTypeId="4b253ff8-bef6-4518-9e94-0c6a095647e2"/>
+    <managerType typeId="43a314f4-20cc-4840-a6fb-f5252afffd59" valueTypeId="7916d211-8656-4e3c-b5db-ccf268a0f52a"/>
+  </producedTypes>
+  <name>ОтражениеВУчетеБухгалтерскихРасчетовСПерсоналом</name>
+  <synonym>
+    <key>ru</key>
+    <value>Отражение в учете бухгалтерских расчетов с персоналом</value>
+  </synonym>
+  <comment>(Упр)</comment>
+  <inputByString>Document.ОтражениеВУчетеБухгалтерскихРасчетовСПерсоналом.StandardAttribute.Number</inputByString>
+  <fullTextSearchOnInputByString>DontUse</fullTextSearchOnInputByString>
+  <createOnInput>Use</createOnInput>
+  <includeHelpInContents>true</includeHelpInContents>
+  <help>
+    <pages>
+      <lang>ru</lang>
+    </pages>
+  </help>
+  <fullTextSearch>Use</fullTextSearch>
+  <numberType>String</numberType>
+  <numberLength>11</numberLength>
+  <numberPeriodicity>Year</numberPeriodicity>
+  <checkUnique>true</checkUnique>
+  <autonumbering>true</autonumbering>
+  <defaultObjectForm>Document.ОтражениеВУчетеБухгалтерскихРасчетовСПерсоналом.Form.ФормаДокумента</defaultObjectForm>
+  <defaultListForm>Document.ОтражениеВУчетеБухгалтерскихРасчетовСПерсоналом.Form.ФормаСписка</defaultListForm>
+  <defaultChoiceForm>Document.ОтражениеВУчетеБухгалтерскихРасчетовСПерсоналом.Form.ФормаВыбора</defaultChoiceForm>
+  <realTimePosting>Deny</realTimePosting>
+  <registerRecordsDeletion>AutoDelete</registerRecordsDeletion>
+  <registerRecordsWritingOnPost>WriteModified</registerRecordsWritingOnPost>
+  <registerRecords>AccumulationRegister.ВзаиморасчетыСРаботниками</registerRecords>
+  <registerRecords>CalculationRegister.УправленческиеУдержания</registerRecords>
+  <registerRecords>CalculationRegister.УправленческиеНачисления</registerRecords>
+  <attributes uuid="3fbe98a2-639a-487b-96f6-c259861039e0">
+    <name>ПериодРегистрации</name>
+    <synonym>
+      <key>ru</key>
+      <value>Период регистрации</value>
+    </synonym>
+    <type>
+      <types>Date</types>
+      <dateQualifiers>
+        <dateFractions>Date</dateFractions>
+      </dateQualifiers>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+  </attributes>
+  <attributes uuid="ac0c6df2-d731-4f6f-a01f-3c6bc8566dd5">
+    <name>Ответственный</name>
+    <synonym>
+      <key>ru</key>
+      <value>Ответственный</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.Пользователи</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+  </attributes>
+  <attributes uuid="3909b07f-01b6-4975-b5a5-45ff46285a9b">
+    <name>Комментарий</name>
+    <synonym>
+      <key>ru</key>
+      <value>Комментарий</value>
+    </synonym>
+    <comment>Любая дополнительная информация</comment>
+    <type>
+      <types>String</types>
+      <stringQualifiers/>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+  </attributes>
+  <forms uuid="62adf8d8-9986-4a25-9486-d158dc2f1153">
+    <name>ФормаДокумента</name>
+    <synonym>
+      <key>ru</key>
+      <value>Форма документа</value>
+    </synonym>
+    <formType>Ordinary</formType>
+    <usePurposes>PersonalComputer</usePurposes>
+    <usePurposes>MobileDevice</usePurposes>
+  </forms>
+  <forms uuid="1e030430-4648-4f31-9677-613a830eb3a8">
+    <name>ФормаСписка</name>
+    <synonym>
+      <key>ru</key>
+      <value>Форма списка</value>
+    </synonym>
+    <formType>Ordinary</formType>
+    <usePurposes>PersonalComputer</usePurposes>
+    <usePurposes>MobileDevice</usePurposes>
+  </forms>
+  <forms uuid="2638a752-fd52-4c3a-8552-ab2682d79e66">
+    <name>ФормаВыбора</name>
+    <synonym>
+      <key>ru</key>
+      <value>Форма выбора</value>
+    </synonym>
+    <formType>Ordinary</formType>
+    <usePurposes>PersonalComputer</usePurposes>
+    <usePurposes>MobileDevice</usePurposes>
+  </forms>
+</mdclass:Document>

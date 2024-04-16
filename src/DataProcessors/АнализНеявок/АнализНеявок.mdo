@@ -1,0 +1,507 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:DataProcessor xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:core="http://g5.1c.ru/v8/dt/mcore" xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="d192ef36-78c1-43fe-afd8-4a8d1a657a6a">
+  <producedTypes>
+    <objectType typeId="cc1b7f93-f8ad-46ca-bd60-688aa7765e0e" valueTypeId="366f7c34-75e2-4b87-a568-8617967ccbb6"/>
+    <managerType typeId="381431c5-43c4-4ca3-bbd1-68709c8b083d" valueTypeId="9bfa4471-93fc-4729-9737-465f51676e8e"/>
+  </producedTypes>
+  <name>АнализНеявок</name>
+  <synonym>
+    <key>ru</key>
+    <value>Анализ неявок</value>
+  </synonym>
+  <defaultForm>DataProcessor.АнализНеявок.Form.Форма</defaultForm>
+  <includeHelpInContents>true</includeHelpInContents>
+  <help>
+    <pages>
+      <lang>ru</lang>
+    </pages>
+  </help>
+  <attributes uuid="3b4afd37-c9f6-4303-a321-53d5d1c9aa27">
+    <name>Организация</name>
+    <synonym>
+      <key>ru</key>
+      <value>Организация</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.Организации</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </attributes>
+  <attributes uuid="19a72675-3deb-437c-96a7-f91a773beb88">
+    <name>ДатаНачала</name>
+    <synonym>
+      <key>ru</key>
+      <value>Дата начала</value>
+    </synonym>
+    <type>
+      <types>Date</types>
+      <dateQualifiers>
+        <dateFractions>Date</dateFractions>
+      </dateQualifiers>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </attributes>
+  <attributes uuid="ccd6f19b-3006-40a5-a5f5-594f91f528c7">
+    <name>ДатаОкончания</name>
+    <synonym>
+      <key>ru</key>
+      <value>Дата окончания</value>
+    </synonym>
+    <type>
+      <types>Date</types>
+      <dateQualifiers>
+        <dateFractions>Date</dateFractions>
+      </dateQualifiers>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </attributes>
+  <attributes uuid="bd0faa9c-9347-4b45-92fd-e5ce6f85be24">
+    <name>ПодразделениеОрганизации</name>
+    <synonym>
+      <key>ru</key>
+      <value>Подразделение организации</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.ПодразделенияОрганизаций</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </attributes>
+  <attributes uuid="86531c83-8f26-44f7-9004-57e2f755a8d8">
+    <name>КадровыйДокумент</name>
+    <synonym>
+      <key>ru</key>
+      <value>Кадровый документ</value>
+    </synonym>
+    <type>
+      <types>DocumentRef.КомандировкиОрганизаций</types>
+      <types>DocumentRef.ОтсутствиеНаРаботеОрганизаций</types>
+      <types>DocumentRef.ОтпускаОрганизаций</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </attributes>
+  <attributes uuid="8e88af99-a647-40a9-bc80-85a0bbe9940a">
+    <name>ОтбиратьСобытияПоДокументу</name>
+    <synonym>
+      <key>ru</key>
+      <value>Отбирать события по документу</value>
+    </synonym>
+    <type>
+      <types>Boolean</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </attributes>
+  <attributes uuid="bcc9b9a7-62ad-43b9-896c-5b8ed4c97bab">
+    <name>ТипДокумента</name>
+    <synonym>
+      <key>ru</key>
+      <value>Тип документа</value>
+    </synonym>
+    <type>
+      <types>String</types>
+      <stringQualifiers/>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </attributes>
+  <attributes uuid="a7464aba-eb59-46ab-910a-946941bd8def">
+    <name>ТипРасчетногоДокумента</name>
+    <synonym>
+      <key>ru</key>
+      <value>Тип расчетного документа</value>
+    </synonym>
+    <type>
+      <types>String</types>
+      <stringQualifiers>
+        <length>10</length>
+      </stringQualifiers>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </attributes>
+  <tabularSections uuid="f7aa47d3-3e9a-410e-98e4-43c7a5478c60">
+    <producedTypes>
+      <objectType typeId="18c05bf5-bf69-4d57-ba54-acaf8ec69e4f" valueTypeId="7a57f9c1-deb7-4538-a6a0-0d2c76eb4023"/>
+      <rowType typeId="768c321c-46d5-4141-9c7b-b6bc35a6a7df" valueTypeId="499b6680-f821-469b-a45f-7ad6caad8187"/>
+    </producedTypes>
+    <name>Неявки</name>
+    <synonym>
+      <key>ru</key>
+      <value>Неявки</value>
+    </synonym>
+    <attributes uuid="8f6f3dde-7bac-400a-85f4-51e60feb1276">
+      <name>Отметка</name>
+      <synonym>
+        <key>ru</key>
+        <value>Отметка</value>
+      </synonym>
+      <type>
+        <types>Boolean</types>
+      </type>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <fillValue xsi:type="core:UndefinedValue"/>
+    </attributes>
+    <attributes uuid="87a24b01-45a9-4c90-bb5f-30080547113e">
+      <name>Сотрудник</name>
+      <synonym>
+        <key>ru</key>
+        <value>Сотрудник</value>
+      </synonym>
+      <type>
+        <types>CatalogRef.СотрудникиОрганизаций</types>
+      </type>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <fillValue xsi:type="core:UndefinedValue"/>
+    </attributes>
+    <attributes uuid="d7c05810-3b01-4134-b9b3-c0c1f188639b">
+      <name>ФизЛицо</name>
+      <synonym>
+        <key>ru</key>
+        <value>Физическое лицо</value>
+      </synonym>
+      <type>
+        <types>CatalogRef.ФизическиеЛица</types>
+      </type>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <fillValue xsi:type="core:UndefinedValue"/>
+    </attributes>
+    <attributes uuid="c58b58e3-b8ae-4831-a999-265c1e8971ab">
+      <name>ДатаНачала</name>
+      <synonym>
+        <key>ru</key>
+        <value>Дата начала</value>
+      </synonym>
+      <type>
+        <types>Date</types>
+        <dateQualifiers>
+          <dateFractions>Date</dateFractions>
+        </dateQualifiers>
+      </type>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <fillValue xsi:type="core:UndefinedValue"/>
+    </attributes>
+    <attributes uuid="797b304b-b47f-4647-9f7d-e6a9180f2300">
+      <name>ДатаОкончания</name>
+      <synonym>
+        <key>ru</key>
+        <value>Дата окончания</value>
+      </synonym>
+      <type>
+        <types>Date</types>
+        <dateQualifiers>
+          <dateFractions>Date</dateFractions>
+        </dateQualifiers>
+      </type>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <fillValue xsi:type="core:UndefinedValue"/>
+    </attributes>
+    <attributes uuid="64d73c5f-4b49-4619-a4da-0e56e59ddd90">
+      <name>Неявка</name>
+      <synonym>
+        <key>ru</key>
+        <value>Неявка</value>
+      </synonym>
+      <type>
+        <types>EnumRef.СостоянияРаботникаОрганизации</types>
+      </type>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <fillValue xsi:type="core:UndefinedValue"/>
+    </attributes>
+    <attributes uuid="68994984-993f-4ec4-a45a-52f7fb373d35">
+      <name>КадровыйДокумент</name>
+      <synonym>
+        <key>ru</key>
+        <value>Кадровый документ</value>
+      </synonym>
+      <type>
+        <types>DocumentRef.КомандировкиОрганизаций</types>
+        <types>DocumentRef.ОтсутствиеНаРаботеОрганизаций</types>
+        <types>DocumentRef.ОтпускаОрганизаций</types>
+      </type>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <fillValue xsi:type="core:UndefinedValue"/>
+    </attributes>
+    <attributes uuid="d08b4a60-748f-43b8-b47d-1549c09fb518">
+      <name>РасчетныйДокумент</name>
+      <synonym>
+        <key>ru</key>
+        <value>Расчетный документ</value>
+      </synonym>
+      <type>
+        <types>DocumentRef.ОплатаПоСреднемуЗаработку</types>
+        <types>DocumentRef.НачислениеПоБольничномуЛисту</types>
+        <types>DocumentRef.НевыходыВОрганизациях</types>
+        <types>DocumentRef.НачислениеОтпускаРаботникамОрганизаций</types>
+        <types>DocumentRef.РегистрацияПростоевВОрганизациях</types>
+        <types>DocumentRef.ОтпускПоУходуЗаРебенком</types>
+      </type>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <fillValue xsi:type="core:UndefinedValue"/>
+    </attributes>
+    <attributes uuid="6cdc542e-d0ce-47ea-a4e7-1163eaf58da3">
+      <name>ВидДополнительногоОтпуска</name>
+      <synonym>
+        <key>ru</key>
+        <value>Вид дополнительного отпуска</value>
+      </synonym>
+      <type>
+        <types>ChartOfCalculationTypesRef.ОсновныеНачисленияОрганизаций</types>
+      </type>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <fillValue xsi:type="core:UndefinedValue"/>
+    </attributes>
+    <attributes uuid="9e15a2d6-2057-4a90-8096-a79ed18410c4">
+      <name>ДатаНачалаДоп</name>
+      <synonym>
+        <key>ru</key>
+        <value>Дата начала дополнительного отпуска</value>
+      </synonym>
+      <type>
+        <types>Date</types>
+        <dateQualifiers>
+          <dateFractions>Date</dateFractions>
+        </dateQualifiers>
+      </type>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <fillValue xsi:type="core:UndefinedValue"/>
+    </attributes>
+    <attributes uuid="ee7c416e-df49-4984-8768-eefd242a28ea">
+      <name>ПричинаНетрудоспособности</name>
+      <synonym>
+        <key>ru</key>
+        <value>Причина нетрудоспособности</value>
+      </synonym>
+      <type>
+        <types>CatalogRef.ПричиныНетрудоспособности</types>
+      </type>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <fillValue xsi:type="core:UndefinedValue"/>
+    </attributes>
+    <attributes uuid="a39ed775-bcf2-421f-9ab9-3108b3ac7340">
+      <name>ПроцентОплаты</name>
+      <synonym>
+        <key>ru</key>
+        <value>Процент оплаты</value>
+      </synonym>
+      <comment>Процент оплаты</comment>
+      <type>
+        <types>Number</types>
+        <numberQualifiers>
+          <precision>6</precision>
+          <scale>2</scale>
+          <nonNegative>true</nonNegative>
+        </numberQualifiers>
+      </type>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <fillValue xsi:type="core:UndefinedValue"/>
+    </attributes>
+    <attributes uuid="90d6747f-0cb0-4adf-9b1a-b4cb75856081">
+      <name>ПервичныйБольничныйЛист</name>
+      <synonym>
+        <key>ru</key>
+        <value>Первичный больничный лист</value>
+      </synonym>
+      <type>
+        <types>DocumentRef.НачислениеПоБольничномуЛисту</types>
+      </type>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <fillValue xsi:type="core:UndefinedValue"/>
+    </attributes>
+    <attributes uuid="d9f37a48-78cd-4aab-9925-841f5d348e48">
+      <name>НомерВходящегоДокумента</name>
+      <synonym>
+        <key>ru</key>
+        <value>Номер документа сторонней организации</value>
+      </synonym>
+      <type>
+        <types>String</types>
+        <stringQualifiers>
+          <length>10</length>
+        </stringQualifiers>
+      </type>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <fillValue xsi:type="core:UndefinedValue"/>
+    </attributes>
+    <attributes uuid="f235355a-71ed-4b06-a770-198a9419b30f">
+      <name>СерияВходящегоДокумента</name>
+      <synonym>
+        <key>ru</key>
+        <value>Серия документа сторонней организации</value>
+      </synonym>
+      <type>
+        <types>String</types>
+        <stringQualifiers>
+          <length>10</length>
+        </stringQualifiers>
+      </type>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <fillValue xsi:type="core:UndefinedValue"/>
+    </attributes>
+    <attributes uuid="e5ec3609-63da-484e-b2d3-66fc239a9fd7">
+      <name>ВидРасчета</name>
+      <synonym>
+        <key>ru</key>
+        <value>Вид расчета</value>
+      </synonym>
+      <type>
+        <types>ChartOfCalculationTypesRef.ОсновныеНачисленияОрганизаций</types>
+      </type>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <fillValue xsi:type="core:UndefinedValue"/>
+    </attributes>
+    <attributes uuid="0e932173-b2a9-4c5d-93cc-9143bd5519ba">
+      <name>ВидПростоя</name>
+      <synonym>
+        <key>ru</key>
+        <value>Вид простоя</value>
+      </synonym>
+      <type>
+        <types>EnumRef.ВидыПростояРаботника</types>
+      </type>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <fillValue xsi:type="core:UndefinedValue"/>
+    </attributes>
+    <attributes uuid="3cf05cfb-f204-41eb-aeac-dc0ccb31591c">
+      <name>ДублирующаясяСтрока</name>
+      <synonym>
+        <key>ru</key>
+        <value>Дублирующаяся строка</value>
+      </synonym>
+      <type>
+        <types>Boolean</types>
+      </type>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <fillValue xsi:type="core:UndefinedValue"/>
+    </attributes>
+    <attributes uuid="fba21af0-7551-44b4-b386-67c0664fcf49">
+      <name>РабочийГодС</name>
+      <synonym>
+        <key>ru</key>
+        <value>Рабочий год с</value>
+      </synonym>
+      <type>
+        <types>Date</types>
+        <dateQualifiers>
+          <dateFractions>Date</dateFractions>
+        </dateQualifiers>
+      </type>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <fillValue xsi:type="core:UndefinedValue"/>
+    </attributes>
+    <attributes uuid="85df705d-f50f-48dd-b327-3c0273ed65af">
+      <name>РабочийГодПо</name>
+      <synonym>
+        <key>ru</key>
+        <value>Рабочий год по</value>
+      </synonym>
+      <type>
+        <types>Date</types>
+        <dateQualifiers>
+          <dateFractions>Date</dateFractions>
+        </dateQualifiers>
+      </type>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <fillValue xsi:type="core:UndefinedValue"/>
+    </attributes>
+    <attributes uuid="2d55e148-2b3d-4db4-94f2-1c7ffe0b8e72">
+      <name>ПорядокРасчетаОтпуска</name>
+      <synonym>
+        <key>ru</key>
+        <value>Порядок расчета отпуска</value>
+      </synonym>
+      <type>
+        <types>String</types>
+        <stringQualifiers>
+          <length>10</length>
+        </stringQualifiers>
+      </type>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <fillValue xsi:type="core:UndefinedValue"/>
+    </attributes>
+    <attributes uuid="d97b587b-116f-4edf-a3d1-58add5920840">
+      <name>ВидОтпуска</name>
+      <synonym>
+        <key>ru</key>
+        <value>Вид отпуска</value>
+      </synonym>
+      <type>
+        <types>CatalogRef.ВидыОтпусков</types>
+      </type>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <fillValue xsi:type="core:UndefinedValue"/>
+    </attributes>
+    <attributes uuid="eaf84849-4199-4923-a4db-c73746da9de0">
+      <name>НовыйДокумент</name>
+      <synonym>
+        <key>ru</key>
+        <value>Новый документ</value>
+      </synonym>
+      <type>
+        <types>Boolean</types>
+      </type>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <fillValue xsi:type="core:UndefinedValue"/>
+    </attributes>
+    <attributes uuid="9f66679e-ec31-41c6-b7aa-3983578c08b5">
+      <name>ОплачиваемыйОтпуск</name>
+      <synonym>
+        <key>ru</key>
+        <value>Оплачиваемый отпуск</value>
+      </synonym>
+      <type>
+        <types>Boolean</types>
+      </type>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <fillValue xsi:type="core:UndefinedValue"/>
+    </attributes>
+  </tabularSections>
+  <forms uuid="34288069-450d-493c-a041-e33a2dd3f942">
+    <name>Форма</name>
+    <synonym>
+      <key>ru</key>
+      <value>Форма</value>
+    </synonym>
+    <formType>Ordinary</formType>
+    <usePurposes>PersonalComputer</usePurposes>
+    <usePurposes>MobileDevice</usePurposes>
+  </forms>
+  <forms uuid="a2f07004-35c4-49ee-9fcd-6d4fe63e52c3">
+    <name>ФормаДокументов</name>
+    <synonym>
+      <key>ru</key>
+      <value>Форма документов</value>
+    </synonym>
+    <formType>Ordinary</formType>
+    <usePurposes>PersonalComputer</usePurposes>
+    <usePurposes>MobileDevice</usePurposes>
+  </forms>
+</mdclass:DataProcessor>

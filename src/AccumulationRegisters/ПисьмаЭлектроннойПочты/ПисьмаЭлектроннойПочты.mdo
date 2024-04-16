@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:AccumulationRegister xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:core="http://g5.1c.ru/v8/dt/mcore" xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="877b35a0-a78d-4fc6-a75f-adc463f46cbf">
+  <producedTypes>
+    <selectionType typeId="cd0064ca-5a9e-4070-ba45-d697afc3ed8d" valueTypeId="adaf6975-b3d6-4e2d-91d6-cb3d9fd8e1e9"/>
+    <listType typeId="949c2d6f-410d-4085-8d76-426fee5c9e30" valueTypeId="1dd573ee-37a7-49ff-8827-8e124852242e"/>
+    <managerType typeId="47fc3765-775b-4832-8884-c12fde5f1ff8" valueTypeId="98d4bd90-2c46-4629-ae8d-673aeb4611c6"/>
+    <recordSetType typeId="bc2fc1b6-7204-4fe0-b2d9-e9a45d63d8b4" valueTypeId="bcc15322-9bc2-45e0-9fc7-2a44276159f7"/>
+    <recordKeyType typeId="46ea7956-9c0c-410f-96c2-53d0c9037dc3" valueTypeId="08c44237-3c97-4956-990f-13e13cb952a7"/>
+    <recordType typeId="c4dacd70-85d1-40d1-b034-e320c386c4f6" valueTypeId="a6645a5d-b097-43d2-b6b5-a99f6065ec03"/>
+  </producedTypes>
+  <name>ПисьмаЭлектроннойПочты</name>
+  <synonym>
+    <key>ru</key>
+    <value>Письма электронной почты</value>
+  </synonym>
+  <enableTotalsSplitting>true</enableTotalsSplitting>
+  <resources uuid="1ae9a850-fa3f-4d95-94b6-7c7b7a65d427">
+    <name>КоличествоНеРассмотрено</name>
+    <synonym>
+      <key>ru</key>
+      <value>Количество не рассмотрено</value>
+    </synonym>
+    <type>
+      <types>Number</types>
+      <numberQualifiers>
+        <precision>10</precision>
+        <nonNegative>true</nonNegative>
+      </numberQualifiers>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+  </resources>
+  <resources uuid="650d27a7-fbf0-4915-9b3a-b0bf89018b84">
+    <name>КоличествоЧерновики</name>
+    <synonym>
+      <key>ru</key>
+      <value>Количество черновики</value>
+    </synonym>
+    <type>
+      <types>Number</types>
+      <numberQualifiers>
+        <precision>10</precision>
+        <nonNegative>true</nonNegative>
+      </numberQualifiers>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+  </resources>
+  <dimensions uuid="5c247d1d-6702-4c62-85bd-060cd1fc1da9">
+    <name>ГруппаУчетнойЗаписи</name>
+    <synonym>
+      <key>ru</key>
+      <value>Группа учетной записи</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.ГруппыПисемЭлектроннойПочты</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <useInTotals>true</useInTotals>
+  </dimensions>
+  <dimensions uuid="088f3201-c691-4b39-a38b-3fb06a643e46">
+    <name>Предмет</name>
+    <synonym>
+      <key>ru</key>
+      <value>Предмет</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.ФизическиеЛица</types>
+      <types>String</types>
+      <stringQualifiers>
+        <length>100</length>
+      </stringQualifiers>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <indexing>Index</indexing>
+    <fullTextSearch>Use</fullTextSearch>
+    <useInTotals>true</useInTotals>
+  </dimensions>
+  <dimensions uuid="5f0ad296-496c-4548-8ce0-031a969d735a">
+    <name>ГраницаПрочитанности</name>
+    <synonym>
+      <key>ru</key>
+      <value>Граница прочитанности</value>
+    </synonym>
+    <type>
+      <types>Date</types>
+      <dateQualifiers/>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <indexing>Index</indexing>
+    <fullTextSearch>Use</fullTextSearch>
+    <useInTotals>true</useInTotals>
+  </dimensions>
+</mdclass:AccumulationRegister>

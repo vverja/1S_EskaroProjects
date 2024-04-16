@@ -1,0 +1,235 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:AccumulationRegister xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:core="http://g5.1c.ru/v8/dt/mcore" xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="e7333d3e-ad25-4580-93c5-7ed6e7ac7587">
+  <producedTypes>
+    <selectionType typeId="eb9c6d9a-71aa-4851-808e-51ce96d9a947" valueTypeId="1a594324-0067-4059-9f34-5d94b1bbc0de"/>
+    <listType typeId="d121aaf6-b35e-4a10-b7f2-4e2e155fbbef" valueTypeId="408bb379-8fc7-4abe-b906-6cae6f01f0a3"/>
+    <managerType typeId="f762be2b-b4cf-4b25-b189-ee9f435b0fc6" valueTypeId="988ea355-7de3-4c3b-ba98-7a20051f6b40"/>
+    <recordSetType typeId="32f72228-71f5-4583-ac71-093513f3d5eb" valueTypeId="d2dfec32-1afd-45c3-99c5-15696b23db92"/>
+    <recordKeyType typeId="28ff60e3-8914-436e-8124-f25f22b47d1e" valueTypeId="4e89c126-faa6-4085-a253-bd1589557e67"/>
+    <recordType typeId="74ed9ba9-0093-461c-a0e8-01ac439c84db" valueTypeId="c463ea27-ecae-4140-bf85-ea0b17707956"/>
+  </producedTypes>
+  <name>ЗатратыНаВыпускПродукцииНаработка</name>
+  <synonym>
+    <key>ru</key>
+    <value>Затраты на выпуск продукции (наработка)</value>
+  </synonym>
+  <comment>(Упр)</comment>
+  <enableTotalsSplitting>true</enableTotalsSplitting>
+  <resources uuid="7f717dab-f9e1-4e20-8f7e-4f7a8b3254b0">
+    <name>Количество</name>
+    <synonym>
+      <key>ru</key>
+      <value>Количество</value>
+    </synonym>
+    <type>
+      <types>Number</types>
+      <numberQualifiers>
+        <precision>15</precision>
+        <scale>3</scale>
+      </numberQualifiers>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+  </resources>
+  <resources uuid="4255743d-8191-40e8-a79b-2081f2c55c0c">
+    <name>Сумма</name>
+    <synonym>
+      <key>ru</key>
+      <value>Сумма</value>
+    </synonym>
+    <type>
+      <types>Number</types>
+      <numberQualifiers>
+        <precision>15</precision>
+        <scale>2</scale>
+      </numberQualifiers>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+  </resources>
+  <attributes uuid="96c31641-4a6f-4d17-888b-f2ed4f7ad97d">
+    <name>КодОперации</name>
+    <synonym>
+      <key>ru</key>
+      <value>Код операции</value>
+    </synonym>
+    <type>
+      <types>EnumRef.КодыОперацийЗатратыНаВыпускПродукции</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+  </attributes>
+  <dimensions uuid="6766880c-8aa7-42c9-ae93-806dc4228b32">
+    <name>Подразделение</name>
+    <synonym>
+      <key>ru</key>
+      <value>Подразделение</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.Подразделения</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <useInTotals>true</useInTotals>
+  </dimensions>
+  <dimensions uuid="30248d46-2f43-46c4-bb25-2d27950b2f9c">
+    <name>Продукция</name>
+    <synonym>
+      <key>ru</key>
+      <value>Продукция</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.Номенклатура</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <useInTotals>true</useInTotals>
+  </dimensions>
+  <dimensions uuid="ff582c9d-6348-4169-8a1f-2ca42b28ed76">
+    <name>ХарактеристикаПродукции</name>
+    <synonym>
+      <key>ru</key>
+      <value>Характеристика продукции</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.ХарактеристикиНоменклатуры</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <useInTotals>true</useInTotals>
+  </dimensions>
+  <dimensions uuid="263d1516-0060-42bf-9242-88a53beb0311">
+    <name>Заказ</name>
+    <synonym>
+      <key>ru</key>
+      <value>Заказ</value>
+    </synonym>
+    <type>
+      <types>DocumentRef.ЗаказНаПроизводство</types>
+      <types>DocumentRef.ЗаказПокупателя</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <useInTotals>true</useInTotals>
+  </dimensions>
+  <dimensions uuid="d24e3dab-6e83-43c5-9454-53e26b02657d">
+    <name>СтатьяЗатрат</name>
+    <synonym>
+      <key>ru</key>
+      <value>Статья затрат</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.СтатьиЗатрат</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <useInTotals>true</useInTotals>
+  </dimensions>
+  <dimensions uuid="6897c907-907b-4ca7-a1ce-dacfc6475928">
+    <name>НоменклатурнаяГруппа</name>
+    <synonym>
+      <key>ru</key>
+      <value>Номенклатурная группа</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.НоменклатурныеГруппы</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <useInTotals>true</useInTotals>
+  </dimensions>
+  <dimensions uuid="62bdcbe2-d859-494c-a385-e38c0519fc39">
+    <name>Затрата</name>
+    <synonym>
+      <key>ru</key>
+      <value>Затрата</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.Номенклатура</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <useInTotals>true</useInTotals>
+  </dimensions>
+  <dimensions uuid="db463a05-8e67-464a-96af-aa745c00ed1d">
+    <name>ХарактеристикаЗатраты</name>
+    <synonym>
+      <key>ru</key>
+      <value>Характеристика затраты</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.ХарактеристикиНоменклатуры</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <useInTotals>true</useInTotals>
+  </dimensions>
+  <dimensions uuid="e1be0b00-161e-465f-a1bd-4439046267bc">
+    <name>СерияЗатраты</name>
+    <synonym>
+      <key>ru</key>
+      <value>Серия затраты</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.СерииНоменклатуры</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <useInTotals>true</useInTotals>
+  </dimensions>
+  <dimensions uuid="d99d0c50-35c0-4ca4-8b65-8fb7fd80b308">
+    <name>НоменклатурнаяГруппаНЗП</name>
+    <synonym>
+      <key>ru</key>
+      <value>Номенклатурная группа НЗП</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.НоменклатурныеГруппы</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <useInTotals>true</useInTotals>
+  </dimensions>
+  <dimensions uuid="5843c385-72eb-4c63-bf9a-0a77fbd7780d">
+    <name>ЗаказНЗП</name>
+    <synonym>
+      <key>ru</key>
+      <value>Заказ НЗП</value>
+    </synonym>
+    <type>
+      <types>DocumentRef.ЗаказНаПроизводство</types>
+      <types>DocumentRef.ЗаказПокупателя</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <useInTotals>true</useInTotals>
+  </dimensions>
+  <dimensions uuid="54eb4d07-47ed-4ea6-97d6-091b18ad9806">
+    <name>ПодразделениеНЗП</name>
+    <synonym>
+      <key>ru</key>
+      <value>Подразделение НЗП</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.Подразделения</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <useInTotals>true</useInTotals>
+  </dimensions>
+</mdclass:AccumulationRegister>

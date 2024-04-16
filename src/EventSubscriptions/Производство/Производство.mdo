@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:EventSubscription xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="e01fa551-b7fe-41a2-85fb-d70533f7f867">
+  <name>Производство</name>
+  <synonym>
+    <key>ru</key>
+    <value>Производство</value>
+  </synonym>
+  <source>
+    <types>DocumentObject.ПолучениеУслугПоПереработке</types>
+    <types>DocumentObject.ПередачаТоваров</types>
+    <types>DocumentObject.ЗаказНаПроизводство</types>
+    <types>DocumentObject.ПоступлениеТоваровИзПереработки</types>
+  </source>
+  <event>OnWrite</event>
+  <handler>CommonModule.ОбменСБухгалтерией.ПроизводствоПриЗаписи</handler>
+</mdclass:EventSubscription>

@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:InformationRegister xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:core="http://g5.1c.ru/v8/dt/mcore" xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="dcca24c2-1ea1-439e-a750-2f310c96f44a">
+  <producedTypes>
+    <selectionType typeId="2f1c0d22-8f2f-44c2-b29d-fb022e775cac" valueTypeId="3d84b83a-e10c-41ae-abf8-75817259a245"/>
+    <listType typeId="b423e3f2-2339-46eb-b412-68c63d7162a7" valueTypeId="5fc49fa6-16b2-4438-91b8-39f99687f67c"/>
+    <managerType typeId="74e1eaa6-7c7f-4252-bd78-5020dfb0f43f" valueTypeId="b2280a46-3cf6-4b82-b6ed-273370a339f9"/>
+    <recordSetType typeId="060e38c1-5d0f-4283-9812-92df9feecdce" valueTypeId="0bc32f13-4f01-4623-9342-00898734673d"/>
+    <recordKeyType typeId="c15d3f34-be06-4caa-970f-9f54d506f088" valueTypeId="f1da3e11-60f9-478e-b3f1-694c3ef49c97"/>
+    <recordType typeId="887b1fbe-04b5-4feb-b7f0-9d73e229a37e" valueTypeId="d518f6f8-be92-47eb-bbec-6adaf152da75"/>
+    <recordManagerType typeId="c3293fcf-d1ef-4394-b1d9-8a0307944f3c" valueTypeId="abd91cc3-cdb7-42e8-90eb-c63d2f43d657"/>
+  </producedTypes>
+  <name>СтавкиНалогаНаПрибыль</name>
+  <synonym>
+    <key>ru</key>
+    <value>Ставки налога на прибыль</value>
+  </synonym>
+  <comment>(Регл)</comment>
+  <editType>InDialog</editType>
+  <defaultRecordForm>InformationRegister.СтавкиНалогаНаПрибыль.Form.ФормаЗаписи</defaultRecordForm>
+  <defaultListForm>InformationRegister.СтавкиНалогаНаПрибыль.Form.ФормаСписка</defaultListForm>
+  <informationRegisterPeriodicity>Month</informationRegisterPeriodicity>
+  <mainFilterOnPeriod>true</mainFilterOnPeriod>
+  <help>
+    <pages>
+      <lang>ru</lang>
+    </pages>
+  </help>
+  <resources uuid="aef3e1a3-1666-4244-9a4f-7d53dc340929">
+    <name>Ставка</name>
+    <synonym>
+      <key>ru</key>
+      <value>Ставка</value>
+    </synonym>
+    <type>
+      <types>Number</types>
+      <numberQualifiers>
+        <precision>4</precision>
+        <scale>2</scale>
+        <nonNegative>true</nonNegative>
+      </numberQualifiers>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:UndefinedValue"/>
+  </resources>
+  <dimensions uuid="b544c4c0-8256-4724-bddb-eb21ed1cf36b">
+    <name>Организация</name>
+    <synonym>
+      <key>ru</key>
+      <value>Организация</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.Организации</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <master>true</master>
+    <mainFilter>true</mainFilter>
+  </dimensions>
+  <dimensions uuid="f681c9c8-bf2e-454f-b04d-fe70934d7445">
+    <name>ВидНалоговойДеятельности</name>
+    <synonym>
+      <key>ru</key>
+      <value>Вид налоговой деятельности</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.ВидыНалоговойДеятельности</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillFromFillingValue>true</fillFromFillingValue>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <master>true</master>
+    <mainFilter>true</mainFilter>
+  </dimensions>
+  <forms uuid="0194c970-cd17-49cb-a925-3501776f26eb">
+    <name>ФормаЗаписи</name>
+    <synonym>
+      <key>ru</key>
+      <value>Форма записи</value>
+    </synonym>
+    <formType>Ordinary</formType>
+    <usePurposes>PersonalComputer</usePurposes>
+    <usePurposes>MobileDevice</usePurposes>
+  </forms>
+  <forms uuid="92d8c7c3-4f5d-4dc9-8446-0def2257ee4c">
+    <name>ФормаСписка</name>
+    <synonym>
+      <key>ru</key>
+      <value>Форма списка</value>
+    </synonym>
+    <formType>Ordinary</formType>
+    <usePurposes>PersonalComputer</usePurposes>
+    <usePurposes>MobileDevice</usePurposes>
+  </forms>
+  <templates uuid="dd81bf55-bc40-4694-8f74-0046aab02b48">
+    <name>НачальноеЗаполнение</name>
+    <synonym>
+      <key>ru</key>
+      <value>НачальноеЗаполнение</value>
+    </synonym>
+  </templates>
+</mdclass:InformationRegister>

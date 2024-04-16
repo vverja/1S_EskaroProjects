@@ -1,0 +1,272 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:Document xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:core="http://g5.1c.ru/v8/dt/mcore" xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="f0cd1cff-0883-4a96-8756-c6430b2a8820">
+  <producedTypes>
+    <objectType typeId="aaab6b42-935a-4506-a991-05b2abb1d0f8" valueTypeId="e50a0750-1a3c-483f-ad42-74ac91e6d7d9"/>
+    <refType typeId="d8778cd5-c249-4b1a-b73d-80e456556721" valueTypeId="cf8476f0-ef7c-4d29-9b97-bb935877f6a8"/>
+    <selectionType typeId="40a17145-7372-470f-977a-e9ee2c09e8f7" valueTypeId="6bb13efd-036d-4b9d-8d24-98536af903c7"/>
+    <listType typeId="304a84ed-ad7f-4b1a-b715-94b20e5de8ef" valueTypeId="aa49ef9d-ba9e-4043-829c-b428b69b0715"/>
+    <managerType typeId="5d771d23-e06e-4966-a276-62ac8daf378a" valueTypeId="4de3760c-43ff-4308-a5be-d91e208a03c0"/>
+  </producedTypes>
+  <name>ОтражениеВзаиморасчетовСКонтрагентамиВ1ДФ</name>
+  <synonym>
+    <key>ru</key>
+    <value>Отражение взаиморасчетов с контрагентами в 1-ДФ</value>
+  </synonym>
+  <comment>(Регл)</comment>
+  <inputByString>Document.ОтражениеВзаиморасчетовСКонтрагентамиВ1ДФ.StandardAttribute.Number</inputByString>
+  <fullTextSearchOnInputByString>DontUse</fullTextSearchOnInputByString>
+  <createOnInput>Use</createOnInput>
+  <includeHelpInContents>true</includeHelpInContents>
+  <help>
+    <pages>
+      <lang>ru</lang>
+    </pages>
+  </help>
+  <fullTextSearch>Use</fullTextSearch>
+  <numberType>String</numberType>
+  <numberLength>11</numberLength>
+  <numberPeriodicity>Year</numberPeriodicity>
+  <checkUnique>true</checkUnique>
+  <autonumbering>true</autonumbering>
+  <defaultObjectForm>Document.ОтражениеВзаиморасчетовСКонтрагентамиВ1ДФ.Form.ФормаДокумента</defaultObjectForm>
+  <defaultListForm>Document.ОтражениеВзаиморасчетовСКонтрагентамиВ1ДФ.Form.ФормаСписка</defaultListForm>
+  <defaultChoiceForm>Document.ОтражениеВзаиморасчетовСКонтрагентамиВ1ДФ.Form.ФормаВыбора</defaultChoiceForm>
+  <realTimePosting>Deny</realTimePosting>
+  <registerRecordsDeletion>AutoDelete</registerRecordsDeletion>
+  <registerRecordsWritingOnPost>WriteModified</registerRecordsWritingOnPost>
+  <registerRecords>AccumulationRegister.ВзаиморасчетыПоНДФЛ</registerRecords>
+  <attributes uuid="c30abd5a-3adc-4759-a541-46f42b9f7345">
+    <name>Организация</name>
+    <synonym>
+      <key>ru</key>
+      <value>Организация</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.Организации</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <indexing>Index</indexing>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+  </attributes>
+  <attributes uuid="0c22ce54-afcc-4e75-9e98-35903ce843c8">
+    <name>Комментарий</name>
+    <synonym>
+      <key>ru</key>
+      <value>Комментарий</value>
+    </synonym>
+    <comment>Любая дополнительная информация</comment>
+    <type>
+      <types>String</types>
+      <stringQualifiers/>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+  </attributes>
+  <attributes uuid="ec5bc1e2-bfbb-429d-b362-87149387bcb4">
+    <name>Ответственный</name>
+    <synonym>
+      <key>ru</key>
+      <value>Ответственный</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.Пользователи</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+  </attributes>
+  <attributes uuid="86015132-071d-4a2b-a5b5-33dfb4a22d9b">
+    <name>ПериодРегистрации</name>
+    <synonym>
+      <key>ru</key>
+      <value>Период регистрации</value>
+    </synonym>
+    <type>
+      <types>Date</types>
+      <dateQualifiers>
+        <dateFractions>Date</dateFractions>
+      </dateQualifiers>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+  </attributes>
+  <forms uuid="dfac7352-284c-4d16-adb5-10c69bb01beb">
+    <name>ФормаДокумента</name>
+    <synonym>
+      <key>ru</key>
+      <value>Форма документа</value>
+    </synonym>
+    <formType>Ordinary</formType>
+    <usePurposes>PersonalComputer</usePurposes>
+    <usePurposes>MobileDevice</usePurposes>
+  </forms>
+  <forms uuid="23ae0288-26a2-47fd-928b-f992c7fecc44">
+    <name>ФормаСписка</name>
+    <synonym>
+      <key>ru</key>
+      <value>Форма списка</value>
+    </synonym>
+    <formType>Ordinary</formType>
+    <usePurposes>PersonalComputer</usePurposes>
+    <usePurposes>MobileDevice</usePurposes>
+  </forms>
+  <forms uuid="3056b213-9c58-41f9-8105-eff3b05c96c0">
+    <name>ФормаВыбора</name>
+    <synonym>
+      <key>ru</key>
+      <value>Форма выбора</value>
+    </synonym>
+    <formType>Ordinary</formType>
+    <usePurposes>PersonalComputer</usePurposes>
+    <usePurposes>MobileDevice</usePurposes>
+  </forms>
+  <tabularSections uuid="364cc075-3192-420c-9ef8-ff32433b7fc0">
+    <producedTypes>
+      <objectType typeId="403047b5-37d6-4786-94dd-75e1d1028e4b" valueTypeId="b1262594-714d-49b6-b335-a6c8b66b45c2"/>
+      <rowType typeId="5a5fbd35-b94c-4659-9783-e0efd92a1664" valueTypeId="0b34856f-4a7a-4243-bd6e-840d6388d1ff"/>
+    </producedTypes>
+    <name>Контрагенты</name>
+    <synonym>
+      <key>ru</key>
+      <value>Контрагенты</value>
+    </synonym>
+    <attributes uuid="0ae7392f-21f1-49ac-ba96-8f48538beb94">
+      <name>Контрагент</name>
+      <synonym>
+        <key>ru</key>
+        <value>Контрагент</value>
+      </synonym>
+      <type>
+        <types>CatalogRef.Контрагенты</types>
+      </type>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <dataHistory>Use</dataHistory>
+      <indexing>Index</indexing>
+      <fullTextSearch>Use</fullTextSearch>
+    </attributes>
+  </tabularSections>
+  <tabularSections uuid="83afe667-9a2d-49be-857d-285e28126e6b">
+    <producedTypes>
+      <objectType typeId="e7116b55-5f87-47fc-8151-8089f8aeda9c" valueTypeId="1e5a0f7f-520b-412a-9523-a28bba92f325"/>
+      <rowType typeId="a5cbf8c9-26af-4387-8024-bdbc696fa1fe" valueTypeId="5637eb1c-8862-49c2-a21b-906c91233819"/>
+    </producedTypes>
+    <name>НДФЛ</name>
+    <synonym>
+      <key>ru</key>
+      <value>НДФЛ</value>
+    </synonym>
+    <attributes uuid="575a9576-75be-4628-9fcb-9e630f032cb3">
+      <name>Контрагент</name>
+      <synonym>
+        <key>ru</key>
+        <value>Контрагент</value>
+      </synonym>
+      <type>
+        <types>CatalogRef.Контрагенты</types>
+      </type>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <dataHistory>Use</dataHistory>
+      <indexing>Index</indexing>
+      <fullTextSearch>Use</fullTextSearch>
+    </attributes>
+    <attributes uuid="74644d4e-e932-47fb-b762-ab5229e7a383">
+      <name>ВидДохода</name>
+      <synonym>
+        <key>ru</key>
+        <value>Вид дохода</value>
+      </synonym>
+      <type>
+        <types>CatalogRef.ВидыДоходовНДФЛ</types>
+      </type>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <dataHistory>Use</dataHistory>
+      <fullTextSearch>Use</fullTextSearch>
+    </attributes>
+    <attributes uuid="83486092-09f0-4de2-bcc7-0c6a86a19764">
+      <name>Доход</name>
+      <synonym>
+        <key>ru</key>
+        <value>Доход</value>
+      </synonym>
+      <type>
+        <types>Number</types>
+        <numberQualifiers>
+          <precision>12</precision>
+          <scale>2</scale>
+        </numberQualifiers>
+      </type>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <dataHistory>Use</dataHistory>
+      <fullTextSearch>Use</fullTextSearch>
+    </attributes>
+    <attributes uuid="3e53c37f-1c6f-4e65-83a3-195b9b18a689">
+      <name>Налог</name>
+      <synonym>
+        <key>ru</key>
+        <value>Налог</value>
+      </synonym>
+      <type>
+        <types>Number</types>
+        <numberQualifiers>
+          <precision>12</precision>
+          <scale>2</scale>
+        </numberQualifiers>
+      </type>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <dataHistory>Use</dataHistory>
+      <fullTextSearch>Use</fullTextSearch>
+    </attributes>
+    <attributes uuid="31f141b1-3664-457d-a9df-d506965c10a7">
+      <name>ПеречисленныйДоход</name>
+      <synonym>
+        <key>ru</key>
+        <value>Перечисленный доход</value>
+      </synonym>
+      <type>
+        <types>Number</types>
+        <numberQualifiers>
+          <precision>12</precision>
+          <scale>2</scale>
+        </numberQualifiers>
+      </type>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <dataHistory>Use</dataHistory>
+      <fullTextSearch>Use</fullTextSearch>
+    </attributes>
+    <attributes uuid="b2864370-b621-48b4-8b62-d8b255365a80">
+      <name>ПеречисленныйНалог</name>
+      <synonym>
+        <key>ru</key>
+        <value>ПеречисленыйНалог</value>
+      </synonym>
+      <type>
+        <types>Number</types>
+        <numberQualifiers>
+          <precision>12</precision>
+          <scale>2</scale>
+        </numberQualifiers>
+      </type>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <dataHistory>Use</dataHistory>
+      <fullTextSearch>Use</fullTextSearch>
+    </attributes>
+  </tabularSections>
+</mdclass:Document>

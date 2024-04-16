@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:AccumulationRegister xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:core="http://g5.1c.ru/v8/dt/mcore" xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="5e2f2578-1497-4b87-b19d-28dc12e3120a">
+  <producedTypes>
+    <selectionType typeId="1ad07ace-5a09-4659-85a1-8cf4a5989fdb" valueTypeId="1718d2cc-195e-4d20-b6eb-fe5d1b7c77f8"/>
+    <listType typeId="773977b6-ea6a-4ee0-ac33-46afd3419d33" valueTypeId="cdc7ff55-0386-48a2-9779-1c5e521ea823"/>
+    <managerType typeId="971acff4-f962-4174-920c-49eca5815e1a" valueTypeId="931eb15c-e9d6-4814-ba93-4234d6be4784"/>
+    <recordSetType typeId="b503aa54-d966-470d-bc70-bed3b6a696b6" valueTypeId="e5b23fdb-0a0e-48f9-b2c6-37a2e552065a"/>
+    <recordKeyType typeId="1e1451ad-6a53-483c-8b7a-610795baeca8" valueTypeId="776539f4-48f6-46a7-93f3-775a998ab748"/>
+    <recordType typeId="628b5060-ed40-4329-8dcc-94dde1e5629e" valueTypeId="ff275420-153a-4444-a976-54a58ff8ff6c"/>
+  </producedTypes>
+  <name>РазмещениеЗаявокНаРасходованиеСредств</name>
+  <synonym>
+    <key>ru</key>
+    <value>Размещение заявок на расходование средств</value>
+  </synonym>
+  <comment>(Упр)</comment>
+  <enableTotalsSplitting>true</enableTotalsSplitting>
+  <resources uuid="0a3be9be-7a43-4e69-a026-0c3e32ef7688">
+    <name>Сумма</name>
+    <synonym>
+      <key>ru</key>
+      <value>Сумма</value>
+    </synonym>
+    <comment>Сумма в валюте банковского счета (кассы)</comment>
+    <type>
+      <types>Number</types>
+      <numberQualifiers>
+        <precision>15</precision>
+        <scale>2</scale>
+      </numberQualifiers>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+  </resources>
+  <dimensions uuid="94c40cb9-260a-4b6a-8d12-a9a9d2c259c0">
+    <name>ДокументПланирования</name>
+    <synonym>
+      <key>ru</key>
+      <value>Документ планирования</value>
+    </synonym>
+    <type>
+      <types>DocumentRef.ПланируемоеПоступлениеДенежныхСредств</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <useInTotals>true</useInTotals>
+  </dimensions>
+  <dimensions uuid="015ee520-56d9-47cb-bfd0-d560b4a3effe">
+    <name>ДокументРезервирования</name>
+    <synonym>
+      <key>ru</key>
+      <value>Документ резервирования</value>
+    </synonym>
+    <type>
+      <types>DocumentRef.ЗаявкаНаРасходованиеСредств</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <useInTotals>true</useInTotals>
+  </dimensions>
+</mdclass:AccumulationRegister>

@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:InformationRegister xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:core="http://g5.1c.ru/v8/dt/mcore" xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="e60150db-959a-4fb0-b086-92a7d3eb5bad">
+  <producedTypes>
+    <selectionType typeId="6801b60f-c07b-4ead-95a1-b3e526ac4a62" valueTypeId="57c334d0-7733-4e7a-b7ad-4cfac2488754"/>
+    <listType typeId="7bd0f59c-cd39-400b-8701-e6636e401350" valueTypeId="ad8f2849-3e76-4aaf-a926-ad71a51566a4"/>
+    <managerType typeId="6f287fd1-f2da-4304-9043-ac14f9a0f6ab" valueTypeId="7a356d02-ce17-4fa6-8cb1-696f04b527d8"/>
+    <recordSetType typeId="702a20ac-f13d-4db8-9940-4a1212fa46f4" valueTypeId="44fe60a8-9345-4250-985a-33002984d14d"/>
+    <recordKeyType typeId="b7a449e3-4d39-40a5-87b5-356ae3ed1226" valueTypeId="9ea52925-63e0-474c-a79f-a0023018cf66"/>
+    <recordType typeId="069e81f2-dc13-4f97-99ae-54a94b26c720" valueTypeId="eaca3ad0-6ae7-49b3-b257-827740eeffe1"/>
+    <recordManagerType typeId="d02cb03d-1d5f-4ac9-9ed9-5ed4871653f5" valueTypeId="65f52378-9d2a-4a8d-a5ed-2a036b923074"/>
+  </producedTypes>
+  <name>Транспорт</name>
+  <synonym>
+    <key>ru</key>
+    <value>Транспорт</value>
+  </synonym>
+  <useStandardCommands>true</useStandardCommands>
+  <editType>InDialog</editType>
+  <defaultRecordForm>InformationRegister.Транспорт.Form.ФормаЗаписи</defaultRecordForm>
+  <defaultListForm>InformationRegister.Транспорт.Form.ФормаСписка</defaultListForm>
+  <informationRegisterPeriodicity>Month</informationRegisterPeriodicity>
+  <mainFilterOnPeriod>true</mainFilterOnPeriod>
+  <dataLockControlMode>Managed</dataLockControlMode>
+  <resources uuid="439b8396-d963-436e-bf6f-de4531a261ae">
+    <name>Сотрудник</name>
+    <synonym>
+      <key>ru</key>
+      <value>Сотрудник</value>
+    </synonym>
+    <type>
+      <types>String</types>
+      <types>CatalogRef.СотрудникиОрганизаций</types>
+      <stringQualifiers>
+        <length>250</length>
+      </stringQualifiers>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:UndefinedValue"/>
+  </resources>
+  <resources uuid="e226e6bf-432a-415d-a32b-95fb28ae6d35">
+    <name>ТранспортноеСредство</name>
+    <synonym>
+      <key>ru</key>
+      <value>Транспортное средство</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.ОсновныеСредства</types>
+      <types>String</types>
+      <stringQualifiers>
+        <length>250</length>
+      </stringQualifiers>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:UndefinedValue"/>
+  </resources>
+  <resources uuid="63a7b676-dbfc-4422-8a3b-55f55175e757">
+    <name>НормаРасхода</name>
+    <synonym>
+      <key>ru</key>
+      <value>Норма расхода на 100 км</value>
+    </synonym>
+    <type>
+      <types>Number</types>
+      <numberQualifiers>
+        <precision>15</precision>
+        <scale>2</scale>
+      </numberQualifiers>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:UndefinedValue"/>
+  </resources>
+  <dimensions uuid="46fd36ac-0ada-43f8-b136-bfe0a0ee2ae6">
+    <name>Водитель</name>
+    <synonym>
+      <key>ru</key>
+      <value>Водитель</value>
+    </synonym>
+    <type>
+      <types>String</types>
+      <stringQualifiers>
+        <length>150</length>
+      </stringQualifiers>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <mainFilter>true</mainFilter>
+  </dimensions>
+  <forms uuid="7231f3d7-bf99-4514-84b6-1cb037d24d57">
+    <name>ФормаЗаписи</name>
+    <synonym>
+      <key>ru</key>
+      <value>Форма записи</value>
+    </synonym>
+    <formType>Ordinary</formType>
+    <usePurposes>PersonalComputer</usePurposes>
+    <usePurposes>MobileDevice</usePurposes>
+  </forms>
+  <forms uuid="692d8902-649e-48ca-8169-93bc9e45bdf5">
+    <name>ФормаСписка</name>
+    <synonym>
+      <key>ru</key>
+      <value>Форма списка</value>
+    </synonym>
+    <formType>Ordinary</formType>
+    <usePurposes>PersonalComputer</usePurposes>
+    <usePurposes>MobileDevice</usePurposes>
+  </forms>
+  <forms uuid="da47be71-c6ba-4384-9b32-9d7e7d684775">
+    <name>ФормаВыбора</name>
+    <synonym>
+      <key>ru</key>
+      <value>Форма выбора</value>
+    </synonym>
+    <formType>Ordinary</formType>
+    <usePurposes>PersonalComputer</usePurposes>
+    <usePurposes>MobileDevice</usePurposes>
+  </forms>
+</mdclass:InformationRegister>

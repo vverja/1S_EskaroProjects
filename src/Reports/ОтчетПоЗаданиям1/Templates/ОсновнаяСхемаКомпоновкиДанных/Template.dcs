@@ -1,0 +1,556 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<DataCompositionSchema xmlns="http://v8.1c.ru/8.1/data-composition-system/schema" xmlns:dcscom="http://v8.1c.ru/8.1/data-composition-system/common" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<dataSource>
+		<name>ИсточникДанных1</name>
+		<dataSourceType>Local</dataSourceType>
+	</dataSource>
+	<dataSet xsi:type="DataSetQuery">
+		<name>НаборДанных1</name>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Ссылка</dataPath>
+			<field>Ссылка</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Регистратор</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ВремяНачалообработки</dataPath>
+			<field>ВремяНачалообработки</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Время начала</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ВремяОкончанияОбработки</dataPath>
+			<field>ВремяОкончанияОбработки</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Время окончания</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Исполнитель</dataPath>
+			<field>Исполнитель</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Сотрудник</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>КоличествоШтук</dataPath>
+			<field>КоличествоШтук</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Количество шт.</v8:content>
+				</v8:item>
+			</title>
+			<appearance>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>Формат</dcscor:parameter>
+					<dcscor:value xsi:type="xs:string">ЧДЦ=2</dcscor:value>
+				</dcscor:item>
+			</appearance>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>КоличествоКГ</dataPath>
+			<field>КоличествоКГ</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Количество кг.</v8:content>
+				</v8:item>
+			</title>
+			<appearance>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>Формат</dcscor:parameter>
+					<dcscor:value xsi:type="xs:string">ЧДЦ=2</dcscor:value>
+				</dcscor:item>
+			</appearance>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>КоличествоДокументов</dataPath>
+			<field>КоличествоДокументов</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Дата</dataPath>
+			<field>Дата</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Дата</v8:content>
+				</v8:item>
+			</title>
+			<appearance>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>Формат</dcscor:parameter>
+					<dcscor:value xsi:type="xs:string">ДФ=dd.MM.yyyy</dcscor:value>
+				</dcscor:item>
+			</appearance>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Количество</dataPath>
+			<field>Количество</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Количество строк</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ВидЗадания</dataPath>
+			<field>ВидЗадания</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Операция</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Сумма</dataPath>
+			<field>Сумма</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Сумма сдельная</v8:content>
+				</v8:item>
+			</title>
+			<appearance>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>Формат</dcscor:parameter>
+					<dcscor:value xsi:type="xs:string">ЧДЦ=2</dcscor:value>
+				</dcscor:item>
+			</appearance>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ВремяНачалаПроверки</dataPath>
+			<field>ВремяНачалаПроверки</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Время начала</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ВремяОкончанияПроверки</dataPath>
+			<field>ВремяОкончанияПроверки</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Время окончания</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ИсполнительПриемки</dataPath>
+			<field>ИсполнительПриемки</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ОтработаноВремени</dataPath>
+			<field>ОтработаноВремени</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>УдержанияОшибки</dataPath>
+			<field>УдержанияОшибки</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Удержания ошибки</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>НомерЯруса</dataPath>
+			<field>НомерЯруса</field>
+		</field>
+		<dataSource>ИсточникДанных1</dataSource>
+		<query>ВЫБРАТЬ
+	СУММА(ВЫБОР
+			КОГДА ЗаданиеНаРаботуЗадание.Выполнено = ИСТИНА
+				ТОГДА 1
+			ИНАЧЕ 0
+		КОНЕЦ) КАК Количество,
+	ЗаданиеНаРаботуЗадание.Ссылка КАК Ссылка,
+	СУММА(ВЫБОР
+			КОГДА ЗаданиеНаРаботуЗадание.Выполнено = ИСТИНА
+				ТОГДА ЗаданиеНаРаботуЗадание.КоличествоФакт
+			ИНАЧЕ 0
+		КОНЕЦ) КАК КоличествоШтук,
+	1 КАК КоличествоДокументов,
+	СУММА(ВЫБОР
+			КОГДА ЗаданиеНаРаботуЗадание.Выполнено = ИСТИНА
+				ТОГДА ЕдиницыИзмерения.Коэффициент * ЗаданиеНаРаботуЗадание.КоличествоФакт
+			ИНАЧЕ 0
+		КОНЕЦ) КАК КоличествоКГ,
+	ЗаданиеНаРаботуЗадание.Ссылка.ВидЗадания КАК ВидЗадания,
+	ТарифыСрезПоследних.Документы + СУММА(ВЫБОР
+			КОГДА ЗаданиеНаРаботуЗадание.Выполнено = ИСТИНА
+				ТОГДА 1
+			ИНАЧЕ 0
+		КОНЕЦ) * ТарифыСрезПоследних.Обработка + СУММА(ВЫБОР
+			КОГДА ЗаданиеНаРаботуЗадание.Выполнено = ИСТИНА
+				ТОГДА ЕдиницыИзмерения.Коэффициент * ЗаданиеНаРаботуЗадание.КоличествоФакт
+			ИНАЧЕ 0
+		КОНЕЦ) * ТарифыСрезПоследних.КоличествоВКГ КАК Сумма,
+	ЗаданиеНаРаботуЗадание.Ссылка.ВремяНачалообработки КАК ВремяНачалаПроверки,
+	ЗаданиеНаРаботуЗадание.Ссылка.ВремяОкончанияОбработки КАК ВремяОкончанияПроверки,
+	ЗаданиеНаРаботуЗадание.Ссылка.Дата КАК Дата,
+	ЗаданиеНаРаботуЗадание.Ссылка.Исполнитель КАК ИсполнительПриемки,
+	РАЗНОСТЬДАТ(ЗаданиеНаРаботуЗадание.Ссылка.ВремяНачалообработки, ЗаданиеНаРаботуЗадание.Ссылка.ВремяОкончанияОбработки, МИНУТА) КАК ОтработаноВремени,
+	СУММА(ВЫБОР
+			КОГДА ЗаданиеНаРаботуЗадание.Выполнено = ИСТИНА
+					И ЗаданиеНаРаботуЗадание.Ошибка = ИСТИНА
+				ТОГДА 1
+			ИНАЧЕ 0
+		КОНЕЦ * ТарифыСрезПоследних.Ошибки) КАК УдержанияОшибки,
+	ТарифыСрезПоследних.НомерЯруса КАК НомерЯруса
+{ВЫБРАТЬ
+	Количество,
+	Ссылка.*,
+	КоличествоШтук,
+	КоличествоДокументов,
+	КоличествоКГ,
+	ВидЗадания,
+	Сумма,
+	НомерЯруса}
+ИЗ
+	Справочник.ЕдиницыИзмерения КАК ЕдиницыИзмерения
+		ЛЕВОЕ СОЕДИНЕНИЕ Справочник.Номенклатура КАК ТМЦ
+			ВНУТРЕННЕЕ СОЕДИНЕНИЕ Документ.ЗаданиеНаРаботу.Задание КАК ЗаданиеНаРаботуЗадание
+				ЛЕВОЕ СОЕДИНЕНИЕ РегистрСведений.Тарифы.СрезПоследних КАК ТарифыСрезПоследних
+				ПО ЗаданиеНаРаботуЗадание.Ссылка.ВидЗадания = ТарифыСрезПоследних.Операция
+					И (ТарифыСрезПоследних.Склад.Наименование ПОДОБНО ЗаданиеНаРаботуЗадание.Ссылка.Склад + "%")
+					И (ПОДСТРОКА(ЗаданиеНаРаботуЗадание.ЯчейкаПлан, 6, 1) = ТарифыСрезПоследних.НомерЯруса
+						ИЛИ ТарифыСрезПоследних.НомерЯруса = "")
+			ПО (ЗаданиеНаРаботуЗадание.КодНоменклатуры = ТМЦ.Код)
+		ПО ЕдиницыИзмерения.Ссылка = ТМЦ.ЕдиницаХраненияОстатков
+ГДЕ
+	ЗаданиеНаРаботуЗадание.Ссылка.Дата МЕЖДУ НАЧАЛОПЕРИОДА(&amp;ДатаНачала, ДЕНЬ) И КОНЕЦПЕРИОДА(&amp;ДатаОкончания, ДЕНЬ)
+	И ЗаданиеНаРаботуЗадание.Ссылка.Проведен
+	И НЕ ЗаданиеНаРаботуЗадание.Ссылка.ПометкаУдаления
+	И НЕ ЗаданиеНаРаботуЗадание.Ссылка.ВремяНачалообработки = ДАТАВРЕМЯ(1, 1, 1, 0, 0, 0)
+	И НЕ ЗаданиеНаРаботуЗадание.Ссылка.ВремяОкончанияОбработки = ДАТАВРЕМЯ(1, 1, 1, 0, 0, 0)
+{ГДЕ
+	(ВЫБОР
+			КОГДА ЗаданиеНаРаботуЗадание.Выполнено = ИСТИНА
+				ТОГДА 1
+			ИНАЧЕ 0
+		КОНЕЦ) КАК Количество,
+	ЗаданиеНаРаботуЗадание.Ссылка.*,
+	ЗаданиеНаРаботуЗадание.Ссылка.Дата,
+	ЗаданиеНаРаботуЗадание.Ссылка.ВремяНачалообработки,
+	ЗаданиеНаРаботуЗадание.Ссылка.ВремяОкончанияОбработки,
+	ЗаданиеНаРаботуЗадание.Ссылка.Исполнитель,
+	(ВЫБОР
+			КОГДА ЗаданиеНаРаботуЗадание.Выполнено = ИСТИНА
+				ТОГДА ЗаданиеНаРаботуЗадание.КоличествоФакт
+			ИНАЧЕ 0
+		КОНЕЦ) КАК КоличествоШтук,
+	(1) КАК КоличествоДокументов,
+	(ВЫБОР
+			КОГДА ЗаданиеНаРаботуЗадание.Выполнено = ИСТИНА
+				ТОГДА ЕдиницыИзмерения.Коэффициент * ЗаданиеНаРаботуЗадание.КоличествоФакт
+			ИНАЧЕ 0
+		КОНЕЦ) КАК КоличествоКГ,
+	ЗаданиеНаРаботуЗадание.Ссылка.ВидЗадания,
+	(ТарифыСрезПоследних.Документы + СУММА(ВЫБОР
+				КОГДА ЗаданиеНаРаботуЗадание.Выполнено = ИСТИНА
+					ТОГДА 1
+				ИНАЧЕ 0
+			КОНЕЦ) * ТарифыСрезПоследних.Обработка + СУММА(ВЫБОР
+				КОГДА ЗаданиеНаРаботуЗадание.Выполнено = ИСТИНА
+					ТОГДА ЕдиницыИзмерения.Коэффициент * ЗаданиеНаРаботуЗадание.КоличествоФакт
+				ИНАЧЕ 0
+			КОНЕЦ) * ТарифыСрезПоследних.КоличествоВКГ) КАК Сумма}
+
+СГРУППИРОВАТЬ ПО
+	ЗаданиеНаРаботуЗадание.Ссылка,
+	ЗаданиеНаРаботуЗадание.Ссылка.Дата,
+	ЗаданиеНаРаботуЗадание.Ссылка.ВремяНачалообработки,
+	ЗаданиеНаРаботуЗадание.Ссылка.ВремяОкончанияОбработки,
+	ЗаданиеНаРаботуЗадание.Ссылка.Исполнитель,
+	ТарифыСрезПоследних.Документы,
+	ТарифыСрезПоследних.Обработка,
+	ТарифыСрезПоследних.КоличествоВКГ,
+	ЗаданиеНаРаботуЗадание.Ссылка.ВидЗадания,
+	ТарифыСрезПоследних.НомерЯруса</query>
+	</dataSet>
+	<calculatedField>
+		<dataPath>СуммаСУдержанием</dataPath>
+		<expression>Сумма - УдержанияОшибки</expression>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Сумма с удержанием</v8:content>
+			</v8:item>
+		</title>
+		<appearance>
+			<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+				<dcscor:parameter>Формат</dcscor:parameter>
+				<dcscor:value xsi:type="v8:LocalStringType">
+					<v8:item>
+						<v8:lang>ru</v8:lang>
+						<v8:content>ЧДЦ=2</v8:content>
+					</v8:item>
+				</dcscor:value>
+			</dcscor:item>
+		</appearance>
+	</calculatedField>
+	<totalField>
+		<dataPath>КоличествоДокументов</dataPath>
+		<expression>Сумма(КоличествоДокументов)</expression>
+	</totalField>
+	<totalField>
+		<dataPath>КоличествоКГ</dataPath>
+		<expression>Сумма(КоличествоКГ)</expression>
+	</totalField>
+	<totalField>
+		<dataPath>КоличествоШтук</dataPath>
+		<expression>Сумма(КоличествоШтук)</expression>
+	</totalField>
+	<totalField>
+		<dataPath>Количество</dataPath>
+		<expression>Сумма(Количество)</expression>
+	</totalField>
+	<totalField>
+		<dataPath>Сумма</dataPath>
+		<expression>Сумма(Сумма)</expression>
+	</totalField>
+	<totalField>
+		<dataPath>ОтработаноВремени</dataPath>
+		<expression>Сумма(ОтработаноВремени)</expression>
+	</totalField>
+	<totalField>
+		<dataPath>СуммаСУдержанием</dataPath>
+		<expression>Сумма(СуммаСУдержанием)</expression>
+	</totalField>
+	<totalField>
+		<dataPath>УдержанияОшибки</dataPath>
+		<expression>Сумма(УдержанияОшибки)</expression>
+	</totalField>
+	<parameter>
+		<name>ДатаНачала</name>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Дата начала</v8:content>
+			</v8:item>
+		</title>
+		<valueType>
+			<v8:Type>xs:dateTime</v8:Type>
+			<v8:DateQualifiers>
+				<v8:DateFractions>Date</v8:DateFractions>
+			</v8:DateQualifiers>
+		</valueType>
+		<value xsi:type="xs:dateTime">0001-01-01T00:00:00</value>
+		<useRestriction>false</useRestriction>
+		<expression>НАЧАЛОПЕРИОДА(&amp;ДатаНачала,"ДЕНЬ")</expression>
+	</parameter>
+	<parameter>
+		<name>ДатаОкончания</name>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Дата окончания</v8:content>
+			</v8:item>
+		</title>
+		<valueType>
+			<v8:Type>xs:dateTime</v8:Type>
+			<v8:DateQualifiers>
+				<v8:DateFractions>Date</v8:DateFractions>
+			</v8:DateQualifiers>
+		</valueType>
+		<value xsi:type="xs:dateTime">0001-01-01T00:00:00</value>
+		<useRestriction>false</useRestriction>
+		<expression>КОНЕЦПЕРИОДА(&amp;ДатаОкончания,"ДЕНЬ")</expression>
+	</parameter>
+	<parameter>
+		<name>Период</name>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Период</v8:content>
+			</v8:item>
+		</title>
+		<valueType>
+			<v8:Type>xs:dateTime</v8:Type>
+			<v8:DateQualifiers>
+				<v8:DateFractions>DateTime</v8:DateFractions>
+			</v8:DateQualifiers>
+		</valueType>
+		<value xsi:type="xs:dateTime">0001-01-01T00:00:00</value>
+		<useRestriction>false</useRestriction>
+	</parameter>
+	<settingsVariant>
+		<dcsset:name>Основной</dcsset:name>
+		<dcsset:presentation xsi:type="xs:string">Основной</dcsset:presentation>
+		<dcsset:settings xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows">
+			<dcsset:selection>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>ОтработаноВремени</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>КоличествоДокументов</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>Количество</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>КоличествоШтук</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>КоличествоКГ</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>Сумма</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>УдержанияОшибки</dcsset:field>
+					<dcsset:lwsTitle>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Удержания за ошибки</v8:content>
+						</v8:item>
+					</dcsset:lwsTitle>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>СуммаСУдержанием</dcsset:field>
+					<dcsset:lwsTitle>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Сумма за вычетом ошибок</v8:content>
+						</v8:item>
+					</dcsset:lwsTitle>
+				</dcsset:item>
+			</dcsset:selection>
+			<dcsset:dataParameters>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>ДатаНачала</dcscor:parameter>
+					<dcscor:value xsi:type="xs:dateTime">0001-01-01T00:00:00</dcscor:value>
+					<dcsset:userSettingID>dc464b84-1372-48cb-91b7-3729da3289f8</dcsset:userSettingID>
+				</dcscor:item>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>ДатаОкончания</dcscor:parameter>
+					<dcscor:value xsi:type="xs:dateTime">0001-01-01T00:00:00</dcscor:value>
+					<dcsset:userSettingID>439238d3-7a62-482d-9bfb-5ba713a9784b</dcsset:userSettingID>
+				</dcscor:item>
+			</dcsset:dataParameters>
+			<dcsset:item xsi:type="dcsset:StructureItemGroup">
+				<dcsset:groupItems>
+					<dcsset:item xsi:type="dcsset:GroupItemField">
+						<dcsset:field>ИсполнительПриемки</dcsset:field>
+						<dcsset:groupType>Items</dcsset:groupType>
+						<dcsset:periodAdditionType>None</dcsset:periodAdditionType>
+						<dcsset:periodAdditionBegin xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionBegin>
+						<dcsset:periodAdditionEnd xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionEnd>
+					</dcsset:item>
+				</dcsset:groupItems>
+				<dcsset:order>
+					<dcsset:item xsi:type="dcsset:OrderItemAuto"/>
+				</dcsset:order>
+				<dcsset:selection>
+					<dcsset:item xsi:type="dcsset:SelectedItemAuto"/>
+				</dcsset:selection>
+				<dcsset:item xsi:type="dcsset:StructureItemGroup">
+					<dcsset:groupItems>
+						<dcsset:item xsi:type="dcsset:GroupItemField">
+							<dcsset:field>ВидЗадания</dcsset:field>
+							<dcsset:groupType>Items</dcsset:groupType>
+							<dcsset:periodAdditionType>None</dcsset:periodAdditionType>
+							<dcsset:periodAdditionBegin xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionBegin>
+							<dcsset:periodAdditionEnd xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionEnd>
+						</dcsset:item>
+					</dcsset:groupItems>
+					<dcsset:order>
+						<dcsset:item xsi:type="dcsset:OrderItemAuto"/>
+					</dcsset:order>
+					<dcsset:selection>
+						<dcsset:item xsi:type="dcsset:SelectedItemAuto"/>
+					</dcsset:selection>
+					<dcsset:item xsi:type="dcsset:StructureItemGroup">
+						<dcsset:groupItems>
+							<dcsset:item xsi:type="dcsset:GroupItemField">
+								<dcsset:field>Ссылка</dcsset:field>
+								<dcsset:groupType>Items</dcsset:groupType>
+								<dcsset:periodAdditionType>None</dcsset:periodAdditionType>
+								<dcsset:periodAdditionBegin xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionBegin>
+								<dcsset:periodAdditionEnd xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionEnd>
+							</dcsset:item>
+							<dcsset:item xsi:type="dcsset:GroupItemField">
+								<dcsset:field>Дата</dcsset:field>
+								<dcsset:groupType>Items</dcsset:groupType>
+								<dcsset:periodAdditionType>None</dcsset:periodAdditionType>
+								<dcsset:periodAdditionBegin xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionBegin>
+								<dcsset:periodAdditionEnd xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionEnd>
+							</dcsset:item>
+							<dcsset:item xsi:type="dcsset:GroupItemField">
+								<dcsset:field>ВремяНачалаПроверки</dcsset:field>
+								<dcsset:groupType>Items</dcsset:groupType>
+								<dcsset:periodAdditionType>None</dcsset:periodAdditionType>
+								<dcsset:periodAdditionBegin xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionBegin>
+								<dcsset:periodAdditionEnd xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionEnd>
+							</dcsset:item>
+							<dcsset:item xsi:type="dcsset:GroupItemField">
+								<dcsset:field>ВремяОкончанияПроверки</dcsset:field>
+								<dcsset:groupType>Items</dcsset:groupType>
+								<dcsset:periodAdditionType>None</dcsset:periodAdditionType>
+								<dcsset:periodAdditionBegin xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionBegin>
+								<dcsset:periodAdditionEnd xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionEnd>
+							</dcsset:item>
+							<dcsset:item xsi:type="dcsset:GroupItemField">
+								<dcsset:field>НомерЯруса</dcsset:field>
+								<dcsset:groupType>Items</dcsset:groupType>
+								<dcsset:periodAdditionType>None</dcsset:periodAdditionType>
+								<dcsset:periodAdditionBegin xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionBegin>
+								<dcsset:periodAdditionEnd xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionEnd>
+							</dcsset:item>
+						</dcsset:groupItems>
+						<dcsset:order>
+							<dcsset:item xsi:type="dcsset:OrderItemAuto"/>
+						</dcsset:order>
+						<dcsset:selection>
+							<dcsset:item xsi:type="dcsset:SelectedItemAuto"/>
+						</dcsset:selection>
+						<dcsset:conditionalAppearance>
+							<dcsset:item>
+								<dcsset:selection>
+									<dcsset:item>
+										<dcsset:field>Сумма</dcsset:field>
+									</dcsset:item>
+									<dcsset:item>
+										<dcsset:field>СуммаСУдержанием</dcsset:field>
+									</dcsset:item>
+								</dcsset:selection>
+								<dcsset:filter/>
+								<dcsset:appearance>
+									<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+										<dcscor:parameter>Формат</dcscor:parameter>
+										<dcscor:value xsi:type="v8:LocalStringType">
+											<v8:item>
+												<v8:lang>ru</v8:lang>
+												<v8:content>ЧДЦ=2</v8:content>
+											</v8:item>
+										</dcscor:value>
+									</dcscor:item>
+								</dcsset:appearance>
+							</dcsset:item>
+						</dcsset:conditionalAppearance>
+					</dcsset:item>
+				</dcsset:item>
+			</dcsset:item>
+		</dcsset:settings>
+	</settingsVariant>
+</DataCompositionSchema>

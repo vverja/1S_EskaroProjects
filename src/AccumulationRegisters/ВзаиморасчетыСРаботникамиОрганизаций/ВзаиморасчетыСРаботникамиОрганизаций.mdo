@@ -1,0 +1,182 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:AccumulationRegister xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:core="http://g5.1c.ru/v8/dt/mcore" xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="36b9b9f2-8b72-4593-915e-2fab26ec4073">
+  <producedTypes>
+    <selectionType typeId="39343d88-e12e-4f68-a62f-714171a9c3ae" valueTypeId="a6c5d02c-99a7-47ce-a052-6587e37ee158"/>
+    <listType typeId="f1090d1d-2497-4eb0-b585-9727faaac566" valueTypeId="1cbcd1fd-f1b4-4f77-8994-4c3847fbbc45"/>
+    <managerType typeId="1b67ce85-5ffb-4faf-a1ae-f61f0538e95b" valueTypeId="5fd130f4-06ac-4210-8d82-73b21749c0c5"/>
+    <recordSetType typeId="d3cabad0-24b5-449c-873c-3675d6f5274a" valueTypeId="be33a934-36f7-4857-bc8f-6ef048db0f7b"/>
+    <recordKeyType typeId="8f5e4e8e-b61f-4701-b7e2-4c8980cd8b21" valueTypeId="2d53e07a-59cb-4e59-970d-ef48c61280e5"/>
+    <recordType typeId="f538ae3d-6b90-46d7-92b4-f8d75173a239" valueTypeId="9fbaf159-dbdc-4565-b6b1-2b53f0a8a722"/>
+  </producedTypes>
+  <name>ВзаиморасчетыСРаботникамиОрганизаций</name>
+  <synonym>
+    <key>ru</key>
+    <value>Взаиморасчеты с работниками организаций</value>
+  </synonym>
+  <comment>(Регл)</comment>
+  <defaultListForm>AccumulationRegister.ВзаиморасчетыСРаботникамиОрганизаций.Form.ФормаСписка</defaultListForm>
+  <enableTotalsSplitting>true</enableTotalsSplitting>
+  <resources uuid="5bf4ce1d-1715-4393-982d-aeb09ff37d82">
+    <name>СуммаВзаиморасчетов</name>
+    <synonym>
+      <key>ru</key>
+      <value>Сумма взаиморасчетов</value>
+    </synonym>
+    <comment>Сумма в валюте взаиморасчетов</comment>
+    <type>
+      <types>Number</types>
+      <numberQualifiers>
+        <precision>15</precision>
+        <scale>2</scale>
+      </numberQualifiers>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+  </resources>
+  <attributes uuid="c415faf6-2756-4739-97d8-71392df306e1">
+    <name>КодОперации</name>
+    <synonym>
+      <key>ru</key>
+      <value>Код операции</value>
+    </synonym>
+    <type>
+      <types>EnumRef.КодыОперацийВзаиморасчетыСРаботникамиОрганизаций</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <indexing>Index</indexing>
+    <fullTextSearch>Use</fullTextSearch>
+  </attributes>
+  <attributes uuid="77a0ff01-428d-4267-b63b-13d6b4a76a76">
+    <name>ХарактерВыплаты</name>
+    <synonym>
+      <key>ru</key>
+      <value>Характер выплаты</value>
+    </synonym>
+    <type>
+      <types>EnumRef.ХарактерВыплатыЗарплаты</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+  </attributes>
+  <attributes uuid="8d098a14-f017-4396-88dc-bb146081a4dc">
+    <name>СпособВыплаты</name>
+    <synonym>
+      <key>ru</key>
+      <value>Способ выплаты</value>
+    </synonym>
+    <type>
+      <types>EnumRef.СпособыВыплатыЗарплаты</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+  </attributes>
+  <attributes uuid="f7926446-f7e8-4464-a747-bd12b6b34f5a">
+    <name>Ведомость</name>
+    <synonym>
+      <key>ru</key>
+      <value>Ведомость</value>
+    </synonym>
+    <type>
+      <types>DocumentRef.ЗарплатаКВыплатеОрганизаций</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+  </attributes>
+  <attributes uuid="5ddfa9dd-a51f-405f-bbc3-62c67a0ec585">
+    <name>СуммаОкругления</name>
+    <synonym>
+      <key>ru</key>
+      <value>Сумма округления</value>
+    </synonym>
+    <type>
+      <types>Number</types>
+      <numberQualifiers>
+        <precision>10</precision>
+        <scale>2</scale>
+      </numberQualifiers>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+  </attributes>
+  <dimensions uuid="2511610f-31a9-4e44-9040-4d603a8ee560">
+    <name>Организация</name>
+    <synonym>
+      <key>ru</key>
+      <value>Организация</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.Организации</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <denyIncompleteValues>true</denyIncompleteValues>
+    <indexing>Index</indexing>
+    <fullTextSearch>Use</fullTextSearch>
+    <useInTotals>true</useInTotals>
+  </dimensions>
+  <dimensions uuid="b4d9d7fb-0adb-435e-90f6-b9d96872e465">
+    <name>Сотрудник</name>
+    <synonym>
+      <key>ru</key>
+      <value>Сотрудник</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.СотрудникиОрганизаций</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <denyIncompleteValues>true</denyIncompleteValues>
+    <indexing>Index</indexing>
+    <fullTextSearch>Use</fullTextSearch>
+    <useInTotals>true</useInTotals>
+  </dimensions>
+  <dimensions uuid="9a3b578e-bf05-46a3-9362-c7b33d246cc1">
+    <name>СчетУчета</name>
+    <synonym>
+      <key>ru</key>
+      <value>Счет учета</value>
+    </synonym>
+    <type>
+      <types>ChartOfAccountsRef.Хозрасчетный</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <denyIncompleteValues>true</denyIncompleteValues>
+    <fullTextSearch>Use</fullTextSearch>
+    <useInTotals>true</useInTotals>
+  </dimensions>
+  <dimensions uuid="8a7767a0-7c79-4804-876b-42c33bebe993">
+    <name>ПериодВзаиморасчетов</name>
+    <synonym>
+      <key>ru</key>
+      <value>Период взаиморасчетов</value>
+    </synonym>
+    <type>
+      <types>Date</types>
+      <dateQualifiers>
+        <dateFractions>Date</dateFractions>
+      </dateQualifiers>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <denyIncompleteValues>true</denyIncompleteValues>
+    <fullTextSearch>Use</fullTextSearch>
+    <useInTotals>true</useInTotals>
+  </dimensions>
+  <forms uuid="a49008d2-c1a8-4fd9-bca7-1677f47757e9">
+    <name>ФормаСписка</name>
+    <synonym>
+      <key>ru</key>
+      <value>Форма списка</value>
+    </synonym>
+    <formType>Ordinary</formType>
+    <usePurposes>PersonalComputer</usePurposes>
+    <usePurposes>MobileDevice</usePurposes>
+  </forms>
+</mdclass:AccumulationRegister>

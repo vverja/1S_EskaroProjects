@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:DocumentJournal xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="16575b9c-79ef-41cb-b059-897c29e32e64">
+  <producedTypes>
+    <selectionType typeId="c7bff9f1-1382-4e67-98d5-4c6f9bc322e6" valueTypeId="d5586313-701d-441e-bb12-64ef5383d554"/>
+    <listType typeId="7491a64e-c01c-483d-9e83-7c79afab7703" valueTypeId="dcd3fc59-3cd0-4ebb-b9f4-4cffeafb50e3"/>
+    <managerType typeId="27816cc2-bff9-4147-8156-7bc226c1644c" valueTypeId="486b91d8-83b4-4bdd-8ba9-d0a957db2d6e"/>
+  </producedTypes>
+  <name>РасчетОплатыНеявок</name>
+  <synonym>
+    <key>ru</key>
+    <value>Расчет оплаты неявок</value>
+  </synonym>
+  <defaultForm>DocumentJournal.РасчетОплатыНеявок.Form.ФормаСписка</defaultForm>
+  <registeredDocuments>Document.НачислениеОтпускаРаботникамОрганизаций</registeredDocuments>
+  <registeredDocuments>Document.ОплатаПоСреднемуЗаработку</registeredDocuments>
+  <registeredDocuments>Document.НевыходыВОрганизациях</registeredDocuments>
+  <registeredDocuments>Document.НачислениеПоБольничномуЛисту</registeredDocuments>
+  <registeredDocuments>Document.РегистрацияПростоевВОрганизациях</registeredDocuments>
+  <columns uuid="3c1383c4-e0c0-427a-856b-9652c38932cc">
+    <name>Организация</name>
+    <synonym>
+      <key>ru</key>
+      <value>Организация</value>
+    </synonym>
+    <references>Document.НевыходыВОрганизациях.Attribute.Организация</references>
+    <references>Document.НачислениеПоБольничномуЛисту.Attribute.Организация</references>
+    <references>Document.НачислениеОтпускаРаботникамОрганизаций.Attribute.Организация</references>
+    <references>Document.ОплатаПоСреднемуЗаработку.Attribute.Организация</references>
+    <references>Document.РегистрацияПростоевВОрганизациях.Attribute.Организация</references>
+  </columns>
+  <columns uuid="f701b22f-78e7-4150-8529-8cfd273fd13e">
+    <name>ПериодРегистрации</name>
+    <synonym>
+      <key>ru</key>
+      <value>Период регистрации</value>
+    </synonym>
+    <references>Document.НевыходыВОрганизациях.Attribute.ПериодРегистрации</references>
+    <references>Document.НачислениеПоБольничномуЛисту.Attribute.ПериодРегистрации</references>
+    <references>Document.НачислениеОтпускаРаботникамОрганизаций.Attribute.ПериодРегистрации</references>
+    <references>Document.ОплатаПоСреднемуЗаработку.Attribute.ПериодРегистрации</references>
+    <references>Document.РегистрацияПростоевВОрганизациях.Attribute.ПериодРегистрации</references>
+  </columns>
+  <columns uuid="36c3270e-7386-44a7-b56b-96ccd122a84c">
+    <name>Работники</name>
+    <synonym>
+      <key>ru</key>
+      <value>Работники</value>
+    </synonym>
+    <references>Document.ОплатаПоСреднемуЗаработку.Attribute.Сотрудник</references>
+    <references>Document.НачислениеПоБольничномуЛисту.Attribute.Сотрудник</references>
+    <references>Document.НевыходыВОрганизациях.Attribute.КраткийСоставДокумента</references>
+    <references>Document.НачислениеОтпускаРаботникамОрганизаций.Attribute.Сотрудник</references>
+    <references>Document.РегистрацияПростоевВОрганизациях.Attribute.Сотрудник</references>
+  </columns>
+  <columns uuid="064d601e-d03b-42eb-be4a-6fac5ec27e37">
+    <name>Ответственный</name>
+    <synonym>
+      <key>ru</key>
+      <value>Ответственный</value>
+    </synonym>
+    <references>Document.НачислениеПоБольничномуЛисту.Attribute.Ответственный</references>
+    <references>Document.ОплатаПоСреднемуЗаработку.Attribute.Ответственный</references>
+    <references>Document.НачислениеОтпускаРаботникамОрганизаций.Attribute.Ответственный</references>
+    <references>Document.НевыходыВОрганизациях.Attribute.Ответственный</references>
+    <references>Document.РегистрацияПростоевВОрганизациях.Attribute.Ответственный</references>
+  </columns>
+  <columns uuid="6a197f57-be34-4ac2-be93-657d5f1a21b6">
+    <name>Комментарий</name>
+    <synonym>
+      <key>ru</key>
+      <value>Комментарий</value>
+    </synonym>
+    <references>Document.НачислениеПоБольничномуЛисту.Attribute.Комментарий</references>
+    <references>Document.ОплатаПоСреднемуЗаработку.Attribute.Комментарий</references>
+    <references>Document.НачислениеОтпускаРаботникамОрганизаций.Attribute.Комментарий</references>
+    <references>Document.НевыходыВОрганизациях.Attribute.Комментарий</references>
+    <references>Document.РегистрацияПростоевВОрганизациях.Attribute.Комментарий</references>
+  </columns>
+  <forms uuid="3627d87b-75ff-45b6-b1b7-fb07b7d9a256">
+    <name>ФормаСписка</name>
+    <synonym>
+      <key>ru</key>
+      <value>Форма списка</value>
+    </synonym>
+    <formType>Ordinary</formType>
+    <usePurposes>PersonalComputer</usePurposes>
+    <usePurposes>MobileDevice</usePurposes>
+  </forms>
+</mdclass:DocumentJournal>

@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:InformationRegister xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:core="http://g5.1c.ru/v8/dt/mcore" xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="4055bdef-52a0-48d6-8045-98fa052da7b3">
+  <producedTypes>
+    <selectionType typeId="1e0c8e27-256c-4011-8c17-11856bd5a70f" valueTypeId="7592ed4c-3ae9-40d0-8849-761005935d47"/>
+    <listType typeId="6c366b6c-3c8a-4963-87de-1ba898045caf" valueTypeId="85eb3a81-4361-4380-bfd9-6b08aae9743a"/>
+    <managerType typeId="3dcbe421-d8dd-417f-bbd9-feec5e4b4dc2" valueTypeId="03e1ce32-3567-4b73-83ad-79874c048a9f"/>
+    <recordSetType typeId="7a4282d2-6117-4b27-9fdb-6c8017c8cd1f" valueTypeId="b6057931-d60d-46c2-8bcd-4e5150b2978c"/>
+    <recordKeyType typeId="8409e0bb-5615-4d61-8349-bdc35754b85e" valueTypeId="cf4628d8-c6f8-48a8-9b1e-76517c43db96"/>
+    <recordType typeId="7cc9d31a-378d-4f79-acd3-9bb20199b63a" valueTypeId="08e80442-b31b-4625-b044-4045f5e554bd"/>
+    <recordManagerType typeId="c637e6f0-e763-44b4-9843-c8b0a2edab91" valueTypeId="068203c8-13b3-4a28-ad49-f7b0f599116b"/>
+  </producedTypes>
+  <name>ПервоначальныеСведенияОСБухгалтерскийУчет</name>
+  <synonym>
+    <key>ru</key>
+    <value>Первоначальные сведения об ОС (бухгалтерский учет)</value>
+  </synonym>
+  <comment>(Регл) Регистр, который показывает изменение инвентарного номера ОС при передаче его из одной организации в другую. Информация записывается только документами ПринятиеКУчету по бух. виду учета и ввод остатков</comment>
+  <informationRegisterPeriodicity>Day</informationRegisterPeriodicity>
+  <writeMode>RecorderSubordinate</writeMode>
+  <includeHelpInContents>true</includeHelpInContents>
+  <help>
+    <pages>
+      <lang>ru</lang>
+    </pages>
+  </help>
+  <resources uuid="0715f96e-83f3-4eb7-a762-6bd8d7c49c87">
+    <name>Организация</name>
+    <synonym>
+      <key>ru</key>
+      <value>Организация</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.Организации</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <indexing>Index</indexing>
+  </resources>
+  <resources uuid="69f374b5-db0d-4bd8-a48e-7a980cf11e74">
+    <name>ИнвентарныйНомер</name>
+    <synonym>
+      <key>ru</key>
+      <value>Инвентарный номер</value>
+    </synonym>
+    <type>
+      <types>String</types>
+      <stringQualifiers>
+        <length>9</length>
+      </stringQualifiers>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:UndefinedValue"/>
+  </resources>
+  <resources uuid="239b9f56-5436-4d54-a4d4-b44235ca5798">
+    <name>СпособНачисленияАмортизации</name>
+    <synonym>
+      <key>ru</key>
+      <value>Способ начисления амортизации</value>
+    </synonym>
+    <type>
+      <types>EnumRef.СпособыНачисленияАмортизацииОС</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:UndefinedValue"/>
+  </resources>
+  <resources uuid="0946adfc-f9d7-4de7-89a8-37e41f6bad33">
+    <name>ПервоначальнаяСтоимость</name>
+    <synonym>
+      <key>ru</key>
+      <value>Первоначальная стоимость</value>
+    </synonym>
+    <type>
+      <types>Number</types>
+      <numberQualifiers>
+        <precision>15</precision>
+        <scale>2</scale>
+      </numberQualifiers>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:UndefinedValue"/>
+  </resources>
+  <resources uuid="723c8335-adaf-48e7-be2a-c4f827814c18">
+    <name>ПараметрВыработки</name>
+    <synonym>
+      <key>ru</key>
+      <value>Параметр выработки</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.ПараметрыВыработкиОС</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:UndefinedValue"/>
+  </resources>
+  <dimensions uuid="3c063d23-ec40-4dbb-b93d-f6f9e34bc6e7">
+    <name>ОсновноеСредство</name>
+    <synonym>
+      <key>ru</key>
+      <value>Основное средство</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.ОсновныеСредства</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <master>true</master>
+    <mainFilter>true</mainFilter>
+  </dimensions>
+</mdclass:InformationRegister>

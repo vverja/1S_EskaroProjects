@@ -1,0 +1,200 @@
+<HTML xmlns="http://www.w3.org/1999/xhtml">															
+	<HEAD>														
+		<TITLE>Яндекс Карты</TITLE>													
+		 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />													
+         <meta http-equiv="X-RU-Compatible" content="IE=7"/>															
+		<SCRIPT type=text/javascript src="http://api-maps.yandex.ru/1.0/index.xml?key=AKgqHEkBAAAA-WzMYwIAeAeamm8ETZZZpdfp2R07eIuGyX4AAAAAAAAAAACjUCDoHIHZJ2pcl5mSL1zWVp2Myw==">													
+        type="text/javascript"></script>															
+		<SCRIPT type=text/javascript>													
+			var map, geoResult, Long=0, Lat=0, icons;												
+		  													
+		    function initialize() {													
+		    if (GBrowserIsCompatible()) {													
+		      map = new GMap2(document.getElementById("map_canvas"));													
+		      map.setUIToDefault();													
+		      loadMyIcons();													
+			  drawMarkers(); 												
+		      													
+		    }													
+		  }													
+		    													
+		    function showAddress (value) {													
+            map.removeOverlay(geoResult);															
+            var geocoder = new YMaps.Geocoder(value, {results: 1, boundedBy: map.getBounds()});															
+
+            YMaps.Events.observe(geocoder, geocoder.Events.Load, function () {															
+                if (this.length()) {															
+                    geoResult = this.get(0);															
+                    map.addOverlay(geoResult);															
+                    map.setBounds(geoResult.getBounds());															
+                }else {															
+                    alert("Ничего не найдено")															
+                }															
+            });															
+
+           YMaps.Events.observe(geocoder, geocoder.Events.Fault,															
+           function (error) {alert("Произошла ошибка: " + error.message)});															
+
+        }															
+            															
+		    window.onload = function () {                  													
+		           	map = new YMaps.Map(document.getElementById("YMapsID"));												
+		           	drawMarkers();	           											
+                    YMaps.Events.observe( map,map.Events.Click, function(mEvent){															
+                                                                                  Long = mEvent.getGeoPoint().getLng();															
+                                                                                  Long = ConvertCoor(Long);															
+                                                                                  Lat  = mEvent.getGeoPoint().getLat(); 															
+                                                                                  Lat  = ConvertCoor(Lat);															
+                    															  var myHtml = "Широта: " + Lat + "<br>" + "Долгота: " + Long;
+                    															  map.openBalloon(mEvent.getGeoPoint(), myHtml);
+                    													        } 		
+                    					);										
+            };															
+
+			function onunloadpage(){												
+					map.destructor();										
+			}												
+
+			function ConvertCoor(Coor)												
+			{												
+			 Grad = parseInt(Coor).toString();												
+			 Min = Math.abs( Coor - parseInt(Coor) );												
+			 Min = (Min * 60).toFixed(4);												
+			 Sec = Min.toString();												
+			 if(parseInt(Min).toString().length == 1) Sec = "0" + Sec;												
+			 return Grad + Sec;												
+			}												
+
+			function loadMyIcons() {												
+		      icons = new Object();													
+			  var MyIcons = document.getElementById("MyIcons");												
+			  var root = MyIcons.XMLDocument.childNodes[0];												
+				for (elemIndex = 0; elemIndex < root.childNodes.length; elemIndex++) {											
+					var element = root.childNodes[elemIndex];										
+					var iconId;										
+			      iconId = element.getAttribute("id");												
+		          icons[iconId] = new YMaps.Style();													
+		          icons[iconId].iconStyle = new YMaps.IconStyle();													
+		          icons[iconId].iconStyle.href = element.getAttribute("url");													
+		          //icons[iconId].iconStyle.href = element.getAttribute("http://info.maps.yandex.net/api/i/steelblue/dot.png");													
+		          icons[iconId].iconStyle.size = new YMaps.Point(24, 24);													
+		       	  icons[iconId].iconStyle.offset = new YMaps.Point(-12, -12);												
+
+				}			  								
+			}												
+
+			function drawMarkers() {												
+					map.removeAllOverlays();										
+					if (Markers.XMLDocument.childNodes.length == 0) return;										
+					var root = Markers.XMLDocument.childNodes[0];										
+					map.addControl(new YMaps.TypeControl());										
+					map.addControl(new YMaps.ToolBar());										
+					map.addControl(new YMaps.MiniMap());										
+					map.addControl(new YMaps.Zoom());										
+					map.addControl(new YMaps.ScaleLine());										
+		           													
+		            var objManager = new YMaps.ObjectManager();													
+		            map.addOverlay(objManager);													
+		            if(root.getAttribute("valid")=="1") 													
+			            {   												
+			                map.setCenter(new YMaps.GeoPoint(parseFloat(root.getAttribute("long")),parseFloat(root.getAttribute("lat"))), parseInt(root.getAttribute("scale")));												
+
+							var points = [ new YMaps.GeoPoint(parseFloat(root.getAttribute("long_AutoScale1")),parseFloat(root.getAttribute("lat_AutoScale1"))),  								
+										   new YMaps.GeoPoint(parseFloat(root.getAttribute("long_AutoScale2")),parseFloat(root.getAttribute("lat_AutoScale2"))) ];					
+							bounds = new YMaps.GeoCollectionBounds(points);								
+							if(root.getAttribute("long_AutoScale1")) map.setBounds(bounds);								
+
+			       	    	root.setAttribute("valid","0");										
+			       	    }											
+					map.enableScrollZoom();										
+ 															
+		     for (elemIndex = 0; elemIndex < root.childNodes.length; elemIndex++) {													
+		     var element = root.childNodes[elemIndex];													
+		     var iconId;													
+		      													
+		      switch (element.nodeName) {													
+		        case "Marker":													
+		          var pos = new YMaps.GeoPoint(parseFloat(element.getAttribute("long")),parseFloat(element.getAttribute("lat")));													
+		          iconId = element.getAttribute("icon");													
+		          var marker;													
+		          if (iconId == null) 													
+		          {													
+			          marker = new YMaps.Placemark(pos);												
+			          marker.setIconContent(element.getAttribute("title") );												
+		              marker.description = element.getAttribute("title");													
+		 	      } 												
+			      else 												
+		          {													
+			          marker = new YMaps.Placemark(pos,{style: icons[iconId]});												
+		              marker.setIconContent(element.getAttribute("title") );													
+		              marker.description = element.getAttribute("title");													
+		          }													
+		          map.addOverlay(marker);													
+		          													
+		          break;													
+		        case "Path":													
+		          var points = element.text.split(",");													
+		          var latLngs = new Array();													
+		          for (n = 0; n < points.length; n++) {													
+		            var s = points[n].replace(/\s*/, "");													
+		            var coords = s.split(" ");													
+		            latLngs.push(new YMaps.GeoPoint(parseFloat(coords[1]), parseFloat(coords[0])));													
+		        }													
+				polyline = new YMaps.Polyline(latLngs);											
+				var style = new YMaps.Style();											
+				style.lineStyle = new YMaps.LineStyle();											
+				style.lineStyle.strokeColor = '0000FFFF';											
+				style.lineStyle.strokeWidth = parseFloat(element.getAttribute("width")+"ff");											
+				YMaps.Styles.add("example#CustomLine", style);											
+
+				polyline.setStyle("example#CustomLine");											
+				map.addOverlay(polyline);											
+				element.setAttribute("Param", "ddd");											
+				   break;											
+				   											
+				case "CoorNewObj":											
+				element.setAttribute("LongNewObj", Long);											
+				element.setAttribute("LatNewObj", Lat);											
+				   break;											
+
+		      }													
+		    }Lat=0; Long=0;													
+			}												
+
+
+    </SCRIPT>															
+
+<style>															
+	HTML {														
+		BORDER-BOTTOM: 0px; BORDER-LEFT: 0px; PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; FONT-FAMILY: inherit; FONT-SIZE: 100%; VERTICAL-ALIGN: baseline; BORDER-TOP: 0px; BORDER-RIGHT: 0px; PADDING-TOP: 0px													
+	}														
+    #YMapsID { width: 100%; height: 93% }															
+</style>															
+</HEAD>															
+<BODY onunload=onunloadpage()>															
+
+ <form action="#" onsubmit="showAddress(this.address.value);return false;">															
+        <p>															
+            <input type="text" id="address" style="width:525px;" value="" />															
+            <input type="submit" value="Искать" />															
+        </p>															
+        															
+ </form>															
+ 															
+   															
+<DIV id="YMapsID"></DIV>															
+<INPUT style="DISPLAY: none" id=RefreshMarkers onclick=drawMarkers() type=button> 															
+<INPUT style="DISPLAY: none" id=RefreshIcons onclick=loadMyIcons() type=button> 															
+ <xml id=Markers>															
+    <Root lat="0" long="0" scale="2" valid="1">															
+      <Path width="5" opacity="0.5" color="#ff0000">															
+        0 0															
+      </Path>															
+    </Root>															
+ </xml>															
+ <xml id=MyIcons>															
+	<Root valid="1">														
+    </Root>															
+ </xml> 															
+ </BODY>															
+ </HTML>															

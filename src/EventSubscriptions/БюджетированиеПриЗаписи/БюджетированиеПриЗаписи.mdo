@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:EventSubscription xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="ced2606f-a8d2-433b-aa4e-ed1aca245137">
+  <name>БюджетированиеПриЗаписи</name>
+  <synonym>
+    <key>ru</key>
+    <value>Бюджетирование при записи</value>
+  </synonym>
+  <source>
+    <types>DocumentObject.ТребованиеНакладная</types>
+    <types>DocumentObject.АвансовыйОтчет</types>
+    <types>DocumentObject.РасходныйКассовыйОрдер</types>
+    <types>DocumentObject.СписаниеТоваров</types>
+    <types>DocumentObject.ПлатежноеПоручениеИсходящее</types>
+    <types>DocumentObject.ПоступлениеТоваровУслуг</types>
+    <types>DocumentObject.СписаниеНМА</types>
+    <types>DocumentObject.СписаниеОС</types>
+  </source>
+  <event>OnWrite</event>
+  <handler>CommonModule.Бюджетирование.БюджетированиеПриПометкеНаУдалениеПриЗаписи</handler>
+</mdclass:EventSubscription>

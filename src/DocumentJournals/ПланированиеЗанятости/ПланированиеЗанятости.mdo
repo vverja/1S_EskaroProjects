@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:DocumentJournal xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="09128c4d-904c-4ac9-afc7-5bb632d9c1fc">
+  <producedTypes>
+    <selectionType typeId="e52c44f7-6107-4e64-a6ec-61babc81a910" valueTypeId="b3bf84ac-d3f8-4454-9667-f97e3ca3ed84"/>
+    <listType typeId="7690513e-51f2-4eeb-813f-b929122d9443" valueTypeId="67ef94fe-5df2-4269-9762-51669666d73a"/>
+    <managerType typeId="c3e057a6-06e4-4ecc-8b36-6e8bb5bd74e7" valueTypeId="11c64995-bed6-45e7-8e12-0931e016f53d"/>
+  </producedTypes>
+  <name>ПланированиеЗанятости</name>
+  <synonym>
+    <key>ru</key>
+    <value>Планирование занятости</value>
+  </synonym>
+  <defaultForm>DocumentJournal.ПланированиеЗанятости.Form.ФормаСписка</defaultForm>
+  <registeredDocuments>Document.УчастиеВМероприятиях</registeredDocuments>
+  <registeredDocuments>Document.РезервированиеПомещений</registeredDocuments>
+  <columns uuid="85ce43aa-3297-4651-81f8-c4bc2244b3cd">
+    <name>Мероприятие</name>
+    <synonym>
+      <key>ru</key>
+      <value>Мероприятие</value>
+    </synonym>
+    <references>Document.УчастиеВМероприятиях.Attribute.Мероприятие</references>
+  </columns>
+  <columns uuid="bec7021f-db7b-410e-80db-b09043a3e734">
+    <name>Ответственный</name>
+    <synonym>
+      <key>ru</key>
+      <value>Ответственный</value>
+    </synonym>
+    <references>Document.РезервированиеПомещений.Attribute.Ответственный</references>
+    <references>Document.УчастиеВМероприятиях.Attribute.Ответственный</references>
+  </columns>
+  <columns uuid="a371d84a-96ce-4dec-93d1-4a77fb8484d1">
+    <name>Комментарий</name>
+    <synonym>
+      <key>ru</key>
+      <value>Комментарий</value>
+    </synonym>
+    <references>Document.РезервированиеПомещений.Attribute.Комментарий</references>
+    <references>Document.УчастиеВМероприятиях.Attribute.Комментарий</references>
+  </columns>
+  <forms uuid="05b08889-2796-4dcd-8b5e-3bb214a26c53">
+    <name>ФормаСписка</name>
+    <synonym>
+      <key>ru</key>
+      <value>Форма списка</value>
+    </synonym>
+    <formType>Ordinary</formType>
+    <usePurposes>PersonalComputer</usePurposes>
+    <usePurposes>MobileDevice</usePurposes>
+  </forms>
+</mdclass:DocumentJournal>

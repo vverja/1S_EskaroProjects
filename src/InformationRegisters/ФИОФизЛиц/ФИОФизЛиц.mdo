@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:InformationRegister xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:core="http://g5.1c.ru/v8/dt/mcore" xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="9c3e4368-30ed-4398-a07a-1b32d871da66">
+  <producedTypes>
+    <selectionType typeId="a20ec38f-66e4-4049-9a9e-b642fb6a0078" valueTypeId="a4e8718a-67ed-43cf-a02d-f03c42894204"/>
+    <listType typeId="fbc22efa-7f9d-4409-a51e-8811288fac2f" valueTypeId="4f95d874-134d-4ab9-b3ba-8522126ebd1b"/>
+    <managerType typeId="a342960c-cda1-4eb6-b228-855c813abc49" valueTypeId="359cc30c-98dc-440a-b2d6-def88e79cb57"/>
+    <recordSetType typeId="c08b18c4-2db2-4ef0-b3b9-ac1023eeb8e4" valueTypeId="dfe08135-2f68-48d6-b1bc-8468aa540f9b"/>
+    <recordKeyType typeId="739ed737-4459-4749-b341-9ee7c74ac016" valueTypeId="d3c071d4-0ec1-451e-95e7-cc88738463bd"/>
+    <recordType typeId="1ba49ad3-d84b-40df-8dee-56d02e81d510" valueTypeId="3ddfccea-79dd-4be3-aad5-1e0b5d740607"/>
+    <recordManagerType typeId="57edd475-6c6b-4dbf-9ad3-28cc9fee6666" valueTypeId="07bc2244-91f6-4383-af77-0305a7002d71"/>
+  </producedTypes>
+  <name>ФИОФизЛиц</name>
+  <synonym>
+    <key>ru</key>
+    <value>Фамилия, имя, отчество физического лица</value>
+  </synonym>
+  <comment>(Общ)</comment>
+  <editType>InDialog</editType>
+  <defaultRecordForm>InformationRegister.ФИОФизЛиц.Form.ФормаЗаписи</defaultRecordForm>
+  <defaultListForm>InformationRegister.ФИОФизЛиц.Form.ФормаСписка</defaultListForm>
+  <informationRegisterPeriodicity>Day</informationRegisterPeriodicity>
+  <mainFilterOnPeriod>true</mainFilterOnPeriod>
+  <resources uuid="5168c633-c2b4-4255-8a73-2e76a884ee3e">
+    <name>Фамилия</name>
+    <synonym>
+      <key>ru</key>
+      <value>Фамилия</value>
+    </synonym>
+    <comment>(Общ)</comment>
+    <type>
+      <types>String</types>
+      <stringQualifiers>
+        <length>50</length>
+      </stringQualifiers>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:StringValue">
+      <value></value>
+    </fillValue>
+  </resources>
+  <resources uuid="7f8ccee6-4d55-407a-8206-109e0df1725d">
+    <name>Имя</name>
+    <synonym>
+      <key>ru</key>
+      <value>Имя</value>
+    </synonym>
+    <comment>(Общ)</comment>
+    <type>
+      <types>String</types>
+      <stringQualifiers>
+        <length>50</length>
+      </stringQualifiers>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:StringValue">
+      <value></value>
+    </fillValue>
+  </resources>
+  <resources uuid="3133f756-c793-4532-acbb-4ccfa7e4f1ab">
+    <name>Отчество</name>
+    <synonym>
+      <key>ru</key>
+      <value>Отчество</value>
+    </synonym>
+    <comment>(Общ)</comment>
+    <type>
+      <types>String</types>
+      <stringQualifiers>
+        <length>50</length>
+      </stringQualifiers>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:StringValue">
+      <value></value>
+    </fillValue>
+  </resources>
+  <dimensions uuid="9b9ae573-58c8-4aa1-9597-02ce8c4458d7">
+    <name>ФизЛицо</name>
+    <synonym>
+      <key>ru</key>
+      <value>Физическое лицо</value>
+    </synonym>
+    <comment>(Общ)</comment>
+    <type>
+      <types>CatalogRef.ФизическиеЛица</types>
+      <types>CatalogRef.Организации</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <denyIncompleteValues>true</denyIncompleteValues>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillFromFillingValue>true</fillFromFillingValue>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <master>true</master>
+    <mainFilter>true</mainFilter>
+  </dimensions>
+  <forms uuid="bb23f04c-e3cb-40d3-8059-5001c2013dbd">
+    <name>ФормаСписка</name>
+    <synonym>
+      <key>ru</key>
+      <value>Форма списка</value>
+    </synonym>
+    <formType>Ordinary</formType>
+    <usePurposes>PersonalComputer</usePurposes>
+    <usePurposes>MobileDevice</usePurposes>
+  </forms>
+  <forms uuid="8b76e9dd-d19c-4e2e-bea3-3d285ab14a32">
+    <name>ФормаЗаписи</name>
+    <synonym>
+      <key>ru</key>
+      <value>Форма записи</value>
+    </synonym>
+    <formType>Ordinary</formType>
+    <usePurposes>PersonalComputer</usePurposes>
+    <usePurposes>MobileDevice</usePurposes>
+  </forms>
+</mdclass:InformationRegister>

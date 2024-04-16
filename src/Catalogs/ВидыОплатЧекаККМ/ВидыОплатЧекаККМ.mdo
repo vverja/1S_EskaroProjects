@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:Catalog xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:core="http://g5.1c.ru/v8/dt/mcore" xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="fc2cf808-aab9-4b02-953d-2b2352eb7f73">
+  <producedTypes>
+    <objectType typeId="fce07154-3256-4867-aa68-8fc39d202d76" valueTypeId="b665ba78-c2a9-4453-8bf2-d82b451cb909"/>
+    <refType typeId="cedc6951-9f26-4991-9a06-8f099628d306" valueTypeId="9c12837c-0c78-4cdb-a144-3c537b57f7af"/>
+    <selectionType typeId="1d500d3b-644e-42d7-8754-671f35b8afbf" valueTypeId="5814dc2f-6e47-467b-ba52-ca0572c23050"/>
+    <listType typeId="3d64bf2d-9207-47e9-99cd-d80f2bf71871" valueTypeId="b5b06034-d64d-4a19-bff7-f0bc6bd3ef9a"/>
+    <managerType typeId="fd831cbc-b427-4bc2-801c-5072392f1adf" valueTypeId="d321128e-0374-4a86-96bc-3772143923be"/>
+  </producedTypes>
+  <name>ВидыОплатЧекаККМ</name>
+  <synonym>
+    <key>ru</key>
+    <value>Виды оплат чека ККМ</value>
+  </synonym>
+  <comment>(Общ)</comment>
+  <inputByString>Catalog.ВидыОплатЧекаККМ.StandardAttribute.Description</inputByString>
+  <inputByString>Catalog.ВидыОплатЧекаККМ.StandardAttribute.Code</inputByString>
+  <fullTextSearchOnInputByString>DontUse</fullTextSearchOnInputByString>
+  <createOnInput>Use</createOnInput>
+  <help>
+    <pages>
+      <lang>ru</lang>
+    </pages>
+  </help>
+  <fullTextSearch>Use</fullTextSearch>
+  <hierarchical>true</hierarchical>
+  <levelCount>2</levelCount>
+  <foldersOnTop>true</foldersOnTop>
+  <codeLength>9</codeLength>
+  <descriptionLength>50</descriptionLength>
+  <codeType>String</codeType>
+  <checkUnique>true</checkUnique>
+  <autonumbering>true</autonumbering>
+  <defaultPresentation>AsDescription</defaultPresentation>
+  <predefined>
+    <items id="07b72861-e2a5-49f0-bcca-d7e2e0b0c3d5">
+      <name>Наличные</name>
+      <description>Наличные</description>
+      <code xsi:type="core:StringValue">
+        <value>000000001</value>
+      </code>
+    </items>
+  </predefined>
+  <editType>InDialog</editType>
+  <choiceMode>BothWays</choiceMode>
+  <defaultObjectForm>Catalog.ВидыОплатЧекаККМ.Form.ФормаЭлемента</defaultObjectForm>
+  <defaultFolderForm>Catalog.ВидыОплатЧекаККМ.Form.ФормаГруппы</defaultFolderForm>
+  <defaultListForm>Catalog.ВидыОплатЧекаККМ.Form.ФормаСписка</defaultListForm>
+  <defaultChoiceForm>Catalog.ВидыОплатЧекаККМ.Form.ФормаВыбора</defaultChoiceForm>
+  <attributes uuid="669d4dd3-d4d2-4b67-bcf1-625f5a28fb4a">
+    <name>ТипОплаты</name>
+    <synonym>
+      <key>ru</key>
+      <value>Тип оплаты</value>
+    </synonym>
+    <type>
+      <types>EnumRef.ТипыОплатЧекаККМ</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <indexing>Index</indexing>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+  </attributes>
+  <attributes uuid="4bd487d7-6c61-47f8-acdb-fb26ea10f689">
+    <name>БанкКредитор</name>
+    <synonym>
+      <key>ru</key>
+      <value>Банк-кредитор</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.Контрагенты</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+  </attributes>
+  <attributes uuid="550c7e46-9d54-4807-ba69-5bb7bba52a2f">
+    <name>ДоговорВзаиморасчетовБанкаКредитора</name>
+    <synonym>
+      <key>ru</key>
+      <value>Договор взаиморасчетов банка-кредитора</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.ДоговорыКонтрагентов</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+  </attributes>
+  <attributes uuid="30f7eb81-d7f2-4a1a-8650-f0ca62699324">
+    <name>ПроцентБанковскойКомиссии</name>
+    <synonym>
+      <key>ru</key>
+      <value>Процент банковской комиссии</value>
+    </synonym>
+    <type>
+      <types>Number</types>
+      <numberQualifiers>
+        <precision>5</precision>
+        <scale>2</scale>
+      </numberQualifiers>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+  </attributes>
+  <forms uuid="6b544531-0b65-4ebf-8b49-ac4402b2948d">
+    <name>ФормаСписка</name>
+    <synonym>
+      <key>ru</key>
+      <value>Форма списка</value>
+    </synonym>
+    <formType>Ordinary</formType>
+    <usePurposes>PersonalComputer</usePurposes>
+    <usePurposes>MobileDevice</usePurposes>
+  </forms>
+  <forms uuid="435e5e44-b3dd-4565-b041-79a2fd323be2">
+    <name>ФормаВыбора</name>
+    <synonym>
+      <key>ru</key>
+      <value>Форма выбора</value>
+    </synonym>
+    <formType>Ordinary</formType>
+    <usePurposes>PersonalComputer</usePurposes>
+    <usePurposes>MobileDevice</usePurposes>
+  </forms>
+  <forms uuid="e2c68656-da71-42ae-864f-0cb138e5b4bc">
+    <name>ФормаГруппы</name>
+    <synonym>
+      <key>ru</key>
+      <value>Форма группы</value>
+    </synonym>
+    <formType>Ordinary</formType>
+    <usePurposes>PersonalComputer</usePurposes>
+    <usePurposes>MobileDevice</usePurposes>
+  </forms>
+  <forms uuid="61f2431c-f762-4b26-b518-8d813f1a6129">
+    <name>ФормаЭлемента</name>
+    <synonym>
+      <key>ru</key>
+      <value>Форма элемента</value>
+    </synonym>
+    <formType>Ordinary</formType>
+    <usePurposes>PersonalComputer</usePurposes>
+    <usePurposes>MobileDevice</usePurposes>
+  </forms>
+  <templates uuid="80abd27f-e8fd-474e-a3b9-bf9a49454dc2">
+    <name>НачальноеЗаполнение</name>
+    <synonym>
+      <key>ru</key>
+      <value>НачальноеЗаполнение</value>
+    </synonym>
+  </templates>
+</mdclass:Catalog>

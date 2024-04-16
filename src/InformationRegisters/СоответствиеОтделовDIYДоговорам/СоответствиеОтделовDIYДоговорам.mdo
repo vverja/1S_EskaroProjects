@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:InformationRegister xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:core="http://g5.1c.ru/v8/dt/mcore" xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="0d91780c-219b-4157-bd81-d304e5b88d8b">
+  <producedTypes>
+    <selectionType typeId="c36d90df-e016-41f0-89f8-ef51c0c617af" valueTypeId="3bb1de34-c824-47e6-9c63-c7ff926e69ef"/>
+    <listType typeId="45a14b7d-c54b-459d-8ed4-c519f4907f14" valueTypeId="4603a98d-a7f1-47d7-9f1d-8e7f81f12518"/>
+    <managerType typeId="5cc00df8-8eb4-4fd6-a305-e242ef93dcf0" valueTypeId="aae19bed-4fc5-4024-b723-472ec3951fc9"/>
+    <recordSetType typeId="8c7ba724-aa75-4e5c-a0d2-7fe5e2872a60" valueTypeId="8c7c8786-2501-4810-8e40-131ae7a4305c"/>
+    <recordKeyType typeId="314a22a8-4241-4e87-9a7a-98734e49c5eb" valueTypeId="2a7e804b-6967-43f9-a2d4-569525a68821"/>
+    <recordType typeId="e67befb5-1eba-4363-9fd1-355da5398526" valueTypeId="a683f247-b7e7-45d8-bf67-f469e64f6922"/>
+    <recordManagerType typeId="9171d0a1-cd17-4604-8545-a421e4e83aef" valueTypeId="2cd745e0-6302-40bb-a9da-e42d6c6b9dec"/>
+  </producedTypes>
+  <name>СоответствиеОтделовDIYДоговорам</name>
+  <synonym>
+    <key>ru</key>
+    <value>Соответствие отделов DIYДоговорам</value>
+  </synonym>
+  <defaultListForm>InformationRegister.СоответствиеОтделовDIYДоговорам.Form.ФормаСписка</defaultListForm>
+  <dataLockControlMode>Managed</dataLockControlMode>
+  <resources uuid="7195c5b7-2ab5-4d9c-9eb1-c7e0784f5344">
+    <name>Договор</name>
+    <synonym>
+      <key>ru</key>
+      <value>Договор</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.ДоговорыКонтрагентов</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <choiceParameterLinks>
+      <name>Отбор.Владелец</name>
+      <field>InformationRegister.СоответствиеОтделовDIYДоговорам.Dimension.Контрагент</field>
+    </choiceParameterLinks>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:UndefinedValue"/>
+  </resources>
+  <dimensions uuid="26c45583-658c-4da5-a6ee-d0441b7f508f">
+    <name>Контрагент</name>
+    <synonym>
+      <key>ru</key>
+      <value>Контрагент</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.Контрагенты</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <denyIncompleteValues>true</denyIncompleteValues>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <mainFilter>true</mainFilter>
+  </dimensions>
+  <dimensions uuid="8a30c05d-0806-4207-ab39-c48756a90117">
+    <name>Отдел</name>
+    <synonym>
+      <key>ru</key>
+      <value>Отдел</value>
+    </synonym>
+    <type>
+      <types>String</types>
+      <stringQualifiers>
+        <length>2</length>
+        <fixed>true</fixed>
+      </stringQualifiers>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <denyIncompleteValues>true</denyIncompleteValues>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:StringValue">
+      <value>  </value>
+    </fillValue>
+    <mainFilter>true</mainFilter>
+  </dimensions>
+  <forms uuid="8bd91623-79fb-4973-b047-8a9830eca5cd">
+    <name>ФормаСписка</name>
+    <synonym>
+      <key>ru</key>
+      <value>Форма списка</value>
+    </synonym>
+    <formType>Ordinary</formType>
+    <usePurposes>PersonalComputer</usePurposes>
+    <usePurposes>MobileDevice</usePurposes>
+  </forms>
+</mdclass:InformationRegister>

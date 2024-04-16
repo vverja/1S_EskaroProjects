@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:AccumulationRegister xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:core="http://g5.1c.ru/v8/dt/mcore" xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="6f9844e4-19e0-4586-a125-65e3167b542f">
+  <producedTypes>
+    <selectionType typeId="562dd77f-d26c-46bf-9696-ea5c6787e3f8" valueTypeId="cc1313d2-b082-4697-a97e-06cad44e15ad"/>
+    <listType typeId="f3e85fbc-0453-4cd6-a396-80bafc775c11" valueTypeId="7b0dea9a-be47-4e41-a085-d970b9b2288d"/>
+    <managerType typeId="0177df57-3476-4603-8686-a9b0757415b1" valueTypeId="412dd25c-6b44-4579-ba84-389ddc33bced"/>
+    <recordSetType typeId="30199a46-d52b-4648-9014-88f8b8679784" valueTypeId="2c5b1b16-e884-46cc-9e7d-e1329ddf0079"/>
+    <recordKeyType typeId="c0710efe-26ef-4c97-aa2f-b8cbbf1daa92" valueTypeId="71fe034c-83be-4a68-b19d-7d6ae2dcc91a"/>
+    <recordType typeId="6e49a957-f11e-480b-8c1f-f869a0972e64" valueTypeId="20a1bb65-ae86-4cc9-89cb-834c6ee489af"/>
+  </producedTypes>
+  <name>ВнутрисменноеВремяРаботниковОрганизаций</name>
+  <synonym>
+    <key>ru</key>
+    <value>Внутрисменное время работников организаций</value>
+  </synonym>
+  <registerType>Turnovers</registerType>
+  <enableTotalsSplitting>true</enableTotalsSplitting>
+  <resources uuid="b60588da-7612-4537-bf77-15a7521e4fc4">
+    <name>Часов</name>
+    <synonym>
+      <key>ru</key>
+      <value>Часов</value>
+    </synonym>
+    <type>
+      <types>Number</types>
+      <numberQualifiers>
+        <precision>5</precision>
+        <scale>2</scale>
+      </numberQualifiers>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+  </resources>
+  <dimensions uuid="203af4a4-f3a9-40d9-92f2-1879ae2ee38a">
+    <name>Сотрудник</name>
+    <synonym>
+      <key>ru</key>
+      <value>Сотрудник</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.СотрудникиОрганизаций</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <useInTotals>true</useInTotals>
+  </dimensions>
+  <dimensions uuid="e43c68c3-6c43-4887-9d77-25a09f97c653">
+    <name>Организация</name>
+    <synonym>
+      <key>ru</key>
+      <value>Организация</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.Организации</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <useInTotals>true</useInTotals>
+  </dimensions>
+  <dimensions uuid="88363ef2-79a3-437e-945c-27231a68f8ac">
+    <name>ВидИспользованияРабочегоВремени</name>
+    <synonym>
+      <key>ru</key>
+      <value>Вид использования рабочего времени</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.КлассификаторИспользованияРабочегоВремени</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <useInTotals>true</useInTotals>
+  </dimensions>
+  <dimensions uuid="d8d42175-d801-4452-bada-6fff469b5603">
+    <name>Назначение</name>
+    <synonym>
+      <key>ru</key>
+      <value>Назначение</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.СотрудникиОрганизаций</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <denyIncompleteValues>true</denyIncompleteValues>
+    <indexing>Index</indexing>
+    <fullTextSearch>Use</fullTextSearch>
+    <useInTotals>true</useInTotals>
+  </dimensions>
+</mdclass:AccumulationRegister>

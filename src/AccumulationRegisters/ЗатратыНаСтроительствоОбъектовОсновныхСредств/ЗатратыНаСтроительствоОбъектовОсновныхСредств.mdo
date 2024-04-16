@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:AccumulationRegister xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:core="http://g5.1c.ru/v8/dt/mcore" xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="7d99407e-499c-4ce3-ab20-0ca3b0cc73c8">
+  <producedTypes>
+    <selectionType typeId="86e94317-3c35-4903-88ed-211666c1a00d" valueTypeId="1b9d220c-cfe9-4be6-a607-21c454ed84ad"/>
+    <listType typeId="95ebfb4f-79cf-417e-9e78-3d87e7d15652" valueTypeId="c20cfaf4-2ea3-4d8a-966b-84cf74163428"/>
+    <managerType typeId="881692e9-bc8c-4cbb-b865-f8c4478aff99" valueTypeId="1aeaadef-f91e-450e-b6a8-f0ae234561bb"/>
+    <recordSetType typeId="3f105bad-97b6-4d5b-8884-c52db01a0d2b" valueTypeId="656bf138-0a11-4fb2-af41-2456a1e8df91"/>
+    <recordKeyType typeId="fe2d78e7-f801-4464-9a1f-7b8612b46f4c" valueTypeId="0ab54364-ef2f-4699-9497-79b854d03ab2"/>
+    <recordType typeId="19a3064b-6a93-416a-804c-6a068a978cb2" valueTypeId="88bc0021-09cb-4d07-9da9-114f93233d15"/>
+  </producedTypes>
+  <name>ЗатратыНаСтроительствоОбъектовОсновныхСредств</name>
+  <synonym>
+    <key>ru</key>
+    <value>Затраты на строительство объектов основных средств (упр.учет)</value>
+  </synonym>
+  <comment>На регистре ведется учет оборотов затрат, из которых складывается стоимость строительства объектов.</comment>
+  <registerType>Turnovers</registerType>
+  <enableTotalsSplitting>true</enableTotalsSplitting>
+  <resources uuid="08ac27dc-b9fb-4af3-a471-be5a1518545e">
+    <name>Сумма</name>
+    <synonym>
+      <key>ru</key>
+      <value>Сумма</value>
+    </synonym>
+    <comment>В валюте упр. учета</comment>
+    <type>
+      <types>Number</types>
+      <numberQualifiers>
+        <precision>15</precision>
+        <scale>2</scale>
+      </numberQualifiers>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+  </resources>
+  <dimensions uuid="d5335cfd-cd4a-4195-8e34-f8531029e396">
+    <name>ОбъектСтроительства</name>
+    <synonym>
+      <key>ru</key>
+      <value>Объект строительства</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.ОбъектыСтроительства</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <useInTotals>true</useInTotals>
+  </dimensions>
+  <dimensions uuid="ff16a43c-26cf-4606-a6f2-f961f974cfbc">
+    <name>СтатьяЗатрат</name>
+    <synonym>
+      <key>ru</key>
+      <value>Статья затрат</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.СтатьиЗатрат</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <useInTotals>true</useInTotals>
+  </dimensions>
+</mdclass:AccumulationRegister>

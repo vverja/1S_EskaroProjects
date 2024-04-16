@@ -1,0 +1,350 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:Document xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:core="http://g5.1c.ru/v8/dt/mcore" xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="3fdf1cd7-a0f6-4284-a478-286610e7b267">
+  <producedTypes>
+    <objectType typeId="f7eddba8-1446-422c-ad11-b216534d09ca" valueTypeId="26ee8bd1-02f4-4a0e-9386-5e20751dcb75"/>
+    <refType typeId="06d9b559-f2eb-4da2-8f67-b50e01792b42" valueTypeId="fa3c4187-ae0f-4267-aab5-c3d5d4fa6c54"/>
+    <selectionType typeId="8f26c383-992f-4361-8045-5c5fe30a3736" valueTypeId="6a830dbb-170b-432f-88c0-bd9061fbc893"/>
+    <listType typeId="dacb2839-41a6-4f37-801c-bf0bbf322dd1" valueTypeId="df648209-11ba-4c3a-8643-dfcc24ecee3f"/>
+    <managerType typeId="6dba9d4f-f778-45f1-8485-1d10a17bcc24" valueTypeId="4dca8fb8-d7a7-4c99-9198-8e58a3edbf65"/>
+  </producedTypes>
+  <name>ОтчетОСоставеСмены</name>
+  <synonym>
+    <key>ru</key>
+    <value>Отчет о составе смены</value>
+  </synonym>
+  <comment>(Упр)</comment>
+  <useStandardCommands>true</useStandardCommands>
+  <inputByString>Document.ОтчетОСоставеСмены.StandardAttribute.Number</inputByString>
+  <fullTextSearchOnInputByString>DontUse</fullTextSearchOnInputByString>
+  <basedOn>Document.ОтчетМастераСмены</basedOn>
+  <createOnInput>Use</createOnInput>
+  <includeHelpInContents>true</includeHelpInContents>
+  <help>
+    <pages>
+      <lang>ru</lang>
+    </pages>
+  </help>
+  <fullTextSearch>Use</fullTextSearch>
+  <objectPresentation>
+    <key>ru</key>
+    <value>Отчет о составе смены</value>
+  </objectPresentation>
+  <extendedObjectPresentation>
+    <key>ru</key>
+    <value>Отчет о составе смены</value>
+  </extendedObjectPresentation>
+  <listPresentation>
+    <key>ru</key>
+    <value>Отчеты о составе смены</value>
+  </listPresentation>
+  <extendedListPresentation>
+    <key>ru</key>
+    <value>Отчеты о составе смены</value>
+  </extendedListPresentation>
+  <explanation>
+    <key>ru</key>
+    <value>Документы отражают данные о сотрудниках, работавших в смене, а также тех, кто должен был работать, но отсутствовал</value>
+  </explanation>
+  <numberType>String</numberType>
+  <numberLength>11</numberLength>
+  <numberPeriodicity>Year</numberPeriodicity>
+  <checkUnique>true</checkUnique>
+  <autonumbering>true</autonumbering>
+  <defaultObjectForm>Document.ОтчетОСоставеСмены.Form.ФормаДокумента</defaultObjectForm>
+  <defaultListForm>Document.ОтчетОСоставеСмены.Form.ФормаСписка</defaultListForm>
+  <defaultChoiceForm>Document.ОтчетОСоставеСмены.Form.ФормаВыбора</defaultChoiceForm>
+  <auxiliaryObjectForm>Document.ОтчетОСоставеСмены.Form.ФормаДокументаУправляемая</auxiliaryObjectForm>
+  <auxiliaryListForm>Document.ОтчетОСоставеСмены.Form.ФормаСпискаУправляемая</auxiliaryListForm>
+  <posting>Deny</posting>
+  <realTimePosting>Deny</realTimePosting>
+  <registerRecordsDeletion>AutoDeleteOff</registerRecordsDeletion>
+  <registerRecordsWritingOnPost>WriteModified</registerRecordsWritingOnPost>
+  <attributes uuid="7e97bf70-50a0-446d-b568-a9f2f2d69ea8">
+    <name>Подразделение</name>
+    <synonym>
+      <key>ru</key>
+      <value>Подразделение</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.Подразделения</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fillChecking>ShowError</fillChecking>
+    <fillFromFillingValue>true</fillFromFillingValue>
+    <fillValue xsi:type="core:ReferenceValue">
+      <value>Catalog.Подразделения.EmptyRef</value>
+    </fillValue>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+  </attributes>
+  <attributes uuid="1709b752-7ee2-4d10-94c9-ebec6067cdce">
+    <name>Ответственный</name>
+    <synonym>
+      <key>ru</key>
+      <value>Ответственный</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.Пользователи</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fillChecking>ShowError</fillChecking>
+    <fillFromFillingValue>true</fillFromFillingValue>
+    <fillValue xsi:type="core:ReferenceValue">
+      <value>Catalog.Пользователи.EmptyRef</value>
+    </fillValue>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+  </attributes>
+  <attributes uuid="af69da83-84cb-4410-991b-e314fa7653c1">
+    <name>Смена</name>
+    <synonym>
+      <key>ru</key>
+      <value>Смена</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.Смены</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fillChecking>ShowError</fillChecking>
+    <fillFromFillingValue>true</fillFromFillingValue>
+    <fillValue xsi:type="core:ReferenceValue">
+      <value>Catalog.Смены.EmptyRef</value>
+    </fillValue>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+  </attributes>
+  <attributes uuid="a90e8d18-98c3-4ba7-9a6f-1e51876b8f27">
+    <name>Комментарий</name>
+    <synonym>
+      <key>ru</key>
+      <value>Комментарий</value>
+    </synonym>
+    <comment>Любая дополнительная информация</comment>
+    <type>
+      <types>String</types>
+      <stringQualifiers/>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+  </attributes>
+  <attributes uuid="76f1232e-3cef-4338-8c69-f54a84926e17">
+    <name>ГраницаСмены</name>
+    <synonym>
+      <key>ru</key>
+      <value>Граница смены</value>
+    </synonym>
+    <type>
+      <types>Date</types>
+      <dateQualifiers/>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <indexing>Index</indexing>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+  </attributes>
+  <forms uuid="afa611df-ac4b-4bf6-88b8-f4dc586a7f1f">
+    <name>ФормаДокумента</name>
+    <synonym>
+      <key>ru</key>
+      <value>Форма документа</value>
+    </synonym>
+    <formType>Ordinary</formType>
+    <usePurposes>PersonalComputer</usePurposes>
+    <usePurposes>MobileDevice</usePurposes>
+  </forms>
+  <forms uuid="eea7f959-3d7c-453e-95a0-e05f1f82eefb">
+    <name>ФормаСписка</name>
+    <synonym>
+      <key>ru</key>
+      <value>Форма списка</value>
+    </synonym>
+    <formType>Ordinary</formType>
+    <usePurposes>PersonalComputer</usePurposes>
+    <usePurposes>MobileDevice</usePurposes>
+  </forms>
+  <forms uuid="d7afd556-3c99-4086-8b0a-514f2e75c4cb">
+    <name>ФормаВыбора</name>
+    <synonym>
+      <key>ru</key>
+      <value>Форма выбора</value>
+    </synonym>
+    <formType>Ordinary</formType>
+    <usePurposes>PersonalComputer</usePurposes>
+    <usePurposes>MobileDevice</usePurposes>
+  </forms>
+  <forms uuid="e7028b4b-fadd-4fd2-a878-8fd31b53e30d">
+    <name>ФормаДокументаУправляемая</name>
+    <synonym>
+      <key>ru</key>
+      <value>Форма документа управляемая</value>
+    </synonym>
+    <usePurposes>PersonalComputer</usePurposes>
+    <usePurposes>MobileDevice</usePurposes>
+  </forms>
+  <forms uuid="0db46d12-6267-44a9-9bbd-6454bb160302">
+    <name>ФормаСпискаУправляемая</name>
+    <synonym>
+      <key>ru</key>
+      <value>Форма списка управляемая</value>
+    </synonym>
+    <usePurposes>PersonalComputer</usePurposes>
+    <usePurposes>MobileDevice</usePurposes>
+  </forms>
+  <tabularSections uuid="b8312d95-002e-4a18-a6e1-a59ffb548106">
+    <producedTypes>
+      <objectType typeId="73a24b6a-1b11-4b95-add3-925cd8b0f664" valueTypeId="ca39d055-9473-4286-9603-dd34e92ba4c1"/>
+      <rowType typeId="3dd3f787-d3d8-4aee-b1b6-d082d70b552b" valueTypeId="9772a4d4-3ad2-4e3e-9eb1-5889cd34615c"/>
+    </producedTypes>
+    <name>СоставСмены</name>
+    <synonym>
+      <key>ru</key>
+      <value>Состав смены</value>
+    </synonym>
+    <attributes uuid="344d607d-0bff-4bac-9690-d8da3db8e0ce">
+      <name>Сотрудник</name>
+      <synonym>
+        <key>ru</key>
+        <value>Сотрудник</value>
+      </synonym>
+      <type>
+        <types>CatalogRef.ФизическиеЛица</types>
+      </type>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <fillChecking>ShowError</fillChecking>
+      <dataHistory>Use</dataHistory>
+      <fullTextSearch>Use</fullTextSearch>
+    </attributes>
+    <attributes uuid="652db8d9-8428-4029-9742-7da1fdae0b7a">
+      <name>ПоГрафику</name>
+      <synonym>
+        <key>ru</key>
+        <value>По графику</value>
+      </synonym>
+      <type>
+        <types>Boolean</types>
+      </type>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <dataHistory>Use</dataHistory>
+      <fullTextSearch>Use</fullTextSearch>
+    </attributes>
+    <attributes uuid="eb676219-3596-4207-9e7e-d134c10c09b0">
+      <name>Явка</name>
+      <synonym>
+        <key>ru</key>
+        <value>Явка</value>
+      </synonym>
+      <type>
+        <types>Boolean</types>
+      </type>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <dataHistory>Use</dataHistory>
+      <fullTextSearch>Use</fullTextSearch>
+    </attributes>
+    <attributes uuid="43b8a588-3e69-4d31-9d8a-64f11f7f02aa">
+      <name>ВремяЯвки</name>
+      <synonym>
+        <key>ru</key>
+        <value>Время явки</value>
+      </synonym>
+      <type>
+        <types>Date</types>
+        <dateQualifiers>
+          <dateFractions>Time</dateFractions>
+        </dateQualifiers>
+      </type>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <dataHistory>Use</dataHistory>
+      <fullTextSearch>Use</fullTextSearch>
+    </attributes>
+    <attributes uuid="69e1e0d0-4b7e-4cac-9402-10e847f34f5a">
+      <name>ОтработанноеВремя</name>
+      <synonym>
+        <key>ru</key>
+        <value>Отработанное время</value>
+      </synonym>
+      <type>
+        <types>Number</types>
+        <numberQualifiers>
+          <precision>3</precision>
+          <scale>1</scale>
+          <nonNegative>true</nonNegative>
+        </numberQualifiers>
+      </type>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <dataHistory>Use</dataHistory>
+      <fullTextSearch>Use</fullTextSearch>
+    </attributes>
+    <attributes uuid="e49428ff-a6bd-4895-8b97-afbf955a2190">
+      <name>Примечание</name>
+      <synonym>
+        <key>ru</key>
+        <value>Примечание</value>
+      </synonym>
+      <type>
+        <types>String</types>
+        <stringQualifiers/>
+      </type>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <dataHistory>Use</dataHistory>
+      <fullTextSearch>Use</fullTextSearch>
+    </attributes>
+    <attributes uuid="0db912b6-8913-4104-864e-9d563f3007a3">
+      <name>ЗамещающийСотрудник</name>
+      <synonym>
+        <key>ru</key>
+        <value>Замещающий сотрудник</value>
+      </synonym>
+      <type>
+        <types>CatalogRef.ФизическиеЛица</types>
+      </type>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <dataHistory>Use</dataHistory>
+      <fullTextSearch>Use</fullTextSearch>
+    </attributes>
+  </tabularSections>
+  <templates uuid="224c5fdb-8b0a-4bcd-a451-80ffcf66bd2b">
+    <name>ОтчетОСоставеСмены</name>
+    <synonym>
+      <key>ru</key>
+      <value>Отчет о составе смены</value>
+    </synonym>
+  </templates>
+  <commands uuid="f5762ee4-9577-4f2d-a2ce-912d0f704c5f">
+    <name>ПечатьОтчетОСоставеСмены</name>
+    <synonym>
+      <key>ru</key>
+      <value>Отчет о составе смены</value>
+    </synonym>
+    <group>CommandGroup.Печать</group>
+    <commandParameterType>
+      <types>DocumentRef.ОтчетОСоставеСмены</types>
+    </commandParameterType>
+    <parameterUseMode>Multiple</parameterUseMode>
+    <representation>Auto</representation>
+  </commands>
+  <commands uuid="3aea1938-e7b8-41f4-95b0-07d80dbc08fa">
+    <name>СоздатьПоНастройке</name>
+    <synonym>
+      <key>ru</key>
+      <value>Отчет о составе смены (по настройке)</value>
+    </synonym>
+    <group>ActionsPanelCreate</group>
+    <commandParameterType/>
+    <representation>Auto</representation>
+  </commands>
+</mdclass:Document>

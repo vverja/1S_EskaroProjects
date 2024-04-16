@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:AccumulationRegister xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:core="http://g5.1c.ru/v8/dt/mcore" xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="e29e745a-fb07-49ed-8769-68fb4136e013">
+  <producedTypes>
+    <selectionType typeId="9e3dd2fe-0707-4b16-8d83-3fc0e66f2431" valueTypeId="ccb1062c-1d5e-4bc2-a1fd-da6f5f84a929"/>
+    <listType typeId="db29f6a4-34cf-48e5-8de8-469e02672f08" valueTypeId="80093149-146a-40ca-9efa-c550737458f5"/>
+    <managerType typeId="caa7d403-da5d-4059-bcaa-4c28535204d3" valueTypeId="08ddcf66-bd1f-470d-a848-8240bf5c6db0"/>
+    <recordSetType typeId="c953e048-2e57-4426-b8ca-6ab62a713997" valueTypeId="cc751bf2-dcac-44fc-b13b-d25ec3f5b52a"/>
+    <recordKeyType typeId="17bed531-ac2c-4be5-91ff-531273fa532a" valueTypeId="3da963f4-f307-44ba-9636-d06e0c522c57"/>
+    <recordType typeId="c23900da-03b3-4d51-8541-dce06fd0d10c" valueTypeId="f92fb760-4622-44cd-ba9c-1974e2e8d284"/>
+  </producedTypes>
+  <name>КнигаДоходовРасходовПоЕдиномуНалогу</name>
+  <synonym>
+    <key>ru</key>
+    <value>Книга доходов расходов по единому налогу</value>
+  </synonym>
+  <comment>(Регл)</comment>
+  <defaultListForm>AccumulationRegister.КнигаДоходовРасходовПоЕдиномуНалогу.Form.ФормаСписка</defaultListForm>
+  <registerType>Turnovers</registerType>
+  <enableTotalsSplitting>true</enableTotalsSplitting>
+  <resources uuid="2ff59f92-56fa-4c2a-b38c-95820e6efa07">
+    <name>Сумма</name>
+    <synonym>
+      <key>ru</key>
+      <value>Сумма</value>
+    </synonym>
+    <type>
+      <types>Number</types>
+      <numberQualifiers>
+        <precision>15</precision>
+        <scale>2</scale>
+      </numberQualifiers>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+  </resources>
+  <attributes uuid="d71f773c-c895-4951-86e7-2d20eb76ecc0">
+    <name>НомерПлатежногоДокумента</name>
+    <synonym>
+      <key>ru</key>
+      <value>Номер платежного документа</value>
+    </synonym>
+    <type>
+      <types>String</types>
+      <stringQualifiers>
+        <length>16</length>
+      </stringQualifiers>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+  </attributes>
+  <dimensions uuid="9c2327b4-f586-4b20-969e-7163427c55a1">
+    <name>Организация</name>
+    <synonym>
+      <key>ru</key>
+      <value>Организация</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.Организации</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <denyIncompleteValues>true</denyIncompleteValues>
+    <fullTextSearch>Use</fullTextSearch>
+    <useInTotals>true</useInTotals>
+  </dimensions>
+  <dimensions uuid="7fc0eb3b-6230-4fc9-85ab-d09a78a2c366">
+    <name>Статья</name>
+    <synonym>
+      <key>ru</key>
+      <value>Статья</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.СтатьиНалоговыхДеклараций</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <denyIncompleteValues>true</denyIncompleteValues>
+    <fullTextSearch>Use</fullTextSearch>
+    <useInTotals>true</useInTotals>
+  </dimensions>
+  <forms uuid="c5c1f266-f21e-4a8b-b92b-df270274e2bb">
+    <name>ФормаСписка</name>
+    <synonym>
+      <key>ru</key>
+      <value>Форма списка</value>
+    </synonym>
+    <formType>Ordinary</formType>
+    <usePurposes>PersonalComputer</usePurposes>
+    <usePurposes>MobileDevice</usePurposes>
+  </forms>
+</mdclass:AccumulationRegister>

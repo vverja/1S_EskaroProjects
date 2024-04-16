@@ -1,0 +1,311 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:InformationRegister xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:core="http://g5.1c.ru/v8/dt/mcore" xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="c6bbc982-fa1e-4b97-9bdd-7928caf281dd">
+  <producedTypes>
+    <selectionType typeId="96eef145-08a3-47ea-a1e4-e7c14e1978ed" valueTypeId="c99657db-fa18-4045-8548-01b2cf2b4167"/>
+    <listType typeId="3818bd2c-a329-48ec-8d97-74cc1fe30a28" valueTypeId="0158fa27-1490-402c-bee4-92dc6dd8861b"/>
+    <managerType typeId="c2db965d-c869-4e44-9053-b81a1bbad218" valueTypeId="902bf2e4-e53f-4e5c-9994-f25514e48cdf"/>
+    <recordSetType typeId="f005fb99-0011-409d-bfc4-84d982c58674" valueTypeId="fd291132-d52f-41d8-a5e4-8d1a2db18f26"/>
+    <recordKeyType typeId="9a3e4155-807a-4315-94ff-1d181b9eb57f" valueTypeId="24a0f4ec-b2c5-4539-9f31-c492daf7e3c5"/>
+    <recordType typeId="35cac152-8c5b-4a80-bb3d-90d208688cd1" valueTypeId="601f0bf5-b756-4289-8fb9-d25e6307d6e0"/>
+    <recordManagerType typeId="83ecbc96-78c4-4a65-9122-42ae5c2ca9d5" valueTypeId="08532e52-68a5-4b07-837c-6c5410742699"/>
+  </producedTypes>
+  <name>РасчетСписанияРБП</name>
+  <synonym>
+    <key>ru</key>
+    <value>Расчет списания расходов будущих периодов</value>
+  </synonym>
+  <comment>Расчет списания расходов будущих периодов</comment>
+  <defaultListForm>InformationRegister.РасчетСписанияРБП.Form.ФормаСписка</defaultListForm>
+  <writeMode>RecorderSubordinate</writeMode>
+  <resources uuid="4170ab30-2c56-481b-94cd-7b419d40ad07">
+    <name>НачОстаток</name>
+    <synonym>
+      <key>ru</key>
+      <value>Остаток расходов на начало перида</value>
+    </synonym>
+    <type>
+      <types>Number</types>
+      <numberQualifiers>
+        <precision>12</precision>
+        <scale>2</scale>
+      </numberQualifiers>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:UndefinedValue"/>
+  </resources>
+  <resources uuid="514317fb-73f8-432f-829b-934186cb2057">
+    <name>Сумма</name>
+    <synonym>
+      <key>ru</key>
+      <value>Сумма списанных расходов</value>
+    </synonym>
+    <type>
+      <types>Number</types>
+      <numberQualifiers>
+        <precision>12</precision>
+        <scale>2</scale>
+      </numberQualifiers>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:UndefinedValue"/>
+  </resources>
+  <resources uuid="0c6e317b-0c8e-40b9-98b3-aca5ede5219a">
+    <name>КонОстаток</name>
+    <synonym>
+      <key>ru</key>
+      <value>Остаток расходов на конец периода</value>
+    </synonym>
+    <type>
+      <types>Number</types>
+      <numberQualifiers>
+        <precision>12</precision>
+        <scale>2</scale>
+      </numberQualifiers>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:UndefinedValue"/>
+  </resources>
+  <resources uuid="583103cd-33d2-4dd0-b79d-64f2d007aae5">
+    <name>СуммаДоговора</name>
+    <synonym>
+      <key>ru</key>
+      <value>Сумма договора</value>
+    </synonym>
+    <type>
+      <types>Number</types>
+      <numberQualifiers>
+        <precision>10</precision>
+        <scale>2</scale>
+      </numberQualifiers>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:UndefinedValue"/>
+  </resources>
+  <resources uuid="048cff54-86ce-4dc4-af24-e7198579dc3f">
+    <name>КоличествоМесяцевДнейТекущегоПериода</name>
+    <synonym>
+      <key>ru</key>
+      <value>Количество месяцев дней текущего периода</value>
+    </synonym>
+    <type>
+      <types>Number</types>
+      <numberQualifiers>
+        <precision>10</precision>
+        <scale>6</scale>
+        <nonNegative>true</nonNegative>
+      </numberQualifiers>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:UndefinedValue"/>
+  </resources>
+  <resources uuid="392a583f-6e45-4499-9e27-2d54f82c2ce8">
+    <name>КоличествоМесяцевДней</name>
+    <synonym>
+      <key>ru</key>
+      <value>Количество месяцев дней</value>
+    </synonym>
+    <type>
+      <types>Number</types>
+      <numberQualifiers>
+        <precision>10</precision>
+        <scale>6</scale>
+        <nonNegative>true</nonNegative>
+      </numberQualifiers>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:UndefinedValue"/>
+  </resources>
+  <dimensions uuid="bf675008-487a-4214-b4cc-cafff9d33b91">
+    <name>ПериодРасчета</name>
+    <synonym>
+      <key>ru</key>
+      <value>Период расчета</value>
+    </synonym>
+    <type>
+      <types>Date</types>
+      <dateQualifiers>
+        <dateFractions>Date</dateFractions>
+      </dateQualifiers>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <mainFilter>true</mainFilter>
+  </dimensions>
+  <dimensions uuid="3e2d50d1-f3c3-4934-8bcb-1efd1b84e6ee">
+    <name>Организация</name>
+    <synonym>
+      <key>ru</key>
+      <value>Организация</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.Организации</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <mainFilter>true</mainFilter>
+  </dimensions>
+  <dimensions uuid="25bc9566-cf15-4420-bea0-a7fc655fa908">
+    <name>Статья</name>
+    <synonym>
+      <key>ru</key>
+      <value>Статья</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.РасходыБудущихПериодов</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <mainFilter>true</mainFilter>
+  </dimensions>
+  <dimensions uuid="455fad0c-e369-4ec4-864d-3dd609ac13e3">
+    <name>СчетУчета</name>
+    <synonym>
+      <key>ru</key>
+      <value>Счет учета</value>
+    </synonym>
+    <type>
+      <types>ChartOfAccountsRef.Хозрасчетный</types>
+      <types>ChartOfAccountsRef.Налоговый</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <mainFilter>true</mainFilter>
+  </dimensions>
+  <dimensions uuid="0ad4cd25-2ee0-4294-ba9a-83b935191ec2">
+    <name>СчетСписания</name>
+    <synonym>
+      <key>ru</key>
+      <value>Счет списания</value>
+    </synonym>
+    <type>
+      <types>ChartOfAccountsRef.Хозрасчетный</types>
+      <types>String</types>
+      <types>ChartOfAccountsRef.Налоговый</types>
+      <stringQualifiers>
+        <length>10</length>
+      </stringQualifiers>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <mainFilter>true</mainFilter>
+  </dimensions>
+  <dimensions uuid="7ea84812-147e-46e4-85d4-36216210efc7">
+    <name>СпособПризнанияРасходов</name>
+    <synonym>
+      <key>ru</key>
+      <value>Способ признания расходов</value>
+    </synonym>
+    <type>
+      <types>String</types>
+      <stringQualifiers>
+        <length>10</length>
+      </stringQualifiers>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <mainFilter>true</mainFilter>
+  </dimensions>
+  <dimensions uuid="e424a9b2-a120-408f-9f07-ff19fffc6c28">
+    <name>ДатаНачала</name>
+    <synonym>
+      <key>ru</key>
+      <value>Дата начала списания расходов</value>
+    </synonym>
+    <type>
+      <types>Date</types>
+      <dateQualifiers>
+        <dateFractions>Date</dateFractions>
+      </dateQualifiers>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <mainFilter>true</mainFilter>
+  </dimensions>
+  <dimensions uuid="1d41b726-1dd5-48f6-be64-cf2eedd0d9a8">
+    <name>ДатаОкончания</name>
+    <synonym>
+      <key>ru</key>
+      <value>Дата окончания списания расходов</value>
+    </synonym>
+    <type>
+      <types>Date</types>
+      <dateQualifiers>
+        <dateFractions>Date</dateFractions>
+      </dateQualifiers>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <mainFilter>true</mainFilter>
+  </dimensions>
+  <dimensions uuid="c614b1d6-00d9-419b-be24-de9914f30413">
+    <name>ВидУчета</name>
+    <synonym>
+      <key>ru</key>
+      <value>Вид учета</value>
+    </synonym>
+    <type>
+      <types>String</types>
+      <stringQualifiers>
+        <length>10</length>
+      </stringQualifiers>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <mainFilter>true</mainFilter>
+  </dimensions>
+  <forms uuid="15388d49-b120-4ed8-8415-ebcc77d4e5c6">
+    <name>ФормаСписка</name>
+    <synonym>
+      <key>ru</key>
+      <value>Форма списка</value>
+    </synonym>
+    <formType>Ordinary</formType>
+    <usePurposes>PersonalComputer</usePurposes>
+    <usePurposes>MobileDevice</usePurposes>
+  </forms>
+</mdclass:InformationRegister>

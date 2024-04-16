@@ -1,0 +1,166 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:HTTPService xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="68e3cec6-d2b2-405f-9795-49c6c0eac61a">
+  <name>СкладскойУчет</name>
+  <synonym>
+    <key>ru</key>
+    <value>Складской учет</value>
+  </synonym>
+  <rootURL>warehouse</rootURL>
+  <reuseSessions>AutoUse</reuseSessions>
+  <sessionMaxAge>20</sessionMaxAge>
+  <urlTemplates uuid="c1fbdfa1-e38b-43f8-bfa6-7f6de2ad9ca2">
+    <name>РаботаСЗаданиями</name>
+    <synonym>
+      <key>ru</key>
+      <value>Работа с заданиями</value>
+    </synonym>
+    <template>/tasks</template>
+    <methods uuid="d262e037-704c-40d1-acf1-9a6fdac5be8b">
+      <name>ПолучитьВсеЗаданияПользователя</name>
+      <synonym>
+        <key>ru</key>
+        <value>Получить все задания пользователя</value>
+      </synonym>
+      <handler>ПолучитьЗаданиеПолучитьВсеЗаданияПользователя</handler>
+    </methods>
+    <methods uuid="62ef4722-e98a-48bc-b513-37ea24addfd7">
+      <name>ЗаписатьВсеЗадания</name>
+      <synonym>
+        <key>ru</key>
+        <value>Записать все задания</value>
+      </synonym>
+      <httpMethod>POST</httpMethod>
+      <handler>РаботаСЗаданиямиЗаписатьВсеЗадания</handler>
+    </methods>
+  </urlTemplates>
+  <urlTemplates uuid="f7fc14fd-7241-4b13-bd5d-c1cc23b35c25">
+    <name>Инвентаризация</name>
+    <synonym>
+      <key>ru</key>
+      <value>Инвентаризация</value>
+    </synonym>
+    <template>/inventory</template>
+    <methods uuid="19ea4fe1-2abe-47ed-adbf-f11ad39dcbbf">
+      <name>ПолучитьИнвентаризацию</name>
+      <synonym>
+        <key>ru</key>
+        <value>Получить инвентаризацию</value>
+      </synonym>
+      <handler>ИнвентаризацияПолучитьИнвентаризацию</handler>
+    </methods>
+    <methods uuid="cfea2c51-7094-4a47-ab65-5abdeba64c18">
+      <name>ЗаписатьИнвентаризацию</name>
+      <synonym>
+        <key>ru</key>
+        <value>Записать инвентаризацию</value>
+      </synonym>
+      <httpMethod>POST</httpMethod>
+      <handler>ИнвентаризацияЗаписатьИнвентаризацию</handler>
+    </methods>
+  </urlTemplates>
+  <urlTemplates uuid="511cfb88-85bc-4d7b-bea4-8fa37cd8c993">
+    <name>ИнвентаризацияОС</name>
+    <synonym>
+      <key>ru</key>
+      <value>Инвентаризация ОС</value>
+    </synonym>
+    <template>/inventory_fa</template>
+  </urlTemplates>
+  <urlTemplates uuid="512eb473-2b6c-4d3a-9c30-b1ea2ee2d7aa">
+    <name>РаботаСПользователями</name>
+    <synonym>
+      <key>ru</key>
+      <value>Работа с пользователями</value>
+    </synonym>
+    <template>/users</template>
+    <methods uuid="418f9191-1486-4873-b0fb-a490dec2e15b">
+      <name>ПолучитьДанныеПользователя</name>
+      <synonym>
+        <key>ru</key>
+        <value>Получить данные пользователя</value>
+      </synonym>
+      <handler>РаботаСПользователямиПОлучитьДанныеПользователя</handler>
+    </methods>
+  </urlTemplates>
+  <urlTemplates uuid="d65df5e1-0b51-4edb-b10f-405c20a18a85">
+    <name>Штрихкод</name>
+    <synonym>
+      <key>ru</key>
+      <value>Штрихкод</value>
+    </synonym>
+    <template>/items/barcode/{code}</template>
+    <methods uuid="56f7f839-aa73-4f21-8724-80a9bd9cdfad">
+      <name>ПолучитьНоменклатуру</name>
+      <synonym>
+        <key>ru</key>
+        <value>Получить номенклатуру</value>
+      </synonym>
+      <handler>ШтрихкодПолучитьНоменклатуру</handler>
+    </methods>
+  </urlTemplates>
+  <urlTemplates uuid="faaec549-933f-4d0a-abf2-61e67b930cff">
+    <name>Картинка</name>
+    <synonym>
+      <key>ru</key>
+      <value>Картинка</value>
+    </synonym>
+    <template>/items/image</template>
+    <methods uuid="589ea44a-413e-4ce1-947c-86e4fa64a88c">
+      <name>ПолучитьКартинку</name>
+      <synonym>
+        <key>ru</key>
+        <value>Получить картинку</value>
+      </synonym>
+      <httpMethod>POST</httpMethod>
+      <handler>КартинкаПолучитьКартинку</handler>
+    </methods>
+  </urlTemplates>
+  <urlTemplates uuid="69dc8fe5-891b-42c5-b001-7ee52ebc3df8">
+    <name>ПроверкаЗаданий</name>
+    <synonym>
+      <key>ru</key>
+      <value>Проверка заданий</value>
+    </synonym>
+    <template>/tasks/verify/{UUID}</template>
+    <methods uuid="804683da-fed1-410d-8aba-9b4fbcc76531">
+      <name>ПолучитьЗаданияДляПроверки</name>
+      <synonym>
+        <key>ru</key>
+        <value>Получить задания для проверки</value>
+      </synonym>
+      <handler>ПроверкаЗаданийПолучитьЗаданияДляПроверки</handler>
+    </methods>
+  </urlTemplates>
+  <urlTemplates uuid="c55c6e4e-cc9f-406e-8aef-9616a4b2da39">
+    <name>ВерсияПриложения</name>
+    <synonym>
+      <key>ru</key>
+      <value>Версия приложения</value>
+    </synonym>
+    <template>/version</template>
+    <methods uuid="21d3590c-dc11-4eb7-95b7-cd1c22a09fc8">
+      <name>ПолучитьТекущуюВерсию</name>
+      <synonym>
+        <key>ru</key>
+        <value>Получить текущую версию</value>
+      </synonym>
+      <handler>ВерсияПриложенияПолучитьТекущуюВерсию</handler>
+    </methods>
+  </urlTemplates>
+  <urlTemplates uuid="4383d473-581d-4bd3-9037-d6ed770208e1">
+    <name>СписокНоменклатуры</name>
+    <synonym>
+      <key>ru</key>
+      <value>Список номенклатуры</value>
+    </synonym>
+    <template>/items</template>
+    <methods uuid="529b4533-d0ae-4e70-b9f6-10bdbdd329dd">
+      <name>ПолучитьСписокВсейНоменклатуры</name>
+      <synonym>
+        <key>ru</key>
+        <value>Получить список всей номенклатуры</value>
+      </synonym>
+      <handler>СписокНоменклатурыПолучитьСписокВсейНоменклатуры</handler>
+    </methods>
+  </urlTemplates>
+</mdclass:HTTPService>

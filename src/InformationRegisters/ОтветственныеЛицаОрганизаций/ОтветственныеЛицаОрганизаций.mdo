@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:InformationRegister xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:core="http://g5.1c.ru/v8/dt/mcore" xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="0ffa084f-79a5-495a-b0e2-42b5212218bc">
+  <producedTypes>
+    <selectionType typeId="1de40a16-193d-4a6b-b065-ad287333f10a" valueTypeId="e9d30070-318f-410b-ab74-ca1ec35caa66"/>
+    <listType typeId="67d950a9-06d4-4482-924e-92e522d9b9c8" valueTypeId="388b682d-7f12-45ba-83b6-28bc26713b17"/>
+    <managerType typeId="ecbcc872-7c12-402f-8a5a-17a67a402e05" valueTypeId="60cf8e08-b5a1-45ac-9476-4cd031cb294c"/>
+    <recordSetType typeId="b219b701-b001-4de1-9830-0375f2d7b81c" valueTypeId="210096ac-c5c1-4449-8be7-16f60b8061de"/>
+    <recordKeyType typeId="5661318a-4e73-4718-9db8-eedac81605e0" valueTypeId="1462553e-b1bd-4f7f-8e27-c868f35ea5fa"/>
+    <recordType typeId="b4afdde3-0f21-4824-82a2-7e93fb0df466" valueTypeId="ae51567e-e23e-4bd1-86f6-66a636eda3ff"/>
+    <recordManagerType typeId="0a41ca48-fa94-4a31-8e99-3822a10079c1" valueTypeId="54bd09ab-e157-41aa-a008-1163660c8a6c"/>
+  </producedTypes>
+  <name>ОтветственныеЛицаОрганизаций</name>
+  <synonym>
+    <key>ru</key>
+    <value>Ответственные лица организаций</value>
+  </synonym>
+  <comment>(Общ)</comment>
+  <defaultListForm>InformationRegister.ОтветственныеЛицаОрганизаций.Form.ФормаСписка</defaultListForm>
+  <informationRegisterPeriodicity>Second</informationRegisterPeriodicity>
+  <mainFilterOnPeriod>true</mainFilterOnPeriod>
+  <resources uuid="6bb2b655-1211-4536-af9d-0d80b13e4875">
+    <name>ФизическоеЛицо</name>
+    <synonym>
+      <key>ru</key>
+      <value>Физическое лицо</value>
+    </synonym>
+    <comment>(Общ)</comment>
+    <type>
+      <types>CatalogRef.ФизическиеЛица</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:UndefinedValue"/>
+  </resources>
+  <resources uuid="8bd3f23e-095e-4f68-a201-63b18e4b9b3b">
+    <name>Должность</name>
+    <synonym>
+      <key>ru</key>
+      <value>Должность</value>
+    </synonym>
+    <comment>(Регл)</comment>
+    <type>
+      <types>CatalogRef.ДолжностиОрганизаций</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:UndefinedValue"/>
+  </resources>
+  <dimensions uuid="38da5148-3db3-4743-9831-2485d9448da9">
+    <name>СтруктурнаяЕдиница</name>
+    <synonym>
+      <key>ru</key>
+      <value>Структурная единица</value>
+    </synonym>
+    <comment>(Общ)</comment>
+    <type>
+      <types>CatalogRef.ПодразделенияОрганизаций</types>
+      <types>CatalogRef.ОбособленныеПодразделенияОрганизаций</types>
+      <types>CatalogRef.Организации</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillFromFillingValue>true</fillFromFillingValue>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <master>true</master>
+    <mainFilter>true</mainFilter>
+  </dimensions>
+  <dimensions uuid="47e7d739-1126-4f8c-a325-fa8cd76fd28c">
+    <name>ОтветственноеЛицо</name>
+    <synonym>
+      <key>ru</key>
+      <value>Ответственное лицо</value>
+    </synonym>
+    <comment>(Общ)</comment>
+    <type>
+      <types>EnumRef.ОтветственныеЛицаОрганизаций</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillFromFillingValue>true</fillFromFillingValue>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <mainFilter>true</mainFilter>
+  </dimensions>
+  <forms uuid="9b71a09c-ff15-46a8-84a9-85e0e7b047ed">
+    <name>ФормаСписка</name>
+    <synonym>
+      <key>ru</key>
+      <value>Форма списка</value>
+    </synonym>
+    <formType>Ordinary</formType>
+    <usePurposes>PersonalComputer</usePurposes>
+    <usePurposes>MobileDevice</usePurposes>
+  </forms>
+  <forms uuid="77cfbe3f-dd07-4bb0-8d3c-a13389238d6d">
+    <name>ФормаСпискаОтветственныеЛицаПодразделенияОрганизации</name>
+    <synonym>
+      <key>ru</key>
+      <value>Форма списка ответственные лица подразделения организации</value>
+    </synonym>
+    <formType>Ordinary</formType>
+    <usePurposes>PersonalComputer</usePurposes>
+    <usePurposes>MobileDevice</usePurposes>
+  </forms>
+</mdclass:InformationRegister>

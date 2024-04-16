@@ -1,0 +1,275 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:Document xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:core="http://g5.1c.ru/v8/dt/mcore" xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="286ce380-d812-40c3-9386-9fc1ebe25be0">
+  <producedTypes>
+    <objectType typeId="f135c972-aa2d-48b1-a6dd-9b29abbd2627" valueTypeId="7c7edf18-d3a7-4941-9af2-e9908b2db002"/>
+    <refType typeId="b6e0ef9d-9792-4f3b-a95b-7e9b124770b0" valueTypeId="1cab6e4b-563e-495b-ac10-1accc60e4631"/>
+    <selectionType typeId="77542818-b3ae-4844-be1a-85d77a71fd32" valueTypeId="a52adc50-ab79-488b-82b1-9ab99aac661a"/>
+    <listType typeId="58c09bfc-fdd0-459d-941d-ce6d800af9f4" valueTypeId="5d446154-042b-496f-aad9-dccac62cd40c"/>
+    <managerType typeId="432ed198-c168-4eef-b0fd-714780d9158b" valueTypeId="9575c408-4add-4bfb-8bf6-952f0547e08e"/>
+  </producedTypes>
+  <name>ЗаявкаНаСертификациюНоменклатуры</name>
+  <synonym>
+    <key>ru</key>
+    <value>Заявка на сертификацию номенклатуры</value>
+  </synonym>
+  <comment>Документ предназначен для отражения заявки на сертификацию, как для внешней, так и для внутренней сертификации</comment>
+  <inputByString>Document.ЗаявкаНаСертификациюНоменклатуры.StandardAttribute.Number</inputByString>
+  <fullTextSearchOnInputByString>DontUse</fullTextSearchOnInputByString>
+  <basedOn>Document.ПоступлениеТоваровУслуг</basedOn>
+  <basedOn>Document.ОтчетПроизводстваЗаСмену</basedOn>
+  <createOnInput>Use</createOnInput>
+  <help>
+    <pages>
+      <lang>ru</lang>
+    </pages>
+  </help>
+  <fullTextSearch>Use</fullTextSearch>
+  <numberType>String</numberType>
+  <numberLength>11</numberLength>
+  <numberPeriodicity>Year</numberPeriodicity>
+  <checkUnique>true</checkUnique>
+  <autonumbering>true</autonumbering>
+  <defaultObjectForm>Document.ЗаявкаНаСертификациюНоменклатуры.Form.ФормаДокумента</defaultObjectForm>
+  <defaultListForm>Document.ЗаявкаНаСертификациюНоменклатуры.Form.ФормаСписка</defaultListForm>
+  <defaultChoiceForm>Document.ЗаявкаНаСертификациюНоменклатуры.Form.ФормаВыбора</defaultChoiceForm>
+  <realTimePosting>Deny</realTimePosting>
+  <registerRecordsDeletion>AutoDeleteOff</registerRecordsDeletion>
+  <registerRecordsWritingOnPost>WriteModified</registerRecordsWritingOnPost>
+  <registerRecords>InformationRegister.СертификацияНоменклатуры</registerRecords>
+  <attributes uuid="551bdba0-b3bd-4028-8874-6ed33afbe7c2">
+    <name>Подразделение</name>
+    <synonym>
+      <key>ru</key>
+      <value>Подразделение</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.Подразделения</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+  </attributes>
+  <attributes uuid="54f9c03c-7304-4f74-a742-2afe72705d86">
+    <name>Организация</name>
+    <synonym>
+      <key>ru</key>
+      <value>Организация</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.Организации</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+  </attributes>
+  <attributes uuid="57bb34d8-20d6-4959-b5c5-45c12bef48ab">
+    <name>Ответственный</name>
+    <synonym>
+      <key>ru</key>
+      <value>Ответственный</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.Пользователи</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+  </attributes>
+  <attributes uuid="ff5995d0-781b-4ed1-9f3f-cb21cce53501">
+    <name>ДокументОприходования</name>
+    <synonym>
+      <key>ru</key>
+      <value>Документ оприходования</value>
+    </synonym>
+    <type>
+      <types>DocumentRef.ОтчетПроизводстваЗаСмену</types>
+      <types>DocumentRef.ПоступлениеТоваровУслуг</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+  </attributes>
+  <attributes uuid="b1044f9b-d326-4491-8ec5-d9a2fd7c4e87">
+    <name>Номенклатура</name>
+    <synonym>
+      <key>ru</key>
+      <value>Номенклатура</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.Номенклатура</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+  </attributes>
+  <attributes uuid="90658304-6264-4850-b41e-efd3b2597b1f">
+    <name>СерияНоменклатуры</name>
+    <synonym>
+      <key>ru</key>
+      <value>Серия номенклатуры</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.СерииНоменклатуры</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+  </attributes>
+  <attributes uuid="8f93894f-20e1-4ac0-a92a-6ae9b042fce9">
+    <name>НормативныйДокумент</name>
+    <synonym>
+      <key>ru</key>
+      <value>Нормативный документ</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.НормативныеДокументыСертификацииНоменклатуры</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+  </attributes>
+  <attributes uuid="1c744954-87cf-459b-b30e-7dd2d2ae4dcb">
+    <name>ОрганПоСертификации</name>
+    <synonym>
+      <key>ru</key>
+      <value>Орган по сертификации</value>
+    </synonym>
+    <comment>Организация, проводящая отбор проб (для внешней сертификации)</comment>
+    <type>
+      <types>CatalogRef.Контрагенты</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+  </attributes>
+  <attributes uuid="7dc51651-9b39-40c3-9a81-698715962401">
+    <name>ВидОперации</name>
+    <synonym>
+      <key>ru</key>
+      <value>Вид операции</value>
+    </synonym>
+    <type>
+      <types>EnumRef.ВидыОперацийЗаявкаНаСертификациюНоменклатуры</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+  </attributes>
+  <attributes uuid="c2996534-2d1f-41d5-acaf-a8ce7e006b17">
+    <name>Комментарий</name>
+    <synonym>
+      <key>ru</key>
+      <value>Комментарий</value>
+    </synonym>
+    <comment>(Общ) Любая дополнительная информация</comment>
+    <type>
+      <types>String</types>
+      <stringQualifiers/>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+  </attributes>
+  <attributes uuid="89433081-bfe7-4d9a-b50c-f3c06cf29c55">
+    <name>СертифицирующееПодразделение</name>
+    <synonym>
+      <key>ru</key>
+      <value>Сертифицирующее подразделение</value>
+    </synonym>
+    <comment>Подразделение, которому направляется заявка на внутреннюю сертификацию</comment>
+    <type>
+      <types>CatalogRef.Подразделения</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+  </attributes>
+  <attributes uuid="7a7deb81-1a78-4b15-8de8-1086962f626f">
+    <name>Склад</name>
+    <synonym>
+      <key>ru</key>
+      <value>Склад</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.Склады</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+  </attributes>
+  <forms uuid="40df94ac-beb2-4d73-84b3-4b9d32df87c6">
+    <name>ФормаДокумента</name>
+    <synonym>
+      <key>ru</key>
+      <value>Форма документа</value>
+    </synonym>
+    <formType>Ordinary</formType>
+    <usePurposes>PersonalComputer</usePurposes>
+    <usePurposes>MobileDevice</usePurposes>
+  </forms>
+  <forms uuid="82f71190-4f92-47d3-a04d-6f8341a8913e">
+    <name>ФормаСписка</name>
+    <synonym>
+      <key>ru</key>
+      <value>Форма списка</value>
+    </synonym>
+    <formType>Ordinary</formType>
+    <usePurposes>PersonalComputer</usePurposes>
+    <usePurposes>MobileDevice</usePurposes>
+  </forms>
+  <forms uuid="37f7b4a6-c122-4ea9-89a1-c99c46816695">
+    <name>ФормаВыбора</name>
+    <synonym>
+      <key>ru</key>
+      <value>Форма выбора</value>
+    </synonym>
+    <formType>Ordinary</formType>
+    <usePurposes>PersonalComputer</usePurposes>
+    <usePurposes>MobileDevice</usePurposes>
+  </forms>
+  <templates uuid="c3c2c158-1d67-4e10-977b-b58752b76e22">
+    <name>ЗаявкаНаСертификациюНоменклатуры</name>
+    <synonym>
+      <key>ru</key>
+      <value>ЗаявкаНаСертификациюНоменклатуры</value>
+    </synonym>
+  </templates>
+  <templates uuid="31da1eaa-8dcf-44f1-913d-24239ed08909">
+    <name>ИзвещениеСырьеМатериалы</name>
+    <synonym>
+      <key>ru</key>
+      <value>ИзвещениеСырьеМатериалы</value>
+    </synonym>
+  </templates>
+  <templates uuid="173decfa-c59c-4935-a825-63c2f3993433">
+    <name>ИзвещениеПродукция</name>
+    <synonym>
+      <key>ru</key>
+      <value>ИзвещениеПродукция</value>
+    </synonym>
+  </templates>
+</mdclass:Document>

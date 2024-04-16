@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:AccumulationRegister xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:core="http://g5.1c.ru/v8/dt/mcore" xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="8cc7c819-b7fc-47f0-bb20-cba9f16b8d12">
+  <producedTypes>
+    <selectionType typeId="ce8a1eff-dba9-4e92-8865-749b0c875eef" valueTypeId="6d233271-4cff-41ae-97d6-19cd5d68531c"/>
+    <listType typeId="5566c9a5-637c-46c8-bdef-f4000359efe0" valueTypeId="ff78917e-bf7f-4260-8a3d-de0aee51e791"/>
+    <managerType typeId="fa9f7d88-3300-4665-abd6-6f256d1fb308" valueTypeId="e0e691bb-f404-4726-9b1c-fbf35d3057c5"/>
+    <recordSetType typeId="12b7d2d0-b63a-4ff2-a6ec-bcf8b5ed3d58" valueTypeId="6d410334-f391-417e-a697-ba7b5bb9213a"/>
+    <recordKeyType typeId="267e82f8-cea7-48b6-82b9-a687dd345d5e" valueTypeId="52a77e74-fa79-4385-9df6-d9d789876511"/>
+    <recordType typeId="5d77c2af-03e5-4e2a-8cf8-84db348551b1" valueTypeId="58b97e6d-8d74-43ba-888b-51306f0f9808"/>
+  </producedTypes>
+  <name>ВзаиморасчетыСКонтрагентами</name>
+  <synonym>
+    <key>ru</key>
+    <value>Взаиморасчеты с контрагентами</value>
+  </synonym>
+  <comment>(Упр)</comment>
+  <enableTotalsSplitting>true</enableTotalsSplitting>
+  <resources uuid="5dc8f960-d093-4d92-8135-0e7adc85ad53">
+    <name>СуммаВзаиморасчетов</name>
+    <synonym>
+      <key>ru</key>
+      <value>Сумма взаиморасчетов</value>
+    </synonym>
+    <comment>Сумма в валюте взаиморасчетов</comment>
+    <type>
+      <types>Number</types>
+      <numberQualifiers>
+        <precision>15</precision>
+        <scale>2</scale>
+      </numberQualifiers>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+  </resources>
+  <resources uuid="79926671-4591-4e9f-a1ef-976ff331078d">
+    <name>СуммаУпр</name>
+    <synonym>
+      <key>ru</key>
+      <value>Сумма упр. учета</value>
+    </synonym>
+    <comment>Сумма в валюте упр. учета</comment>
+    <type>
+      <types>Number</types>
+      <numberQualifiers>
+        <precision>15</precision>
+        <scale>2</scale>
+      </numberQualifiers>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+  </resources>
+  <dimensions uuid="5133bcf4-2156-46aa-94ea-96c24db8649f">
+    <name>ДоговорКонтрагента</name>
+    <synonym>
+      <key>ru</key>
+      <value>Договор контрагента</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.ДоговорыКонтрагентов</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <useInTotals>true</useInTotals>
+  </dimensions>
+  <dimensions uuid="744de6c8-510f-4235-abe6-c75831abd595">
+    <name>Сделка</name>
+    <synonym>
+      <key>ru</key>
+      <value>Сделка</value>
+    </synonym>
+    <type>
+      <types>DocumentRef.ОтчетКомитентуОПродажах</types>
+      <types>DocumentRef.АктОбОказанииПроизводственныхУслуг</types>
+      <types>DocumentRef.СчетНаОплатуПоставщика</types>
+      <types>DocumentRef.ПередачаНМА</types>
+      <types>DocumentRef.ПлатежноеТребованиеПоручениеПолученное</types>
+      <types>DocumentRef.ПоступлениеТоваровУслугВНТТ</types>
+      <types>DocumentRef.ПлатежноеТребованиеПоручениеВыставленное</types>
+      <types>DocumentRef.АккредитивПолученный</types>
+      <types>DocumentRef.РеализацияУслугПоПереработке</types>
+      <types>DocumentRef.ПлатежноеПоручениеВходящее</types>
+      <types>DocumentRef.ВозвратТоваровПоставщику</types>
+      <types>DocumentRef.ЗаказПоставщику</types>
+      <types>DocumentRef.КорректировкаДолга</types>
+      <types>DocumentRef.ПлатежноеТребованиеПолученное</types>
+      <types>DocumentRef.ПоступлениеДопРасходов</types>
+      <types>DocumentRef.РасходныйКассовыйОрдер</types>
+      <types>DocumentRef.АккредитивПереданный</types>
+      <types>DocumentRef.РеализацияТоваровУслуг</types>
+      <types>DocumentRef.ЗаказПокупателя</types>
+      <types>DocumentRef.КорректировкаДолгаПоВозвратнойТаре</types>
+      <types>DocumentRef.ПоступлениеТоваровУслуг</types>
+      <types>DocumentRef.ПоступлениеНМА</types>
+      <types>DocumentRef.ПередачаОС</types>
+      <types>DocumentRef.ВозвратТоваровПоставщикуИзНТТ</types>
+      <types>DocumentRef.ПриходныйКассовыйОрдер</types>
+      <types>DocumentRef.ПлатежныйОрдерСписаниеДенежныхСредств</types>
+      <types>DocumentRef.СчетНаОплатуПокупателю</types>
+      <types>DocumentRef.ВозвратТоваровОтПокупателя</types>
+      <types>DocumentRef.ОтчетКомиссионераОПродажах</types>
+      <types>DocumentRef.ПлатежноеТребованиеВыставленное</types>
+      <types>DocumentRef.ПлатежныйОрдерПоступлениеДенежныхСредств</types>
+      <types>DocumentRef.ПлатежноеПоручениеИсходящее</types>
+      <types>DocumentRef.АвансовыйОтчет</types>
+      <types>DocumentRef.ПолучениеУслугПоПереработке</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <useInTotals>true</useInTotals>
+  </dimensions>
+  <dimensions uuid="6d2b3fe7-349e-4017-b679-554ac04601b2">
+    <name>Организация</name>
+    <synonym>
+      <key>ru</key>
+      <value>Организация</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.Организации</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <useInTotals>true</useInTotals>
+  </dimensions>
+  <dimensions uuid="c6c91d39-2636-4b5a-9f67-19cd5e325a4c">
+    <name>Контрагент</name>
+    <synonym>
+      <key>ru</key>
+      <value>Контрагент</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.Контрагенты</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <useInTotals>true</useInTotals>
+  </dimensions>
+</mdclass:AccumulationRegister>

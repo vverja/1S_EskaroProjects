@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:InformationRegister xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:core="http://g5.1c.ru/v8/dt/mcore" xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="2f54d2c8-951b-4ad8-8cff-c871d002b850">
+  <producedTypes>
+    <selectionType typeId="f18e6a05-6e99-4d7f-b797-0802ae20227c" valueTypeId="4e554cc4-ee13-4632-9b90-70e5036fee45"/>
+    <listType typeId="5933c18f-b957-49ce-800f-d4f96f2f712f" valueTypeId="ff54f44b-5df3-4733-ae62-aa387e3cc32c"/>
+    <managerType typeId="46c2cb48-fcb3-4449-8a56-22c1e69365a4" valueTypeId="c2610603-3ff3-42f4-bce4-a02ee3a68ff9"/>
+    <recordSetType typeId="2c268fc4-8ea5-4d43-9918-9611b51d4e64" valueTypeId="94d31b4a-159e-4830-ac3e-2fe3a8e45317"/>
+    <recordKeyType typeId="2c5a24f0-ba56-4fe9-ae3e-1418e2b67c1c" valueTypeId="fe7a38fa-1b88-452b-8104-292ba023c274"/>
+    <recordType typeId="e9b86f57-5a4f-4912-9dfa-261380d2754a" valueTypeId="3f0a0d7e-2865-415d-b401-db16d754f0e2"/>
+    <recordManagerType typeId="20dae905-c934-4db3-a71a-a704bd503239" valueTypeId="36c334e8-3e1e-423c-9add-69ac54e6b79c"/>
+  </producedTypes>
+  <name>ШкалаВыслугиЛет</name>
+  <synonym>
+    <key>ru</key>
+    <value>Шкала выслуги лет</value>
+  </synonym>
+  <defaultListForm>InformationRegister.ШкалаВыслугиЛет.Form.ФормаСписка</defaultListForm>
+  <informationRegisterPeriodicity>Month</informationRegisterPeriodicity>
+  <mainFilterOnPeriod>true</mainFilterOnPeriod>
+  <help>
+    <pages>
+      <lang>ru</lang>
+    </pages>
+  </help>
+  <resources uuid="766b0565-9da9-4270-b28e-ce6de9e88c19">
+    <name>Ставка</name>
+    <synonym>
+      <key>ru</key>
+      <value>Ставка</value>
+    </synonym>
+    <type>
+      <types>Number</types>
+      <numberQualifiers>
+        <precision>10</precision>
+        <scale>4</scale>
+        <nonNegative>true</nonNegative>
+      </numberQualifiers>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:UndefinedValue"/>
+  </resources>
+  <resources uuid="e5e2ec26-4d66-4d59-ac82-55b18554d692">
+    <name>Порог</name>
+    <synonym>
+      <key>ru</key>
+      <value>Порог</value>
+    </synonym>
+    <type>
+      <types>Number</types>
+      <numberQualifiers>
+        <precision>3</precision>
+        <nonNegative>true</nonNegative>
+      </numberQualifiers>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:UndefinedValue"/>
+  </resources>
+  <dimensions uuid="4404c1a3-9d2f-490c-84fb-7bdcd3c4f3b4">
+    <name>ВидСтажа</name>
+    <synonym>
+      <key>ru</key>
+      <value>Вид стажа</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.ВидыСтажа</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillFromFillingValue>true</fillFromFillingValue>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <mainFilter>true</mainFilter>
+  </dimensions>
+  <dimensions uuid="f053d7ab-2f29-49ee-af2c-98ff754920d3">
+    <name>НомерПорога</name>
+    <synonym>
+      <key>ru</key>
+      <value>Номер порога</value>
+    </synonym>
+    <type>
+      <types>EnumRef.ПорогиШкалыСтавокНалогов</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <denyIncompleteValues>true</denyIncompleteValues>
+    <indexing>Index</indexing>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillFromFillingValue>true</fillFromFillingValue>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <mainFilter>true</mainFilter>
+  </dimensions>
+  <forms uuid="e5c35ebd-4048-473f-bccc-557f787dfa5f">
+    <name>ФормаСписка</name>
+    <synonym>
+      <key>ru</key>
+      <value>Форма списка</value>
+    </synonym>
+    <formType>Ordinary</formType>
+    <usePurposes>PersonalComputer</usePurposes>
+    <usePurposes>MobileDevice</usePurposes>
+  </forms>
+  <templates uuid="bf0520f8-07fc-441f-bf21-8a17a3c813b0">
+    <name>НачальноеЗаполнение</name>
+    <synonym>
+      <key>ru</key>
+      <value>Начальное заполнение</value>
+    </synonym>
+  </templates>
+</mdclass:InformationRegister>

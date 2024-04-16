@@ -1,0 +1,243 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:AccumulationRegister xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:core="http://g5.1c.ru/v8/dt/mcore" xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="50971214-129e-4bd9-a572-ba6b34ecf3f5">
+  <producedTypes>
+    <selectionType typeId="7c55f22a-182a-4aca-8e52-e574e0149fd3" valueTypeId="e655b729-d0ec-4e3f-ae38-559d714a5c46"/>
+    <listType typeId="52b3b651-cae2-45ce-9413-5e7d91271cf2" valueTypeId="214eb57d-8b5f-4ec5-a73f-2b4c5822da6c"/>
+    <managerType typeId="de99fe8a-26ca-4553-84fb-7ec5f8df1423" valueTypeId="5c9c97c6-8505-442d-9147-28ecb0ff9dda"/>
+    <recordSetType typeId="585fe94a-96c4-4ea0-8560-5e4dd06e9593" valueTypeId="f90829d4-7c16-430e-a3a3-a6f6fc1088df"/>
+    <recordKeyType typeId="93357856-a6ec-46d9-809a-1437a8c0ad4e" valueTypeId="bab5080a-2c4b-42dc-ace5-1c822b694148"/>
+    <recordType typeId="48a15ae7-ff73-4ecf-ad5e-d394cdccd624" valueTypeId="f81668d5-6f40-492b-94ee-ea00ca1c5402"/>
+  </producedTypes>
+  <name>ЗаявкиНаРасходованиеСредств</name>
+  <synonym>
+    <key>ru</key>
+    <value>Заявки на расходование средств</value>
+  </synonym>
+  <comment>(Упр)</comment>
+  <enableTotalsSplitting>true</enableTotalsSplitting>
+  <resources uuid="d40d9eb8-856e-4dd3-9811-ced7dde0846a">
+    <name>СуммаВзаиморасчетов</name>
+    <synonym>
+      <key>ru</key>
+      <value>Сумма взаиморасчетов</value>
+    </synonym>
+    <comment>Сумма в валюте взаиморасчетов</comment>
+    <type>
+      <types>Number</types>
+      <numberQualifiers>
+        <precision>15</precision>
+        <scale>2</scale>
+      </numberQualifiers>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+  </resources>
+  <resources uuid="40f95270-8b13-4bde-bff4-cc60ccccfcb1">
+    <name>СуммаУпр</name>
+    <synonym>
+      <key>ru</key>
+      <value>Сумма упр. учета</value>
+    </synonym>
+    <comment>Сумма в валюте упр. учета</comment>
+    <type>
+      <types>Number</types>
+      <numberQualifiers>
+        <precision>15</precision>
+        <scale>2</scale>
+      </numberQualifiers>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+  </resources>
+  <resources uuid="8d73c536-97b2-40ab-8b00-eedb9a9e3309">
+    <name>Сумма</name>
+    <synonym>
+      <key>ru</key>
+      <value>Сумма</value>
+    </synonym>
+    <comment>Сумма к оплате</comment>
+    <type>
+      <types>Number</types>
+      <numberQualifiers>
+        <precision>15</precision>
+        <scale>2</scale>
+      </numberQualifiers>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+  </resources>
+  <dimensions uuid="872738ab-4d01-448a-bcca-a7670d78cdd5">
+    <name>ЗаявкаНаРасходование</name>
+    <synonym>
+      <key>ru</key>
+      <value>Заявка на расходование</value>
+    </synonym>
+    <type>
+      <types>DocumentRef.ЗаявкаНаРасходованиеСредств</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <useInTotals>true</useInTotals>
+  </dimensions>
+  <dimensions uuid="618da225-c86d-4b9b-ab4b-a4367d97ec2b">
+    <name>ДоговорКонтрагента</name>
+    <synonym>
+      <key>ru</key>
+      <value>Договор контрагента</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.ДоговорыКонтрагентов</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <indexing>Index</indexing>
+    <fullTextSearch>Use</fullTextSearch>
+    <useInTotals>true</useInTotals>
+  </dimensions>
+  <dimensions uuid="15ae77de-ac86-4f9d-9ab7-ca5c1791c5b1">
+    <name>Сделка</name>
+    <synonym>
+      <key>ru</key>
+      <value>Сделка</value>
+    </synonym>
+    <type>
+      <types>DocumentRef.ОтчетКомитентуОПродажах</types>
+      <types>DocumentRef.АктОбОказанииПроизводственныхУслуг</types>
+      <types>DocumentRef.СчетНаОплатуПоставщика</types>
+      <types>DocumentRef.ПлатежноеТребованиеПоручениеПолученное</types>
+      <types>DocumentRef.ПоступлениеТоваровУслугВНТТ</types>
+      <types>DocumentRef.ПлатежноеТребованиеПоручениеВыставленное</types>
+      <types>DocumentRef.АккредитивПолученный</types>
+      <types>DocumentRef.ПлатежноеПоручениеВходящее</types>
+      <types>DocumentRef.ВозвратТоваровПоставщику</types>
+      <types>DocumentRef.ЗаказПоставщику</types>
+      <types>DocumentRef.КорректировкаДолга</types>
+      <types>DocumentRef.ПлатежноеТребованиеПолученное</types>
+      <types>DocumentRef.ПоступлениеДопРасходов</types>
+      <types>DocumentRef.РасходныйКассовыйОрдер</types>
+      <types>DocumentRef.АккредитивПереданный</types>
+      <types>DocumentRef.РеализацияТоваровУслуг</types>
+      <types>DocumentRef.ЗаказПокупателя</types>
+      <types>DocumentRef.КорректировкаДолгаПоВозвратнойТаре</types>
+      <types>DocumentRef.ПоступлениеТоваровУслуг</types>
+      <types>DocumentRef.ПередачаОС</types>
+      <types>DocumentRef.ВозвратТоваровПоставщикуИзНТТ</types>
+      <types>DocumentRef.ПриходныйКассовыйОрдер</types>
+      <types>DocumentRef.ПлатежныйОрдерСписаниеДенежныхСредств</types>
+      <types>DocumentRef.СчетНаОплатуПокупателю</types>
+      <types>DocumentRef.ВозвратТоваровОтПокупателя</types>
+      <types>DocumentRef.ОтчетКомиссионераОПродажах</types>
+      <types>DocumentRef.ПлатежноеТребованиеВыставленное</types>
+      <types>DocumentRef.ПлатежныйОрдерПоступлениеДенежныхСредств</types>
+      <types>DocumentRef.ПлатежноеПоручениеИсходящее</types>
+      <types>DocumentRef.АвансовыйОтчет</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <useInTotals>true</useInTotals>
+  </dimensions>
+  <dimensions uuid="bde9dee6-f0c7-459e-b95a-a232ef9c1283">
+    <name>СтатьяДвиженияДенежныхСредств</name>
+    <synonym>
+      <key>ru</key>
+      <value>Статья движения денежных средств</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.СтатьиДвиженияДенежныхСредств</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <useInTotals>true</useInTotals>
+  </dimensions>
+  <dimensions uuid="bc218d91-6785-4883-ba83-195fd1c3a4e8">
+    <name>Проект</name>
+    <synonym>
+      <key>ru</key>
+      <value>Проект</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.Проекты</types>
+      <types>CatalogRef.ВидыРаспределенияПоПроектам</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <useInTotals>true</useInTotals>
+  </dimensions>
+  <dimensions uuid="9f4dae34-5235-4726-851c-884141a629be">
+    <name>ДокументРасчетовСКонтрагентом</name>
+    <synonym>
+      <key>ru</key>
+      <value>Документ расчетов с контрагентом</value>
+    </synonym>
+    <type>
+      <types>DocumentRef.ОтчетКомитентуОПродажах</types>
+      <types>DocumentRef.АктОбОказанииПроизводственныхУслуг</types>
+      <types>DocumentRef.ДокументРасчетовСКонтрагентом</types>
+      <types>DocumentRef.ПлатежноеТребованиеПоручениеПолученное</types>
+      <types>DocumentRef.ПоступлениеТоваровУслугВНТТ</types>
+      <types>DocumentRef.ПлатежноеТребованиеПоручениеВыставленное</types>
+      <types>DocumentRef.АккредитивПолученный</types>
+      <types>DocumentRef.РеализацияУслугПоПереработке</types>
+      <types>DocumentRef.ПлатежноеПоручениеВходящее</types>
+      <types>DocumentRef.ВозвратТоваровПоставщику</types>
+      <types>DocumentRef.КорректировкаДолга</types>
+      <types>DocumentRef.ПлатежноеТребованиеПолученное</types>
+      <types>DocumentRef.ПоступлениеДопРасходов</types>
+      <types>DocumentRef.РасходныйКассовыйОрдер</types>
+      <types>DocumentRef.АккредитивПереданный</types>
+      <types>DocumentRef.РеализацияТоваровУслуг</types>
+      <types>DocumentRef.КорректировкаДолгаПоВозвратнойТаре</types>
+      <types>DocumentRef.ПоступлениеТоваровУслуг</types>
+      <types>DocumentRef.ПередачаОС</types>
+      <types>DocumentRef.ВозвратТоваровПоставщикуИзНТТ</types>
+      <types>DocumentRef.ПриходныйКассовыйОрдер</types>
+      <types>DocumentRef.ПлатежныйОрдерСписаниеДенежныхСредств</types>
+      <types>DocumentRef.ВозвратТоваровОтПокупателя</types>
+      <types>DocumentRef.ОтчетКомиссионераОПродажах</types>
+      <types>DocumentRef.ПлатежноеТребованиеВыставленное</types>
+      <types>DocumentRef.ПлатежныйОрдерПоступлениеДенежныхСредств</types>
+      <types>DocumentRef.ПлатежноеПоручениеИсходящее</types>
+      <types>DocumentRef.АвансовыйОтчет</types>
+      <types>DocumentRef.ПолучениеУслугПоПереработке</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <useInTotals>true</useInTotals>
+  </dimensions>
+  <dimensions uuid="9ebff677-e9a5-4984-a9da-78b204e431dc">
+    <name>Организация</name>
+    <synonym>
+      <key>ru</key>
+      <value>Организация</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.Организации</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <useInTotals>true</useInTotals>
+  </dimensions>
+  <dimensions uuid="cd882e09-0322-4627-8ce5-9352d9e64d53">
+    <name>Контрагент</name>
+    <synonym>
+      <key>ru</key>
+      <value>Контрагент</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.Контрагенты</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <useInTotals>true</useInTotals>
+  </dimensions>
+</mdclass:AccumulationRegister>

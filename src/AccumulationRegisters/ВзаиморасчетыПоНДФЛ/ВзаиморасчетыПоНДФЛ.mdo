@@ -1,0 +1,282 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:AccumulationRegister xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:core="http://g5.1c.ru/v8/dt/mcore" xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="d9e4489f-99ce-4773-9f9c-d863f88fa6df">
+  <producedTypes>
+    <selectionType typeId="88133448-2598-4cb3-9ce2-81417afa1339" valueTypeId="1826b28b-4ffb-4e46-9a53-400a7235268a"/>
+    <listType typeId="460a4734-cfd9-4b91-98ae-839558b9d838" valueTypeId="e373f0b2-b357-4919-8d54-fdc534c579db"/>
+    <managerType typeId="f718a110-a3fb-4cc0-a3ca-836fe7771756" valueTypeId="91630e54-82e2-4318-8b22-4d6539ce5d38"/>
+    <recordSetType typeId="c41bba0a-4ac1-4cf3-b88e-3c604a929d65" valueTypeId="cb0bc273-ae1a-46da-a55a-a79846731405"/>
+    <recordKeyType typeId="b50121ed-5409-4964-9b39-b4eefe36436e" valueTypeId="e97f9793-0635-4c19-a56d-60ed8d189356"/>
+    <recordType typeId="c1708652-3d49-4649-97c6-b3a1f7079fe0" valueTypeId="acdc4dd1-62a6-4155-b177-7f85679e8ae6"/>
+  </producedTypes>
+  <name>ВзаиморасчетыПоНДФЛ</name>
+  <synonym>
+    <key>ru</key>
+    <value>Взаиморасчеты по НДФЛ</value>
+  </synonym>
+  <comment>(Регл)</comment>
+  <defaultListForm>AccumulationRegister.ВзаиморасчетыПоНДФЛ.Form.ФормаСписка</defaultListForm>
+  <help>
+    <pages>
+      <lang>ru</lang>
+    </pages>
+  </help>
+  <enableTotalsSplitting>true</enableTotalsSplitting>
+  <resources uuid="f934c25b-4701-4f59-b31c-66eadd851bfd">
+    <name>Налог</name>
+    <synonym>
+      <key>ru</key>
+      <value>Налог</value>
+    </synonym>
+    <type>
+      <types>Number</types>
+      <numberQualifiers>
+        <precision>15</precision>
+        <scale>2</scale>
+      </numberQualifiers>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+  </resources>
+  <resources uuid="f5c31b48-0c7b-4b16-8e8c-ad49235cf409">
+    <name>Доход</name>
+    <synonym>
+      <key>ru</key>
+      <value>Доход</value>
+    </synonym>
+    <comment>Объект обложения</comment>
+    <type>
+      <types>Number</types>
+      <numberQualifiers>
+        <precision>15</precision>
+        <scale>2</scale>
+      </numberQualifiers>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+  </resources>
+  <resources uuid="7b98e6f1-1a5b-4486-a9c1-60920333a3e1">
+    <name>НеподтвержденнаяСумма</name>
+    <synonym>
+      <key>ru</key>
+      <value>Неподтвержденная сумма</value>
+    </synonym>
+    <comment>Неподтвержденная сумма налога</comment>
+    <type>
+      <types>Number</types>
+      <numberQualifiers>
+        <precision>15</precision>
+        <scale>2</scale>
+      </numberQualifiers>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+  </resources>
+  <attributes uuid="edf96803-08e6-465e-9584-ccbdc9d537fa">
+    <name>НалоговыйПериод</name>
+    <synonym>
+      <key>ru</key>
+      <value>Налоговый период</value>
+    </synonym>
+    <type>
+      <types>Date</types>
+      <dateQualifiers>
+        <dateFractions>Date</dateFractions>
+      </dateQualifiers>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <indexing>Index</indexing>
+    <fullTextSearch>Use</fullTextSearch>
+  </attributes>
+  <attributes uuid="6bb10b61-5cdd-42aa-b727-a33490f25fb4">
+    <name>КоличествоЛьгот</name>
+    <synonym>
+      <key>ru</key>
+      <value>Количество льгот</value>
+    </synonym>
+    <type>
+      <types>Number</types>
+      <numberQualifiers>
+        <precision>10</precision>
+        <scale>4</scale>
+      </numberQualifiers>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+  </attributes>
+  <attributes uuid="f7539669-f2bd-4a0a-975c-4a05a4a3ab28">
+    <name>ОбособленноеПодразделение</name>
+    <synonym>
+      <key>ru</key>
+      <value>Обособленное подразделение</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.Организации</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+  </attributes>
+  <attributes uuid="c42a3c77-fca2-43e2-b164-d88b6e479212">
+    <name>Авторасчет</name>
+    <synonym>
+      <key>ru</key>
+      <value>Авторасчет</value>
+    </synonym>
+    <comment>Авторасчет</comment>
+    <type>
+      <types>Boolean</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+  </attributes>
+  <attributes uuid="494a1033-557b-4c04-beab-794b2d491a89">
+    <name>Сторно</name>
+    <synonym>
+      <key>ru</key>
+      <value>Сторно</value>
+    </synonym>
+    <comment>Сторно</comment>
+    <type>
+      <types>Boolean</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+  </attributes>
+  <attributes uuid="9d9034b8-e70c-4ef8-9fc0-1820e8908701">
+    <name>Льгота</name>
+    <synonym>
+      <key>ru</key>
+      <value>Льгота</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.ВидыЛьготРаботниковОрганизаций</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+  </attributes>
+  <attributes uuid="435e1220-ec56-49df-b2e2-b41bf39c9ddd">
+    <name>ВидСтавки</name>
+    <synonym>
+      <key>ru</key>
+      <value>Вид ставки</value>
+    </synonym>
+    <type>
+      <types>EnumRef.ВидыСтавокНДФЛ</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+  </attributes>
+  <attributes uuid="4d54336f-592e-471c-bb4c-de54a8101b78">
+    <name>ДоходПолный</name>
+    <synonym>
+      <key>ru</key>
+      <value>Доход полный</value>
+    </synonym>
+    <type>
+      <types>Number</types>
+      <numberQualifiers>
+        <precision>15</precision>
+        <scale>2</scale>
+      </numberQualifiers>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+  </attributes>
+  <attributes uuid="e741c66a-ad51-4a3c-b625-f45e6666a709">
+    <name>УвеличеннаяСтавка</name>
+    <synonym>
+      <key>ru</key>
+      <value>Увеличенная ставка</value>
+    </synonym>
+    <type>
+      <types>EnumRef.ВидыСтавокНДФЛ</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+  </attributes>
+  <dimensions uuid="1d9e3855-4085-49cb-8bc8-38bb45eabdff">
+    <name>Сотрудник</name>
+    <synonym>
+      <key>ru</key>
+      <value>Сотрудник</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.Контрагенты</types>
+      <types>CatalogRef.СотрудникиОрганизаций</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <useInTotals>true</useInTotals>
+  </dimensions>
+  <dimensions uuid="6e82e675-37bd-41b2-b1dd-c06b9bbb237b">
+    <name>Организация</name>
+    <synonym>
+      <key>ru</key>
+      <value>Организация</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.Организации</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <denyIncompleteValues>true</denyIncompleteValues>
+    <indexing>Index</indexing>
+    <fullTextSearch>Use</fullTextSearch>
+    <useInTotals>true</useInTotals>
+  </dimensions>
+  <dimensions uuid="96fd0bd5-2e73-4ef1-b716-1431a0174658">
+    <name>ДоходНДФЛ</name>
+    <synonym>
+      <key>ru</key>
+      <value>Доход НДФЛ</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.ВидыДоходовНДФЛ</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <indexing>Index</indexing>
+    <fullTextSearch>Use</fullTextSearch>
+    <useInTotals>true</useInTotals>
+  </dimensions>
+  <dimensions uuid="7177fd3a-46af-4667-9154-e923901d32ca">
+    <name>ПериодВзаиморасчетов</name>
+    <synonym>
+      <key>ru</key>
+      <value>Период взаиморасчетов</value>
+    </synonym>
+    <type>
+      <types>Date</types>
+      <dateQualifiers>
+        <dateFractions>Date</dateFractions>
+      </dateQualifiers>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <indexing>Index</indexing>
+    <fullTextSearch>Use</fullTextSearch>
+    <useInTotals>true</useInTotals>
+  </dimensions>
+  <forms uuid="a4af2d80-a964-4025-a6d2-35a07e8d226b">
+    <name>ФормаСписка</name>
+    <synonym>
+      <key>ru</key>
+      <value>Форма списка</value>
+    </synonym>
+    <formType>Ordinary</formType>
+    <usePurposes>PersonalComputer</usePurposes>
+    <usePurposes>MobileDevice</usePurposes>
+  </forms>
+</mdclass:AccumulationRegister>

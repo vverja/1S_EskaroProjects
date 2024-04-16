@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:DataProcessor xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:core="http://g5.1c.ru/v8/dt/mcore" xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="f85251d8-161c-4b4e-badb-a7b2890b171a">
+  <producedTypes>
+    <objectType typeId="187b1c5e-283a-422e-9124-f599dc2dc998" valueTypeId="7368983b-f15b-4969-b702-9f962308d499"/>
+    <managerType typeId="e2c6be43-b06b-481e-814c-a5bf78679bcc" valueTypeId="c53f9a60-b466-4c71-a484-02d4113b9da9"/>
+  </producedTypes>
+  <name>ПроведениеНаличнойРеализации</name>
+  <synonym>
+    <key>ru</key>
+    <value>Проведение наличной реализации</value>
+  </synonym>
+  <defaultForm>DataProcessor.ПроведениеНаличнойРеализации.Form.Форма</defaultForm>
+  <attributes uuid="6056203b-791b-4e9e-88f9-a739a2b0315d">
+    <name>ДокументСсылка</name>
+    <synonym>
+      <key>ru</key>
+      <value>Документ ссылка</value>
+    </synonym>
+    <type>
+      <types>DocumentRef.ЗаказПокупателя</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </attributes>
+  <attributes uuid="c1cdb8b6-0bfe-4112-a6fb-4abd08eec631">
+    <name>ВыполнитьЗакрытиеЗаказа</name>
+    <synonym>
+      <key>ru</key>
+      <value>Выполнить закрытие заказа</value>
+    </synonym>
+    <type>
+      <types>Boolean</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </attributes>
+  <tabularSections uuid="5b39acb6-a5d9-4d32-bd23-af4760edbf3b">
+    <producedTypes>
+      <objectType typeId="45b89543-8650-4d19-970d-c82bb3a8df61" valueTypeId="df1e8126-c1bd-465f-b899-638a144a4cf3"/>
+      <rowType typeId="a057bacd-cc49-40ec-ac9b-8d039239037c" valueTypeId="ac68e672-2665-4657-bc28-76c98e479131"/>
+    </producedTypes>
+    <name>Список</name>
+    <synonym>
+      <key>ru</key>
+      <value>Список</value>
+    </synonym>
+    <standardAttributes>
+      <dataHistory>Use</dataHistory>
+      <name>LineNumber</name>
+      <fillValue xsi:type="core:UndefinedValue"/>
+      <fullTextSearch>Use</fullTextSearch>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+    </standardAttributes>
+    <attributes uuid="87ebf34c-0604-41a2-80b0-804fdfd2ba17">
+      <name>Документ</name>
+      <synonym>
+        <key>ru</key>
+        <value>Документ</value>
+      </synonym>
+      <type>
+        <types>DocumentRef.ВозвратТоваровПоставщику</types>
+        <types>DocumentRef.РасходныйКассовыйОрдер</types>
+        <types>DocumentRef.РеализацияТоваровУслуг</types>
+        <types>DocumentRef.ЗаказПокупателя</types>
+        <types>DocumentRef.КорректировкаЗаказаПокупателя</types>
+        <types>DocumentRef.ПоступлениеТоваровУслуг</types>
+        <types>DocumentRef.ВозвратТоваровОтПокупателя</types>
+        <types>DocumentRef.РезервированиеТоваров</types>
+      </type>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <fillValue xsi:type="core:UndefinedValue"/>
+    </attributes>
+  </tabularSections>
+  <forms uuid="e84a4833-8817-47b5-817f-60a80d3952f7">
+    <name>Форма</name>
+    <synonym>
+      <key>ru</key>
+      <value>Форма</value>
+    </synonym>
+    <formType>Ordinary</formType>
+    <usePurposes>PersonalComputer</usePurposes>
+    <usePurposes>MobileDevice</usePurposes>
+  </forms>
+</mdclass:DataProcessor>

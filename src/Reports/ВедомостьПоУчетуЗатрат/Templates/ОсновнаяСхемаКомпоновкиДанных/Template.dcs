@@ -1,0 +1,3930 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<DataCompositionSchema xmlns="http://v8.1c.ru/8.1/data-composition-system/schema" xmlns:dcscom="http://v8.1c.ru/8.1/data-composition-system/common" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<dataSource>
+		<name>ИсточникДанных1</name>
+		<dataSourceType>Local</dataSourceType>
+	</dataSource>
+	<dataSet xsi:type="DataSetUnion">
+		<name>УчетЗатрат</name>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>АналитикаВидаУчета</dataPath>
+			<field>АналитикаВидаУчета</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Аналитика вида учета</v8:content>
+				</v8:item>
+			</title>
+			<role>
+				<dcscom:dimension>true</dcscom:dimension>
+				<dcscom:ignoreNullValues>true</dcscom:ignoreNullValues>
+			</role>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>АналитикаРаспределенияЗатрат</dataPath>
+			<field>АналитикаРаспределенияЗатрат</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Аналитика распределения затрат</v8:content>
+				</v8:item>
+			</title>
+			<role>
+				<dcscom:dimension>true</dcscom:dimension>
+			</role>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>АналитикаУчетаЗатрат</dataPath>
+			<field>АналитикаУчетаЗатрат</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Аналитика учета затрат</v8:content>
+				</v8:item>
+			</title>
+			<role>
+				<dcscom:dimension>true</dcscom:dimension>
+			</role>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>АналитикаУчетаПартий</dataPath>
+			<field>АналитикаУчетаПартий</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Аналитика учета партий</v8:content>
+				</v8:item>
+			</title>
+			<role>
+				<dcscom:dimension>true</dcscom:dimension>
+			</role>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>КоличествоКонечныйОстаток</dataPath>
+			<field>КоличествоКонечныйОстаток</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Количество конечный остаток</v8:content>
+				</v8:item>
+			</title>
+			<useRestriction>
+				<field>true</field>
+				<condition>true</condition>
+				<group>true</group>
+				<order>true</order>
+			</useRestriction>
+			<role>
+				<dcscom:balance>true</dcscom:balance>
+				<dcscom:balanceGroupName>Количество</dcscom:balanceGroupName>
+				<dcscom:balanceType>ClosingBalance</dcscom:balanceType>
+			</role>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>КоличествоНачальныйОстаток</dataPath>
+			<field>КоличествоНачальныйОстаток</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Количество начальный остаток</v8:content>
+				</v8:item>
+			</title>
+			<useRestriction>
+				<field>true</field>
+				<condition>true</condition>
+				<group>true</group>
+				<order>true</order>
+			</useRestriction>
+			<role>
+				<dcscom:balance>true</dcscom:balance>
+				<dcscom:balanceGroupName>Количество</dcscom:balanceGroupName>
+				<dcscom:balanceType>OpeningBalance</dcscom:balanceType>
+			</role>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>КоличествоПриход</dataPath>
+			<field>КоличествоПриход</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Количество приход</v8:content>
+				</v8:item>
+			</title>
+			<useRestriction>
+				<field>true</field>
+				<condition>true</condition>
+				<group>true</group>
+				<order>true</order>
+			</useRestriction>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>КоличествоРасход</dataPath>
+			<field>КоличествоРасход</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Количество расход</v8:content>
+				</v8:item>
+			</title>
+			<useRestriction>
+				<field>true</field>
+				<condition>true</condition>
+				<group>true</group>
+				<order>true</order>
+			</useRestriction>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ПериодДень</dataPath>
+			<field>ПериодДень</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Период день</v8:content>
+				</v8:item>
+			</title>
+			<role>
+				<dcscom:periodNumber>5</dcscom:periodNumber>
+				<dcscom:periodType>Additional</dcscom:periodType>
+			</role>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ПериодПолугодие</dataPath>
+			<field>ПериодПолугодие</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Период полугодие</v8:content>
+				</v8:item>
+			</title>
+			<role>
+				<dcscom:periodNumber>10</dcscom:periodNumber>
+				<dcscom:periodType>Additional</dcscom:periodType>
+			</role>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ПериодМесяц</dataPath>
+			<field>ПериодМесяц</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Период месяц</v8:content>
+				</v8:item>
+			</title>
+			<role>
+				<dcscom:periodNumber>8</dcscom:periodNumber>
+				<dcscom:periodType>Additional</dcscom:periodType>
+			</role>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ПериодКвартал</dataPath>
+			<field>ПериодКвартал</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Период квартал</v8:content>
+				</v8:item>
+			</title>
+			<role>
+				<dcscom:periodNumber>9</dcscom:periodNumber>
+				<dcscom:periodType>Additional</dcscom:periodType>
+			</role>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Регистратор</dataPath>
+			<field>Регистратор</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Регистратор</v8:content>
+				</v8:item>
+			</title>
+			<role>
+				<dcscom:periodNumber>1</dcscom:periodNumber>
+				<dcscom:periodType>Main</dcscom:periodType>
+				<dcscom:ignoreNullValues>true</dcscom:ignoreNullValues>
+			</role>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ПериодСекунда</dataPath>
+			<field>ПериодСекунда</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Период секунда</v8:content>
+				</v8:item>
+			</title>
+			<useRestriction>
+				<field>true</field>
+				<condition>true</condition>
+				<group>true</group>
+				<order>true</order>
+			</useRestriction>
+			<role>
+				<dcscom:periodNumber>2</dcscom:periodNumber>
+				<dcscom:periodType>Main</dcscom:periodType>
+			</role>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ПериодДекада</dataPath>
+			<field>ПериодДекада</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Период декада</v8:content>
+				</v8:item>
+			</title>
+			<role>
+				<dcscom:periodNumber>7</dcscom:periodNumber>
+				<dcscom:periodType>Additional</dcscom:periodType>
+			</role>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ПериодНеделя</dataPath>
+			<field>ПериодНеделя</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Период неделя</v8:content>
+				</v8:item>
+			</title>
+			<role>
+				<dcscom:periodNumber>6</dcscom:periodNumber>
+				<dcscom:periodType>Additional</dcscom:periodType>
+			</role>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ПериодГод</dataPath>
+			<field>ПериодГод</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Период год</v8:content>
+				</v8:item>
+			</title>
+			<role>
+				<dcscom:periodNumber>11</dcscom:periodNumber>
+				<dcscom:periodType>Additional</dcscom:periodType>
+			</role>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Организация</dataPath>
+			<field>Организация</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Организация</v8:content>
+				</v8:item>
+			</title>
+			<role>
+				<dcscom:dimension>true</dcscom:dimension>
+				<dcscom:parentDimension>АналитикаВидаУчета</dcscom:parentDimension>
+			</role>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Подразделение</dataPath>
+			<field>Подразделение</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Подразделение</v8:content>
+				</v8:item>
+			</title>
+			<role>
+				<dcscom:dimension>true</dcscom:dimension>
+				<dcscom:parentDimension>АналитикаВидаУчета</dcscom:parentDimension>
+			</role>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>РазделУчета</dataPath>
+			<field>РазделУчета</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Раздел учета</v8:content>
+				</v8:item>
+			</title>
+			<role>
+				<dcscom:dimension>true</dcscom:dimension>
+				<dcscom:parentDimension>АналитикаВидаУчета</dcscom:parentDimension>
+			</role>
+			<valueType>
+				<v8:Type xmlns:d5p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d5p1:EnumRef.РазделыУчета</v8:Type>
+			</valueType>
+			<availableValue>
+				<value xsi:type="dcscor:DesignTimeValue">Перечисление.РазделыУчета.Затраты</value>
+				<presentation xsi:type="v8:LocalStringType">
+					<v8:item>
+						<v8:lang>ru</v8:lang>
+						<v8:content>Затраты</v8:content>
+					</v8:item>
+				</presentation>
+			</availableValue>
+			<availableValue>
+				<value xsi:type="dcscor:DesignTimeValue">Перечисление.РазделыУчета.ЗатратыНаВыпуск</value>
+				<presentation xsi:type="v8:LocalStringType">
+					<v8:item>
+						<v8:lang>ru</v8:lang>
+						<v8:content>Затраты на выпуск</v8:content>
+					</v8:item>
+				</presentation>
+			</availableValue>
+			<availableValue>
+				<value xsi:type="dcscor:DesignTimeValue">Перечисление.РазделыУчета.ЗатратыПоНаработке</value>
+				<presentation xsi:type="v8:LocalStringType">
+					<v8:item>
+						<v8:lang>ru</v8:lang>
+						<v8:content>Затраты по наработке</v8:content>
+					</v8:item>
+				</presentation>
+			</availableValue>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Затрата</dataPath>
+			<field>Затрата</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Затрата</v8:content>
+				</v8:item>
+			</title>
+			<role>
+				<dcscom:dimension>true</dcscom:dimension>
+				<dcscom:parentDimension>АналитикаУчетаЗатрат</dcscom:parentDimension>
+			</role>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>СерияЗатраты</dataPath>
+			<field>СерияЗатраты</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Серия затраты</v8:content>
+				</v8:item>
+			</title>
+			<role>
+				<dcscom:dimension>true</dcscom:dimension>
+				<dcscom:parentDimension>АналитикаУчетаЗатрат</dcscom:parentDimension>
+			</role>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>СпособРаспределенияЗатрат</dataPath>
+			<field>СпособРаспределенияЗатрат</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Способ распределения затрат</v8:content>
+				</v8:item>
+			</title>
+			<role>
+				<dcscom:dimension>true</dcscom:dimension>
+				<dcscom:parentDimension>АналитикаУчетаЗатрат</dcscom:parentDimension>
+			</role>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>СтатьяЗатрат</dataPath>
+			<field>СтатьяЗатрат</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Статья затрат</v8:content>
+				</v8:item>
+			</title>
+			<role>
+				<dcscom:dimension>true</dcscom:dimension>
+				<dcscom:parentDimension>АналитикаУчетаЗатрат</dcscom:parentDimension>
+			</role>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ХарактерЗатрат</dataPath>
+			<field>ХарактерЗатрат</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Характер затрат</v8:content>
+				</v8:item>
+			</title>
+			<role>
+				<dcscom:dimension>true</dcscom:dimension>
+				<dcscom:parentDimension>АналитикаУчетаЗатрат</dcscom:parentDimension>
+			</role>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ХарактеристикаЗатраты</dataPath>
+			<field>ХарактеристикаЗатраты</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Характеристика затраты</v8:content>
+				</v8:item>
+			</title>
+			<role>
+				<dcscom:dimension>true</dcscom:dimension>
+				<dcscom:parentDimension>АналитикаУчетаЗатрат</dcscom:parentDimension>
+			</role>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>НоменклатурнаяГруппа</dataPath>
+			<field>НоменклатурнаяГруппа</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Номенклатурная группа</v8:content>
+				</v8:item>
+			</title>
+			<role>
+				<dcscom:dimension>true</dcscom:dimension>
+				<dcscom:parentDimension>АналитикаРаспределенияЗатрат</dcscom:parentDimension>
+			</role>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Продукция</dataPath>
+			<field>Продукция</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Продукция</v8:content>
+				</v8:item>
+			</title>
+			<role>
+				<dcscom:dimension>true</dcscom:dimension>
+				<dcscom:parentDimension>АналитикаРаспределенияЗатрат</dcscom:parentDimension>
+			</role>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>СерияПродукции</dataPath>
+			<field>СерияПродукции</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Серия продукции</v8:content>
+				</v8:item>
+			</title>
+			<role>
+				<dcscom:dimension>true</dcscom:dimension>
+				<dcscom:parentDimension>АналитикаРаспределенияЗатрат</dcscom:parentDimension>
+			</role>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Спецификация</dataPath>
+			<field>Спецификация</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Спецификация</v8:content>
+				</v8:item>
+			</title>
+			<role>
+				<dcscom:dimension>true</dcscom:dimension>
+				<dcscom:parentDimension>АналитикаРаспределенияЗатрат</dcscom:parentDimension>
+			</role>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ХарактеристикаПродукции</dataPath>
+			<field>ХарактеристикаПродукции</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Характеристика продукции</v8:content>
+				</v8:item>
+			</title>
+			<role>
+				<dcscom:dimension>true</dcscom:dimension>
+				<dcscom:parentDimension>АналитикаРаспределенияЗатрат</dcscom:parentDimension>
+			</role>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Заказ</dataPath>
+			<field>Заказ</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Заказ</v8:content>
+				</v8:item>
+			</title>
+			<role>
+				<dcscom:dimension>true</dcscom:dimension>
+				<dcscom:parentDimension>АналитикаУчетаПартий</dcscom:parentDimension>
+			</role>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>КоличествоОборот</dataPath>
+			<field>КоличествоОборот</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Количество оборот</v8:content>
+				</v8:item>
+			</title>
+			<useRestriction>
+				<field>true</field>
+				<condition>true</condition>
+				<group>true</group>
+				<order>true</order>
+			</useRestriction>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>СтоимостьКонечныйОстаток</dataPath>
+			<field>СтоимостьКонечныйОстаток</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Стоимость конечный остаток</v8:content>
+				</v8:item>
+			</title>
+			<role>
+				<dcscom:balance>true</dcscom:balance>
+				<dcscom:balanceGroupName>Стоимость</dcscom:balanceGroupName>
+				<dcscom:balanceType>ClosingBalance</dcscom:balanceType>
+			</role>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>СтоимостьРасход</dataPath>
+			<field>СтоимостьРасход</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Стоимость расход</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>СтоимостьНачальныйОстаток</dataPath>
+			<field>СтоимостьНачальныйОстаток</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Стоимость начальный остаток</v8:content>
+				</v8:item>
+			</title>
+			<role>
+				<dcscom:balance>true</dcscom:balance>
+				<dcscom:balanceGroupName>Стоимость</dcscom:balanceGroupName>
+				<dcscom:balanceType>OpeningBalance</dcscom:balanceType>
+			</role>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>СтоимостьПриход</dataPath>
+			<field>СтоимостьПриход</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Стоимость приход</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>СтоимостьОборот</dataPath>
+			<field>СтоимостьОборот</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Стоимость оборот</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Счет</dataPath>
+			<field>Счет</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Счет</v8:content>
+				</v8:item>
+			</title>
+			<role>
+				<dcscom:dimension>true</dcscom:dimension>
+				<dcscom:parentDimension>АналитикаВидаУчета</dcscom:parentDimension>
+			</role>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Проект</dataPath>
+			<field>Проект</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Проект</v8:content>
+				</v8:item>
+			</title>
+			<role>
+				<dcscom:dimension>true</dcscom:dimension>
+				<dcscom:parentDimension>АналитикаВидаУчета</dcscom:parentDimension>
+			</role>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Затрата.ЕдиницаИзмерения</dataPath>
+			<field>ЕдиницаИзмерения</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Затрата.Единица измерения</v8:content>
+				</v8:item>
+			</title>
+			<role>
+				<dcscom:dimension>true</dcscom:dimension>
+				<dcscom:parentDimension>АналитикаУчетаЗатрат</dcscom:parentDimension>
+			</role>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>НалоговоеНазначение</dataPath>
+			<field>НалоговоеНазначение</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Налоговое назначение</v8:content>
+				</v8:item>
+			</title>
+			<role>
+				<dcscom:dimension>true</dcscom:dimension>
+				<dcscom:parentDimension>АналитикаВидаУчета</dcscom:parentDimension>
+			</role>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>КоличествоНУКонечныйОстаток</dataPath>
+			<field>КоличествоНУКонечныйОстаток</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Количество НУКонечный остаток</v8:content>
+				</v8:item>
+			</title>
+			<role>
+				<dcscom:balance>true</dcscom:balance>
+				<dcscom:balanceGroupName>КоличествоНУ</dcscom:balanceGroupName>
+				<dcscom:balanceType>ClosingBalance</dcscom:balanceType>
+			</role>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>КоличествоНУНачальныйОстаток</dataPath>
+			<field>КоличествоНУНачальныйОстаток</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Количество НУНачальный остаток</v8:content>
+				</v8:item>
+			</title>
+			<role>
+				<dcscom:balance>true</dcscom:balance>
+				<dcscom:balanceGroupName>КоличествоНУ</dcscom:balanceGroupName>
+				<dcscom:balanceType>OpeningBalance</dcscom:balanceType>
+			</role>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>КоличествоНУОборот</dataPath>
+			<field>КоличествоНУОборот</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Количество НУОборот</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>КоличествоНУПриход</dataPath>
+			<field>КоличествоНУПриход</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Количество НУПриход</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>КоличествоНУРасход</dataPath>
+			<field>КоличествоНУРасход</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Количество НУРасход</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>НДСВходящийКонечныйОстаток</dataPath>
+			<field>НДСВходящийКонечныйОстаток</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>НДСВходящий конечный остаток</v8:content>
+				</v8:item>
+			</title>
+			<role>
+				<dcscom:balance>true</dcscom:balance>
+				<dcscom:balanceGroupName>НДСВходящий</dcscom:balanceGroupName>
+				<dcscom:balanceType>ClosingBalance</dcscom:balanceType>
+			</role>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>НДСВходящийНачальныйОстаток</dataPath>
+			<field>НДСВходящийНачальныйОстаток</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>НДСВходящий начальный остаток</v8:content>
+				</v8:item>
+			</title>
+			<role>
+				<dcscom:balance>true</dcscom:balance>
+				<dcscom:balanceGroupName>НДСВходящий</dcscom:balanceGroupName>
+				<dcscom:balanceType>OpeningBalance</dcscom:balanceType>
+			</role>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>НДСВходящийОборот</dataPath>
+			<field>НДСВходящийОборот</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>НДСВходящий оборот</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>НДСВходящийПриход</dataPath>
+			<field>НДСВходящийПриход</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>НДСВходящий приход</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>НДСВходящийРасход</dataPath>
+			<field>НДСВходящийРасход</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>НДСВходящий расход</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>НДСКредитКонечныйОстаток</dataPath>
+			<field>НДСКредитКонечныйОстаток</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>НДСКредит конечный остаток</v8:content>
+				</v8:item>
+			</title>
+			<role>
+				<dcscom:balance>true</dcscom:balance>
+				<dcscom:balanceGroupName>НДСКредит</dcscom:balanceGroupName>
+				<dcscom:balanceType>ClosingBalance</dcscom:balanceType>
+			</role>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>НДСКредитНачальныйОстаток</dataPath>
+			<field>НДСКредитНачальныйОстаток</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>НДСКредит начальный остаток</v8:content>
+				</v8:item>
+			</title>
+			<role>
+				<dcscom:balance>true</dcscom:balance>
+				<dcscom:balanceGroupName>НДСКредит</dcscom:balanceGroupName>
+				<dcscom:balanceType>OpeningBalance</dcscom:balanceType>
+			</role>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>НДСКредитОборот</dataPath>
+			<field>НДСКредитОборот</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>НДСКредит оборот</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>НДСКредитПриход</dataPath>
+			<field>НДСКредитПриход</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>НДСКредит приход</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>НДСКредитРасход</dataPath>
+			<field>НДСКредитРасход</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>НДСКредит расход</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>СтоимостьНУКонечныйОстаток</dataPath>
+			<field>СтоимостьНУКонечныйОстаток</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Стоимость НУКонечный остаток</v8:content>
+				</v8:item>
+			</title>
+			<role>
+				<dcscom:balance>true</dcscom:balance>
+				<dcscom:balanceGroupName>СтоимостьНУ</dcscom:balanceGroupName>
+				<dcscom:balanceType>ClosingBalance</dcscom:balanceType>
+			</role>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>СтоимостьНУНачальныйОстаток</dataPath>
+			<field>СтоимостьНУНачальныйОстаток</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Стоимость НУНачальный остаток</v8:content>
+				</v8:item>
+			</title>
+			<role>
+				<dcscom:balance>true</dcscom:balance>
+				<dcscom:balanceGroupName>СтоимостьНУ</dcscom:balanceGroupName>
+				<dcscom:balanceType>OpeningBalance</dcscom:balanceType>
+			</role>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>СтоимостьНУОборот</dataPath>
+			<field>СтоимостьНУОборот</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Стоимость НУОборот</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>СтоимостьНУПриход</dataPath>
+			<field>СтоимостьНУПриход</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Стоимость НУПриход</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>СтоимостьНУРасход</dataPath>
+			<field>СтоимостьНУРасход</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Стоимость НУРасход</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ЕдиницаИзмерения</dataPath>
+			<field>ЕдиницаИзмерения</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Единица измерения</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<item xsi:type="DataSetQuery">
+			<name>УчетЗатрат</name>
+			<field xsi:type="DataSetFieldField">
+				<dataPath>АналитикаВидаУчета</dataPath>
+				<field>АналитикаВидаУчета</field>
+				<title xsi:type="v8:LocalStringType">
+					<v8:item>
+						<v8:lang>ru</v8:lang>
+						<v8:content>Аналитика вида учета</v8:content>
+					</v8:item>
+				</title>
+				<role>
+					<dcscom:dimension>true</dcscom:dimension>
+				</role>
+			</field>
+			<field xsi:type="DataSetFieldField">
+				<dataPath>АналитикаРаспределенияЗатрат</dataPath>
+				<field>АналитикаРаспределенияЗатрат</field>
+				<title xsi:type="v8:LocalStringType">
+					<v8:item>
+						<v8:lang>ru</v8:lang>
+						<v8:content>Аналитика распределения затрат</v8:content>
+					</v8:item>
+				</title>
+				<role>
+					<dcscom:dimension>true</dcscom:dimension>
+				</role>
+			</field>
+			<field xsi:type="DataSetFieldField">
+				<dataPath>АналитикаУчетаЗатрат</dataPath>
+				<field>АналитикаУчетаЗатрат</field>
+				<title xsi:type="v8:LocalStringType">
+					<v8:item>
+						<v8:lang>ru</v8:lang>
+						<v8:content>Аналитика учета затрат</v8:content>
+					</v8:item>
+				</title>
+				<role>
+					<dcscom:dimension>true</dcscom:dimension>
+				</role>
+			</field>
+			<field xsi:type="DataSetFieldField">
+				<dataPath>АналитикаУчетаПартий</dataPath>
+				<field>АналитикаУчетаПартий</field>
+				<title xsi:type="v8:LocalStringType">
+					<v8:item>
+						<v8:lang>ru</v8:lang>
+						<v8:content>Аналитика учета партий</v8:content>
+					</v8:item>
+				</title>
+				<role>
+					<dcscom:dimension>true</dcscom:dimension>
+				</role>
+			</field>
+			<field xsi:type="DataSetFieldField">
+				<dataPath>ЕдиницаИзмерения</dataPath>
+				<field>ЕдиницаИзмерения</field>
+				<title xsi:type="v8:LocalStringType">
+					<v8:item>
+						<v8:lang>ru</v8:lang>
+						<v8:content>Единица измерения</v8:content>
+					</v8:item>
+				</title>
+			</field>
+			<field xsi:type="DataSetFieldField">
+				<dataPath>Заказ</dataPath>
+				<field>Заказ</field>
+				<title xsi:type="v8:LocalStringType">
+					<v8:item>
+						<v8:lang>ru</v8:lang>
+						<v8:content>Заказ</v8:content>
+					</v8:item>
+				</title>
+			</field>
+			<field xsi:type="DataSetFieldField">
+				<dataPath>Затрата</dataPath>
+				<field>Затрата</field>
+				<title xsi:type="v8:LocalStringType">
+					<v8:item>
+						<v8:lang>ru</v8:lang>
+						<v8:content>Затрата</v8:content>
+					</v8:item>
+				</title>
+			</field>
+			<field xsi:type="DataSetFieldField">
+				<dataPath>КоличествоКонечныйОстаток</dataPath>
+				<field>КоличествоКонечныйОстаток</field>
+				<title xsi:type="v8:LocalStringType">
+					<v8:item>
+						<v8:lang>ru</v8:lang>
+						<v8:content>Количество конечный остаток</v8:content>
+					</v8:item>
+				</title>
+				<role>
+					<dcscom:balance>true</dcscom:balance>
+					<dcscom:balanceGroupName>Количество</dcscom:balanceGroupName>
+					<dcscom:balanceType>ClosingBalance</dcscom:balanceType>
+				</role>
+			</field>
+			<field xsi:type="DataSetFieldField">
+				<dataPath>КоличествоНачальныйОстаток</dataPath>
+				<field>КоличествоНачальныйОстаток</field>
+				<title xsi:type="v8:LocalStringType">
+					<v8:item>
+						<v8:lang>ru</v8:lang>
+						<v8:content>Количество начальный остаток</v8:content>
+					</v8:item>
+				</title>
+				<role>
+					<dcscom:balance>true</dcscom:balance>
+					<dcscom:balanceGroupName>Количество</dcscom:balanceGroupName>
+					<dcscom:balanceType>OpeningBalance</dcscom:balanceType>
+				</role>
+			</field>
+			<field xsi:type="DataSetFieldField">
+				<dataPath>КоличествоОборот</dataPath>
+				<field>КоличествоОборот</field>
+				<title xsi:type="v8:LocalStringType">
+					<v8:item>
+						<v8:lang>ru</v8:lang>
+						<v8:content>Количество оборот</v8:content>
+					</v8:item>
+				</title>
+			</field>
+			<field xsi:type="DataSetFieldField">
+				<dataPath>КоличествоПриход</dataPath>
+				<field>КоличествоПриход</field>
+				<title xsi:type="v8:LocalStringType">
+					<v8:item>
+						<v8:lang>ru</v8:lang>
+						<v8:content>Количество приход</v8:content>
+					</v8:item>
+				</title>
+			</field>
+			<field xsi:type="DataSetFieldField">
+				<dataPath>КоличествоРасход</dataPath>
+				<field>КоличествоРасход</field>
+				<title xsi:type="v8:LocalStringType">
+					<v8:item>
+						<v8:lang>ru</v8:lang>
+						<v8:content>Количество расход</v8:content>
+					</v8:item>
+				</title>
+			</field>
+			<field xsi:type="DataSetFieldField">
+				<dataPath>НалоговоеНазначение</dataPath>
+				<field>НалоговоеНазначение</field>
+				<title xsi:type="v8:LocalStringType">
+					<v8:item>
+						<v8:lang>ru</v8:lang>
+						<v8:content>Налоговое назначение</v8:content>
+					</v8:item>
+				</title>
+			</field>
+			<field xsi:type="DataSetFieldField">
+				<dataPath>НоменклатурнаяГруппа</dataPath>
+				<field>НоменклатурнаяГруппа</field>
+				<title xsi:type="v8:LocalStringType">
+					<v8:item>
+						<v8:lang>ru</v8:lang>
+						<v8:content>Номенклатурная группа</v8:content>
+					</v8:item>
+				</title>
+			</field>
+			<field xsi:type="DataSetFieldField">
+				<dataPath>Организация</dataPath>
+				<field>Организация</field>
+				<title xsi:type="v8:LocalStringType">
+					<v8:item>
+						<v8:lang>ru</v8:lang>
+						<v8:content>Организация</v8:content>
+					</v8:item>
+				</title>
+			</field>
+			<field xsi:type="DataSetFieldField">
+				<dataPath>ПериодГод</dataPath>
+				<field>ПериодГод</field>
+				<title xsi:type="v8:LocalStringType">
+					<v8:item>
+						<v8:lang>ru</v8:lang>
+						<v8:content>Период год</v8:content>
+					</v8:item>
+				</title>
+				<role>
+					<dcscom:periodNumber>8</dcscom:periodNumber>
+					<dcscom:periodType>Additional</dcscom:periodType>
+				</role>
+			</field>
+			<field xsi:type="DataSetFieldField">
+				<dataPath>ПериодДекада</dataPath>
+				<field>ПериодДекада</field>
+				<title xsi:type="v8:LocalStringType">
+					<v8:item>
+						<v8:lang>ru</v8:lang>
+						<v8:content>Период декада</v8:content>
+					</v8:item>
+				</title>
+				<role>
+					<dcscom:periodNumber>4</dcscom:periodNumber>
+					<dcscom:periodType>Additional</dcscom:periodType>
+				</role>
+			</field>
+			<field xsi:type="DataSetFieldField">
+				<dataPath>ПериодДень</dataPath>
+				<field>ПериодДень</field>
+				<title xsi:type="v8:LocalStringType">
+					<v8:item>
+						<v8:lang>ru</v8:lang>
+						<v8:content>Период день</v8:content>
+					</v8:item>
+				</title>
+				<role>
+					<dcscom:periodNumber>2</dcscom:periodNumber>
+					<dcscom:periodType>Additional</dcscom:periodType>
+				</role>
+			</field>
+			<field xsi:type="DataSetFieldField">
+				<dataPath>ПериодКвартал</dataPath>
+				<field>ПериодКвартал</field>
+				<title xsi:type="v8:LocalStringType">
+					<v8:item>
+						<v8:lang>ru</v8:lang>
+						<v8:content>Период квартал</v8:content>
+					</v8:item>
+				</title>
+				<role>
+					<dcscom:periodNumber>6</dcscom:periodNumber>
+					<dcscom:periodType>Additional</dcscom:periodType>
+				</role>
+			</field>
+			<field xsi:type="DataSetFieldField">
+				<dataPath>ПериодМесяц</dataPath>
+				<field>ПериодМесяц</field>
+				<title xsi:type="v8:LocalStringType">
+					<v8:item>
+						<v8:lang>ru</v8:lang>
+						<v8:content>Период месяц</v8:content>
+					</v8:item>
+				</title>
+				<role>
+					<dcscom:periodNumber>5</dcscom:periodNumber>
+					<dcscom:periodType>Additional</dcscom:periodType>
+				</role>
+			</field>
+			<field xsi:type="DataSetFieldField">
+				<dataPath>ПериодНеделя</dataPath>
+				<field>ПериодНеделя</field>
+				<title xsi:type="v8:LocalStringType">
+					<v8:item>
+						<v8:lang>ru</v8:lang>
+						<v8:content>Период неделя</v8:content>
+					</v8:item>
+				</title>
+				<role>
+					<dcscom:periodNumber>3</dcscom:periodNumber>
+					<dcscom:periodType>Additional</dcscom:periodType>
+				</role>
+			</field>
+			<field xsi:type="DataSetFieldField">
+				<dataPath>ПериодПолугодие</dataPath>
+				<field>ПериодПолугодие</field>
+				<title xsi:type="v8:LocalStringType">
+					<v8:item>
+						<v8:lang>ru</v8:lang>
+						<v8:content>Период полугодие</v8:content>
+					</v8:item>
+				</title>
+				<role>
+					<dcscom:periodNumber>7</dcscom:periodNumber>
+					<dcscom:periodType>Additional</dcscom:periodType>
+				</role>
+			</field>
+			<field xsi:type="DataSetFieldField">
+				<dataPath>ПериодСекунда</dataPath>
+				<field>ПериодСекунда</field>
+				<title xsi:type="v8:LocalStringType">
+					<v8:item>
+						<v8:lang>ru</v8:lang>
+						<v8:content>Период секунда</v8:content>
+					</v8:item>
+				</title>
+				<useRestriction>
+					<field>true</field>
+					<condition>true</condition>
+					<order>true</order>
+				</useRestriction>
+				<role>
+					<dcscom:periodNumber>1</dcscom:periodNumber>
+					<dcscom:periodType>Main</dcscom:periodType>
+				</role>
+			</field>
+			<field xsi:type="DataSetFieldField">
+				<dataPath>Подразделение</dataPath>
+				<field>Подразделение</field>
+				<title xsi:type="v8:LocalStringType">
+					<v8:item>
+						<v8:lang>ru</v8:lang>
+						<v8:content>Подразделение</v8:content>
+					</v8:item>
+				</title>
+			</field>
+			<field xsi:type="DataSetFieldField">
+				<dataPath>Продукция</dataPath>
+				<field>Продукция</field>
+				<title xsi:type="v8:LocalStringType">
+					<v8:item>
+						<v8:lang>ru</v8:lang>
+						<v8:content>Продукция</v8:content>
+					</v8:item>
+				</title>
+			</field>
+			<field xsi:type="DataSetFieldField">
+				<dataPath>Проект</dataPath>
+				<field>Проект</field>
+				<title xsi:type="v8:LocalStringType">
+					<v8:item>
+						<v8:lang>ru</v8:lang>
+						<v8:content>Проект</v8:content>
+					</v8:item>
+				</title>
+			</field>
+			<field xsi:type="DataSetFieldField">
+				<dataPath>РазделУчета</dataPath>
+				<field>РазделУчета</field>
+				<title xsi:type="v8:LocalStringType">
+					<v8:item>
+						<v8:lang>ru</v8:lang>
+						<v8:content>Раздел учета</v8:content>
+					</v8:item>
+				</title>
+			</field>
+			<field xsi:type="DataSetFieldField">
+				<dataPath>Регистратор</dataPath>
+				<field>Регистратор</field>
+				<title xsi:type="v8:LocalStringType">
+					<v8:item>
+						<v8:lang>ru</v8:lang>
+						<v8:content>Регистратор</v8:content>
+					</v8:item>
+				</title>
+			</field>
+			<field xsi:type="DataSetFieldField">
+				<dataPath>СерияЗатраты</dataPath>
+				<field>СерияЗатраты</field>
+				<title xsi:type="v8:LocalStringType">
+					<v8:item>
+						<v8:lang>ru</v8:lang>
+						<v8:content>Серия затраты</v8:content>
+					</v8:item>
+				</title>
+			</field>
+			<field xsi:type="DataSetFieldField">
+				<dataPath>СерияПродукции</dataPath>
+				<field>СерияПродукции</field>
+				<title xsi:type="v8:LocalStringType">
+					<v8:item>
+						<v8:lang>ru</v8:lang>
+						<v8:content>Серия продукции</v8:content>
+					</v8:item>
+				</title>
+			</field>
+			<field xsi:type="DataSetFieldField">
+				<dataPath>Спецификация</dataPath>
+				<field>Спецификация</field>
+				<title xsi:type="v8:LocalStringType">
+					<v8:item>
+						<v8:lang>ru</v8:lang>
+						<v8:content>Спецификация</v8:content>
+					</v8:item>
+				</title>
+			</field>
+			<field xsi:type="DataSetFieldField">
+				<dataPath>СпособРаспределенияЗатрат</dataPath>
+				<field>СпособРаспределенияЗатрат</field>
+				<title xsi:type="v8:LocalStringType">
+					<v8:item>
+						<v8:lang>ru</v8:lang>
+						<v8:content>Способ распределения затрат</v8:content>
+					</v8:item>
+				</title>
+			</field>
+			<field xsi:type="DataSetFieldField">
+				<dataPath>СтатьяЗатрат</dataPath>
+				<field>СтатьяЗатрат</field>
+				<title xsi:type="v8:LocalStringType">
+					<v8:item>
+						<v8:lang>ru</v8:lang>
+						<v8:content>Статья затрат</v8:content>
+					</v8:item>
+				</title>
+			</field>
+			<field xsi:type="DataSetFieldField">
+				<dataPath>СтоимостьКонечныйОстаток</dataPath>
+				<field>СтоимостьКонечныйОстаток</field>
+				<title xsi:type="v8:LocalStringType">
+					<v8:item>
+						<v8:lang>ru</v8:lang>
+						<v8:content>Стоимость конечный остаток</v8:content>
+					</v8:item>
+				</title>
+				<role>
+					<dcscom:balance>true</dcscom:balance>
+					<dcscom:balanceGroupName>Стоимость</dcscom:balanceGroupName>
+					<dcscom:balanceType>ClosingBalance</dcscom:balanceType>
+				</role>
+			</field>
+			<field xsi:type="DataSetFieldField">
+				<dataPath>СтоимостьНачальныйОстаток</dataPath>
+				<field>СтоимостьНачальныйОстаток</field>
+				<title xsi:type="v8:LocalStringType">
+					<v8:item>
+						<v8:lang>ru</v8:lang>
+						<v8:content>Стоимость начальный остаток</v8:content>
+					</v8:item>
+				</title>
+				<role>
+					<dcscom:balance>true</dcscom:balance>
+					<dcscom:balanceGroupName>Стоимость</dcscom:balanceGroupName>
+					<dcscom:balanceType>OpeningBalance</dcscom:balanceType>
+				</role>
+			</field>
+			<field xsi:type="DataSetFieldField">
+				<dataPath>СтоимостьОборот</dataPath>
+				<field>СтоимостьОборот</field>
+				<title xsi:type="v8:LocalStringType">
+					<v8:item>
+						<v8:lang>ru</v8:lang>
+						<v8:content>Стоимость оборот</v8:content>
+					</v8:item>
+				</title>
+			</field>
+			<field xsi:type="DataSetFieldField">
+				<dataPath>СтоимостьПриход</dataPath>
+				<field>СтоимостьПриход</field>
+				<title xsi:type="v8:LocalStringType">
+					<v8:item>
+						<v8:lang>ru</v8:lang>
+						<v8:content>Стоимость приход</v8:content>
+					</v8:item>
+				</title>
+			</field>
+			<field xsi:type="DataSetFieldField">
+				<dataPath>СтоимостьРасход</dataPath>
+				<field>СтоимостьРасход</field>
+				<title xsi:type="v8:LocalStringType">
+					<v8:item>
+						<v8:lang>ru</v8:lang>
+						<v8:content>Стоимость расход</v8:content>
+					</v8:item>
+				</title>
+			</field>
+			<field xsi:type="DataSetFieldField">
+				<dataPath>Счет</dataPath>
+				<field>Счет</field>
+				<title xsi:type="v8:LocalStringType">
+					<v8:item>
+						<v8:lang>ru</v8:lang>
+						<v8:content>Счет</v8:content>
+					</v8:item>
+				</title>
+			</field>
+			<field xsi:type="DataSetFieldField">
+				<dataPath>ХарактерЗатрат</dataPath>
+				<field>ХарактерЗатрат</field>
+				<title xsi:type="v8:LocalStringType">
+					<v8:item>
+						<v8:lang>ru</v8:lang>
+						<v8:content>Характер затрат</v8:content>
+					</v8:item>
+				</title>
+			</field>
+			<field xsi:type="DataSetFieldField">
+				<dataPath>ХарактеристикаЗатраты</dataPath>
+				<field>ХарактеристикаЗатраты</field>
+				<title xsi:type="v8:LocalStringType">
+					<v8:item>
+						<v8:lang>ru</v8:lang>
+						<v8:content>Характеристика затраты</v8:content>
+					</v8:item>
+				</title>
+			</field>
+			<field xsi:type="DataSetFieldField">
+				<dataPath>ХарактеристикаПродукции</dataPath>
+				<field>ХарактеристикаПродукции</field>
+				<title xsi:type="v8:LocalStringType">
+					<v8:item>
+						<v8:lang>ru</v8:lang>
+						<v8:content>Характеристика продукции</v8:content>
+					</v8:item>
+				</title>
+			</field>
+			<dataSource>ИсточникДанных1</dataSource>
+			<query>ВЫБРАТЬ РАЗРЕШЕННЫЕ
+	РегистрАналитикаВидаУчета.Ссылка
+ПОМЕСТИТЬ АналитикаПоРазделамУчета
+ИЗ
+	РегистрСведений.АналитикаВидаУчета КАК РегистрАналитикаВидаУчета
+ГДЕ
+	РегистрАналитикаВидаУчета.РазделУчета В(&amp;РазделыУчета)
+;
+
+////////////////////////////////////////////////////////////////////////////////
+ВЫБРАТЬ РАЗРЕШЕННЫЕ
+	УчетЗатрат.АналитикаВидаУчета КАК АналитикаВидаУчета,
+	УчетЗатрат.АналитикаУчетаЗатрат КАК АналитикаУчетаЗатрат,
+	УчетЗатрат.АналитикаУчетаПартий КАК АналитикаУчетаПартий,
+	УчетЗатрат.АналитикаРаспределенияЗатрат КАК АналитикаРаспределенияЗатрат,
+	РегистрАналитикаВидаУчета.РазделУчета КАК РазделУчета,
+	РегистрАналитикаВидаУчета.Организация КАК Организация,
+	РегистрАналитикаВидаУчета.Подразделение КАК Подразделение,
+	РегистрАналитикаВидаУчета.Проект КАК Проект,
+	РегистрАналитикаВидаУчета.СчетУчета КАК Счет,
+	РегистрАналитикаВидаУчета.НалоговоеНазначение КАК НалоговоеНазначение,
+	РегистрАналитикаУчетаЗатрат.СтатьяЗатрат КАК СтатьяЗатрат,
+	РегистрАналитикаУчетаЗатрат.Затрата КАК Затрата,
+	РегистрАналитикаУчетаЗатрат.ХарактеристикаЗатраты КАК ХарактеристикаЗатраты,
+	РегистрАналитикаУчетаЗатрат.СерияЗатраты КАК СерияЗатраты,
+	РегистрАналитикаУчетаЗатрат.СпособРаспределенияЗатрат КАК СпособРаспределенияЗатрат,
+	РегистрАналитикаУчетаЗатрат.ХарактерЗатрат КАК ХарактерЗатрат,
+	РегистрАналитикаРаспределенияЗатрат.НоменклатурнаяГруппа КАК НоменклатурнаяГруппа,
+	РегистрАналитикаРаспределенияЗатрат.Продукция КАК Продукция,
+	РегистрАналитикаРаспределенияЗатрат.ХарактеристикаПродукции КАК ХарактеристикаПродукции,
+	РегистрАналитикаРаспределенияЗатрат.СерияПродукции КАК СерияПродукции,
+	РегистрАналитикаРаспределенияЗатрат.Спецификация КАК Спецификация,
+	РегистрАналитикаУчетаПартий.Заказ КАК Заказ,
+	ВЫБОР
+		КОГДА УчетЗатрат.Регистратор = НЕОПРЕДЕЛЕНО
+			ТОГДА NULL
+		ИНАЧЕ УчетЗатрат.Регистратор
+	КОНЕЦ КАК Регистратор,
+	УчетЗатрат.ПериодСекунда КАК ПериодСекунда,
+	УчетЗатрат.ПериодДень КАК ПериодДень,
+	УчетЗатрат.ПериодНеделя КАК ПериодНеделя,
+	УчетЗатрат.ПериодДекада КАК ПериодДекада,
+	УчетЗатрат.ПериодМесяц КАК ПериодМесяц,
+	УчетЗатрат.ПериодКвартал КАК ПериодКвартал,
+	УчетЗатрат.ПериодПолугодие КАК ПериодПолугодие,
+	УчетЗатрат.ПериодГод КАК ПериодГод,
+	УчетЗатрат.КоличествоНачальныйОстаток КАК КоличествоНачальныйОстаток,
+	УчетЗатрат.КоличествоПриход КАК КоличествоПриход,
+	УчетЗатрат.КоличествоРасход КАК КоличествоРасход,
+	УчетЗатрат.КоличествоКонечныйОстаток КАК КоличествоКонечныйОстаток,
+	УчетЗатрат.КоличествоОборот КАК КоличествоОборот,
+	УчетЗатрат.СтоимостьНачальныйОстаток КАК СтоимостьНачальныйОстаток,
+	УчетЗатрат.СтоимостьПриход КАК СтоимостьПриход,
+	УчетЗатрат.СтоимостьРасход КАК СтоимостьРасход,
+	УчетЗатрат.СтоимостьКонечныйОстаток КАК СтоимостьКонечныйОстаток,
+	УчетЗатрат.СтоимостьОборот КАК СтоимостьОборот,
+	ВЫБОР
+		КОГДА &amp;ЕдиницыКоличестваВОтчете = 0
+			ТОГДА РегистрАналитикаУчетаЗатрат.Затрата.ЕдиницаХраненияОстатков
+		ИНАЧЕ ВЫБОР
+				КОГДА &amp;ЕдиницыКоличестваВОтчете = 1
+					ТОГДА РегистрАналитикаУчетаЗатрат.Затрата.БазоваяЕдиницаИзмерения
+				ИНАЧЕ РегистрАналитикаУчетаЗатрат.Затрата.ЕдиницаДляОтчетов
+			КОНЕЦ
+	КОНЕЦ КАК ЕдиницаИзмерения
+ИЗ
+	РегистрНакопления.УчетЗатрат.ОстаткиИОбороты(
+			,
+			,
+			Авто,
+			,
+			&amp;ВидУчета = 0
+				И АналитикаВидаУчета В
+					(ВЫБРАТЬ РАЗЛИЧНЫЕ
+						РегистрАналитикаВидаУчета.Ссылка
+					ИЗ
+						АналитикаПоРазделамУчета КАК РегистрАналитикаВидаУчета)) КАК УчетЗатрат
+		{ЛЕВОЕ СОЕДИНЕНИЕ РегистрСведений.АналитикаВидаУчета КАК РегистрАналитикаВидаУчета
+		ПО УчетЗатрат.АналитикаВидаУчета = РегистрАналитикаВидаУчета.Ссылка}
+		{ЛЕВОЕ СОЕДИНЕНИЕ РегистрСведений.АналитикаУчетаЗатрат КАК РегистрАналитикаУчетаЗатрат
+		ПО УчетЗатрат.АналитикаУчетаЗатрат = РегистрАналитикаУчетаЗатрат.Ссылка}
+		{ЛЕВОЕ СОЕДИНЕНИЕ РегистрСведений.АналитикаРаспределенияЗатрат КАК РегистрАналитикаРаспределенияЗатрат
+		ПО УчетЗатрат.АналитикаРаспределенияЗатрат = РегистрАналитикаРаспределенияЗатрат.Ссылка}
+		{ЛЕВОЕ СОЕДИНЕНИЕ РегистрСведений.АналитикаУчетаПартий КАК РегистрАналитикаУчетаПартий
+		ПО УчетЗатрат.АналитикаУчетаПартий = РегистрАналитикаУчетаПартий.Ссылка}
+{ХАРАКТЕРИСТИКИ
+	ТИП(Справочник.ХарактеристикиНоменклатуры)
+	СПИСОК (ВЫБРАТЬ 
+						СвойстваОбъектов.Ссылка,
+						СвойстваОбъектов.Наименование,
+						СвойстваОбъектов.ТипЗначения
+					ИЗ 
+						ПланВидовХарактеристик.СвойстваОбъектов КАК СвойстваОбъектов
+					ГДЕ НазначениеСвойства = Значение(ПланВидовХарактеристик.НазначенияСвойствКатегорийОбъектов.Справочник_ХарактеристикиНоменклатуры))
+	ИДЕНТИФИКАТОР Ссылка
+	ИМЯ Наименование
+	ТИПЗНАЧЕНИЯ ТипЗначения
+	ЗНАЧЕНИЯ РегистрСведений.ЗначенияСвойствОбъектов
+	ОБЪЕКТ Объект
+	ХАРАКТЕРИСТИКА Свойство
+	ЗНАЧЕНИЕ Значение }
+{ХАРАКТЕРИСТИКИ
+	ТИП(Справочник.ХарактеристикиНоменклатуры)
+	СПИСОК (ВЫБРАТЬ
+						КатегорииОбъектов.Ссылка,
+						КатегорииОбъектов.Наименование
+					ИЗ
+						Справочник.КатегорииОбъектов КАК КатегорииОбъектов
+					ГДЕ
+						КатегорииОбъектов.НазначениеКатегории = ЗНАЧЕНИЕ(ПланВидовХарактеристик.НазначенияСвойствКатегорийОбъектов.Справочник_ХарактеристикиНоменклатуры))
+	ИДЕНТИФИКАТОР Ссылка
+	ИМЯ Наименование
+	ЗНАЧЕНИЯ РегистрСведений.КатегорииОбъектов
+	ОБЪЕКТ Объект
+	ХАРАКТЕРИСТИКА Категория }
+{ХАРАКТЕРИСТИКИ
+	ТИП(Справочник.КонтактныеЛицаКонтрагентов)
+	СПИСОК (ВЫБРАТЬ 
+						СвойстваОбъектов.Ссылка,
+						СвойстваОбъектов.Наименование,
+						СвойстваОбъектов.ТипЗначения
+					ИЗ 
+						ПланВидовХарактеристик.СвойстваОбъектов КАК СвойстваОбъектов
+					ГДЕ НазначениеСвойства = Значение(ПланВидовХарактеристик.НазначенияСвойствКатегорийОбъектов.Справочник_КонтактныеЛицаКонтрагентов))
+	ИДЕНТИФИКАТОР Ссылка
+	ИМЯ Наименование
+	ТИПЗНАЧЕНИЯ ТипЗначения
+	ЗНАЧЕНИЯ РегистрСведений.ЗначенияСвойствОбъектов
+	ОБЪЕКТ Объект
+	ХАРАКТЕРИСТИКА Свойство
+	ЗНАЧЕНИЕ Значение }
+{ХАРАКТЕРИСТИКИ
+	ТИП(Справочник.КонтактныеЛицаКонтрагентов)
+	СПИСОК (ВЫБРАТЬ
+						КатегорииОбъектов.Ссылка,
+						КатегорииОбъектов.Наименование
+					ИЗ
+						Справочник.КатегорииОбъектов КАК КатегорииОбъектов
+					ГДЕ
+						КатегорииОбъектов.НазначениеКатегории = ЗНАЧЕНИЕ(ПланВидовХарактеристик.НазначенияСвойствКатегорийОбъектов.Справочник_КонтактныеЛицаКонтрагентов))
+	ИДЕНТИФИКАТОР Ссылка
+	ИМЯ Наименование
+	ЗНАЧЕНИЯ РегистрСведений.КатегорииОбъектов
+	ОБЪЕКТ Объект
+	ХАРАКТЕРИСТИКА Категория }
+{ХАРАКТЕРИСТИКИ
+	ТИП(Справочник.КонтактныеЛица)
+	СПИСОК (ВЫБРАТЬ 
+						СвойстваОбъектов.Ссылка,
+						СвойстваОбъектов.Наименование,
+						СвойстваОбъектов.ТипЗначения
+					ИЗ 
+						ПланВидовХарактеристик.СвойстваОбъектов КАК СвойстваОбъектов
+					ГДЕ НазначениеСвойства = Значение(ПланВидовХарактеристик.НазначенияСвойствКатегорийОбъектов.Справочник_КонтактныеЛица))
+	ИДЕНТИФИКАТОР Ссылка
+	ИМЯ Наименование
+	ТИПЗНАЧЕНИЯ ТипЗначения
+	ЗНАЧЕНИЯ РегистрСведений.ЗначенияСвойствОбъектов
+	ОБЪЕКТ Объект
+	ХАРАКТЕРИСТИКА Свойство
+	ЗНАЧЕНИЕ Значение }
+{ХАРАКТЕРИСТИКИ
+	ТИП(Справочник.КонтактныеЛица)
+	СПИСОК (ВЫБРАТЬ
+						КатегорииОбъектов.Ссылка,
+						КатегорииОбъектов.Наименование
+					ИЗ
+						Справочник.КатегорииОбъектов КАК КатегорииОбъектов
+					ГДЕ
+						КатегорииОбъектов.НазначениеКатегории = ЗНАЧЕНИЕ(ПланВидовХарактеристик.НазначенияСвойствКатегорийОбъектов.Справочник_КонтактныеЛица))
+	ИДЕНТИФИКАТОР Ссылка
+	ИМЯ Наименование
+	ЗНАЧЕНИЯ РегистрСведений.КатегорииОбъектов
+	ОБЪЕКТ Объект
+	ХАРАКТЕРИСТИКА Категория }
+{ХАРАКТЕРИСТИКИ
+	ТИП(Справочник.Контрагенты)
+	СПИСОК (ВЫБРАТЬ 
+						СвойстваОбъектов.Ссылка,
+						СвойстваОбъектов.Наименование,
+						СвойстваОбъектов.ТипЗначения
+					ИЗ 
+						ПланВидовХарактеристик.СвойстваОбъектов КАК СвойстваОбъектов
+					ГДЕ НазначениеСвойства = Значение(ПланВидовХарактеристик.НазначенияСвойствКатегорийОбъектов.Справочник_Контрагенты))
+	ИДЕНТИФИКАТОР Ссылка
+	ИМЯ Наименование
+	ТИПЗНАЧЕНИЯ ТипЗначения
+	ЗНАЧЕНИЯ РегистрСведений.ЗначенияСвойствОбъектов
+	ОБЪЕКТ Объект
+	ХАРАКТЕРИСТИКА Свойство
+	ЗНАЧЕНИЕ Значение }
+{ХАРАКТЕРИСТИКИ
+	ТИП(Справочник.Контрагенты)
+	СПИСОК (ВЫБРАТЬ
+						КатегорииОбъектов.Ссылка,
+						КатегорииОбъектов.Наименование
+					ИЗ
+						Справочник.КатегорииОбъектов КАК КатегорииОбъектов
+					ГДЕ
+						КатегорииОбъектов.НазначениеКатегории = ЗНАЧЕНИЕ(ПланВидовХарактеристик.НазначенияСвойствКатегорийОбъектов.Справочник_Контрагенты))
+	ИДЕНТИФИКАТОР Ссылка
+	ИМЯ Наименование
+	ЗНАЧЕНИЯ РегистрСведений.КатегорииОбъектов
+	ОБЪЕКТ Объект
+	ХАРАКТЕРИСТИКА Категория }
+{ХАРАКТЕРИСТИКИ
+	ТИП(Справочник.Номенклатура)
+	СПИСОК (ВЫБРАТЬ 
+						СвойстваОбъектов.Ссылка,
+						СвойстваОбъектов.Наименование,
+						СвойстваОбъектов.ТипЗначения
+					ИЗ 
+						ПланВидовХарактеристик.СвойстваОбъектов КАК СвойстваОбъектов
+					ГДЕ НазначениеСвойства = Значение(ПланВидовХарактеристик.НазначенияСвойствКатегорийОбъектов.Справочник_Номенклатура))
+	ИДЕНТИФИКАТОР Ссылка
+	ИМЯ Наименование
+	ТИПЗНАЧЕНИЯ ТипЗначения
+	ЗНАЧЕНИЯ РегистрСведений.ЗначенияСвойствОбъектов
+	ОБЪЕКТ Объект
+	ХАРАКТЕРИСТИКА Свойство
+	ЗНАЧЕНИЕ Значение }
+{ХАРАКТЕРИСТИКИ
+	ТИП(Справочник.Номенклатура)
+	СПИСОК (ВЫБРАТЬ
+						КатегорииОбъектов.Ссылка,
+						КатегорииОбъектов.Наименование
+					ИЗ
+						Справочник.КатегорииОбъектов КАК КатегорииОбъектов
+					ГДЕ
+						КатегорииОбъектов.НазначениеКатегории = ЗНАЧЕНИЕ(ПланВидовХарактеристик.НазначенияСвойствКатегорийОбъектов.Справочник_Номенклатура))
+	ИДЕНТИФИКАТОР Ссылка
+	ИМЯ Наименование
+	ЗНАЧЕНИЯ РегистрСведений.КатегорииОбъектов
+	ОБЪЕКТ Объект
+	ХАРАКТЕРИСТИКА Категория }
+{ХАРАКТЕРИСТИКИ
+	ТИП(Справочник.ОсновныеСредства)
+	СПИСОК (ВЫБРАТЬ 
+						СвойстваОбъектов.Ссылка,
+						СвойстваОбъектов.Наименование,
+						СвойстваОбъектов.ТипЗначения
+					ИЗ 
+						ПланВидовХарактеристик.СвойстваОбъектов КАК СвойстваОбъектов
+					ГДЕ НазначениеСвойства = Значение(ПланВидовХарактеристик.НазначенияСвойствКатегорийОбъектов.Справочник_ОсновныеСредства))
+	ИДЕНТИФИКАТОР Ссылка
+	ИМЯ Наименование
+	ТИПЗНАЧЕНИЯ ТипЗначения
+	ЗНАЧЕНИЯ РегистрСведений.ЗначенияСвойствОбъектов
+	ОБЪЕКТ Объект
+	ХАРАКТЕРИСТИКА Свойство
+	ЗНАЧЕНИЕ Значение }
+{ХАРАКТЕРИСТИКИ
+	ТИП(Справочник.ОсновныеСредства)
+	СПИСОК (ВЫБРАТЬ
+						КатегорииОбъектов.Ссылка,
+						КатегорииОбъектов.Наименование
+					ИЗ
+						Справочник.КатегорииОбъектов КАК КатегорииОбъектов
+					ГДЕ
+						КатегорииОбъектов.НазначениеКатегории = ЗНАЧЕНИЕ(ПланВидовХарактеристик.НазначенияСвойствКатегорийОбъектов.Справочник_ОсновныеСредства))
+	ИДЕНТИФИКАТОР Ссылка
+	ИМЯ Наименование
+	ЗНАЧЕНИЯ РегистрСведений.КатегорииОбъектов
+	ОБЪЕКТ Объект
+	ХАРАКТЕРИСТИКА Категория }
+{ХАРАКТЕРИСТИКИ
+	ТИП(Справочник.Подразделения)
+	СПИСОК (ВЫБРАТЬ 
+						СвойстваОбъектов.Ссылка,
+						СвойстваОбъектов.Наименование,
+						СвойстваОбъектов.ТипЗначения
+					ИЗ 
+						ПланВидовХарактеристик.СвойстваОбъектов КАК СвойстваОбъектов
+					ГДЕ НазначениеСвойства = Значение(ПланВидовХарактеристик.НазначенияСвойствКатегорийОбъектов.Справочник_Подразделения))
+	ИДЕНТИФИКАТОР Ссылка
+	ИМЯ Наименование
+	ТИПЗНАЧЕНИЯ ТипЗначения
+	ЗНАЧЕНИЯ РегистрСведений.ЗначенияСвойствОбъектов
+	ОБЪЕКТ Объект
+	ХАРАКТЕРИСТИКА Свойство
+	ЗНАЧЕНИЕ Значение }
+{ХАРАКТЕРИСТИКИ
+	ТИП(Справочник.Подразделения)
+	СПИСОК (ВЫБРАТЬ
+						КатегорииОбъектов.Ссылка,
+						КатегорииОбъектов.Наименование
+					ИЗ
+						Справочник.КатегорииОбъектов КАК КатегорииОбъектов
+					ГДЕ
+						КатегорииОбъектов.НазначениеКатегории = ЗНАЧЕНИЕ(ПланВидовХарактеристик.НазначенияСвойствКатегорийОбъектов.Справочник_Подразделения))
+	ИДЕНТИФИКАТОР Ссылка
+	ИМЯ Наименование
+	ЗНАЧЕНИЯ РегистрСведений.КатегорииОбъектов
+	ОБЪЕКТ Объект
+	ХАРАКТЕРИСТИКА Категория }
+{ХАРАКТЕРИСТИКИ
+	ТИП(Справочник.Проекты)
+	СПИСОК (ВЫБРАТЬ 
+						СвойстваОбъектов.Ссылка,
+						СвойстваОбъектов.Наименование,
+						СвойстваОбъектов.ТипЗначения
+					ИЗ 
+						ПланВидовХарактеристик.СвойстваОбъектов КАК СвойстваОбъектов
+					ГДЕ НазначениеСвойства = Значение(ПланВидовХарактеристик.НазначенияСвойствКатегорийОбъектов.Справочник_Проекты))
+	ИДЕНТИФИКАТОР Ссылка
+	ИМЯ Наименование
+	ТИПЗНАЧЕНИЯ ТипЗначения
+	ЗНАЧЕНИЯ РегистрСведений.ЗначенияСвойствОбъектов
+	ОБЪЕКТ Объект
+	ХАРАКТЕРИСТИКА Свойство
+	ЗНАЧЕНИЕ Значение }
+{ХАРАКТЕРИСТИКИ
+	ТИП(Справочник.Проекты)
+	СПИСОК (ВЫБРАТЬ
+						КатегорииОбъектов.Ссылка,
+						КатегорииОбъектов.Наименование
+					ИЗ
+						Справочник.КатегорииОбъектов КАК КатегорииОбъектов
+					ГДЕ
+						КатегорииОбъектов.НазначениеКатегории = ЗНАЧЕНИЕ(ПланВидовХарактеристик.НазначенияСвойствКатегорийОбъектов.Справочник_Проекты))
+	ИДЕНТИФИКАТОР Ссылка
+	ИМЯ Наименование
+	ЗНАЧЕНИЯ РегистрСведений.КатегорииОбъектов
+	ОБЪЕКТ Объект
+	ХАРАКТЕРИСТИКА Категория }
+{ХАРАКТЕРИСТИКИ
+	ТИП(Справочник.Склады)
+	СПИСОК (ВЫБРАТЬ 
+						СвойстваОбъектов.Ссылка,
+						СвойстваОбъектов.Наименование,
+						СвойстваОбъектов.ТипЗначения
+					ИЗ 
+						ПланВидовХарактеристик.СвойстваОбъектов КАК СвойстваОбъектов
+					ГДЕ НазначениеСвойства = Значение(ПланВидовХарактеристик.НазначенияСвойствКатегорийОбъектов.Справочник_Склады))
+	ИДЕНТИФИКАТОР Ссылка
+	ИМЯ Наименование
+	ТИПЗНАЧЕНИЯ ТипЗначения
+	ЗНАЧЕНИЯ РегистрСведений.ЗначенияСвойствОбъектов
+	ОБЪЕКТ Объект
+	ХАРАКТЕРИСТИКА Свойство
+	ЗНАЧЕНИЕ Значение }
+{ХАРАКТЕРИСТИКИ
+	ТИП(Справочник.Склады)
+	СПИСОК (ВЫБРАТЬ
+						КатегорииОбъектов.Ссылка,
+						КатегорииОбъектов.Наименование
+					ИЗ
+						Справочник.КатегорииОбъектов КАК КатегорииОбъектов
+					ГДЕ
+						КатегорииОбъектов.НазначениеКатегории = ЗНАЧЕНИЕ(ПланВидовХарактеристик.НазначенияСвойствКатегорийОбъектов.Справочник_Склады))
+	ИДЕНТИФИКАТОР Ссылка
+	ИМЯ Наименование
+	ЗНАЧЕНИЯ РегистрСведений.КатегорииОбъектов
+	ОБЪЕКТ Объект
+	ХАРАКТЕРИСТИКА Категория }
+{ХАРАКТЕРИСТИКИ
+	ТИП(Справочник.ФизическиеЛица)
+	СПИСОК (ВЫБРАТЬ 
+						СвойстваОбъектов.Ссылка,
+						СвойстваОбъектов.Наименование,
+						СвойстваОбъектов.ТипЗначения
+					ИЗ 
+						ПланВидовХарактеристик.СвойстваОбъектов КАК СвойстваОбъектов
+					ГДЕ НазначениеСвойства = Значение(ПланВидовХарактеристик.НазначенияСвойствКатегорийОбъектов.Справочник_ФизическиеЛица))
+	ИДЕНТИФИКАТОР Ссылка
+	ИМЯ Наименование
+	ТИПЗНАЧЕНИЯ ТипЗначения
+	ЗНАЧЕНИЯ РегистрСведений.ЗначенияСвойствОбъектов
+	ОБЪЕКТ Объект
+	ХАРАКТЕРИСТИКА Свойство
+	ЗНАЧЕНИЕ Значение }
+{ХАРАКТЕРИСТИКИ
+	ТИП(Справочник.ФизическиеЛица)
+	СПИСОК (ВЫБРАТЬ
+						КатегорииОбъектов.Ссылка,
+						КатегорииОбъектов.Наименование
+					ИЗ
+						Справочник.КатегорииОбъектов КАК КатегорииОбъектов
+					ГДЕ
+						КатегорииОбъектов.НазначениеКатегории = ЗНАЧЕНИЕ(ПланВидовХарактеристик.НазначенияСвойствКатегорийОбъектов.Справочник_ФизическиеЛица))
+	ИДЕНТИФИКАТОР Ссылка
+	ИМЯ Наименование
+	ЗНАЧЕНИЯ РегистрСведений.КатегорииОбъектов
+	ОБЪЕКТ Объект
+	ХАРАКТЕРИСТИКА Категория }
+{ХАРАКТЕРИСТИКИ
+	ТИП(Документ)
+	СПИСОК (ВЫБРАТЬ 
+						СвойстваОбъектов.Ссылка,
+						СвойстваОбъектов.Наименование,
+						СвойстваОбъектов.ТипЗначения
+					ИЗ 
+						ПланВидовХарактеристик.СвойстваОбъектов КАК СвойстваОбъектов
+					ГДЕ НазначениеСвойства = Значение(ПланВидовХарактеристик.НазначенияСвойствКатегорийОбъектов.Документы))
+	ИДЕНТИФИКАТОР Ссылка
+	ИМЯ Наименование
+	ТИПЗНАЧЕНИЯ ТипЗначения
+	ЗНАЧЕНИЯ РегистрСведений.ЗначенияСвойствОбъектов
+	ОБЪЕКТ Объект
+	ХАРАКТЕРИСТИКА Свойство
+	ЗНАЧЕНИЕ Значение }
+{ХАРАКТЕРИСТИКИ
+	ТИП(Документ)
+	СПИСОК (ВЫБРАТЬ
+						КатегорииОбъектов.Ссылка,
+						КатегорииОбъектов.Наименование
+					ИЗ
+						Справочник.КатегорииОбъектов КАК КатегорииОбъектов
+					ГДЕ
+						КатегорииОбъектов.НазначениеКатегории = ЗНАЧЕНИЕ(ПланВидовХарактеристик.НазначенияСвойствКатегорийОбъектов.Документы))
+	ИДЕНТИФИКАТОР Ссылка
+	ИМЯ Наименование
+	ЗНАЧЕНИЯ РегистрСведений.КатегорииОбъектов
+	ОБЪЕКТ Объект
+	ХАРАКТЕРИСТИКА Категория }
+{ХАРАКТЕРИСТИКИ
+	ТИП(Справочник.ДоговорыКонтрагентов)
+	СПИСОК (ВЫБРАТЬ 
+						СвойстваОбъектов.Ссылка,
+						СвойстваОбъектов.Наименование,
+						СвойстваОбъектов.ТипЗначения
+					ИЗ 
+						ПланВидовХарактеристик.СвойстваОбъектов КАК СвойстваОбъектов
+					ГДЕ НазначениеСвойства = Значение(ПланВидовХарактеристик.НазначенияСвойствКатегорийОбъектов.Справочник_ДоговорыКонтрагентов))
+	ИДЕНТИФИКАТОР Ссылка
+	ИМЯ Наименование
+	ТИПЗНАЧЕНИЯ ТипЗначения
+	ЗНАЧЕНИЯ РегистрСведений.ЗначенияСвойствОбъектов
+	ОБЪЕКТ Объект
+	ХАРАКТЕРИСТИКА Свойство
+	ЗНАЧЕНИЕ Значение }
+{ХАРАКТЕРИСТИКИ
+	ТИП(Справочник.ДоговорыКонтрагентов)
+	СПИСОК (ВЫБРАТЬ
+						КатегорииОбъектов.Ссылка,
+						КатегорииОбъектов.Наименование
+					ИЗ
+						Справочник.КатегорииОбъектов КАК КатегорииОбъектов
+					ГДЕ
+						КатегорииОбъектов.НазначениеКатегории = ЗНАЧЕНИЕ(ПланВидовХарактеристик.НазначенияСвойствКатегорийОбъектов.Справочник_ДоговорыКонтрагентов))
+	ИДЕНТИФИКАТОР Ссылка
+	ИМЯ Наименование
+	ЗНАЧЕНИЯ РегистрСведений.КатегорииОбъектов
+	ОБЪЕКТ Объект
+	ХАРАКТЕРИСТИКА Категория }		</query>
+		</item>
+		<item xsi:type="DataSetQuery">
+			<name>УчетЗатратРегл</name>
+			<field xsi:type="DataSetFieldField">
+				<dataPath>АналитикаВидаУчета</dataPath>
+				<field>АналитикаВидаУчета</field>
+				<title xsi:type="v8:LocalStringType">
+					<v8:item>
+						<v8:lang>ru</v8:lang>
+						<v8:content>Аналитика вида учета</v8:content>
+					</v8:item>
+				</title>
+				<role>
+					<dcscom:dimension>true</dcscom:dimension>
+				</role>
+			</field>
+			<field xsi:type="DataSetFieldField">
+				<dataPath>АналитикаРаспределенияЗатрат</dataPath>
+				<field>АналитикаРаспределенияЗатрат</field>
+				<title xsi:type="v8:LocalStringType">
+					<v8:item>
+						<v8:lang>ru</v8:lang>
+						<v8:content>Аналитика распределения затрат</v8:content>
+					</v8:item>
+				</title>
+				<role>
+					<dcscom:dimension>true</dcscom:dimension>
+				</role>
+			</field>
+			<field xsi:type="DataSetFieldField">
+				<dataPath>АналитикаУчетаЗатрат</dataPath>
+				<field>АналитикаУчетаЗатрат</field>
+				<title xsi:type="v8:LocalStringType">
+					<v8:item>
+						<v8:lang>ru</v8:lang>
+						<v8:content>Аналитика учета затрат</v8:content>
+					</v8:item>
+				</title>
+				<role>
+					<dcscom:dimension>true</dcscom:dimension>
+				</role>
+			</field>
+			<field xsi:type="DataSetFieldField">
+				<dataPath>АналитикаУчетаПартий</dataPath>
+				<field>АналитикаУчетаПартий</field>
+				<title xsi:type="v8:LocalStringType">
+					<v8:item>
+						<v8:lang>ru</v8:lang>
+						<v8:content>Аналитика учета партий</v8:content>
+					</v8:item>
+				</title>
+				<role>
+					<dcscom:dimension>true</dcscom:dimension>
+				</role>
+			</field>
+			<field xsi:type="DataSetFieldField">
+				<dataPath>ЕдиницаИзмерения</dataPath>
+				<field>ЕдиницаИзмерения</field>
+				<title xsi:type="v8:LocalStringType">
+					<v8:item>
+						<v8:lang>ru</v8:lang>
+						<v8:content>Единица измерения</v8:content>
+					</v8:item>
+				</title>
+			</field>
+			<field xsi:type="DataSetFieldField">
+				<dataPath>Заказ</dataPath>
+				<field>Заказ</field>
+				<title xsi:type="v8:LocalStringType">
+					<v8:item>
+						<v8:lang>ru</v8:lang>
+						<v8:content>Заказ</v8:content>
+					</v8:item>
+				</title>
+			</field>
+			<field xsi:type="DataSetFieldField">
+				<dataPath>Затрата</dataPath>
+				<field>Затрата</field>
+				<title xsi:type="v8:LocalStringType">
+					<v8:item>
+						<v8:lang>ru</v8:lang>
+						<v8:content>Затрата</v8:content>
+					</v8:item>
+				</title>
+			</field>
+			<field xsi:type="DataSetFieldField">
+				<dataPath>КоличествоКонечныйОстаток</dataPath>
+				<field>КоличествоКонечныйОстаток</field>
+				<title xsi:type="v8:LocalStringType">
+					<v8:item>
+						<v8:lang>ru</v8:lang>
+						<v8:content>Количество конечный остаток</v8:content>
+					</v8:item>
+				</title>
+				<role>
+					<dcscom:balance>true</dcscom:balance>
+					<dcscom:balanceGroupName>Количество</dcscom:balanceGroupName>
+					<dcscom:balanceType>ClosingBalance</dcscom:balanceType>
+				</role>
+			</field>
+			<field xsi:type="DataSetFieldField">
+				<dataPath>КоличествоНачальныйОстаток</dataPath>
+				<field>КоличествоНачальныйОстаток</field>
+				<title xsi:type="v8:LocalStringType">
+					<v8:item>
+						<v8:lang>ru</v8:lang>
+						<v8:content>Количество начальный остаток</v8:content>
+					</v8:item>
+				</title>
+				<role>
+					<dcscom:balance>true</dcscom:balance>
+					<dcscom:balanceGroupName>Количество</dcscom:balanceGroupName>
+					<dcscom:balanceType>OpeningBalance</dcscom:balanceType>
+				</role>
+			</field>
+			<field xsi:type="DataSetFieldField">
+				<dataPath>КоличествоНУКонечныйОстаток</dataPath>
+				<field>КоличествоНУКонечныйОстаток</field>
+				<title xsi:type="v8:LocalStringType">
+					<v8:item>
+						<v8:lang>ru</v8:lang>
+						<v8:content>Количество НУКонечный остаток</v8:content>
+					</v8:item>
+				</title>
+				<role>
+					<dcscom:balance>true</dcscom:balance>
+					<dcscom:balanceGroupName>КоличествоНУ</dcscom:balanceGroupName>
+					<dcscom:balanceType>ClosingBalance</dcscom:balanceType>
+				</role>
+			</field>
+			<field xsi:type="DataSetFieldField">
+				<dataPath>КоличествоНУНачальныйОстаток</dataPath>
+				<field>КоличествоНУНачальныйОстаток</field>
+				<title xsi:type="v8:LocalStringType">
+					<v8:item>
+						<v8:lang>ru</v8:lang>
+						<v8:content>Количество НУНачальный остаток</v8:content>
+					</v8:item>
+				</title>
+				<role>
+					<dcscom:balance>true</dcscom:balance>
+					<dcscom:balanceGroupName>КоличествоНУ</dcscom:balanceGroupName>
+					<dcscom:balanceType>OpeningBalance</dcscom:balanceType>
+				</role>
+			</field>
+			<field xsi:type="DataSetFieldField">
+				<dataPath>КоличествоНУОборот</dataPath>
+				<field>КоличествоНУОборот</field>
+				<title xsi:type="v8:LocalStringType">
+					<v8:item>
+						<v8:lang>ru</v8:lang>
+						<v8:content>Количество НУОборот</v8:content>
+					</v8:item>
+				</title>
+			</field>
+			<field xsi:type="DataSetFieldField">
+				<dataPath>КоличествоНУПриход</dataPath>
+				<field>КоличествоНУПриход</field>
+				<title xsi:type="v8:LocalStringType">
+					<v8:item>
+						<v8:lang>ru</v8:lang>
+						<v8:content>Количество НУПриход</v8:content>
+					</v8:item>
+				</title>
+			</field>
+			<field xsi:type="DataSetFieldField">
+				<dataPath>КоличествоНУРасход</dataPath>
+				<field>КоличествоНУРасход</field>
+				<title xsi:type="v8:LocalStringType">
+					<v8:item>
+						<v8:lang>ru</v8:lang>
+						<v8:content>Количество НУРасход</v8:content>
+					</v8:item>
+				</title>
+			</field>
+			<field xsi:type="DataSetFieldField">
+				<dataPath>КоличествоОборот</dataPath>
+				<field>КоличествоОборот</field>
+				<title xsi:type="v8:LocalStringType">
+					<v8:item>
+						<v8:lang>ru</v8:lang>
+						<v8:content>Количество оборот</v8:content>
+					</v8:item>
+				</title>
+			</field>
+			<field xsi:type="DataSetFieldField">
+				<dataPath>КоличествоПриход</dataPath>
+				<field>КоличествоПриход</field>
+				<title xsi:type="v8:LocalStringType">
+					<v8:item>
+						<v8:lang>ru</v8:lang>
+						<v8:content>Количество приход</v8:content>
+					</v8:item>
+				</title>
+			</field>
+			<field xsi:type="DataSetFieldField">
+				<dataPath>КоличествоРасход</dataPath>
+				<field>КоличествоРасход</field>
+				<title xsi:type="v8:LocalStringType">
+					<v8:item>
+						<v8:lang>ru</v8:lang>
+						<v8:content>Количество расход</v8:content>
+					</v8:item>
+				</title>
+			</field>
+			<field xsi:type="DataSetFieldField">
+				<dataPath>НалоговоеНазначение</dataPath>
+				<field>НалоговоеНазначение</field>
+				<title xsi:type="v8:LocalStringType">
+					<v8:item>
+						<v8:lang>ru</v8:lang>
+						<v8:content>Налоговое назначение</v8:content>
+					</v8:item>
+				</title>
+			</field>
+			<field xsi:type="DataSetFieldField">
+				<dataPath>НДСВходящийКонечныйОстаток</dataPath>
+				<field>НДСВходящийКонечныйОстаток</field>
+				<title xsi:type="v8:LocalStringType">
+					<v8:item>
+						<v8:lang>ru</v8:lang>
+						<v8:content>НДСВходящий конечный остаток</v8:content>
+					</v8:item>
+				</title>
+				<role>
+					<dcscom:balance>true</dcscom:balance>
+					<dcscom:balanceGroupName>НДСВходящий</dcscom:balanceGroupName>
+					<dcscom:balanceType>ClosingBalance</dcscom:balanceType>
+				</role>
+			</field>
+			<field xsi:type="DataSetFieldField">
+				<dataPath>НДСВходящийНачальныйОстаток</dataPath>
+				<field>НДСВходящийНачальныйОстаток</field>
+				<title xsi:type="v8:LocalStringType">
+					<v8:item>
+						<v8:lang>ru</v8:lang>
+						<v8:content>НДСВходящий начальный остаток</v8:content>
+					</v8:item>
+				</title>
+				<role>
+					<dcscom:balance>true</dcscom:balance>
+					<dcscom:balanceGroupName>НДСВходящий</dcscom:balanceGroupName>
+					<dcscom:balanceType>OpeningBalance</dcscom:balanceType>
+				</role>
+			</field>
+			<field xsi:type="DataSetFieldField">
+				<dataPath>НДСВходящийОборот</dataPath>
+				<field>НДСВходящийОборот</field>
+				<title xsi:type="v8:LocalStringType">
+					<v8:item>
+						<v8:lang>ru</v8:lang>
+						<v8:content>НДСВходящий оборот</v8:content>
+					</v8:item>
+				</title>
+			</field>
+			<field xsi:type="DataSetFieldField">
+				<dataPath>НДСВходящийПриход</dataPath>
+				<field>НДСВходящийПриход</field>
+				<title xsi:type="v8:LocalStringType">
+					<v8:item>
+						<v8:lang>ru</v8:lang>
+						<v8:content>НДСВходящий приход</v8:content>
+					</v8:item>
+				</title>
+			</field>
+			<field xsi:type="DataSetFieldField">
+				<dataPath>НДСВходящийРасход</dataPath>
+				<field>НДСВходящийРасход</field>
+				<title xsi:type="v8:LocalStringType">
+					<v8:item>
+						<v8:lang>ru</v8:lang>
+						<v8:content>НДСВходящий расход</v8:content>
+					</v8:item>
+				</title>
+			</field>
+			<field xsi:type="DataSetFieldField">
+				<dataPath>НДСКредитКонечныйОстаток</dataPath>
+				<field>НДСКредитКонечныйОстаток</field>
+				<title xsi:type="v8:LocalStringType">
+					<v8:item>
+						<v8:lang>ru</v8:lang>
+						<v8:content>НДСКредит конечный остаток</v8:content>
+					</v8:item>
+				</title>
+				<role>
+					<dcscom:balance>true</dcscom:balance>
+					<dcscom:balanceGroupName>НДСКредит</dcscom:balanceGroupName>
+					<dcscom:balanceType>ClosingBalance</dcscom:balanceType>
+				</role>
+			</field>
+			<field xsi:type="DataSetFieldField">
+				<dataPath>НДСКредитНачальныйОстаток</dataPath>
+				<field>НДСКредитНачальныйОстаток</field>
+				<title xsi:type="v8:LocalStringType">
+					<v8:item>
+						<v8:lang>ru</v8:lang>
+						<v8:content>НДСКредит начальный остаток</v8:content>
+					</v8:item>
+				</title>
+				<role>
+					<dcscom:balance>true</dcscom:balance>
+					<dcscom:balanceGroupName>НДСКредит</dcscom:balanceGroupName>
+					<dcscom:balanceType>OpeningBalance</dcscom:balanceType>
+				</role>
+			</field>
+			<field xsi:type="DataSetFieldField">
+				<dataPath>НДСКредитОборот</dataPath>
+				<field>НДСКредитОборот</field>
+				<title xsi:type="v8:LocalStringType">
+					<v8:item>
+						<v8:lang>ru</v8:lang>
+						<v8:content>НДСКредит оборот</v8:content>
+					</v8:item>
+				</title>
+			</field>
+			<field xsi:type="DataSetFieldField">
+				<dataPath>НДСКредитПриход</dataPath>
+				<field>НДСКредитПриход</field>
+				<title xsi:type="v8:LocalStringType">
+					<v8:item>
+						<v8:lang>ru</v8:lang>
+						<v8:content>НДСКредит приход</v8:content>
+					</v8:item>
+				</title>
+			</field>
+			<field xsi:type="DataSetFieldField">
+				<dataPath>НДСКредитРасход</dataPath>
+				<field>НДСКредитРасход</field>
+				<title xsi:type="v8:LocalStringType">
+					<v8:item>
+						<v8:lang>ru</v8:lang>
+						<v8:content>НДСКредит расход</v8:content>
+					</v8:item>
+				</title>
+			</field>
+			<field xsi:type="DataSetFieldField">
+				<dataPath>НоменклатурнаяГруппа</dataPath>
+				<field>НоменклатурнаяГруппа</field>
+				<title xsi:type="v8:LocalStringType">
+					<v8:item>
+						<v8:lang>ru</v8:lang>
+						<v8:content>Номенклатурная группа</v8:content>
+					</v8:item>
+				</title>
+			</field>
+			<field xsi:type="DataSetFieldField">
+				<dataPath>Организация</dataPath>
+				<field>Организация</field>
+				<title xsi:type="v8:LocalStringType">
+					<v8:item>
+						<v8:lang>ru</v8:lang>
+						<v8:content>Организация</v8:content>
+					</v8:item>
+				</title>
+			</field>
+			<field xsi:type="DataSetFieldField">
+				<dataPath>ПериодГод</dataPath>
+				<field>ПериодГод</field>
+				<title xsi:type="v8:LocalStringType">
+					<v8:item>
+						<v8:lang>ru</v8:lang>
+						<v8:content>Период год</v8:content>
+					</v8:item>
+				</title>
+				<role>
+					<dcscom:periodNumber>8</dcscom:periodNumber>
+					<dcscom:periodType>Additional</dcscom:periodType>
+				</role>
+			</field>
+			<field xsi:type="DataSetFieldField">
+				<dataPath>ПериодДекада</dataPath>
+				<field>ПериодДекада</field>
+				<title xsi:type="v8:LocalStringType">
+					<v8:item>
+						<v8:lang>ru</v8:lang>
+						<v8:content>Период декада</v8:content>
+					</v8:item>
+				</title>
+				<role>
+					<dcscom:periodNumber>4</dcscom:periodNumber>
+					<dcscom:periodType>Additional</dcscom:periodType>
+				</role>
+			</field>
+			<field xsi:type="DataSetFieldField">
+				<dataPath>ПериодДень</dataPath>
+				<field>ПериодДень</field>
+				<title xsi:type="v8:LocalStringType">
+					<v8:item>
+						<v8:lang>ru</v8:lang>
+						<v8:content>Период день</v8:content>
+					</v8:item>
+				</title>
+				<role>
+					<dcscom:periodNumber>2</dcscom:periodNumber>
+					<dcscom:periodType>Additional</dcscom:periodType>
+				</role>
+			</field>
+			<field xsi:type="DataSetFieldField">
+				<dataPath>ПериодКвартал</dataPath>
+				<field>ПериодКвартал</field>
+				<title xsi:type="v8:LocalStringType">
+					<v8:item>
+						<v8:lang>ru</v8:lang>
+						<v8:content>Период квартал</v8:content>
+					</v8:item>
+				</title>
+				<role>
+					<dcscom:periodNumber>6</dcscom:periodNumber>
+					<dcscom:periodType>Additional</dcscom:periodType>
+				</role>
+			</field>
+			<field xsi:type="DataSetFieldField">
+				<dataPath>ПериодМесяц</dataPath>
+				<field>ПериодМесяц</field>
+				<title xsi:type="v8:LocalStringType">
+					<v8:item>
+						<v8:lang>ru</v8:lang>
+						<v8:content>Период месяц</v8:content>
+					</v8:item>
+				</title>
+				<role>
+					<dcscom:periodNumber>5</dcscom:periodNumber>
+					<dcscom:periodType>Additional</dcscom:periodType>
+				</role>
+			</field>
+			<field xsi:type="DataSetFieldField">
+				<dataPath>ПериодНеделя</dataPath>
+				<field>ПериодНеделя</field>
+				<title xsi:type="v8:LocalStringType">
+					<v8:item>
+						<v8:lang>ru</v8:lang>
+						<v8:content>Период неделя</v8:content>
+					</v8:item>
+				</title>
+				<role>
+					<dcscom:periodNumber>3</dcscom:periodNumber>
+					<dcscom:periodType>Additional</dcscom:periodType>
+				</role>
+			</field>
+			<field xsi:type="DataSetFieldField">
+				<dataPath>ПериодПолугодие</dataPath>
+				<field>ПериодПолугодие</field>
+				<title xsi:type="v8:LocalStringType">
+					<v8:item>
+						<v8:lang>ru</v8:lang>
+						<v8:content>Период полугодие</v8:content>
+					</v8:item>
+				</title>
+				<role>
+					<dcscom:periodNumber>7</dcscom:periodNumber>
+					<dcscom:periodType>Additional</dcscom:periodType>
+				</role>
+			</field>
+			<field xsi:type="DataSetFieldField">
+				<dataPath>ПериодСекунда</dataPath>
+				<field>ПериодСекунда</field>
+				<title xsi:type="v8:LocalStringType">
+					<v8:item>
+						<v8:lang>ru</v8:lang>
+						<v8:content>Период секунда</v8:content>
+					</v8:item>
+				</title>
+				<role>
+					<dcscom:periodNumber>1</dcscom:periodNumber>
+					<dcscom:periodType>Main</dcscom:periodType>
+				</role>
+			</field>
+			<field xsi:type="DataSetFieldField">
+				<dataPath>Подразделение</dataPath>
+				<field>Подразделение</field>
+				<title xsi:type="v8:LocalStringType">
+					<v8:item>
+						<v8:lang>ru</v8:lang>
+						<v8:content>Подразделение</v8:content>
+					</v8:item>
+				</title>
+			</field>
+			<field xsi:type="DataSetFieldField">
+				<dataPath>Продукция</dataPath>
+				<field>Продукция</field>
+				<title xsi:type="v8:LocalStringType">
+					<v8:item>
+						<v8:lang>ru</v8:lang>
+						<v8:content>Продукция</v8:content>
+					</v8:item>
+				</title>
+			</field>
+			<field xsi:type="DataSetFieldField">
+				<dataPath>Проект</dataPath>
+				<field>Проект</field>
+				<title xsi:type="v8:LocalStringType">
+					<v8:item>
+						<v8:lang>ru</v8:lang>
+						<v8:content>Проект</v8:content>
+					</v8:item>
+				</title>
+			</field>
+			<field xsi:type="DataSetFieldField">
+				<dataPath>РазделУчета</dataPath>
+				<field>РазделУчета</field>
+				<title xsi:type="v8:LocalStringType">
+					<v8:item>
+						<v8:lang>ru</v8:lang>
+						<v8:content>Раздел учета</v8:content>
+					</v8:item>
+				</title>
+			</field>
+			<field xsi:type="DataSetFieldField">
+				<dataPath>Регистратор</dataPath>
+				<field>Регистратор</field>
+				<title xsi:type="v8:LocalStringType">
+					<v8:item>
+						<v8:lang>ru</v8:lang>
+						<v8:content>Регистратор</v8:content>
+					</v8:item>
+				</title>
+			</field>
+			<field xsi:type="DataSetFieldField">
+				<dataPath>СерияЗатраты</dataPath>
+				<field>СерияЗатраты</field>
+				<title xsi:type="v8:LocalStringType">
+					<v8:item>
+						<v8:lang>ru</v8:lang>
+						<v8:content>Серия затраты</v8:content>
+					</v8:item>
+				</title>
+			</field>
+			<field xsi:type="DataSetFieldField">
+				<dataPath>СерияПродукции</dataPath>
+				<field>СерияПродукции</field>
+				<title xsi:type="v8:LocalStringType">
+					<v8:item>
+						<v8:lang>ru</v8:lang>
+						<v8:content>Серия продукции</v8:content>
+					</v8:item>
+				</title>
+			</field>
+			<field xsi:type="DataSetFieldField">
+				<dataPath>Спецификация</dataPath>
+				<field>Спецификация</field>
+				<title xsi:type="v8:LocalStringType">
+					<v8:item>
+						<v8:lang>ru</v8:lang>
+						<v8:content>Спецификация</v8:content>
+					</v8:item>
+				</title>
+			</field>
+			<field xsi:type="DataSetFieldField">
+				<dataPath>СпособРаспределенияЗатрат</dataPath>
+				<field>СпособРаспределенияЗатрат</field>
+				<title xsi:type="v8:LocalStringType">
+					<v8:item>
+						<v8:lang>ru</v8:lang>
+						<v8:content>Способ распределения затрат</v8:content>
+					</v8:item>
+				</title>
+			</field>
+			<field xsi:type="DataSetFieldField">
+				<dataPath>СтатьяЗатрат</dataPath>
+				<field>СтатьяЗатрат</field>
+				<title xsi:type="v8:LocalStringType">
+					<v8:item>
+						<v8:lang>ru</v8:lang>
+						<v8:content>Статья затрат</v8:content>
+					</v8:item>
+				</title>
+			</field>
+			<field xsi:type="DataSetFieldField">
+				<dataPath>СтоимостьКонечныйОстаток</dataPath>
+				<field>СтоимостьКонечныйОстаток</field>
+				<title xsi:type="v8:LocalStringType">
+					<v8:item>
+						<v8:lang>ru</v8:lang>
+						<v8:content>Стоимость конечный остаток</v8:content>
+					</v8:item>
+				</title>
+				<role>
+					<dcscom:balance>true</dcscom:balance>
+					<dcscom:balanceGroupName>Стоимость</dcscom:balanceGroupName>
+					<dcscom:balanceType>ClosingBalance</dcscom:balanceType>
+				</role>
+			</field>
+			<field xsi:type="DataSetFieldField">
+				<dataPath>СтоимостьНачальныйОстаток</dataPath>
+				<field>СтоимостьНачальныйОстаток</field>
+				<title xsi:type="v8:LocalStringType">
+					<v8:item>
+						<v8:lang>ru</v8:lang>
+						<v8:content>Стоимость начальный остаток</v8:content>
+					</v8:item>
+				</title>
+				<role>
+					<dcscom:balance>true</dcscom:balance>
+					<dcscom:balanceGroupName>Стоимость</dcscom:balanceGroupName>
+					<dcscom:balanceType>OpeningBalance</dcscom:balanceType>
+				</role>
+			</field>
+			<field xsi:type="DataSetFieldField">
+				<dataPath>СтоимостьНУКонечныйОстаток</dataPath>
+				<field>СтоимостьНУКонечныйОстаток</field>
+				<title xsi:type="v8:LocalStringType">
+					<v8:item>
+						<v8:lang>ru</v8:lang>
+						<v8:content>Стоимость НУКонечный остаток</v8:content>
+					</v8:item>
+				</title>
+				<role>
+					<dcscom:balance>true</dcscom:balance>
+					<dcscom:balanceGroupName>СтоимостьНУ</dcscom:balanceGroupName>
+					<dcscom:balanceType>ClosingBalance</dcscom:balanceType>
+				</role>
+			</field>
+			<field xsi:type="DataSetFieldField">
+				<dataPath>СтоимостьНУНачальныйОстаток</dataPath>
+				<field>СтоимостьНУНачальныйОстаток</field>
+				<title xsi:type="v8:LocalStringType">
+					<v8:item>
+						<v8:lang>ru</v8:lang>
+						<v8:content>Стоимость НУНачальный остаток</v8:content>
+					</v8:item>
+				</title>
+				<role>
+					<dcscom:balance>true</dcscom:balance>
+					<dcscom:balanceGroupName>СтоимостьНУ</dcscom:balanceGroupName>
+					<dcscom:balanceType>OpeningBalance</dcscom:balanceType>
+				</role>
+			</field>
+			<field xsi:type="DataSetFieldField">
+				<dataPath>СтоимостьНУОборот</dataPath>
+				<field>СтоимостьНУОборот</field>
+				<title xsi:type="v8:LocalStringType">
+					<v8:item>
+						<v8:lang>ru</v8:lang>
+						<v8:content>Стоимость НУОборот</v8:content>
+					</v8:item>
+				</title>
+			</field>
+			<field xsi:type="DataSetFieldField">
+				<dataPath>СтоимостьНУПриход</dataPath>
+				<field>СтоимостьНУПриход</field>
+				<title xsi:type="v8:LocalStringType">
+					<v8:item>
+						<v8:lang>ru</v8:lang>
+						<v8:content>Стоимость НУПриход</v8:content>
+					</v8:item>
+				</title>
+			</field>
+			<field xsi:type="DataSetFieldField">
+				<dataPath>СтоимостьНУРасход</dataPath>
+				<field>СтоимостьНУРасход</field>
+				<title xsi:type="v8:LocalStringType">
+					<v8:item>
+						<v8:lang>ru</v8:lang>
+						<v8:content>Стоимость НУРасход</v8:content>
+					</v8:item>
+				</title>
+			</field>
+			<field xsi:type="DataSetFieldField">
+				<dataPath>СтоимостьОборот</dataPath>
+				<field>СтоимостьОборот</field>
+				<title xsi:type="v8:LocalStringType">
+					<v8:item>
+						<v8:lang>ru</v8:lang>
+						<v8:content>Стоимость оборот</v8:content>
+					</v8:item>
+				</title>
+			</field>
+			<field xsi:type="DataSetFieldField">
+				<dataPath>СтоимостьПриход</dataPath>
+				<field>СтоимостьПриход</field>
+				<title xsi:type="v8:LocalStringType">
+					<v8:item>
+						<v8:lang>ru</v8:lang>
+						<v8:content>Стоимость приход</v8:content>
+					</v8:item>
+				</title>
+			</field>
+			<field xsi:type="DataSetFieldField">
+				<dataPath>СтоимостьРасход</dataPath>
+				<field>СтоимостьРасход</field>
+				<title xsi:type="v8:LocalStringType">
+					<v8:item>
+						<v8:lang>ru</v8:lang>
+						<v8:content>Стоимость расход</v8:content>
+					</v8:item>
+				</title>
+			</field>
+			<field xsi:type="DataSetFieldField">
+				<dataPath>Счет</dataPath>
+				<field>Счет</field>
+				<title xsi:type="v8:LocalStringType">
+					<v8:item>
+						<v8:lang>ru</v8:lang>
+						<v8:content>Счет</v8:content>
+					</v8:item>
+				</title>
+			</field>
+			<field xsi:type="DataSetFieldField">
+				<dataPath>ХарактерЗатрат</dataPath>
+				<field>ХарактерЗатрат</field>
+				<title xsi:type="v8:LocalStringType">
+					<v8:item>
+						<v8:lang>ru</v8:lang>
+						<v8:content>Характер затрат</v8:content>
+					</v8:item>
+				</title>
+			</field>
+			<field xsi:type="DataSetFieldField">
+				<dataPath>ХарактеристикаЗатраты</dataPath>
+				<field>ХарактеристикаЗатраты</field>
+				<title xsi:type="v8:LocalStringType">
+					<v8:item>
+						<v8:lang>ru</v8:lang>
+						<v8:content>Характеристика затраты</v8:content>
+					</v8:item>
+				</title>
+			</field>
+			<field xsi:type="DataSetFieldField">
+				<dataPath>ХарактеристикаПродукции</dataPath>
+				<field>ХарактеристикаПродукции</field>
+				<title xsi:type="v8:LocalStringType">
+					<v8:item>
+						<v8:lang>ru</v8:lang>
+						<v8:content>Характеристика продукции</v8:content>
+					</v8:item>
+				</title>
+			</field>
+			<dataSource>ИсточникДанных1</dataSource>
+			<query>ВЫБРАТЬ РАЗРЕШЕННЫЕ
+	РегистрАналитикаВидаУчета.Ссылка
+ПОМЕСТИТЬ АналитикаПоРазделамУчета
+ИЗ
+	РегистрСведений.АналитикаВидаУчета КАК РегистрАналитикаВидаУчета
+ГДЕ
+	РегистрАналитикаВидаУчета.РазделУчета В(&amp;РазделыУчета)
+;
+////////////////////////////////////////////////////////////////////////////////
+ВЫБРАТЬ РАЗРЕШЕННЫЕ
+	УчетЗатрат.АналитикаВидаУчета КАК АналитикаВидаУчета,
+	УчетЗатрат.АналитикаУчетаЗатрат КАК АналитикаУчетаЗатрат,
+	УчетЗатрат.АналитикаУчетаПартий КАК АналитикаУчетаПартий,
+	УчетЗатрат.АналитикаРаспределенияЗатрат КАК АналитикаРаспределенияЗатрат,
+	РегистрАналитикаВидаУчета.РазделУчета КАК РазделУчета,
+	РегистрАналитикаВидаУчета.Организация КАК Организация,
+	РегистрАналитикаВидаУчета.ПодразделениеОрганизации КАК Подразделение,
+	РегистрАналитикаВидаУчета.Проект КАК Проект,
+	РегистрАналитикаВидаУчета.СчетУчета КАК Счет,
+	РегистрАналитикаВидаУчета.НалоговоеНазначение КАК НалоговоеНазначение,
+	РегистрАналитикаУчетаЗатрат.СтатьяЗатрат КАК СтатьяЗатрат,
+	РегистрАналитикаУчетаЗатрат.Затрата КАК Затрата,
+	РегистрАналитикаУчетаЗатрат.ХарактеристикаЗатраты КАК ХарактеристикаЗатраты,
+	РегистрАналитикаУчетаЗатрат.СерияЗатраты КАК СерияЗатраты,
+	РегистрАналитикаУчетаЗатрат.СпособРаспределенияЗатрат КАК СпособРаспределенияЗатрат,
+	РегистрАналитикаУчетаЗатрат.ХарактерЗатрат КАК ХарактерЗатрат,
+	РегистрАналитикаРаспределенияЗатрат.НоменклатурнаяГруппа КАК НоменклатурнаяГруппа,
+	РегистрАналитикаРаспределенияЗатрат.Продукция КАК Продукция,
+	РегистрАналитикаРаспределенияЗатрат.ХарактеристикаПродукции КАК ХарактеристикаПродукции,
+	РегистрАналитикаРаспределенияЗатрат.СерияПродукции КАК СерияПродукции,
+	РегистрАналитикаРаспределенияЗатрат.Спецификация КАК Спецификация,
+	РегистрАналитикаУчетаПартий.Заказ КАК Заказ,
+	ВЫБОР
+		КОГДА УчетЗатрат.Регистратор = НЕОПРЕДЕЛЕНО
+			ТОГДА NULL
+		ИНАЧЕ УчетЗатрат.Регистратор
+	КОНЕЦ КАК Регистратор,
+	УчетЗатрат.ПериодСекунда КАК ПериодСекунда,
+	УчетЗатрат.ПериодДень КАК ПериодДень,
+	УчетЗатрат.ПериодНеделя КАК ПериодНеделя,
+	УчетЗатрат.ПериодДекада КАК ПериодДекада,
+	УчетЗатрат.ПериодМесяц КАК ПериодМесяц,
+	УчетЗатрат.ПериодКвартал КАК ПериодКвартал,
+	УчетЗатрат.ПериодПолугодие КАК ПериодПолугодие,
+	УчетЗатрат.ПериодГод КАК ПериодГод,
+	УчетЗатрат.КоличествоНачальныйОстаток КАК КоличествоНачальныйОстаток,
+	УчетЗатрат.КоличествоПриход КАК КоличествоПриход,
+	УчетЗатрат.КоличествоРасход КАК КоличествоРасход,
+	УчетЗатрат.КоличествоКонечныйОстаток КАК КоличествоКонечныйОстаток,
+	УчетЗатрат.КоличествоОборот КАК КоличествоОборот,
+	УчетЗатрат.КоличествоНУНачальныйОстаток КАК КоличествоНУНачальныйОстаток,
+	УчетЗатрат.КоличествоНУПриход КАК КоличествоНУПриход,
+	УчетЗатрат.КоличествоНУРасход КАК КоличествоНУРасход,
+	УчетЗатрат.КоличествоНУКонечныйОстаток КАК КоличествоНУКонечныйОстаток,
+	УчетЗатрат.КоличествоНУОборот КАК КоличествоНУОборот,
+	УчетЗатрат.СтоимостьНачальныйОстаток КАК СтоимостьНачальныйОстаток,
+	УчетЗатрат.СтоимостьПриход КАК СтоимостьПриход,
+	УчетЗатрат.СтоимостьРасход КАК СтоимостьРасход,
+	УчетЗатрат.СтоимостьКонечныйОстаток КАК СтоимостьКонечныйОстаток,
+	УчетЗатрат.СтоимостьОборот КАК СтоимостьОборот,
+	УчетЗатрат.СтоимостьНУНачальныйОстаток КАК СтоимостьНУНачальныйОстаток,
+	УчетЗатрат.СтоимостьНУПриход КАК СтоимостьНУПриход,
+	УчетЗатрат.СтоимостьНУРасход КАК СтоимостьНУРасход,
+	УчетЗатрат.СтоимостьНУКонечныйОстаток КАК СтоимостьНУКонечныйОстаток,
+	УчетЗатрат.СтоимостьНУОборот КАК СтоимостьНУОборот,
+	//УчетЗатрат.СуммаВРНачальныйОстаток КАК СуммаВРНачальныйОстаток,
+	//УчетЗатрат.СуммаВРПриход КАК СуммаВРПриход,
+	//УчетЗатрат.СуммаВРРасход КАК СуммаВРРасход,
+	//УчетЗатрат.СуммаВРКонечныйОстаток КАК СуммаВРКонечныйОстаток,
+	//УчетЗатрат.СуммаВРОборот КАК СуммаВРОборот,
+	УчетЗатрат.НДСВходящийНачальныйОстаток КАК НДСВходящийНачальныйОстаток,
+	УчетЗатрат.НДСВходящийПриход КАК НДСВходящийПриход,
+	УчетЗатрат.НДСВходящийРасход КАК НДСВходящийРасход,
+	УчетЗатрат.НДСВходящийКонечныйОстаток КАК НДСВходящийКонечныйОстаток,
+	УчетЗатрат.НДСВходящийОборот КАК НДСВходящийОборот,
+	УчетЗатрат.НДСКредитНачальныйОстаток КАК НДСКредитНачальныйОстаток,
+	УчетЗатрат.НДСКредитПриход КАК НДСКредитПриход,
+	УчетЗатрат.НДСКредитРасход КАК НДСКредитРасход,
+	УчетЗатрат.НДСКредитКонечныйОстаток КАК НДСКредитКонечныйОстаток,
+	УчетЗатрат.НДСКредитОборот КАК НДСКредитОборот,
+	ВЫБОР
+		КОГДА &amp;ЕдиницыКоличестваВОтчете = 0
+			ТОГДА РегистрАналитикаУчетаЗатрат.Затрата.ЕдиницаХраненияОстатков
+		ИНАЧЕ ВЫБОР
+				КОГДА &amp;ЕдиницыКоличестваВОтчете = 1
+					ТОГДА РегистрАналитикаУчетаЗатрат.Затрата.БазоваяЕдиницаИзмерения
+				ИНАЧЕ РегистрАналитикаУчетаЗатрат.Затрата.ЕдиницаДляОтчетов
+			КОНЕЦ
+	КОНЕЦ КАК ЕдиницаИзмерения
+ИЗ
+	РегистрНакопления.УчетЗатратРегл.ОстаткиИОбороты(
+			,
+			,
+			Авто,
+			,
+			&amp;ВидУчета = 1
+				И АналитикаВидаУчета В
+					(ВЫБРАТЬ РАЗЛИЧНЫЕ
+						РегистрАналитикаВидаУчета.Ссылка
+					ИЗ
+						АналитикаПоРазделамУчета КАК РегистрАналитикаВидаУчета)) КАК УчетЗатрат
+						
+	{
+	ЛЕВОЕ СОЕДИНЕНИЕ 
+		РегистрСведений.АналитикаВидаУчета КАК РегистрАналитикаВидаУчета
+	ПО 
+		УчетЗатрат.АналитикаВидаУчета = РегистрАналитикаВидаУчета.Ссылка
+	}
+	{
+	ЛЕВОЕ СОЕДИНЕНИЕ 
+		РегистрСведений.АналитикаУчетаЗатрат КАК РегистрАналитикаУчетаЗатрат
+	ПО 
+		УчетЗатрат.АналитикаУчетаЗатрат = РегистрАналитикаУчетаЗатрат.Ссылка
+	}
+	{
+	ЛЕВОЕ СОЕДИНЕНИЕ 
+		РегистрСведений.АналитикаРаспределенияЗатрат КАК РегистрАналитикаРаспределенияЗатрат
+	ПО 
+		УчетЗатрат.АналитикаРаспределенияЗатрат = РегистрАналитикаРаспределенияЗатрат.Ссылка
+	}
+	{
+	ЛЕВОЕ СОЕДИНЕНИЕ 
+		РегистрСведений.АналитикаУчетаПартий КАК РегистрАналитикаУчетаПартий
+	ПО 
+		УчетЗатрат.АналитикаУчетаПартий = РегистрАналитикаУчетаПартий.Ссылка
+	}
+	
+{ХАРАКТЕРИСТИКИ
+	ТИП(Справочник.ХарактеристикиНоменклатуры)
+	СПИСОК (ВЫБРАТЬ 
+						СвойстваОбъектов.Ссылка,
+						СвойстваОбъектов.Наименование,
+						СвойстваОбъектов.ТипЗначения
+					ИЗ 
+						ПланВидовХарактеристик.СвойстваОбъектов КАК СвойстваОбъектов
+					ГДЕ НазначениеСвойства = Значение(ПланВидовХарактеристик.НазначенияСвойствКатегорийОбъектов.Справочник_ХарактеристикиНоменклатуры))
+	ИДЕНТИФИКАТОР Ссылка
+	ИМЯ Наименование
+	ТИПЗНАЧЕНИЯ ТипЗначения
+	ЗНАЧЕНИЯ РегистрСведений.ЗначенияСвойствОбъектов
+	ОБЪЕКТ Объект
+	ХАРАКТЕРИСТИКА Свойство
+	ЗНАЧЕНИЕ Значение }
+{ХАРАКТЕРИСТИКИ
+	ТИП(Справочник.ХарактеристикиНоменклатуры)
+	СПИСОК (ВЫБРАТЬ
+						КатегорииОбъектов.Ссылка,
+						КатегорииОбъектов.Наименование
+					ИЗ
+						Справочник.КатегорииОбъектов КАК КатегорииОбъектов
+					ГДЕ
+						КатегорииОбъектов.НазначениеКатегории = ЗНАЧЕНИЕ(ПланВидовХарактеристик.НазначенияСвойствКатегорийОбъектов.Справочник_ХарактеристикиНоменклатуры))
+	ИДЕНТИФИКАТОР Ссылка
+	ИМЯ Наименование
+	ЗНАЧЕНИЯ РегистрСведений.КатегорииОбъектов
+	ОБЪЕКТ Объект
+	ХАРАКТЕРИСТИКА Категория }
+{ХАРАКТЕРИСТИКИ
+	ТИП(Справочник.КонтактныеЛицаКонтрагентов)
+	СПИСОК (ВЫБРАТЬ 
+						СвойстваОбъектов.Ссылка,
+						СвойстваОбъектов.Наименование,
+						СвойстваОбъектов.ТипЗначения
+					ИЗ 
+						ПланВидовХарактеристик.СвойстваОбъектов КАК СвойстваОбъектов
+					ГДЕ НазначениеСвойства = Значение(ПланВидовХарактеристик.НазначенияСвойствКатегорийОбъектов.Справочник_КонтактныеЛицаКонтрагентов))
+	ИДЕНТИФИКАТОР Ссылка
+	ИМЯ Наименование
+	ТИПЗНАЧЕНИЯ ТипЗначения
+	ЗНАЧЕНИЯ РегистрСведений.ЗначенияСвойствОбъектов
+	ОБЪЕКТ Объект
+	ХАРАКТЕРИСТИКА Свойство
+	ЗНАЧЕНИЕ Значение }
+{ХАРАКТЕРИСТИКИ
+	ТИП(Справочник.КонтактныеЛицаКонтрагентов)
+	СПИСОК (ВЫБРАТЬ
+						КатегорииОбъектов.Ссылка,
+						КатегорииОбъектов.Наименование
+					ИЗ
+						Справочник.КатегорииОбъектов КАК КатегорииОбъектов
+					ГДЕ
+						КатегорииОбъектов.НазначениеКатегории = ЗНАЧЕНИЕ(ПланВидовХарактеристик.НазначенияСвойствКатегорийОбъектов.Справочник_КонтактныеЛицаКонтрагентов))
+	ИДЕНТИФИКАТОР Ссылка
+	ИМЯ Наименование
+	ЗНАЧЕНИЯ РегистрСведений.КатегорииОбъектов
+	ОБЪЕКТ Объект
+	ХАРАКТЕРИСТИКА Категория }
+{ХАРАКТЕРИСТИКИ
+	ТИП(Справочник.КонтактныеЛица)
+	СПИСОК (ВЫБРАТЬ 
+						СвойстваОбъектов.Ссылка,
+						СвойстваОбъектов.Наименование,
+						СвойстваОбъектов.ТипЗначения
+					ИЗ 
+						ПланВидовХарактеристик.СвойстваОбъектов КАК СвойстваОбъектов
+					ГДЕ НазначениеСвойства = Значение(ПланВидовХарактеристик.НазначенияСвойствКатегорийОбъектов.Справочник_КонтактныеЛица))
+	ИДЕНТИФИКАТОР Ссылка
+	ИМЯ Наименование
+	ТИПЗНАЧЕНИЯ ТипЗначения
+	ЗНАЧЕНИЯ РегистрСведений.ЗначенияСвойствОбъектов
+	ОБЪЕКТ Объект
+	ХАРАКТЕРИСТИКА Свойство
+	ЗНАЧЕНИЕ Значение }
+{ХАРАКТЕРИСТИКИ
+	ТИП(Справочник.КонтактныеЛица)
+	СПИСОК (ВЫБРАТЬ
+						КатегорииОбъектов.Ссылка,
+						КатегорииОбъектов.Наименование
+					ИЗ
+						Справочник.КатегорииОбъектов КАК КатегорииОбъектов
+					ГДЕ
+						КатегорииОбъектов.НазначениеКатегории = ЗНАЧЕНИЕ(ПланВидовХарактеристик.НазначенияСвойствКатегорийОбъектов.Справочник_КонтактныеЛица))
+	ИДЕНТИФИКАТОР Ссылка
+	ИМЯ Наименование
+	ЗНАЧЕНИЯ РегистрСведений.КатегорииОбъектов
+	ОБЪЕКТ Объект
+	ХАРАКТЕРИСТИКА Категория }
+{ХАРАКТЕРИСТИКИ
+	ТИП(Справочник.Контрагенты)
+	СПИСОК (ВЫБРАТЬ 
+						СвойстваОбъектов.Ссылка,
+						СвойстваОбъектов.Наименование,
+						СвойстваОбъектов.ТипЗначения
+					ИЗ 
+						ПланВидовХарактеристик.СвойстваОбъектов КАК СвойстваОбъектов
+					ГДЕ НазначениеСвойства = Значение(ПланВидовХарактеристик.НазначенияСвойствКатегорийОбъектов.Справочник_Контрагенты))
+	ИДЕНТИФИКАТОР Ссылка
+	ИМЯ Наименование
+	ТИПЗНАЧЕНИЯ ТипЗначения
+	ЗНАЧЕНИЯ РегистрСведений.ЗначенияСвойствОбъектов
+	ОБЪЕКТ Объект
+	ХАРАКТЕРИСТИКА Свойство
+	ЗНАЧЕНИЕ Значение }
+{ХАРАКТЕРИСТИКИ
+	ТИП(Справочник.Контрагенты)
+	СПИСОК (ВЫБРАТЬ
+						КатегорииОбъектов.Ссылка,
+						КатегорииОбъектов.Наименование
+					ИЗ
+						Справочник.КатегорииОбъектов КАК КатегорииОбъектов
+					ГДЕ
+						КатегорииОбъектов.НазначениеКатегории = ЗНАЧЕНИЕ(ПланВидовХарактеристик.НазначенияСвойствКатегорийОбъектов.Справочник_Контрагенты))
+	ИДЕНТИФИКАТОР Ссылка
+	ИМЯ Наименование
+	ЗНАЧЕНИЯ РегистрСведений.КатегорииОбъектов
+	ОБЪЕКТ Объект
+	ХАРАКТЕРИСТИКА Категория }
+{ХАРАКТЕРИСТИКИ
+	ТИП(Справочник.Номенклатура)
+	СПИСОК (ВЫБРАТЬ 
+						СвойстваОбъектов.Ссылка,
+						СвойстваОбъектов.Наименование,
+						СвойстваОбъектов.ТипЗначения
+					ИЗ 
+						ПланВидовХарактеристик.СвойстваОбъектов КАК СвойстваОбъектов
+					ГДЕ НазначениеСвойства = Значение(ПланВидовХарактеристик.НазначенияСвойствКатегорийОбъектов.Справочник_Номенклатура))
+	ИДЕНТИФИКАТОР Ссылка
+	ИМЯ Наименование
+	ТИПЗНАЧЕНИЯ ТипЗначения
+	ЗНАЧЕНИЯ РегистрСведений.ЗначенияСвойствОбъектов
+	ОБЪЕКТ Объект
+	ХАРАКТЕРИСТИКА Свойство
+	ЗНАЧЕНИЕ Значение }
+{ХАРАКТЕРИСТИКИ
+	ТИП(Справочник.Номенклатура)
+	СПИСОК (ВЫБРАТЬ
+						КатегорииОбъектов.Ссылка,
+						КатегорииОбъектов.Наименование
+					ИЗ
+						Справочник.КатегорииОбъектов КАК КатегорииОбъектов
+					ГДЕ
+						КатегорииОбъектов.НазначениеКатегории = ЗНАЧЕНИЕ(ПланВидовХарактеристик.НазначенияСвойствКатегорийОбъектов.Справочник_Номенклатура))
+	ИДЕНТИФИКАТОР Ссылка
+	ИМЯ Наименование
+	ЗНАЧЕНИЯ РегистрСведений.КатегорииОбъектов
+	ОБЪЕКТ Объект
+	ХАРАКТЕРИСТИКА Категория }
+{ХАРАКТЕРИСТИКИ
+	ТИП(Справочник.ОсновныеСредства)
+	СПИСОК (ВЫБРАТЬ 
+						СвойстваОбъектов.Ссылка,
+						СвойстваОбъектов.Наименование,
+						СвойстваОбъектов.ТипЗначения
+					ИЗ 
+						ПланВидовХарактеристик.СвойстваОбъектов КАК СвойстваОбъектов
+					ГДЕ НазначениеСвойства = Значение(ПланВидовХарактеристик.НазначенияСвойствКатегорийОбъектов.Справочник_ОсновныеСредства))
+	ИДЕНТИФИКАТОР Ссылка
+	ИМЯ Наименование
+	ТИПЗНАЧЕНИЯ ТипЗначения
+	ЗНАЧЕНИЯ РегистрСведений.ЗначенияСвойствОбъектов
+	ОБЪЕКТ Объект
+	ХАРАКТЕРИСТИКА Свойство
+	ЗНАЧЕНИЕ Значение }
+{ХАРАКТЕРИСТИКИ
+	ТИП(Справочник.ОсновныеСредства)
+	СПИСОК (ВЫБРАТЬ
+						КатегорииОбъектов.Ссылка,
+						КатегорииОбъектов.Наименование
+					ИЗ
+						Справочник.КатегорииОбъектов КАК КатегорииОбъектов
+					ГДЕ
+						КатегорииОбъектов.НазначениеКатегории = ЗНАЧЕНИЕ(ПланВидовХарактеристик.НазначенияСвойствКатегорийОбъектов.Справочник_ОсновныеСредства))
+	ИДЕНТИФИКАТОР Ссылка
+	ИМЯ Наименование
+	ЗНАЧЕНИЯ РегистрСведений.КатегорииОбъектов
+	ОБЪЕКТ Объект
+	ХАРАКТЕРИСТИКА Категория }
+{ХАРАКТЕРИСТИКИ
+	ТИП(Справочник.Подразделения)
+	СПИСОК (ВЫБРАТЬ 
+						СвойстваОбъектов.Ссылка,
+						СвойстваОбъектов.Наименование,
+						СвойстваОбъектов.ТипЗначения
+					ИЗ 
+						ПланВидовХарактеристик.СвойстваОбъектов КАК СвойстваОбъектов
+					ГДЕ НазначениеСвойства = Значение(ПланВидовХарактеристик.НазначенияСвойствКатегорийОбъектов.Справочник_Подразделения))
+	ИДЕНТИФИКАТОР Ссылка
+	ИМЯ Наименование
+	ТИПЗНАЧЕНИЯ ТипЗначения
+	ЗНАЧЕНИЯ РегистрСведений.ЗначенияСвойствОбъектов
+	ОБЪЕКТ Объект
+	ХАРАКТЕРИСТИКА Свойство
+	ЗНАЧЕНИЕ Значение }
+{ХАРАКТЕРИСТИКИ
+	ТИП(Справочник.Подразделения)
+	СПИСОК (ВЫБРАТЬ
+						КатегорииОбъектов.Ссылка,
+						КатегорииОбъектов.Наименование
+					ИЗ
+						Справочник.КатегорииОбъектов КАК КатегорииОбъектов
+					ГДЕ
+						КатегорииОбъектов.НазначениеКатегории = ЗНАЧЕНИЕ(ПланВидовХарактеристик.НазначенияСвойствКатегорийОбъектов.Справочник_Подразделения))
+	ИДЕНТИФИКАТОР Ссылка
+	ИМЯ Наименование
+	ЗНАЧЕНИЯ РегистрСведений.КатегорииОбъектов
+	ОБЪЕКТ Объект
+	ХАРАКТЕРИСТИКА Категория }
+{ХАРАКТЕРИСТИКИ
+	ТИП(Справочник.Проекты)
+	СПИСОК (ВЫБРАТЬ 
+						СвойстваОбъектов.Ссылка,
+						СвойстваОбъектов.Наименование,
+						СвойстваОбъектов.ТипЗначения
+					ИЗ 
+						ПланВидовХарактеристик.СвойстваОбъектов КАК СвойстваОбъектов
+					ГДЕ НазначениеСвойства = Значение(ПланВидовХарактеристик.НазначенияСвойствКатегорийОбъектов.Справочник_Проекты))
+	ИДЕНТИФИКАТОР Ссылка
+	ИМЯ Наименование
+	ТИПЗНАЧЕНИЯ ТипЗначения
+	ЗНАЧЕНИЯ РегистрСведений.ЗначенияСвойствОбъектов
+	ОБЪЕКТ Объект
+	ХАРАКТЕРИСТИКА Свойство
+	ЗНАЧЕНИЕ Значение }
+{ХАРАКТЕРИСТИКИ
+	ТИП(Справочник.Проекты)
+	СПИСОК (ВЫБРАТЬ
+						КатегорииОбъектов.Ссылка,
+						КатегорииОбъектов.Наименование
+					ИЗ
+						Справочник.КатегорииОбъектов КАК КатегорииОбъектов
+					ГДЕ
+						КатегорииОбъектов.НазначениеКатегории = ЗНАЧЕНИЕ(ПланВидовХарактеристик.НазначенияСвойствКатегорийОбъектов.Справочник_Проекты))
+	ИДЕНТИФИКАТОР Ссылка
+	ИМЯ Наименование
+	ЗНАЧЕНИЯ РегистрСведений.КатегорииОбъектов
+	ОБЪЕКТ Объект
+	ХАРАКТЕРИСТИКА Категория }
+{ХАРАКТЕРИСТИКИ
+	ТИП(Справочник.Склады)
+	СПИСОК (ВЫБРАТЬ 
+						СвойстваОбъектов.Ссылка,
+						СвойстваОбъектов.Наименование,
+						СвойстваОбъектов.ТипЗначения
+					ИЗ 
+						ПланВидовХарактеристик.СвойстваОбъектов КАК СвойстваОбъектов
+					ГДЕ НазначениеСвойства = Значение(ПланВидовХарактеристик.НазначенияСвойствКатегорийОбъектов.Справочник_Склады))
+	ИДЕНТИФИКАТОР Ссылка
+	ИМЯ Наименование
+	ТИПЗНАЧЕНИЯ ТипЗначения
+	ЗНАЧЕНИЯ РегистрСведений.ЗначенияСвойствОбъектов
+	ОБЪЕКТ Объект
+	ХАРАКТЕРИСТИКА Свойство
+	ЗНАЧЕНИЕ Значение }
+{ХАРАКТЕРИСТИКИ
+	ТИП(Справочник.Склады)
+	СПИСОК (ВЫБРАТЬ
+						КатегорииОбъектов.Ссылка,
+						КатегорииОбъектов.Наименование
+					ИЗ
+						Справочник.КатегорииОбъектов КАК КатегорииОбъектов
+					ГДЕ
+						КатегорииОбъектов.НазначениеКатегории = ЗНАЧЕНИЕ(ПланВидовХарактеристик.НазначенияСвойствКатегорийОбъектов.Справочник_Склады))
+	ИДЕНТИФИКАТОР Ссылка
+	ИМЯ Наименование
+	ЗНАЧЕНИЯ РегистрСведений.КатегорииОбъектов
+	ОБЪЕКТ Объект
+	ХАРАКТЕРИСТИКА Категория }
+{ХАРАКТЕРИСТИКИ
+	ТИП(Справочник.ФизическиеЛица)
+	СПИСОК (ВЫБРАТЬ 
+						СвойстваОбъектов.Ссылка,
+						СвойстваОбъектов.Наименование,
+						СвойстваОбъектов.ТипЗначения
+					ИЗ 
+						ПланВидовХарактеристик.СвойстваОбъектов КАК СвойстваОбъектов
+					ГДЕ НазначениеСвойства = Значение(ПланВидовХарактеристик.НазначенияСвойствКатегорийОбъектов.Справочник_ФизическиеЛица))
+	ИДЕНТИФИКАТОР Ссылка
+	ИМЯ Наименование
+	ТИПЗНАЧЕНИЯ ТипЗначения
+	ЗНАЧЕНИЯ РегистрСведений.ЗначенияСвойствОбъектов
+	ОБЪЕКТ Объект
+	ХАРАКТЕРИСТИКА Свойство
+	ЗНАЧЕНИЕ Значение }
+{ХАРАКТЕРИСТИКИ
+	ТИП(Справочник.ФизическиеЛица)
+	СПИСОК (ВЫБРАТЬ
+						КатегорииОбъектов.Ссылка,
+						КатегорииОбъектов.Наименование
+					ИЗ
+						Справочник.КатегорииОбъектов КАК КатегорииОбъектов
+					ГДЕ
+						КатегорииОбъектов.НазначениеКатегории = ЗНАЧЕНИЕ(ПланВидовХарактеристик.НазначенияСвойствКатегорийОбъектов.Справочник_ФизическиеЛица))
+	ИДЕНТИФИКАТОР Ссылка
+	ИМЯ Наименование
+	ЗНАЧЕНИЯ РегистрСведений.КатегорииОбъектов
+	ОБЪЕКТ Объект
+	ХАРАКТЕРИСТИКА Категория }
+{ХАРАКТЕРИСТИКИ
+	ТИП(Документ)
+	СПИСОК (ВЫБРАТЬ 
+						СвойстваОбъектов.Ссылка,
+						СвойстваОбъектов.Наименование,
+						СвойстваОбъектов.ТипЗначения
+					ИЗ 
+						ПланВидовХарактеристик.СвойстваОбъектов КАК СвойстваОбъектов
+					ГДЕ НазначениеСвойства = Значение(ПланВидовХарактеристик.НазначенияСвойствКатегорийОбъектов.Документы))
+	ИДЕНТИФИКАТОР Ссылка
+	ИМЯ Наименование
+	ТИПЗНАЧЕНИЯ ТипЗначения
+	ЗНАЧЕНИЯ РегистрСведений.ЗначенияСвойствОбъектов
+	ОБЪЕКТ Объект
+	ХАРАКТЕРИСТИКА Свойство
+	ЗНАЧЕНИЕ Значение }
+{ХАРАКТЕРИСТИКИ
+	ТИП(Документ)
+	СПИСОК (ВЫБРАТЬ
+						КатегорииОбъектов.Ссылка,
+						КатегорииОбъектов.Наименование
+					ИЗ
+						Справочник.КатегорииОбъектов КАК КатегорииОбъектов
+					ГДЕ
+						КатегорииОбъектов.НазначениеКатегории = ЗНАЧЕНИЕ(ПланВидовХарактеристик.НазначенияСвойствКатегорийОбъектов.Документы))
+	ИДЕНТИФИКАТОР Ссылка
+	ИМЯ Наименование
+	ЗНАЧЕНИЯ РегистрСведений.КатегорииОбъектов
+	ОБЪЕКТ Объект
+	ХАРАКТЕРИСТИКА Категория }
+{ХАРАКТЕРИСТИКИ
+	ТИП(Справочник.ДоговорыКонтрагентов)
+	СПИСОК (ВЫБРАТЬ 
+						СвойстваОбъектов.Ссылка,
+						СвойстваОбъектов.Наименование,
+						СвойстваОбъектов.ТипЗначения
+					ИЗ 
+						ПланВидовХарактеристик.СвойстваОбъектов КАК СвойстваОбъектов
+					ГДЕ НазначениеСвойства = Значение(ПланВидовХарактеристик.НазначенияСвойствКатегорийОбъектов.Справочник_ДоговорыКонтрагентов))
+	ИДЕНТИФИКАТОР Ссылка
+	ИМЯ Наименование
+	ТИПЗНАЧЕНИЯ ТипЗначения
+	ЗНАЧЕНИЯ РегистрСведений.ЗначенияСвойствОбъектов
+	ОБЪЕКТ Объект
+	ХАРАКТЕРИСТИКА Свойство
+	ЗНАЧЕНИЕ Значение }
+{ХАРАКТЕРИСТИКИ
+	ТИП(Справочник.ДоговорыКонтрагентов)
+	СПИСОК (ВЫБРАТЬ
+						КатегорииОбъектов.Ссылка,
+						КатегорииОбъектов.Наименование
+					ИЗ
+						Справочник.КатегорииОбъектов КАК КатегорииОбъектов
+					ГДЕ
+						КатегорииОбъектов.НазначениеКатегории = ЗНАЧЕНИЕ(ПланВидовХарактеристик.НазначенияСвойствКатегорийОбъектов.Справочник_ДоговорыКонтрагентов))
+	ИДЕНТИФИКАТОР Ссылка
+	ИМЯ Наименование
+	ЗНАЧЕНИЯ РегистрСведений.КатегорииОбъектов
+	ОБЪЕКТ Объект
+	ХАРАКТЕРИСТИКА Категория }		</query>
+		</item>
+	</dataSet>
+	<calculatedField>
+		<dataPath>КоличествоЕдНачальныйОстаток</dataPath>
+		<expression>ВЫБОР КОГДА &amp;ЕдиницыКоличестваВОтчете = 0 ТОГДА
+	КоличествоНачальныйОстаток
+ИНАЧЕ ВЫБОР КОГДА &amp;ЕдиницыКоличестваВОтчете = 1 ТОГДА
+	КоличествоНачальныйОстаток*Затрата.ЕдиницаХраненияОстатков.Коэффициент
+ИНАЧЕ 
+	КоличествоНачальныйОстаток*Затрата.ЕдиницаХраненияОстатков.Коэффициент/Затрата.ЕдиницаДляОтчетов.Коэффициент
+КОНЕЦ
+КОНЕЦ</expression>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Количество начальный остаток</v8:content>
+			</v8:item>
+		</title>
+		<appearance>
+			<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+				<dcscor:parameter>Формат</dcscor:parameter>
+				<dcscor:value xsi:type="xs:string">ЧЦ=15; ЧДЦ=3</dcscor:value>
+			</dcscor:item>
+		</appearance>
+	</calculatedField>
+	<calculatedField>
+		<dataPath>КоличествоЕдПриход</dataPath>
+		<expression>ВЫБОР КОГДА &amp;ЕдиницыКоличестваВОтчете = 0 ТОГДА
+	КоличествоПриход
+ИНАЧЕ ВЫБОР КОГДА &amp;ЕдиницыКоличестваВОтчете = 1 ТОГДА
+	КоличествоПриход*Затрата.ЕдиницаХраненияОстатков.Коэффициент
+ИНАЧЕ 
+	КоличествоПриход*Затрата.ЕдиницаХраненияОстатков.Коэффициент/Затрата.ЕдиницаДляОтчетов.Коэффициент
+КОНЕЦ
+КОНЕЦ</expression>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Количество приход</v8:content>
+			</v8:item>
+		</title>
+		<appearance>
+			<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+				<dcscor:parameter>Формат</dcscor:parameter>
+				<dcscor:value xsi:type="xs:string">ЧЦ=15; ЧДЦ=3</dcscor:value>
+			</dcscor:item>
+		</appearance>
+	</calculatedField>
+	<calculatedField>
+		<dataPath>КоличествоЕдРасход</dataPath>
+		<expression>ВЫБОР КОГДА &amp;ЕдиницыКоличестваВОтчете = 0 ТОГДА
+	КоличествоРасход
+ИНАЧЕ ВЫБОР КОГДА &amp;ЕдиницыКоличестваВОтчете = 1 ТОГДА
+	КоличествоРасход*Затрата.ЕдиницаХраненияОстатков.Коэффициент
+ИНАЧЕ 
+	КоличествоРасход*Затрата.ЕдиницаХраненияОстатков.Коэффициент/Затрата.ЕдиницаДляОтчетов.Коэффициент
+КОНЕЦ
+КОНЕЦ</expression>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Количество расход</v8:content>
+			</v8:item>
+		</title>
+		<appearance>
+			<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+				<dcscor:parameter>Формат</dcscor:parameter>
+				<dcscor:value xsi:type="xs:string">ЧЦ=15; ЧДЦ=3</dcscor:value>
+			</dcscor:item>
+		</appearance>
+	</calculatedField>
+	<calculatedField>
+		<dataPath>КоличествоЕдКонечныйОстаток</dataPath>
+		<expression>ВЫБОР КОГДА &amp;ЕдиницыКоличестваВОтчете = 0 ТОГДА
+	КоличествоКонечныйОстаток
+ИНАЧЕ ВЫБОР КОГДА &amp;ЕдиницыКоличестваВОтчете = 1 ТОГДА
+	КоличествоКонечныйОстаток*Затрата.ЕдиницаХраненияОстатков.Коэффициент
+ИНАЧЕ 
+	КоличествоКонечныйОстаток*Затрата.ЕдиницаХраненияОстатков.Коэффициент/Затрата.ЕдиницаДляОтчетов.Коэффициент
+КОНЕЦ
+КОНЕЦ</expression>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Количество конечный остаток</v8:content>
+			</v8:item>
+		</title>
+		<appearance>
+			<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+				<dcscor:parameter>Формат</dcscor:parameter>
+				<dcscor:value xsi:type="xs:string">ЧЦ=15; ЧДЦ=3</dcscor:value>
+			</dcscor:item>
+		</appearance>
+	</calculatedField>
+	<calculatedField>
+		<dataPath>КоличествоНУЕдНачальныйОстаток</dataPath>
+		<expression>ВЫБОР КОГДА &amp;ЕдиницыКоличестваВОтчете = 0 ТОГДА
+	КоличествоНУНачальныйОстаток
+ИНАЧЕ ВЫБОР КОГДА &amp;ЕдиницыКоличестваВОтчете = 1 ТОГДА
+	КоличествоНУНачальныйОстаток*Затрата.ЕдиницаХраненияОстатков.Коэффициент
+ИНАЧЕ 
+	КоличествоНУНачальныйОстаток*Затрата.ЕдиницаХраненияОстатков.Коэффициент/Затрата.ЕдиницаДляОтчетов.Коэффициент
+КОНЕЦ
+КОНЕЦ</expression>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Количество НУ начальный остаток</v8:content>
+			</v8:item>
+		</title>
+		<appearance>
+			<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+				<dcscor:parameter>Формат</dcscor:parameter>
+				<dcscor:value xsi:type="xs:string">ЧЦ=15; ЧДЦ=3</dcscor:value>
+			</dcscor:item>
+		</appearance>
+	</calculatedField>
+	<calculatedField>
+		<dataPath>КоличествоНУЕдПриход</dataPath>
+		<expression>ВЫБОР КОГДА &amp;ЕдиницыКоличестваВОтчете = 0 ТОГДА
+	КоличествоНУПриход
+ИНАЧЕ ВЫБОР КОГДА &amp;ЕдиницыКоличестваВОтчете = 1 ТОГДА
+	КоличествоНУПриход*Затрата.ЕдиницаХраненияОстатков.Коэффициент
+ИНАЧЕ 
+	КоличествоНУПриход*Затрата.ЕдиницаХраненияОстатков.Коэффициент/Затрата.ЕдиницаДляОтчетов.Коэффициент
+КОНЕЦ
+КОНЕЦ</expression>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Количество НУ приход</v8:content>
+			</v8:item>
+		</title>
+		<appearance>
+			<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+				<dcscor:parameter>Формат</dcscor:parameter>
+				<dcscor:value xsi:type="xs:string">ЧЦ=15; ЧДЦ=3</dcscor:value>
+			</dcscor:item>
+		</appearance>
+	</calculatedField>
+	<calculatedField>
+		<dataPath>КоличествоНУЕдРасход</dataPath>
+		<expression>ВЫБОР КОГДА &amp;ЕдиницыКоличестваВОтчете = 0 ТОГДА
+	КоличествоНУРасход
+ИНАЧЕ ВЫБОР КОГДА &amp;ЕдиницыКоличестваВОтчете = 1 ТОГДА
+	КоличествоНУРасход*Затрата.ЕдиницаХраненияОстатков.Коэффициент
+ИНАЧЕ 
+	КоличествоНУРасход*Затрата.ЕдиницаХраненияОстатков.Коэффициент/Затрата.ЕдиницаДляОтчетов.Коэффициент
+КОНЕЦ
+КОНЕЦ</expression>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Количество НУ расход</v8:content>
+			</v8:item>
+		</title>
+		<appearance>
+			<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+				<dcscor:parameter>Формат</dcscor:parameter>
+				<dcscor:value xsi:type="xs:string">ЧЦ=15; ЧДЦ=3</dcscor:value>
+			</dcscor:item>
+		</appearance>
+	</calculatedField>
+	<calculatedField>
+		<dataPath>КоличествоНУЕдКонечныйОстаток</dataPath>
+		<expression>ВЫБОР КОГДА &amp;ЕдиницыКоличестваВОтчете = 0 ТОГДА
+	КоличествоНУКонечныйОстаток
+ИНАЧЕ ВЫБОР КОГДА &amp;ЕдиницыКоличестваВОтчете = 1 ТОГДА
+	КоличествоНУКонечныйОстаток*Затрата.ЕдиницаХраненияОстатков.Коэффициент
+ИНАЧЕ 
+	КоличествоНУКонечныйОстаток*Затрата.ЕдиницаХраненияОстатков.Коэффициент/Затрата.ЕдиницаДляОтчетов.Коэффициент
+КОНЕЦ
+КОНЕЦ</expression>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Количество НУ конечный остаток</v8:content>
+			</v8:item>
+		</title>
+		<appearance>
+			<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+				<dcscor:parameter>Формат</dcscor:parameter>
+				<dcscor:value xsi:type="xs:string">ЧЦ=15; ЧДЦ=3</dcscor:value>
+			</dcscor:item>
+		</appearance>
+	</calculatedField>
+	<calculatedField>
+		<dataPath>КоличествоЕдОборот</dataPath>
+		<expression>ВЫБОР КОГДА &amp;ЕдиницыКоличестваВОтчете = 0 ТОГДА
+	КоличествоОборот
+ИНАЧЕ ВЫБОР КОГДА &amp;ЕдиницыКоличестваВОтчете = 1 ТОГДА
+	КоличествоОборот*Затрата.ЕдиницаХраненияОстатков.Коэффициент
+ИНАЧЕ 
+	КоличествоОборот*Затрата.ЕдиницаХраненияОстатков.Коэффициент/Затрата.ЕдиницаДляОтчетов.Коэффициент
+КОНЕЦ
+КОНЕЦ</expression>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Количество оборот</v8:content>
+			</v8:item>
+		</title>
+		<appearance>
+			<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+				<dcscor:parameter>Формат</dcscor:parameter>
+				<dcscor:value xsi:type="xs:string">ЧЦ=15; ЧДЦ=3</dcscor:value>
+			</dcscor:item>
+		</appearance>
+	</calculatedField>
+	<calculatedField>
+		<dataPath>КоличествоНУЕдОборот</dataPath>
+		<expression>ВЫБОР КОГДА &amp;ЕдиницыКоличестваВОтчете = 0 ТОГДА
+	КоличествоНУОборот
+ИНАЧЕ ВЫБОР КОГДА &amp;ЕдиницыКоличестваВОтчете = 1 ТОГДА
+	КоличествоНУОборот*Затрата.ЕдиницаХраненияОстатков.Коэффициент
+ИНАЧЕ 
+	КоличествоНУОборот*Затрата.ЕдиницаХраненияОстатков.Коэффициент/Затрата.ЕдиницаДляОтчетов.Коэффициент
+КОНЕЦ
+КОНЕЦ</expression>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Количество НУ оборот</v8:content>
+			</v8:item>
+		</title>
+		<appearance>
+			<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+				<dcscor:parameter>Формат</dcscor:parameter>
+				<dcscor:value xsi:type="xs:string">ЧЦ=15; ЧДЦ=3</dcscor:value>
+			</dcscor:item>
+		</appearance>
+	</calculatedField>
+	<totalField>
+		<dataPath>СтоимостьКонечныйОстаток</dataPath>
+		<expression>Сумма(СтоимостьКонечныйОстаток)</expression>
+	</totalField>
+	<totalField>
+		<dataPath>СтоимостьНачальныйОстаток</dataPath>
+		<expression>Сумма(СтоимостьНачальныйОстаток)</expression>
+	</totalField>
+	<totalField>
+		<dataPath>СтоимостьОборот</dataPath>
+		<expression>Сумма(СтоимостьОборот)</expression>
+	</totalField>
+	<totalField>
+		<dataPath>СтоимостьПриход</dataPath>
+		<expression>Сумма(СтоимостьПриход)</expression>
+	</totalField>
+	<totalField>
+		<dataPath>СтоимостьРасход</dataPath>
+		<expression>Сумма(СтоимостьРасход)</expression>
+	</totalField>
+	<totalField>
+		<dataPath>КоличествоЕдНачальныйОстаток</dataPath>
+		<expression>Сумма(КоличествоЕдНачальныйОстаток)</expression>
+	</totalField>
+	<totalField>
+		<dataPath>КоличествоЕдОборот</dataPath>
+		<expression>Сумма(КоличествоЕдОборот)</expression>
+	</totalField>
+	<totalField>
+		<dataPath>КоличествоЕдПриход</dataPath>
+		<expression>Сумма(КоличествоЕдПриход)</expression>
+	</totalField>
+	<totalField>
+		<dataPath>КоличествоЕдРасход</dataPath>
+		<expression>Сумма(КоличествоЕдРасход)</expression>
+	</totalField>
+	<totalField>
+		<dataPath>КоличествоЕдКонечныйОстаток</dataPath>
+		<expression>Сумма(КоличествоЕдКонечныйОстаток)</expression>
+	</totalField>
+	<totalField>
+		<dataPath>КоличествоНУЕдНачальныйОстаток</dataPath>
+		<expression>Сумма(КоличествоНУЕдНачальныйОстаток)</expression>
+	</totalField>
+	<totalField>
+		<dataPath>КоличествоНУЕдОборот</dataPath>
+		<expression>Сумма(КоличествоНУЕдОборот)</expression>
+	</totalField>
+	<totalField>
+		<dataPath>КоличествоНУЕдПриход</dataPath>
+		<expression>Сумма(КоличествоНУЕдПриход)</expression>
+	</totalField>
+	<totalField>
+		<dataPath>КоличествоНУЕдРасход</dataPath>
+		<expression>Сумма(КоличествоНУЕдРасход)</expression>
+	</totalField>
+	<totalField>
+		<dataPath>КоличествоНУЕдКонечныйОстаток</dataPath>
+		<expression>Сумма(КоличествоНУЕдКонечныйОстаток)</expression>
+	</totalField>
+	<totalField>
+		<dataPath>НДСВходящийКонечныйОстаток</dataPath>
+		<expression>Сумма(НДСВходящийКонечныйОстаток)</expression>
+	</totalField>
+	<totalField>
+		<dataPath>НДСВходящийНачальныйОстаток</dataPath>
+		<expression>Сумма(НДСВходящийНачальныйОстаток)</expression>
+	</totalField>
+	<totalField>
+		<dataPath>НДСВходящийОборот</dataPath>
+		<expression>Сумма(НДСВходящийОборот)</expression>
+	</totalField>
+	<totalField>
+		<dataPath>НДСВходящийПриход</dataPath>
+		<expression>Сумма(НДСВходящийПриход)</expression>
+	</totalField>
+	<totalField>
+		<dataPath>НДСВходящийРасход</dataPath>
+		<expression>Сумма(НДСВходящийРасход)</expression>
+	</totalField>
+	<totalField>
+		<dataPath>НДСКредитКонечныйОстаток</dataPath>
+		<expression>Сумма(НДСКредитКонечныйОстаток)</expression>
+	</totalField>
+	<totalField>
+		<dataPath>НДСКредитНачальныйОстаток</dataPath>
+		<expression>Сумма(НДСКредитНачальныйОстаток)</expression>
+	</totalField>
+	<totalField>
+		<dataPath>НДСКредитОборот</dataPath>
+		<expression>Сумма(НДСКредитОборот)</expression>
+	</totalField>
+	<totalField>
+		<dataPath>НДСКредитПриход</dataPath>
+		<expression>Сумма(НДСКредитПриход)</expression>
+	</totalField>
+	<totalField>
+		<dataPath>НДСКредитРасход</dataPath>
+		<expression>Сумма(НДСКредитРасход)</expression>
+	</totalField>
+	<totalField>
+		<dataPath>СтоимостьНУКонечныйОстаток</dataPath>
+		<expression>Сумма(СтоимостьНУКонечныйОстаток)</expression>
+	</totalField>
+	<totalField>
+		<dataPath>СтоимостьНУНачальныйОстаток</dataPath>
+		<expression>Сумма(СтоимостьНУНачальныйОстаток)</expression>
+	</totalField>
+	<totalField>
+		<dataPath>СтоимостьНУОборот</dataPath>
+		<expression>Сумма(СтоимостьНУОборот)</expression>
+	</totalField>
+	<totalField>
+		<dataPath>СтоимостьНУПриход</dataPath>
+		<expression>Сумма(СтоимостьНУПриход)</expression>
+	</totalField>
+	<totalField>
+		<dataPath>СтоимостьНУРасход</dataPath>
+		<expression>Сумма(СтоимостьНУРасход)</expression>
+	</totalField>
+	<parameter>
+		<name>НачалоПериода</name>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Начало периода</v8:content>
+			</v8:item>
+		</title>
+		<valueType>
+			<v8:Type>xs:dateTime</v8:Type>
+			<v8:DateQualifiers>
+				<v8:DateFractions>DateTime</v8:DateFractions>
+			</v8:DateQualifiers>
+		</valueType>
+		<value xsi:type="xs:dateTime">0001-01-01T00:00:00</value>
+		<useRestriction>true</useRestriction>
+		<expression>&amp;ПериодФормированияОтчета.ДатаНачала</expression>
+	</parameter>
+	<parameter>
+		<name>КонецПериода</name>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Конец периода</v8:content>
+			</v8:item>
+		</title>
+		<valueType>
+			<v8:Type>xs:dateTime</v8:Type>
+			<v8:DateQualifiers>
+				<v8:DateFractions>DateTime</v8:DateFractions>
+			</v8:DateQualifiers>
+		</valueType>
+		<value xsi:type="xs:dateTime">0001-01-01T00:00:00</value>
+		<useRestriction>true</useRestriction>
+		<expression>&amp;ПериодФормированияОтчета.ДатаОкончания</expression>
+	</parameter>
+	<parameter>
+		<name>ВидУчета</name>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Вид учета</v8:content>
+			</v8:item>
+		</title>
+		<valueType>
+			<v8:Type>xs:decimal</v8:Type>
+			<v8:NumberQualifiers>
+				<v8:Digits>0</v8:Digits>
+				<v8:FractionDigits>0</v8:FractionDigits>
+				<v8:AllowedSign>Any</v8:AllowedSign>
+			</v8:NumberQualifiers>
+		</valueType>
+		<value xsi:type="xs:decimal">0</value>
+		<useRestriction>false</useRestriction>
+		<availableValue>
+			<value xsi:nil="true"/>
+			<presentation xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Упр. учет</v8:content>
+				</v8:item>
+			</presentation>
+		</availableValue>
+		<availableValue>
+			<value xsi:type="xs:decimal">1</value>
+			<presentation xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Регл. учет</v8:content>
+				</v8:item>
+			</presentation>
+		</availableValue>
+	</parameter>
+	<parameter>
+		<name>РазделыУчета</name>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Разделы учета</v8:content>
+			</v8:item>
+		</title>
+		<valueType>
+			<v8:Type xmlns:d4p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d4p1:EnumRef.РазделыУчета</v8:Type>
+		</valueType>
+		<value xsi:type="dcscor:DesignTimeValue">Перечисление.РазделыУчета.Затраты</value>
+		<value xsi:type="dcscor:DesignTimeValue">Перечисление.РазделыУчета.ЗатратыНаВыпуск</value>
+		<value xsi:type="dcscor:DesignTimeValue">Перечисление.РазделыУчета.ЗатратыПоНаработке</value>
+		<useRestriction>true</useRestriction>
+		<valueListAllowed>true</valueListAllowed>
+	</parameter>
+	<parameter>
+		<name>ЕдиницыКоличестваВОтчете</name>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Количество в</v8:content>
+			</v8:item>
+		</title>
+		<valueType>
+			<v8:Type>xs:decimal</v8:Type>
+			<v8:NumberQualifiers>
+				<v8:Digits>0</v8:Digits>
+				<v8:FractionDigits>0</v8:FractionDigits>
+				<v8:AllowedSign>Any</v8:AllowedSign>
+			</v8:NumberQualifiers>
+		</valueType>
+		<value xsi:type="xs:decimal">0</value>
+		<useRestriction>false</useRestriction>
+		<availableValue>
+			<value xsi:nil="true"/>
+			<presentation xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>единицах хранения</v8:content>
+				</v8:item>
+			</presentation>
+		</availableValue>
+		<availableValue>
+			<value xsi:type="xs:decimal">1</value>
+			<presentation xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>базовых единицах</v8:content>
+				</v8:item>
+			</presentation>
+		</availableValue>
+		<availableValue>
+			<value xsi:type="xs:decimal">2</value>
+			<presentation xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>единицах отчетов</v8:content>
+				</v8:item>
+			</presentation>
+		</availableValue>
+	</parameter>
+	<parameter>
+		<name>ПериодФормированияОтчета</name>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Период</v8:content>
+			</v8:item>
+		</title>
+		<valueType>
+			<v8:Type>v8:StandardPeriod</v8:Type>
+		</valueType>
+		<value xsi:type="v8:StandardPeriod">
+			<v8:variant xsi:type="v8:StandardPeriodVariant">Custom</v8:variant>
+			<v8:startDate>0001-01-01T00:00:00</v8:startDate>
+			<v8:endDate>0001-01-01T00:00:00</v8:endDate>
+		</value>
+		<useRestriction>false</useRestriction>
+	</parameter>
+	<settingsVariant>
+		<dcsset:name>Основной</dcsset:name>
+		<dcsset:presentation xsi:type="xs:string">Основной</dcsset:presentation>
+		<dcsset:settings xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows">
+			<dcsset:selection>
+				<dcsset:item xsi:type="dcsset:SelectedItemFolder">
+					<dcsset:title>Начальный остаток</dcsset:title>
+					<dcsset:item xsi:type="dcsset:SelectedItemField">
+						<dcsset:field>КоличествоЕдНачальныйОстаток</dcsset:field>
+						<dcsset:lwsTitle>
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>Количество</v8:content>
+							</v8:item>
+						</dcsset:lwsTitle>
+					</dcsset:item>
+					<dcsset:item xsi:type="dcsset:SelectedItemField">
+						<dcsset:use>false</dcsset:use>
+						<dcsset:field>КоличествоНУЕдНачальныйОстаток</dcsset:field>
+						<dcsset:lwsTitle>
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>Количество (НУ)</v8:content>
+							</v8:item>
+						</dcsset:lwsTitle>
+					</dcsset:item>
+					<dcsset:item xsi:type="dcsset:SelectedItemField">
+						<dcsset:field>СтоимостьНачальныйОстаток</dcsset:field>
+						<dcsset:title>Стоимость</dcsset:title>
+					</dcsset:item>
+					<dcsset:item xsi:type="dcsset:SelectedItemField">
+						<dcsset:use>false</dcsset:use>
+						<dcsset:field>СтоимостьНУНачальныйОстаток</dcsset:field>
+						<dcsset:lwsTitle>
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>Стоимость (НУ)</v8:content>
+							</v8:item>
+						</dcsset:lwsTitle>
+					</dcsset:item>
+					<dcsset:item xsi:type="dcsset:SelectedItemField">
+						<dcsset:use>false</dcsset:use>
+						<dcsset:field>НДСВходящийНачальныйОстаток</dcsset:field>
+					</dcsset:item>
+					<dcsset:item xsi:type="dcsset:SelectedItemField">
+						<dcsset:use>false</dcsset:use>
+						<dcsset:field>НДСКредитНачальныйОстаток</dcsset:field>
+					</dcsset:item>
+					<dcsset:placement>Auto</dcsset:placement>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemFolder">
+					<dcsset:title>Приход</dcsset:title>
+					<dcsset:item xsi:type="dcsset:SelectedItemField">
+						<dcsset:field>КоличествоЕдПриход</dcsset:field>
+						<dcsset:lwsTitle>
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>Количество</v8:content>
+							</v8:item>
+						</dcsset:lwsTitle>
+					</dcsset:item>
+					<dcsset:item xsi:type="dcsset:SelectedItemField">
+						<dcsset:use>false</dcsset:use>
+						<dcsset:field>КоличествоНУЕдПриход</dcsset:field>
+						<dcsset:lwsTitle>
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>Количество (НУ)</v8:content>
+							</v8:item>
+						</dcsset:lwsTitle>
+					</dcsset:item>
+					<dcsset:item xsi:type="dcsset:SelectedItemField">
+						<dcsset:field>СтоимостьПриход</dcsset:field>
+						<dcsset:title>Стоимость</dcsset:title>
+					</dcsset:item>
+					<dcsset:item xsi:type="dcsset:SelectedItemField">
+						<dcsset:use>false</dcsset:use>
+						<dcsset:field>СтоимостьНУПриход</dcsset:field>
+						<dcsset:lwsTitle>
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>Стоимость (НУ)</v8:content>
+							</v8:item>
+						</dcsset:lwsTitle>
+					</dcsset:item>
+					<dcsset:item xsi:type="dcsset:SelectedItemField">
+						<dcsset:use>false</dcsset:use>
+						<dcsset:field>НДСВходящийПриход</dcsset:field>
+					</dcsset:item>
+					<dcsset:item xsi:type="dcsset:SelectedItemField">
+						<dcsset:use>false</dcsset:use>
+						<dcsset:field>НДСКредитПриход</dcsset:field>
+					</dcsset:item>
+					<dcsset:placement>Auto</dcsset:placement>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemFolder">
+					<dcsset:title>Расход</dcsset:title>
+					<dcsset:item xsi:type="dcsset:SelectedItemField">
+						<dcsset:field>КоличествоЕдРасход</dcsset:field>
+						<dcsset:lwsTitle>
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>Количество</v8:content>
+							</v8:item>
+						</dcsset:lwsTitle>
+					</dcsset:item>
+					<dcsset:item xsi:type="dcsset:SelectedItemField">
+						<dcsset:use>false</dcsset:use>
+						<dcsset:field>КоличествоНУЕдРасход</dcsset:field>
+						<dcsset:lwsTitle>
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>Количество (НУ)</v8:content>
+							</v8:item>
+						</dcsset:lwsTitle>
+					</dcsset:item>
+					<dcsset:item xsi:type="dcsset:SelectedItemField">
+						<dcsset:field>СтоимостьРасход</dcsset:field>
+						<dcsset:title>Стоимость</dcsset:title>
+					</dcsset:item>
+					<dcsset:item xsi:type="dcsset:SelectedItemField">
+						<dcsset:use>false</dcsset:use>
+						<dcsset:field>СтоимостьНУРасход</dcsset:field>
+						<dcsset:lwsTitle>
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>Стоимость (НУ)</v8:content>
+							</v8:item>
+						</dcsset:lwsTitle>
+					</dcsset:item>
+					<dcsset:item xsi:type="dcsset:SelectedItemField">
+						<dcsset:use>false</dcsset:use>
+						<dcsset:field>НДСВходящийРасход</dcsset:field>
+					</dcsset:item>
+					<dcsset:item xsi:type="dcsset:SelectedItemField">
+						<dcsset:use>false</dcsset:use>
+						<dcsset:field>НДСКредитРасход</dcsset:field>
+					</dcsset:item>
+					<dcsset:placement>Auto</dcsset:placement>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemFolder">
+					<dcsset:title>Конечный остаток</dcsset:title>
+					<dcsset:item xsi:type="dcsset:SelectedItemField">
+						<dcsset:field>КоличествоЕдКонечныйОстаток</dcsset:field>
+						<dcsset:lwsTitle>
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>Количество</v8:content>
+							</v8:item>
+						</dcsset:lwsTitle>
+					</dcsset:item>
+					<dcsset:item xsi:type="dcsset:SelectedItemField">
+						<dcsset:use>false</dcsset:use>
+						<dcsset:field>КоличествоНУЕдКонечныйОстаток</dcsset:field>
+						<dcsset:lwsTitle>
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>Количество (НУ)</v8:content>
+							</v8:item>
+						</dcsset:lwsTitle>
+					</dcsset:item>
+					<dcsset:item xsi:type="dcsset:SelectedItemField">
+						<dcsset:field>СтоимостьКонечныйОстаток</dcsset:field>
+						<dcsset:title>Стоимость</dcsset:title>
+					</dcsset:item>
+					<dcsset:item xsi:type="dcsset:SelectedItemField">
+						<dcsset:use>false</dcsset:use>
+						<dcsset:field>СтоимостьНУКонечныйОстаток</dcsset:field>
+						<dcsset:lwsTitle>
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>Стоимость (НУ)</v8:content>
+							</v8:item>
+						</dcsset:lwsTitle>
+					</dcsset:item>
+					<dcsset:item xsi:type="dcsset:SelectedItemField">
+						<dcsset:use>false</dcsset:use>
+						<dcsset:field>НДСВходящийКонечныйОстаток</dcsset:field>
+					</dcsset:item>
+					<dcsset:item xsi:type="dcsset:SelectedItemField">
+						<dcsset:use>false</dcsset:use>
+						<dcsset:field>НДСКредитКонечныйОстаток</dcsset:field>
+					</dcsset:item>
+					<dcsset:placement>Auto</dcsset:placement>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemFolder">
+					<dcsset:title>Оборот</dcsset:title>
+					<dcsset:item xsi:type="dcsset:SelectedItemField">
+						<dcsset:use>false</dcsset:use>
+						<dcsset:field>КоличествоЕдОборот</dcsset:field>
+						<dcsset:lwsTitle>
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>Количество</v8:content>
+							</v8:item>
+						</dcsset:lwsTitle>
+					</dcsset:item>
+					<dcsset:item xsi:type="dcsset:SelectedItemField">
+						<dcsset:use>false</dcsset:use>
+						<dcsset:field>КоличествоНУЕдОборот</dcsset:field>
+						<dcsset:lwsTitle>
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>Количество (НУ)</v8:content>
+							</v8:item>
+						</dcsset:lwsTitle>
+					</dcsset:item>
+					<dcsset:item xsi:type="dcsset:SelectedItemField">
+						<dcsset:use>false</dcsset:use>
+						<dcsset:field>СтоимостьОборот</dcsset:field>
+						<dcsset:title>Стоимость</dcsset:title>
+					</dcsset:item>
+					<dcsset:item xsi:type="dcsset:SelectedItemField">
+						<dcsset:use>false</dcsset:use>
+						<dcsset:field>СтоимостьНУОборот</dcsset:field>
+						<dcsset:lwsTitle>
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>Стоимость (НУ)</v8:content>
+							</v8:item>
+						</dcsset:lwsTitle>
+					</dcsset:item>
+					<dcsset:item xsi:type="dcsset:SelectedItemField">
+						<dcsset:use>false</dcsset:use>
+						<dcsset:field>НДСВходящийОборот</dcsset:field>
+					</dcsset:item>
+					<dcsset:item xsi:type="dcsset:SelectedItemField">
+						<dcsset:use>false</dcsset:use>
+						<dcsset:field>НДСКредитОборот</dcsset:field>
+					</dcsset:item>
+					<dcsset:placement>Auto</dcsset:placement>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:use>false</dcsset:use>
+					<dcsset:field>Затрата.ЕдиницаИзмерения</dcsset:field>
+					<dcsset:lwsTitle>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Единица измерения</v8:content>
+						</v8:item>
+					</dcsset:lwsTitle>
+				</dcsset:item>
+				<dcsset:viewMode>Normal</dcsset:viewMode>
+				<dcsset:userSettingID>9c28bc63-3f45-479d-b207-a19353b07a9b</dcsset:userSettingID>
+			</dcsset:selection>
+			<dcsset:filter>
+				<dcsset:item xsi:type="dcsset:FilterItemComparison">
+					<dcsset:use>false</dcsset:use>
+					<dcsset:left xsi:type="dcscor:Field">РазделУчета</dcsset:left>
+					<dcsset:comparisonType>Equal</dcsset:comparisonType>
+					<dcsset:right xsi:type="dcscor:DesignTimeValue">Перечисление.РазделыУчета.</dcsset:right>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:FilterItemComparison">
+					<dcsset:use>false</dcsset:use>
+					<dcsset:left xsi:type="dcscor:Field">Организация</dcsset:left>
+					<dcsset:comparisonType>Equal</dcsset:comparisonType>
+					<dcsset:right xsi:type="dcscor:DesignTimeValue">Справочник.Организации.</dcsset:right>
+					<dcsset:userSettingID>0546fec5-4fc8-4488-81b5-c353bd2ebc71</dcsset:userSettingID>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:FilterItemComparison">
+					<dcsset:use>false</dcsset:use>
+					<dcsset:left xsi:type="dcscor:Field">Затрата</dcsset:left>
+					<dcsset:comparisonType>Equal</dcsset:comparisonType>
+					<dcsset:right xsi:type="dcscor:DesignTimeValue">Справочник.Номенклатура.</dcsset:right>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:FilterItemComparison">
+					<dcsset:use>false</dcsset:use>
+					<dcsset:left xsi:type="dcscor:Field">СтатьяЗатрат</dcsset:left>
+					<dcsset:comparisonType>Equal</dcsset:comparisonType>
+					<dcsset:right xsi:type="dcscor:DesignTimeValue">Справочник.СтатьиЗатрат.</dcsset:right>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:FilterItemComparison">
+					<dcsset:use>false</dcsset:use>
+					<dcsset:left xsi:type="dcscor:Field">ХарактерЗатрат</dcsset:left>
+					<dcsset:comparisonType>Equal</dcsset:comparisonType>
+					<dcsset:right xsi:type="dcscor:DesignTimeValue">Перечисление.ХарактерЗатрат.</dcsset:right>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:FilterItemComparison">
+					<dcsset:use>false</dcsset:use>
+					<dcsset:left xsi:type="dcscor:Field">Счет</dcsset:left>
+					<dcsset:comparisonType>Equal</dcsset:comparisonType>
+					<dcsset:right xsi:type="dcscor:DesignTimeValue">ПланСчетов.Хозрасчетный.</dcsset:right>
+				</dcsset:item>
+				<dcsset:viewMode>Normal</dcsset:viewMode>
+				<dcsset:userSettingID>894a6e57-7bf8-4997-b37f-8732824b8ed2</dcsset:userSettingID>
+			</dcsset:filter>
+			<dcsset:order>
+				<dcsset:viewMode>Normal</dcsset:viewMode>
+				<dcsset:userSettingID>dd4f5739-05dc-4024-b9d7-95609e40d581</dcsset:userSettingID>
+			</dcsset:order>
+			<dcsset:conditionalAppearance>
+				<dcsset:viewMode>Normal</dcsset:viewMode>
+				<dcsset:userSettingID>26cd8021-1a4f-4afe-8f8d-80d4049d6ba7</dcsset:userSettingID>
+			</dcsset:conditionalAppearance>
+			<dcsset:outputParameters>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>РасположениеИтогов</dcscor:parameter>
+					<dcscor:value xsi:type="dcscor:DataCompositionTotalPlacement">Auto</dcscor:value>
+				</dcscor:item>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>Заголовок</dcscor:parameter>
+					<dcscor:value xsi:type="v8:LocalStringType">
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Ведомость по учету затрат</v8:content>
+						</v8:item>
+					</dcscor:value>
+				</dcscor:item>
+			</dcsset:outputParameters>
+			<dcsset:item xsi:type="dcsset:StructureItemGroup">
+				<dcsset:groupItems>
+					<dcsset:item xsi:type="dcsset:GroupItemField">
+						<dcsset:field>РазделУчета</dcsset:field>
+						<dcsset:groupType>Items</dcsset:groupType>
+						<dcsset:periodAdditionType>None</dcsset:periodAdditionType>
+						<dcsset:periodAdditionBegin xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionBegin>
+						<dcsset:periodAdditionEnd xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionEnd>
+					</dcsset:item>
+				</dcsset:groupItems>
+				<dcsset:order>
+					<dcsset:item xsi:type="dcsset:OrderItemAuto"/>
+				</dcsset:order>
+				<dcsset:selection>
+					<dcsset:item xsi:type="dcsset:SelectedItemAuto"/>
+				</dcsset:selection>
+				<dcsset:item xsi:type="dcsset:StructureItemGroup">
+					<dcsset:groupItems>
+						<dcsset:item xsi:type="dcsset:GroupItemField">
+							<dcsset:field>Подразделение</dcsset:field>
+							<dcsset:groupType>Items</dcsset:groupType>
+							<dcsset:periodAdditionType>None</dcsset:periodAdditionType>
+							<dcsset:periodAdditionBegin xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionBegin>
+							<dcsset:periodAdditionEnd xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionEnd>
+						</dcsset:item>
+					</dcsset:groupItems>
+					<dcsset:order>
+						<dcsset:item xsi:type="dcsset:OrderItemAuto"/>
+					</dcsset:order>
+					<dcsset:selection>
+						<dcsset:item xsi:type="dcsset:SelectedItemAuto"/>
+					</dcsset:selection>
+					<dcsset:item xsi:type="dcsset:StructureItemGroup">
+						<dcsset:groupItems>
+							<dcsset:item xsi:type="dcsset:GroupItemField">
+								<dcsset:field>СтатьяЗатрат</dcsset:field>
+								<dcsset:groupType>Items</dcsset:groupType>
+								<dcsset:periodAdditionType>None</dcsset:periodAdditionType>
+								<dcsset:periodAdditionBegin xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionBegin>
+								<dcsset:periodAdditionEnd xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionEnd>
+							</dcsset:item>
+						</dcsset:groupItems>
+						<dcsset:order>
+							<dcsset:item xsi:type="dcsset:OrderItemAuto"/>
+						</dcsset:order>
+						<dcsset:selection>
+							<dcsset:item xsi:type="dcsset:SelectedItemAuto"/>
+						</dcsset:selection>
+						<dcsset:item xsi:type="dcsset:StructureItemGroup">
+							<dcsset:groupItems>
+								<dcsset:item xsi:type="dcsset:GroupItemField">
+									<dcsset:field>Затрата</dcsset:field>
+									<dcsset:groupType>Items</dcsset:groupType>
+									<dcsset:periodAdditionType>None</dcsset:periodAdditionType>
+									<dcsset:periodAdditionBegin xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionBegin>
+									<dcsset:periodAdditionEnd xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionEnd>
+								</dcsset:item>
+							</dcsset:groupItems>
+							<dcsset:order>
+								<dcsset:item xsi:type="dcsset:OrderItemAuto"/>
+							</dcsset:order>
+							<dcsset:selection>
+								<dcsset:item xsi:type="dcsset:SelectedItemAuto"/>
+							</dcsset:selection>
+						</dcsset:item>
+					</dcsset:item>
+				</dcsset:item>
+			</dcsset:item>
+			<dcsset:itemsViewMode>Normal</dcsset:itemsViewMode>
+			<dcsset:itemsUserSettingID>4d2ee587-14eb-469c-86e4-2d75ec1d91b2</dcsset:itemsUserSettingID>
+		</dcsset:settings>
+	</settingsVariant>
+</DataCompositionSchema>

@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:AccumulationRegister xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:core="http://g5.1c.ru/v8/dt/mcore" xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="ffcc1ded-dd87-49f6-8240-de035674c8c0">
+  <producedTypes>
+    <selectionType typeId="9a6681cd-ae5f-4736-98e7-a30b24c7152b" valueTypeId="fdc302e6-f059-44a4-9845-2ec25fb7a69c"/>
+    <listType typeId="78330c4f-e805-4193-9739-c8d179592020" valueTypeId="1cc6b72c-22f4-4abb-9f08-c2422455ba35"/>
+    <managerType typeId="9edc7736-81a2-455c-ab6d-5a0a19000211" valueTypeId="b3236edd-bec1-4759-83b1-a320f89f0df7"/>
+    <recordSetType typeId="6533bf02-9cc2-4e5a-bd76-e10ec83dd5b5" valueTypeId="11c4e742-355c-43ce-a347-3f6f6e2b478c"/>
+    <recordKeyType typeId="2dd3ebec-02d7-4592-881e-2ac80596d0f3" valueTypeId="a50d124b-238e-4b09-be2c-1f6bfa0f0d4d"/>
+    <recordType typeId="9fbbf02f-d0f7-453d-a536-a1a3a8a5572b" valueTypeId="7bb8de13-5757-4516-bb3d-c428eee1c354"/>
+  </producedTypes>
+  <name>РазмещениеЗаказовПокупателей</name>
+  <synonym>
+    <key>ru</key>
+    <value>Размещение заказов </value>
+  </synonym>
+  <comment>(Упр)</comment>
+  <enableTotalsSplitting>true</enableTotalsSplitting>
+  <resources uuid="de041eb4-314a-46fd-bc77-0351df2124c8">
+    <name>Количество</name>
+    <synonym>
+      <key>ru</key>
+      <value>Количество</value>
+    </synonym>
+    <type>
+      <types>Number</types>
+      <numberQualifiers>
+        <precision>15</precision>
+        <scale>3</scale>
+      </numberQualifiers>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+  </resources>
+  <dimensions uuid="81980524-0851-4462-97ae-30309ef6fefc">
+    <name>ТоварТара</name>
+    <synonym>
+      <key>ru</key>
+      <value>Товар тара</value>
+    </synonym>
+    <type>
+      <types>EnumRef.ТоварТара</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <denyIncompleteValues>true</denyIncompleteValues>
+    <fullTextSearch>Use</fullTextSearch>
+    <useInTotals>true</useInTotals>
+  </dimensions>
+  <dimensions uuid="65fe630b-2bbe-4712-a00b-04867c9b69a3">
+    <name>Номенклатура</name>
+    <synonym>
+      <key>ru</key>
+      <value>Номенклатура</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.Номенклатура</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <denyIncompleteValues>true</denyIncompleteValues>
+    <indexing>Index</indexing>
+    <fullTextSearch>Use</fullTextSearch>
+    <useInTotals>true</useInTotals>
+  </dimensions>
+  <dimensions uuid="578ad61a-5ec7-4e79-abd2-73c6436a6bd3">
+    <name>ХарактеристикаНоменклатуры</name>
+    <synonym>
+      <key>ru</key>
+      <value>Характеристика номенклатуры</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.ХарактеристикиНоменклатуры</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <useInTotals>true</useInTotals>
+  </dimensions>
+  <dimensions uuid="1d0e3659-5d30-4b1e-a024-e0b1d9b5306c">
+    <name>ЗаказПокупателя</name>
+    <synonym>
+      <key>ru</key>
+      <value>Заказ</value>
+    </synonym>
+    <type>
+      <types>DocumentRef.ЗаказНаПроизводство</types>
+      <types>DocumentRef.ВнутреннийЗаказ</types>
+      <types>DocumentRef.ЗаказПокупателя</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <denyIncompleteValues>true</denyIncompleteValues>
+    <indexing>Index</indexing>
+    <fullTextSearch>Use</fullTextSearch>
+    <useInTotals>true</useInTotals>
+  </dimensions>
+  <dimensions uuid="338e6435-7f36-41e2-9229-48887e4ad83a">
+    <name>ЗаказПоставщику</name>
+    <synonym>
+      <key>ru</key>
+      <value>Заказ поставщику</value>
+    </synonym>
+    <type>
+      <types>DocumentRef.ЗаказНаПроизводство</types>
+      <types>DocumentRef.ЗаказПоставщику</types>
+      <types>DocumentRef.ВнутреннийЗаказ</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <denyIncompleteValues>true</denyIncompleteValues>
+    <indexing>Index</indexing>
+    <fullTextSearch>Use</fullTextSearch>
+    <useInTotals>true</useInTotals>
+  </dimensions>
+</mdclass:AccumulationRegister>

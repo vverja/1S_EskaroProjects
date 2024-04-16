@@ -1,0 +1,273 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:AccountingRegister xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:core="http://g5.1c.ru/v8/dt/mcore" xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="676f0137-a31f-44d3-95b9-c95579a03d8a">
+  <producedTypes>
+    <selectionType typeId="fe106f12-254c-4fbb-b218-bf7f16acb52f" valueTypeId="3b3592b1-5528-41a4-95fe-0c0f1700e34d"/>
+    <listType typeId="e6fd6a34-b9dd-47b4-9fcd-ce158317aa35" valueTypeId="0e58a71c-ddc0-4402-9ac7-5bc36e692b54"/>
+    <managerType typeId="79c557a6-ae76-4b62-8860-4fad11e2f367" valueTypeId="52c2ca5c-3f59-4d9d-9d16-61befc3a6733"/>
+    <recordSetType typeId="29aec521-9d25-43ac-bd0b-6a75cf4137d6" valueTypeId="9d8e7571-34f8-49a1-97fe-4a4ed8b43453"/>
+    <recordKeyType typeId="d1f8d2c6-1b8d-4ef1-92ab-cddf0a98b3fd" valueTypeId="76f97903-56ea-40e8-9df8-5768cce62127"/>
+    <recordType typeId="2f0e2d02-9975-4fa6-b7cf-074cb16e091e" valueTypeId="1bf3bcbf-496b-46dc-99a0-9178ae13afd6"/>
+    <extDimensionsType typeId="1df9c71c-88af-4164-b60d-0bb8f3e60c9f" valueTypeId="1420da7e-fcd7-4e7e-8e24-3f9e98112abb"/>
+  </producedTypes>
+  <name>Хозрасчетный</name>
+  <synonym>
+    <key>ru</key>
+    <value>Журнал проводок (бухгалтерский учет)</value>
+  </synonym>
+  <comment>(Регл)</comment>
+  <includeHelpInContents>true</includeHelpInContents>
+  <help>
+    <pages>
+      <lang>ru</lang>
+    </pages>
+  </help>
+  <chartOfAccounts>ChartOfAccounts.Хозрасчетный</chartOfAccounts>
+  <correspondence>true</correspondence>
+  <defaultListForm>AccountingRegister.Хозрасчетный.Form.ФормаСписка</defaultListForm>
+  <enableTotalsSplitting>true</enableTotalsSplitting>
+  <dimensions uuid="06f4f970-5676-418a-809d-e382893a9395">
+    <name>Организация</name>
+    <synonym>
+      <key>ru</key>
+      <value>Организация</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.Организации</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <balance>true</balance>
+  </dimensions>
+  <dimensions uuid="d4e1d748-b9cf-45f6-af0b-470155ab39a0">
+    <name>Валюта</name>
+    <synonym>
+      <key>ru</key>
+      <value>Валюта</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.Валюты</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <accountingFlag>ChartOfAccounts.Хозрасчетный.AccountingFlag.Валютный</accountingFlag>
+  </dimensions>
+  <dimensions uuid="72593b1d-f6d8-4434-8cc0-2b1c4ef138e4">
+    <name>НалоговоеНазначение</name>
+    <synonym>
+      <key>ru</key>
+      <value>Налоговое назначение</value>
+    </synonym>
+    <synonym>
+      <key>uk</key>
+      <value>Податкове призначення</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.НалоговыеНазначенияАктивовИЗатрат</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <accountingFlag>ChartOfAccounts.Хозрасчетный.AccountingFlag.НалоговыйУчет</accountingFlag>
+  </dimensions>
+  <resources uuid="a35de5e4-5007-421e-9ccc-f8ff860ea07d">
+    <name>Сумма</name>
+    <synonym>
+      <key>ru</key>
+      <value>Сумма</value>
+    </synonym>
+    <type>
+      <types>Number</types>
+      <numberQualifiers>
+        <precision>15</precision>
+        <scale>2</scale>
+      </numberQualifiers>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <balance>true</balance>
+    <extDimensionAccountingFlag>ChartOfAccounts.Хозрасчетный.ExtDimensionAccountingFlag.Суммовой</extDimensionAccountingFlag>
+  </resources>
+  <resources uuid="ba7541be-b41a-4879-92d8-94c52f33aea0">
+    <name>ВалютнаяСумма</name>
+    <synonym>
+      <key>ru</key>
+      <value>Валютная сумма</value>
+    </synonym>
+    <type>
+      <types>Number</types>
+      <numberQualifiers>
+        <precision>15</precision>
+        <scale>2</scale>
+      </numberQualifiers>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <accountingFlag>ChartOfAccounts.Хозрасчетный.AccountingFlag.Валютный</accountingFlag>
+    <extDimensionAccountingFlag>ChartOfAccounts.Хозрасчетный.ExtDimensionAccountingFlag.Валютный</extDimensionAccountingFlag>
+  </resources>
+  <resources uuid="ee274dbd-4fc2-44d3-89af-e36cb32d2791">
+    <name>Количество</name>
+    <synonym>
+      <key>ru</key>
+      <value>Количество</value>
+    </synonym>
+    <type>
+      <types>Number</types>
+      <numberQualifiers>
+        <precision>15</precision>
+        <scale>3</scale>
+      </numberQualifiers>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <accountingFlag>ChartOfAccounts.Хозрасчетный.AccountingFlag.Количественный</accountingFlag>
+    <extDimensionAccountingFlag>ChartOfAccounts.Хозрасчетный.ExtDimensionAccountingFlag.Количественный</extDimensionAccountingFlag>
+  </resources>
+  <resources uuid="96bf3e0c-dcfc-49d0-bc26-83bfb54e0864">
+    <name>СуммаНУ</name>
+    <synonym>
+      <key>ru</key>
+      <value>Сумма (налоговый учет)</value>
+    </synonym>
+    <type>
+      <types>Number</types>
+      <numberQualifiers>
+        <precision>15</precision>
+        <scale>2</scale>
+      </numberQualifiers>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <accountingFlag>ChartOfAccounts.Хозрасчетный.AccountingFlag.НалоговыйУчет</accountingFlag>
+    <extDimensionAccountingFlag>ChartOfAccounts.Хозрасчетный.ExtDimensionAccountingFlag.Суммовой</extDimensionAccountingFlag>
+  </resources>
+  <attributes uuid="9f3c65f2-19da-4db9-a04b-89a1e8e4a3c5">
+    <name>Содержание</name>
+    <synonym>
+      <key>ru</key>
+      <value>Содержание</value>
+    </synonym>
+    <type>
+      <types>String</types>
+      <stringQualifiers>
+        <length>150</length>
+      </stringQualifiers>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+  </attributes>
+  <attributes uuid="db693dd3-2585-44c3-b9b7-65cb7fe3f235">
+    <name>НомерЖурнала</name>
+    <synonym>
+      <key>ru</key>
+      <value>Номер журнала</value>
+    </synonym>
+    <type>
+      <types>String</types>
+      <stringQualifiers>
+        <length>2</length>
+      </stringQualifiers>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <indexing>Index</indexing>
+    <fullTextSearch>Use</fullTextSearch>
+  </attributes>
+  <attributes uuid="d41f05e8-2e8b-43aa-b874-f25869281a89">
+    <name>СписаниеПартий</name>
+    <synonym>
+      <key>ru</key>
+      <value>Списание партий</value>
+    </synonym>
+    <comment>Запись сформирована при списании партий</comment>
+    <type>
+      <types>Boolean</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <indexing>Index</indexing>
+    <fullTextSearch>Use</fullTextSearch>
+  </attributes>
+  <attributes uuid="623bdbce-a3a3-4c1b-a80f-53a212583b74">
+    <name>ДатаЗаписи</name>
+    <synonym>
+      <key>ru</key>
+      <value>Дата записи</value>
+    </synonym>
+    <comment>Дата формирования проводки регламентной процедурой</comment>
+    <type>
+      <types>Date</types>
+      <dateQualifiers>
+        <dateFractions>Date</dateFractions>
+      </dateQualifiers>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+  </attributes>
+  <attributes uuid="d8193a4a-8e51-4756-94d6-757c87cf41a4">
+    <name>ВидРегламентнойОперации</name>
+    <synonym>
+      <key>ru</key>
+      <value>Вид регламентной операции</value>
+    </synonym>
+    <type>
+      <types>EnumRef.ВидыРегламентныхОпераций</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+  </attributes>
+  <attributes uuid="91a7dc79-daa3-4480-acd3-be4b24a4f47a">
+    <name>СчетДополнительный</name>
+    <synonym>
+      <key>ru</key>
+      <value>Счет дополнительный</value>
+    </synonym>
+    <type>
+      <types>ChartOfAccountsRef.Хозрасчетный</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+  </attributes>
+  <forms uuid="972b0be3-9176-4a24-be4b-c37e3e564830">
+    <name>ФормаСписка</name>
+    <synonym>
+      <key>ru</key>
+      <value>Журнал проводок</value>
+    </synonym>
+    <formType>Ordinary</formType>
+    <includeHelpInContents>true</includeHelpInContents>
+    <help>
+      <pages>
+        <lang>ru</lang>
+      </pages>
+    </help>
+    <usePurposes>PersonalComputer</usePurposes>
+    <usePurposes>MobileDevice</usePurposes>
+  </forms>
+  <forms uuid="8c13a6a2-ac8f-43d4-a658-78de9266c0e6">
+    <name>ФормаТабло</name>
+    <synonym>
+      <key>ru</key>
+      <value>Табло счетов</value>
+    </synonym>
+    <formType>Ordinary</formType>
+    <includeHelpInContents>true</includeHelpInContents>
+    <help>
+      <pages>
+        <lang>ru</lang>
+      </pages>
+    </help>
+    <usePurposes>PersonalComputer</usePurposes>
+    <usePurposes>MobileDevice</usePurposes>
+  </forms>
+</mdclass:AccountingRegister>

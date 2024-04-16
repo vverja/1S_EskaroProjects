@@ -1,0 +1,222 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:Document xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:core="http://g5.1c.ru/v8/dt/mcore" xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="141a06c8-bee2-4dde-bfd0-409fea150656">
+  <producedTypes>
+    <objectType typeId="e987078a-7be7-4214-90b0-586a027921ac" valueTypeId="5791e21d-2642-4eb9-b4ed-56acc2ea7996"/>
+    <refType typeId="1b5a9854-0593-4328-8fff-448b396bd902" valueTypeId="6e920555-8c84-4a7b-8268-667b1e55f25a"/>
+    <selectionType typeId="c6e4e625-00fe-4b97-bed0-1ac5804554a6" valueTypeId="641afc5e-e2fd-464e-9965-da2e76ad6e3b"/>
+    <listType typeId="9aeb6d3e-97c0-4251-966f-a9f4b22eddb7" valueTypeId="7ef2db39-bb52-4c5c-b9bf-e9adafe74376"/>
+    <managerType typeId="a4eadc1f-2f57-4a56-8c46-7078fc9fe5e0" valueTypeId="1a2d4117-8342-4124-b0e6-6ec4d04cc744"/>
+  </producedTypes>
+  <name>ЗакрытиеЗаказовНаПроизводство</name>
+  <synonym>
+    <key>ru</key>
+    <value>Закрытие заказов на производство</value>
+  </synonym>
+  <comment>(Общ) Закрытие заказов на производство без исполнения</comment>
+  <inputByString>Document.ЗакрытиеЗаказовНаПроизводство.StandardAttribute.Number</inputByString>
+  <fullTextSearchOnInputByString>DontUse</fullTextSearchOnInputByString>
+  <basedOn>Document.ЗаказНаПроизводство</basedOn>
+  <createOnInput>Use</createOnInput>
+  <includeHelpInContents>true</includeHelpInContents>
+  <help>
+    <pages>
+      <lang>ru</lang>
+    </pages>
+  </help>
+  <fullTextSearch>Use</fullTextSearch>
+  <numberType>String</numberType>
+  <numberLength>11</numberLength>
+  <numberPeriodicity>Year</numberPeriodicity>
+  <checkUnique>true</checkUnique>
+  <autonumbering>true</autonumbering>
+  <defaultObjectForm>Document.ЗакрытиеЗаказовНаПроизводство.Form.ФормаДокумента</defaultObjectForm>
+  <defaultListForm>Document.ЗакрытиеЗаказовНаПроизводство.Form.ФормаСписка</defaultListForm>
+  <defaultChoiceForm>Document.ЗакрытиеЗаказовНаПроизводство.Form.ФормаВыбора</defaultChoiceForm>
+  <realTimePosting>Deny</realTimePosting>
+  <registerRecordsDeletion>AutoDeleteOff</registerRecordsDeletion>
+  <registerRecordsWritingOnPost>WriteModified</registerRecordsWritingOnPost>
+  <sequenceFilling>AutoFillOff</sequenceFilling>
+  <registerRecords>AccumulationRegister.ПотребностиЗаказовНаПроизводство</registerRecords>
+  <registerRecords>AccumulationRegister.СвободныеОстатки</registerRecords>
+  <registerRecords>InformationRegister.ПричиныЗакрытияЗаказов</registerRecords>
+  <registerRecords>AccumulationRegister.ЗаказыНаПроизводство</registerRecords>
+  <registerRecords>AccumulationRegister.ТоварыВРезервеНаСкладах</registerRecords>
+  <registerRecords>AccumulationRegister.РазмещениеЗаказовПокупателей</registerRecords>
+  <attributes uuid="57569ea7-cc2a-48e9-aaec-cc9bdec2df71">
+    <name>Организация</name>
+    <synonym>
+      <key>ru</key>
+      <value>Организация</value>
+    </synonym>
+    <comment>(Общ)</comment>
+    <type>
+      <types>CatalogRef.Организации</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <indexing>Index</indexing>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+  </attributes>
+  <attributes uuid="0a9dcc41-8754-4729-a923-af0ddb4c693e">
+    <name>Комментарий</name>
+    <synonym>
+      <key>ru</key>
+      <value>Комментарий</value>
+    </synonym>
+    <comment>(Общ) Любая дополнительная информация</comment>
+    <type>
+      <types>String</types>
+      <stringQualifiers/>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+  </attributes>
+  <attributes uuid="7fc9b592-c65d-4409-9f16-1f89563d360a">
+    <name>ВидОперации</name>
+    <synonym>
+      <key>ru</key>
+      <value>Вид операции</value>
+    </synonym>
+    <comment>(Общ)</comment>
+    <type>
+      <types>EnumRef.ВидыОперацийЗакрытиеЗаказовНаПроизводство</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+  </attributes>
+  <attributes uuid="c81417bf-fac7-42ad-a4a0-3981a752b905">
+    <name>Подразделение</name>
+    <synonym>
+      <key>ru</key>
+      <value>Подразделение</value>
+    </synonym>
+    <comment>(Упр)</comment>
+    <type>
+      <types>CatalogRef.Подразделения</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+  </attributes>
+  <attributes uuid="ce15094c-70a4-42f7-a19f-1010537d7d1c">
+    <name>Ответственный</name>
+    <synonym>
+      <key>ru</key>
+      <value>Ответственный</value>
+    </synonym>
+    <comment>(Общ)</comment>
+    <type>
+      <types>CatalogRef.Пользователи</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+  </attributes>
+  <attributes uuid="fac8363f-b82a-4edb-9c2b-1d394b8a2e0d">
+    <name>СпособЗаполнения</name>
+    <synonym>
+      <key>ru</key>
+      <value>Способ заполнения</value>
+    </synonym>
+    <type>
+      <types>ValueStorage</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <dataHistory>Use</dataHistory>
+  </attributes>
+  <forms uuid="cbec8480-2d53-423b-99fb-090637638548">
+    <name>ФормаДокумента</name>
+    <synonym>
+      <key>ru</key>
+      <value>Форма документа</value>
+    </synonym>
+    <formType>Ordinary</formType>
+    <usePurposes>PersonalComputer</usePurposes>
+    <usePurposes>MobileDevice</usePurposes>
+  </forms>
+  <forms uuid="3c0111e8-a083-43f1-8a9f-1aff43a7b9e2">
+    <name>ФормаСписка</name>
+    <synonym>
+      <key>ru</key>
+      <value>Форма списка</value>
+    </synonym>
+    <formType>Ordinary</formType>
+    <usePurposes>PersonalComputer</usePurposes>
+    <usePurposes>MobileDevice</usePurposes>
+  </forms>
+  <forms uuid="14034bd6-69f2-4587-8412-b2db89f31ea4">
+    <name>ФормаВыбора</name>
+    <synonym>
+      <key>ru</key>
+      <value>Форма выбора</value>
+    </synonym>
+    <formType>Ordinary</formType>
+    <usePurposes>PersonalComputer</usePurposes>
+    <usePurposes>MobileDevice</usePurposes>
+  </forms>
+  <forms uuid="c8f1bb94-1f07-4763-9ef2-a2a04ba25e04">
+    <name>ФормаОтбораЗаказов</name>
+    <synonym>
+      <key>ru</key>
+      <value>Форма отбора заказов</value>
+    </synonym>
+    <formType>Ordinary</formType>
+    <usePurposes>PersonalComputer</usePurposes>
+    <usePurposes>MobileDevice</usePurposes>
+  </forms>
+  <tabularSections uuid="f7a01e81-eff1-4c15-99a7-2f45196f3e9a">
+    <producedTypes>
+      <objectType typeId="da4d5945-4a58-47ef-b567-470e31c9f900" valueTypeId="435291e6-716d-4b75-8b3f-1bd4787a5865"/>
+      <rowType typeId="3de3f132-b793-4675-80d0-f1996a91b135" valueTypeId="9b8894b4-4692-4122-8277-76e71ce79e7b"/>
+    </producedTypes>
+    <name>Заказы</name>
+    <synonym>
+      <key>ru</key>
+      <value>Заказы</value>
+    </synonym>
+    <comment>(Общ)</comment>
+    <attributes uuid="b9fd48e2-4b50-4ea6-a548-541afb55f67e">
+      <name>ЗаказНаПроизводство</name>
+      <synonym>
+        <key>ru</key>
+        <value>Заказ на производство</value>
+      </synonym>
+      <comment>(Общ)</comment>
+      <type>
+        <types>DocumentRef.ЗаказНаПроизводство</types>
+      </type>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <dataHistory>Use</dataHistory>
+      <fullTextSearch>Use</fullTextSearch>
+    </attributes>
+    <attributes uuid="294f1e95-1950-4ef9-9c2c-1d9540cab2e6">
+      <name>ПричинаЗакрытияЗаказа</name>
+      <synonym>
+        <key>ru</key>
+        <value>Причина закрытия заказа</value>
+      </synonym>
+      <type>
+        <types>CatalogRef.ПричиныЗакрытияЗаказов</types>
+      </type>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <dataHistory>Use</dataHistory>
+      <fullTextSearch>Use</fullTextSearch>
+    </attributes>
+  </tabularSections>
+</mdclass:Document>

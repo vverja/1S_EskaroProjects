@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:AccumulationRegister xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:core="http://g5.1c.ru/v8/dt/mcore" xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="e4cb993c-36f8-43bf-b851-5e7a5ab77c2c">
+  <producedTypes>
+    <selectionType typeId="1e47a90c-20fd-4655-8029-09639a2c198c" valueTypeId="192c6456-74cf-41fd-82bb-17663bc351fe"/>
+    <listType typeId="be86a886-6a7d-4e2c-bba0-73911e9b338a" valueTypeId="b21aeaf4-84cc-4349-b7b3-38dd7d0430e3"/>
+    <managerType typeId="e2d1a875-8adb-4fe1-bc14-d62aef9f6fb9" valueTypeId="a2b3a87a-f4d6-4297-bd70-03358062c97e"/>
+    <recordSetType typeId="0e7bd655-9823-4f5c-949d-2be7eb4dfaff" valueTypeId="ef453749-400b-4dd4-b7cf-0d23660a45bb"/>
+    <recordKeyType typeId="7f1105ea-5cbc-4267-8d31-9abbc3e56ef3" valueTypeId="5c9c76c0-5254-4158-8bb5-3ef2cf1a94bd"/>
+    <recordType typeId="c71a3f2d-b935-4d47-93ee-1badbcd46736" valueTypeId="e410036d-87e2-4a44-b9eb-31cb8df16f36"/>
+  </producedTypes>
+  <name>ПогашениеЗаймовРаботникамиОрганизаций</name>
+  <synonym>
+    <key>ru</key>
+    <value>Погашение займов работниками организаций</value>
+  </synonym>
+  <comment>(Регл)</comment>
+  <defaultListForm>AccumulationRegister.ПогашениеЗаймовРаботникамиОрганизаций.Form.ФормаСписка</defaultListForm>
+  <enableTotalsSplitting>true</enableTotalsSplitting>
+  <resources uuid="a0d00caf-36ca-4686-9a31-1adf5f9b8131">
+    <name>ОсновнойДолг</name>
+    <synonym>
+      <key>ru</key>
+      <value>Основной долг</value>
+    </synonym>
+    <type>
+      <types>Number</types>
+      <numberQualifiers>
+        <precision>15</precision>
+        <scale>2</scale>
+      </numberQualifiers>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+  </resources>
+  <resources uuid="dad8d30c-e939-4268-bf59-f9677b88e595">
+    <name>Проценты</name>
+    <synonym>
+      <key>ru</key>
+      <value>Проценты</value>
+    </synonym>
+    <type>
+      <types>Number</types>
+      <numberQualifiers>
+        <precision>15</precision>
+        <scale>2</scale>
+      </numberQualifiers>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+  </resources>
+  <attributes uuid="aabe84cd-bd83-4b2c-938c-d449dd04d525">
+    <name>УдержаноИзЗарплаты</name>
+    <synonym>
+      <key>ru</key>
+      <value>Удержано из зарплаты</value>
+    </synonym>
+    <type>
+      <types>Boolean</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+  </attributes>
+  <dimensions uuid="0140c09e-e0e4-48a3-95e7-5294c1f6a764">
+    <name>Организация</name>
+    <synonym>
+      <key>ru</key>
+      <value>Организация</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.Организации</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <denyIncompleteValues>true</denyIncompleteValues>
+    <indexing>Index</indexing>
+    <fullTextSearch>Use</fullTextSearch>
+    <useInTotals>true</useInTotals>
+  </dimensions>
+  <dimensions uuid="474adffe-c6b3-415f-aafa-38ed5e317b60">
+    <name>Сотрудник</name>
+    <synonym>
+      <key>ru</key>
+      <value>Сотрудник</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.СотрудникиОрганизаций</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <denyIncompleteValues>true</denyIncompleteValues>
+    <indexing>Index</indexing>
+    <fullTextSearch>Use</fullTextSearch>
+    <useInTotals>true</useInTotals>
+  </dimensions>
+  <dimensions uuid="91cc34e9-cf1a-4880-bbeb-3b462e48cc6b">
+    <name>ДоговорЗайма</name>
+    <synonym>
+      <key>ru</key>
+      <value>Договор займа</value>
+    </synonym>
+    <type>
+      <types>DocumentRef.ДоговорЗаймаСРаботником</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <denyIncompleteValues>true</denyIncompleteValues>
+    <fullTextSearch>Use</fullTextSearch>
+    <useInTotals>true</useInTotals>
+  </dimensions>
+  <forms uuid="d122a692-f48c-4f18-8ef8-de97e4f74ded">
+    <name>ФормаСписка</name>
+    <synonym>
+      <key>ru</key>
+      <value>Форма списка</value>
+    </synonym>
+    <formType>Ordinary</formType>
+    <usePurposes>PersonalComputer</usePurposes>
+    <usePurposes>MobileDevice</usePurposes>
+  </forms>
+</mdclass:AccumulationRegister>

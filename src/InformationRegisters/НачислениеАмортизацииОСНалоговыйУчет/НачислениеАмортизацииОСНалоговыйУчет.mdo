@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:InformationRegister xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:core="http://g5.1c.ru/v8/dt/mcore" xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="f2ae2f91-9866-43b8-b070-0eab8188bc96">
+  <producedTypes>
+    <selectionType typeId="e3126a71-fdc1-4486-bd98-7dc70054d6ae" valueTypeId="1b3a3c45-97a6-4001-b82c-f22c6c48f624"/>
+    <listType typeId="23f4f391-4f83-492d-a6a7-606966617961" valueTypeId="7b4597c0-9d20-4d60-8eab-c89c36c9a65b"/>
+    <managerType typeId="5bee56c7-f18b-4f5e-942c-f6b111558efa" valueTypeId="7f098db2-a9a2-4b96-b96c-e3f8fc1c588c"/>
+    <recordSetType typeId="b78f5624-8b62-4f71-8efc-46aabd661420" valueTypeId="7f6d7e2e-4fc1-4dce-aed2-c984aa96a8d5"/>
+    <recordKeyType typeId="213b518a-0ec6-4e7c-81dd-b434849ed1c4" valueTypeId="b709f45e-402d-49e0-907d-4d51cb2aecb6"/>
+    <recordType typeId="e1fedc5a-e6ae-4731-926d-71db22ca6996" valueTypeId="99c120b2-8c5e-4c87-ab57-bb49811579b7"/>
+    <recordManagerType typeId="1b442218-c16d-4f0a-98c4-9dc0606a7b1e" valueTypeId="6606f73b-2fcc-43c2-950a-edf5fa27cb38"/>
+  </producedTypes>
+  <name>НачислениеАмортизацииОСНалоговыйУчет</name>
+  <synonym>
+    <key>ru</key>
+    <value>Начисление амортизации (налоговый учет)</value>
+  </synonym>
+  <comment>(Регл) Регистр, который показывает когда начислять амортизацию по нал. учету</comment>
+  <informationRegisterPeriodicity>RecorderPosition</informationRegisterPeriodicity>
+  <writeMode>RecorderSubordinate</writeMode>
+  <includeHelpInContents>true</includeHelpInContents>
+  <help>
+    <pages>
+      <lang>ru</lang>
+    </pages>
+  </help>
+  <resources uuid="728cc245-e31b-42e6-96aa-06fd7c5aac52">
+    <name>НачислятьАмортизацию</name>
+    <synonym>
+      <key>ru</key>
+      <value>Начислять амортизацию</value>
+    </synonym>
+    <type>
+      <types>Boolean</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:UndefinedValue"/>
+  </resources>
+  <dimensions uuid="29427fce-2ea0-4680-a782-27ad2fa937d8">
+    <name>ОсновноеСредство</name>
+    <synonym>
+      <key>ru</key>
+      <value>Основное средство</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.ОсновныеСредства</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillFromFillingValue>true</fillFromFillingValue>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <master>true</master>
+    <mainFilter>true</mainFilter>
+  </dimensions>
+  <dimensions uuid="2c63b990-4a1a-4b16-9dcd-02d1ee25e519">
+    <name>Организация</name>
+    <synonym>
+      <key>ru</key>
+      <value>Организация</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.Организации</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <denyIncompleteValues>true</denyIncompleteValues>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <mainFilter>true</mainFilter>
+  </dimensions>
+</mdclass:InformationRegister>

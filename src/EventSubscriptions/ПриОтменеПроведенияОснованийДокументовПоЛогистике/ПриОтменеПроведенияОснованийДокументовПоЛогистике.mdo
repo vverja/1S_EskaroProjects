@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:EventSubscription xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="693ddeec-59ee-41f6-8353-1df39ae09051">
+  <name>ПриОтменеПроведенияОснованийДокументовПоЛогистике</name>
+  <synonym>
+    <key>ru</key>
+    <value>При отмене проведения оснований документов по логистике</value>
+  </synonym>
+  <source>
+    <types>DocumentObject.ЗаказПокупателя</types>
+    <types>DocumentObject.ВозвратТоваровОтПокупателя</types>
+    <types>DocumentObject.КомплектацияНоменклатуры</types>
+    <types>DocumentObject.СписаниеТоваров</types>
+    <types>DocumentObject.ВозвратТоваровПоставщику</types>
+    <types>DocumentObject.ПоступлениеТоваровУслуг</types>
+    <types>DocumentObject.ПеремещениеТоваров</types>
+  </source>
+  <event>UndoPosting</event>
+  <handler>CommonModule.УправлениеСкладскойЛогистикой.ПриОтменеПроведенияОснованийДокументовПоЛогистикеОбработкаУдаленияПроведения</handler>
+</mdclass:EventSubscription>

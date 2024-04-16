@@ -1,0 +1,875 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:Report xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:core="http://g5.1c.ru/v8/dt/mcore" xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="85a7b25a-632c-4e4f-9bc0-76b8c5c86535">
+  <producedTypes>
+    <objectType typeId="1bb1a737-9e86-4a67-9820-d4838c140698" valueTypeId="b3a15327-e6b4-4a44-b315-4f445c044a5b"/>
+    <managerType typeId="1a4ef683-6bca-4beb-90ac-9ae57a73b9bf" valueTypeId="307784c3-afb2-4fe4-be22-a81c7644286a"/>
+  </producedTypes>
+  <name>РегламентированныйОтчетДекларацияНДС</name>
+  <synonym>
+    <key>ru</key>
+    <value>Декларация по НДС</value>
+  </synonym>
+  <synonym>
+    <key>uk</key>
+    <value>Декларація по ПДВ</value>
+  </synonym>
+  <defaultForm>Report.РегламентированныйОтчетДекларацияНДС.Form.ОсновнаяФорма</defaultForm>
+  <attributes uuid="349461e0-f86d-4d95-98b9-5f54a82970c2">
+    <name>Организация</name>
+    <synonym>
+      <key>ru</key>
+      <value>Организация</value>
+    </synonym>
+    <synonym>
+      <key>uk</key>
+      <value>Організація</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.Организации</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </attributes>
+  <attributes uuid="2e841072-0c5f-4129-9c8e-6ef2f1ae8ee4">
+    <name>Периодичность</name>
+    <synonym>
+      <key>ru</key>
+      <value>Периодичность</value>
+    </synonym>
+    <synonym>
+      <key>uk</key>
+      <value>Періодичність</value>
+    </synonym>
+    <comment>Периодичность представления отчета</comment>
+    <type>
+      <types>EnumRef.Периодичность</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </attributes>
+  <attributes uuid="3f49f477-3369-4403-bd82-24f8c5ff1ec8">
+    <name>ДатаПодписи</name>
+    <synonym>
+      <key>ru</key>
+      <value>Дата подписи</value>
+    </synonym>
+    <synonym>
+      <key>uk</key>
+      <value>Дата підпису</value>
+    </synonym>
+    <comment>Дата подписи</comment>
+    <type>
+      <types>Date</types>
+      <dateQualifiers>
+        <dateFractions>Date</dateFractions>
+      </dateQualifiers>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </attributes>
+  <attributes uuid="2ec8a767-361c-4f6b-8345-62e856062aa4">
+    <name>ЕдиницаИзмерения</name>
+    <synonym>
+      <key>ru</key>
+      <value>Единица измерения</value>
+    </synonym>
+    <synonym>
+      <key>uk</key>
+      <value>Одиниця виміру</value>
+    </synonym>
+    <type>
+      <types>EnumRef.ПорядкиОкругленияОтчетности</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </attributes>
+  <attributes uuid="fc100a96-2176-4752-82e9-c3f4eb0fc4ef">
+    <name>ТочностьЕдиницыИзмерения</name>
+    <synonym>
+      <key>ru</key>
+      <value>Точность единицы измерения</value>
+    </synonym>
+    <synonym>
+      <key>uk</key>
+      <value>Точність одиниці виміру</value>
+    </synonym>
+    <type>
+      <types>Number</types>
+      <numberQualifiers>
+        <precision>1</precision>
+        <nonNegative>true</nonNegative>
+      </numberQualifiers>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </attributes>
+  <attributes uuid="f55c1c35-2b2a-45b3-88e1-85b4312087c3">
+    <name>СворачиватьДанныеПоИНН</name>
+    <synonym>
+      <key>ru</key>
+      <value>Сворачивать данные по ИНН</value>
+    </synonym>
+    <synonym>
+      <key>uk</key>
+      <value>Згортати дані по ІПН</value>
+    </synonym>
+    <comment>Cворачивать данные в Приложении5 по номерам ИНН, а не по контрагентам. У контрагентов-плательщиков консолидированного налога ИНН совпадает</comment>
+    <type>
+      <types>Boolean</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </attributes>
+  <attributes uuid="da574d04-428c-40d6-b860-82b8e0a69479">
+    <name>ПроцентШтрафа</name>
+    <synonym>
+      <key>ru</key>
+      <value>Штраф (%)</value>
+    </synonym>
+    <synonym>
+      <key>uk</key>
+      <value>Штраф (%)</value>
+    </synonym>
+    <type>
+      <types>Number</types>
+      <numberQualifiers>
+        <precision>2</precision>
+        <nonNegative>true</nonNegative>
+      </numberQualifiers>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </attributes>
+  <attributes uuid="66be96b5-353d-46ca-a860-533e63668772">
+    <name>СворачиватьКорректировкиОтчетногоПериода</name>
+    <synonym>
+      <key>ru</key>
+      <value>Сворачивать корректировки отчетного периода</value>
+    </synonym>
+    <synonym>
+      <key>uk</key>
+      <value>Згортати дані по ІПН</value>
+    </synonym>
+    <type>
+      <types>Boolean</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </attributes>
+  <attributes uuid="404ce16b-400a-47cf-8ab8-c6fe6b57cfff">
+    <name>Комментарий</name>
+    <synonym>
+      <key>ru</key>
+      <value>Комментарий</value>
+    </synonym>
+    <type>
+      <types>String</types>
+      <stringQualifiers/>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </attributes>
+  <forms uuid="1def1b57-5d0f-41e9-9d6b-b5b528ae6411">
+    <name>ОсновнаяФорма</name>
+    <synonym>
+      <key>ru</key>
+      <value>Декларация по НДС</value>
+    </synonym>
+    <synonym>
+      <key>uk</key>
+      <value>Декларація по ПДВ</value>
+    </synonym>
+    <formType>Ordinary</formType>
+    <usePurposes>PersonalComputer</usePurposes>
+    <usePurposes>MobileDevice</usePurposes>
+  </forms>
+  <forms uuid="44706b19-9aa0-4a25-b5e5-466a7e3d17d9">
+    <name>ФормаСпискаДопСтраниц</name>
+    <synonym>
+      <key>ru</key>
+      <value>Форма списка дополнительных страниц</value>
+    </synonym>
+    <synonym>
+      <key>uk</key>
+      <value>Форма списку додаткових сторінок</value>
+    </synonym>
+    <comment>Форма выбора страниц отчета при печати</comment>
+    <formType>Ordinary</formType>
+    <usePurposes>PersonalComputer</usePurposes>
+    <usePurposes>MobileDevice</usePurposes>
+  </forms>
+  <forms uuid="d123824d-9458-4479-bc12-1e5a81a1c8fe">
+    <name>ФормаНастройкиСтраниц</name>
+    <synonym>
+      <key>ru</key>
+      <value>Форма настройки страниц</value>
+    </synonym>
+    <synonym>
+      <key>uk</key>
+      <value>Форма настроювання сторінок</value>
+    </synonym>
+    <formType>Ordinary</formType>
+    <usePurposes>PersonalComputer</usePurposes>
+    <usePurposes>MobileDevice</usePurposes>
+  </forms>
+  <forms uuid="d8d9e68e-c57c-4e3f-8ac2-ad27e413387d">
+    <name>ФормаОтчета2005Кв2</name>
+    <synonym>
+      <key>ru</key>
+      <value>Декларация по НДС</value>
+    </synonym>
+    <synonym>
+      <key>uk</key>
+      <value>Декларація по ПДВ</value>
+    </synonym>
+    <formType>Ordinary</formType>
+    <usePurposes>PersonalComputer</usePurposes>
+    <usePurposes>MobileDevice</usePurposes>
+  </forms>
+  <forms uuid="dcb9e039-0cf2-42ed-b410-638c373eb7d4">
+    <name>ФормаОтчета2003Кв1</name>
+    <synonym>
+      <key>ru</key>
+      <value>Декларация по НДС</value>
+    </synonym>
+    <synonym>
+      <key>uk</key>
+      <value>Декларація по ПДВ</value>
+    </synonym>
+    <formType>Ordinary</formType>
+    <usePurposes>PersonalComputer</usePurposes>
+    <usePurposes>MobileDevice</usePurposes>
+  </forms>
+  <forms uuid="824a9d07-b20f-4a6c-baa8-6c0234052b8c">
+    <name>ФормаОтчета2007Кв3</name>
+    <synonym>
+      <key>ru</key>
+      <value>Декларация по НДС</value>
+    </synonym>
+    <synonym>
+      <key>uk</key>
+      <value>Декларація по ПДВ</value>
+    </synonym>
+    <formType>Ordinary</formType>
+    <usePurposes>PersonalComputer</usePurposes>
+    <usePurposes>MobileDevice</usePurposes>
+  </forms>
+  <forms uuid="e043f1b2-be9f-4b95-9a49-87911bc738ab">
+    <name>ФормаОтчета2008Кв1</name>
+    <synonym>
+      <key>ru</key>
+      <value>Декларация по НДС</value>
+    </synonym>
+    <synonym>
+      <key>uk</key>
+      <value>Декларація по ПДВ</value>
+    </synonym>
+    <comment>Действует с 1 января 2008</comment>
+    <formType>Ordinary</formType>
+    <usePurposes>PersonalComputer</usePurposes>
+    <usePurposes>MobileDevice</usePurposes>
+  </forms>
+  <forms uuid="a71c7dd9-51fa-4aa9-a34a-94d36536ff95">
+    <name>ФормаОтчета2009Кв1</name>
+    <synonym>
+      <key>ru</key>
+      <value>Декларация по НДС</value>
+    </synonym>
+    <synonym>
+      <key>uk</key>
+      <value>Декларація по ПДВ</value>
+    </synonym>
+    <comment>Действует с 10 февраля 2009</comment>
+    <formType>Ordinary</formType>
+    <usePurposes>PersonalComputer</usePurposes>
+    <usePurposes>MobileDevice</usePurposes>
+  </forms>
+  <forms uuid="12c128a6-b1d2-4b05-8597-cfc63878127e">
+    <name>ФормаОтчета2009Кв2</name>
+    <synonym>
+      <key>ru</key>
+      <value>Декларация по НДС</value>
+    </synonym>
+    <synonym>
+      <key>uk</key>
+      <value>Декларація по ПДВ</value>
+    </synonym>
+    <comment>Действует с 1 мая 2009</comment>
+    <formType>Ordinary</formType>
+    <usePurposes>PersonalComputer</usePurposes>
+    <usePurposes>MobileDevice</usePurposes>
+  </forms>
+  <forms uuid="4013409d-9442-4376-ade9-aeb49fd9cb28">
+    <name>ФормаОтчета2010Кв2</name>
+    <synonym>
+      <key>ru</key>
+      <value>Декларация по НДС</value>
+    </synonym>
+    <synonym>
+      <key>uk</key>
+      <value>Декларація по ПДВ</value>
+    </synonym>
+    <comment>Действует с июня 2010</comment>
+    <formType>Ordinary</formType>
+    <usePurposes>PersonalComputer</usePurposes>
+    <usePurposes>MobileDevice</usePurposes>
+  </forms>
+  <forms uuid="a9304fc8-00c3-4345-9960-7bc1290e9571">
+    <name>ФормаОтчета2011Кв1</name>
+    <synonym>
+      <key>ru</key>
+      <value>Декларация по НДС</value>
+    </synonym>
+    <synonym>
+      <key>uk</key>
+      <value>Декларація по ПДВ</value>
+    </synonym>
+    <comment>Действует с отчета за март 2011</comment>
+    <formType>Ordinary</formType>
+    <usePurposes>PersonalComputer</usePurposes>
+    <usePurposes>MobileDevice</usePurposes>
+  </forms>
+  <templates uuid="9ae8969e-1a9a-4750-bf54-3ef35839b11e">
+    <name>ПоказателиЗвит1С</name>
+    <synonym>
+      <key>ru</key>
+      <value>Показатели &quot;1С-Звит&quot;</value>
+    </synonym>
+  </templates>
+  <templates uuid="a0553e98-5911-4979-9a0f-0643d547cc86">
+    <name>СоставПоказателей</name>
+    <synonym>
+      <key>ru</key>
+      <value>СоставПоказателей</value>
+    </synonym>
+  </templates>
+  <templates uuid="08a1bd38-3b1a-4c3d-af52-d3999d53fb1b">
+    <name>J0200105</name>
+    <synonym>
+      <key>ru</key>
+      <value>J0200105</value>
+    </synonym>
+    <templateType>BinaryData</templateType>
+  </templates>
+  <templates uuid="47300972-330a-498a-9c6d-3a208a8540cd">
+    <name>J0200505</name>
+    <synonym>
+      <key>ru</key>
+      <value>J0200505</value>
+    </synonym>
+    <templateType>BinaryData</templateType>
+  </templates>
+  <templates uuid="59d01f2a-7cae-40b1-8ab3-f236e6f006b2">
+    <name>J0215001</name>
+    <synonym>
+      <key>ru</key>
+      <value>J0215001</value>
+    </synonym>
+    <templateType>BinaryData</templateType>
+  </templates>
+  <templates uuid="66074b4b-dcee-4011-a696-2abf331b5fa9">
+    <name>J0200605</name>
+    <synonym>
+      <key>ru</key>
+      <value>J0200605</value>
+    </synonym>
+    <templateType>BinaryData</templateType>
+  </templates>
+  <templates uuid="26d76b96-bdf6-428a-ad78-2365abe216b1">
+    <name>J0200504</name>
+    <synonym>
+      <key>ru</key>
+      <value>J0200504</value>
+    </synonym>
+    <templateType>BinaryData</templateType>
+  </templates>
+  <templates uuid="94058340-9727-4ba6-8a83-68cd2212deb0">
+    <name>J0200602</name>
+    <synonym>
+      <key>ru</key>
+      <value>J0200602</value>
+    </synonym>
+    <templateType>BinaryData</templateType>
+  </templates>
+  <templates uuid="74bf2ed9-d950-4abc-858d-cd03ff3ec4fa">
+    <name>J0200103</name>
+    <synonym>
+      <key>ru</key>
+      <value>J0200103</value>
+    </synonym>
+    <templateType>BinaryData</templateType>
+  </templates>
+  <templates uuid="411828ae-dc2c-4c95-b21f-8915123cd6e0">
+    <name>J0203704</name>
+    <synonym>
+      <key>ru</key>
+      <value>J0203704</value>
+    </synonym>
+    <templateType>BinaryData</templateType>
+  </templates>
+  <templates uuid="5630c4a7-9a02-4831-a068-633425d93b0f">
+    <name>J0203703</name>
+    <synonym>
+      <key>ru</key>
+      <value>J0203703</value>
+    </synonym>
+    <templateType>BinaryData</templateType>
+  </templates>
+  <templates uuid="ed789e7b-8140-4def-abdc-fb9d9c3bc363">
+    <name>F0200105</name>
+    <synonym>
+      <key>ru</key>
+      <value>F0200105</value>
+    </synonym>
+    <templateType>BinaryData</templateType>
+  </templates>
+  <templates uuid="4655b5a8-92f2-4057-816b-980c30fa3a0f">
+    <name>F0200405</name>
+    <synonym>
+      <key>ru</key>
+      <value>F0200405</value>
+    </synonym>
+    <templateType>BinaryData</templateType>
+  </templates>
+  <templates uuid="88f7c038-9549-468b-8c39-883c9004d3d4">
+    <name>F0200505</name>
+    <synonym>
+      <key>ru</key>
+      <value>F0200505</value>
+    </synonym>
+    <templateType>BinaryData</templateType>
+  </templates>
+  <templates uuid="0bb967af-2c90-4207-afe2-f774e086491d">
+    <name>F0215001</name>
+    <synonym>
+      <key>ru</key>
+      <value>F0215001</value>
+    </synonym>
+    <templateType>BinaryData</templateType>
+  </templates>
+  <templates uuid="28f24f14-e00a-4599-b330-8dc7adb8eb61">
+    <name>СоставПоказателей2003Кв1</name>
+    <synonym>
+      <key>ru</key>
+      <value>Состав показателей2003 кв1</value>
+    </synonym>
+  </templates>
+  <templates uuid="7270e091-0753-4ba1-8162-38268a3f65ac">
+    <name>СоставПоказателей2007Кв3</name>
+    <synonym>
+      <key>ru</key>
+      <value>СоставПоказателей2007кв3</value>
+    </synonym>
+  </templates>
+  <templates uuid="6a630946-e135-45cb-8c8c-fc0f0fe5ff05">
+    <name>СоставПоказателей2008Кв1</name>
+    <synonym>
+      <key>ru</key>
+      <value>СоставПоказателей2008кв1</value>
+    </synonym>
+  </templates>
+  <templates uuid="cc8df52b-3ec2-4fc1-8672-ec6631c8263d">
+    <name>J0200106</name>
+    <synonym>
+      <key>ru</key>
+      <value>J0200106</value>
+    </synonym>
+    <templateType>BinaryData</templateType>
+  </templates>
+  <templates uuid="c5bc7aa6-2419-48d6-9b66-2995e8d1b4af">
+    <name>F0200106</name>
+    <synonym>
+      <key>ru</key>
+      <value>F0200106</value>
+    </synonym>
+    <templateType>BinaryData</templateType>
+  </templates>
+  <templates uuid="bfe58fd4-ed66-4956-b352-2a4e960ec718">
+    <name>J0200506</name>
+    <synonym>
+      <key>ru</key>
+      <value>J0200506</value>
+    </synonym>
+    <templateType>BinaryData</templateType>
+  </templates>
+  <templates uuid="936067a0-a63f-48e2-be04-eec6a8c32176">
+    <name>J0299801</name>
+    <synonym>
+      <key>ru</key>
+      <value>J0299801</value>
+    </synonym>
+    <templateType>BinaryData</templateType>
+  </templates>
+  <templates uuid="5197fc15-a6d4-4caa-a474-07859074354e">
+    <name>F0299801</name>
+    <synonym>
+      <key>ru</key>
+      <value>F0299801</value>
+    </synonym>
+    <templateType>BinaryData</templateType>
+  </templates>
+  <templates uuid="e2278725-0ca2-4930-ac37-efba8ee9ae31">
+    <name>F0200406</name>
+    <synonym>
+      <key>ru</key>
+      <value>F0200406</value>
+    </synonym>
+    <templateType>BinaryData</templateType>
+  </templates>
+  <templates uuid="bc7ba4e1-f43b-4d6b-a93f-869f3787980a">
+    <name>J0200606</name>
+    <synonym>
+      <key>ru</key>
+      <value>J0200606</value>
+    </synonym>
+    <templateType>BinaryData</templateType>
+  </templates>
+  <templates uuid="68c5992c-773a-49f6-bc2c-6ee50a0562c1">
+    <name>F0200506</name>
+    <synonym>
+      <key>ru</key>
+      <value>F0200506</value>
+    </synonym>
+    <templateType>BinaryData</templateType>
+  </templates>
+  <templates uuid="be6c09b6-768e-4cac-a353-df2185bc016c">
+    <name>J0215101</name>
+    <synonym>
+      <key>ru</key>
+      <value>J0215101</value>
+    </synonym>
+    <templateType>BinaryData</templateType>
+  </templates>
+  <templates uuid="31e9d5bf-df2c-4c1e-8e78-d25ebed0516d">
+    <name>F0215101</name>
+    <synonym>
+      <key>ru</key>
+      <value>F0215101</value>
+    </synonym>
+    <templateType>BinaryData</templateType>
+  </templates>
+  <templates uuid="5b6b2d30-0377-4f6c-8347-0097ad8585bf">
+    <name>J0215201</name>
+    <synonym>
+      <key>ru</key>
+      <value>J0215201</value>
+    </synonym>
+    <templateType>BinaryData</templateType>
+  </templates>
+  <templates uuid="9192ffb5-2035-4db8-a156-6cf6dc7d13da">
+    <name>F0215201</name>
+    <synonym>
+      <key>ru</key>
+      <value>F0215201</value>
+    </synonym>
+    <templateType>BinaryData</templateType>
+  </templates>
+  <templates uuid="1e136d45-103d-467c-8b57-99e355af389e">
+    <name>СоставПоказателей2009Кв1</name>
+    <synonym>
+      <key>ru</key>
+      <value>СоставПоказателей2009кв1</value>
+    </synonym>
+  </templates>
+  <templates uuid="9eb82d37-49a3-4507-9db4-8fc6ccdf98d3">
+    <name>F0200107</name>
+    <synonym>
+      <key>ru</key>
+      <value>F0200107</value>
+    </synonym>
+    <templateType>BinaryData</templateType>
+  </templates>
+  <templates uuid="021bf6e2-8db2-4b57-b33f-ab65c6ec0eaa">
+    <name>F0200407</name>
+    <synonym>
+      <key>ru</key>
+      <value>F0200407</value>
+    </synonym>
+    <templateType>BinaryData</templateType>
+  </templates>
+  <templates uuid="2a6220c5-356a-448c-ba59-f222dd256791">
+    <name>J0200107</name>
+    <synonym>
+      <key>ru</key>
+      <value>J0200107</value>
+    </synonym>
+    <templateType>BinaryData</templateType>
+  </templates>
+  <templates uuid="0b2c536a-89d4-49c0-bac9-376da6b43733">
+    <name>J0200507</name>
+    <synonym>
+      <key>ru</key>
+      <value>J0200507</value>
+    </synonym>
+    <templateType>BinaryData</templateType>
+  </templates>
+  <templates uuid="de821812-8e21-4896-becc-44792a46a619">
+    <name>J0299301</name>
+    <synonym>
+      <key>ru</key>
+      <value>J0299301</value>
+    </synonym>
+    <templateType>BinaryData</templateType>
+  </templates>
+  <templates uuid="1a253be9-d065-4c7f-a3c4-3d3ddc7781ae">
+    <name>F0299301</name>
+    <synonym>
+      <key>ru</key>
+      <value>F0299301</value>
+    </synonym>
+    <templateType>BinaryData</templateType>
+  </templates>
+  <templates uuid="c4745792-6a9a-4cb5-8dd0-d161464d9da8">
+    <name>F0200108</name>
+    <synonym>
+      <key>ru</key>
+      <value>F0200108</value>
+    </synonym>
+    <templateType>BinaryData</templateType>
+  </templates>
+  <templates uuid="faed4b1e-3bba-4468-87ad-fc32a6f01954">
+    <name>J0200108</name>
+    <synonym>
+      <key>ru</key>
+      <value>J0200108</value>
+    </synonym>
+    <templateType>BinaryData</templateType>
+  </templates>
+  <templates uuid="1dbb02aa-2571-4892-9af7-d0e9642933c9">
+    <name>J0299701</name>
+    <synonym>
+      <key>ru</key>
+      <value>J0299701</value>
+    </synonym>
+    <templateType>BinaryData</templateType>
+  </templates>
+  <templates uuid="2495e5cc-ca88-4d36-92da-64db57298c85">
+    <name>F0299701</name>
+    <synonym>
+      <key>ru</key>
+      <value>F0299701</value>
+    </synonym>
+    <templateType>BinaryData</templateType>
+  </templates>
+  <templates uuid="9ccdac9b-090a-4ad8-85fd-6c7c196f1acd">
+    <name>СоставПоказателей2009Кв2</name>
+    <synonym>
+      <key>ru</key>
+      <value>СоставПоказателей2009кв1</value>
+    </synonym>
+  </templates>
+  <templates uuid="3d15be2e-fe3a-4d93-95fd-64f564080c95">
+    <name>F0200109</name>
+    <synonym>
+      <key>ru</key>
+      <value>F0200109</value>
+    </synonym>
+    <templateType>BinaryData</templateType>
+  </templates>
+  <templates uuid="05ecb91c-e97b-4001-98cd-fb99af6b9eb1">
+    <name>J0200109</name>
+    <synonym>
+      <key>ru</key>
+      <value>J0200109</value>
+    </synonym>
+    <templateType>BinaryData</templateType>
+  </templates>
+  <templates uuid="1f689dbb-7a8a-4b1b-b66c-bfbe3f480367">
+    <name>J0200508</name>
+    <synonym>
+      <key>ru</key>
+      <value>J0200508</value>
+    </synonym>
+    <templateType>BinaryData</templateType>
+  </templates>
+  <templates uuid="cd01f453-8395-4a52-b1e7-fe9cd768537d">
+    <name>F0200408</name>
+    <synonym>
+      <key>ru</key>
+      <value>F0200408</value>
+    </synonym>
+    <templateType>BinaryData</templateType>
+  </templates>
+  <templates uuid="c60e8a98-c419-40f1-9ff7-9f85e3b364a7">
+    <name>F0299802</name>
+    <synonym>
+      <key>ru</key>
+      <value>F0299802</value>
+    </synonym>
+    <templateType>BinaryData</templateType>
+  </templates>
+  <templates uuid="90525bc1-3b9a-4c92-ab05-86576197a6de">
+    <name>J0299802</name>
+    <synonym>
+      <key>ru</key>
+      <value>J0299802</value>
+    </synonym>
+    <templateType>BinaryData</templateType>
+  </templates>
+  <templates uuid="1a6cdc19-09af-4df5-8bff-a33c8081102f">
+    <name>СоставПоказателей2010Кв2</name>
+    <synonym>
+      <key>ru</key>
+      <value>СоставПоказателей2010кв2</value>
+    </synonym>
+  </templates>
+  <templates uuid="5a479f3a-493d-4008-8fa8-e9f0931cd7bb">
+    <name>J0200110</name>
+    <synonym>
+      <key>ru</key>
+      <value>J0200110</value>
+    </synonym>
+    <templateType>BinaryData</templateType>
+  </templates>
+  <templates uuid="e17a6815-ecad-4069-9bd9-7b2305fd8d60">
+    <name>J0200509</name>
+    <synonym>
+      <key>ru</key>
+      <value>J0200509</value>
+    </synonym>
+    <templateType>BinaryData</templateType>
+  </templates>
+  <templates uuid="a653b52a-d3b2-4e0f-96c6-446a16b0daa1">
+    <name>J0215202</name>
+    <synonym>
+      <key>ru</key>
+      <value>J0215202</value>
+    </synonym>
+    <templateType>BinaryData</templateType>
+  </templates>
+  <templates uuid="b77e5fb9-b8de-4122-a7f3-4cd79cc991b7">
+    <name>J0200607</name>
+    <synonym>
+      <key>ru</key>
+      <value>J0200607</value>
+    </synonym>
+    <templateType>BinaryData</templateType>
+  </templates>
+  <templates uuid="00613818-4a6f-4a4e-94cb-9509cdfbcf3e">
+    <name>J0299803</name>
+    <synonym>
+      <key>ru</key>
+      <value>J0299803</value>
+    </synonym>
+    <templateType>BinaryData</templateType>
+  </templates>
+  <templates uuid="b23de024-e44d-4c7e-a02a-3cf68f55757f">
+    <name>J0215102</name>
+    <synonym>
+      <key>ru</key>
+      <value>J0215102</value>
+    </synonym>
+    <templateType>BinaryData</templateType>
+  </templates>
+  <templates uuid="6202d04e-d1d3-4cdb-bf67-ddf21de1aa12">
+    <name>J0299302</name>
+    <synonym>
+      <key>ru</key>
+      <value>J0299302</value>
+    </synonym>
+    <templateType>BinaryData</templateType>
+  </templates>
+  <templates uuid="a2660dc7-2957-4a56-a8fb-ed42d0a081a2">
+    <name>J0215701</name>
+    <synonym>
+      <key>ru</key>
+      <value>J0215701</value>
+    </synonym>
+    <templateType>BinaryData</templateType>
+  </templates>
+  <templates uuid="b2c761af-2270-4168-9989-6113e637ccc1">
+    <name>J0215801</name>
+    <synonym>
+      <key>ru</key>
+      <value>J0215801</value>
+    </synonym>
+    <templateType>BinaryData</templateType>
+  </templates>
+  <templates uuid="860b8556-04f9-4c49-b308-df035be7a115">
+    <name>J0299702</name>
+    <synonym>
+      <key>ru</key>
+      <value>J0299702</value>
+    </synonym>
+    <templateType>BinaryData</templateType>
+  </templates>
+  <templates uuid="b69a537a-368d-4f37-aa65-a284b0a1b49b">
+    <name>F0200110</name>
+    <synonym>
+      <key>ru</key>
+      <value>F0200110</value>
+    </synonym>
+    <templateType>BinaryData</templateType>
+  </templates>
+  <templates uuid="ea786250-af9b-4995-92f3-3db0913ddcc6">
+    <name>F0200409</name>
+    <synonym>
+      <key>ru</key>
+      <value>F0200409</value>
+    </synonym>
+    <templateType>BinaryData</templateType>
+  </templates>
+  <templates uuid="42b6982c-77e0-48b9-96b7-b29a05cd1efd">
+    <name>F0215202</name>
+    <synonym>
+      <key>ru</key>
+      <value>F0215202</value>
+    </synonym>
+    <templateType>BinaryData</templateType>
+  </templates>
+  <templates uuid="d6516b4b-71f7-4c98-a12d-b5ebfd015e8f">
+    <name>F0200507</name>
+    <synonym>
+      <key>ru</key>
+      <value>F0200507</value>
+    </synonym>
+    <templateType>BinaryData</templateType>
+  </templates>
+  <templates uuid="1e50a2b8-9145-46a4-b397-a5382d0ecebd">
+    <name>F0299803</name>
+    <synonym>
+      <key>ru</key>
+      <value>F0299803</value>
+    </synonym>
+    <templateType>BinaryData</templateType>
+  </templates>
+  <templates uuid="2c2cdd9e-00dd-47e8-b3a5-734adb084306">
+    <name>F0215102</name>
+    <synonym>
+      <key>ru</key>
+      <value>F0215102</value>
+    </synonym>
+    <templateType>BinaryData</templateType>
+  </templates>
+  <templates uuid="95c1a61b-1c50-46d2-b738-f3b4c5053fd9">
+    <name>F0299302</name>
+    <synonym>
+      <key>ru</key>
+      <value>F0299302</value>
+    </synonym>
+    <templateType>BinaryData</templateType>
+  </templates>
+  <templates uuid="169110d4-9a97-4d63-b1e3-a0eec2c4fac8">
+    <name>F0215701</name>
+    <synonym>
+      <key>ru</key>
+      <value>F0215701</value>
+    </synonym>
+    <templateType>BinaryData</templateType>
+  </templates>
+  <templates uuid="990341d3-e27f-465e-bc93-9c56a568ce42">
+    <name>F0215801</name>
+    <synonym>
+      <key>ru</key>
+      <value>F0215801</value>
+    </synonym>
+    <templateType>BinaryData</templateType>
+  </templates>
+  <templates uuid="8eaa3e51-2d56-4cbc-aa84-83c518dcba18">
+    <name>СоставПоказателей2011Кв1</name>
+    <synonym>
+      <key>ru</key>
+      <value>СоставПоказателей2011кв1</value>
+    </synonym>
+  </templates>
+</mdclass:Report>

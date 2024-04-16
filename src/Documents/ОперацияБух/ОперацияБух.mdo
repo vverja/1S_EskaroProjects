@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:Document xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:core="http://g5.1c.ru/v8/dt/mcore" xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="ee2a8e37-8f4b-46c8-8424-ee135d11cacb">
+  <producedTypes>
+    <objectType typeId="7c0df884-73fc-4f46-8c0f-c08a10f9e233" valueTypeId="29ac7eff-06ee-4f92-8240-bc08b8f6077d"/>
+    <refType typeId="6ad1ba89-6657-4249-a3c5-cf80d1ce81f1" valueTypeId="b7e666c8-d47c-4a8d-8dd8-39f2cce331ca"/>
+    <selectionType typeId="454f1b66-54b9-4418-8fe0-3e90af3bf357" valueTypeId="25587b62-d182-42ef-91a6-3038630dba29"/>
+    <listType typeId="c915cbae-d40e-4d6a-8dc8-b3cb6909bba0" valueTypeId="89b468c5-bee2-40ce-b861-365c866234aa"/>
+    <managerType typeId="98ce4b6f-765a-4760-9e65-aa85385d7838" valueTypeId="aa8296c9-186b-49e1-a20b-cc34c8f9e0d6"/>
+  </producedTypes>
+  <name>ОперацияБух</name>
+  <synonym>
+    <key>ru</key>
+    <value>Операция (бухгалтерский и налоговый учет)</value>
+  </synonym>
+  <comment>(Регл)</comment>
+  <inputByString>Document.ОперацияБух.StandardAttribute.Number</inputByString>
+  <fullTextSearchOnInputByString>DontUse</fullTextSearchOnInputByString>
+  <createOnInput>Use</createOnInput>
+  <includeHelpInContents>true</includeHelpInContents>
+  <help>
+    <pages>
+      <lang>ru</lang>
+    </pages>
+  </help>
+  <fullTextSearch>Use</fullTextSearch>
+  <numberType>String</numberType>
+  <numberLength>11</numberLength>
+  <numberPeriodicity>Year</numberPeriodicity>
+  <checkUnique>true</checkUnique>
+  <autonumbering>true</autonumbering>
+  <defaultObjectForm>Document.ОперацияБух.Form.ФормаДокумента</defaultObjectForm>
+  <defaultListForm>Document.ОперацияБух.Form.ФормаСписка</defaultListForm>
+  <defaultChoiceForm>Document.ОперацияБух.Form.ФормаВыбора</defaultChoiceForm>
+  <posting>Deny</posting>
+  <registerRecordsDeletion>AutoDeleteOff</registerRecordsDeletion>
+  <registerRecordsWritingOnPost>WriteModified</registerRecordsWritingOnPost>
+  <sequenceFilling>AutoFillOff</sequenceFilling>
+  <registerRecords>AccountingRegister.Хозрасчетный</registerRecords>
+  <registerRecords>AccountingRegister.Налоговый</registerRecords>
+  <attributes uuid="480fbf82-4516-4013-b089-72f093d80eab">
+    <name>Организация</name>
+    <synonym>
+      <key>ru</key>
+      <value>Организация</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.Организации</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <indexing>Index</indexing>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+  </attributes>
+  <attributes uuid="663bc668-662e-455e-a9cc-bc8fe6953369">
+    <name>СуммаОперации</name>
+    <synonym>
+      <key>ru</key>
+      <value>Сумма операции</value>
+    </synonym>
+    <type>
+      <types>Number</types>
+      <numberQualifiers>
+        <precision>15</precision>
+        <scale>2</scale>
+      </numberQualifiers>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+  </attributes>
+  <attributes uuid="5df286f0-f5c4-4763-afa7-397d8d729bcb">
+    <name>Комментарий</name>
+    <synonym>
+      <key>ru</key>
+      <value>Комментарий</value>
+    </synonym>
+    <comment>Любая дополнительная информация</comment>
+    <type>
+      <types>String</types>
+      <stringQualifiers/>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+  </attributes>
+  <attributes uuid="2f9700b7-b92f-4410-b17a-bb82171b3496">
+    <name>Ответственный</name>
+    <synonym>
+      <key>ru</key>
+      <value>Ответственный</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.Пользователи</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+  </attributes>
+  <attributes uuid="dba0d33d-8f15-402e-83a7-72979e07f62f">
+    <name>Содержание</name>
+    <synonym>
+      <key>ru</key>
+      <value>Содержание</value>
+    </synonym>
+    <type>
+      <types>String</types>
+      <stringQualifiers/>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+  </attributes>
+  <forms uuid="1ee5fb8f-695a-4cf6-86ed-da7079c82a7b">
+    <name>ФормаДокумента</name>
+    <synonym>
+      <key>ru</key>
+      <value>Форма документа</value>
+    </synonym>
+    <formType>Ordinary</formType>
+    <usePurposes>PersonalComputer</usePurposes>
+    <usePurposes>MobileDevice</usePurposes>
+  </forms>
+  <forms uuid="b76d65c8-57c0-4e62-84f7-da5b5ae63ce3">
+    <name>ФормаСписка</name>
+    <synonym>
+      <key>ru</key>
+      <value>Форма списка</value>
+    </synonym>
+    <formType>Ordinary</formType>
+    <usePurposes>PersonalComputer</usePurposes>
+    <usePurposes>MobileDevice</usePurposes>
+  </forms>
+  <forms uuid="847c371e-da49-4842-a53c-c461848c8edf">
+    <name>ФормаВыбора</name>
+    <synonym>
+      <key>ru</key>
+      <value>Форма выбора</value>
+    </synonym>
+    <formType>Ordinary</formType>
+    <usePurposes>PersonalComputer</usePurposes>
+    <usePurposes>MobileDevice</usePurposes>
+  </forms>
+  <templates uuid="dd8dd11c-09d4-455b-b40f-fe76f9d0aa34">
+    <name>БухгалтерскаяСправка</name>
+    <synonym>
+      <key>ru</key>
+      <value>Бухгалтерская справка</value>
+    </synonym>
+  </templates>
+</mdclass:Document>

@@ -1,0 +1,168 @@
+               <html xmlns="http://www.w3.org/1999/xhtml" 																
+      xmlns:v="urn:schemas-microsoft-com:vml">																
+  <head>																
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8"/>																
+    <title>Ïðèìåð API Êàðò Google c ôîðìîé ïîèñêà - ïîëîæåíèå ýëåìåíòîâ óïðàâëåíèÿ</title>																
+   																
+    <script src="http://maps.google.com/maps?file=api&amp;v=2&amp;key=ABQIAAAACHCJdlgAEGcD_flKUFEmVhT2yXp_ZAY8_ufC3CFXhHIE1NvwkxTeukKcKHF3ezmjTB0q6gzSBmoIUQ" 																
+      type="text/javascript"></script>																
+      																
+    <script src="http://www.google.com/uds/api?file=uds.js&amp;v=1.0" type="text/javascript"></script>																
+    <script src="http://www.google.com/uds/solutions/localsearch/gmlocalsearch.js" type="text/javascript"></script>  																
+
+ <style type="text/css">																
+      @import url("http://www.google.com/uds/css/gsearch.css");																
+      @import url("http://www.google.com/uds/solutions/localsearch/gmlocalsearch.css"); 																
+  </style>																
+
+
+<SCRIPT type=text/javascript>																
+  var map, Long=0, Lat=0, icons;																
+  																
+  function initialize() {																
+    if (GBrowserIsCompatible()) {																
+      map = new GMap(document.getElementById("map_canvas"));																
+      map.setUIToDefault();																
+      map.addControl(new google.maps.LocalSearch(), new GControlPosition(G_ANCHOR_TOP_RIGHT , new GSize(7,30)));																
+      loadMyIcons();																
+	  drawMarkers();															
+    }																
+  }																
+    window.onload=function() {																
+  	initialize();															
+  	GEvent.addListener(map,"click", function(overlay, latlng) {   															
+															    if (latlng)       	   
+															         {	
+															          Long = latlng.lng();	
+                                                                      Long = ConvertCoor(Long);																
+                                                                      Lat  = latlng.lat(); 																
+                                                                      Lat  = ConvertCoor(Lat);																
+                    												  var myHtml = "Широта: " + Lat + "<br>" + "Долгота: " + Long;				
+                    												  map.openInfoWindow(latlng, myHtml);				
+															         }	
+															  }	
+					  );											
+  }																
+    																
+  function ConvertCoor(Coor)																
+			{													
+			 Grad = parseInt(Coor).toString();													
+			 Min = Math.abs( Coor - parseInt(Coor) );													
+			 Min = (Min * 60).toFixed(4);													
+			 Sec = Min.toString();													
+			 if(parseInt(Min).toString().length == 1) Sec = "0" + Sec;													
+			 return Grad + Sec;													
+			}													
+
+	function loadMyIcons() {															
+	  icons = new Object();															
+	  var MyIcons = document.getElementById("MyIcons");															
+	  var root = MyIcons.XMLDocument.childNodes[0];															
+		for (elemIndex = 0; elemIndex < root.childNodes.length; elemIndex++) {														
+			var element = root.childNodes[elemIndex];													
+			var iconId;													
+
+          iconId = element.getAttribute("id");																
+          icons[iconId] = new GIcon(G_DEFAULT_ICON, element.getAttribute("url"));																
+          icons[iconId].iconSize=new GSize(24,24);																
+          icons[iconId].shadow="";																
+          icons[iconId].iconAnchor=new GPoint(icons[iconId].iconSize.width/2,icons[iconId].iconSize.height/2);																
+		}			  											
+	}															
+
+  function drawMarkers() {																
+    map.clearOverlays();																
+    if (Markers.XMLDocument.childNodes.length == 0) return;																
+    var root = Markers.XMLDocument.childNodes[0];																
+    if(root.getAttribute("valid")=="1") {																
+		map.setCenter(														
+		  new GLatLng(parseFloat(root.getAttribute("lat")), parseFloat(root.getAttribute("long"))),														
+		  parseInt(root.getAttribute("scale")));														
+		  														
+		  														
+		  view = new GLatLngBounds();														
+		  var points = [ parseFloat(root.getAttribute("lat_AutoScale1")),parseFloat(root.getAttribute("long_AutoScale1")),  														
+		         		 parseFloat(root.getAttribute("lat_AutoScale2")),parseFloat(root.getAttribute("long_AutoScale2")) ];												
+		  														
+		  for (var i = 0; i < points.length; i+=2)														
+		  {														
+	          var myLatLng = new google.maps.LatLng(points[i], points[i+1]);															
+		      view.extend(myLatLng);														
+		  }														
+
+		  zoom   = map.getBoundsZoomLevel(view);														
+		  center = view.getCenter();														
+		   														
+		  if(root.getAttribute("long_AutoScale1")) {  map.setZoom(zoom); map.panTo(center); }														
+  																
+		  root.setAttribute("valid","0");														
+	}															
+
+    for (elemIndex = 0; elemIndex < root.childNodes.length; elemIndex++) {																
+      var element = root.childNodes[elemIndex];																
+      var iconId;																
+  																
+      switch (element.nodeName) {    																
+        case "Marker":																
+          var pos = new google.maps.LatLng(parseFloat(element.getAttribute("lat")), parseFloat(element.getAttribute("long")));																
+          iconId = element.getAttribute("icon");																
+          var marker;																
+          if (iconId == null) {																
+            marker = new GMarker(pos, {																
+              title: element.getAttribute("title")																
+            });																
+          } else {																
+            marker = new GMarker(pos, {																
+              icon: icons[iconId],																
+              title: element.getAttribute("title")																
+            });																
+          }																
+          marker.bindInfoWindow(element.getAttribute("title"));																
+          map.addOverlay(marker);																
+          break;																
+        case "Path":																
+          var points = element.text.split(",");																
+          if(points.length>1) {																
+	          var latLngs = new Array();															
+	          for (n = 0; n < points.length; n++) {															
+	            var s = points[n].replace(/\s*/, "");															
+	            															
+	            var coords = s.split(" ");															
+	            latLngs.push(new GLatLng(parseFloat(coords[0]), parseFloat(coords[1])));															
+	          }															
+	          polyline = new GPolyline(															
+	            latLngs,															
+	            element.getAttribute("color"),															
+	            parseFloat(element.getAttribute("width")),															
+	            parseFloat(element.getAttribute("opacity")));															
+	          map.addOverlay(polyline);															
+	      }															
+          break;																
+          case "CoorNewObj":																
+			element.setAttribute("LongNewObj", Long);													
+			element.setAttribute("LatNewObj", Lat);													
+		  break;														
+      }																
+    }Lat=0; Long=0;																
+  }																
+
+
+</SCRIPT>																
+<BASE href="v8config://a41788e0-07b3-4c21-aaec-28ecd16ff53c/mdobject/id354bf70a-1540-4c53-ba46-ed52109ca65c/8eb4fad1-1fa6-403e-970f-2c12dbb43e23"></HEAD>																
+<BODY style="PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; PADDING-TOP: 0px" >																
+	<xml id=Markers>															
+	    <Root lat="0" long="0" scale="2" valid="1">															
+	      <Path width="5" opacity="0.5" color="#ff0000">															
+	        0 0															
+	      </Path>															
+	    </Root>															
+  </xml>																
+ <xml id=MyIcons>																
+	<Root valid="1">															
+    </Root>																
+ </xml> 																
+<INPUT style="DISPLAY: none" id=RefreshMarkers onclick=drawMarkers() type=button> 																
+<INPUT style="DISPLAY: none" id=RefreshIcons onclick=loadMyIcons() type=button> 																
+  <DIV style="WIDTH: 100%; HEIGHT: 100%" id=map_canvas></DIV>																
+</BODY>																
+</HTML>																

@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:Catalog xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:core="http://g5.1c.ru/v8/dt/mcore" xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="0449c890-aded-41ad-bf51-4fe40a6e7957">
+  <producedTypes>
+    <objectType typeId="26e653e5-6c3e-4fb3-9458-1d8f3370a031" valueTypeId="81c96e99-97b0-459a-96a9-4f55c668b43b"/>
+    <refType typeId="509a7faf-37fb-48d8-be25-651a6d841fb7" valueTypeId="5aaab7e8-c0e0-4da1-8c94-4c184a169375"/>
+    <selectionType typeId="5e93c21a-636f-4f24-bc10-d75a46cd72a0" valueTypeId="6f49cd2a-1c5e-4a64-af23-22824f106d7b"/>
+    <listType typeId="7ce24abb-57ef-4ec9-a92a-1e7a71aa6487" valueTypeId="5ee687c7-ef1b-4a7a-bbde-086c40720cb2"/>
+    <managerType typeId="fcf6363a-aa64-4097-a2f2-7633efdc7456" valueTypeId="63726829-2bde-49c7-8e8a-12a95915c007"/>
+  </producedTypes>
+  <name>ЗанятияКурсовОбучения</name>
+  <synonym>
+    <key>ru</key>
+    <value>Занятия курсов обучения</value>
+  </synonym>
+  <inputByString>Catalog.ЗанятияКурсовОбучения.StandardAttribute.Description</inputByString>
+  <fullTextSearchOnInputByString>DontUse</fullTextSearchOnInputByString>
+  <createOnInput>Use</createOnInput>
+  <help>
+    <pages>
+      <lang>ru</lang>
+    </pages>
+  </help>
+  <fullTextSearch>Use</fullTextSearch>
+  <levelCount>2</levelCount>
+  <foldersOnTop>true</foldersOnTop>
+  <descriptionLength>150</descriptionLength>
+  <codeType>String</codeType>
+  <defaultPresentation>AsDescription</defaultPresentation>
+  <editType>InDialog</editType>
+  <choiceMode>BothWays</choiceMode>
+  <defaultObjectForm>Catalog.ЗанятияКурсовОбучения.Form.ФормаЭлемента</defaultObjectForm>
+  <defaultListForm>Catalog.ЗанятияКурсовОбучения.Form.ФормаСписка</defaultListForm>
+  <defaultChoiceForm>Catalog.ЗанятияКурсовОбучения.Form.ФормаВыбора</defaultChoiceForm>
+  <attributes uuid="d5fc4ba1-99e2-48c8-92cc-0bdca941b379">
+    <name>ОписаниеЗанятия</name>
+    <synonym>
+      <key>ru</key>
+      <value>Описание занятия</value>
+    </synonym>
+    <type>
+      <types>String</types>
+      <stringQualifiers/>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+  </attributes>
+  <attributes uuid="f211fdaa-bb25-403d-ab17-ec0d947be699">
+    <name>ДлительностьЗанятия</name>
+    <synonym>
+      <key>ru</key>
+      <value>Длительность занятия</value>
+    </synonym>
+    <comment>Длительность занятия в часах</comment>
+    <type>
+      <types>Number</types>
+      <numberQualifiers>
+        <precision>6</precision>
+        <scale>2</scale>
+        <nonNegative>true</nonNegative>
+      </numberQualifiers>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+  </attributes>
+  <attributes uuid="924628c7-cf9d-472c-bb74-feafdd4e1b25">
+    <name>ВидЗанятия</name>
+    <synonym>
+      <key>ru</key>
+      <value>Вид занятия</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.ФормыОбучения</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+  </attributes>
+  <tabularSections uuid="24630989-877c-480f-9c51-1ea19c3ced8e">
+    <producedTypes>
+      <objectType typeId="67d526cf-695c-4203-b2c0-855dc10a1529" valueTypeId="cdfa1af4-0b5b-4644-aa5c-e20b127d776b"/>
+      <rowType typeId="05ae516b-f07c-4730-8d94-04629c8f2842" valueTypeId="69c31c27-e3c5-450e-ab67-52d6b3b6f675"/>
+    </producedTypes>
+    <name>ИзучаемыеКомпетенции</name>
+    <synonym>
+      <key>ru</key>
+      <value>Изучаемые компетенции</value>
+    </synonym>
+    <attributes uuid="424a977c-c95b-41ba-b7a5-85114560e219">
+      <name>Компетенция</name>
+      <synonym>
+        <key>ru</key>
+        <value>Компетенция</value>
+      </synonym>
+      <type>
+        <types>CatalogRef.КомпетенцииРаботников</types>
+      </type>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <dataHistory>Use</dataHistory>
+      <fullTextSearch>Use</fullTextSearch>
+    </attributes>
+    <attributes uuid="f6a3b848-4e1a-4d05-b8b1-7874d709eded">
+      <name>Вес</name>
+      <synonym>
+        <key>ru</key>
+        <value>Вес изучения компетенции в занятии</value>
+      </synonym>
+      <comment>Вес изучения компетенции в занятии</comment>
+      <type>
+        <types>Number</types>
+        <numberQualifiers>
+          <precision>3</precision>
+        </numberQualifiers>
+      </type>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <dataHistory>Use</dataHistory>
+      <fullTextSearch>Use</fullTextSearch>
+    </attributes>
+  </tabularSections>
+  <forms uuid="2150a049-a282-4ece-bbaf-24ed5f8d318e">
+    <name>ФормаСписка</name>
+    <synonym>
+      <key>ru</key>
+      <value>Форма списка</value>
+    </synonym>
+    <formType>Ordinary</formType>
+    <usePurposes>PersonalComputer</usePurposes>
+    <usePurposes>MobileDevice</usePurposes>
+  </forms>
+  <forms uuid="623eba0c-f14d-40ca-8139-4d61252f2ddb">
+    <name>ФормаВыбора</name>
+    <synonym>
+      <key>ru</key>
+      <value>Форма выбора</value>
+    </synonym>
+    <formType>Ordinary</formType>
+    <usePurposes>PersonalComputer</usePurposes>
+    <usePurposes>MobileDevice</usePurposes>
+  </forms>
+  <forms uuid="cd533e49-052f-4b31-9ec7-641307c744ff">
+    <name>ФормаЭлемента</name>
+    <synonym>
+      <key>ru</key>
+      <value>Форма элемента</value>
+    </synonym>
+    <formType>Ordinary</formType>
+    <usePurposes>PersonalComputer</usePurposes>
+    <usePurposes>MobileDevice</usePurposes>
+  </forms>
+</mdclass:Catalog>

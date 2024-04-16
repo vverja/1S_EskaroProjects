@@ -1,0 +1,186 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:AccumulationRegister xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:core="http://g5.1c.ru/v8/dt/mcore" xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="711c0342-a63e-417e-be3c-23c6f9e134c2">
+  <producedTypes>
+    <selectionType typeId="7ab869f4-a730-4711-8963-5dee46c15eb1" valueTypeId="7527bb5a-3739-4094-87ae-62f229101fa1"/>
+    <listType typeId="6ff69d05-02e9-41cd-8633-03a394942e11" valueTypeId="2acf8284-c769-43dc-9152-6e3d3c75c34f"/>
+    <managerType typeId="a5b34a4d-f9d9-4e7e-8ded-0e93f1ada6b6" valueTypeId="8d6474bc-2d27-41e0-b599-3dab89de39fa"/>
+    <recordSetType typeId="9045637f-7424-4dd7-8aa2-867a3cc712fa" valueTypeId="3dbf4de7-3456-40b2-88ce-a71d79d16327"/>
+    <recordKeyType typeId="76e39d29-4d2d-45ed-a157-c8e8e3236e07" valueTypeId="0bcfea79-a04f-4c4e-8700-9e8089aa3329"/>
+    <recordType typeId="2e0be4d1-e07c-48db-833f-3354443dd11f" valueTypeId="2cfcceb7-3e07-41e9-b94b-50ed9636e520"/>
+  </producedTypes>
+  <name>ОборотыБюджетов</name>
+  <synonym>
+    <key>ru</key>
+    <value>Обороты бюджетов</value>
+  </synonym>
+  <comment>(Упр)</comment>
+  <registerType>Turnovers</registerType>
+  <enableTotalsSplitting>true</enableTotalsSplitting>
+  <resources uuid="d3d2be56-812e-4524-87ff-45f015cf3f79">
+    <name>Количество</name>
+    <synonym>
+      <key>ru</key>
+      <value>Количество</value>
+    </synonym>
+    <type>
+      <types>Number</types>
+      <numberQualifiers>
+        <precision>15</precision>
+        <scale>3</scale>
+      </numberQualifiers>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+  </resources>
+  <resources uuid="e52786ec-1f72-4754-a8a0-4839d4a32176">
+    <name>СуммаУпр</name>
+    <synonym>
+      <key>ru</key>
+      <value>Сумма в валюте управленческого учета</value>
+    </synonym>
+    <type>
+      <types>Number</types>
+      <numberQualifiers>
+        <precision>15</precision>
+        <scale>2</scale>
+      </numberQualifiers>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+  </resources>
+  <resources uuid="313138f6-df99-442d-a538-3058f43816cc">
+    <name>ВалютнаяСумма</name>
+    <synonym>
+      <key>ru</key>
+      <value>Валютная сумма</value>
+    </synonym>
+    <type>
+      <types>Number</types>
+      <numberQualifiers>
+        <precision>15</precision>
+        <scale>2</scale>
+      </numberQualifiers>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+  </resources>
+  <resources uuid="5f4902b5-ca84-48d1-a883-845b102365a9">
+    <name>СуммаСценария</name>
+    <synonym>
+      <key>ru</key>
+      <value>Сумма в валюте сценария</value>
+    </synonym>
+    <type>
+      <types>Number</types>
+      <numberQualifiers>
+        <precision>15</precision>
+        <scale>2</scale>
+      </numberQualifiers>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+  </resources>
+  <dimensions uuid="c4d49f48-e1e6-4137-b27e-52fbb226d108">
+    <name>Сценарий</name>
+    <synonym>
+      <key>ru</key>
+      <value>Сценарий</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.СценарииПланирования</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <useInTotals>true</useInTotals>
+  </dimensions>
+  <dimensions uuid="09b9270e-e299-4791-86b6-0433d107ec02">
+    <name>Проект</name>
+    <synonym>
+      <key>ru</key>
+      <value>Проект</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.Проекты</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <useInTotals>true</useInTotals>
+  </dimensions>
+  <dimensions uuid="7d9bca2f-04a0-44cf-9272-15fb52eec887">
+    <name>ЦФО</name>
+    <synonym>
+      <key>ru</key>
+      <value>ЦФО</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.Подразделения</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <useInTotals>true</useInTotals>
+  </dimensions>
+  <dimensions uuid="acf7e3fb-ff93-4c06-9654-076bc5e5223e">
+    <name>СтатьяОборотов</name>
+    <synonym>
+      <key>ru</key>
+      <value>Статья оборотов</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.СтатьиОборотовПоБюджетам</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <useInTotals>true</useInTotals>
+  </dimensions>
+  <dimensions uuid="062af265-8c5e-4066-888a-d9fa0d2eae5e">
+    <name>Контрагент</name>
+    <synonym>
+      <key>ru</key>
+      <value>Контрагент</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.Контрагенты</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <useInTotals>true</useInTotals>
+  </dimensions>
+  <dimensions uuid="ae17a1e5-da3b-455e-914f-d9ac6e28c1d1">
+    <name>Номенклатура</name>
+    <synonym>
+      <key>ru</key>
+      <value>Номенклатура</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.НоменклатурныеГруппы</types>
+      <types>CatalogRef.Номенклатура</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <useInTotals>true</useInTotals>
+  </dimensions>
+  <dimensions uuid="8a0aabdb-255a-43c4-8481-1cedb4f0a2f5">
+    <name>Валюта</name>
+    <synonym>
+      <key>ru</key>
+      <value>Валюта</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.Валюты</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <useInTotals>true</useInTotals>
+  </dimensions>
+</mdclass:AccumulationRegister>

@@ -1,0 +1,392 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:InformationRegister xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:core="http://g5.1c.ru/v8/dt/mcore" xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="cee8a03b-a0b5-42c3-82b7-9f015b2c3a86">
+  <producedTypes>
+    <selectionType typeId="438cb2d0-cf07-4574-886d-856e6b88f0ef" valueTypeId="1536eaa0-f726-4790-b9ed-cf7c29040828"/>
+    <listType typeId="4409f722-1aca-4532-81a1-c1c01bcf4ef6" valueTypeId="7c26522a-61c4-4cee-95f7-c28f52c01ade"/>
+    <managerType typeId="dd4e2c75-6f7d-46ad-89f3-4f29d838907b" valueTypeId="aa7c9a66-aca7-42e2-82d2-3fb4f3864c52"/>
+    <recordSetType typeId="23f52aeb-cca7-4bf1-a930-0087bf9e13a2" valueTypeId="8b2e7156-7b42-4e47-8812-b4c7ea9c4fc4"/>
+    <recordKeyType typeId="81b54ddd-cf49-426d-885f-6c9fcd3e016e" valueTypeId="e1509379-a9c0-40b1-bf91-8872e6b3bb8e"/>
+    <recordType typeId="ed000be9-7f03-4170-912a-9b5c8ad1fc38" valueTypeId="87c19587-fbbd-44b9-906b-7a168a3854c7"/>
+    <recordManagerType typeId="8c7a630c-be1a-4a6f-8a60-cef5940f2b8b" valueTypeId="307f74f3-3f8c-42ac-adc5-565949326256"/>
+  </producedTypes>
+  <name>НематериальныеАктивыМеждународныйУчет</name>
+  <synonym>
+    <key>ru</key>
+    <value>Нематериальные активы (международный учет)</value>
+  </synonym>
+  <comment>(Упр) Сведения о НМА для целей международного учета</comment>
+  <defaultListForm>InformationRegister.НематериальныеАктивыМеждународныйУчет.Form.ФормаСписка</defaultListForm>
+  <informationRegisterPeriodicity>RecorderPosition</informationRegisterPeriodicity>
+  <writeMode>RecorderSubordinate</writeMode>
+  <includeHelpInContents>true</includeHelpInContents>
+  <help>
+    <pages>
+      <lang>ru</lang>
+    </pages>
+  </help>
+  <resources uuid="eee92581-ce4b-4263-b536-a5e628b363ef">
+    <name>СчетУчета</name>
+    <synonym>
+      <key>ru</key>
+      <value>Счет учета</value>
+    </synonym>
+    <comment>Счет учета объекта НМА</comment>
+    <type>
+      <types>ChartOfAccountsRef.Международный</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:UndefinedValue"/>
+  </resources>
+  <resources uuid="54750734-5242-11d8-9685-0050ba83c28e">
+    <name>СрокПолезногоИспользования</name>
+    <synonym>
+      <key>ru</key>
+      <value>Срок полезного использования</value>
+    </synonym>
+    <comment>Срок полезного использования в месяцах</comment>
+    <type>
+      <types>Number</types>
+      <numberQualifiers>
+        <precision>4</precision>
+        <nonNegative>true</nonNegative>
+      </numberQualifiers>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:UndefinedValue"/>
+  </resources>
+  <resources uuid="54750736-5242-11d8-9685-0050ba83c28e">
+    <name>НачислятьАмортизацию</name>
+    <synonym>
+      <key>ru</key>
+      <value>Начислять амортизацию</value>
+    </synonym>
+    <comment>Булево - начисляется амортизация или нет</comment>
+    <type>
+      <types>Boolean</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:UndefinedValue"/>
+  </resources>
+  <resources uuid="54750738-5242-11d8-9685-0050ba83c28e">
+    <name>МетодНачисленияАмортизации</name>
+    <synonym>
+      <key>ru</key>
+      <value>Метод начисления амортизации</value>
+    </synonym>
+    <comment>Метод начисления амортизации по международному учету</comment>
+    <type>
+      <types>EnumRef.МетодыНачисленияАмортизацииНМАМеждународный</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:UndefinedValue"/>
+  </resources>
+  <resources uuid="5475073a-5242-11d8-9685-0050ba83c28e">
+    <name>СчетНачисленияАмортизации</name>
+    <synonym>
+      <key>ru</key>
+      <value>Счет начисления амортизации</value>
+    </synonym>
+    <comment>Счет, на котором накапливается начисленная амортизация в международном учете</comment>
+    <type>
+      <types>ChartOfAccountsRef.Международный</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:UndefinedValue"/>
+  </resources>
+  <resources uuid="54750742-5242-11d8-9685-0050ba83c28e">
+    <name>СчетЗатрат</name>
+    <synonym>
+      <key>ru</key>
+      <value>Счет затрат</value>
+    </synonym>
+    <comment>Счет, в дебет которого относятся начисленные суммы амортизации</comment>
+    <type>
+      <types>ChartOfAccountsRef.Международный</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:UndefinedValue"/>
+  </resources>
+  <resources uuid="54750744-5242-11d8-9685-0050ba83c28e">
+    <name>Субконто1</name>
+    <synonym>
+      <key>ru</key>
+      <value>Субконто1</value>
+    </synonym>
+    <comment>Субконто первого уровня счета, в дебет которого относится амортизация</comment>
+    <type>
+      <types>Characteristic.ВидыСубконтоМеждународные</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:UndefinedValue"/>
+  </resources>
+  <resources uuid="54750746-5242-11d8-9685-0050ba83c28e">
+    <name>Субконто2</name>
+    <synonym>
+      <key>ru</key>
+      <value>Субконто2</value>
+    </synonym>
+    <comment>Субконто второго уровня счета, в дебет которого относится амортизация</comment>
+    <type>
+      <types>Characteristic.ВидыСубконтоМеждународные</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:UndefinedValue"/>
+  </resources>
+  <resources uuid="54750748-5242-11d8-9685-0050ba83c28e">
+    <name>Субконто3</name>
+    <synonym>
+      <key>ru</key>
+      <value>Субконто3</value>
+    </synonym>
+    <comment>убконто третьего уровня счета, в дебет которого относится амортизация</comment>
+    <type>
+      <types>Characteristic.ВидыСубконтоМеждународные</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:UndefinedValue"/>
+  </resources>
+  <resources uuid="5475074a-5242-11d8-9685-0050ba83c28e">
+    <name>ПредполагаемыйОбъемПродукции</name>
+    <synonym>
+      <key>ru</key>
+      <value>Предполагаемый объем продукции</value>
+    </synonym>
+    <comment>Используется при амортизации пропорционально объему продукции</comment>
+    <type>
+      <types>Number</types>
+      <numberQualifiers>
+        <precision>15</precision>
+        <scale>3</scale>
+        <nonNegative>true</nonNegative>
+      </numberQualifiers>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:UndefinedValue"/>
+  </resources>
+  <resources uuid="5475074c-5242-11d8-9685-0050ba83c28e">
+    <name>ФактическийОбъемПродукции</name>
+    <synonym>
+      <key>ru</key>
+      <value>Фактический объем продукции</value>
+    </synonym>
+    <comment>Используется при амортизации пропорционально объему продукции</comment>
+    <type>
+      <types>Number</types>
+      <numberQualifiers>
+        <precision>15</precision>
+        <scale>3</scale>
+        <nonNegative>true</nonNegative>
+      </numberQualifiers>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:UndefinedValue"/>
+  </resources>
+  <resources uuid="5475074e-5242-11d8-9685-0050ba83c28e">
+    <name>СуммаНачисленнойАмортизации</name>
+    <synonym>
+      <key>ru</key>
+      <value>Сумма начисленной амортизации</value>
+    </synonym>
+    <type>
+      <types>Number</types>
+      <numberQualifiers>
+        <precision>12</precision>
+        <scale>2</scale>
+      </numberQualifiers>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:UndefinedValue"/>
+  </resources>
+  <resources uuid="54750c12-5242-11d8-9685-0050ba83c28e">
+    <name>ПервоначальнаяСтоимость</name>
+    <synonym>
+      <key>ru</key>
+      <value>Первоначальная стоимость</value>
+    </synonym>
+    <type>
+      <types>Number</types>
+      <numberQualifiers>
+        <precision>13</precision>
+        <scale>2</scale>
+      </numberQualifiers>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:UndefinedValue"/>
+  </resources>
+  <resources uuid="54750c14-5242-11d8-9685-0050ba83c28e">
+    <name>СправедливаяСтоимость</name>
+    <synonym>
+      <key>ru</key>
+      <value>Справедливая стоимость</value>
+    </synonym>
+    <type>
+      <types>Number</types>
+      <numberQualifiers>
+        <precision>13</precision>
+        <scale>2</scale>
+      </numberQualifiers>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:UndefinedValue"/>
+  </resources>
+  <resources uuid="54750c16-5242-11d8-9685-0050ba83c28e">
+    <name>ЛиквидационнаяСтоимость</name>
+    <synonym>
+      <key>ru</key>
+      <value>Ликвидационная стоимость</value>
+    </synonym>
+    <comment>Стоимость, которая должна остаться после истечения срока полезного использования. Обычно равна нулю, но могут быть исключения</comment>
+    <type>
+      <types>Number</types>
+      <numberQualifiers>
+        <precision>10</precision>
+        <scale>2</scale>
+      </numberQualifiers>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:UndefinedValue"/>
+  </resources>
+  <resources uuid="c7100ad2-a76d-48ec-876c-90e0e22de14b">
+    <name>ДатаПринятияКУчету</name>
+    <synonym>
+      <key>ru</key>
+      <value>Дата принятия к учету</value>
+    </synonym>
+    <type>
+      <types>Date</types>
+      <dateQualifiers>
+        <dateFractions>Date</dateFractions>
+      </dateQualifiers>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:UndefinedValue"/>
+  </resources>
+  <resources uuid="f25581d0-bf54-4e01-a091-3c9321c40b23">
+    <name>СчетСниженияСтоимости</name>
+    <synonym>
+      <key>ru</key>
+      <value>Счет снижения стоимости</value>
+    </synonym>
+    <type>
+      <types>ChartOfAccountsRef.Международный</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:UndefinedValue"/>
+  </resources>
+  <resources uuid="859687e1-3eeb-4e31-bf43-905b68c73367">
+    <name>УбытокОтОбесценения</name>
+    <synonym>
+      <key>ru</key>
+      <value>Убыток от обесценения</value>
+    </synonym>
+    <type>
+      <types>Number</types>
+      <numberQualifiers>
+        <precision>15</precision>
+        <scale>2</scale>
+      </numberQualifiers>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:UndefinedValue"/>
+  </resources>
+  <resources uuid="cfed7462-5ebf-4d11-9eee-ac11abd1b1ca">
+    <name>КоэффициентУскорения</name>
+    <synonym>
+      <key>ru</key>
+      <value>Коэффициент ускорения</value>
+    </synonym>
+    <type>
+      <types>Number</types>
+      <numberQualifiers>
+        <precision>10</precision>
+        <scale>2</scale>
+        <nonNegative>true</nonNegative>
+      </numberQualifiers>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:UndefinedValue"/>
+  </resources>
+  <dimensions uuid="b323409d-7aad-4a88-a2b4-bbfbce4224e1">
+    <name>НематериальныйАктив</name>
+    <synonym>
+      <key>ru</key>
+      <value>Нематериальный актив</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.НематериальныеАктивы</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <mainFilter>true</mainFilter>
+  </dimensions>
+  <forms uuid="acaac624-dc7c-45e2-8214-951d876b5436">
+    <name>ФормаСписка</name>
+    <synonym>
+      <key>ru</key>
+      <value>Форма списка</value>
+    </synonym>
+    <formType>Ordinary</formType>
+    <usePurposes>PersonalComputer</usePurposes>
+    <usePurposes>MobileDevice</usePurposes>
+  </forms>
+</mdclass:InformationRegister>

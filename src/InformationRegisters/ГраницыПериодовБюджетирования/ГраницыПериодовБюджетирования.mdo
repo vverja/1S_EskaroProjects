@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:InformationRegister xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:core="http://g5.1c.ru/v8/dt/mcore" xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="9795c15c-09f8-4f1a-9ab5-878f84ad78a8">
+  <producedTypes>
+    <selectionType typeId="46a12d86-78ed-4679-9ba7-6b4870dbe975" valueTypeId="8ca0af03-b38c-44a5-b0b8-3ad4bb176745"/>
+    <listType typeId="0714c0de-dabe-49d7-a749-b31acfdc2cae" valueTypeId="874820ba-fc55-4b24-9a1a-3f7adac2a9d0"/>
+    <managerType typeId="c6823a6c-36fe-4c6d-942f-8a16f6d6ebe0" valueTypeId="ae58371b-7827-451d-82de-dbe0077ed24c"/>
+    <recordSetType typeId="9318c98b-0920-4460-a61f-6dfd20306523" valueTypeId="31204b9a-1d29-430a-889c-9d2bd0fd900a"/>
+    <recordKeyType typeId="5133980d-7aaf-46ca-b9e5-0a075e0ac39d" valueTypeId="34c6ab29-f575-4d68-919e-c9041be7f47d"/>
+    <recordType typeId="cfa10fc1-4a90-4387-b7f1-55c9ae56f598" valueTypeId="73e7deac-a5b3-4a85-9fb7-4399b4f16d48"/>
+    <recordManagerType typeId="363c0bdb-7825-46d0-88a3-e64b655b5778" valueTypeId="d8db99a7-0df6-4cc6-a7b6-d4b438665713"/>
+  </producedTypes>
+  <name>ГраницыПериодовБюджетирования</name>
+  <synonym>
+    <key>ru</key>
+    <value>Границы периодов бюджетирования</value>
+  </synonym>
+  <comment>(Упр)</comment>
+  <informationRegisterPeriodicity>RecorderPosition</informationRegisterPeriodicity>
+  <writeMode>RecorderSubordinate</writeMode>
+  <resources uuid="43733e44-35b7-48ea-8694-a476aa2d4885">
+    <name>ГраницаОткрытия</name>
+    <synonym>
+      <key>ru</key>
+      <value>Граница открытия</value>
+    </synonym>
+    <comment>Дата, раньше которой находятся открытые периоды, соответственно после нее находятся закрытые периоды.¶Граница открытия должна всегда быть после границы фиксации.</comment>
+    <type>
+      <types>Date</types>
+      <dateQualifiers>
+        <dateFractions>Date</dateFractions>
+      </dateQualifiers>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:UndefinedValue"/>
+  </resources>
+  <resources uuid="e6e64932-55ef-4e1a-b739-4c763614949e">
+    <name>ГраницаФиксации</name>
+    <synonym>
+      <key>ru</key>
+      <value>Граница фиксации</value>
+    </synonym>
+    <comment>ата, раньше которой находятся зафиксированные периоды</comment>
+    <type>
+      <types>Date</types>
+      <dateQualifiers>
+        <dateFractions>Date</dateFractions>
+      </dateQualifiers>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:UndefinedValue"/>
+  </resources>
+  <dimensions uuid="402d6d73-9a29-4079-affa-23ebd3d2502b">
+    <name>Сценарий</name>
+    <synonym>
+      <key>ru</key>
+      <value>Сценарий</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.СценарииПланирования</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <mainFilter>true</mainFilter>
+  </dimensions>
+  <dimensions uuid="e4d01ef8-573e-4317-88c6-04fec691595e">
+    <name>ЦФО</name>
+    <synonym>
+      <key>ru</key>
+      <value>ЦФО</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.Подразделения</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <mainFilter>true</mainFilter>
+  </dimensions>
+  <dimensions uuid="44d676ce-941f-4bb4-93cc-2e9fdddb2f9e">
+    <name>Проект</name>
+    <synonym>
+      <key>ru</key>
+      <value>Проект</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.Проекты</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <mainFilter>true</mainFilter>
+  </dimensions>
+</mdclass:InformationRegister>

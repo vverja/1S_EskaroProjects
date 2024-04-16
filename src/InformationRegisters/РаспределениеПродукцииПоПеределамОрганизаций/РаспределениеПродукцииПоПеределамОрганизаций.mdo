@@ -1,0 +1,181 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:InformationRegister xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:core="http://g5.1c.ru/v8/dt/mcore" xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="0a3b8e32-66fe-4761-8585-8da6186a982d">
+  <producedTypes>
+    <selectionType typeId="50de0dcb-37e9-4e2d-b907-7c00cfdafa54" valueTypeId="fd1c6f4b-6489-4453-a08f-d873b0d49351"/>
+    <listType typeId="7216201e-423a-4a6c-992e-5a389cd78836" valueTypeId="bf9ac0c0-6157-424a-9091-bbc190112c15"/>
+    <managerType typeId="54261672-880b-4a83-aeaf-6a1febe4c829" valueTypeId="824b94e1-bf55-459d-b0c1-27a9df91343b"/>
+    <recordSetType typeId="db13c5aa-7442-4728-bf12-324e5b9e492e" valueTypeId="b9256317-82d1-43c8-88f1-af9986e850c3"/>
+    <recordKeyType typeId="55875659-0f45-46d1-b3e9-7384e462ad59" valueTypeId="23637bc6-ff12-4a54-9740-e051fc1ffcfc"/>
+    <recordType typeId="5a047b9f-1306-40bd-8add-615ac7db37e7" valueTypeId="b2dbe750-c28d-4e56-8c1a-eb138d7b5d17"/>
+    <recordManagerType typeId="1ea9f492-5579-4864-8fc0-8846ce0731ed" valueTypeId="68ac4973-9bc6-4f6c-9def-0f069262666f"/>
+  </producedTypes>
+  <name>РаспределениеПродукцииПоПеределамОрганизаций</name>
+  <synonym>
+    <key>ru</key>
+    <value>Распределение продукции по переделам организаций</value>
+  </synonym>
+  <comment>(Регл)</comment>
+  <informationRegisterPeriodicity>Month</informationRegisterPeriodicity>
+  <writeMode>RecorderSubordinate</writeMode>
+  <help>
+    <pages>
+      <lang>ru</lang>
+    </pages>
+  </help>
+  <dimensions uuid="a0158c9f-ede4-45cf-9baf-46d85060d221">
+    <name>Организация</name>
+    <synonym>
+      <key>ru</key>
+      <value>Организация</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.Организации</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <mainFilter>true</mainFilter>
+  </dimensions>
+  <dimensions uuid="f13db823-44db-4536-8030-b08098e07f4b">
+    <name>Подразделение</name>
+    <synonym>
+      <key>ru</key>
+      <value>Подразделение</value>
+    </synonym>
+    <comment>(Регл)</comment>
+    <type>
+      <types>CatalogRef.ПодразделенияОрганизаций</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <mainFilter>true</mainFilter>
+  </dimensions>
+  <dimensions uuid="88bff8d8-baea-4117-b62e-26efa68a20ac">
+    <name>Продукция</name>
+    <synonym>
+      <key>ru</key>
+      <value>Продукция</value>
+    </synonym>
+    <comment>(Общ)</comment>
+    <type>
+      <types>CatalogRef.Номенклатура</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <mainFilter>true</mainFilter>
+  </dimensions>
+  <dimensions uuid="4088e646-83b4-43b5-bd69-293632ffae0d">
+    <name>ХарактеристикаПродукции</name>
+    <synonym>
+      <key>ru</key>
+      <value>Характеристика продукции</value>
+    </synonym>
+    <comment>(Общ)</comment>
+    <type>
+      <types>CatalogRef.ХарактеристикиНоменклатуры</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <mainFilter>true</mainFilter>
+  </dimensions>
+  <dimensions uuid="76d61423-d4e3-4a94-a165-7a4d93d3404c">
+    <name>СерияПродукции</name>
+    <synonym>
+      <key>ru</key>
+      <value>Серия продукции</value>
+    </synonym>
+    <comment>(Общ)</comment>
+    <type>
+      <types>CatalogRef.СерииНоменклатуры</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <mainFilter>true</mainFilter>
+  </dimensions>
+  <dimensions uuid="4c2440ef-fa5f-461c-bfa4-3b7cf11f9611">
+    <name>НомерПередела</name>
+    <synonym>
+      <key>ru</key>
+      <value>Номер передела</value>
+    </synonym>
+    <comment>(Общ)</comment>
+    <type>
+      <types>Number</types>
+      <numberQualifiers>
+        <precision>10</precision>
+      </numberQualifiers>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <indexing>Index</indexing>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <mainFilter>true</mainFilter>
+  </dimensions>
+  <dimensions uuid="92774a23-652f-41f5-b611-2307e174633d">
+    <name>КорректировкаНЗП</name>
+    <synonym>
+      <key>ru</key>
+      <value>Корректировка НЗП</value>
+    </synonym>
+    <comment>(Общ)</comment>
+    <type>
+      <types>Boolean</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <mainFilter>true</mainFilter>
+  </dimensions>
+  <dimensions uuid="bf26a75f-12a5-44e5-9bf8-d7fe9ecdb8ed">
+    <name>ОприходованиеНЗП</name>
+    <synonym>
+      <key>ru</key>
+      <value>Оприходование НЗП</value>
+    </synonym>
+    <comment>(Общ)</comment>
+    <type>
+      <types>Boolean</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <mainFilter>true</mainFilter>
+  </dimensions>
+  <dimensions uuid="4357e4d0-293b-4689-b6c3-bf50e3dcc1da">
+    <name>ВозвратИзНЗП</name>
+    <synonym>
+      <key>ru</key>
+      <value>Возврат из НЗП</value>
+    </synonym>
+    <comment>(Общ)</comment>
+    <type>
+      <types>Boolean</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <mainFilter>true</mainFilter>
+  </dimensions>
+</mdclass:InformationRegister>

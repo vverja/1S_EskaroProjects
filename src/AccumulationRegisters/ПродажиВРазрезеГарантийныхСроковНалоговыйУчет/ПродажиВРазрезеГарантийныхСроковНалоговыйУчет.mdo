@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:AccumulationRegister xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:core="http://g5.1c.ru/v8/dt/mcore" xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="95310553-b8a1-4d5a-a382-6c77b978ee33">
+  <producedTypes>
+    <selectionType typeId="02da4f38-5356-4fd0-a92a-a4ffe37c94a1" valueTypeId="b62b07a2-ff29-4fa3-81d0-a42a3cdd54d1"/>
+    <listType typeId="78ed135c-5870-4263-a87c-b14de574d6a9" valueTypeId="cbb10d78-bd13-4e43-8ea9-693e82f976eb"/>
+    <managerType typeId="b00e0f0a-a50c-46b4-8393-52d90d9bf0ee" valueTypeId="6d85262a-c368-497d-b568-b2928cded751"/>
+    <recordSetType typeId="e822c379-1279-4c70-946e-20f51aa1053a" valueTypeId="a5ae5c6d-1e35-43c8-8026-8422e99eb552"/>
+    <recordKeyType typeId="7c82253a-8a34-4d01-9616-9ca9dbf32f46" valueTypeId="5b09549d-f78e-40dc-bb35-7926424ee7be"/>
+    <recordType typeId="87034037-ade4-46b3-a168-0ae5f30d7ff8" valueTypeId="b2c6ed42-074f-4c40-8dd4-886e6ee10adb"/>
+  </producedTypes>
+  <name>ПродажиВРазрезеГарантийныхСроковНалоговыйУчет</name>
+  <synonym>
+    <key>ru</key>
+    <value>Продажи в разрезе гарантийных сроков (НУ)</value>
+  </synonym>
+  <synonym>
+    <key>uk</key>
+    <value>Продажі в розрізі гарантійних строків (ПО)</value>
+  </synonym>
+  <help>
+    <pages>
+      <lang>ru</lang>
+    </pages>
+  </help>
+  <enableTotalsSplitting>true</enableTotalsSplitting>
+  <resources uuid="de1e87ff-2d2b-4ad6-b557-baaf295aecda">
+    <name>СуммаПродаж</name>
+    <synonym>
+      <key>ru</key>
+      <value>Сумма продаж </value>
+    </synonym>
+    <synonym>
+      <key>uk</key>
+      <value>Сума продаж </value>
+    </synonym>
+    <comment>Сумма продаж без НДС</comment>
+    <type>
+      <types>Number</types>
+      <numberQualifiers>
+        <precision>15</precision>
+        <scale>2</scale>
+      </numberQualifiers>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+  </resources>
+  <attributes uuid="ea642be2-de96-4e87-8b1f-e698523ae3e3">
+    <name>НоменклатурнаяГруппа</name>
+    <synonym>
+      <key>ru</key>
+      <value>Номенклатурная группа</value>
+    </synonym>
+    <synonym>
+      <key>uk</key>
+      <value>Номенклатурна група</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.НоменклатурныеГруппы</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+  </attributes>
+  <dimensions uuid="a069fda3-32d2-4f14-80dc-35285100da5d">
+    <name>Организация</name>
+    <synonym>
+      <key>ru</key>
+      <value>Организация</value>
+    </synonym>
+    <synonym>
+      <key>uk</key>
+      <value>Організація</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.Организации</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <denyIncompleteValues>true</denyIncompleteValues>
+    <fullTextSearch>Use</fullTextSearch>
+    <useInTotals>true</useInTotals>
+  </dimensions>
+  <dimensions uuid="9da1f671-35cd-4ed3-afbb-cd697942da88">
+    <name>ОкончаниеГарантийногоСрока</name>
+    <synonym>
+      <key>ru</key>
+      <value>Окончание гарантийного срока</value>
+    </synonym>
+    <synonym>
+      <key>uk</key>
+      <value>Закінчення гарантійного строку</value>
+    </synonym>
+    <type>
+      <types>Date</types>
+      <dateQualifiers>
+        <dateFractions>Date</dateFractions>
+      </dateQualifiers>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <useInTotals>true</useInTotals>
+  </dimensions>
+</mdclass:AccumulationRegister>

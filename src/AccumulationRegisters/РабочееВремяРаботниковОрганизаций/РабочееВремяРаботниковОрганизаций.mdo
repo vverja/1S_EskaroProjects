@@ -1,0 +1,184 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:AccumulationRegister xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:core="http://g5.1c.ru/v8/dt/mcore" xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="cf28a06f-e83e-48d7-81ef-a61b1635542d">
+  <producedTypes>
+    <selectionType typeId="b8201911-988e-442c-b3f4-76253b2d83a8" valueTypeId="593cc9b2-9840-495f-a710-cca2c0c9fd0d"/>
+    <listType typeId="dc39629b-4eb9-4c08-99a7-24cfeba1ee05" valueTypeId="0136a4ee-8e9f-43b8-9497-e1b6e35047a2"/>
+    <managerType typeId="cbacd7ca-63eb-4bb6-b9b4-8f056bc7411c" valueTypeId="f3f9a6db-1784-4cab-9bd1-3ad3fb317865"/>
+    <recordSetType typeId="7216be7f-e9b0-4c93-9af1-a0cdcce40c6c" valueTypeId="49837e70-8d2b-48d4-834a-e937554887bd"/>
+    <recordKeyType typeId="e058cfb7-f487-4561-91cd-d290bbf4baa2" valueTypeId="33cb1125-64d2-455b-be8f-fc3dfde30ed2"/>
+    <recordType typeId="5d7d5308-d434-4741-83a3-d2c852cf5d48" valueTypeId="288f6572-3956-42f9-a385-4113ae3b2bce"/>
+  </producedTypes>
+  <name>РабочееВремяРаботниковОрганизаций</name>
+  <synonym>
+    <key>ru</key>
+    <value>Рабочее время работников организаций</value>
+  </synonym>
+  <defaultListForm>AccumulationRegister.РабочееВремяРаботниковОрганизаций.Form.ФормаСписка</defaultListForm>
+  <registerType>Turnovers</registerType>
+  <enableTotalsSplitting>true</enableTotalsSplitting>
+  <resources uuid="8ad2ba42-35b3-4166-9270-d34206efcbaf">
+    <name>Дней</name>
+    <synonym>
+      <key>ru</key>
+      <value>Дней</value>
+    </synonym>
+    <type>
+      <types>Number</types>
+      <numberQualifiers>
+        <precision>7</precision>
+        <scale>2</scale>
+      </numberQualifiers>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+  </resources>
+  <resources uuid="fa65ecce-ee55-419c-8828-12927c409978">
+    <name>Часов</name>
+    <synonym>
+      <key>ru</key>
+      <value>Часов</value>
+    </synonym>
+    <type>
+      <types>Number</types>
+      <numberQualifiers>
+        <precision>7</precision>
+        <scale>2</scale>
+      </numberQualifiers>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+  </resources>
+  <resources uuid="8717b87e-de8d-4c9a-9d18-9ec272d9bfaa">
+    <name>ДнейПоНорме</name>
+    <synonym>
+      <key>ru</key>
+      <value>Дней по норме</value>
+    </synonym>
+    <type>
+      <types>Number</types>
+      <numberQualifiers>
+        <precision>7</precision>
+        <scale>2</scale>
+      </numberQualifiers>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+  </resources>
+  <resources uuid="58533b64-df51-4eb6-9bd8-f7e7f00cbcf3">
+    <name>ЧасовПоНорме</name>
+    <synonym>
+      <key>ru</key>
+      <value>Часов по норме</value>
+    </synonym>
+    <type>
+      <types>Number</types>
+      <numberQualifiers>
+        <precision>7</precision>
+        <scale>2</scale>
+      </numberQualifiers>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+  </resources>
+  <attributes uuid="76db0cdd-dd1d-4681-85ff-17546c8e7508">
+    <name>СводнаяЗапись</name>
+    <synonym>
+      <key>ru</key>
+      <value>Сводная запись</value>
+    </synonym>
+    <type>
+      <types>Boolean</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+  </attributes>
+  <attributes uuid="c37f51ac-fca3-43ea-a3fe-a02a1590d4de">
+    <name>ВЦеломЗаПериод</name>
+    <synonym>
+      <key>ru</key>
+      <value>В целом за период</value>
+    </synonym>
+    <type>
+      <types>Boolean</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+  </attributes>
+  <dimensions uuid="88dfe8c1-35a5-49fc-974d-ad4784fef82e">
+    <name>Сотрудник</name>
+    <synonym>
+      <key>ru</key>
+      <value>Сотрудник</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.СотрудникиОрганизаций</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <denyIncompleteValues>true</denyIncompleteValues>
+    <indexing>Index</indexing>
+    <fullTextSearch>Use</fullTextSearch>
+    <useInTotals>true</useInTotals>
+  </dimensions>
+  <dimensions uuid="048739da-8fc9-453d-9e60-46ed19535559">
+    <name>Назначение</name>
+    <synonym>
+      <key>ru</key>
+      <value>Назначение</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.СотрудникиОрганизаций</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <denyIncompleteValues>true</denyIncompleteValues>
+    <indexing>Index</indexing>
+    <fullTextSearch>Use</fullTextSearch>
+    <useInTotals>true</useInTotals>
+  </dimensions>
+  <dimensions uuid="b88640f8-a0da-4c36-826c-ff1f086b89af">
+    <name>Организация</name>
+    <synonym>
+      <key>ru</key>
+      <value>Организация</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.Организации</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <indexing>Index</indexing>
+    <fullTextSearch>Use</fullTextSearch>
+    <useInTotals>true</useInTotals>
+  </dimensions>
+  <dimensions uuid="8c693026-d4bd-4a88-90e4-6bdc133ac36f">
+    <name>ВидИспользованияРабочегоВремени</name>
+    <synonym>
+      <key>ru</key>
+      <value>Вид использования рабочего времени</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.КлассификаторИспользованияРабочегоВремени</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <useInTotals>true</useInTotals>
+  </dimensions>
+  <forms uuid="b414374b-86f7-40a7-9f03-e0c5fc550d58">
+    <name>ФормаСписка</name>
+    <synonym>
+      <key>ru</key>
+      <value>Форма списка</value>
+    </synonym>
+    <formType>Ordinary</formType>
+    <usePurposes>PersonalComputer</usePurposes>
+    <usePurposes>MobileDevice</usePurposes>
+  </forms>
+</mdclass:AccumulationRegister>

@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:Document xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:core="http://g5.1c.ru/v8/dt/mcore" xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="b4132212-279f-450e-8979-2049e9584ae9">
+  <producedTypes>
+    <objectType typeId="183e4279-6e51-4cfb-b5da-5bad6bc06ced" valueTypeId="e9df8730-f72a-4eb7-8e88-5f34bc3e8ed3"/>
+    <refType typeId="39c2fbd7-6fbc-49ac-9d32-0f554dd35beb" valueTypeId="2eaeea7b-8d1f-423e-becf-2c28bcb8ff75"/>
+    <selectionType typeId="c961be9d-6583-412b-bd05-9edeb96dc1b7" valueTypeId="7e20b421-b4e1-453a-b7d0-53bf5f038ab2"/>
+    <listType typeId="6829b22a-8f33-4029-987f-fd11e59a950e" valueTypeId="54400abd-5adf-499d-8e7b-d659879299fa"/>
+    <managerType typeId="46ede6c1-f96e-42a8-a559-3cf93f4acfc7" valueTypeId="49832857-ae38-4c53-8a2b-adb487efce08"/>
+  </producedTypes>
+  <name>Сторнирование</name>
+  <synonym>
+    <key>ru</key>
+    <value>Сторнирование</value>
+  </synonym>
+  <comment>(Общ)</comment>
+  <inputByString>Document.Сторнирование.StandardAttribute.Number</inputByString>
+  <fullTextSearchOnInputByString>DontUse</fullTextSearchOnInputByString>
+  <createOnInput>Use</createOnInput>
+  <includeHelpInContents>true</includeHelpInContents>
+  <help>
+    <pages>
+      <lang>ru</lang>
+    </pages>
+  </help>
+  <fullTextSearch>Use</fullTextSearch>
+  <numberType>String</numberType>
+  <numberLength>11</numberLength>
+  <numberPeriodicity>Year</numberPeriodicity>
+  <checkUnique>true</checkUnique>
+  <autonumbering>true</autonumbering>
+  <defaultObjectForm>Document.Сторнирование.Form.ФормаДокумента</defaultObjectForm>
+  <defaultListForm>Document.Сторнирование.Form.ФормаСписка</defaultListForm>
+  <defaultChoiceForm>Document.Сторнирование.Form.ФормаВыбора</defaultChoiceForm>
+  <posting>Deny</posting>
+  <realTimePosting>Deny</realTimePosting>
+  <registerRecordsDeletion>AutoDeleteOff</registerRecordsDeletion>
+  <registerRecordsWritingOnPost>WriteModified</registerRecordsWritingOnPost>
+  <registerRecords>CalculationRegister.УдержанияРаботниковОрганизаций</registerRecords>
+  <registerRecords>AccumulationRegister.ВзаиморасчетыСРаботникамиОрганизаций</registerRecords>
+  <registerRecords>CalculationRegister.ОсновныеНачисленияРаботниковОрганизаций</registerRecords>
+  <registerRecords>AccumulationRegister.ВзаиморасчетыПоНДФЛ</registerRecords>
+  <registerRecords>AccumulationRegister.ПогашениеЗаймовРаботникамиОрганизаций</registerRecords>
+  <attributes uuid="08ec6a58-d36e-4ac2-9709-add8083e09f6">
+    <name>СторнируемыйДокумент</name>
+    <synonym>
+      <key>ru</key>
+      <value>Сторнируемый документ</value>
+    </synonym>
+    <comment>(Общ)</comment>
+    <type>
+      <types>DocumentRef.ОплатаПоСреднемуЗаработку</types>
+      <types>DocumentRef.ОплатаСверхурочныхЧасов</types>
+      <types>DocumentRef.НачислениеПоБольничномуЛисту</types>
+      <types>DocumentRef.НевыходыВОрганизациях</types>
+      <types>DocumentRef.НачислениеОтпускаРаботникамОрганизаций</types>
+      <types>DocumentRef.ОплатаПраздничныхИВыходныхДнейОрганизаций</types>
+      <types>DocumentRef.ПремииРаботниковОрганизаций</types>
+      <types>DocumentRef.НачислениеЗарплатыРаботникамОрганизаций</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+  </attributes>
+  <attributes uuid="046fb971-07ca-474c-a39f-984ede835767">
+    <name>Комментарий</name>
+    <synonym>
+      <key>ru</key>
+      <value>Комментарий</value>
+    </synonym>
+    <comment>(Общ) Любая дополнительная информация</comment>
+    <type>
+      <types>String</types>
+      <stringQualifiers/>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+  </attributes>
+  <attributes uuid="9f587a6b-9a49-4dd9-8f49-1a143c72fcaa">
+    <name>Ответственный</name>
+    <synonym>
+      <key>ru</key>
+      <value>Ответственный</value>
+    </synonym>
+    <comment>(Общ)</comment>
+    <type>
+      <types>CatalogRef.Пользователи</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+  </attributes>
+  <forms uuid="2ea01abc-1385-4cef-b03e-9b7096144498">
+    <name>ФормаДокумента</name>
+    <synonym>
+      <key>ru</key>
+      <value>Форма документа</value>
+    </synonym>
+    <formType>Ordinary</formType>
+    <usePurposes>PersonalComputer</usePurposes>
+    <usePurposes>MobileDevice</usePurposes>
+  </forms>
+  <forms uuid="fa1bf3f8-49ad-40f6-8831-338e3d485963">
+    <name>ФормаСписка</name>
+    <synonym>
+      <key>ru</key>
+      <value>Форма списка</value>
+    </synonym>
+    <formType>Ordinary</formType>
+    <usePurposes>PersonalComputer</usePurposes>
+    <usePurposes>MobileDevice</usePurposes>
+  </forms>
+  <forms uuid="1b9a640a-84c2-4d28-baa6-43efefb7ec2d">
+    <name>ФормаВыбора</name>
+    <synonym>
+      <key>ru</key>
+      <value>Форма выбора</value>
+    </synonym>
+    <formType>Ordinary</formType>
+    <usePurposes>PersonalComputer</usePurposes>
+    <usePurposes>MobileDevice</usePurposes>
+  </forms>
+</mdclass:Document>

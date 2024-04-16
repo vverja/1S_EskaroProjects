@@ -1,0 +1,381 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:CalculationRegister xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:core="http://g5.1c.ru/v8/dt/mcore" xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="50edb3bd-a5b1-4f97-9516-1835b8ea1ed7">
+  <producedTypes>
+    <selectionType typeId="feae67e0-b795-4402-a549-1d2e87ab0e3a" valueTypeId="fed18888-d0df-4496-8da2-25ef90f4a612"/>
+    <listType typeId="70cec78b-8e1c-456e-bd04-1d4b2bf650fb" valueTypeId="2ce8130f-1312-4546-b534-dfcd3b0f70d2"/>
+    <managerType typeId="3a18b82f-5cef-4def-a0cf-aae4eb7751fc" valueTypeId="7a1b41c3-f630-42d5-ac39-61e443de58d4"/>
+    <recordSetType typeId="3ac0fc1a-511a-4ba7-8e0b-c17f2ba480d2" valueTypeId="40544051-7299-46de-bb27-ca0c40d7d178"/>
+    <recordKeyType typeId="719082dd-24c5-4cc7-8e75-e3e49d011d88" valueTypeId="76ee0215-602e-4aa4-81d4-10a7039209d4"/>
+    <recordType typeId="409e6bf5-43f6-4c27-be7d-2b147d431177" valueTypeId="0e0ba50c-94f8-4584-adb7-60de847d38ac"/>
+    <recalcsType typeId="bdb5519e-927f-4976-aada-0a4e7b3f6263" valueTypeId="70f5acd5-bf65-426c-b3e6-2a4efe662d0b"/>
+  </producedTypes>
+  <name>ВзносыВФонды</name>
+  <synonym>
+    <key>ru</key>
+    <value>Взносы в фонды</value>
+  </synonym>
+  <comment>(регл)</comment>
+  <defaultListForm>CalculationRegister.ВзносыВФонды.Form.ФормаСписка</defaultListForm>
+  <periodicity>Month</periodicity>
+  <basePeriod>true</basePeriod>
+  <chartOfCalculationTypes>ChartOfCalculationTypes.ВзносыВФонды</chartOfCalculationTypes>
+  <resources uuid="6613e381-b65f-4798-8fc2-c5be0a7bf679">
+    <name>База</name>
+    <synonym>
+      <key>ru</key>
+      <value>База</value>
+    </synonym>
+    <type>
+      <types>Number</types>
+      <numberQualifiers>
+        <precision>15</precision>
+        <scale>2</scale>
+      </numberQualifiers>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+  </resources>
+  <resources uuid="32eedff1-feff-4e0e-a3ce-745b1e02cd66">
+    <name>БазаВзноса</name>
+    <synonym>
+      <key>ru</key>
+      <value>База взноса</value>
+    </synonym>
+    <type>
+      <types>Number</types>
+      <numberQualifiers>
+        <precision>15</precision>
+        <scale>2</scale>
+      </numberQualifiers>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+  </resources>
+  <resources uuid="62c3db7b-419f-414f-aea3-357b29f56982">
+    <name>Результат</name>
+    <synonym>
+      <key>ru</key>
+      <value>Результат</value>
+    </synonym>
+    <type>
+      <types>Number</types>
+      <numberQualifiers>
+        <precision>18</precision>
+        <scale>6</scale>
+      </numberQualifiers>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+  </resources>
+  <attributes uuid="93a320e5-7a91-4232-8553-3c650049633b">
+    <name>Налог</name>
+    <synonym>
+      <key>ru</key>
+      <value>Налог</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.Налоги</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+  </attributes>
+  <attributes uuid="1eb50275-d6b4-4815-8b5e-ad947f94c0fa">
+    <name>НомерПорога</name>
+    <synonym>
+      <key>ru</key>
+      <value>Номер порога</value>
+    </synonym>
+    <type>
+      <types>EnumRef.ПорогиШкалыСтавокНалогов</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <indexing>Index</indexing>
+    <fullTextSearch>Use</fullTextSearch>
+  </attributes>
+  <attributes uuid="b94b3305-0d5e-46a2-b479-38921f902da8">
+    <name>ДатаНачала</name>
+    <synonym>
+      <key>ru</key>
+      <value>Дата начала</value>
+    </synonym>
+    <comment>Период параметров налога начало</comment>
+    <type>
+      <types>Date</types>
+      <dateQualifiers>
+        <dateFractions>Date</dateFractions>
+      </dateQualifiers>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+  </attributes>
+  <attributes uuid="427578cb-e3d1-40ef-a84a-2c636c9d82e4">
+    <name>ДатаОкончания</name>
+    <synonym>
+      <key>ru</key>
+      <value>Дата окончания</value>
+    </synonym>
+    <comment>Период параметров налога конец</comment>
+    <type>
+      <types>Date</types>
+      <dateQualifiers>
+        <dateFractions>Date</dateFractions>
+      </dateQualifiers>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+  </attributes>
+  <attributes uuid="9438d541-fb7c-4293-a65d-891343671095">
+    <name>Предел</name>
+    <synonym>
+      <key>ru</key>
+      <value>Предел</value>
+    </synonym>
+    <type>
+      <types>Number</types>
+      <numberQualifiers>
+        <precision>15</precision>
+        <scale>2</scale>
+      </numberQualifiers>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+  </attributes>
+  <attributes uuid="9bf1cc32-ece2-4687-9bc5-115186a6d9b5">
+    <name>СтатьяНалоговойДекларации</name>
+    <synonym>
+      <key>ru</key>
+      <value>Статья налоговой декларации</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.СтатьиНалоговыхДеклараций</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+  </attributes>
+  <attributes uuid="f2519789-44b7-45e6-8529-96f32cff2912">
+    <name>Ставка</name>
+    <synonym>
+      <key>ru</key>
+      <value>Ставка</value>
+    </synonym>
+    <type>
+      <types>Number</types>
+      <numberQualifiers>
+        <precision>10</precision>
+        <scale>4</scale>
+      </numberQualifiers>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+  </attributes>
+  <attributes uuid="33cafedf-1581-4ad2-92f8-8da8721f0f4d">
+    <name>Авторасчет</name>
+    <synonym>
+      <key>ru</key>
+      <value>Авторасчет</value>
+    </synonym>
+    <type>
+      <types>Boolean</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+  </attributes>
+  <attributes uuid="d726311e-365b-44fd-9d37-67d9091c6668">
+    <name>НомерСтрокиТЧ</name>
+    <synonym>
+      <key>ru</key>
+      <value>Номер строки ТЧ</value>
+    </synonym>
+    <comment>Для разделения табличных частей Взносы и ВзносыФОТ</comment>
+    <type>
+      <types>Number</types>
+      <numberQualifiers>
+        <precision>10</precision>
+        <nonNegative>true</nonNegative>
+      </numberQualifiers>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+  </attributes>
+  <attributes uuid="6a48572f-8566-47e6-b186-cbab866c905f">
+    <name>ОтработаноДней</name>
+    <synonym>
+      <key>ru</key>
+      <value>Отработано дней</value>
+    </synonym>
+    <type>
+      <types>Number</types>
+      <numberQualifiers>
+        <precision>7</precision>
+        <scale>2</scale>
+      </numberQualifiers>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+  </attributes>
+  <attributes uuid="f47c13e5-a9ce-43d6-bab4-be5f0d0289c3">
+    <name>ОтработаноДнейВсего</name>
+    <synonym>
+      <key>ru</key>
+      <value>Отработано дней всего</value>
+    </synonym>
+    <type>
+      <types>Number</types>
+      <numberQualifiers>
+        <precision>7</precision>
+        <scale>2</scale>
+      </numberQualifiers>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+  </attributes>
+  <attributes uuid="77ec9bbd-7dd0-4a92-a584-da7b506c1687">
+    <name>ПодразделениеОрганизации</name>
+    <synonym>
+      <key>ru</key>
+      <value>Подразделение организации</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.ПодразделенияОрганизаций</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+  </attributes>
+  <attributes uuid="6f86747a-0107-4bbe-8c4f-c3d471c65b6d">
+    <name>КодКатегорииЗЛ</name>
+    <synonym>
+      <key>ru</key>
+      <value>Код категории застрахованного лица</value>
+    </synonym>
+    <type>
+      <types>Number</types>
+      <numberQualifiers>
+        <precision>2</precision>
+        <nonNegative>true</nonNegative>
+      </numberQualifiers>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+  </attributes>
+  <attributes uuid="6bcb6d8c-3370-445e-88a3-f60f8aeffea5">
+    <name>ТипНачисления</name>
+    <synonym>
+      <key>ru</key>
+      <value>Тип начисления</value>
+    </synonym>
+    <type>
+      <types>Number</types>
+      <numberQualifiers>
+        <precision>1</precision>
+      </numberQualifiers>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+  </attributes>
+  <attributes uuid="7ebc5d3e-e14c-40d9-af63-0f1f2bbdac6a">
+    <name>БазаВычет</name>
+    <synonym>
+      <key>ru</key>
+      <value>База вычет</value>
+    </synonym>
+    <type>
+      <types>Number</types>
+      <numberQualifiers>
+        <precision>15</precision>
+        <scale>2</scale>
+      </numberQualifiers>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+  </attributes>
+  <dimensions uuid="e317630b-48ae-452d-9970-ad9f1771129c">
+    <name>Организация</name>
+    <synonym>
+      <key>ru</key>
+      <value>Организация</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.Организации</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <denyIncompleteValues>true</denyIncompleteValues>
+    <indexing>Index</indexing>
+    <fullTextSearch>Use</fullTextSearch>
+    <baseDimension>true</baseDimension>
+  </dimensions>
+  <dimensions uuid="6b3dcfe6-ebf4-4d08-aad6-7e2310bfe8d0">
+    <name>Сотрудник</name>
+    <synonym>
+      <key>ru</key>
+      <value>Сотрудник</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.СотрудникиОрганизаций</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <denyIncompleteValues>true</denyIncompleteValues>
+    <indexing>Index</indexing>
+    <fullTextSearch>Use</fullTextSearch>
+    <baseDimension>true</baseDimension>
+  </dimensions>
+  <recalculations uuid="942013c8-18b9-4301-9ad0-d568974693f3">
+    <producedTypes>
+      <recordType typeId="5ffcec55-b092-4265-87b3-87d1d722a988" valueTypeId="9ef5de57-36d0-467a-b9ec-8f1b64b1a815"/>
+      <managerType typeId="cf70fe44-0986-47fb-bf3c-b0e4d5c17a55" valueTypeId="9d7ac683-067f-4ab9-ac97-397831f85674"/>
+      <recordSetType typeId="2dc19684-1009-49a1-bd10-610dc81578ec" valueTypeId="f1578a7d-309b-4ad6-86f5-b2d20b48cfb9"/>
+    </producedTypes>
+    <name>ПерерасчетВзносовВФонды</name>
+    <synonym>
+      <key>ru</key>
+      <value>Перерасчет взносов в фонды</value>
+    </synonym>
+    <dimensions uuid="ef0eaa26-da37-4324-beb2-a55def52a02c">
+      <name>Сотрудник</name>
+      <synonym>
+        <key>ru</key>
+        <value>Сотрудник</value>
+      </synonym>
+      <registerDimension>CalculationRegister.ВзносыВФонды.Dimension.Сотрудник</registerDimension>
+      <leadingRegisterData>CalculationRegister.ОсновныеНачисленияРаботниковОрганизаций.Dimension.Сотрудник</leadingRegisterData>
+    </dimensions>
+    <dimensions uuid="3df7821a-a979-4093-ad3c-4bb436bfca0a">
+      <name>Организация</name>
+      <synonym>
+        <key>ru</key>
+        <value>Организация</value>
+      </synonym>
+      <registerDimension>CalculationRegister.ВзносыВФонды.Dimension.Организация</registerDimension>
+      <leadingRegisterData>CalculationRegister.ОсновныеНачисленияРаботниковОрганизаций.Dimension.Организация</leadingRegisterData>
+    </dimensions>
+  </recalculations>
+  <forms uuid="15e1bcea-176f-4afd-b2c7-c305d77e0281">
+    <name>ФормаСписка</name>
+    <synonym>
+      <key>ru</key>
+      <value>Форма списка</value>
+    </synonym>
+    <formType>Ordinary</formType>
+    <usePurposes>PersonalComputer</usePurposes>
+    <usePurposes>MobileDevice</usePurposes>
+  </forms>
+</mdclass:CalculationRegister>

@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:AccumulationRegister xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:core="http://g5.1c.ru/v8/dt/mcore" xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="36c4a168-bc96-42c1-b807-cce5be00649f">
+  <producedTypes>
+    <selectionType typeId="6aa591a8-cd90-4fad-a2ac-d4c6ff112add" valueTypeId="c8cdc3ac-2244-4339-9478-d494c0c1470e"/>
+    <listType typeId="929cae96-0753-4494-b865-0b49b1d8e19d" valueTypeId="dfac2abf-0d97-4a13-a246-da572b8013b5"/>
+    <managerType typeId="9eec6129-c85e-4a21-bf8b-4d312b07b43b" valueTypeId="31340ed3-fd71-4c46-8683-73c9ec3a0d34"/>
+    <recordSetType typeId="d22bc582-def1-4e49-a86c-cb30de1072d2" valueTypeId="c16ea7ce-1d8b-4c3d-8741-113524feef7a"/>
+    <recordKeyType typeId="428d4c7b-f233-43b3-aad4-d1fc51cec346" valueTypeId="eb6cd770-56b3-4ba8-af8c-273f904d0f52"/>
+    <recordType typeId="59cabb4e-baab-40a7-a696-a2718b548398" valueTypeId="6f613f20-8699-4259-8980-8369bc82a12e"/>
+  </producedTypes>
+  <name>МаршрутныеЛисты</name>
+  <synonym>
+    <key>ru</key>
+    <value>Регистр маршрутных листов</value>
+  </synonym>
+  <registerType>Turnovers</registerType>
+  <dataLockControlMode>Managed</dataLockControlMode>
+  <enableTotalsSplitting>true</enableTotalsSplitting>
+  <resources uuid="1da90e76-4c72-46b8-960c-5e30282f0f95">
+    <name>Пробег</name>
+    <synonym>
+      <key>ru</key>
+      <value>Пробег</value>
+    </synonym>
+    <type>
+      <types>Number</types>
+      <numberQualifiers>
+        <precision>15</precision>
+        <scale>3</scale>
+      </numberQualifiers>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+  </resources>
+  <resources uuid="88d1eca4-9c73-4dd2-ac96-3b5b7ba15606">
+    <name>Расход</name>
+    <synonym>
+      <key>ru</key>
+      <value>Расход</value>
+    </synonym>
+    <type>
+      <types>Number</types>
+      <numberQualifiers>
+        <precision>15</precision>
+        <scale>2</scale>
+      </numberQualifiers>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+  </resources>
+  <resources uuid="32505fcf-d5dd-4474-9341-7e56a39567f4">
+    <name>ТочкиВыгрузки</name>
+    <synonym>
+      <key>ru</key>
+      <value>Точки выгрузки</value>
+    </synonym>
+    <type>
+      <types>Number</types>
+      <numberQualifiers>
+        <precision>10</precision>
+      </numberQualifiers>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+  </resources>
+  <resources uuid="145d12c8-1add-4c0f-8c14-f97c20daa42c">
+    <name>Вес</name>
+    <synonym>
+      <key>ru</key>
+      <value>Вес</value>
+    </synonym>
+    <type>
+      <types>Number</types>
+      <numberQualifiers>
+        <precision>15</precision>
+        <scale>3</scale>
+      </numberQualifiers>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+  </resources>
+  <dimensions uuid="c9876247-b8f3-4a42-8b91-b64c4012c7fa">
+    <name>Сотрудник</name>
+    <synonym>
+      <key>ru</key>
+      <value>Сотрудник</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.СотрудникиОрганизаций</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <useInTotals>true</useInTotals>
+  </dimensions>
+  <dimensions uuid="04cc820b-8c1f-46e0-b7b8-b1aa158d8252">
+    <name>ВидТарифа</name>
+    <synonym>
+      <key>ru</key>
+      <value>Вид тарифа</value>
+    </synonym>
+    <type>
+      <types>EnumRef.ВидТарнспортногоТарифа</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <useInTotals>true</useInTotals>
+  </dimensions>
+  <dimensions uuid="deef466a-5763-4c45-abd0-bce39b618b75">
+    <name>Подразделение</name>
+    <synonym>
+      <key>ru</key>
+      <value>Подразделение</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.Подразделения</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <useInTotals>true</useInTotals>
+  </dimensions>
+</mdclass:AccumulationRegister>

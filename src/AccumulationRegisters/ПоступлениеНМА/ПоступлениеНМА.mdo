@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:AccumulationRegister xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:core="http://g5.1c.ru/v8/dt/mcore" xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="291a9d58-8c05-4f40-a164-772e58fde061">
+  <producedTypes>
+    <selectionType typeId="872dc4cb-e54e-4aed-870f-6fa84955a6f8" valueTypeId="dd95e3a5-16e1-44b5-8ada-7af876ab089b"/>
+    <listType typeId="dc22f51e-5b0f-46ee-a6f0-be6aeb47f89b" valueTypeId="2c6664f4-ac25-4997-b340-2565e774eba0"/>
+    <managerType typeId="962ab29c-cfd9-415b-88ec-c9adf35b14c3" valueTypeId="1aa7c3e6-611f-486a-b158-b7b1e2564a1f"/>
+    <recordSetType typeId="29afc317-82f5-4037-8979-96ffa0ab74d2" valueTypeId="8ba0f63f-b1fe-4cbf-a696-381943b9d9ab"/>
+    <recordKeyType typeId="b09a4b20-e7cf-4860-8b4b-b17cc0bbb276" valueTypeId="69ac0959-d0f0-4246-aaf1-742673c6cc10"/>
+    <recordType typeId="080ba3d3-77c1-4390-a541-9b6eadabaf97" valueTypeId="8fa01fb0-278d-40e8-abd4-66093e3cf393"/>
+  </producedTypes>
+  <name>ПоступлениеНМА</name>
+  <synonym>
+    <key>ru</key>
+    <value>Поступление НМА (упр.учет)</value>
+  </synonym>
+  <comment>На регистре ведется сумма поступивших НМА в упр. валюте</comment>
+  <enableTotalsSplitting>true</enableTotalsSplitting>
+  <resources uuid="d68191b0-e3e6-43cf-b160-f1e063002953">
+    <name>Сумма</name>
+    <synonym>
+      <key>ru</key>
+      <value>Сумма</value>
+    </synonym>
+    <comment>В валюте упр. учета</comment>
+    <type>
+      <types>Number</types>
+      <numberQualifiers>
+        <precision>15</precision>
+        <scale>2</scale>
+      </numberQualifiers>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+  </resources>
+  <dimensions uuid="6feeedb2-7cd9-445a-9bd6-0ceea0d91402">
+    <name>НематериальныйАктив</name>
+    <synonym>
+      <key>ru</key>
+      <value>Нематериальный актив</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.НематериальныеАктивы</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <useInTotals>true</useInTotals>
+  </dimensions>
+</mdclass:AccumulationRegister>

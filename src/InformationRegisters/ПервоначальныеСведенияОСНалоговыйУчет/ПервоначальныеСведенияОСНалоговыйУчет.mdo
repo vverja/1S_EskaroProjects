@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:InformationRegister xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:core="http://g5.1c.ru/v8/dt/mcore" xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="a2c2ed7d-b96d-4a46-8151-d4adea804d73">
+  <producedTypes>
+    <selectionType typeId="40b7bc75-04ec-4936-9d5e-3f509627cc00" valueTypeId="e25dc100-0af8-4ee6-b599-84b7152d2c61"/>
+    <listType typeId="57e33c7e-82c6-405e-9204-5b79acc80f9b" valueTypeId="adeaedaa-11e4-47ae-ac1e-19a1f5d5af14"/>
+    <managerType typeId="7e1e36ab-3ac7-44d6-bfe5-34265fbbbf1e" valueTypeId="cb12f8b5-b4e6-40f8-88ff-6f44a81571b6"/>
+    <recordSetType typeId="4e9b99ff-7dff-4935-add5-c4f36b3863ad" valueTypeId="bc0bc7ac-33f3-4127-9769-aa642b96be44"/>
+    <recordKeyType typeId="509db8bd-ad6e-46bd-9505-3a58f464dc8c" valueTypeId="5c7ace48-211e-4f69-8a64-ce3cf9404a1f"/>
+    <recordType typeId="a071d0c6-2275-47d4-b321-2f995b0c16d0" valueTypeId="d01ca540-668d-4aa9-aefa-94c4ce979af4"/>
+    <recordManagerType typeId="df1ab110-bba7-4a44-8f54-4e03a6f735a4" valueTypeId="5f5f1b4f-a15b-4a2e-9c41-a740825f7bd0"/>
+  </producedTypes>
+  <name>ПервоначальныеСведенияОСНалоговыйУчет</name>
+  <synonym>
+    <key>ru</key>
+    <value>Первоначальные сведения об ОС (налоговый учет)</value>
+  </synonym>
+  <comment>(Регл)</comment>
+  <informationRegisterPeriodicity>Day</informationRegisterPeriodicity>
+  <writeMode>RecorderSubordinate</writeMode>
+  <includeHelpInContents>true</includeHelpInContents>
+  <help>
+    <pages>
+      <lang>ru</lang>
+    </pages>
+  </help>
+  <resources uuid="e1b70c1c-1d9a-4dd2-aa71-c5d7bbb3d5e2">
+    <name>ПервоначальнаяСтоимостьНУ</name>
+    <synonym>
+      <key>ru</key>
+      <value>Первоначальная стоимость</value>
+    </synonym>
+    <comment>Первоначальная стоимость для НУ (на 01.01.2002 или на момент ввода в эксплуатацию)</comment>
+    <type>
+      <types>Number</types>
+      <numberQualifiers>
+        <precision>15</precision>
+        <scale>2</scale>
+      </numberQualifiers>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:UndefinedValue"/>
+  </resources>
+  <resources uuid="98a7f1e6-145a-4a3d-a438-0abdddea89d6">
+    <name>НалоговаяГруппаОС</name>
+    <synonym>
+      <key>ru</key>
+      <value>Налоговая группа ОС</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.НалоговыеГруппыОсновныхСредств</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:UndefinedValue"/>
+  </resources>
+  <resources uuid="ea9e2000-986e-4382-a40e-7d687eee5d87">
+    <name>УДАЛИТЬУчитываетсяКакЗапасНУ</name>
+    <synonym>
+      <key>ru</key>
+      <value>(Не используется) Учитывается как запас (НУ)</value>
+    </synonym>
+    <type>
+      <types>Boolean</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:UndefinedValue"/>
+  </resources>
+  <resources uuid="640e8fb4-34ed-41cc-a716-4328bf376af2">
+    <name>ПорядокВключенияСтоимостиВСоставРасходов</name>
+    <synonym>
+      <key>ru</key>
+      <value>Порядок включения стоимости в состав расходов</value>
+    </synonym>
+    <type>
+      <types>String</types>
+      <stringQualifiers>
+        <length>10</length>
+      </stringQualifiers>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:StringValue">
+      <value></value>
+    </fillValue>
+  </resources>
+  <dimensions uuid="211ef2ed-79f7-426f-82c5-49100b48fb3f">
+    <name>ОсновноеСредство</name>
+    <synonym>
+      <key>ru</key>
+      <value>Основное средство</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.ОсновныеСредства</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <master>true</master>
+    <mainFilter>true</mainFilter>
+  </dimensions>
+  <dimensions uuid="b0a3011b-89f4-4a0c-b30c-ff89820ffeda">
+    <name>Организация</name>
+    <synonym>
+      <key>ru</key>
+      <value>Организация</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.Организации</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <mainFilter>true</mainFilter>
+  </dimensions>
+</mdclass:InformationRegister>

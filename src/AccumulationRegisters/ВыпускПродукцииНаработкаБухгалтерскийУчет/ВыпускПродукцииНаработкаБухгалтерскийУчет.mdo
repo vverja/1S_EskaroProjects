@@ -1,0 +1,172 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:AccumulationRegister xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:core="http://g5.1c.ru/v8/dt/mcore" xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="210fe4fd-2651-4ff4-b5ab-d8ddf2c016fe">
+  <producedTypes>
+    <selectionType typeId="a30dc5fc-e0b9-4f3c-a3aa-dcb9415f5370" valueTypeId="cac9c6ea-316b-42c0-b702-4a54cc84e22d"/>
+    <listType typeId="27ae198a-7644-43da-bc3e-502b640bd840" valueTypeId="347a9c04-e5fd-452f-b49b-3e8bf77c97a5"/>
+    <managerType typeId="dd25a44d-551a-48d1-9fd1-e183b6f62d2f" valueTypeId="cc867add-93a5-46e3-b758-f9bd63a0b645"/>
+    <recordSetType typeId="a55fa962-08e5-41ef-a272-a53618762dc6" valueTypeId="c56b0846-ac2c-4ee9-a902-73ef81689bdc"/>
+    <recordKeyType typeId="ad9adcd7-764c-4d9d-bd71-97653112b054" valueTypeId="7f1481e9-275d-4f17-ad48-4418e0903a1e"/>
+    <recordType typeId="62d92bcb-af20-4aa5-a53e-ad6b1964ea93" valueTypeId="915f6a39-3384-4441-9a73-127c5cac8abb"/>
+  </producedTypes>
+  <name>ВыпускПродукцииНаработкаБухгалтерскийУчет</name>
+  <synonym>
+    <key>ru</key>
+    <value>Выпуск продукции (наработка бухгалтерский учет)</value>
+  </synonym>
+  <comment>(Регл)</comment>
+  <enableTotalsSplitting>true</enableTotalsSplitting>
+  <resources uuid="73835b78-2f74-40e8-9c6d-51396a1caf8c">
+    <name>Количество</name>
+    <synonym>
+      <key>ru</key>
+      <value>Количество</value>
+    </synonym>
+    <type>
+      <types>Number</types>
+      <numberQualifiers>
+        <precision>15</precision>
+        <scale>3</scale>
+      </numberQualifiers>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+  </resources>
+  <attributes uuid="c7a3b58a-27b4-4f13-96bc-58484c109460">
+    <name>КодОперации</name>
+    <synonym>
+      <key>ru</key>
+      <value>Код операции</value>
+    </synonym>
+    <type>
+      <types>EnumRef.КодыОперацийВыпускПродукции</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+  </attributes>
+  <attributes uuid="d0a2e0e2-4115-4485-895e-7654ec669208">
+    <name>ВариантВыпускаПродукции</name>
+    <synonym>
+      <key>ru</key>
+      <value>Вариант выпуска продукции</value>
+    </synonym>
+    <type>
+      <types>EnumRef.ВариантыВыпускаПродукции</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+  </attributes>
+  <attributes uuid="da65c7fd-13ae-4a39-b89c-a124615a87ea">
+    <name>СчетУчетаНЗП</name>
+    <synonym>
+      <key>ru</key>
+      <value>Счет учета НЗП</value>
+    </synonym>
+    <type>
+      <types>ChartOfAccountsRef.Хозрасчетный</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+  </attributes>
+  <attributes uuid="098b51f5-a5ab-43ac-857f-2a9a0aa2a298">
+    <name>НалоговоеНазначение</name>
+    <synonym>
+      <key>ru</key>
+      <value>Налоговое назначение (НЗП)</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.НалоговыеНазначенияАктивовИЗатрат</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+  </attributes>
+  <dimensions uuid="08500f79-143d-434c-a2dd-e3bb3f18a0fc">
+    <name>Организация</name>
+    <synonym>
+      <key>ru</key>
+      <value>Организация</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.Организации</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <useInTotals>true</useInTotals>
+  </dimensions>
+  <dimensions uuid="bf652e10-0c5c-444c-9462-036a8cd35248">
+    <name>Подразделение</name>
+    <synonym>
+      <key>ru</key>
+      <value>Подразделение</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.ПодразделенияОрганизаций</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <useInTotals>true</useInTotals>
+  </dimensions>
+  <dimensions uuid="68f7d2c1-51ac-4c88-9df3-ffcf3b6cd2c2">
+    <name>НоменклатурнаяГруппа</name>
+    <synonym>
+      <key>ru</key>
+      <value>Номенклатурная группа</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.НоменклатурныеГруппы</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <useInTotals>true</useInTotals>
+  </dimensions>
+  <dimensions uuid="1dd731ac-adea-4501-bad8-e5dcc26a3076">
+    <name>Продукция</name>
+    <synonym>
+      <key>ru</key>
+      <value>Продукция</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.Номенклатура</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <useInTotals>true</useInTotals>
+  </dimensions>
+  <dimensions uuid="4f00009d-321c-4a3f-aa48-d06f82292db5">
+    <name>ХарактеристикаПродукции</name>
+    <synonym>
+      <key>ru</key>
+      <value>Характеристика продукции</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.ХарактеристикиНоменклатуры</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <useInTotals>true</useInTotals>
+  </dimensions>
+  <dimensions uuid="262635b8-5642-4610-9896-26e8afce883c">
+    <name>Заказ</name>
+    <synonym>
+      <key>ru</key>
+      <value>Заказ</value>
+    </synonym>
+    <type>
+      <types>DocumentRef.ЗаказНаПроизводство</types>
+      <types>DocumentRef.ЗаказПокупателя</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <useInTotals>true</useInTotals>
+  </dimensions>
+</mdclass:AccumulationRegister>

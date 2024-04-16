@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:AccumulationRegister xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:core="http://g5.1c.ru/v8/dt/mcore" xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="0d552c7a-8632-4f86-9310-ae09adc90856">
+  <producedTypes>
+    <selectionType typeId="02beb6a1-6ede-4deb-8537-6c3c87b79347" valueTypeId="3ce393ee-7c82-489d-8ef3-66dbc38df0f9"/>
+    <listType typeId="a43d4104-85a2-4938-b989-0a9cf7cadab3" valueTypeId="ecf9afdc-6050-402a-8d1a-d90b128a37c2"/>
+    <managerType typeId="79003c1f-f213-46d4-8600-6c875a1a4631" valueTypeId="b21234ab-8436-40cd-872a-fdf6b7e9a8ac"/>
+    <recordSetType typeId="834b9eee-6ed8-44ae-9def-2ca2253f5342" valueTypeId="3e31f01a-0fee-493d-a7a6-a7c98a5337b2"/>
+    <recordKeyType typeId="e49f0343-8780-432a-ac42-1397db8d58cd" valueTypeId="285e9b4c-0b9d-40de-bf63-f75efa53f710"/>
+    <recordType typeId="a05008b4-9e09-4ef9-8be5-96d09459ede9" valueTypeId="8a33129e-84cf-423d-9e89-200f4c81d198"/>
+  </producedTypes>
+  <name>ДенежныеСредстваВПути</name>
+  <synonym>
+    <key>ru</key>
+    <value>Денежные средства в пути</value>
+  </synonym>
+  <comment>(Упр)</comment>
+  <defaultListForm>AccumulationRegister.ДенежныеСредстваВПути.Form.ФормаСписка</defaultListForm>
+  <enableTotalsSplitting>true</enableTotalsSplitting>
+  <resources uuid="5e707ff0-a0c2-462f-b43a-b0e4ace8f7c0">
+    <name>Сумма</name>
+    <synonym>
+      <key>ru</key>
+      <value>Сумма</value>
+    </synonym>
+    <comment>Сумма в указаной валюте</comment>
+    <type>
+      <types>Number</types>
+      <numberQualifiers>
+        <precision>15</precision>
+        <scale>2</scale>
+      </numberQualifiers>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+  </resources>
+  <resources uuid="fc5eebab-e9cd-48b8-a4f0-ebcb7c9718e1">
+    <name>СуммаУпр</name>
+    <synonym>
+      <key>ru</key>
+      <value>Сумма упр. учета</value>
+    </synonym>
+    <comment>Сумма в валюте упр. учета</comment>
+    <type>
+      <types>Number</types>
+      <numberQualifiers>
+        <precision>15</precision>
+        <scale>2</scale>
+      </numberQualifiers>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+  </resources>
+  <dimensions uuid="52c8211b-3cda-4d4d-9dac-5a208cdfaf58">
+    <name>Банк</name>
+    <synonym>
+      <key>ru</key>
+      <value>Банк</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.Контрагенты</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <useInTotals>true</useInTotals>
+  </dimensions>
+  <dimensions uuid="7f1fa0ab-bd80-4dc5-bcc7-d1f968f28af9">
+    <name>Валюта</name>
+    <synonym>
+      <key>ru</key>
+      <value>Валюта</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.Валюты</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <useInTotals>true</useInTotals>
+  </dimensions>
+  <forms uuid="dcf2e3d4-0f1a-4b04-8be8-9ff34187407e">
+    <name>ФормаСписка</name>
+    <synonym>
+      <key>ru</key>
+      <value>Форма списка</value>
+    </synonym>
+    <formType>Ordinary</formType>
+    <usePurposes>PersonalComputer</usePurposes>
+    <usePurposes>MobileDevice</usePurposes>
+  </forms>
+  <forms uuid="097ca6bc-fbb1-4021-abfb-489fd92f8c24">
+    <name>ФормаНабораЗаписей</name>
+    <synonym>
+      <key>ru</key>
+      <value>Форма набора записей</value>
+    </synonym>
+    <formType>Ordinary</formType>
+    <usePurposes>PersonalComputer</usePurposes>
+    <usePurposes>MobileDevice</usePurposes>
+  </forms>
+</mdclass:AccumulationRegister>

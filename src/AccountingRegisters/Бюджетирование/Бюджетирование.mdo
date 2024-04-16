@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:AccountingRegister xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:core="http://g5.1c.ru/v8/dt/mcore" xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="e9bf3596-8bfb-4097-8133-6994f9025cb3">
+  <producedTypes>
+    <selectionType typeId="46056684-3a68-4278-ad7a-24d668c8c2c4" valueTypeId="bc9c3424-2c69-41cd-96b4-b41fbefd1669"/>
+    <listType typeId="d051af0c-1076-4449-952a-76b50063b99b" valueTypeId="275fc8c0-2775-4b68-b9e5-48c2a5206b40"/>
+    <managerType typeId="f58c9617-3919-4fe3-9336-7f78b3405d5f" valueTypeId="60b99cff-fdfd-44f7-a5cf-20b1a36432f1"/>
+    <recordSetType typeId="55364a58-3735-4958-9755-57b3cf5d84d3" valueTypeId="2272f250-1bdc-44d7-a0a1-97f1e6571530"/>
+    <recordKeyType typeId="11068299-b44b-4f88-8406-dd2825d7a2d6" valueTypeId="d846d94a-cd20-4a99-983f-601a16bba240"/>
+    <recordType typeId="e362b4a1-98c3-43c0-87bd-7fae009d6710" valueTypeId="79f8d6e7-d0d9-4134-b806-1a7025067367"/>
+    <extDimensionsType typeId="071bcc99-1347-4122-9350-b18e612070fd" valueTypeId="7d30f913-33a5-473c-ad6d-4d765b153d0d"/>
+  </producedTypes>
+  <name>Бюджетирование</name>
+  <synonym>
+    <key>ru</key>
+    <value>Бюджетирование</value>
+  </synonym>
+  <comment>(Упр)</comment>
+  <includeHelpInContents>true</includeHelpInContents>
+  <help>
+    <pages>
+      <lang>ru</lang>
+    </pages>
+  </help>
+  <chartOfAccounts>ChartOfAccounts.Бюджетирование</chartOfAccounts>
+  <correspondence>true</correspondence>
+  <defaultListForm>AccountingRegister.Бюджетирование.Form.ФормаСписка</defaultListForm>
+  <enableTotalsSplitting>true</enableTotalsSplitting>
+  <dimensions uuid="4e72d848-93e0-4b95-a10c-9c24ed6fc5cd">
+    <name>Сценарий</name>
+    <synonym>
+      <key>ru</key>
+      <value>Сценарий</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.СценарииПланирования</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <balance>true</balance>
+  </dimensions>
+  <dimensions uuid="8652421f-50c9-4f20-b3b4-b846c34990bb">
+    <name>Валюта</name>
+    <synonym>
+      <key>ru</key>
+      <value>Валюта</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.Валюты</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <accountingFlag>ChartOfAccounts.Бюджетирование.AccountingFlag.Валютный</accountingFlag>
+  </dimensions>
+  <resources uuid="d3bd2c85-61a3-4274-97be-b231ab5c57ca">
+    <name>Количество</name>
+    <synonym>
+      <key>ru</key>
+      <value>Количество</value>
+    </synonym>
+    <type>
+      <types>Number</types>
+      <numberQualifiers>
+        <precision>15</precision>
+        <scale>3</scale>
+      </numberQualifiers>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <accountingFlag>ChartOfAccounts.Бюджетирование.AccountingFlag.Количественный</accountingFlag>
+  </resources>
+  <resources uuid="4ab99393-e295-484d-a9e5-3d7f7bbd5468">
+    <name>СуммаУпр</name>
+    <synonym>
+      <key>ru</key>
+      <value>Сумма упр.</value>
+    </synonym>
+    <comment>Сумма в валюте упр. учета</comment>
+    <type>
+      <types>Number</types>
+      <numberQualifiers>
+        <precision>15</precision>
+        <scale>2</scale>
+      </numberQualifiers>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <balance>true</balance>
+  </resources>
+  <resources uuid="4eb2ed79-9fe5-4b72-afe7-3c26227fb9f8">
+    <name>ВалютнаяСумма</name>
+    <synonym>
+      <key>ru</key>
+      <value>Валютная сумма</value>
+    </synonym>
+    <type>
+      <types>Number</types>
+      <numberQualifiers>
+        <precision>15</precision>
+        <scale>2</scale>
+      </numberQualifiers>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <accountingFlag>ChartOfAccounts.Бюджетирование.AccountingFlag.Валютный</accountingFlag>
+  </resources>
+  <resources uuid="2f2469c7-b752-4149-b46e-3cadbff95bc9">
+    <name>СуммаСценария</name>
+    <synonym>
+      <key>ru</key>
+      <value>Сумма в валюте сценария</value>
+    </synonym>
+    <type>
+      <types>Number</types>
+      <numberQualifiers>
+        <precision>15</precision>
+        <scale>2</scale>
+      </numberQualifiers>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <balance>true</balance>
+  </resources>
+  <attributes uuid="d638d287-e15d-48e4-9e6f-12031ea0b99a">
+    <name>СтатьяОборотов</name>
+    <synonym>
+      <key>ru</key>
+      <value>Статья оборотов</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.СтатьиОборотовПоБюджетам</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+  </attributes>
+  <forms uuid="9057092e-f1f6-4226-8673-d423bbc262aa">
+    <name>ФормаСписка</name>
+    <synonym>
+      <key>ru</key>
+      <value>Форма списка</value>
+    </synonym>
+    <formType>Ordinary</formType>
+    <usePurposes>PersonalComputer</usePurposes>
+    <usePurposes>MobileDevice</usePurposes>
+  </forms>
+</mdclass:AccountingRegister>

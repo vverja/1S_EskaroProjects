@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:InformationRegister xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:core="http://g5.1c.ru/v8/dt/mcore" xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="0e2b65d6-03a9-4991-b537-b85f5e7d7f91">
+  <producedTypes>
+    <selectionType typeId="bf0af615-655a-4b64-9546-6468476ddcbb" valueTypeId="d8cf512e-2182-4c66-8967-7a25f45695ad"/>
+    <listType typeId="8657465a-ff17-46a3-b87b-6ffebd10a04e" valueTypeId="a1687a31-aa6f-4d88-ad48-cead7ab77cee"/>
+    <managerType typeId="f9e47493-0ab3-458a-888d-3c09c8c7fe2e" valueTypeId="eaa9f759-e0f4-44e4-a7b0-df076867a224"/>
+    <recordSetType typeId="9b966956-81cc-4934-9712-6cb7b203e79a" valueTypeId="9f7ef5cf-2998-4217-a99e-2e2b649034b8"/>
+    <recordKeyType typeId="a72bd79f-f97e-485e-9c3b-3dfcf1fbd3eb" valueTypeId="1906b955-f4b0-4d2d-b26d-8d5f51a60646"/>
+    <recordType typeId="d715c817-2a0c-4324-8665-93fe0f1b73ec" valueTypeId="5480f34b-ca6f-4b18-9763-9753af5e80cc"/>
+    <recordManagerType typeId="654d9315-5a07-434f-a155-6144dbe0e7db" valueTypeId="6ac3e14b-7e16-4a6c-865c-30b84ee88f1c"/>
+  </producedTypes>
+  <name>ПараметрыВыплатыЗПРаботников</name>
+  <synonym>
+    <key>ru</key>
+    <value>Параметры выплаты ЗП работников</value>
+  </synonym>
+  <comment>(Регл. Упр.)</comment>
+  <defaultListForm>InformationRegister.ПараметрыВыплатыЗПРаботников.Form.ФормаСреза</defaultListForm>
+  <informationRegisterPeriodicity>Second</informationRegisterPeriodicity>
+  <writeMode>RecorderSubordinate</writeMode>
+  <help>
+    <pages>
+      <lang>ru</lang>
+    </pages>
+  </help>
+  <resources uuid="8f9e7095-2972-482f-999c-c0d09b86f480">
+    <name>СпособВыплаты</name>
+    <synonym>
+      <key>ru</key>
+      <value>Способ выплаты</value>
+    </synonym>
+    <type>
+      <types>EnumRef.СпособыВыплатыЗарплаты</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:UndefinedValue"/>
+  </resources>
+  <resources uuid="50cd46e6-e1f8-4fc5-85bd-49c88cd78a70">
+    <name>Банк</name>
+    <synonym>
+      <key>ru</key>
+      <value>Банк</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.Контрагенты</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <indexing>Index</indexing>
+  </resources>
+  <resources uuid="ad4fa84c-bbdc-4cb0-ad2c-d4e38ece0a84">
+    <name>НомерКарточки</name>
+    <synonym>
+      <key>ru</key>
+      <value>Номер карточки</value>
+    </synonym>
+    <type>
+      <types>String</types>
+      <stringQualifiers>
+        <length>16</length>
+      </stringQualifiers>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:UndefinedValue"/>
+  </resources>
+  <resources uuid="13ac27ea-5c40-41fa-8922-b88e58688d9e">
+    <name>ДатаДействия</name>
+    <synonym>
+      <key>ru</key>
+      <value>Дата действия</value>
+    </synonym>
+    <comment>Дата окончания действия карточки</comment>
+    <type>
+      <types>Date</types>
+      <dateQualifiers>
+        <dateFractions>Date</dateFractions>
+      </dateQualifiers>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:UndefinedValue"/>
+  </resources>
+  <resources uuid="ae81432a-eb41-463c-bd46-ee9b220c96fd">
+    <name>IBAN</name>
+    <synonym>
+      <key>ru</key>
+      <value>IBAN</value>
+    </synonym>
+    <type>
+      <types>String</types>
+      <stringQualifiers>
+        <length>34</length>
+      </stringQualifiers>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:StringValue">
+      <value></value>
+    </fillValue>
+  </resources>
+  <dimensions uuid="ad9b5d80-1a6f-47ab-bd04-a6a231b174b2">
+    <name>Сотрудник</name>
+    <synonym>
+      <key>ru</key>
+      <value>Сотрудник</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.СотрудникиОрганизаций</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <denyIncompleteValues>true</denyIncompleteValues>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillFromFillingValue>true</fillFromFillingValue>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <mainFilter>true</mainFilter>
+  </dimensions>
+  <dimensions uuid="984aff88-63e9-439d-ae98-832c3ab0f5ec">
+    <name>Организация</name>
+    <synonym>
+      <key>ru</key>
+      <value>Организация</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.Организации</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <indexing>Index</indexing>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillFromFillingValue>true</fillFromFillingValue>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <mainFilter>true</mainFilter>
+  </dimensions>
+  <forms uuid="5c34ccc4-6876-497a-ba81-9ca942d67b00">
+    <name>ФормаСреза</name>
+    <synonym>
+      <key>ru</key>
+      <value>Форма среза</value>
+    </synonym>
+    <formType>Ordinary</formType>
+    <usePurposes>PersonalComputer</usePurposes>
+    <usePurposes>MobileDevice</usePurposes>
+  </forms>
+</mdclass:InformationRegister>

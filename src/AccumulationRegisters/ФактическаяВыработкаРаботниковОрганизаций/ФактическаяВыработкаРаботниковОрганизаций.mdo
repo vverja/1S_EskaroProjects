@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:AccumulationRegister xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:core="http://g5.1c.ru/v8/dt/mcore" xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="0bdbc7c8-1297-4a43-8d99-b2aba0572114">
+  <producedTypes>
+    <selectionType typeId="ab5fc846-ecdc-44f5-bfc6-7ad2a4fb267a" valueTypeId="43904a40-28a5-4bee-aba5-02baf877f81a"/>
+    <listType typeId="a6ec804d-9b5f-4265-8d21-840352aa00c5" valueTypeId="dc22f6c8-843a-414b-ac38-5dc57e9d8603"/>
+    <managerType typeId="59de6ce0-a05b-424a-b500-e9deda277382" valueTypeId="f1f88e43-b955-4da7-93a8-d58d8f8a38ef"/>
+    <recordSetType typeId="951717ef-1701-4ffa-8fb0-110ac6a1a4a3" valueTypeId="3df3251e-804d-4f4a-ab4b-4f3be8ab3d8e"/>
+    <recordKeyType typeId="028ab9b4-ec5c-41aa-b3c1-1acae3758266" valueTypeId="2c3b81b4-33fc-47db-b08f-74772851f331"/>
+    <recordType typeId="1a8bca2e-b7b7-456c-b749-aa5c7afa533e" valueTypeId="c784e21f-0597-44de-9de1-12a7e87f75b0"/>
+  </producedTypes>
+  <name>ФактическаяВыработкаРаботниковОрганизаций</name>
+  <synonym>
+    <key>ru</key>
+    <value>Фактическая выработка работников организаций</value>
+  </synonym>
+  <comment>(Регл)</comment>
+  <defaultListForm>AccumulationRegister.ФактическаяВыработкаРаботниковОрганизаций.Form.ФормаСписка</defaultListForm>
+  <registerType>Turnovers</registerType>
+  <enableTotalsSplitting>true</enableTotalsSplitting>
+  <resources uuid="0c7963c8-2bd1-4fd0-bf7e-52ab69d88150">
+    <name>Выработка</name>
+    <synonym>
+      <key>ru</key>
+      <value>Выработка</value>
+    </synonym>
+    <comment>Выработка в валюте взаиморасчетов</comment>
+    <type>
+      <types>Number</types>
+      <numberQualifiers>
+        <precision>15</precision>
+        <scale>2</scale>
+        <nonNegative>true</nonNegative>
+      </numberQualifiers>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+  </resources>
+  <attributes uuid="1393a02f-b894-46f2-bb55-b15a58e640fe">
+    <name>СпособВводаДанных</name>
+    <synonym>
+      <key>ru</key>
+      <value>Способ ввода данных</value>
+    </synonym>
+    <type>
+      <types>EnumRef.СпособыВводаДанныхОВремени</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+  </attributes>
+  <dimensions uuid="a96b8b9e-c8b6-4a8e-85b9-4fb0d874a58d">
+    <name>Сотрудник</name>
+    <synonym>
+      <key>ru</key>
+      <value>Сотрудник</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.СотрудникиОрганизаций</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <denyIncompleteValues>true</denyIncompleteValues>
+    <indexing>Index</indexing>
+    <fullTextSearch>Use</fullTextSearch>
+    <useInTotals>true</useInTotals>
+  </dimensions>
+  <dimensions uuid="259eacd6-6ad9-4b75-8d8e-cda3ede845a5">
+    <name>Организация</name>
+    <synonym>
+      <key>ru</key>
+      <value>Организация</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.Организации</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <indexing>Index</indexing>
+    <fullTextSearch>Use</fullTextSearch>
+    <useInTotals>true</useInTotals>
+  </dimensions>
+  <dimensions uuid="04c76022-2ca7-4080-a0e8-0a2ce45cd0d2">
+    <name>ДокументОснование</name>
+    <synonym>
+      <key>ru</key>
+      <value>Документ основание</value>
+    </synonym>
+    <type>
+      <types>DocumentRef.ДоговорНаВыполнениеРаботСФизЛицом</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <useInTotals>true</useInTotals>
+  </dimensions>
+  <forms uuid="666fdba5-7ffe-46db-939e-dd8f7fd9cac4">
+    <name>ФормаСписка</name>
+    <synonym>
+      <key>ru</key>
+      <value>Форма списка</value>
+    </synonym>
+    <formType>Ordinary</formType>
+    <usePurposes>PersonalComputer</usePurposes>
+    <usePurposes>MobileDevice</usePurposes>
+  </forms>
+</mdclass:AccumulationRegister>

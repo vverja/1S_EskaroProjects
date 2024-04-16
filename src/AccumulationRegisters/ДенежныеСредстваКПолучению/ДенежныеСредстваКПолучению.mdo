@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:AccumulationRegister xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:core="http://g5.1c.ru/v8/dt/mcore" xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="0f802a2c-3324-4ce3-80cc-b2c77e16520a">
+  <producedTypes>
+    <selectionType typeId="ab315322-0c15-47a4-af4e-787f2f223f28" valueTypeId="67868a28-95f2-47e5-824d-abd22267224a"/>
+    <listType typeId="7f0067fa-e533-41c0-99cc-7ce30e64bd6b" valueTypeId="3b85be61-0353-4392-bccb-fd1ea6d6acf6"/>
+    <managerType typeId="23089ed3-fa30-4e1c-9b5b-5b7f63ac5044" valueTypeId="a43e10fb-17ea-4825-806d-c72e38557946"/>
+    <recordSetType typeId="448bc2b8-101b-41e7-876b-abe6db3854af" valueTypeId="27317ccb-3cac-4b01-90fa-969aba870d61"/>
+    <recordKeyType typeId="ff946593-915f-4e03-b35a-cba7362f2488" valueTypeId="9fafb917-2a1f-4652-830c-9528f9a3e466"/>
+    <recordType typeId="2fff17cc-4a3c-484f-b536-866824e658fe" valueTypeId="06a5714e-4cd5-421a-8b45-89f7514886b7"/>
+  </producedTypes>
+  <name>ДенежныеСредстваКПолучению</name>
+  <synonym>
+    <key>ru</key>
+    <value>Денежные средства к получению</value>
+  </synonym>
+  <comment>(Упр)</comment>
+  <enableTotalsSplitting>true</enableTotalsSplitting>
+  <resources uuid="c7cdce40-3ddd-45fe-9699-64a0ba0ebb51">
+    <name>Сумма</name>
+    <synonym>
+      <key>ru</key>
+      <value>Сумма</value>
+    </synonym>
+    <comment>Сумма в валюте банковского счета (кассы)</comment>
+    <type>
+      <types>Number</types>
+      <numberQualifiers>
+        <precision>15</precision>
+        <scale>2</scale>
+      </numberQualifiers>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+  </resources>
+  <resources uuid="f5d18ffa-f07d-4690-9a6f-fff80d2f0308">
+    <name>СуммаУпр</name>
+    <synonym>
+      <key>ru</key>
+      <value>Сумма (упр)</value>
+    </synonym>
+    <comment>Сумма в валюте управленческого учета</comment>
+    <type>
+      <types>Number</types>
+      <numberQualifiers>
+        <precision>15</precision>
+        <scale>2</scale>
+      </numberQualifiers>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+  </resources>
+  <dimensions uuid="8118398e-6503-4237-89b6-639e620b46af">
+    <name>БанковскийСчетКасса</name>
+    <synonym>
+      <key>ru</key>
+      <value>Банковский счет / касса</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.БанковскиеСчета</types>
+      <types>CatalogRef.Кассы</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <useInTotals>true</useInTotals>
+  </dimensions>
+  <dimensions uuid="524dd629-3b8e-40bb-a57c-21b7b240c1c5">
+    <name>ВидДенежныхСредств</name>
+    <synonym>
+      <key>ru</key>
+      <value>Вид денежных средств</value>
+    </synonym>
+    <type>
+      <types>EnumRef.ВидыДенежныхСредств</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <useInTotals>true</useInTotals>
+  </dimensions>
+  <dimensions uuid="5927754d-dc14-44df-bcc6-010e9b33a8e4">
+    <name>ДокументПолучения</name>
+    <synonym>
+      <key>ru</key>
+      <value>Документ получения</value>
+    </synonym>
+    <type>
+      <types>DocumentRef.ПлатежноеТребованиеПоручениеВыставленное</types>
+      <types>DocumentRef.АккредитивПолученный</types>
+      <types>DocumentRef.ПлатежноеПоручениеВходящее</types>
+      <types>DocumentRef.РасходныйКассовыйОрдер</types>
+      <types>DocumentRef.ДенежныйЧек</types>
+      <types>DocumentRef.ПриходныйКассовыйОрдер</types>
+      <types>DocumentRef.ПлатежныйОрдерСписаниеДенежныхСредств</types>
+      <types>DocumentRef.ОбъявлениеНаВзносНаличными</types>
+      <types>DocumentRef.ВнутреннееПеремещениеНаличныхДенежныхСредств</types>
+      <types>DocumentRef.ПлатежноеТребованиеВыставленное</types>
+      <types>DocumentRef.ПлатежныйОрдерПоступлениеДенежныхСредств</types>
+      <types>DocumentRef.ПлатежноеПоручениеИсходящее</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <useInTotals>true</useInTotals>
+  </dimensions>
+  <dimensions uuid="48629faa-e983-4513-a8e1-b2d4537f85a4">
+    <name>СтатьяДвиженияДенежныхСредств</name>
+    <synonym>
+      <key>ru</key>
+      <value>Статья движения денежных средств</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.СтатьиДвиженияДенежныхСредств</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <useInTotals>true</useInTotals>
+  </dimensions>
+  <dimensions uuid="48f5c2f3-9694-4b8c-8a4b-dfcedc8c7b8f">
+    <name>Организация</name>
+    <synonym>
+      <key>ru</key>
+      <value>Организация</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.Организации</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <useInTotals>true</useInTotals>
+  </dimensions>
+</mdclass:AccumulationRegister>

@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:AccumulationRegister xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:core="http://g5.1c.ru/v8/dt/mcore" xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="06c087a0-587b-4f46-9f27-f6fe5e9fac75">
+  <producedTypes>
+    <selectionType typeId="2834c04b-4154-4471-962d-8c88bc48f697" valueTypeId="21cc8cf2-c1d6-426e-8ff5-8ca43f4ac5dc"/>
+    <listType typeId="746ad3ad-20b3-4c44-aeed-8c03109359df" valueTypeId="cb3e6908-6ffe-4a59-823e-e4046eab9038"/>
+    <managerType typeId="8217106e-83e0-4a79-971a-3a45fba7f8ab" valueTypeId="4be35fe6-2d42-422c-8dfd-d9a23b370e35"/>
+    <recordSetType typeId="761bd4d8-66b6-4c78-9190-89d8e29bea24" valueTypeId="bc75617f-9a74-490e-bfde-010b89813d59"/>
+    <recordKeyType typeId="250040c0-a8ee-4fee-9b8a-5b08d5e3b0c4" valueTypeId="24224987-4177-4978-923c-21f2aa28479e"/>
+    <recordType typeId="69bcaaeb-6636-4d36-8bb2-d675ae3faebc" valueTypeId="04feb114-7174-410e-a682-43b319a91103"/>
+  </producedTypes>
+  <name>УДАЛИТЬВзаиморасчетыСКонтрагентамиНалоговыйУчет</name>
+  <synonym>
+    <key>ru</key>
+    <value>ъ(не используется) Взаиморасчеты с контрагентами (налоговый учет)</value>
+  </synonym>
+  <comment>(Регл)</comment>
+  <enableTotalsSplitting>true</enableTotalsSplitting>
+  <resources uuid="51c49bb4-13e6-46ef-b8d4-bbca4f0e975d">
+    <name>СуммаВзаиморасчетов</name>
+    <synonym>
+      <key>ru</key>
+      <value>Сумма взаиморасчетов</value>
+    </synonym>
+    <type>
+      <types>Number</types>
+      <numberQualifiers>
+        <precision>15</precision>
+        <scale>2</scale>
+      </numberQualifiers>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+  </resources>
+  <resources uuid="43baaeb0-f427-440a-bdcc-28d888b65a51">
+    <name>СуммаРегл</name>
+    <synonym>
+      <key>ru</key>
+      <value>Сумма регл. учета</value>
+    </synonym>
+    <comment>Сумма в валюте регл. учета</comment>
+    <type>
+      <types>Number</types>
+      <numberQualifiers>
+        <precision>15</precision>
+        <scale>2</scale>
+      </numberQualifiers>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+  </resources>
+  <attributes uuid="2e697072-9594-4010-9cbe-fe0daeecf486">
+    <name>ВидРегламентнойОперации</name>
+    <synonym>
+      <key>ru</key>
+      <value>Вид регламентной операции</value>
+    </synonym>
+    <type>
+      <types>EnumRef.ВидыРегламентныхОпераций</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+  </attributes>
+  <attributes uuid="70b7fe9b-f4c1-4792-abf4-7a28c7fcb4bf">
+    <name>КодОперации</name>
+    <synonym>
+      <key>ru</key>
+      <value>Код операции</value>
+    </synonym>
+    <type>
+      <types>EnumRef.КодыОперацийВзаиморасчетыСКонтрагентамиНалоговыйУчет</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+  </attributes>
+  <dimensions uuid="1133ebf2-85a8-47e1-99ef-893ae72e4d0e">
+    <name>ДоговорКонтрагента</name>
+    <synonym>
+      <key>ru</key>
+      <value>Договор контрагента</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.ДоговорыКонтрагентов</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <useInTotals>true</useInTotals>
+  </dimensions>
+  <dimensions uuid="c88628c0-d2c2-491a-b071-942c8c1d2151">
+    <name>Сделка</name>
+    <synonym>
+      <key>ru</key>
+      <value>Сделка</value>
+    </synonym>
+    <type>
+      <types>DocumentRef.СчетНаОплатуПоставщика</types>
+      <types>DocumentRef.ЗаказПоставщику</types>
+      <types>DocumentRef.ЗаказПокупателя</types>
+      <types>DocumentRef.СчетНаОплатуПокупателю</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <useInTotals>true</useInTotals>
+  </dimensions>
+  <dimensions uuid="dec5c481-388d-44f9-aa20-b9785579d6e6">
+    <name>ВидРасчетовНУ</name>
+    <synonym>
+      <key>ru</key>
+      <value>Вид расчетов НУ</value>
+    </synonym>
+    <type>
+      <types>EnumRef.УДАЛИТЬВидыРасчетовСКонтрагентамиНалоговыйУчет</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <useInTotals>true</useInTotals>
+  </dimensions>
+</mdclass:AccumulationRegister>

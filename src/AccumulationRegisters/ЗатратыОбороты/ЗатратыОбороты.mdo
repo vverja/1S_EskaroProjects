@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:AccumulationRegister xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:core="http://g5.1c.ru/v8/dt/mcore" xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="8d110abf-df9a-4fa0-b1e1-fecc84f3bccd">
+  <producedTypes>
+    <selectionType typeId="518620db-11e0-4435-ac0f-341a28cc4975" valueTypeId="6e1e472f-ee34-4632-9ebe-feddf3c5be19"/>
+    <listType typeId="ed67e520-6bbf-4598-9a14-9191cc6a634d" valueTypeId="e5513d78-be83-492c-b165-44370e641ae4"/>
+    <managerType typeId="5e3407a4-ea43-42f3-a11a-ecbe87a2094a" valueTypeId="69d51fe5-9445-4be8-a595-d6a945d46636"/>
+    <recordSetType typeId="132d52fb-258d-420a-b056-5ed92c7ada5d" valueTypeId="b1d70b3f-054d-42fd-bc04-2d3c6567e922"/>
+    <recordKeyType typeId="5fc32f5e-4969-49be-8394-a0bff4b4476c" valueTypeId="04fc0286-bd49-4203-bda6-ae5abed8ca9f"/>
+    <recordType typeId="f9b172de-21b5-4c1e-9f13-26e5a5c8bd28" valueTypeId="44103fc9-fc10-4ce3-9299-0706cc9ed237"/>
+  </producedTypes>
+  <name>ЗатратыОбороты</name>
+  <synonym>
+    <key>ru</key>
+    <value>Затраты обороты</value>
+  </synonym>
+  <comment>(Упр)</comment>
+  <registerType>Turnovers</registerType>
+  <enableTotalsSplitting>true</enableTotalsSplitting>
+  <resources uuid="ca71215b-ba31-48e4-8400-ef1369d3d2bb">
+    <name>Сумма</name>
+    <synonym>
+      <key>ru</key>
+      <value>Сумма</value>
+    </synonym>
+    <type>
+      <types>Number</types>
+      <numberQualifiers>
+        <precision>15</precision>
+        <scale>2</scale>
+      </numberQualifiers>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+  </resources>
+  <dimensions uuid="fea37002-9600-4cd4-a465-dacb6f666811">
+    <name>Подразделение</name>
+    <synonym>
+      <key>ru</key>
+      <value>Подразделение</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.Подразделения</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <useInTotals>true</useInTotals>
+  </dimensions>
+  <dimensions uuid="a3617c73-416a-4a93-8451-dcfc37afd089">
+    <name>СтатьяЗатрат</name>
+    <synonym>
+      <key>ru</key>
+      <value>Статья затрат</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.СтатьиЗатрат</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <useInTotals>true</useInTotals>
+  </dimensions>
+  <dimensions uuid="d15c605f-a28f-4905-abab-9f6a6f861220">
+    <name>НоменклатурнаяГруппа</name>
+    <synonym>
+      <key>ru</key>
+      <value>Номенклатурная группа</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.НоменклатурныеГруппы</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <useInTotals>true</useInTotals>
+  </dimensions>
+  <dimensions uuid="c1282787-03f7-4b30-8eef-e555c19aa7cf">
+    <name>Заказ</name>
+    <synonym>
+      <key>ru</key>
+      <value>Заказ</value>
+    </synonym>
+    <type>
+      <types>DocumentRef.ЗаказНаПроизводство</types>
+      <types>DocumentRef.ЗаказПокупателя</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <useInTotals>true</useInTotals>
+  </dimensions>
+  <dimensions uuid="ed0afd0b-edca-4d55-957a-e8bba827ac14">
+    <name>Проект</name>
+    <synonym>
+      <key>ru</key>
+      <value>Проект</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.Проекты</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <useInTotals>true</useInTotals>
+  </dimensions>
+</mdclass:AccumulationRegister>

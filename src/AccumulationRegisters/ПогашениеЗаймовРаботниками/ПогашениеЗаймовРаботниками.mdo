@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:AccumulationRegister xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:core="http://g5.1c.ru/v8/dt/mcore" xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="33474e47-f6dd-4bd2-a8ee-5ad2e51218f9">
+  <producedTypes>
+    <selectionType typeId="d31fa49f-76e8-4a95-86a9-550c06cee2a6" valueTypeId="1c971361-83fc-4b10-86f0-a9aaa946d77a"/>
+    <listType typeId="ea17ad66-9da6-474a-b578-125551d5e210" valueTypeId="5090d651-7675-42d5-8732-a7a252e3e0c8"/>
+    <managerType typeId="f37c33f9-268b-4e09-a3f3-3b20255126fd" valueTypeId="e899f9aa-4317-450a-bcc2-d737b0ce62c9"/>
+    <recordSetType typeId="a428473a-fbcd-4dd1-a512-22c7761e7165" valueTypeId="79aad349-b836-463c-9a38-deaa45df5d3b"/>
+    <recordKeyType typeId="b6da20cd-10c3-4bee-8b5a-994ffe246819" valueTypeId="7e43c83d-3522-4e49-894c-d4113e43e26f"/>
+    <recordType typeId="482781a1-6773-4f6c-b59e-19fac7262486" valueTypeId="ada55386-eb65-4986-afef-89001967b66b"/>
+  </producedTypes>
+  <name>ПогашениеЗаймовРаботниками</name>
+  <synonym>
+    <key>ru</key>
+    <value>Погашение займов работниками</value>
+  </synonym>
+  <comment>(Упр)</comment>
+  <enableTotalsSplitting>true</enableTotalsSplitting>
+  <resources uuid="ccd2be09-aec9-4b2b-bd7c-0e36d7b2f484">
+    <name>ОсновнойДолг</name>
+    <synonym>
+      <key>ru</key>
+      <value>Основной долг</value>
+    </synonym>
+    <type>
+      <types>Number</types>
+      <numberQualifiers>
+        <precision>15</precision>
+        <scale>2</scale>
+      </numberQualifiers>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+  </resources>
+  <resources uuid="ef25cb5d-1bf4-4ab4-b1c1-02e48487066e">
+    <name>Проценты</name>
+    <synonym>
+      <key>ru</key>
+      <value>Проценты</value>
+    </synonym>
+    <type>
+      <types>Number</types>
+      <numberQualifiers>
+        <precision>15</precision>
+        <scale>2</scale>
+      </numberQualifiers>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+  </resources>
+  <attributes uuid="756f62ad-5d88-4cb6-bddd-c8b623271ff2">
+    <name>УдержаноИзЗарплаты</name>
+    <synonym>
+      <key>ru</key>
+      <value>Удержано из зарплаты</value>
+    </synonym>
+    <type>
+      <types>Boolean</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+  </attributes>
+  <dimensions uuid="9de7e593-3a98-4e15-91de-d3ae4d6c3025">
+    <name>ФизЛицо</name>
+    <synonym>
+      <key>ru</key>
+      <value>Физическое лицо</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.ФизическиеЛица</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <denyIncompleteValues>true</denyIncompleteValues>
+    <indexing>Index</indexing>
+    <fullTextSearch>Use</fullTextSearch>
+    <useInTotals>true</useInTotals>
+  </dimensions>
+  <dimensions uuid="76849375-4d60-4f93-9ce4-225f86d7b30b">
+    <name>ДоговорЗайма</name>
+    <synonym>
+      <key>ru</key>
+      <value>Договор займа</value>
+    </synonym>
+    <type>
+      <types>DocumentRef.ДоговорЗаймаСРаботником</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <denyIncompleteValues>true</denyIncompleteValues>
+    <fullTextSearch>Use</fullTextSearch>
+    <useInTotals>true</useInTotals>
+  </dimensions>
+</mdclass:AccumulationRegister>

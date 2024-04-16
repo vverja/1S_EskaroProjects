@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:AccumulationRegister xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:core="http://g5.1c.ru/v8/dt/mcore" xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="e55300b9-cc7e-4d11-8a11-bae1d0a13c8a">
+  <producedTypes>
+    <selectionType typeId="601af5c6-293b-448a-8b51-7ec79de66d4c" valueTypeId="44da7048-d5c3-46fd-b953-b5c4a66f2322"/>
+    <listType typeId="1244bb20-7d89-4f72-98fb-eba793dcd63e" valueTypeId="72585000-0f7c-4154-b165-ffd19a9d7836"/>
+    <managerType typeId="bb59cc62-24dd-43ae-af36-e9e14b07b13d" valueTypeId="94a0b4ed-e3f3-4826-8db0-ec05804a3216"/>
+    <recordSetType typeId="fd9c5621-5adc-4590-9c45-3c709154b303" valueTypeId="d3dbe1c8-8a15-4529-8e3c-c5fa86d3f24c"/>
+    <recordKeyType typeId="f70217a2-af49-40f7-b8cc-cb01a7ae4363" valueTypeId="0f1dee64-c843-48e4-b593-dbd8b84e8f04"/>
+    <recordType typeId="0dc24203-039d-4067-9810-7e4e7a58089e" valueTypeId="1c97bcb7-c320-44e4-af03-59b157e97afc"/>
+  </producedTypes>
+  <name>РеализованныеТовары</name>
+  <synonym>
+    <key>ru</key>
+    <value>Реализованные товары комитентов</value>
+  </synonym>
+  <comment>(Упр) Предназначен для накопления информации о товарах, принятых на реализацию, которые были нами проданы (или иным образом списаны), но еще не включены в состав отчета комитенту</comment>
+  <enableTotalsSplitting>true</enableTotalsSplitting>
+  <resources uuid="7d9a6794-ee05-4027-94ae-0b406d4a9e17">
+    <name>Количество</name>
+    <synonym>
+      <key>ru</key>
+      <value>Количество</value>
+    </synonym>
+    <type>
+      <types>Number</types>
+      <numberQualifiers>
+        <precision>15</precision>
+        <scale>3</scale>
+      </numberQualifiers>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+  </resources>
+  <resources uuid="2852ba83-9bbb-429f-a4e4-5d171f05aa97">
+    <name>Выручка</name>
+    <synonym>
+      <key>ru</key>
+      <value>Выручка</value>
+    </synonym>
+    <comment>Выручка от продажи в валюте взаиморасчетов с комитентом</comment>
+    <type>
+      <types>Number</types>
+      <numberQualifiers>
+        <precision>15</precision>
+        <scale>2</scale>
+      </numberQualifiers>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+  </resources>
+  <dimensions uuid="57570a9b-0473-4f63-b3ef-fd235e8b0c9e">
+    <name>ДоговорКонтрагента</name>
+    <synonym>
+      <key>ru</key>
+      <value>Договор контрагента</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.ДоговорыКонтрагентов</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <useInTotals>true</useInTotals>
+  </dimensions>
+  <dimensions uuid="9adec543-5100-4da4-ba72-3b3a05f8dbf7">
+    <name>Номенклатура</name>
+    <synonym>
+      <key>ru</key>
+      <value>Номенклатура</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.Номенклатура</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <indexing>Index</indexing>
+    <fullTextSearch>Use</fullTextSearch>
+    <useInTotals>true</useInTotals>
+  </dimensions>
+  <dimensions uuid="88439891-ce7e-4aba-bf97-075c3d54806c">
+    <name>ХарактеристикаНоменклатуры</name>
+    <synonym>
+      <key>ru</key>
+      <value>Характеристика номенклатуры</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.ХарактеристикиНоменклатуры</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <useInTotals>true</useInTotals>
+  </dimensions>
+  <dimensions uuid="f9f66a89-71d1-4880-849a-74b87f42cffd">
+    <name>СерияНоменклатуры</name>
+    <synonym>
+      <key>ru</key>
+      <value>Серия номенклатуры</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.СерииНоменклатуры</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <useInTotals>true</useInTotals>
+  </dimensions>
+  <dimensions uuid="7ee00149-40fc-4af7-a1ca-ab86a2f7478e">
+    <name>Сделка</name>
+    <synonym>
+      <key>ru</key>
+      <value>Сделка</value>
+    </synonym>
+    <type>
+      <types>DocumentRef.ПлатежноеТребованиеПоручениеПолученное</types>
+      <types>DocumentRef.ВозвратТоваровПоставщику</types>
+      <types>DocumentRef.ЗаказПоставщику</types>
+      <types>DocumentRef.КорректировкаДолга</types>
+      <types>DocumentRef.ПлатежноеТребованиеПолученное</types>
+      <types>DocumentRef.РасходныйКассовыйОрдер</types>
+      <types>DocumentRef.АккредитивПереданный</types>
+      <types>DocumentRef.КорректировкаДолгаПоВозвратнойТаре</types>
+      <types>DocumentRef.ПоступлениеТоваровУслуг</types>
+      <types>DocumentRef.ВозвратТоваровПоставщикуИзНТТ</types>
+      <types>DocumentRef.ПлатежныйОрдерСписаниеДенежныхСредств</types>
+      <types>DocumentRef.ПлатежноеПоручениеИсходящее</types>
+      <types>DocumentRef.АвансовыйОтчет</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <useInTotals>true</useInTotals>
+  </dimensions>
+  <dimensions uuid="4de4fa70-1c40-4b8c-b585-5c1cd47bd2bf">
+    <name>ДокументПоставки</name>
+    <synonym>
+      <key>ru</key>
+      <value>Документ поставки</value>
+    </synonym>
+    <type>
+      <types>DocumentRef.ПоступлениеТоваровУслугВНТТ</types>
+      <types>DocumentRef.ПоступлениеТоваровУслуг</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <useInTotals>true</useInTotals>
+  </dimensions>
+  <dimensions uuid="3d4b429b-74a2-4fd7-ab45-4d6c0ceb8775">
+    <name>Организация</name>
+    <synonym>
+      <key>ru</key>
+      <value>Организация</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.Организации</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <useInTotals>true</useInTotals>
+  </dimensions>
+</mdclass:AccumulationRegister>

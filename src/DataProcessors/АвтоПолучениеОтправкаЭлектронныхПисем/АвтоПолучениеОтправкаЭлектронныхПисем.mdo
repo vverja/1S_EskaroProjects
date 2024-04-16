@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:DataProcessor xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:core="http://g5.1c.ru/v8/dt/mcore" xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="ba442358-8d42-4bf2-a139-042783305dd9">
+  <producedTypes>
+    <objectType typeId="a207f3cb-796e-4018-81e8-c61aeb2b6aa8" valueTypeId="97379d60-c7c8-48b7-90ed-208aae4ef2ed"/>
+    <managerType typeId="f13c756d-236b-4aa5-9a5a-b1cc6c614bb5" valueTypeId="e7ced550-39c7-4044-bc80-a93f7bb78af4"/>
+  </producedTypes>
+  <name>АвтоПолучениеОтправкаЭлектронныхПисем</name>
+  <synonym>
+    <key>ru</key>
+    <value>Авто получение/отправка электронных писем</value>
+  </synonym>
+  <defaultForm>DataProcessor.АвтоПолучениеОтправкаЭлектронныхПисем.Form.Форма</defaultForm>
+  <help>
+    <pages>
+      <lang>ru</lang>
+    </pages>
+  </help>
+  <tabularSections uuid="4f35cf0f-077d-4375-907f-ac791b31e080">
+    <producedTypes>
+      <objectType typeId="6faa5efc-b7f9-4ffa-9514-8169635450a4" valueTypeId="e652d8d8-5233-44d4-98be-af301e0f9475"/>
+      <rowType typeId="97b48090-da03-4b02-b001-c10b53a2b81b" valueTypeId="16655d81-1b48-4dff-9624-b14e34f25dde"/>
+    </producedTypes>
+    <name>УчетныеЗаписиАвтоматическогоТранспортаПисем</name>
+    <synonym>
+      <key>ru</key>
+      <value>Учетные записи автоматического транспорта писем</value>
+    </synonym>
+    <attributes uuid="b7459c13-884e-41ab-9592-0d1fdd7bee9b">
+      <name>УчетнаяЗапись</name>
+      <synonym>
+        <key>ru</key>
+        <value>Учетная запись</value>
+      </synonym>
+      <type>
+        <types>CatalogRef.УчетныеЗаписиЭлектроннойПочты</types>
+      </type>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <fillValue xsi:type="core:UndefinedValue"/>
+    </attributes>
+    <attributes uuid="6b851edc-d4fb-449d-b164-759a2228f25c">
+      <name>ВремяПоследнегоПолучения</name>
+      <synonym>
+        <key>ru</key>
+        <value>Время последнего получения</value>
+      </synonym>
+      <type>
+        <types>Date</types>
+        <dateQualifiers/>
+      </type>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <fillValue xsi:type="core:UndefinedValue"/>
+    </attributes>
+    <attributes uuid="f50c8ff8-93b0-43f3-a0ae-eac64e333bfe">
+      <name>ИнтервалОбновления</name>
+      <synonym>
+        <key>ru</key>
+        <value>Интервал обновления</value>
+      </synonym>
+      <type>
+        <types>Number</types>
+        <numberQualifiers>
+          <precision>10</precision>
+          <nonNegative>true</nonNegative>
+        </numberQualifiers>
+      </type>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <fillValue xsi:type="core:UndefinedValue"/>
+    </attributes>
+    <attributes uuid="6dff4288-f0be-4491-a7a4-803dc1e24087">
+      <name>АдресЭлектроннойПочты</name>
+      <synonym>
+        <key>ru</key>
+        <value>Адрес электронной почты</value>
+      </synonym>
+      <type>
+        <types>String</types>
+        <stringQualifiers>
+          <length>200</length>
+        </stringQualifiers>
+      </type>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <fillValue xsi:type="core:UndefinedValue"/>
+    </attributes>
+    <attributes uuid="597fd6ce-08e7-4014-a431-a6408bc1c2af">
+      <name>Действие</name>
+      <synonym>
+        <key>ru</key>
+        <value>Действие</value>
+      </synonym>
+      <type>
+        <types>EnumRef.ВидыДействийАвтоПолученияОтправкиЭлектронныхПисем</types>
+      </type>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <fillValue xsi:type="core:UndefinedValue"/>
+    </attributes>
+  </tabularSections>
+  <forms uuid="08b1e33c-8258-409e-a548-fdd614cee0f4">
+    <name>Форма</name>
+    <synonym>
+      <key>ru</key>
+      <value>Форма</value>
+    </synonym>
+    <formType>Ordinary</formType>
+    <usePurposes>PersonalComputer</usePurposes>
+    <usePurposes>MobileDevice</usePurposes>
+  </forms>
+</mdclass:DataProcessor>

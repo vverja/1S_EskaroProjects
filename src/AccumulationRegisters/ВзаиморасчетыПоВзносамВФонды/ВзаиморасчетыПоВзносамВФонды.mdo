@@ -1,0 +1,178 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:AccumulationRegister xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:core="http://g5.1c.ru/v8/dt/mcore" xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="09545037-3485-45cd-9d5a-02845527210c">
+  <producedTypes>
+    <selectionType typeId="e6dd9c1e-c21d-4b9b-8ca0-453fdf9d661b" valueTypeId="f348d081-10d4-44e8-a198-fb7aae62e2e9"/>
+    <listType typeId="7db7b65b-96e7-4f05-a314-edda80ec6e03" valueTypeId="cd163629-7329-4065-9a66-98ca235e447f"/>
+    <managerType typeId="c315649b-7379-4495-bc25-b7b4b1462d7d" valueTypeId="54e83ea9-e899-49b2-9055-3e945293eea4"/>
+    <recordSetType typeId="f236fdd8-7778-466b-9e17-140a22a9a01a" valueTypeId="f6cffc63-6719-4df0-bd02-19da178db474"/>
+    <recordKeyType typeId="3b1ea39b-5060-4cf5-af0a-5f5c531fbc9e" valueTypeId="e161689b-a649-4d32-be5d-f77f166c1a2b"/>
+    <recordType typeId="ffd62230-d2d2-4a96-82b9-f050183c59c5" valueTypeId="a96f11c9-1596-478b-9e4d-0198c7ab9c09"/>
+  </producedTypes>
+  <name>ВзаиморасчетыПоВзносамВФонды</name>
+  <synonym>
+    <key>ru</key>
+    <value>Взаиморасчеты по Взносам в фонды</value>
+  </synonym>
+  <comment>(регл)</comment>
+  <defaultListForm>AccumulationRegister.ВзаиморасчетыПоВзносамВФонды.Form.ФормаСписка</defaultListForm>
+  <help>
+    <pages>
+      <lang>ru</lang>
+    </pages>
+  </help>
+  <enableTotalsSplitting>true</enableTotalsSplitting>
+  <resources uuid="a4934f08-70ba-4ce5-8527-4a6343ba9b88">
+    <name>База</name>
+    <synonym>
+      <key>ru</key>
+      <value>База</value>
+    </synonym>
+    <type>
+      <types>Number</types>
+      <numberQualifiers>
+        <precision>15</precision>
+        <scale>2</scale>
+      </numberQualifiers>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+  </resources>
+  <resources uuid="0fad2637-6b91-43d1-a6ea-9b68cc2360ca">
+    <name>БазаВзноса</name>
+    <synonym>
+      <key>ru</key>
+      <value>База взноса</value>
+    </synonym>
+    <type>
+      <types>Number</types>
+      <numberQualifiers>
+        <precision>15</precision>
+        <scale>2</scale>
+      </numberQualifiers>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+  </resources>
+  <resources uuid="55b7e6f7-1b24-41e0-922f-9c28e62ccd11">
+    <name>Результат</name>
+    <synonym>
+      <key>ru</key>
+      <value>Результат</value>
+    </synonym>
+    <type>
+      <types>Number</types>
+      <numberQualifiers>
+        <precision>18</precision>
+        <scale>6</scale>
+      </numberQualifiers>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+  </resources>
+  <resources uuid="37d9e640-789a-4745-9bd2-f14ac2bd7a99">
+    <name>НеподтвержденнаяСумма</name>
+    <synonym>
+      <key>ru</key>
+      <value>Неподтвержденная сумма</value>
+    </synonym>
+    <comment>Неподтвержденная сумма взноса</comment>
+    <type>
+      <types>Number</types>
+      <numberQualifiers>
+        <precision>15</precision>
+        <scale>2</scale>
+      </numberQualifiers>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+  </resources>
+  <attributes uuid="7beab9a0-b45c-49f4-b779-34cf7d08e08e">
+    <name>Сотрудник</name>
+    <synonym>
+      <key>ru</key>
+      <value>Сотрудник</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.СотрудникиОрганизаций</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+  </attributes>
+  <dimensions uuid="d0e537d9-109d-4e2d-8d29-b07f4c66d842">
+    <name>Организация</name>
+    <synonym>
+      <key>ru</key>
+      <value>Организация</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.Организации</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <denyIncompleteValues>true</denyIncompleteValues>
+    <fullTextSearch>Use</fullTextSearch>
+    <useInTotals>true</useInTotals>
+  </dimensions>
+  <dimensions uuid="6297c66c-c046-46c6-8c16-6d0c3fe55af7">
+    <name>ПериодВзаиморасчетов</name>
+    <synonym>
+      <key>ru</key>
+      <value>Период взаиморасчетов</value>
+    </synonym>
+    <comment>Месяц, которым сумма попадет в отчетность</comment>
+    <type>
+      <types>Date</types>
+      <dateQualifiers>
+        <dateFractions>Date</dateFractions>
+      </dateQualifiers>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <useInTotals>true</useInTotals>
+  </dimensions>
+  <dimensions uuid="9f27130b-b3a1-4333-9289-1a109558062c">
+    <name>СтатьяНалоговойДекларации</name>
+    <synonym>
+      <key>ru</key>
+      <value>Статья налоговой декларации</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.СтатьиНалоговыхДеклараций</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <denyIncompleteValues>true</denyIncompleteValues>
+    <fullTextSearch>Use</fullTextSearch>
+    <useInTotals>true</useInTotals>
+  </dimensions>
+  <dimensions uuid="eb7ab5bf-cb46-4abc-817f-6d86ed24532e">
+    <name>Налог</name>
+    <synonym>
+      <key>ru</key>
+      <value>Налог</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.Налоги</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <useInTotals>true</useInTotals>
+  </dimensions>
+  <forms uuid="b428ec6c-94cb-4a6d-a67e-828c0a744b35">
+    <name>ФормаСписка</name>
+    <synonym>
+      <key>ru</key>
+      <value>Форма списка</value>
+    </synonym>
+    <formType>Ordinary</formType>
+    <usePurposes>PersonalComputer</usePurposes>
+    <usePurposes>MobileDevice</usePurposes>
+  </forms>
+</mdclass:AccumulationRegister>

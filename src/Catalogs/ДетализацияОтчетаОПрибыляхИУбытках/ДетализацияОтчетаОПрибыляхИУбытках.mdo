@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:Catalog xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:core="http://g5.1c.ru/v8/dt/mcore" xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="e96fcadf-d544-469d-ac43-c52b3ca054cc">
+  <producedTypes>
+    <objectType typeId="83197529-1269-4b29-b49a-27cd75fdf3df" valueTypeId="59dd86bd-de8b-4aad-80a3-fc7063f80f2c"/>
+    <refType typeId="74beba49-4f7e-4ba7-9c26-82ab4c864b82" valueTypeId="c55f0a98-153e-4425-b43c-9f417c3b5274"/>
+    <selectionType typeId="bbceb150-67a3-4e71-93bc-3c793ce62bc7" valueTypeId="b9d58aa9-3d48-4b08-a617-6e244bea21ea"/>
+    <listType typeId="5309adc9-19de-4d9e-97b0-298cc697d3a6" valueTypeId="16b78c91-7321-461d-811e-f301b130dacd"/>
+    <managerType typeId="d97293d0-b952-4eed-9cbe-cb06b3b4824b" valueTypeId="1fcdddd3-a1ba-494b-93c7-1163cf985895"/>
+  </producedTypes>
+  <name>ДетализацияОтчетаОПрибыляхИУбытках</name>
+  <synonym>
+    <key>ru</key>
+    <value>Детализация отчета о прибылях и убытках</value>
+  </synonym>
+  <inputByString>Catalog.ДетализацияОтчетаОПрибыляхИУбытках.StandardAttribute.Description</inputByString>
+  <inputByString>Catalog.ДетализацияОтчетаОПрибыляхИУбытках.StandardAttribute.Code</inputByString>
+  <fullTextSearchOnInputByString>DontUse</fullTextSearchOnInputByString>
+  <createOnInput>Use</createOnInput>
+  <includeHelpInContents>true</includeHelpInContents>
+  <help>
+    <pages>
+      <lang>ru</lang>
+    </pages>
+  </help>
+  <fullTextSearch>Use</fullTextSearch>
+  <levelCount>2</levelCount>
+  <foldersOnTop>true</foldersOnTop>
+  <owners>Catalog.СтатьиОтчетаОПрибыляхИУбытках</owners>
+  <codeLength>9</codeLength>
+  <descriptionLength>100</descriptionLength>
+  <codeType>String</codeType>
+  <checkUnique>true</checkUnique>
+  <autonumbering>true</autonumbering>
+  <defaultPresentation>AsDescription</defaultPresentation>
+  <editType>InDialog</editType>
+  <choiceMode>BothWays</choiceMode>
+  <defaultObjectForm>Catalog.ДетализацияОтчетаОПрибыляхИУбытках.Form.ФормаЭлемента</defaultObjectForm>
+  <defaultListForm>Catalog.ДетализацияОтчетаОПрибыляхИУбытках.Form.ФормаСписка</defaultListForm>
+  <defaultChoiceForm>Catalog.ДетализацияОтчетаОПрибыляхИУбытках.Form.ФормаВыбора</defaultChoiceForm>
+  <attributes uuid="c57d49f5-f27b-4aac-8ecf-5c095468413b">
+    <name>НаименованиеДляОтчета</name>
+    <synonym>
+      <key>ru</key>
+      <value>Наименование для отчета</value>
+    </synonym>
+    <type>
+      <types>String</types>
+      <stringQualifiers/>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+  </attributes>
+  <tabularSections uuid="8f366566-6679-413c-a81e-f6c23b81a4d4">
+    <producedTypes>
+      <objectType typeId="c6c4e6f0-1850-4d72-8a3f-098f196b140b" valueTypeId="fd592531-d37a-46ac-8491-36040d618394"/>
+      <rowType typeId="de324cc5-e677-4a15-a83f-eecc5b0bc8db" valueTypeId="a246f05a-798a-4853-adc2-1899eb9e6b00"/>
+    </producedTypes>
+    <name>ОтборСтатейОборотов</name>
+    <synonym>
+      <key>ru</key>
+      <value>Отбор статей оборотов</value>
+    </synonym>
+    <attributes uuid="de8222ca-bd78-4cd3-b6bf-ed250b1a505c">
+      <name>СтатьяОборотов</name>
+      <synonym>
+        <key>ru</key>
+        <value>Статья оборотов</value>
+      </synonym>
+      <type>
+        <types>CatalogRef.СтатьиОборотовПоБюджетам</types>
+      </type>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <dataHistory>Use</dataHistory>
+      <fullTextSearch>Use</fullTextSearch>
+    </attributes>
+    <attributes uuid="271b7e4f-3792-455e-9d1a-a576dafbabc5">
+      <name>Знак</name>
+      <synonym>
+        <key>ru</key>
+        <value>Знак</value>
+      </synonym>
+      <type>
+        <types>Number</types>
+        <numberQualifiers>
+          <precision>2</precision>
+        </numberQualifiers>
+      </type>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <dataHistory>Use</dataHistory>
+      <fullTextSearch>Use</fullTextSearch>
+    </attributes>
+  </tabularSections>
+  <forms uuid="5e9a11a6-6585-42b3-abc7-47bb17ef62a8">
+    <name>ФормаЭлемента</name>
+    <synonym>
+      <key>ru</key>
+      <value>Форма элемента</value>
+    </synonym>
+    <formType>Ordinary</formType>
+    <usePurposes>PersonalComputer</usePurposes>
+    <usePurposes>MobileDevice</usePurposes>
+  </forms>
+  <forms uuid="ac2d73ec-c78a-445c-8536-a89a4bb32266">
+    <name>ФормаСписка</name>
+    <synonym>
+      <key>ru</key>
+      <value>Форма списка</value>
+    </synonym>
+    <formType>Ordinary</formType>
+    <usePurposes>PersonalComputer</usePurposes>
+    <usePurposes>MobileDevice</usePurposes>
+  </forms>
+  <forms uuid="c1ea002d-aa34-44cf-84a8-d015329c5998">
+    <name>ФормаВыбора</name>
+    <synonym>
+      <key>ru</key>
+      <value>Форма выбора</value>
+    </synonym>
+    <formType>Ordinary</formType>
+    <usePurposes>PersonalComputer</usePurposes>
+    <usePurposes>MobileDevice</usePurposes>
+  </forms>
+</mdclass:Catalog>

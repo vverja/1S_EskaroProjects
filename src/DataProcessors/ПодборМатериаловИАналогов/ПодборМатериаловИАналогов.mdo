@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:DataProcessor xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:core="http://g5.1c.ru/v8/dt/mcore" xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="45b72d4c-aa6d-48c0-a48c-3a168de6ff52">
+  <producedTypes>
+    <objectType typeId="b62f4024-2fc0-4f1a-a240-ef9bb4030000" valueTypeId="0f951165-60f1-4062-b666-a82374cae80b"/>
+    <managerType typeId="1b87bc53-0d77-460a-8582-d1b13f98001f" valueTypeId="0387e1d5-1247-4a97-9aaf-ab498fb1a403"/>
+  </producedTypes>
+  <name>ПодборМатериаловИАналогов</name>
+  <synonym>
+    <key>ru</key>
+    <value>Подбор материалов и аналогов</value>
+  </synonym>
+  <defaultForm>DataProcessor.ПодборМатериаловИАналогов.Form.ОсновнаяФорма</defaultForm>
+  <help>
+    <pages>
+      <lang>ru</lang>
+    </pages>
+  </help>
+  <attributes uuid="dfb5569e-f86a-4113-9eee-db12d8247182">
+    <name>ДокументОбъект</name>
+    <synonym>
+      <key>ru</key>
+      <value>Документ объект</value>
+    </synonym>
+    <type>
+      <types>DocumentObject.ОтчетПроизводстваЗаСмену</types>
+      <types>DocumentObject.АктОбОказанииПроизводственныхУслуг</types>
+      <types>DocumentObject.ПоступлениеТоваровИзПереработки</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </attributes>
+  <attributes uuid="a31386b4-250e-45cb-8a49-2a11c2ac430f">
+    <name>СкладОстатков</name>
+    <synonym>
+      <key>ru</key>
+      <value>Склад остатков</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.Склады</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </attributes>
+  <tabularSections uuid="3fcc74cb-9a4e-4230-8c62-7781523cfa71">
+    <producedTypes>
+      <objectType typeId="014ad246-45c0-48a1-b69b-d874784a4f26" valueTypeId="74203756-c15f-4609-990a-f5223844b8e2"/>
+      <rowType typeId="ca2f63d0-53be-4354-880c-b1f69f4635c1" valueTypeId="03146af2-62f5-4f92-b322-b35c57673464"/>
+    </producedTypes>
+    <name>ОстаткиМатериалов</name>
+    <synonym>
+      <key>ru</key>
+      <value>Остатки материалов</value>
+    </synonym>
+    <attributes uuid="97e17d67-2a64-45e3-9cd4-fff551dd2680">
+      <name>Номенклатура</name>
+      <synonym>
+        <key>ru</key>
+        <value>Номенклатура</value>
+      </synonym>
+      <type>
+        <types>CatalogRef.Номенклатура</types>
+      </type>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <fillValue xsi:type="core:UndefinedValue"/>
+    </attributes>
+    <attributes uuid="3ed64fa9-417e-4b3a-83d8-0a59d713720c">
+      <name>ХарактеристикаНоменклатуры</name>
+      <synonym>
+        <key>ru</key>
+        <value>Характеристика номенклатуры</value>
+      </synonym>
+      <type>
+        <types>CatalogRef.ХарактеристикиНоменклатуры</types>
+      </type>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <fillValue xsi:type="core:UndefinedValue"/>
+    </attributes>
+    <attributes uuid="dd39a33b-472e-49cc-868a-c5ad49e5f0b9">
+      <name>Коэффициент</name>
+      <synonym>
+        <key>ru</key>
+        <value>Коэффициент</value>
+      </synonym>
+      <type>
+        <types>Number</types>
+        <numberQualifiers>
+          <precision>10</precision>
+          <scale>3</scale>
+        </numberQualifiers>
+      </type>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <fillValue xsi:type="core:UndefinedValue"/>
+    </attributes>
+    <attributes uuid="56ebe034-743f-4386-b72d-f6f754f7716d">
+      <name>ЕдиницаИзмерения</name>
+      <synonym>
+        <key>ru</key>
+        <value>Единица измерения</value>
+      </synonym>
+      <type>
+        <types>CatalogRef.ЕдиницыИзмерения</types>
+      </type>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <fillValue xsi:type="core:UndefinedValue"/>
+    </attributes>
+    <attributes uuid="d7c0dbb1-d728-42c7-ad40-da0df69761c8">
+      <name>Остаток</name>
+      <synonym>
+        <key>ru</key>
+        <value>Остаток</value>
+      </synonym>
+      <type>
+        <types>Number</types>
+        <numberQualifiers>
+          <precision>15</precision>
+          <scale>3</scale>
+        </numberQualifiers>
+      </type>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <fillValue xsi:type="core:UndefinedValue"/>
+    </attributes>
+    <attributes uuid="72da5f0a-103d-41e9-a2b7-10d795dfa368">
+      <name>Распределено</name>
+      <synonym>
+        <key>ru</key>
+        <value>Распределено</value>
+      </synonym>
+      <type>
+        <types>Number</types>
+        <numberQualifiers>
+          <precision>15</precision>
+          <scale>3</scale>
+        </numberQualifiers>
+      </type>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <fillValue xsi:type="core:UndefinedValue"/>
+    </attributes>
+  </tabularSections>
+  <forms uuid="1841ec42-c6b7-45f3-82f4-a8f391e97d35">
+    <name>ОсновнаяФорма</name>
+    <synonym>
+      <key>ru</key>
+      <value>Основная форма</value>
+    </synonym>
+    <formType>Ordinary</formType>
+    <usePurposes>PersonalComputer</usePurposes>
+    <usePurposes>MobileDevice</usePurposes>
+  </forms>
+</mdclass:DataProcessor>

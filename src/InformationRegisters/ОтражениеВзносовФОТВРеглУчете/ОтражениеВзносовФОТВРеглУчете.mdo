@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:InformationRegister xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:core="http://g5.1c.ru/v8/dt/mcore" xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="5d4dd389-2f96-43c2-8a7c-2872c481a404">
+  <producedTypes>
+    <selectionType typeId="4e88fceb-8db5-4d09-b377-0257fd56c83e" valueTypeId="1bdd9f58-7d96-4b6c-b411-549cd4001750"/>
+    <listType typeId="b89a698d-8a3f-4e71-a1e6-8db03fac89fb" valueTypeId="ca8fa503-1e98-430c-bf92-ea9974561282"/>
+    <managerType typeId="95911866-050f-46e0-a31a-4fea1418e0e7" valueTypeId="1eedf885-cb01-484a-8ebf-20786554b718"/>
+    <recordSetType typeId="7d7c31b2-31ee-463f-903b-3a87e0078d56" valueTypeId="75a4d310-4775-4641-a379-4663f9c62979"/>
+    <recordKeyType typeId="6dd70af7-5910-496f-a57c-03262ade5db3" valueTypeId="83febec8-493e-48f9-898e-47fae5d9e07b"/>
+    <recordType typeId="ab2364ae-aa65-443f-a313-72bee60f1e33" valueTypeId="51a277c6-f935-4d6a-bfc0-1ccea7474571"/>
+    <recordManagerType typeId="bb07a8e2-2ec2-4f31-b0ac-2b2340f56e00" valueTypeId="88cd4f12-119e-4fbe-9cf5-6ebbecbfca2d"/>
+  </producedTypes>
+  <name>ОтражениеВзносовФОТВРеглУчете</name>
+  <synonym>
+    <key>ru</key>
+    <value>Отражение Взносов на ФОТ в регл. учете</value>
+  </synonym>
+  <comment>(регл)</comment>
+  <defaultListForm>InformationRegister.ОтражениеВзносовФОТВРеглУчете.Form.ФормаНабораЗаписей</defaultListForm>
+  <informationRegisterPeriodicity>Month</informationRegisterPeriodicity>
+  <mainFilterOnPeriod>true</mainFilterOnPeriod>
+  <help>
+    <pages>
+      <lang>ru</lang>
+    </pages>
+  </help>
+  <resources uuid="41f2dcc0-840d-4005-8ef2-e9e66afe9b65">
+    <name>СтатьяЗатрат</name>
+    <synonym>
+      <key>ru</key>
+      <value>Статья затрат</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.СтатьиЗатрат</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:UndefinedValue"/>
+  </resources>
+  <resources uuid="c6410826-1d61-4a8d-b77c-a2f5253d8986">
+    <name>УдалитьСтатьяВаловыхРасходов</name>
+    <synonym>
+      <key>ru</key>
+      <value>Статья в/р</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.СтатьиНалоговыхДеклараций</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:UndefinedValue"/>
+  </resources>
+  <dimensions uuid="a5a27a33-ce11-4fcf-a7f5-4915d0f417bc">
+    <name>Налог</name>
+    <synonym>
+      <key>ru</key>
+      <value>Налог</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.Налоги</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <denyIncompleteValues>true</denyIncompleteValues>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillFromFillingValue>true</fillFromFillingValue>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <master>true</master>
+    <mainFilter>true</mainFilter>
+  </dimensions>
+  <dimensions uuid="cd01eddc-0ab7-4263-aed1-d65efcfce929">
+    <name>УдалитьХарактерЗатрат</name>
+    <synonym>
+      <key>ru</key>
+      <value>Удалить характер затрат</value>
+    </synonym>
+    <comment>(Общ)</comment>
+    <type>
+      <types>EnumRef.ХарактерЗатрат</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillFromFillingValue>true</fillFromFillingValue>
+    <fillValue xsi:type="core:UndefinedValue"/>
+  </dimensions>
+  <dimensions uuid="2f05e99d-5cf5-4f01-9278-029183b30677">
+    <name>СчетЗатрат</name>
+    <synonym>
+      <key>ru</key>
+      <value>Счет затрат</value>
+    </synonym>
+    <synonym>
+      <key>uk</key>
+      <value>Рахунок витрат</value>
+    </synonym>
+    <type>
+      <types>ChartOfAccountsRef.Хозрасчетный</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillFromFillingValue>true</fillFromFillingValue>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <master>true</master>
+    <mainFilter>true</mainFilter>
+  </dimensions>
+  <forms uuid="709fae7c-a1b1-411f-9e3a-2216b351d1df">
+    <name>ФормаНабораЗаписей</name>
+    <synonym>
+      <key>ru</key>
+      <value>Форма набора записей</value>
+    </synonym>
+    <formType>Ordinary</formType>
+    <usePurposes>PersonalComputer</usePurposes>
+    <usePurposes>MobileDevice</usePurposes>
+  </forms>
+  <templates uuid="5ec7f76e-41e0-4003-ad5d-a1c193391731">
+    <name>НачальноеЗаполнение</name>
+    <synonym>
+      <key>ru</key>
+      <value>Начальное заполнение</value>
+    </synonym>
+  </templates>
+</mdclass:InformationRegister>

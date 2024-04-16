@@ -1,0 +1,200 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:AccumulationRegister xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:core="http://g5.1c.ru/v8/dt/mcore" xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="15f8e940-e490-4706-959c-8e48f2d0daa9">
+  <producedTypes>
+    <selectionType typeId="047c91aa-9803-4251-becf-87c3d9a2b2eb" valueTypeId="1f3c1c5b-2371-4bd0-ad8d-8062a633ee54"/>
+    <listType typeId="bf7ee8e7-e3c1-4d9f-818c-713c46179a0e" valueTypeId="76cbb8bc-10d7-4e3b-9d62-d962dd99b97b"/>
+    <managerType typeId="1c529fb2-9146-4fda-9fdf-502db13dce87" valueTypeId="2c14d39e-4ebd-4538-aa75-0064684d301d"/>
+    <recordSetType typeId="3ea1d72d-6a37-474e-8fb5-22f380ab7c93" valueTypeId="59dc4d0f-4bf8-4b51-ab4d-c372ff80bcd5"/>
+    <recordKeyType typeId="d507ecb9-8dce-44a6-b88c-3e87b1ea29d7" valueTypeId="aa36f9b5-98fe-4abe-810f-df098717a00b"/>
+    <recordType typeId="5ce4d6c5-2f92-45db-8cf4-219df91a5684" valueTypeId="d0994114-7dfb-4279-bd98-2423341be859"/>
+  </producedTypes>
+  <name>УчетЗатрат</name>
+  <synonym>
+    <key>ru</key>
+    <value>Учет затрат (управленческий учет)</value>
+  </synonym>
+  <defaultListForm>AccumulationRegister.УчетЗатрат.Form.ФормаСписка</defaultListForm>
+  <enableTotalsSplitting>true</enableTotalsSplitting>
+  <resources uuid="2c544ce2-71e1-46a2-b9f1-3a19fc9d2291">
+    <name>Количество</name>
+    <synonym>
+      <key>ru</key>
+      <value>Количество</value>
+    </synonym>
+    <type>
+      <types>Number</types>
+      <numberQualifiers>
+        <precision>15</precision>
+        <scale>3</scale>
+      </numberQualifiers>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+  </resources>
+  <resources uuid="d533a095-b900-4a41-b916-dc88849c11ab">
+    <name>Стоимость</name>
+    <synonym>
+      <key>ru</key>
+      <value>Стоимость</value>
+    </synonym>
+    <type>
+      <types>Number</types>
+      <numberQualifiers>
+        <precision>15</precision>
+        <scale>2</scale>
+      </numberQualifiers>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+  </resources>
+  <attributes uuid="e54f558b-da33-4da1-952a-ea18ec3d2d56">
+    <name>КодОперации</name>
+    <synonym>
+      <key>ru</key>
+      <value>Код операции</value>
+    </synonym>
+    <type>
+      <types>EnumRef.КодыОперацийПартииМатериаловВЭксплуатации</types>
+      <types>EnumRef.КодыОперацийЗатраты</types>
+      <types>EnumRef.КодыОперацийЗатратыНаВыпускПродукции</types>
+      <types>EnumRef.КодыОперацийВыпускПродукции</types>
+      <types>EnumRef.КодыОперацийНезавершенноеПроизводство</types>
+      <types>EnumRef.КодыОперацийБракВПроизводстве</types>
+      <types>EnumRef.КодыОперацийПартииТоваров</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <indexing>Index</indexing>
+    <fullTextSearch>Use</fullTextSearch>
+  </attributes>
+  <attributes uuid="782e267e-9043-4f74-a69a-8f3ff84eb47b">
+    <name>КорАналитикаВидаУчета</name>
+    <synonym>
+      <key>ru</key>
+      <value>Кор. аналитика вида учета</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.КлючиАналитикиВидаУчета</types>
+      <types>CatalogRef.КлючиАналитикиУчетаПрочихЗатрат</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+  </attributes>
+  <attributes uuid="bfd10c16-92fa-47b8-98c1-0c274642b63c">
+    <name>КорАналитикаУчетаЗатрат</name>
+    <synonym>
+      <key>ru</key>
+      <value>Кор. аналитика учета затрат</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.КлючиАналитикиУчетаЗатрат</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <indexing>Index</indexing>
+    <fullTextSearch>Use</fullTextSearch>
+  </attributes>
+  <attributes uuid="d14c7933-89a2-4d67-9ac4-eb729afa2804">
+    <name>КорАналитикаУчетаПартий</name>
+    <synonym>
+      <key>ru</key>
+      <value>Кор. аналитика учета партий</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.КлючиАналитикиУчетаПартий</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+  </attributes>
+  <attributes uuid="31469c74-1480-45eb-9118-9abb59109c2f">
+    <name>КорАналитикаРаспределенияЗатрат</name>
+    <synonym>
+      <key>ru</key>
+      <value>Кор. аналитика распределения затрат</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.КлючиАналитикиРаспределенияЗатрат</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <indexing>Index</indexing>
+    <fullTextSearch>Use</fullTextSearch>
+  </attributes>
+  <dimensions uuid="8a6776fd-2f47-439b-ab55-8c923c16731e">
+    <name>АналитикаВидаУчета</name>
+    <synonym>
+      <key>ru</key>
+      <value>Аналитика вида учета</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.КлючиАналитикиВидаУчета</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <useInTotals>true</useInTotals>
+  </dimensions>
+  <dimensions uuid="96ebc83f-40d6-4059-9812-a6c5fcd75141">
+    <name>АналитикаУчетаЗатрат</name>
+    <synonym>
+      <key>ru</key>
+      <value>Аналитика учета затрат</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.КлючиАналитикиУчетаЗатрат</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <useInTotals>true</useInTotals>
+  </dimensions>
+  <dimensions uuid="f274a271-eca1-447c-a0ea-4c48a007dbdf">
+    <name>АналитикаУчетаПартий</name>
+    <synonym>
+      <key>ru</key>
+      <value>Аналитика учета партий</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.КлючиАналитикиУчетаПартий</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <useInTotals>true</useInTotals>
+  </dimensions>
+  <dimensions uuid="06cedc85-8437-4708-b651-d3201aa6210c">
+    <name>АналитикаРаспределенияЗатрат</name>
+    <synonym>
+      <key>ru</key>
+      <value>Аналитика распределения затрат</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.КлючиАналитикиРаспределенияЗатрат</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <useInTotals>true</useInTotals>
+  </dimensions>
+  <forms uuid="31868cba-e005-41d9-a39e-4ea0ea029ea5">
+    <name>ФормаСписка</name>
+    <synonym>
+      <key>ru</key>
+      <value>Форма списка</value>
+    </synonym>
+    <formType>Ordinary</formType>
+    <usePurposes>PersonalComputer</usePurposes>
+    <usePurposes>MobileDevice</usePurposes>
+  </forms>
+  <templates uuid="95f5282c-3466-42bb-b602-7439588e46a8">
+    <name>ПараметрыФормированияДвижений</name>
+    <synonym>
+      <key>ru</key>
+      <value>Параметры формирования движений</value>
+    </synonym>
+  </templates>
+</mdclass:AccumulationRegister>

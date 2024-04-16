@@ -1,0 +1,1148 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<DataCompositionSchema xmlns="http://v8.1c.ru/8.1/data-composition-system/schema" xmlns:dcscom="http://v8.1c.ru/8.1/data-composition-system/common" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<dataSource>
+		<name>ИсточникДанных1</name>
+		<dataSourceType>Local</dataSourceType>
+	</dataSource>
+	<dataSet xsi:type="DataSetUnion">
+		<name>Объединение</name>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Заказ</dataPath>
+			<field>Заказ</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Заказ</v8:content>
+				</v8:item>
+			</title>
+			<role>
+				<dcscom:dimension>true</dcscom:dimension>
+			</role>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Номенклатура</dataPath>
+			<field>Номенклатура</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Номенклатура</v8:content>
+				</v8:item>
+			</title>
+			<role>
+				<dcscom:dimension>true</dcscom:dimension>
+			</role>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Подразделение</dataPath>
+			<field>Подразделение</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Подразделение</v8:content>
+				</v8:item>
+			</title>
+			<role>
+				<dcscom:dimension>true</dcscom:dimension>
+			</role>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Спецификация</dataPath>
+			<field>Спецификация</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Спецификация</v8:content>
+				</v8:item>
+			</title>
+			<role>
+				<dcscom:dimension>true</dcscom:dimension>
+			</role>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ХарактеристикаНоменклатуры</dataPath>
+			<field>ХарактеристикаНоменклатуры</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Характеристика номенклатуры</v8:content>
+				</v8:item>
+			</title>
+			<role>
+				<dcscom:dimension>true</dcscom:dimension>
+			</role>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ПериодДень</dataPath>
+			<field>ПериодДень</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Период день</v8:content>
+				</v8:item>
+			</title>
+			<role>
+				<dcscom:periodNumber>5</dcscom:periodNumber>
+				<dcscom:periodType>Additional</dcscom:periodType>
+			</role>
+			<appearance>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>Формат</dcscor:parameter>
+					<dcscor:value xsi:type="xs:string">ДЛФ=D</dcscor:value>
+				</dcscor:item>
+			</appearance>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ПериодПолугодие</dataPath>
+			<field>ПериодПолугодие</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Период полугодие</v8:content>
+				</v8:item>
+			</title>
+			<role>
+				<dcscom:periodNumber>10</dcscom:periodNumber>
+				<dcscom:periodType>Additional</dcscom:periodType>
+			</role>
+			<appearance>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>Формат</dcscor:parameter>
+					<dcscor:value xsi:type="xs:string">ДЛФ=D</dcscor:value>
+				</dcscor:item>
+			</appearance>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ПериодМесяц</dataPath>
+			<field>ПериодМесяц</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Период месяц</v8:content>
+				</v8:item>
+			</title>
+			<role>
+				<dcscom:periodNumber>8</dcscom:periodNumber>
+				<dcscom:periodType>Additional</dcscom:periodType>
+			</role>
+			<appearance>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>Формат</dcscor:parameter>
+					<dcscor:value xsi:type="xs:string">ДЛФ=D</dcscor:value>
+				</dcscor:item>
+			</appearance>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ПериодКвартал</dataPath>
+			<field>ПериодКвартал</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Период квартал</v8:content>
+				</v8:item>
+			</title>
+			<role>
+				<dcscom:periodNumber>9</dcscom:periodNumber>
+				<dcscom:periodType>Additional</dcscom:periodType>
+			</role>
+			<appearance>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>Формат</dcscor:parameter>
+					<dcscor:value xsi:type="xs:string">ДЛФ=D</dcscor:value>
+				</dcscor:item>
+			</appearance>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ПериодДекада</dataPath>
+			<field>ПериодДекада</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Период декада</v8:content>
+				</v8:item>
+			</title>
+			<role>
+				<dcscom:periodNumber>7</dcscom:periodNumber>
+				<dcscom:periodType>Additional</dcscom:periodType>
+			</role>
+			<appearance>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>Формат</dcscor:parameter>
+					<dcscor:value xsi:type="xs:string">ДЛФ=D</dcscor:value>
+				</dcscor:item>
+			</appearance>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ПериодНеделя</dataPath>
+			<field>ПериодНеделя</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Период неделя</v8:content>
+				</v8:item>
+			</title>
+			<role>
+				<dcscom:periodNumber>6</dcscom:periodNumber>
+				<dcscom:periodType>Additional</dcscom:periodType>
+			</role>
+			<appearance>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>Формат</dcscor:parameter>
+					<dcscor:value xsi:type="xs:string">ДЛФ=D</dcscor:value>
+				</dcscor:item>
+			</appearance>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ПериодГод</dataPath>
+			<field>ПериодГод</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Период год</v8:content>
+				</v8:item>
+			</title>
+			<role>
+				<dcscom:periodNumber>11</dcscom:periodNumber>
+				<dcscom:periodType>Additional</dcscom:periodType>
+			</role>
+			<appearance>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>Формат</dcscor:parameter>
+					<dcscor:value xsi:type="xs:string">ДЛФ=D</dcscor:value>
+				</dcscor:item>
+			</appearance>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Регистратор</dataPath>
+			<field>Регистратор</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Документ</v8:content>
+				</v8:item>
+			</title>
+			<role>
+				<dcscom:periodNumber>1</dcscom:periodNumber>
+				<dcscom:periodType>Main</dcscom:periodType>
+				<dcscom:ignoreNullValues>true</dcscom:ignoreNullValues>
+			</role>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ВремяВыпуска</dataPath>
+			<field>ВремяВыпуска</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Время выпуска</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>НомерПартии</dataPath>
+			<field>НомерПартии</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Номер партии</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Ответственный</dataPath>
+			<field>Ответственный</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Ответственный</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>СерияНоменклатуры</dataPath>
+			<field>СерияНоменклатуры</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Серия номенклатуры</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Смена</dataPath>
+			<field>Смена</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Смена</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>КоличествоЗапланировано</dataPath>
+			<field>КоличествоЗапланировано</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>План</v8:content>
+				</v8:item>
+			</title>
+			<appearance>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>Формат</dcscor:parameter>
+					<dcscor:value xsi:type="xs:string">ЧДЦ=3</dcscor:value>
+				</dcscor:item>
+			</appearance>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>КоличествоВыпущено</dataPath>
+			<field>КоличествоВыпущено</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Выпуск</v8:content>
+				</v8:item>
+			</title>
+			<appearance>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>Формат</dcscor:parameter>
+					<dcscor:value xsi:type="xs:string">ЧДЦ=3</dcscor:value>
+				</dcscor:item>
+			</appearance>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ВидДанных</dataPath>
+			<field>ВидДанных</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Вид данных</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Период</dataPath>
+			<field>Период</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Период</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ВидВоспроизводства</dataPath>
+			<field>ВидВоспроизводства</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Вид воспроизводства</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Источник</dataPath>
+			<field>Источник</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Источник</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>РабочийЦентр</dataPath>
+			<field>РабочийЦентр</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Рабочий центр</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ТочкаМаршрута</dataPath>
+			<field>ТочкаМаршрута</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Точка маршрута</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<item xsi:type="DataSetQuery">
+			<name>Планы</name>
+			<field xsi:type="DataSetFieldField">
+				<dataPath>Заказ</dataPath>
+				<field>Заказ</field>
+				<role>
+					<dcscom:dimension>true</dcscom:dimension>
+				</role>
+			</field>
+			<field xsi:type="DataSetFieldField">
+				<dataPath>Номенклатура</dataPath>
+				<field>Номенклатура</field>
+				<role>
+					<dcscom:dimension>true</dcscom:dimension>
+				</role>
+			</field>
+			<field xsi:type="DataSetFieldField">
+				<dataPath>Подразделение</dataPath>
+				<field>Подразделение</field>
+				<role>
+					<dcscom:dimension>true</dcscom:dimension>
+				</role>
+			</field>
+			<field xsi:type="DataSetFieldField">
+				<dataPath>Спецификация</dataPath>
+				<field>Спецификация</field>
+				<role>
+					<dcscom:dimension>true</dcscom:dimension>
+				</role>
+			</field>
+			<field xsi:type="DataSetFieldField">
+				<dataPath>ХарактеристикаНоменклатуры</dataPath>
+				<field>ХарактеристикаНоменклатуры</field>
+				<title xsi:type="v8:LocalStringType">
+					<v8:item>
+						<v8:lang>ru</v8:lang>
+						<v8:content>Характеристика номенклатуры</v8:content>
+					</v8:item>
+				</title>
+				<role>
+					<dcscom:dimension>true</dcscom:dimension>
+				</role>
+			</field>
+			<field xsi:type="DataSetFieldField">
+				<dataPath>ПериодДень</dataPath>
+				<field>ПериодДень</field>
+				<title xsi:type="v8:LocalStringType">
+					<v8:item>
+						<v8:lang>ru</v8:lang>
+						<v8:content>Период день</v8:content>
+					</v8:item>
+				</title>
+				<role>
+					<dcscom:periodNumber>2</dcscom:periodNumber>
+					<dcscom:periodType>Additional</dcscom:periodType>
+				</role>
+			</field>
+			<field xsi:type="DataSetFieldField">
+				<dataPath>ПериодПолугодие</dataPath>
+				<field>ПериодПолугодие</field>
+				<title xsi:type="v8:LocalStringType">
+					<v8:item>
+						<v8:lang>ru</v8:lang>
+						<v8:content>Период полугодие</v8:content>
+					</v8:item>
+				</title>
+				<role>
+					<dcscom:periodNumber>7</dcscom:periodNumber>
+					<dcscom:periodType>Additional</dcscom:periodType>
+				</role>
+			</field>
+			<field xsi:type="DataSetFieldField">
+				<dataPath>ПериодМесяц</dataPath>
+				<field>ПериодМесяц</field>
+				<title xsi:type="v8:LocalStringType">
+					<v8:item>
+						<v8:lang>ru</v8:lang>
+						<v8:content>Период месяц</v8:content>
+					</v8:item>
+				</title>
+				<role>
+					<dcscom:periodNumber>5</dcscom:periodNumber>
+					<dcscom:periodType>Additional</dcscom:periodType>
+				</role>
+			</field>
+			<field xsi:type="DataSetFieldField">
+				<dataPath>ПериодКвартал</dataPath>
+				<field>ПериодКвартал</field>
+				<title xsi:type="v8:LocalStringType">
+					<v8:item>
+						<v8:lang>ru</v8:lang>
+						<v8:content>Период квартал</v8:content>
+					</v8:item>
+				</title>
+				<role>
+					<dcscom:periodNumber>6</dcscom:periodNumber>
+					<dcscom:periodType>Additional</dcscom:periodType>
+				</role>
+			</field>
+			<field xsi:type="DataSetFieldField">
+				<dataPath>ПериодДекада</dataPath>
+				<field>ПериодДекада</field>
+				<title xsi:type="v8:LocalStringType">
+					<v8:item>
+						<v8:lang>ru</v8:lang>
+						<v8:content>Период декада</v8:content>
+					</v8:item>
+				</title>
+				<role>
+					<dcscom:periodNumber>4</dcscom:periodNumber>
+					<dcscom:periodType>Additional</dcscom:periodType>
+				</role>
+			</field>
+			<field xsi:type="DataSetFieldField">
+				<dataPath>ПериодНеделя</dataPath>
+				<field>ПериодНеделя</field>
+				<title xsi:type="v8:LocalStringType">
+					<v8:item>
+						<v8:lang>ru</v8:lang>
+						<v8:content>Период неделя</v8:content>
+					</v8:item>
+				</title>
+				<role>
+					<dcscom:periodNumber>3</dcscom:periodNumber>
+					<dcscom:periodType>Additional</dcscom:periodType>
+				</role>
+			</field>
+			<field xsi:type="DataSetFieldField">
+				<dataPath>ПериодГод</dataPath>
+				<field>ПериодГод</field>
+				<title xsi:type="v8:LocalStringType">
+					<v8:item>
+						<v8:lang>ru</v8:lang>
+						<v8:content>Период год</v8:content>
+					</v8:item>
+				</title>
+				<role>
+					<dcscom:periodNumber>8</dcscom:periodNumber>
+					<dcscom:periodType>Additional</dcscom:periodType>
+				</role>
+			</field>
+			<field xsi:type="DataSetFieldField">
+				<dataPath>Регистратор</dataPath>
+				<field>Регистратор</field>
+				<role>
+					<dcscom:periodNumber>1</dcscom:periodNumber>
+					<dcscom:periodType>Main</dcscom:periodType>
+				</role>
+			</field>
+			<field xsi:type="DataSetFieldField">
+				<dataPath>КоличествоЗапланировано</dataPath>
+				<field>КоличествоЗапланировано</field>
+				<title xsi:type="v8:LocalStringType">
+					<v8:item>
+						<v8:lang>ru</v8:lang>
+						<v8:content>Количество запланировано</v8:content>
+					</v8:item>
+				</title>
+			</field>
+			<field xsi:type="DataSetFieldField">
+				<dataPath>ВидДанных</dataPath>
+				<field>ВидДанных</field>
+				<title xsi:type="v8:LocalStringType">
+					<v8:item>
+						<v8:lang>ru</v8:lang>
+						<v8:content>Вид данных</v8:content>
+					</v8:item>
+				</title>
+			</field>
+			<field xsi:type="DataSetFieldField">
+				<dataPath>КоличествоВыпущено</dataPath>
+				<field>КоличествоВыпущено</field>
+				<title xsi:type="v8:LocalStringType">
+					<v8:item>
+						<v8:lang>ru</v8:lang>
+						<v8:content>Количество выпущено</v8:content>
+					</v8:item>
+				</title>
+			</field>
+			<field xsi:type="DataSetFieldField">
+				<dataPath>ВидВоспроизводства</dataPath>
+				<field>ВидВоспроизводства</field>
+				<title xsi:type="v8:LocalStringType">
+					<v8:item>
+						<v8:lang>ru</v8:lang>
+						<v8:content>Вид воспроизводства</v8:content>
+					</v8:item>
+				</title>
+			</field>
+			<field xsi:type="DataSetFieldField">
+				<dataPath>Источник</dataPath>
+				<field>Источник</field>
+			</field>
+			<field xsi:type="DataSetFieldField">
+				<dataPath>РабочийЦентр</dataPath>
+				<field>РабочийЦентр</field>
+				<title xsi:type="v8:LocalStringType">
+					<v8:item>
+						<v8:lang>ru</v8:lang>
+						<v8:content>Рабочий центр</v8:content>
+					</v8:item>
+				</title>
+			</field>
+			<field xsi:type="DataSetFieldField">
+				<dataPath>ТочкаМаршрута</dataPath>
+				<field>ТочкаМаршрута</field>
+				<title xsi:type="v8:LocalStringType">
+					<v8:item>
+						<v8:lang>ru</v8:lang>
+						<v8:content>Точка маршрута</v8:content>
+					</v8:item>
+				</title>
+			</field>
+			<dataSource>ИсточникДанных1</dataSource>
+			<query>ВЫБРАТЬ  РАЗРЕШЕННЫЕ
+	"План" КАК ВидДанных,
+	ПроизводственнаяПрограммаОбороты.Номенклатура,
+	ПроизводственнаяПрограммаОбороты.КоличествоОборот КАК КоличествоЗапланировано,
+	0 КАК КоличествоВыпущено,
+	ПроизводственнаяПрограммаОбороты.ПериодГод,
+	ПроизводственнаяПрограммаОбороты.ПериодПолугодие,
+	ПроизводственнаяПрограммаОбороты.ПериодКвартал,
+	ПроизводственнаяПрограммаОбороты.ПериодМесяц,
+	ПроизводственнаяПрограммаОбороты.ПериодДекада,
+	ПроизводственнаяПрограммаОбороты.ПериодНеделя,
+	ПроизводственнаяПрограммаОбороты.ПериодДень,
+	ПроизводственнаяПрограммаОбороты.Подразделение,
+	ПроизводственнаяПрограммаОбороты.ХарактеристикаНоменклатуры,
+	ПроизводственнаяПрограммаОбороты.Заказ,
+	ПроизводственнаяПрограммаОбороты.Спецификация,
+	ПроизводственнаяПрограммаОбороты.Регистратор
+ИЗ
+	РегистрНакопления.ПроизводственнаяПрограмма.Обороты(, , Авто, ) КАК ПроизводственнаяПрограммаОбороты
+{ХАРАКТЕРИСТИКИ
+	ТИП(Справочник.ХарактеристикиНоменклатуры)
+	СПИСОК (ВЫБРАТЬ 
+						СвойстваОбъектов.Ссылка,
+						СвойстваОбъектов.Наименование,
+						СвойстваОбъектов.ТипЗначения
+					ИЗ 
+						ПланВидовХарактеристик.СвойстваОбъектов КАК СвойстваОбъектов
+					ГДЕ НазначениеСвойства = Значение(ПланВидовХарактеристик.НазначенияСвойствКатегорийОбъектов.Справочник_ХарактеристикиНоменклатуры))
+	ИДЕНТИФИКАТОР Ссылка
+	ИМЯ Наименование
+	ТИПЗНАЧЕНИЯ ТипЗначения
+	ЗНАЧЕНИЯ РегистрСведений.ЗначенияСвойствОбъектов
+	ОБЪЕКТ Объект
+	ХАРАКТЕРИСТИКА Свойство
+	ЗНАЧЕНИЕ Значение }
+{ХАРАКТЕРИСТИКИ
+	ТИП(Справочник.ХарактеристикиНоменклатуры)
+	СПИСОК (ВЫБРАТЬ
+						КатегорииОбъектов.Ссылка,
+						КатегорииОбъектов.Наименование
+					ИЗ
+						Справочник.КатегорииОбъектов КАК КатегорииОбъектов
+					ГДЕ
+						КатегорииОбъектов.НазначениеКатегории = ЗНАЧЕНИЕ(ПланВидовХарактеристик.НазначенияСвойствКатегорийОбъектов.Справочник_ХарактеристикиНоменклатуры))
+	ИДЕНТИФИКАТОР Ссылка
+	ИМЯ Наименование
+	ЗНАЧЕНИЯ РегистрСведений.КатегорииОбъектов
+	ОБЪЕКТ Объект
+	ХАРАКТЕРИСТИКА Категория }
+{ХАРАКТЕРИСТИКИ
+	ТИП(Справочник.Номенклатура)
+	СПИСОК (ВЫБРАТЬ 
+						СвойстваОбъектов.Ссылка,
+						СвойстваОбъектов.Наименование,
+						СвойстваОбъектов.ТипЗначения
+					ИЗ 
+						ПланВидовХарактеристик.СвойстваОбъектов КАК СвойстваОбъектов
+					ГДЕ НазначениеСвойства = Значение(ПланВидовХарактеристик.НазначенияСвойствКатегорийОбъектов.Справочник_Номенклатура))
+	ИДЕНТИФИКАТОР Ссылка
+	ИМЯ Наименование
+	ТИПЗНАЧЕНИЯ ТипЗначения
+	ЗНАЧЕНИЯ РегистрСведений.ЗначенияСвойствОбъектов
+	ОБЪЕКТ Объект
+	ХАРАКТЕРИСТИКА Свойство
+	ЗНАЧЕНИЕ Значение }
+{ХАРАКТЕРИСТИКИ
+	ТИП(Справочник.Номенклатура)
+	СПИСОК (ВЫБРАТЬ
+						КатегорииОбъектов.Ссылка,
+						КатегорииОбъектов.Наименование
+					ИЗ
+						Справочник.КатегорииОбъектов КАК КатегорииОбъектов
+					ГДЕ
+						КатегорииОбъектов.НазначениеКатегории = ЗНАЧЕНИЕ(ПланВидовХарактеристик.НазначенияСвойствКатегорийОбъектов.Справочник_Номенклатура))
+	ИДЕНТИФИКАТОР Ссылка
+	ИМЯ Наименование
+	ЗНАЧЕНИЯ РегистрСведений.КатегорииОбъектов
+	ОБЪЕКТ Объект
+	ХАРАКТЕРИСТИКА Категория }
+{ХАРАКТЕРИСТИКИ
+	ТИП(Справочник.Подразделения)
+	СПИСОК (ВЫБРАТЬ 
+						СвойстваОбъектов.Ссылка,
+						СвойстваОбъектов.Наименование,
+						СвойстваОбъектов.ТипЗначения
+					ИЗ 
+						ПланВидовХарактеристик.СвойстваОбъектов КАК СвойстваОбъектов
+					ГДЕ НазначениеСвойства = Значение(ПланВидовХарактеристик.НазначенияСвойствКатегорийОбъектов.Справочник_Подразделения))
+	ИДЕНТИФИКАТОР Ссылка
+	ИМЯ Наименование
+	ТИПЗНАЧЕНИЯ ТипЗначения
+	ЗНАЧЕНИЯ РегистрСведений.ЗначенияСвойствОбъектов
+	ОБЪЕКТ Объект
+	ХАРАКТЕРИСТИКА Свойство
+	ЗНАЧЕНИЕ Значение }
+{ХАРАКТЕРИСТИКИ
+	ТИП(Справочник.Подразделения)
+	СПИСОК (ВЫБРАТЬ
+						КатегорииОбъектов.Ссылка,
+						КатегорииОбъектов.Наименование
+					ИЗ
+						Справочник.КатегорииОбъектов КАК КатегорииОбъектов
+					ГДЕ
+						КатегорииОбъектов.НазначениеКатегории = ЗНАЧЕНИЕ(ПланВидовХарактеристик.НазначенияСвойствКатегорийОбъектов.Справочник_Подразделения))
+	ИДЕНТИФИКАТОР Ссылка
+	ИМЯ Наименование
+	ЗНАЧЕНИЯ РегистрСведений.КатегорииОбъектов
+	ОБЪЕКТ Объект
+	ХАРАКТЕРИСТИКА Категория }
+	</query>
+		</item>
+		<item xsi:type="DataSetQuery">
+			<name>Выпуск</name>
+			<field xsi:type="DataSetFieldField">
+				<dataPath>ВремяВыпуска</dataPath>
+				<field>ВремяВыпуска</field>
+				<title xsi:type="v8:LocalStringType">
+					<v8:item>
+						<v8:lang>ru</v8:lang>
+						<v8:content>Время выпуска</v8:content>
+					</v8:item>
+				</title>
+			</field>
+			<field xsi:type="DataSetFieldField">
+				<dataPath>Номенклатура</dataPath>
+				<field>Номенклатура</field>
+			</field>
+			<field xsi:type="DataSetFieldField">
+				<dataPath>НомерПартии</dataPath>
+				<field>НомерПартии</field>
+				<title xsi:type="v8:LocalStringType">
+					<v8:item>
+						<v8:lang>ru</v8:lang>
+						<v8:content>Номер партии</v8:content>
+					</v8:item>
+				</title>
+			</field>
+			<field xsi:type="DataSetFieldField">
+				<dataPath>Ответственный</dataPath>
+				<field>Ответственный</field>
+			</field>
+			<field xsi:type="DataSetFieldField">
+				<dataPath>Подразделение</dataPath>
+				<field>Подразделение</field>
+			</field>
+			<field xsi:type="DataSetFieldField">
+				<dataPath>СерияНоменклатуры</dataPath>
+				<field>СерияНоменклатуры</field>
+				<title xsi:type="v8:LocalStringType">
+					<v8:item>
+						<v8:lang>ru</v8:lang>
+						<v8:content>Серия номенклатуры</v8:content>
+					</v8:item>
+				</title>
+			</field>
+			<field xsi:type="DataSetFieldField">
+				<dataPath>Смена</dataPath>
+				<field>Смена</field>
+			</field>
+			<field xsi:type="DataSetFieldField">
+				<dataPath>Спецификация</dataPath>
+				<field>Спецификация</field>
+			</field>
+			<field xsi:type="DataSetFieldField">
+				<dataPath>ХарактеристикаНоменклатуры</dataPath>
+				<field>ХарактеристикаНоменклатуры</field>
+				<title xsi:type="v8:LocalStringType">
+					<v8:item>
+						<v8:lang>ru</v8:lang>
+						<v8:content>Характеристика номенклатуры</v8:content>
+					</v8:item>
+				</title>
+			</field>
+			<field xsi:type="DataSetFieldField">
+				<dataPath>КоличествоВыпущено</dataPath>
+				<field>КоличествоВыпущено</field>
+				<title xsi:type="v8:LocalStringType">
+					<v8:item>
+						<v8:lang>ru</v8:lang>
+						<v8:content>Количество выпущено</v8:content>
+					</v8:item>
+				</title>
+			</field>
+			<field xsi:type="DataSetFieldField">
+				<dataPath>ВидДанных</dataPath>
+				<field>ВидДанных</field>
+				<title xsi:type="v8:LocalStringType">
+					<v8:item>
+						<v8:lang>ru</v8:lang>
+						<v8:content>Вид данных</v8:content>
+					</v8:item>
+				</title>
+			</field>
+			<field xsi:type="DataSetFieldField">
+				<dataPath>ПериодГод</dataPath>
+				<field>ПериодГод</field>
+				<title xsi:type="v8:LocalStringType">
+					<v8:item>
+						<v8:lang>ru</v8:lang>
+						<v8:content>Период год</v8:content>
+					</v8:item>
+				</title>
+			</field>
+			<field xsi:type="DataSetFieldField">
+				<dataPath>ПериодДекада</dataPath>
+				<field>ПериодДекада</field>
+				<title xsi:type="v8:LocalStringType">
+					<v8:item>
+						<v8:lang>ru</v8:lang>
+						<v8:content>Период декада</v8:content>
+					</v8:item>
+				</title>
+			</field>
+			<field xsi:type="DataSetFieldField">
+				<dataPath>ПериодДень</dataPath>
+				<field>ПериодДень</field>
+				<title xsi:type="v8:LocalStringType">
+					<v8:item>
+						<v8:lang>ru</v8:lang>
+						<v8:content>Период день</v8:content>
+					</v8:item>
+				</title>
+			</field>
+			<field xsi:type="DataSetFieldField">
+				<dataPath>ПериодКвартал</dataPath>
+				<field>ПериодКвартал</field>
+				<title xsi:type="v8:LocalStringType">
+					<v8:item>
+						<v8:lang>ru</v8:lang>
+						<v8:content>Период квартал</v8:content>
+					</v8:item>
+				</title>
+			</field>
+			<field xsi:type="DataSetFieldField">
+				<dataPath>ПериодМесяц</dataPath>
+				<field>ПериодМесяц</field>
+				<title xsi:type="v8:LocalStringType">
+					<v8:item>
+						<v8:lang>ru</v8:lang>
+						<v8:content>Период месяц</v8:content>
+					</v8:item>
+				</title>
+			</field>
+			<field xsi:type="DataSetFieldField">
+				<dataPath>ПериодНеделя</dataPath>
+				<field>ПериодНеделя</field>
+				<title xsi:type="v8:LocalStringType">
+					<v8:item>
+						<v8:lang>ru</v8:lang>
+						<v8:content>Период неделя</v8:content>
+					</v8:item>
+				</title>
+			</field>
+			<field xsi:type="DataSetFieldField">
+				<dataPath>ПериодПолугодие</dataPath>
+				<field>ПериодПолугодие</field>
+				<title xsi:type="v8:LocalStringType">
+					<v8:item>
+						<v8:lang>ru</v8:lang>
+						<v8:content>Период полугодие</v8:content>
+					</v8:item>
+				</title>
+			</field>
+			<field xsi:type="DataSetFieldField">
+				<dataPath>Период</dataPath>
+				<field>Период</field>
+			</field>
+			<field xsi:type="DataSetFieldField">
+				<dataPath>Регистратор</dataPath>
+				<field>Регистратор</field>
+			</field>
+			<field xsi:type="DataSetFieldField">
+				<dataPath>КоличествоЗапланировано</dataPath>
+				<field>КоличествоЗапланировано</field>
+				<title xsi:type="v8:LocalStringType">
+					<v8:item>
+						<v8:lang>ru</v8:lang>
+						<v8:content>Количество запланировано</v8:content>
+					</v8:item>
+				</title>
+			</field>
+			<dataSource>ИсточникДанных1</dataSource>
+			<query>ВЫБРАТЬ  РАЗРЕШЕННЫЕ
+	"Выпуск" КАК ВидДанных,
+	ОтчетМастераСменыВыпуск.Номенклатура,
+	ОтчетМастераСменыВыпуск.Количество * ОтчетМастераСменыВыпуск.Коэффициент / ОтчетМастераСменыВыпуск.Номенклатура.ЕдиницаХраненияОстатков.Коэффициент КАК КоличествоВыпущено,
+	0 КАК КоличествоЗапланировано,
+	ОтчетМастераСменыВыпуск.ХарактеристикаНоменклатуры,
+	ОтчетМастераСменыВыпуск.СерияНоменклатуры,
+	ОтчетМастераСменыВыпуск.НомерПартии,
+	ОтчетМастераСменыВыпуск.ВремяВыпуска,
+	ОтчетМастераСменыВыпуск.Спецификация,
+	НАЧАЛОПЕРИОДА(ОтчетМастераСменыВыпуск.Ссылка.ГраницаСмены, ДЕНЬ) КАК ПериодДень,
+	ОтчетМастераСменыВыпуск.Ссылка.Смена,
+	ОтчетМастераСменыВыпуск.Ссылка.Ответственный,
+	ОтчетМастераСменыВыпуск.Ссылка.Подразделение,
+	ОтчетМастераСменыВыпуск.Ссылка КАК Регистратор,
+	ОтчетМастераСменыВыпуск.Ссылка.ГраницаСмены КАК Период,
+	НАЧАЛОПЕРИОДА(ОтчетМастераСменыВыпуск.Ссылка.ГраницаСмены, НЕДЕЛЯ) КАК ПериодНеделя,
+	НАЧАЛОПЕРИОДА(ОтчетМастераСменыВыпуск.Ссылка.ГраницаСмены, ДЕКАДА) КАК ПериодДекада,
+	НАЧАЛОПЕРИОДА(ОтчетМастераСменыВыпуск.Ссылка.ГраницаСмены, МЕСЯЦ) КАК ПериодМесяц,
+	НАЧАЛОПЕРИОДА(ОтчетМастераСменыВыпуск.Ссылка.ГраницаСмены, КВАРТАЛ) КАК ПериодКвартал,
+	НАЧАЛОПЕРИОДА(ОтчетМастераСменыВыпуск.Ссылка.ГраницаСмены, ПОЛУГОДИЕ) КАК ПериодПолугодие,
+	НАЧАЛОПЕРИОДА(ОтчетМастераСменыВыпуск.Ссылка.ГраницаСмены, ГОД) КАК ПериодГод
+ИЗ
+	Документ.ОтчетМастераСмены.Выпуск КАК ОтчетМастераСменыВыпуск
+ГДЕ
+	ОтчетМастераСменыВыпуск.Ссылка.Проведен
+	И НАЧАЛОПЕРИОДА(ОтчетМастераСменыВыпуск.Ссылка.ГраницаСмены, ДЕНЬ) &gt;= &amp;НачалоПериода
+	И (&amp;КонецПериода = ДАТАВРЕМЯ(1, 1, 1)
+			ИЛИ НАЧАЛОПЕРИОДА(ОтчетМастераСменыВыпуск.Ссылка.ГраницаСмены, ДЕНЬ) &lt;= &amp;КонецПериода)
+{ХАРАКТЕРИСТИКИ
+	ТИП(Справочник.ХарактеристикиНоменклатуры)
+	СПИСОК (ВЫБРАТЬ 
+						СвойстваОбъектов.Ссылка,
+						СвойстваОбъектов.Наименование,
+						СвойстваОбъектов.ТипЗначения
+					ИЗ 
+						ПланВидовХарактеристик.СвойстваОбъектов КАК СвойстваОбъектов
+					ГДЕ НазначениеСвойства = Значение(ПланВидовХарактеристик.НазначенияСвойствКатегорийОбъектов.Справочник_ХарактеристикиНоменклатуры))
+	ИДЕНТИФИКАТОР Ссылка
+	ИМЯ Наименование
+	ТИПЗНАЧЕНИЯ ТипЗначения
+	ЗНАЧЕНИЯ РегистрСведений.ЗначенияСвойствОбъектов
+	ОБЪЕКТ Объект
+	ХАРАКТЕРИСТИКА Свойство
+	ЗНАЧЕНИЕ Значение }
+{ХАРАКТЕРИСТИКИ
+	ТИП(Справочник.ХарактеристикиНоменклатуры)
+	СПИСОК (ВЫБРАТЬ
+						КатегорииОбъектов.Ссылка,
+						КатегорииОбъектов.Наименование
+					ИЗ
+						Справочник.КатегорииОбъектов КАК КатегорииОбъектов
+					ГДЕ
+						КатегорииОбъектов.НазначениеКатегории = ЗНАЧЕНИЕ(ПланВидовХарактеристик.НазначенияСвойствКатегорийОбъектов.Справочник_ХарактеристикиНоменклатуры))
+	ИДЕНТИФИКАТОР Ссылка
+	ИМЯ Наименование
+	ЗНАЧЕНИЯ РегистрСведений.КатегорииОбъектов
+	ОБЪЕКТ Объект
+	ХАРАКТЕРИСТИКА Категория }
+{ХАРАКТЕРИСТИКИ
+	ТИП(Справочник.Номенклатура)
+	СПИСОК (ВЫБРАТЬ 
+						СвойстваОбъектов.Ссылка,
+						СвойстваОбъектов.Наименование,
+						СвойстваОбъектов.ТипЗначения
+					ИЗ 
+						ПланВидовХарактеристик.СвойстваОбъектов КАК СвойстваОбъектов
+					ГДЕ НазначениеСвойства = Значение(ПланВидовХарактеристик.НазначенияСвойствКатегорийОбъектов.Справочник_Номенклатура))
+	ИДЕНТИФИКАТОР Ссылка
+	ИМЯ Наименование
+	ТИПЗНАЧЕНИЯ ТипЗначения
+	ЗНАЧЕНИЯ РегистрСведений.ЗначенияСвойствОбъектов
+	ОБЪЕКТ Объект
+	ХАРАКТЕРИСТИКА Свойство
+	ЗНАЧЕНИЕ Значение }
+{ХАРАКТЕРИСТИКИ
+	ТИП(Справочник.Номенклатура)
+	СПИСОК (ВЫБРАТЬ
+						КатегорииОбъектов.Ссылка,
+						КатегорииОбъектов.Наименование
+					ИЗ
+						Справочник.КатегорииОбъектов КАК КатегорииОбъектов
+					ГДЕ
+						КатегорииОбъектов.НазначениеКатегории = ЗНАЧЕНИЕ(ПланВидовХарактеристик.НазначенияСвойствКатегорийОбъектов.Справочник_Номенклатура))
+	ИДЕНТИФИКАТОР Ссылка
+	ИМЯ Наименование
+	ЗНАЧЕНИЯ РегистрСведений.КатегорииОбъектов
+	ОБЪЕКТ Объект
+	ХАРАКТЕРИСТИКА Категория }
+{ХАРАКТЕРИСТИКИ
+	ТИП(Справочник.Подразделения)
+	СПИСОК (ВЫБРАТЬ 
+						СвойстваОбъектов.Ссылка,
+						СвойстваОбъектов.Наименование,
+						СвойстваОбъектов.ТипЗначения
+					ИЗ 
+						ПланВидовХарактеристик.СвойстваОбъектов КАК СвойстваОбъектов
+					ГДЕ НазначениеСвойства = Значение(ПланВидовХарактеристик.НазначенияСвойствКатегорийОбъектов.Справочник_Подразделения))
+	ИДЕНТИФИКАТОР Ссылка
+	ИМЯ Наименование
+	ТИПЗНАЧЕНИЯ ТипЗначения
+	ЗНАЧЕНИЯ РегистрСведений.ЗначенияСвойствОбъектов
+	ОБЪЕКТ Объект
+	ХАРАКТЕРИСТИКА Свойство
+	ЗНАЧЕНИЕ Значение }
+{ХАРАКТЕРИСТИКИ
+	ТИП(Справочник.Подразделения)
+	СПИСОК (ВЫБРАТЬ
+						КатегорииОбъектов.Ссылка,
+						КатегорииОбъектов.Наименование
+					ИЗ
+						Справочник.КатегорииОбъектов КАК КатегорииОбъектов
+					ГДЕ
+						КатегорииОбъектов.НазначениеКатегории = ЗНАЧЕНИЕ(ПланВидовХарактеристик.НазначенияСвойствКатегорийОбъектов.Справочник_Подразделения))
+	ИДЕНТИФИКАТОР Ссылка
+	ИМЯ Наименование
+	ЗНАЧЕНИЯ РегистрСведений.КатегорииОбъектов
+	ОБЪЕКТ Объект
+	ХАРАКТЕРИСТИКА Категория }
+			</query>
+		</item>
+	</dataSet>
+	<calculatedField>
+		<dataPath>ОстатокПлана</dataPath>
+		<expression>КоличествоЗапланировано-КоличествоВыпущено</expression>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Остаток плана</v8:content>
+			</v8:item>
+		</title>
+		<appearance>
+			<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+				<dcscor:parameter>Формат</dcscor:parameter>
+				<dcscor:value xsi:type="xs:string">ЧДЦ=3</dcscor:value>
+			</dcscor:item>
+		</appearance>
+	</calculatedField>
+	<totalField>
+		<dataPath>КоличествоВыпущено</dataPath>
+		<expression>Сумма(КоличествоВыпущено)</expression>
+	</totalField>
+	<totalField>
+		<dataPath>КоличествоЗапланировано</dataPath>
+		<expression>Сумма(КоличествоЗапланировано)</expression>
+	</totalField>
+	<parameter>
+		<name>ПериодФормированияОтчета</name>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Период формирования отчета</v8:content>
+			</v8:item>
+		</title>
+		<valueType>
+			<v8:Type>v8:StandardPeriod</v8:Type>
+		</valueType>
+		<value xsi:type="v8:StandardPeriod">
+			<v8:variant xsi:type="v8:StandardPeriodVariant">Today</v8:variant>
+		</value>
+		<useRestriction>false</useRestriction>
+	</parameter>
+	<parameter>
+		<name>НачалоПериода</name>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Начало периода</v8:content>
+			</v8:item>
+		</title>
+		<valueType>
+			<v8:Type>xs:dateTime</v8:Type>
+			<v8:DateQualifiers>
+				<v8:DateFractions>DateTime</v8:DateFractions>
+			</v8:DateQualifiers>
+		</valueType>
+		<value xsi:type="xs:dateTime">0001-01-01T00:00:00</value>
+		<useRestriction>true</useRestriction>
+		<expression>&amp;ПериодФормированияОтчета.ДатаНачала</expression>
+	</parameter>
+	<parameter>
+		<name>КонецПериода</name>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Конец периода</v8:content>
+			</v8:item>
+		</title>
+		<valueType>
+			<v8:Type>xs:dateTime</v8:Type>
+			<v8:DateQualifiers>
+				<v8:DateFractions>DateTime</v8:DateFractions>
+			</v8:DateQualifiers>
+		</valueType>
+		<value xsi:type="xs:dateTime">0001-01-01T00:00:00</value>
+		<useRestriction>true</useRestriction>
+		<expression>&amp;ПериодФормированияОтчета.ДатаОкончания</expression>
+	</parameter>
+	<settingsVariant>
+		<dcsset:name>Основной</dcsset:name>
+		<dcsset:presentation xsi:type="xs:string">Основной</dcsset:presentation>
+		<dcsset:settings xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows">
+			<dcsset:selection>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>КоличествоВыпущено</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>КоличествоЗапланировано</dcsset:field>
+				</dcsset:item>
+				<dcsset:viewMode>Normal</dcsset:viewMode>
+				<dcsset:userSettingID>3fb5abe0-8181-451c-ab12-47421aa93f4b</dcsset:userSettingID>
+			</dcsset:selection>
+			<dcsset:filter>
+				<dcsset:item xsi:type="dcsset:FilterItemComparison">
+					<dcsset:use>false</dcsset:use>
+					<dcsset:left xsi:type="dcscor:Field">Номенклатура</dcsset:left>
+					<dcsset:comparisonType>Equal</dcsset:comparisonType>
+					<dcsset:right xsi:type="dcscor:DesignTimeValue">Справочник.Номенклатура.ПустаяСсылка</dcsset:right>
+					<dcsset:userSettingID>97bebaab-9aed-4a0e-8e7b-9b3cf45268d9</dcsset:userSettingID>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:FilterItemComparison">
+					<dcsset:use>false</dcsset:use>
+					<dcsset:left xsi:type="dcscor:Field">Подразделение</dcsset:left>
+					<dcsset:comparisonType>Equal</dcsset:comparisonType>
+					<dcsset:right xsi:type="dcscor:DesignTimeValue">Справочник.Подразделения.ПустаяСсылка</dcsset:right>
+					<dcsset:userSettingID>ca452031-6447-4a46-a331-8dfc856462a3</dcsset:userSettingID>
+				</dcsset:item>
+				<dcsset:viewMode>Normal</dcsset:viewMode>
+				<dcsset:userSettingID>80e63967-ded2-4abf-b334-10c8928615bd</dcsset:userSettingID>
+			</dcsset:filter>
+			<dcsset:dataParameters>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>ПериодФормированияОтчета</dcscor:parameter>
+					<dcscor:value xsi:type="v8:StandardPeriod">
+						<v8:variant xsi:type="v8:StandardPeriodVariant">Today</v8:variant>
+					</dcscor:value>
+					<dcsset:userSettingID>e4c98821-6ec6-4398-988f-9cc7ebacda60</dcsset:userSettingID>
+				</dcscor:item>
+			</dcsset:dataParameters>
+			<dcsset:order>
+				<dcsset:viewMode>Normal</dcsset:viewMode>
+				<dcsset:userSettingID>22e865be-38d6-4dfd-bfed-14770a831619</dcsset:userSettingID>
+			</dcsset:order>
+			<dcsset:conditionalAppearance>
+				<dcsset:viewMode>Normal</dcsset:viewMode>
+				<dcsset:userSettingID>e0a43ece-f901-4d3f-b41f-5372fafdc6ba</dcsset:userSettingID>
+			</dcsset:conditionalAppearance>
+			<dcsset:outputParameters>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>Заголовок</dcscor:parameter>
+					<dcscor:value xsi:type="xs:string">Выполнение производственной программы</dcscor:value>
+				</dcscor:item>
+			</dcsset:outputParameters>
+			<dcsset:item xsi:type="dcsset:StructureItemGroup">
+				<dcsset:groupItems>
+					<dcsset:item xsi:type="dcsset:GroupItemField">
+						<dcsset:field>Номенклатура</dcsset:field>
+						<dcsset:groupType>Items</dcsset:groupType>
+						<dcsset:periodAdditionType>None</dcsset:periodAdditionType>
+						<dcsset:periodAdditionBegin xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionBegin>
+						<dcsset:periodAdditionEnd xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionEnd>
+					</dcsset:item>
+					<dcsset:item xsi:type="dcsset:GroupItemField">
+						<dcsset:field>ХарактеристикаНоменклатуры</dcsset:field>
+						<dcsset:groupType>Items</dcsset:groupType>
+						<dcsset:periodAdditionType>None</dcsset:periodAdditionType>
+						<dcsset:periodAdditionBegin xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionBegin>
+						<dcsset:periodAdditionEnd xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionEnd>
+					</dcsset:item>
+				</dcsset:groupItems>
+				<dcsset:order>
+					<dcsset:item xsi:type="dcsset:OrderItemAuto"/>
+				</dcsset:order>
+				<dcsset:selection>
+					<dcsset:item xsi:type="dcsset:SelectedItemAuto"/>
+				</dcsset:selection>
+			</dcsset:item>
+			<dcsset:itemsViewMode>Normal</dcsset:itemsViewMode>
+			<dcsset:itemsUserSettingID>35f60d26-1ef1-44a5-8e08-71f1f19370c4</dcsset:itemsUserSettingID>
+		</dcsset:settings>
+	</settingsVariant>
+</DataCompositionSchema>

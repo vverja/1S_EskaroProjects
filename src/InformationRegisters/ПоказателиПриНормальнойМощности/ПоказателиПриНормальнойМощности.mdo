@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:InformationRegister xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:core="http://g5.1c.ru/v8/dt/mcore" xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="1e95f8f4-a8e1-448e-b1e4-8544e494602e">
+  <producedTypes>
+    <selectionType typeId="dff270b2-c2dd-45cd-8ad9-ddcd3f37fb75" valueTypeId="bf8a24aa-c21c-4c29-9d29-2bd166c3382d"/>
+    <listType typeId="2bf663d1-0aec-4e82-9614-688928c9d79e" valueTypeId="abeab1cb-6f65-4ad8-a5b9-6a0d65e3bb3f"/>
+    <managerType typeId="f2e6ba43-92ae-4cbc-a525-9e42a714aab6" valueTypeId="46130f6b-41e3-4d6d-833b-8c706facd808"/>
+    <recordSetType typeId="4e3a29e3-5392-480e-a44c-7b6e38ed0cea" valueTypeId="9e2f5d9e-1d6c-40ea-a516-12af734bc352"/>
+    <recordKeyType typeId="eac0411f-d676-4812-a642-d81284aff3bf" valueTypeId="dbb570f0-00bd-4765-acec-5918ec492907"/>
+    <recordType typeId="0a0bae0e-02aa-400b-9283-004aa2a23405" valueTypeId="fe8b0bfa-0224-4e9f-969a-897fa9237f51"/>
+    <recordManagerType typeId="86871946-fc51-4964-927e-7019ee3b5523" valueTypeId="89a31b40-fce5-4194-837a-819e739fd282"/>
+  </producedTypes>
+  <name>ПоказателиПриНормальнойМощности</name>
+  <synonym>
+    <key>ru</key>
+    <value>Показатели при нормальной мощности</value>
+  </synonym>
+  <comment>(Упр)</comment>
+  <defaultListForm>InformationRegister.ПоказателиПриНормальнойМощности.Form.ФормаСписка</defaultListForm>
+  <informationRegisterPeriodicity>Month</informationRegisterPeriodicity>
+  <mainFilterOnPeriod>true</mainFilterOnPeriod>
+  <help>
+    <pages>
+      <lang>ru</lang>
+    </pages>
+  </help>
+  <resources uuid="35648164-e00d-4dad-9e9b-518a82f65299">
+    <name>БазаРаспределения</name>
+    <synonym>
+      <key>ru</key>
+      <value>База распределения</value>
+    </synonym>
+    <type>
+      <types>Number</types>
+      <numberQualifiers>
+        <precision>16</precision>
+        <scale>3</scale>
+        <nonNegative>true</nonNegative>
+      </numberQualifiers>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:UndefinedValue"/>
+  </resources>
+  <resources uuid="d6027a35-57b0-4857-b4cb-1da52b9cd5bc">
+    <name>СуммаПостоянныхЗатрат</name>
+    <synonym>
+      <key>ru</key>
+      <value>Сумма постоянных затрат</value>
+    </synonym>
+    <type>
+      <types>Number</types>
+      <numberQualifiers>
+        <precision>16</precision>
+        <scale>2</scale>
+      </numberQualifiers>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:UndefinedValue"/>
+  </resources>
+  <dimensions uuid="21da6151-0209-40fd-a928-98f4d27befff">
+    <name>СтатьяЗатрат</name>
+    <synonym>
+      <key>ru</key>
+      <value>Статья затрат</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.СтатьиЗатрат</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillFromFillingValue>true</fillFromFillingValue>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <master>true</master>
+    <mainFilter>true</mainFilter>
+  </dimensions>
+  <dimensions uuid="12148f05-aaec-4851-bcb0-5dbfe08a230c">
+    <name>Подразделение</name>
+    <synonym>
+      <key>ru</key>
+      <value>Подразделение</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.Подразделения</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillFromFillingValue>true</fillFromFillingValue>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <master>true</master>
+    <mainFilter>true</mainFilter>
+  </dimensions>
+  <forms uuid="3ace8af3-96ce-4a35-ac57-d927528cfc42">
+    <name>ФормаСписка</name>
+    <synonym>
+      <key>ru</key>
+      <value>Форма списка</value>
+    </synonym>
+    <formType>Ordinary</formType>
+    <usePurposes>PersonalComputer</usePurposes>
+    <usePurposes>MobileDevice</usePurposes>
+  </forms>
+</mdclass:InformationRegister>

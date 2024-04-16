@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:AccumulationRegister xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:core="http://g5.1c.ru/v8/dt/mcore" xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="49111ab2-4b99-49b4-9069-ecf675522caa">
+  <producedTypes>
+    <selectionType typeId="e1648ec8-b9d6-4534-8832-c1b8e0d91d5b" valueTypeId="93145651-96a1-4c15-a085-b0d781003521"/>
+    <listType typeId="6ecc92af-4149-4f72-a743-e812bfb2ea69" valueTypeId="f3940f9f-93ca-4b8d-bf28-8f4ad18121c6"/>
+    <managerType typeId="38b25fec-b6dd-40a1-b8de-8ec3bd8136ce" valueTypeId="90c62af8-c98a-480b-82b6-386eef7168b3"/>
+    <recordSetType typeId="f042f6a8-33e1-4b06-a957-8f3f9cb1bc19" valueTypeId="bda2f5fa-6002-4175-8b9a-f9ad89aef21b"/>
+    <recordKeyType typeId="7780cf23-1760-48d8-aaa1-ed7d3569a524" valueTypeId="e48f806e-a2b7-45d1-bb4a-21fef48fc4df"/>
+    <recordType typeId="eeeb629d-a00c-4c20-b14b-83106c1affe3" valueTypeId="15554c38-5f41-47d6-832a-9f0141f59120"/>
+  </producedTypes>
+  <name>ИспользованиеЕжегодныхОтпусковРаботников</name>
+  <synonym>
+    <key>ru</key>
+    <value>Использование ежегодных отпусков работников</value>
+  </synonym>
+  <defaultListForm>AccumulationRegister.ИспользованиеЕжегодныхОтпусковРаботников.Form.ФормаСписка</defaultListForm>
+  <registerType>Turnovers</registerType>
+  <enableTotalsSplitting>true</enableTotalsSplitting>
+  <resources uuid="8e59d11b-ede6-4dd2-98b8-c6bccf2cc57d">
+    <name>ИспользованоОсновного</name>
+    <synonym>
+      <key>ru</key>
+      <value>Использовано основного</value>
+    </synonym>
+    <type>
+      <types>Number</types>
+      <numberQualifiers>
+        <precision>10</precision>
+      </numberQualifiers>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+  </resources>
+  <attributes uuid="fd85ffe0-45d2-46a3-9834-15a2e9a54f99">
+    <name>ВидОперации</name>
+    <synonym>
+      <key>ru</key>
+      <value>Вид операции</value>
+    </synonym>
+    <type>
+      <types>EnumRef.ВидыОперацийОтпускаОрганизаций</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+  </attributes>
+  <dimensions uuid="625e715e-996b-4a38-ad7c-a8895e8aa3c0">
+    <name>РабочийПериодНачало</name>
+    <synonym>
+      <key>ru</key>
+      <value>Рабочий период начало</value>
+    </synonym>
+    <comment>Начало рабочего периода</comment>
+    <type>
+      <types>Date</types>
+      <dateQualifiers>
+        <dateFractions>Date</dateFractions>
+      </dateQualifiers>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <useInTotals>true</useInTotals>
+  </dimensions>
+  <dimensions uuid="cef548f3-7ba0-44ff-91ca-8a8790da5339">
+    <name>РабочийПериодОкончание</name>
+    <synonym>
+      <key>ru</key>
+      <value>Рабочий период окончание</value>
+    </synonym>
+    <comment>Окончание рабочего периода</comment>
+    <type>
+      <types>Date</types>
+      <dateQualifiers>
+        <dateFractions>Date</dateFractions>
+      </dateQualifiers>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <useInTotals>true</useInTotals>
+  </dimensions>
+  <dimensions uuid="ccc6eed3-4f2c-4c3c-b0cd-7619d5753968">
+    <name>Организация</name>
+    <synonym>
+      <key>ru</key>
+      <value>Организация</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.Организации</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <useInTotals>true</useInTotals>
+  </dimensions>
+  <dimensions uuid="6968e38f-45ce-4c84-a570-d7b919b99b8d">
+    <name>Сотрудник</name>
+    <synonym>
+      <key>ru</key>
+      <value>Сотрудник</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.СотрудникиОрганизаций</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <useInTotals>true</useInTotals>
+  </dimensions>
+  <dimensions uuid="7df15fd7-0ce8-4800-91f4-511eec86b899">
+    <name>ВидОтпуска</name>
+    <synonym>
+      <key>ru</key>
+      <value>Вид отпуска</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.ВидыОтпусков</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <useInTotals>true</useInTotals>
+  </dimensions>
+  <forms uuid="d5d1bcf4-029b-465f-af37-6896c66c347d">
+    <name>ФормаСписка</name>
+    <synonym>
+      <key>ru</key>
+      <value>Форма списка</value>
+    </synonym>
+    <formType>Ordinary</formType>
+    <usePurposes>PersonalComputer</usePurposes>
+    <usePurposes>MobileDevice</usePurposes>
+  </forms>
+</mdclass:AccumulationRegister>

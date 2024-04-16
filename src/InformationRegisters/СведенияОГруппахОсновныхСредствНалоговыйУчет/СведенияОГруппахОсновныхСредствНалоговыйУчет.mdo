@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:InformationRegister xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:core="http://g5.1c.ru/v8/dt/mcore" xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="9051d83e-f218-47b2-82fa-eb2b2cee369c">
+  <producedTypes>
+    <selectionType typeId="922eb042-9c5c-40a9-97a2-9012b383d393" valueTypeId="48042bc4-5f8a-4138-a4e0-6720b2ee29bb"/>
+    <listType typeId="782b0c1d-569d-4de1-80b5-4662db80836e" valueTypeId="61688888-1a87-461e-a865-433be55c5914"/>
+    <managerType typeId="54a1966a-c780-4376-a90b-36928e73e2e5" valueTypeId="8731366a-b3bf-4ba1-ba01-7795f45a8216"/>
+    <recordSetType typeId="59b0b2cf-0af7-43bd-9fc1-99ca259abda3" valueTypeId="01eace02-31fa-4be3-935f-c24e7deb24a6"/>
+    <recordKeyType typeId="dad89cf6-223d-4140-9bfd-11f90e9efab6" valueTypeId="9c2d70f1-c11d-4bef-9268-8b8346f6b699"/>
+    <recordType typeId="b5518bb9-e2fb-47dc-ad41-f2a29541633a" valueTypeId="899c547b-47b8-4669-a47c-f26ef2e0658e"/>
+    <recordManagerType typeId="aa3d398e-593e-47ef-b022-3a7bf9d9ddcf" valueTypeId="93e4db84-8b3a-4b33-869b-77e6acfe1c88"/>
+  </producedTypes>
+  <name>СведенияОГруппахОсновныхСредствНалоговыйУчет</name>
+  <synonym>
+    <key>ru</key>
+    <value>Сведения о группах основных средств (НУ)</value>
+  </synonym>
+  <comment>(Регл)</comment>
+  <defaultListForm>InformationRegister.СведенияОГруппахОсновныхСредствНалоговыйУчет.Form.ФормаСписка</defaultListForm>
+  <informationRegisterPeriodicity>Month</informationRegisterPeriodicity>
+  <mainFilterOnPeriod>true</mainFilterOnPeriod>
+  <includeHelpInContents>true</includeHelpInContents>
+  <help>
+    <pages>
+      <lang>ru</lang>
+    </pages>
+  </help>
+  <resources uuid="685d2633-36cd-4c29-bf5a-f307f05e20b3">
+    <name>Пообъектно</name>
+    <synonym>
+      <key>ru</key>
+      <value>Пообъектно</value>
+    </synonym>
+    <type>
+      <types>Boolean</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:UndefinedValue"/>
+  </resources>
+  <resources uuid="014d18fd-34e6-4983-aa6c-046c0db3d52e">
+    <name>СтатьяАмортизации</name>
+    <synonym>
+      <key>ru</key>
+      <value>Статья амортизации</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.СтатьиНалоговыхДеклараций</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:UndefinedValue"/>
+  </resources>
+  <resources uuid="2e1ec292-d326-465f-b9e3-5bba5a6635a4">
+    <name>СтатьяСписанияСтоимости</name>
+    <synonym>
+      <key>ru</key>
+      <value>Статья списания стоимости</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.СтатьиНалоговыхДеклараций</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:UndefinedValue"/>
+  </resources>
+  <resources uuid="320d3f10-2e0c-47b8-a548-16f49c4bbb3b">
+    <name>МинимальнаяСтоимостьОбъекта</name>
+    <synonym>
+      <key>ru</key>
+      <value>Минимальная стоимость объекта</value>
+    </synonym>
+    <comment>Объекты стоимостью ниже минимальной подлежат списанию</comment>
+    <type>
+      <types>Number</types>
+      <numberQualifiers>
+        <precision>15</precision>
+        <scale>2</scale>
+      </numberQualifiers>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:UndefinedValue"/>
+  </resources>
+  <dimensions uuid="17c73f23-6bc5-4bb6-a8a6-b96faffa5025">
+    <name>ГруппаОС</name>
+    <synonym>
+      <key>ru</key>
+      <value>Группа ОС</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.НалоговыеГруппыОсновныхСредств</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillFromFillingValue>true</fillFromFillingValue>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <master>true</master>
+    <mainFilter>true</mainFilter>
+  </dimensions>
+  <forms uuid="f857c9c3-2ece-4257-a930-1c5d574b8956">
+    <name>ФормаСписка</name>
+    <synonym>
+      <key>ru</key>
+      <value>Форма списка</value>
+    </synonym>
+    <formType>Ordinary</formType>
+    <usePurposes>PersonalComputer</usePurposes>
+    <usePurposes>MobileDevice</usePurposes>
+  </forms>
+  <templates uuid="d5e9b36a-8e75-43c8-ae98-61cbb2785dec">
+    <name>НачальноеЗаполнение</name>
+    <synonym>
+      <key>ru</key>
+      <value>НачальноеЗаполнение</value>
+    </synonym>
+  </templates>
+</mdclass:InformationRegister>

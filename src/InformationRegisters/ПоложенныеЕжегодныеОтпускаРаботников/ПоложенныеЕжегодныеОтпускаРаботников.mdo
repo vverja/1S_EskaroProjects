@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:InformationRegister xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:core="http://g5.1c.ru/v8/dt/mcore" xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="336adc8d-c76f-4ea0-9342-fb2aaa7d3656">
+  <producedTypes>
+    <selectionType typeId="4440ca82-c05c-4ac3-9531-10ac0c0552ec" valueTypeId="3f80372a-bb37-4b4e-b2b5-5f915f722c3d"/>
+    <listType typeId="1d0cd8f1-0716-48dd-ba42-4683c967f049" valueTypeId="3c21c7fa-6747-4743-b754-205e98fc8d6a"/>
+    <managerType typeId="c75bcda2-9a74-4d76-a082-5bf2147f7b81" valueTypeId="03046614-a87e-4c37-a9e0-308db1ca398c"/>
+    <recordSetType typeId="4d37cde2-7d5d-4942-8b02-fff041678a7f" valueTypeId="f9935451-40b6-483f-9de4-480d5e00aa6a"/>
+    <recordKeyType typeId="76209bf5-2608-423c-b3b5-09036a768b76" valueTypeId="f33c96c3-351f-42a6-8b64-19bc1884bf13"/>
+    <recordType typeId="3fb8c777-d60c-4bfc-b6fb-67fc50f730fa" valueTypeId="3b1d430f-7f4c-43a9-8d1d-2cb4fdc22f7c"/>
+    <recordManagerType typeId="f4ae7cd1-829b-4fd7-b375-bdae3883070c" valueTypeId="c4a83f14-e0a4-4ee2-a9a9-497f6fb82d5e"/>
+  </producedTypes>
+  <name>ПоложенныеЕжегодныеОтпускаРаботников</name>
+  <synonym>
+    <key>ru</key>
+    <value>Положенные ежегодные отпуска работников</value>
+  </synonym>
+  <editType>BothWays</editType>
+  <defaultListForm>InformationRegister.ПоложенныеЕжегодныеОтпускаРаботников.Form.ФормаСписка</defaultListForm>
+  <informationRegisterPeriodicity>Day</informationRegisterPeriodicity>
+  <mainFilterOnPeriod>true</mainFilterOnPeriod>
+  <includeHelpInContents>true</includeHelpInContents>
+  <help>
+    <pages>
+      <lang>ru</lang>
+    </pages>
+  </help>
+  <resources uuid="efb89256-e78e-4bdd-9cd4-01eb36efa8e9">
+    <name>Положено</name>
+    <synonym>
+      <key>ru</key>
+      <value>Положено</value>
+    </synonym>
+    <comment>Положенное количество дней</comment>
+    <type>
+      <types>Number</types>
+      <numberQualifiers>
+        <precision>10</precision>
+      </numberQualifiers>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:UndefinedValue"/>
+  </resources>
+  <dimensions uuid="07772331-e7fa-4d0b-81ea-51ac04a23a85">
+    <name>ВидОтпуска</name>
+    <synonym>
+      <key>ru</key>
+      <value>Вид отпуска</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.ВидыОтпусков</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillFromFillingValue>true</fillFromFillingValue>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <mainFilter>true</mainFilter>
+  </dimensions>
+  <dimensions uuid="d4434612-9305-4707-852b-9339cf429819">
+    <name>Организация</name>
+    <synonym>
+      <key>ru</key>
+      <value>Организация</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.Организации</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillFromFillingValue>true</fillFromFillingValue>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <mainFilter>true</mainFilter>
+  </dimensions>
+  <dimensions uuid="a5841288-5add-493a-af52-8314168321ee">
+    <name>Сотрудник</name>
+    <synonym>
+      <key>ru</key>
+      <value>Сотрудник</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.СотрудникиОрганизаций</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillFromFillingValue>true</fillFromFillingValue>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <mainFilter>true</mainFilter>
+  </dimensions>
+  <forms uuid="27404d79-bfcd-4716-ac44-994429356da2">
+    <name>ФормаСписка</name>
+    <synonym>
+      <key>ru</key>
+      <value>Форма списка</value>
+    </synonym>
+    <formType>Ordinary</formType>
+    <usePurposes>PersonalComputer</usePurposes>
+    <usePurposes>MobileDevice</usePurposes>
+  </forms>
+  <forms uuid="4190eec9-3773-4b36-87a2-6ff22f1f6c95">
+    <name>ФормаНабораЗаписей</name>
+    <synonym>
+      <key>ru</key>
+      <value>Форма набора записей</value>
+    </synonym>
+    <formType>Ordinary</formType>
+    <usePurposes>PersonalComputer</usePurposes>
+    <usePurposes>MobileDevice</usePurposes>
+  </forms>
+  <forms uuid="44b6d445-6b87-41f1-9011-7a9c9ec51f0a">
+    <name>ФормаЗаполнения</name>
+    <synonym>
+      <key>ru</key>
+      <value>Форма заполнения</value>
+    </synonym>
+    <formType>Ordinary</formType>
+    <usePurposes>PersonalComputer</usePurposes>
+    <usePurposes>MobileDevice</usePurposes>
+  </forms>
+</mdclass:InformationRegister>

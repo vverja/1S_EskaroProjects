@@ -1,0 +1,2473 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:ChartOfAccounts xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:core="http://g5.1c.ru/v8/dt/mcore" xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="c71dce36-4295-49e4-be03-7c60969b96c3">
+  <producedTypes>
+    <objectType typeId="614e86ae-d96f-4aac-bc0e-a6487e05d685" valueTypeId="44da6e4a-b040-4298-ac8b-755a98296a73"/>
+    <refType typeId="c3f86adf-b1d0-420c-bb59-afc85b1a4942" valueTypeId="3681b362-433d-48d7-a572-18660775f618"/>
+    <selectionType typeId="20c78c1e-5895-4e37-957d-18ea252fa354" valueTypeId="98082a7d-b6ca-4dbd-966f-42d33a8fc535"/>
+    <listType typeId="65294706-b1f1-411e-880e-00a886bcee94" valueTypeId="1a91fbb0-f7a3-4bb0-9709-acea7cbc276d"/>
+    <managerType typeId="ca96ffd8-2cf1-4247-b1bb-3d0d6985fc2f" valueTypeId="22e898a7-5696-45d0-8622-bdd33f4cd0e8"/>
+    <extDimensionTypes typeId="e768367b-26b0-4578-9bbf-7dbec46b76ce" valueTypeId="ad8c7a17-0382-4207-b22c-65e393fa11ba"/>
+    <extDimensionTypesRow typeId="6d366972-c690-4c2e-9d58-76b9c7ac2a7f" valueTypeId="982ca12d-f226-4c92-b9c1-56e772be2273"/>
+  </producedTypes>
+  <name>Бюджетирование</name>
+  <synonym>
+    <key>ru</key>
+    <value>План счетов для бюджетирования</value>
+  </synonym>
+  <comment>(Упр)</comment>
+  <inputByString>ChartOfAccounts.Бюджетирование.StandardAttribute.Description</inputByString>
+  <inputByString>ChartOfAccounts.Бюджетирование.StandardAttribute.Code</inputByString>
+  <fullTextSearchOnInputByString>DontUse</fullTextSearchOnInputByString>
+  <createOnInput>DontUse</createOnInput>
+  <help>
+    <pages>
+      <lang>ru</lang>
+    </pages>
+  </help>
+  <fullTextSearch>Use</fullTextSearch>
+  <extDimensionTypes>ChartOfCharacteristicTypes.ВидыСубконтоБюджетирования</extDimensionTypes>
+  <maxExtDimensionCount>3</maxExtDimensionCount>
+  <codeMask>@@@@@@  </codeMask>
+  <codeLength>8</codeLength>
+  <descriptionLength>120</descriptionLength>
+  <checkUnique>true</checkUnique>
+  <predefined>
+    <items id="1be4cd0e-3f90-4ccc-9544-ef68a19f7512">
+      <name>Служебный</name>
+      <description>Служебный</description>
+      <code>000</code>
+      <accountType>ActivePassive</accountType>
+      <order>000</order>
+    </items>
+    <items id="a839c02a-5b58-44dd-bceb-270a19db332f">
+      <name>ВнеоборотныеАктивы</name>
+      <description>Внеоборотные активы</description>
+      <code>100</code>
+      <order>100</order>
+      <childItems id="7384e8ec-a8d1-4302-9345-6f05a6f08f9a">
+        <name>ОсновныеСредства</name>
+        <description>Основные средства</description>
+        <code>101</code>
+        <order>101</order>
+        <childItems id="e2845000-cf89-4f8c-8331-0f4b0953340f">
+          <name>Земля</name>
+          <description>Земля</description>
+          <code>1011</code>
+          <order>1011</order>
+        </childItems>
+        <childItems id="594a4934-5660-44dc-971f-2e0c6371d459">
+          <name>ЗданияНетто</name>
+          <description>Здания, нетто</description>
+          <code>1012</code>
+          <order>1012</order>
+          <childItems id="99d9cb77-5fbe-475f-963d-d77a07901563">
+            <name>Здания</name>
+            <description>Здания</description>
+            <code>10121</code>
+            <order>10121</order>
+          </childItems>
+          <childItems id="505bea7f-c1b6-4139-a7ae-dc30b0c44ffb">
+            <name>АмортизацияЗданий</name>
+            <description>Накопленная амортизация, здания</description>
+            <code>10122</code>
+            <accountType>Passive</accountType>
+            <order>10122</order>
+          </childItems>
+        </childItems>
+        <childItems id="1e690273-cdea-41fc-aa61-df5aae4c1337">
+          <name>СооруженияИОборудованиеНетто</name>
+          <description>Сооружения и оборудование, нетто</description>
+          <code>1013</code>
+          <order>1013</order>
+          <childItems id="087c584f-d4c6-4d3f-b15a-8e40e69c24e3">
+            <name>СооруженияИОборудование</name>
+            <description>Сооружения и оборудование</description>
+            <code>10131</code>
+            <order>10131</order>
+          </childItems>
+          <childItems id="2b078ec2-b268-489a-b904-ab6b72d5ead6">
+            <name>АмортизацияСооружений</name>
+            <description>Накопленная амортизация, сооружения и оборудование</description>
+            <code>10132</code>
+            <accountType>Passive</accountType>
+            <order>10132</order>
+          </childItems>
+        </childItems>
+        <childItems id="dee556ff-2b38-4bcd-b24f-a2d9ae4b16ea">
+          <name>МашиныИИнструментыНетто</name>
+          <description>Машины и оборудование (кроме офисного), нетто</description>
+          <code>1014</code>
+          <order>1014</order>
+          <childItems id="5df3ea66-934b-4fc5-b143-6bb1c3565caf">
+            <name>МашиныИИнструменты</name>
+            <description>Машины и оборудование (кроме офисного)</description>
+            <code>10141</code>
+            <order>10141</order>
+          </childItems>
+          <childItems id="cd213ab0-25b5-4af4-86af-8050b9f62628">
+            <name>АмортизацияМашинИИнструментов</name>
+            <description>Машины и оборудование (кроме офисного), накопленная амортизация</description>
+            <code>10142</code>
+            <accountType>Passive</accountType>
+            <order>10142</order>
+          </childItems>
+        </childItems>
+        <childItems id="37dd24eb-e677-45b4-b69d-fecf438736e6">
+          <name>ОфисноеОборудованиеНетто</name>
+          <description>Офисное оборудование нетто</description>
+          <code>1015</code>
+          <order>1015</order>
+          <childItems id="11f9b806-5174-45f6-9c56-1f7a2823c2ef">
+            <name>ОфисноеОборудование</name>
+            <description>Офисное оборудование</description>
+            <code>10151</code>
+            <order>10151</order>
+          </childItems>
+          <childItems id="8ce8dbde-fbc9-49aa-bd04-b287914e736c">
+            <name>АмортизацияОфисногоОборудования</name>
+            <description>Офисное оборудование, накопленная амортизация</description>
+            <code>10152</code>
+            <accountType>Passive</accountType>
+            <order>10152</order>
+          </childItems>
+        </childItems>
+        <childItems id="c6d50675-562b-444d-b885-45a3b4aaac88">
+          <name>АвтотранспортныеСредстваНетто</name>
+          <description>Автотранспортные средства, нетто</description>
+          <code>1016</code>
+          <order>1016</order>
+          <childItems id="0d3172aa-93ad-44e8-8963-2e4c90820cae">
+            <name>АвтотранспортныеСредства</name>
+            <description>Автотранспортные средства</description>
+            <code>10161</code>
+            <order>10161   </order>
+          </childItems>
+          <childItems id="a4173c10-5cb7-4a2e-80dd-3f0df76b37fb">
+            <name>АмортизацияАвтотранспортныхСредств</name>
+            <description>Амортизация автотранспортных средств</description>
+            <code>10162</code>
+            <accountType>Passive</accountType>
+            <order>10162   </order>
+          </childItems>
+        </childItems>
+        <childItems id="a302c052-286d-4e15-971e-d36b48db92f9">
+          <name>ВложенияВЛизинговоеОборудованиеНетто</name>
+          <description>Вложения в лизинговое оборудование, нетто</description>
+          <code>1017</code>
+          <order>1017</order>
+          <childItems id="a9948bc2-fba8-42a2-a9d7-8f257efc8cff">
+            <name>ВложенияВЛизинговоеОборудование</name>
+            <description>Вложения в лизинговое оборудование</description>
+            <code>10171</code>
+            <order>10171   </order>
+          </childItems>
+          <childItems id="316dc8da-6a32-48e5-bb11-5e93c0328606">
+            <name>АмортизацияВложенияВЛизинговоеОборудование</name>
+            <description>Вложения в лизинговое оборудование, амортизация</description>
+            <code>10172</code>
+            <accountType>Passive</accountType>
+            <order>10172   </order>
+          </childItems>
+        </childItems>
+        <childItems id="8d35e8dd-b4b8-442e-bb70-48e682d345ca">
+          <name>ПрочиеОсновныеСредстваНетто</name>
+          <description>Прочие основные средства, нетто</description>
+          <code>1018</code>
+          <order>1018</order>
+          <childItems id="5b03a7c2-3ea8-4d59-ad95-78bf10596869">
+            <name>ПрочиеОсновныеСредства</name>
+            <description>Прочие основные средства</description>
+            <code>10181</code>
+            <order>10181   </order>
+          </childItems>
+          <childItems id="a9e51973-563e-4faa-bfbe-2d48c199cd37">
+            <name>АмортизацияПрочиеОсновныеСредства</name>
+            <description>Прочие основные средства, амортизация</description>
+            <code>10182</code>
+            <accountType>Passive</accountType>
+            <order>10182   </order>
+          </childItems>
+        </childItems>
+        <childItems id="f075b5ff-f7df-40ac-84d0-26ac88dd99ca">
+          <name>ПриобретениеИСтроительствоОС</name>
+          <description>Приобретение и строительство ОС</description>
+          <code>1019</code>
+          <order>1019    </order>
+          <childItems id="a67e5c4f-8bb7-4754-ace0-f6daac90090d">
+            <name>НезавершенноеСтроительство</name>
+            <description>Незавершенное строительство</description>
+            <code>10191</code>
+            <order>10191</order>
+          </childItems>
+          <childItems id="f6bca100-5262-432c-90fa-97b14936a565">
+            <name>ПриобретениеОсновныхСредств</name>
+            <description>Приобретение основных средств</description>
+            <code>10192</code>
+            <order>10192</order>
+            <accountingFlags>ChartOfAccounts.Бюджетирование.AccountingFlag.Количественный</accountingFlags>
+          </childItems>
+          <childItems id="805e9409-f61e-4c77-b813-dfb02e157cbb">
+            <name>ОборудованиеКУстановке</name>
+            <description>Оборудование к установке</description>
+            <code>10193</code>
+            <order>10193</order>
+            <accountingFlags>ChartOfAccounts.Бюджетирование.AccountingFlag.Количественный</accountingFlags>
+          </childItems>
+        </childItems>
+      </childItems>
+      <childItems id="79f2e624-f1ef-4b79-80c2-ead1802efaf3">
+        <name>ИнвестиционнаяСобственностьНетто</name>
+        <description>Инвестиционная собственность, нетто</description>
+        <code>102</code>
+        <order>102</order>
+        <childItems id="0b55cc5b-99ce-44be-97d3-1105ba7adc24">
+          <name>ИнвестиционнаяСобственность</name>
+          <description>Инвестиционная собственность</description>
+          <code>1021</code>
+          <order>1021</order>
+        </childItems>
+        <childItems id="6054c8ed-db84-4b14-9e43-267d7149ca99">
+          <name>АмортизацияИнвестиционнойСобственности</name>
+          <description>Амортизация инвестиционной собственности</description>
+          <code>1022</code>
+          <accountType>Passive</accountType>
+          <order>1022</order>
+        </childItems>
+      </childItems>
+      <childItems id="9f49d74a-9b7b-4ff9-91f7-b42871352018">
+        <name>НематериальныеАктивы</name>
+        <description>Нематериальные активы</description>
+        <code>103</code>
+        <order>103</order>
+        <childItems id="49bf5b9d-248b-4b30-9c49-b034ce5194e0">
+          <name>РасходыНаРазработкуНетто</name>
+          <description>Расходы на разработку, нетто</description>
+          <code>1031</code>
+          <order>1031</order>
+          <childItems id="fcb5b99e-d3d5-40ca-89b5-e48097b9c9d0">
+            <name>РасходыНаРазработку</name>
+            <description>Расходы на разработку</description>
+            <code>10311</code>
+            <order>10311</order>
+            <accountingFlags>ChartOfAccounts.Бюджетирование.AccountingFlag.Количественный</accountingFlags>
+          </childItems>
+          <childItems id="3ff9b515-8813-46a3-b6ae-e97f9fd46d85">
+            <name>АмортизацияРасходовНаРазработку</name>
+            <description>Расходы на разработку, амортизация</description>
+            <code>10312</code>
+            <accountType>Passive</accountType>
+            <order>10312</order>
+            <accountingFlags>ChartOfAccounts.Бюджетирование.AccountingFlag.Количественный</accountingFlags>
+          </childItems>
+        </childItems>
+        <childItems id="c59713f3-bf44-425e-a5a4-133334302124">
+          <name>ГудвилНетто</name>
+          <description>Деловая репутация (гудвил), нетто</description>
+          <code>1032</code>
+          <order>1032</order>
+          <childItems id="43570135-2b3f-4260-9adc-f4420744697a">
+            <name>Гудвил</name>
+            <description>Деловая репутация (гудвил)</description>
+            <code>10321</code>
+            <order>10321</order>
+          </childItems>
+          <childItems id="c7e32b79-8a1b-44e8-9cf9-f86a030c5d2e">
+            <name>АмортизацияГудвил</name>
+            <description>Деловая репутация (гудвил), амортизация</description>
+            <code>10322</code>
+            <accountType>Passive</accountType>
+            <order>10322</order>
+          </childItems>
+        </childItems>
+        <childItems id="88e12a6d-59f2-4a68-b27a-a90a8fe1722d">
+          <name>НегативныйГудвилНетто</name>
+          <description>Негативный гудвил, нетто</description>
+          <code>1033</code>
+          <accountType>Passive</accountType>
+          <order>1033</order>
+          <childItems id="4616d016-8eec-4fbc-aa50-0492a4192120">
+            <name>НегативныйГудвил</name>
+            <description>Негативный гудвил</description>
+            <code>10331</code>
+            <accountType>Passive</accountType>
+            <order>10331</order>
+          </childItems>
+          <childItems id="6b080909-f900-409e-8ce8-6056c27635cb">
+            <name>ПризнанныйДоходомНегативныйГудвилл</name>
+            <description>Признанный доходом негативный гудвилл</description>
+            <code>10332</code>
+            <order>10332</order>
+          </childItems>
+        </childItems>
+        <childItems id="40bac33d-6bf1-421b-8080-1fe651190354">
+          <name>ПатентыИИныеПраваНетто</name>
+          <description>Патенты, торговые марки и иные права, нетто</description>
+          <code>1034</code>
+          <order>1034    </order>
+          <childItems id="9aac11b2-486a-4369-ad2b-ab5f252ac510">
+            <name>ПатентыИИныеПрава</name>
+            <description>Патенты и иные права</description>
+            <code>10341</code>
+            <order>10341   </order>
+          </childItems>
+          <childItems id="64ba68bc-2749-4685-8f5c-f24dc662e2fc">
+            <name>АмортизацияПатентыИИныеПрава</name>
+            <description>Амортизация патенты и иные права</description>
+            <code>10342</code>
+            <accountType>Passive</accountType>
+            <order>10342   </order>
+          </childItems>
+        </childItems>
+        <childItems id="a9f27bbe-0dc2-417c-b70d-fa2718d7fe58">
+          <name>ПрограммноеОбеспечениеНетто</name>
+          <description>Компьютерное программное обеспечение, нетто</description>
+          <code>1035</code>
+          <order>1035</order>
+          <childItems id="3a1c8036-06ac-49b1-9c43-b20088e77909">
+            <name>ПрограммноеОбеспечение</name>
+            <description>Компьютерное программное обеспечение</description>
+            <code>10351</code>
+            <order>10351   </order>
+          </childItems>
+          <childItems id="510e9876-c466-462a-b058-505230856019">
+            <name>АмортизацияПрограммногоОбеспечения</name>
+            <description>Амортизация программного обеспечения</description>
+            <code>10352</code>
+            <accountType>Passive</accountType>
+            <order>10352   </order>
+          </childItems>
+        </childItems>
+        <childItems id="78fa22d8-6013-4e4f-a99f-0abd1a6cffdc">
+          <name>ПрочиеНематериальныеАктивыНетто</name>
+          <description>Прочие нематериальные активы, нетто</description>
+          <code>1036</code>
+          <order>1036</order>
+          <childItems id="5cf27205-fc0c-4e89-9a05-d4bf065e36ca">
+            <name>ПрочиеНематериальныеАктивы</name>
+            <description>Прочие нематериальные активы</description>
+            <code>10361</code>
+            <order>10361   </order>
+          </childItems>
+          <childItems id="12ea7fc2-448f-4aea-a118-cd47d92bfcd6">
+            <name>АмортизацияПрочиеНематериальныеАктивы</name>
+            <description>Прочие нематериальные активы, амортизация</description>
+            <code>10362</code>
+            <accountType>Passive</accountType>
+            <order>10362   </order>
+          </childItems>
+        </childItems>
+        <childItems id="b44e8a23-5a59-45af-bf7a-94ba87f2663d">
+          <name>ПриобретениеНематериальныхАктивов</name>
+          <description>Приобретение нематериальных активов</description>
+          <code>1039</code>
+          <order>1039</order>
+        </childItems>
+      </childItems>
+      <childItems id="22c7892c-9f39-4eb9-b2ee-78874dff3471">
+        <name>БиологическиеАктивы</name>
+        <description>Биологические активы</description>
+        <code>104</code>
+        <order>104</order>
+      </childItems>
+      <childItems id="efcd2d37-31a4-4494-9e61-9d22ed7f472d">
+        <name>Инвестиции</name>
+        <description>Инвестиции</description>
+        <code>105</code>
+        <order>105</order>
+        <childItems id="e31faaea-ca81-4ca3-b453-67a648a188ed">
+          <name>ИнвестицииВДочерниеКомпании</name>
+          <description>Инвестиции в дочерние компании</description>
+          <code>1051</code>
+          <order>1051</order>
+        </childItems>
+        <childItems id="1dc89d85-8430-4052-8be8-1355c041ab10">
+          <name>ИнвестицииВЗависимыеКомпании</name>
+          <description>Инвестиции в зависимые компании</description>
+          <code>1052</code>
+          <order>1052</order>
+        </childItems>
+        <childItems id="24c843db-78e4-4508-a0c1-2f5ac29d3f33">
+          <name>ИнвестицииВСовместныеПредприятия</name>
+          <description>Инвестиции в совместные предприятия</description>
+          <code>1053</code>
+          <order>1053</order>
+        </childItems>
+      </childItems>
+      <childItems id="bef20c66-1439-4f46-8cfd-db83c2a9c1d3">
+        <name>ОтложенныеНалоговыеАктивы</name>
+        <description>Отложенные налоговые активы</description>
+        <code>106</code>
+        <order>106</order>
+      </childItems>
+      <childItems id="ba7fd9ea-a330-43d6-ae25-87c4ae9a4bc5">
+        <name>ПрочиеДолгосрочныеФинансовыеАктивы</name>
+        <description>Прочие долгосрочные, финансовые активы</description>
+        <code>107</code>
+        <order>107</order>
+        <childItems id="b0c2ca9e-1bbc-4211-9d2c-ea9730e52516">
+          <name>ВложенияДляПродажиДолгосрочные</name>
+          <description>Вложения для продажи, долгосрочные</description>
+          <code>1071</code>
+          <order>1071</order>
+        </childItems>
+        <childItems id="10005614-ce6a-4390-8bea-a667e313e6ce">
+          <name>ВложенияДляДивидендовДолгосрочные</name>
+          <description>Вложения для дивидендов, долгосрочные</description>
+          <code>1072</code>
+          <order>1072</order>
+        </childItems>
+        <childItems id="8c73240a-f946-4756-8a4e-0014fc3f9076">
+          <name>ЗаймыВыданныеДолгосрочные</name>
+          <description>Займы выданные, долгосрочные</description>
+          <code>1073</code>
+          <order>1073</order>
+        </childItems>
+        <childItems id="ab8c71a5-08b9-4a13-926e-839330ed0cab">
+          <name>ИнвестицииДляПродажиДолгосрочные</name>
+          <description>Инвестиции для продажи, долгосрочные</description>
+          <code>1074</code>
+          <order>1074</order>
+        </childItems>
+        <childItems id="981864d3-56e9-43c2-9ed1-29548ebfcb04">
+          <name>ПрочиеФинасовыеАктивыДолгосрочные</name>
+          <description>Прочие финасовые активы, долгосрочные</description>
+          <code>1075</code>
+          <order>1075</order>
+        </childItems>
+      </childItems>
+      <childItems id="c111674f-efae-4f00-a27b-d20cd522c3e4">
+        <name>ДебиторскаяЗадолженностьДолгосрочная</name>
+        <description>Дебиторская задолженность, долгосрочная</description>
+        <code>109</code>
+        <order>109</order>
+        <childItems id="865c6aff-d5b6-49f0-88b5-c9484af2ea6b">
+          <name>ЗадолженностьПокупателейНеттоДолгосрочная</name>
+          <description>Задолженность покупателей и заказчиков, долгосрочная, за вычетом резервов</description>
+          <code>1091</code>
+          <order>1091</order>
+          <childItems id="2a738afb-2711-48bc-a676-9302a198abbc">
+            <name>ЗадолженностьПокупателейДолгосрочная</name>
+            <description>Задолженность покупателей и заказчиков, долгосрочная</description>
+            <code>10911</code>
+            <order>10911</order>
+            <accountingFlags>ChartOfAccounts.Бюджетирование.AccountingFlag.Валютный</accountingFlags>
+          </childItems>
+          <childItems id="c1b57974-8430-4a29-8224-b195e4304d60">
+            <name>РезервЗадолженностьПокупателейДолгосрочная</name>
+            <description>Резерв задолженность покупателей, долгосрочная</description>
+            <code>10912</code>
+            <accountType>Passive</accountType>
+            <order>10912</order>
+          </childItems>
+        </childItems>
+        <childItems id="a2dccecb-75a5-4b53-ae23-e46af7a7ee88">
+          <name>ЗадолженностьСвязанныхСторонНеттоДолгосрочная</name>
+          <description>Задолженность по расчетам со связанными сторонами, долгосрочная, за вычетом резервов</description>
+          <code>1092</code>
+          <order>1092</order>
+          <childItems id="cfa5d9e8-78d6-4225-835f-b591650d1316">
+            <name>ЗадолженностьСвязанныхСторонДолгосрочная</name>
+            <description>Задолженность связанных сторон, долгосрочная</description>
+            <code>10921</code>
+            <order>10921</order>
+            <accountingFlags>ChartOfAccounts.Бюджетирование.AccountingFlag.Валютный</accountingFlags>
+            <childItems id="a09bdd99-1155-4a8c-b6e2-7faef6fa56ee">
+              <name>ЗадолженностьДочернихОрганизацийДолгосрочная</name>
+              <description>Задолженность дочерних организаций, долгосрочная</description>
+              <code>109211</code>
+              <order>109211</order>
+              <accountingFlags>ChartOfAccounts.Бюджетирование.AccountingFlag.Валютный</accountingFlags>
+            </childItems>
+            <childItems id="b7db6ca6-8532-4281-a0f4-04fcd944f1ed">
+              <name>ЗадолженностьЗависимыхОрганизацийДолгосрочная</name>
+              <description>Задолженность зависимых организаций, долгосрочная</description>
+              <code>109212</code>
+              <order>109212</order>
+              <accountingFlags>ChartOfAccounts.Бюджетирование.AccountingFlag.Валютный</accountingFlags>
+            </childItems>
+            <childItems id="66340264-3d9e-48c1-8e7d-99987844ba6c">
+              <name>ЗадолженностьСовместныхЮрЛицДолгосрочная</name>
+              <description>Задолженность совместно-контролируемых юридических лиц, долгосрочная</description>
+              <code>109213</code>
+              <order>109213</order>
+              <accountingFlags>ChartOfAccounts.Бюджетирование.AccountingFlag.Валютный</accountingFlags>
+            </childItems>
+          </childItems>
+          <childItems id="eec46873-c39b-4635-b269-cc5b8de9a27e">
+            <name>РезервЗадолженностьСвязанныхСторонДолгосрочная</name>
+            <description>Резерв задолженность связанных сторон, долгосрочная</description>
+            <code>10922</code>
+            <accountType>Passive</accountType>
+            <order>10922</order>
+          </childItems>
+        </childItems>
+        <childItems id="138636c2-8a2b-44ac-a8a3-468ce3de9675">
+          <name>ПлатежиПоФинАрендеКПолучениюНеттоДолгосрочные</name>
+          <description>Платежи по финансовой аренде к получению, за вычетом резервов, долгосрочные</description>
+          <code>1093</code>
+          <order>1093</order>
+          <childItems id="0d433082-7dbf-477a-97f6-6b037d031758">
+            <name>ПлатежиПоФинАрендеКПолучениюДолгосрочные</name>
+            <description>Платежи по финансовой аренде к получению, долгосрочные</description>
+            <code>10931</code>
+            <order>10931</order>
+            <accountingFlags>ChartOfAccounts.Бюджетирование.AccountingFlag.Валютный</accountingFlags>
+          </childItems>
+          <childItems id="bece137d-793b-4957-b63b-f2deea767e27">
+            <name>РезервПлатежиПоФинАрендеКПолучениюДолгосрочные</name>
+            <description>Резерв на неполучение платежей по финансовой аренде к получению, долгосрочных</description>
+            <code>10932</code>
+            <accountType>Passive</accountType>
+            <order>10932</order>
+          </childItems>
+        </childItems>
+        <childItems id="37add0a0-aaba-4c27-b3c2-980f81e39145">
+          <name>ПрочаяДебиторскаяЗадолженностьНеттоДолгосрочная</name>
+          <description>Прочая дебиторская задолженность, долгосрочная, за вычетом резервов</description>
+          <code>1094</code>
+          <order>1094</order>
+          <childItems id="6f4e82b9-79ec-49e8-b209-5e459ecac658">
+            <name>ПрочаяДебиторскаяЗадолженностьДолгосрочная</name>
+            <description>Прочая дебиторская задолженность, долгосрочная</description>
+            <code>10941</code>
+            <order>10941</order>
+            <accountingFlags>ChartOfAccounts.Бюджетирование.AccountingFlag.Валютный</accountingFlags>
+          </childItems>
+          <childItems id="80960f19-1a83-4a5b-b920-17c85c9b84dc">
+            <name>РезервПрочаяДебиторскаяЗадолженностьДолгосрочная</name>
+            <description>Резерв по сомнительной прочей дебиторской задолженности, долгосрочнлй</description>
+            <code>10942</code>
+            <accountType>Passive</accountType>
+            <order>10942</order>
+          </childItems>
+        </childItems>
+        <childItems id="962e703d-0c0f-4555-a84d-197a711fe06d">
+          <name>АвансыВыданныеДолгосрочные</name>
+          <description>Авансы выданные, долгосрочные</description>
+          <code>1095</code>
+          <order>1095</order>
+          <accountingFlags>ChartOfAccounts.Бюджетирование.AccountingFlag.Валютный</accountingFlags>
+        </childItems>
+      </childItems>
+      <childItems id="aabda711-23e1-40cc-b526-8a6ec8dbc472">
+        <name>ДенежныеСредстваСОграничениями</name>
+        <description>Денежные средства с ограничениями</description>
+        <code>110</code>
+        <order>110</order>
+        <accountingFlags>ChartOfAccounts.Бюджетирование.AccountingFlag.Валютный</accountingFlags>
+      </childItems>
+      <childItems id="a9a8fb3a-bb71-4893-aa01-9686bd0886b9">
+        <name>ПрочиеВнеоборотныеАктивы</name>
+        <description>Прочие внеоборотные активы</description>
+        <code>111</code>
+        <order>111</order>
+      </childItems>
+    </items>
+    <items id="c476b650-4f12-4b46-8720-6cc2488e54f6">
+      <name>ТекущиеАктивы</name>
+      <description>Текущие активы</description>
+      <code>200</code>
+      <order>200</order>
+      <childItems id="dbe7f602-749f-46c6-956c-3530b54679fd">
+        <name>ОсновныеСредстваДляПродажи</name>
+        <description>Основные средства, подготовленные для продажи, текущие</description>
+        <code>201</code>
+        <order>201     </order>
+      </childItems>
+      <childItems id="e9ed380c-c667-41f5-aec3-5a35119daba4">
+        <name>ЗатратыНезавершенногоСтроительства</name>
+        <description>Затраты по незавершенному строительству, текущие</description>
+        <code>202</code>
+        <order>202 </order>
+      </childItems>
+      <childItems id="c9bd33e8-4207-45a2-9f1d-bd49d9f12ed8">
+        <name>Запасы</name>
+        <description>Запасы</description>
+        <code>203</code>
+        <order>203 </order>
+        <accountingFlags>ChartOfAccounts.Бюджетирование.AccountingFlag.Количественный</accountingFlags>
+        <extDimensionTypes>
+          <characteristicType>ChartOfCharacteristicTypes.ВидыСубконтоБюджетирования.Номенклатура</characteristicType>
+          <extDimensionAccountingFlags>ChartOfAccounts.Бюджетирование.ExtDimensionAccountingFlag.Суммовой</extDimensionAccountingFlags>
+          <extDimensionAccountingFlags>ChartOfAccounts.Бюджетирование.ExtDimensionAccountingFlag.Количественный</extDimensionAccountingFlags>
+        </extDimensionTypes>
+        <childItems id="4866c407-c9d6-4323-9ecf-302c802d29ed">
+          <name>СырьеИМатериалы</name>
+          <description>Сырье и материалы</description>
+          <code>2031</code>
+          <order>2031</order>
+          <accountingFlags>ChartOfAccounts.Бюджетирование.AccountingFlag.Количественный</accountingFlags>
+          <extDimensionTypes>
+            <characteristicType>ChartOfCharacteristicTypes.ВидыСубконтоБюджетирования.Номенклатура</characteristicType>
+            <extDimensionAccountingFlags>ChartOfAccounts.Бюджетирование.ExtDimensionAccountingFlag.Суммовой</extDimensionAccountingFlags>
+            <extDimensionAccountingFlags>ChartOfAccounts.Бюджетирование.ExtDimensionAccountingFlag.Количественный</extDimensionAccountingFlags>
+          </extDimensionTypes>
+        </childItems>
+        <childItems id="1caf2059-d80c-4e7e-9c57-651812122cf2">
+          <name>НезавершенноеПроизводство</name>
+          <description>Незавершенное производство</description>
+          <code>2032</code>
+          <order>2032</order>
+          <accountingFlags>ChartOfAccounts.Бюджетирование.AccountingFlag.Количественный</accountingFlags>
+          <extDimensionTypes>
+            <characteristicType>ChartOfCharacteristicTypes.ВидыСубконтоБюджетирования.Номенклатура</characteristicType>
+            <extDimensionAccountingFlags>ChartOfAccounts.Бюджетирование.ExtDimensionAccountingFlag.Суммовой</extDimensionAccountingFlags>
+            <extDimensionAccountingFlags>ChartOfAccounts.Бюджетирование.ExtDimensionAccountingFlag.Количественный</extDimensionAccountingFlags>
+          </extDimensionTypes>
+          <childItems id="8a8719de-f703-4fcb-980f-3a0a782723bb">
+            <name>ОсновноеПроизводство</name>
+            <description>Основное производство</description>
+            <code>20321</code>
+            <order>20321</order>
+          </childItems>
+          <childItems id="f15638e9-8923-4da2-b996-17b0c24aed62">
+            <name>ВспомогательноеПроизводство</name>
+            <description>Вспомогательное производство</description>
+            <code>20322</code>
+            <order>20322</order>
+          </childItems>
+          <childItems id="25a5503b-9934-47e5-ab7d-1575feda79a6">
+            <name>ОбщепроизводственныеРасходы</name>
+            <description>Общепроизводственные расходы</description>
+            <code>20323</code>
+            <order>20323</order>
+          </childItems>
+          <childItems id="ac4b35dd-4053-11d8-9685-0050ba83c28e">
+            <name>ОбслуживающиеПроизводства</name>
+            <description>Обслуживающие производства</description>
+            <code>20324</code>
+            <order>20324</order>
+          </childItems>
+          <childItems id="c3a6a2f7-a913-4060-9b36-552f386254c1">
+            <name>БракВПроизводстве</name>
+            <description>Брак в производстве</description>
+            <code>20328</code>
+            <order>20328   </order>
+          </childItems>
+        </childItems>
+        <childItems id="b24bb932-5119-406e-8c7c-f7de296c697b">
+          <name>КомплектующиеИПолуфабрикаты</name>
+          <description>Комплектующие и полуфабрикаты</description>
+          <code>2033</code>
+          <order>2033</order>
+          <accountingFlags>ChartOfAccounts.Бюджетирование.AccountingFlag.Количественный</accountingFlags>
+          <extDimensionTypes>
+            <characteristicType>ChartOfCharacteristicTypes.ВидыСубконтоБюджетирования.Номенклатура</characteristicType>
+            <extDimensionAccountingFlags>ChartOfAccounts.Бюджетирование.ExtDimensionAccountingFlag.Суммовой</extDimensionAccountingFlags>
+            <extDimensionAccountingFlags>ChartOfAccounts.Бюджетирование.ExtDimensionAccountingFlag.Количественный</extDimensionAccountingFlags>
+          </extDimensionTypes>
+        </childItems>
+        <childItems id="d52ca011-faf5-4645-9f70-471eb57a18b0">
+          <name>ГотоваяПродукция</name>
+          <description>Готовая продукция</description>
+          <code>2034</code>
+          <order>2034</order>
+          <accountingFlags>ChartOfAccounts.Бюджетирование.AccountingFlag.Количественный</accountingFlags>
+          <extDimensionTypes>
+            <characteristicType>ChartOfCharacteristicTypes.ВидыСубконтоБюджетирования.Номенклатура</characteristicType>
+            <extDimensionAccountingFlags>ChartOfAccounts.Бюджетирование.ExtDimensionAccountingFlag.Суммовой</extDimensionAccountingFlags>
+            <extDimensionAccountingFlags>ChartOfAccounts.Бюджетирование.ExtDimensionAccountingFlag.Количественный</extDimensionAccountingFlags>
+          </extDimensionTypes>
+        </childItems>
+        <childItems id="ce905d4b-6cb2-438b-ac0f-c9f93bd8e276">
+          <name>Товары</name>
+          <description>Товары для перепродажи</description>
+          <code>2035</code>
+          <order>2035</order>
+          <accountingFlags>ChartOfAccounts.Бюджетирование.AccountingFlag.Количественный</accountingFlags>
+          <extDimensionTypes>
+            <characteristicType>ChartOfCharacteristicTypes.ВидыСубконтоБюджетирования.Номенклатура</characteristicType>
+            <extDimensionAccountingFlags>ChartOfAccounts.Бюджетирование.ExtDimensionAccountingFlag.Суммовой</extDimensionAccountingFlags>
+            <extDimensionAccountingFlags>ChartOfAccounts.Бюджетирование.ExtDimensionAccountingFlag.Количественный</extDimensionAccountingFlags>
+          </extDimensionTypes>
+          <childItems id="ac4b3605-4053-11d8-9685-0050ba83c28e">
+            <name>ТоварыНаСкладе</name>
+            <description>Товары на складе</description>
+            <code>20351</code>
+            <order>20351</order>
+            <accountingFlags>ChartOfAccounts.Бюджетирование.AccountingFlag.Количественный</accountingFlags>
+            <extDimensionTypes>
+              <characteristicType>ChartOfCharacteristicTypes.ВидыСубконтоБюджетирования.Номенклатура</characteristicType>
+              <extDimensionAccountingFlags>ChartOfAccounts.Бюджетирование.ExtDimensionAccountingFlag.Суммовой</extDimensionAccountingFlags>
+              <extDimensionAccountingFlags>ChartOfAccounts.Бюджетирование.ExtDimensionAccountingFlag.Количественный</extDimensionAccountingFlags>
+              <extDimensionAccountingFlags>ChartOfAccounts.Бюджетирование.ExtDimensionAccountingFlag.Валютный</extDimensionAccountingFlags>
+            </extDimensionTypes>
+          </childItems>
+          <childItems id="ac4b364e-4053-11d8-9685-0050ba83c28e">
+            <name>ТоварыВРозницеНетто</name>
+            <description>Товары в розничной торговле (за вчетом наценки)</description>
+            <code>20352</code>
+            <order>20352</order>
+            <accountingFlags>ChartOfAccounts.Бюджетирование.AccountingFlag.Количественный</accountingFlags>
+            <childItems id="ac4b369a-4053-11d8-9685-0050ba83c28e">
+              <name>ТоварыВРознице</name>
+              <description>Товары в рознице</description>
+              <code>203521</code>
+              <order>203521</order>
+              <accountingFlags>ChartOfAccounts.Бюджетирование.AccountingFlag.Количественный</accountingFlags>
+              <extDimensionTypes>
+                <characteristicType>ChartOfCharacteristicTypes.ВидыСубконтоБюджетирования.Номенклатура</characteristicType>
+                <extDimensionAccountingFlags>ChartOfAccounts.Бюджетирование.ExtDimensionAccountingFlag.Суммовой</extDimensionAccountingFlags>
+                <extDimensionAccountingFlags>ChartOfAccounts.Бюджетирование.ExtDimensionAccountingFlag.Количественный</extDimensionAccountingFlags>
+                <extDimensionAccountingFlags>ChartOfAccounts.Бюджетирование.ExtDimensionAccountingFlag.Валютный</extDimensionAccountingFlags>
+              </extDimensionTypes>
+            </childItems>
+            <childItems id="ac4b36af-4053-11d8-9685-0050ba83c28e">
+              <name>ТорговаяНаценка</name>
+              <description>Торговая наценка</description>
+              <code>203522</code>
+              <accountType>Passive</accountType>
+              <order>203522</order>
+            </childItems>
+          </childItems>
+          <childItems id="559ca16e-61e2-401d-b886-d95d184e08b0">
+            <name>ТараПодТоварами</name>
+            <description>Тара под товарами</description>
+            <code>20353</code>
+            <order>20353</order>
+            <accountingFlags>ChartOfAccounts.Бюджетирование.AccountingFlag.Количественный</accountingFlags>
+            <extDimensionTypes>
+              <characteristicType>ChartOfCharacteristicTypes.ВидыСубконтоБюджетирования.Номенклатура</characteristicType>
+              <extDimensionAccountingFlags>ChartOfAccounts.Бюджетирование.ExtDimensionAccountingFlag.Суммовой</extDimensionAccountingFlags>
+              <extDimensionAccountingFlags>ChartOfAccounts.Бюджетирование.ExtDimensionAccountingFlag.Количественный</extDimensionAccountingFlags>
+              <extDimensionAccountingFlags>ChartOfAccounts.Бюджетирование.ExtDimensionAccountingFlag.Валютный</extDimensionAccountingFlags>
+            </extDimensionTypes>
+          </childItems>
+        </childItems>
+        <childItems id="e79167b8-5b34-4912-9327-112d8ff0758c">
+          <name>ПрочиеЗапасы</name>
+          <description>Прочие запасы</description>
+          <code>2036</code>
+          <order>2036</order>
+          <accountingFlags>ChartOfAccounts.Бюджетирование.AccountingFlag.Количественный</accountingFlags>
+          <extDimensionTypes>
+            <characteristicType>ChartOfCharacteristicTypes.ВидыСубконтоБюджетирования.Номенклатура</characteristicType>
+            <extDimensionAccountingFlags>ChartOfAccounts.Бюджетирование.ExtDimensionAccountingFlag.Суммовой</extDimensionAccountingFlags>
+            <extDimensionAccountingFlags>ChartOfAccounts.Бюджетирование.ExtDimensionAccountingFlag.Количественный</extDimensionAccountingFlags>
+          </extDimensionTypes>
+          <childItems id="ac4b36c6-4053-11d8-9685-0050ba83c28e">
+            <name>ТоварыНаКомиссии</name>
+            <description>Товары на комиссии</description>
+            <code>20361</code>
+            <order>20361</order>
+            <accountingFlags>ChartOfAccounts.Бюджетирование.AccountingFlag.Количественный</accountingFlags>
+            <extDimensionTypes>
+              <characteristicType>ChartOfCharacteristicTypes.ВидыСубконтоБюджетирования.Номенклатура</characteristicType>
+              <extDimensionAccountingFlags>ChartOfAccounts.Бюджетирование.ExtDimensionAccountingFlag.Суммовой</extDimensionAccountingFlags>
+              <extDimensionAccountingFlags>ChartOfAccounts.Бюджетирование.ExtDimensionAccountingFlag.Количественный</extDimensionAccountingFlags>
+              <extDimensionAccountingFlags>ChartOfAccounts.Бюджетирование.ExtDimensionAccountingFlag.Валютный</extDimensionAccountingFlags>
+            </extDimensionTypes>
+          </childItems>
+          <childItems id="ac4b373c-4053-11d8-9685-0050ba83c28e">
+            <name>ВыполненныеЭтапыРабот</name>
+            <description>Выполненные этапы работ</description>
+            <code>20362</code>
+            <order>20362</order>
+          </childItems>
+          <childItems id="14f843ed-48d7-411e-90e9-e43dfa838683">
+            <name>МалоценныеИБыстроизнашивающиесяПредметы</name>
+            <description>Малоценные и быстроизнашивающиеся предметы</description>
+            <code>20363</code>
+            <order>20363</order>
+            <accountingFlags>ChartOfAccounts.Бюджетирование.AccountingFlag.Количественный</accountingFlags>
+            <extDimensionTypes>
+              <characteristicType>ChartOfCharacteristicTypes.ВидыСубконтоБюджетирования.Номенклатура</characteristicType>
+              <extDimensionAccountingFlags>ChartOfAccounts.Бюджетирование.ExtDimensionAccountingFlag.Суммовой</extDimensionAccountingFlags>
+              <extDimensionAccountingFlags>ChartOfAccounts.Бюджетирование.ExtDimensionAccountingFlag.Количественный</extDimensionAccountingFlags>
+              <extDimensionAccountingFlags>ChartOfAccounts.Бюджетирование.ExtDimensionAccountingFlag.Валютный</extDimensionAccountingFlags>
+            </extDimensionTypes>
+          </childItems>
+        </childItems>
+      </childItems>
+      <childItems id="72def970-de5f-426b-85d3-a01910e5ee2f">
+        <name>ФинансовыеВложенияКраткосрочные</name>
+        <description>Прочие финансовые вложения, краткосрочные</description>
+        <code>204</code>
+        <order>204     </order>
+        <childItems id="192b8f49-8e6c-4c19-abf4-83b2b6e4e1ac">
+          <name>ВложенияДляПродажиКраткосрочные</name>
+          <description>Вложения для продажи, краткосрочные</description>
+          <code>2041</code>
+          <order>2041</order>
+        </childItems>
+        <childItems id="5a5e3e42-b2e5-45bc-b263-1ec6f0908dba">
+          <name>ВложенияДляДивидендовКраткосрочные</name>
+          <description>Вложения для дивидендов, краткосрочные</description>
+          <code>2042</code>
+          <order>2042</order>
+        </childItems>
+        <childItems id="77d71a2b-c975-4a3c-9bce-e18e89f95606">
+          <name>ЗаймыВыданныеКраткосрочные</name>
+          <description>Займы выданные, краткосрочные</description>
+          <code>2043</code>
+          <order>2043</order>
+        </childItems>
+        <childItems id="9e935121-3009-46ce-84b7-a448de24f5c2">
+          <name>ИнвестицииДляПродажиТекущие</name>
+          <description>Инвестиции для продажи, текущие</description>
+          <code>2044</code>
+          <order>2044</order>
+        </childItems>
+        <childItems id="074c108d-2088-4eae-b5d8-e1121f7b0085">
+          <name>ПрочиеФинасовыеВложенияТекущие</name>
+          <description>Прочие финасовые вложения, текущие</description>
+          <code>2045</code>
+          <order>2045</order>
+        </childItems>
+      </childItems>
+      <childItems id="1630d252-9a19-49eb-8f09-0f406d4c37fc">
+        <name>НалогиКВозмещению</name>
+        <description>Налоги к возмещению из бюджета</description>
+        <code>206</code>
+        <order>206  </order>
+        <childItems id="ba8ba12a-2756-4993-8053-db261e7a5ab6">
+          <name>НДСКВозмещению</name>
+          <description>НДС к возмещению из бюджета</description>
+          <code>2061</code>
+          <order>2061</order>
+        </childItems>
+      </childItems>
+      <childItems id="e23a178a-66d6-4731-961f-31c39c75b961">
+        <name>ДебиторскаяЗадолженностьТекущая</name>
+        <description>Дебиторская задолженность, текущая</description>
+        <code>207</code>
+        <order>207     </order>
+        <accountingFlags>ChartOfAccounts.Бюджетирование.AccountingFlag.Валютный</accountingFlags>
+        <extDimensionTypes>
+          <characteristicType>ChartOfCharacteristicTypes.ВидыСубконтоБюджетирования.Контрагенты</characteristicType>
+          <extDimensionAccountingFlags>ChartOfAccounts.Бюджетирование.ExtDimensionAccountingFlag.Суммовой</extDimensionAccountingFlags>
+          <extDimensionAccountingFlags>ChartOfAccounts.Бюджетирование.ExtDimensionAccountingFlag.Валютный</extDimensionAccountingFlags>
+        </extDimensionTypes>
+        <childItems id="7e066354-988f-43d3-ba57-71f464f45e51">
+          <name>ЗадолженностьПокупателейНеттоТекущая</name>
+          <description>Задолженность покупателей и заказчиков, за вычетом резервов, текущая</description>
+          <code>2071</code>
+          <order>2071</order>
+          <childItems id="79632fe5-2815-4312-9cd0-fc015558d1e4">
+            <name>ЗадолженностьПокупателейТекущая</name>
+            <description>Задолженность покупателей, текущая</description>
+            <code>20711</code>
+            <order>20711</order>
+            <accountingFlags>ChartOfAccounts.Бюджетирование.AccountingFlag.Валютный</accountingFlags>
+            <extDimensionTypes>
+              <characteristicType>ChartOfCharacteristicTypes.ВидыСубконтоБюджетирования.Контрагенты</characteristicType>
+              <extDimensionAccountingFlags>ChartOfAccounts.Бюджетирование.ExtDimensionAccountingFlag.Суммовой</extDimensionAccountingFlags>
+              <extDimensionAccountingFlags>ChartOfAccounts.Бюджетирование.ExtDimensionAccountingFlag.Валютный</extDimensionAccountingFlags>
+            </extDimensionTypes>
+          </childItems>
+          <childItems id="c0cf8e6f-b201-45e6-a9c4-d2ad71c49e88">
+            <name>РезервЗадолженностьПокупателейТекущая</name>
+            <description>Резерв задолженность покупателей, текущая</description>
+            <code>20712</code>
+            <accountType>Passive</accountType>
+            <order>20712</order>
+          </childItems>
+        </childItems>
+        <childItems id="f78e5744-8fd4-42b5-8cbd-0ab48d89999a">
+          <name>ЗадолженностьСвязанныхСторонНеттоТекущая</name>
+          <description>Задолженность по расчетам со связанным сторонами, нетто, текущая</description>
+          <code>2072</code>
+          <order>2072</order>
+          <childItems id="2002c5bb-f0f4-4ac5-98a9-ed7a6cb6080e">
+            <name>ЗадолженностьСвязанныхСторонТекущая</name>
+            <description>Задолженность связанных сторон, текущая</description>
+            <code>20721</code>
+            <order>20721</order>
+            <accountingFlags>ChartOfAccounts.Бюджетирование.AccountingFlag.Валютный</accountingFlags>
+            <childItems id="38c530e4-45b6-4c7e-b6dc-09f15873db02">
+              <name>ЗадолженностьДочернихОрганизацийТекущая</name>
+              <description>Задолженность дочерних организаций, текущая</description>
+              <code>207211</code>
+              <order>207211</order>
+              <accountingFlags>ChartOfAccounts.Бюджетирование.AccountingFlag.Валютный</accountingFlags>
+            </childItems>
+            <childItems id="6876a675-41a4-4da5-8009-a34aba21011e">
+              <name>ЗадолженностьЗависимыхОрганизацийТекущая</name>
+              <description>Задолженность зависимых организаций, текущая</description>
+              <code>207212</code>
+              <order>207212</order>
+              <accountingFlags>ChartOfAccounts.Бюджетирование.AccountingFlag.Валютный</accountingFlags>
+            </childItems>
+            <childItems id="6a487b53-0e49-4d10-9b17-e4c7dcfed748">
+              <name>ЗадолженностьСовместныхЮрЛицТекущая</name>
+              <description>Задолженность совместно-контролируемых юридических лиц, долгосрочная</description>
+              <code>207213</code>
+              <order>207213</order>
+              <accountingFlags>ChartOfAccounts.Бюджетирование.AccountingFlag.Валютный</accountingFlags>
+            </childItems>
+          </childItems>
+          <childItems id="75a4e526-aaf7-4c5b-8660-7a0485004fa4">
+            <name>РезервЗадолженностьСвязанныхСторонТекущая</name>
+            <description>Резерв задолженность связанных сторон, текущая</description>
+            <code>20722</code>
+            <accountType>Passive</accountType>
+            <order>20722</order>
+          </childItems>
+        </childItems>
+        <childItems id="ae68b114-cd13-4d13-b72a-1642120fadea">
+          <name>ПлатежиПоФинАрендеКПолучениюНеттоТекущие</name>
+          <description>Платежи по финансовой аренде к получению, за вычетом резервов, текущие</description>
+          <code>2073</code>
+          <order>2073</order>
+          <childItems id="988e6363-c098-45a7-8b17-2b8fc07573ab">
+            <name>ПлатежиПоФинАрендеКПолучениюТекущие</name>
+            <description>Платежи по финансовой аренде к получению, текущие</description>
+            <code>20731</code>
+            <order>20731</order>
+            <accountingFlags>ChartOfAccounts.Бюджетирование.AccountingFlag.Валютный</accountingFlags>
+          </childItems>
+          <childItems id="b2ccb7ed-bb28-4605-9233-ee6e93f8ec8c">
+            <name>РезервПлатежиПоФинАрендеКПолучениюТекущие</name>
+            <description>Резерв на неполучение платежей по финансовой аренде к получению, текущим</description>
+            <code>20732</code>
+            <accountType>Passive</accountType>
+            <order>20732</order>
+          </childItems>
+        </childItems>
+        <childItems id="834cf750-ce45-4fcd-a310-3619e0416fbf">
+          <name>ПрочаяДебиторскаяЗадолженностьНеттоТекущая</name>
+          <description>Прочая дебиторская задолженность, текущая, за вычетом резервов</description>
+          <code>2074</code>
+          <order>2074</order>
+          <childItems id="6860dd61-f667-464c-a5c6-50a5bffd46b2">
+            <name>ПрочаяДебиторскаяЗадолженностьТекущая</name>
+            <description>Прочая дебиторская задолженность, текущая</description>
+            <code>20741</code>
+            <order>20741</order>
+            <accountingFlags>ChartOfAccounts.Бюджетирование.AccountingFlag.Валютный</accountingFlags>
+          </childItems>
+          <childItems id="06a2ecdb-ba7d-42ee-b23d-10d5436b99d9">
+            <name>РезервПрочаяДебиторскаяЗадолженностьТекущая</name>
+            <description>Резерв сомнительной прочей дебиторской задолженности, текущей</description>
+            <code>20742</code>
+            <accountType>Passive</accountType>
+            <order>20742</order>
+          </childItems>
+          <childItems id="252919fd-5d75-4706-846f-3af3754912e1">
+            <name>РасчетыСПодотчетнымиЛицами</name>
+            <description>Расчеты с подотчетными лицами</description>
+            <code>20743</code>
+            <order>20743</order>
+            <accountingFlags>ChartOfAccounts.Бюджетирование.AccountingFlag.Валютный</accountingFlags>
+          </childItems>
+          <childItems id="e964bf65-ec4b-4dba-a0fc-36f05c5e74ba">
+            <name>РасчетыЗаРазмещенныеАкции</name>
+            <description>Расчеты за размещенные акции</description>
+            <code>20744</code>
+            <order>20744</order>
+          </childItems>
+        </childItems>
+        <childItems id="e738142d-7e00-4cbc-8df1-073308e13a84">
+          <name>АвансыВыданныеТекущие</name>
+          <description>Авансы выданные, текущие</description>
+          <code>2075</code>
+          <order>2075</order>
+          <accountingFlags>ChartOfAccounts.Бюджетирование.AccountingFlag.Валютный</accountingFlags>
+          <extDimensionTypes>
+            <characteristicType>ChartOfCharacteristicTypes.ВидыСубконтоБюджетирования.Контрагенты</characteristicType>
+            <extDimensionAccountingFlags>ChartOfAccounts.Бюджетирование.ExtDimensionAccountingFlag.Суммовой</extDimensionAccountingFlags>
+            <extDimensionAccountingFlags>ChartOfAccounts.Бюджетирование.ExtDimensionAccountingFlag.Валютный</extDimensionAccountingFlags>
+          </extDimensionTypes>
+        </childItems>
+      </childItems>
+      <childItems id="d5ca2a82-6654-4fef-99fe-b949f09e2b19">
+        <name>ДенежныеСредства</name>
+        <description>Денежные средства и их эквиваленты</description>
+        <code>208</code>
+        <order>208     </order>
+        <accountingFlags>ChartOfAccounts.Бюджетирование.AccountingFlag.Валютный</accountingFlags>
+        <childItems id="81ac9325-78a1-433f-aa12-6db12418769f">
+          <name>Касса</name>
+          <description>Касса</description>
+          <code>2081</code>
+          <order>2081</order>
+          <accountingFlags>ChartOfAccounts.Бюджетирование.AccountingFlag.Валютный</accountingFlags>
+        </childItems>
+        <childItems id="eed99afb-816f-4c6a-8c32-694275494b7b">
+          <name>СчетаВБанках</name>
+          <description>Счета в банках</description>
+          <code>2082</code>
+          <order>2082</order>
+          <accountingFlags>ChartOfAccounts.Бюджетирование.AccountingFlag.Валютный</accountingFlags>
+        </childItems>
+        <childItems id="8d4d1dfc-25cb-457b-b43c-c99826df8952">
+          <name>КраткосрочныеДепозиты</name>
+          <description>Краткосрочные депозиты</description>
+          <code>2083</code>
+          <order>2083</order>
+          <accountingFlags>ChartOfAccounts.Бюджетирование.AccountingFlag.Валютный</accountingFlags>
+        </childItems>
+        <childItems id="0b172e41-3314-444f-8888-5fafc6786895">
+          <name>ПрочиеДенежныеСредства</name>
+          <description>Прочие денежные средства</description>
+          <code>2084</code>
+          <order>2084</order>
+          <accountingFlags>ChartOfAccounts.Бюджетирование.AccountingFlag.Валютный</accountingFlags>
+        </childItems>
+      </childItems>
+      <childItems id="d90d5a63-3811-43eb-a74e-34e23f140217">
+        <name>ПрочиеТекущиеАктивы</name>
+        <description>Прочие текущие активы</description>
+        <code>209</code>
+        <order>209     </order>
+        <childItems id="c0b3cec2-1a43-47f9-b3fa-f8dbc96f0506">
+          <name>ОтложенныеРасходы</name>
+          <description>Отложенные расходы</description>
+          <code>2091</code>
+          <order>2091</order>
+        </childItems>
+        <childItems id="3caf9143-a49b-4375-9e3b-862c7abbb8f5">
+          <name>НалоговыеОбязательстваВсего</name>
+          <description>Налоговые обязательства, всего</description>
+          <code>2092</code>
+          <accountType>ActivePassive</accountType>
+          <order>2092</order>
+          <childItems id="7b78907f-153d-46e7-88ab-d87e6d4ee2cb">
+            <name>НалоговыеОбязательства</name>
+            <description>Налоговые обязательства</description>
+            <code>20921</code>
+            <order>20921   </order>
+          </childItems>
+          <childItems id="9e9f0c30-4241-4e31-a811-96f943b57283">
+            <name>НалоговыеОбязательстваНеподтвержденные</name>
+            <description>Налоговые обязательства неподтвержденные</description>
+            <code>20922</code>
+            <accountType>Passive</accountType>
+            <order>20922</order>
+          </childItems>
+          <childItems id="0bf1f27c-74eb-4ba5-9b03-4f2d18912c6c">
+            <name>КорректировкиНалоговыхОбязательств</name>
+            <description>Корректировки налоговых обязательств</description>
+            <code>20923</code>
+            <accountType>ActivePassive</accountType>
+            <order>20923</order>
+          </childItems>
+        </childItems>
+        <childItems id="a8492d95-91ec-43a3-a9ad-e6503e9a6adc">
+          <name>НалоговыйКредитВсего</name>
+          <description>Налоговый кредит, всего</description>
+          <code>2093</code>
+          <accountType>ActivePassive</accountType>
+          <order>2093</order>
+          <childItems id="9df35915-4f56-45f7-ab55-b756485876d4">
+            <name>НалоговыйКредит</name>
+            <description>Налоговый кредит</description>
+            <code>20931</code>
+            <accountType>Passive</accountType>
+            <order>20931</order>
+          </childItems>
+          <childItems id="77c42edf-af66-40f1-8da1-4d69ae4b5fbb">
+            <name>НалоговыйКредитНеподтвержденный</name>
+            <description>Налоговый кредит неподтвержденный</description>
+            <code>20932</code>
+            <order>20932</order>
+          </childItems>
+          <childItems id="612e87a1-ba43-4343-896e-f523f69a918a">
+            <name>КорректировкиНалоговогоКредита</name>
+            <description>Корректировки налогового кредита</description>
+            <code>20933</code>
+            <accountType>ActivePassive</accountType>
+            <order>20933</order>
+          </childItems>
+        </childItems>
+      </childItems>
+    </items>
+    <items id="c336ade6-e1b1-4979-84dd-0f8fb5061151">
+      <name>СобственныйКапиталИРезервы</name>
+      <description>Собственный капитал и резервы</description>
+      <code>300</code>
+      <accountType>Passive</accountType>
+      <order>300</order>
+      <childItems id="f6a24e72-460e-4015-9e0e-487c9a37bfee">
+        <name>СобственныйКапитал</name>
+        <description>Собственный капитал</description>
+        <code>301</code>
+        <accountType>Passive</accountType>
+        <order>301</order>
+        <childItems id="40294706-bcd3-473c-9bdd-17ea3b54fc6c">
+          <name>ОбыкновенныеАкции</name>
+          <description>Акционерный капитал, обыкновенные акции</description>
+          <code>3011</code>
+          <accountType>Passive</accountType>
+          <order>3011</order>
+          <accountingFlags>ChartOfAccounts.Бюджетирование.AccountingFlag.Количественный</accountingFlags>
+        </childItems>
+        <childItems id="ba32e46f-aa7c-41f3-ac97-8b7cfba1ff99">
+          <name>ЭмиссионныйДоходОбыкновенныеАкции</name>
+          <description>Эмиссионный доход, обыкновенные акции</description>
+          <code>3012</code>
+          <accountType>Passive</accountType>
+          <order>3012</order>
+        </childItems>
+        <childItems id="2034929c-0c6b-4a59-90df-b5a653ced063">
+          <name>ПривилегированныеАкции</name>
+          <description>Привилегированные акции</description>
+          <code>3013</code>
+          <accountType>Passive</accountType>
+          <order>3013</order>
+          <accountingFlags>ChartOfAccounts.Бюджетирование.AccountingFlag.Количественный</accountingFlags>
+        </childItems>
+        <childItems id="9db5bd58-f5cb-4c65-9716-1b039df3c228">
+          <name>ЭмиссионныйДоходПривилегированныеАкции</name>
+          <description>Эмиссионный доход, привилегированные акции</description>
+          <code>3014</code>
+          <accountType>Passive</accountType>
+          <order>3014</order>
+        </childItems>
+        <childItems id="c47e299a-8689-4145-a699-d78c286dd6a7">
+          <name>СобственныйКапиталПрочее</name>
+          <description>Собственный капитал, прочее</description>
+          <code>3015</code>
+          <accountType>Passive</accountType>
+          <order>3015</order>
+        </childItems>
+      </childItems>
+      <childItems id="687af55b-f497-470b-8add-5e3c6dcf1d7c">
+        <name>Резервы</name>
+        <description>Резервы</description>
+        <code>302</code>
+        <accountType>Passive</accountType>
+        <order>302</order>
+        <childItems id="7cd7492e-c6bf-4036-931a-74a58e3490e8">
+          <name>РезервыПотерьКапитала</name>
+          <description>Резервы безнадежных потерь капитала</description>
+          <code>3021</code>
+          <accountType>Passive</accountType>
+          <order>3021</order>
+        </childItems>
+        <childItems id="0b0b8292-9704-4b80-8f4f-2f9593ad9a0d">
+          <name>РезервыНаСлияние</name>
+          <description>Резервы на слияние</description>
+          <code>3022</code>
+          <accountType>Passive</accountType>
+          <order>3022</order>
+        </childItems>
+        <childItems id="08f682a1-4d1a-4f5c-a8dd-47aaa4d35571">
+          <name>РезервыПоОпционам</name>
+          <description>Резервы по опционам</description>
+          <code>3023</code>
+          <accountType>Passive</accountType>
+          <order>3023</order>
+        </childItems>
+        <childItems id="9ca5eb33-befa-4da2-ae83-105078aad710">
+          <name>РезервыПоВаррантам</name>
+          <description>Резервы по варрантам</description>
+          <code>3024</code>
+          <accountType>Passive</accountType>
+          <order>3024</order>
+        </childItems>
+        <childItems id="0af10ad6-704e-4153-bec5-6e35ccb37dc5">
+          <name>РезервыНаОбъявленныеДивиденды</name>
+          <description>Резервы на объявленные дивиденды</description>
+          <code>3025</code>
+          <accountType>Passive</accountType>
+          <order>3025</order>
+        </childItems>
+        <childItems id="af3a9382-c2f0-47a6-b75e-7ab8dc3e5a95">
+          <name>РезервыНаПеревод</name>
+          <description>Резервы на перевод</description>
+          <code>3026</code>
+          <accountType>Passive</accountType>
+          <order>3026</order>
+        </childItems>
+        <childItems id="ec09b7c0-0eea-41d1-aeb9-1f562d6116e7">
+          <name>РезервыНаПереоценку</name>
+          <description>Резервы на переоценку</description>
+          <code>3027</code>
+          <accountType>Passive</accountType>
+          <order>3027</order>
+          <childItems id="357e4f72-f658-4498-8028-99e85c820dcb">
+            <name>РезервыНаПереоценкуОСиИС</name>
+            <description>Резервы на переоценку ОС и инвестиционной собственности</description>
+            <code>30271</code>
+            <accountType>Passive</accountType>
+            <order>30271</order>
+          </childItems>
+          <childItems id="4ddab125-32c0-4659-8fcf-b6d2c5a5dfb6">
+            <name>РезервыНаПереоценкуНМА</name>
+            <description>Резервы на переоценку НМА</description>
+            <code>30272</code>
+            <accountType>Passive</accountType>
+            <order>30272</order>
+          </childItems>
+          <childItems id="5239aaa8-91eb-49f3-b574-85d246a17218">
+            <name>РезервыНаПереоценкуФА</name>
+            <description>Резервы на переоценку долгосрочных фин. активов</description>
+            <code>30273</code>
+            <accountType>Passive</accountType>
+            <order>30273</order>
+          </childItems>
+        </childItems>
+        <childItems id="8b7868f9-bde2-4a60-a6a7-c2219b1113d0">
+          <name>РезервыПоХеджированию</name>
+          <description>Резервы по хеджированию</description>
+          <code>3028</code>
+          <accountType>Passive</accountType>
+          <order>3028</order>
+        </childItems>
+        <childItems id="dd5ac50a-4390-4012-85fd-a4b1fae42282">
+          <name>РезервыПодПродажуАктивов</name>
+          <description>Резервы под продажу активов</description>
+          <code>3029</code>
+          <accountType>Passive</accountType>
+          <order>3029</order>
+        </childItems>
+        <childItems id="d537eef7-a115-4c37-9147-e963d2ebc85a">
+          <name>ПрочиеРезервы</name>
+          <description>Прочие резервы</description>
+          <code>302X</code>
+          <accountType>ActivePassive</accountType>
+          <order>302X</order>
+        </childItems>
+      </childItems>
+      <childItems id="5dfcd2a7-0b70-401e-9c02-17aa6a6d2164">
+        <name>СобственныеАкцииВыкупленные</name>
+        <description>Собственные акции, выкупленные у акционеров</description>
+        <code>303</code>
+        <order>303</order>
+        <accountingFlags>ChartOfAccounts.Бюджетирование.AccountingFlag.Количественный</accountingFlags>
+        <childItems id="d1d89941-f6f0-42c0-995e-4b9ffb4a40af">
+          <name>ОбыкновенныеАкцииВыкупленные</name>
+          <description>Обыкновенные акции выкупленные</description>
+          <code>3031</code>
+          <order>3031</order>
+          <accountingFlags>ChartOfAccounts.Бюджетирование.AccountingFlag.Количественный</accountingFlags>
+        </childItems>
+        <childItems id="ea96fbe0-c59f-455f-b2cc-6e9eff13f54b">
+          <name>ПривилигерованныеАкцииВыкупленные</name>
+          <description>Привилигерованные акции выкупленные</description>
+          <code>3032</code>
+          <order>3032</order>
+          <accountingFlags>ChartOfAccounts.Бюджетирование.AccountingFlag.Количественный</accountingFlags>
+        </childItems>
+      </childItems>
+      <childItems id="8cbfffa1-fb1a-4c34-b1d9-7e4e4e883537">
+        <name>НераспределеннаяПрибыль</name>
+        <description>Нераспределенная прибыль (непокрытый убыток)</description>
+        <code>304</code>
+        <accountType>Passive</accountType>
+        <order>304</order>
+      </childItems>
+      <childItems id="019b676e-0626-4f26-ac88-06686964ea10">
+        <name>РазмещенныйКапитал</name>
+        <description>Размещенный капитал</description>
+        <code>305</code>
+        <accountType>Passive</accountType>
+        <order>305</order>
+        <accountingFlags>ChartOfAccounts.Бюджетирование.AccountingFlag.Количественный</accountingFlags>
+      </childItems>
+      <childItems id="9cc1dbf3-dea7-402b-9719-ce7e272dea64">
+        <name>ДоляМеньшинства</name>
+        <description>Доля меньшинства в чистых активах</description>
+        <code>306</code>
+        <accountType>Passive</accountType>
+        <order>306</order>
+      </childItems>
+    </items>
+    <items id="ad67cfe0-ce04-4a65-b7ea-584289f51ae2">
+      <name>ДолгосрочныеОбязательства</name>
+      <description>Долгосрочные обязательства</description>
+      <code>400</code>
+      <accountType>Passive</accountType>
+      <order>400</order>
+      <childItems id="dc29d96c-ebde-4e31-92a3-a3630955c069">
+        <name>КредитыЗаймыПроцентныеДолгосрочные</name>
+        <description>Кредиты и займы, включающие выплату процентов, долгосрочные</description>
+        <code>401</code>
+        <accountType>Passive</accountType>
+        <order>401</order>
+        <accountingFlags>ChartOfAccounts.Бюджетирование.AccountingFlag.Валютный</accountingFlags>
+        <childItems id="3ee8fa33-d90f-42cc-b697-6d5d0f5c45dc">
+          <name>КредитыБанковДолгосрочные</name>
+          <description>Кредиты банков, долгосрочные</description>
+          <code>4011</code>
+          <accountType>Passive</accountType>
+          <order>4011</order>
+          <accountingFlags>ChartOfAccounts.Бюджетирование.AccountingFlag.Валютный</accountingFlags>
+          <childItems id="ac4b3757-4053-11d8-9685-0050ba83c28e">
+            <name>КредитыДолгосрочныеБезПроцентовНеВалютные</name>
+            <description>Долгосрочные кредиты без учета процентов в валюте отчетности</description>
+            <code>40111</code>
+            <accountType>Passive</accountType>
+            <order>40111</order>
+          </childItems>
+          <childItems id="ac4b376a-4053-11d8-9685-0050ba83c28e">
+            <name>ПроцентыПоКредитамДолгосрочнымНеВалютные</name>
+            <description>Проценты по долгосрочным кредитам в валюте отчетности</description>
+            <code>40112</code>
+            <accountType>Passive</accountType>
+            <order>40112</order>
+          </childItems>
+          <childItems id="ac4b37a1-4053-11d8-9685-0050ba83c28e">
+            <name>КредитыДолгосрочныеБезПроцентовВалютные</name>
+            <description>Долгосрочные кредиты без учета процентов в инвалюте</description>
+            <code>40113</code>
+            <accountType>Passive</accountType>
+            <order>40113</order>
+            <accountingFlags>ChartOfAccounts.Бюджетирование.AccountingFlag.Валютный</accountingFlags>
+          </childItems>
+          <childItems id="ac4b37b4-4053-11d8-9685-0050ba83c28e">
+            <name>ПроцентыПоКредитамДолгосрочнымВалютные</name>
+            <description>Проценты по долгосрочным кредитам в инвалюте</description>
+            <code>40114</code>
+            <accountType>Passive</accountType>
+            <order>40114</order>
+            <accountingFlags>ChartOfAccounts.Бюджетирование.AccountingFlag.Валютный</accountingFlags>
+          </childItems>
+        </childItems>
+        <childItems id="51a7fe34-b601-4ad5-ae64-d450c38123f1">
+          <name>ЗаймыОбеспеченныеДолгосрочные</name>
+          <description>Займы обеспеченные, долгосрочные</description>
+          <code>4012</code>
+          <accountType>Passive</accountType>
+          <order>4012</order>
+          <accountingFlags>ChartOfAccounts.Бюджетирование.AccountingFlag.Валютный</accountingFlags>
+        </childItems>
+        <childItems id="19de70c6-addc-49bf-bfb7-741e94dfe70a">
+          <name>КонвертируемыеЗаймыДолгосрочные</name>
+          <description>Конвертируемые займы, долгосрочные</description>
+          <code>4013</code>
+          <accountType>Passive</accountType>
+          <order>4013</order>
+          <accountingFlags>ChartOfAccounts.Бюджетирование.AccountingFlag.Валютный</accountingFlags>
+        </childItems>
+        <childItems id="5560efc6-159c-4719-b962-7beaf4d45c8e">
+          <name>ОбязательстваПоВыкупуАкцийДолгосрочные</name>
+          <description>Обязательства по выкупу акций, долгосрочные</description>
+          <code>4014</code>
+          <accountType>Passive</accountType>
+          <order>4014</order>
+          <accountingFlags>ChartOfAccounts.Бюджетирование.AccountingFlag.Валютный</accountingFlags>
+        </childItems>
+        <childItems id="8b7cb26e-3493-423a-a2c4-d4ac94149e3b">
+          <name>ЛизинговыеПлатежиДолгосрочные</name>
+          <description>Лизинговые платежи, долгосрочные</description>
+          <code>4015</code>
+          <accountType>Passive</accountType>
+          <order>4015</order>
+          <accountingFlags>ChartOfAccounts.Бюджетирование.AccountingFlag.Валютный</accountingFlags>
+        </childItems>
+        <childItems id="82c0784b-6494-497a-9b32-34a385fbacd0">
+          <name>ПрочиеЗаймыДолгосрочные</name>
+          <description>Прочие займы долгосрочные</description>
+          <code>4016</code>
+          <accountType>Passive</accountType>
+          <order>4016</order>
+          <accountingFlags>ChartOfAccounts.Бюджетирование.AccountingFlag.Валютный</accountingFlags>
+          <childItems id="ac4b37ca-4053-11d8-9685-0050ba83c28e">
+            <name>ЗаймыДолгосрочныеПрочиеБезУчетаПроцентовНеВалютные</name>
+            <description>Займы долгосрочные прочие без учета процентов в валюте отчетности</description>
+            <code>40161</code>
+            <accountType>Passive</accountType>
+            <order>40161</order>
+          </childItems>
+          <childItems id="ac4b37f3-4053-11d8-9685-0050ba83c28e">
+            <name>ПроцентыПоПрочимДолгосрочнымЗаймамНеВалютные</name>
+            <description>Проценты по прочим долгосрочным займам не валютные</description>
+            <code>40162</code>
+            <accountType>Passive</accountType>
+            <order>40162</order>
+          </childItems>
+          <childItems id="ac4b37dd-4053-11d8-9685-0050ba83c28e">
+            <name>ЗаймыДолгосрочныеПрочиеБезУчетаПроцентовВалютные</name>
+            <description>Займы долгосрочные прочие без учета процентов в инвалюте</description>
+            <code>40163</code>
+            <accountType>Passive</accountType>
+            <order>40163</order>
+            <accountingFlags>ChartOfAccounts.Бюджетирование.AccountingFlag.Валютный</accountingFlags>
+          </childItems>
+          <childItems id="ac4b3806-4053-11d8-9685-0050ba83c28e">
+            <name>ПроцентыПоПрочимДолгосрочнымЗаймамВалютные</name>
+            <description>Проценты по прочим долгосрочным займам в инвалюте</description>
+            <code>40164</code>
+            <accountType>Passive</accountType>
+            <order>40164</order>
+            <accountingFlags>ChartOfAccounts.Бюджетирование.AccountingFlag.Валютный</accountingFlags>
+          </childItems>
+        </childItems>
+      </childItems>
+      <childItems id="92e4fe01-ee78-4ccd-9b64-2474ddd86eb7">
+        <name>ДолгосрочныеЗаймыБеспроцентные</name>
+        <description>Долгосрочные займы, беспроцентные</description>
+        <code>402</code>
+        <accountType>Passive</accountType>
+        <order>402</order>
+        <accountingFlags>ChartOfAccounts.Бюджетирование.AccountingFlag.Валютный</accountingFlags>
+        <childItems id="ac4b382e-4053-11d8-9685-0050ba83c28e">
+          <name>ДолгосрочныеЗаймыБеспроцентныеНеВалютные</name>
+          <description>Долгосрочные займы беспроцентные не валютные</description>
+          <code>4021</code>
+          <accountType>Passive</accountType>
+          <order>4021</order>
+        </childItems>
+        <childItems id="ac4b3841-4053-11d8-9685-0050ba83c28e">
+          <name>ДолгосрочныеЗаймыБеспроцентныеВалютные</name>
+          <description>Долгосрочные займы беспроцентные валютные</description>
+          <code>4022</code>
+          <accountType>Passive</accountType>
+          <order>4022</order>
+          <accountingFlags>ChartOfAccounts.Бюджетирование.AccountingFlag.Валютный</accountingFlags>
+        </childItems>
+      </childItems>
+      <childItems id="f9481b13-d309-4f6b-8c4a-0e8bf249f24f">
+        <name>ОтложенныеДоходыДолгосрочные</name>
+        <description>Отложенные доходы, долгосрочные</description>
+        <code>403</code>
+        <accountType>Passive</accountType>
+        <order>403</order>
+        <accountingFlags>ChartOfAccounts.Бюджетирование.AccountingFlag.Валютный</accountingFlags>
+        <childItems id="76af5ed8-a7a2-4862-8a53-5a0f0798a7ca">
+          <name>ПравительственныеСубсидииДолгосрочные</name>
+          <description>Правительственные субсидии, долгосрочные</description>
+          <code>4031</code>
+          <accountType>Passive</accountType>
+          <order>4031</order>
+          <accountingFlags>ChartOfAccounts.Бюджетирование.AccountingFlag.Валютный</accountingFlags>
+        </childItems>
+        <childItems id="6bcf2a41-3a3e-4826-bfc7-3aa21b87893f">
+          <name>ПрочиеОтложенныеДоходыДолгосрочные</name>
+          <description>Прочие отложенные доходы, долгосрочные</description>
+          <code>4032</code>
+          <accountType>Passive</accountType>
+          <order>4032</order>
+          <accountingFlags>ChartOfAccounts.Бюджетирование.AccountingFlag.Валютный</accountingFlags>
+        </childItems>
+      </childItems>
+      <childItems id="f8703e1c-00cb-41cb-800a-8253ca099a1e">
+        <name>РезервыПредстоящихПлатежейДолгосрочные</name>
+        <description>Резервы предстоящих платежей, долгосрочные</description>
+        <code>404</code>
+        <accountType>Passive</accountType>
+        <order>404</order>
+        <childItems id="8b813bb4-e331-46ac-b9bb-24c9adc627f9">
+          <name>РезрвПоГарантийнымОбязательствамДолгосрочный</name>
+          <description>Резрв по гарантийным обязательствам, долгосрочный</description>
+          <code>4041</code>
+          <accountType>Passive</accountType>
+          <order>4041</order>
+        </childItems>
+        <childItems id="511085e4-58d3-45ca-bab4-6b38f3fcb14a">
+          <name>РезервНаРеструктуризациюДолгосрочный</name>
+          <description>Резерв на реструктуризацию, долгосрочный</description>
+          <code>4042</code>
+          <accountType>Passive</accountType>
+          <order>4042</order>
+        </childItems>
+        <childItems id="17366065-d9c1-49a0-91cf-e588e0c11394">
+          <name>РезервПоСудебнымРазбирательствамДолгосрочный</name>
+          <description>Резерв по судебным разбирательствам, долгосрочный</description>
+          <code>4043</code>
+          <accountType>Passive</accountType>
+          <order>4043</order>
+        </childItems>
+        <childItems id="53f3efe0-5c35-4f4f-9b64-1e0662a35b58">
+          <name>РезервПоРазовымКонтрактамДогосрочный</name>
+          <description>Резерв по разовым контрактам, догосрочный</description>
+          <code>4044</code>
+          <accountType>Passive</accountType>
+          <order>4044</order>
+        </childItems>
+        <childItems id="4297c2dd-cdd5-48c7-a6ec-640a767495e2">
+          <name>ПрочиеРезервыПлатежейДолгосрочные</name>
+          <description>Прочие резервы платежей, долгосрочные</description>
+          <code>4045</code>
+          <accountType>Passive</accountType>
+          <order>4045</order>
+        </childItems>
+      </childItems>
+      <childItems id="cb7b50f0-89ed-4f01-a2f4-71a495f0e249">
+        <name>ОбязательстваПоПенсионнымПланамДолгосрочные</name>
+        <description>Обязательства по пенсионным планам, долгосрочные</description>
+        <code>405</code>
+        <accountType>Passive</accountType>
+        <order>405</order>
+      </childItems>
+      <childItems id="d7f4f34e-ac34-493a-ae91-7b771d79f38e">
+        <name>ОтложенныеНалоговыеОбязательства</name>
+        <description>Отложенные налоговые обязательства</description>
+        <code>407</code>
+        <accountType>Passive</accountType>
+        <order>407</order>
+      </childItems>
+      <childItems id="3f007eb4-989c-4ba0-bedb-4b9d9f19cca5">
+        <name>ДолгосрочнаяКредиторскаяЗадолженность</name>
+        <description>Долгосрочная кредиторская задолженность</description>
+        <code>408</code>
+        <accountType>Passive</accountType>
+        <order>408</order>
+        <accountingFlags>ChartOfAccounts.Бюджетирование.AccountingFlag.Валютный</accountingFlags>
+        <childItems id="e0dd0382-1788-45fd-bfd2-bb9d27677828">
+          <name>СчетаКОплатеДолгосрочные</name>
+          <description>Счета к оплате долгосрочные</description>
+          <code>4081</code>
+          <accountType>Passive</accountType>
+          <order>4081</order>
+          <accountingFlags>ChartOfAccounts.Бюджетирование.AccountingFlag.Валютный</accountingFlags>
+        </childItems>
+        <childItems id="cffeed83-ed19-48ac-bc38-baeb0afa12ec">
+          <name>ПрочиеСчетаКОплатеДолгосрочные</name>
+          <description>Прочие счета к оплате, долгосрочные</description>
+          <code>4082</code>
+          <accountType>Passive</accountType>
+          <order>4082</order>
+          <accountingFlags>ChartOfAccounts.Бюджетирование.AccountingFlag.Валютный</accountingFlags>
+        </childItems>
+        <childItems id="ac591542-adff-4ccb-8f7e-b8cf5d20cdd3">
+          <name>РасчетыСоСвязаннымиСторонамиДолгосрочные</name>
+          <description>Расчеты со связанными сторонами, долгосрочные</description>
+          <code>4083</code>
+          <accountType>Passive</accountType>
+          <order>4083</order>
+          <childItems id="dd0dd072-6eda-4d1c-9768-c2a5811c6255">
+            <name>ЗадолженностьДочернимОрганизациямДолгосрочная</name>
+            <description>Задолженность дочерним организациям, долгосрочная</description>
+            <code>40831</code>
+            <accountType>Passive</accountType>
+            <order>40831</order>
+            <accountingFlags>ChartOfAccounts.Бюджетирование.AccountingFlag.Валютный</accountingFlags>
+          </childItems>
+          <childItems id="730748dd-6011-49bc-a87e-a12540e4e342">
+            <name>ЗадолженностьЗависимымОрганизациямДолгосрочная</name>
+            <description>Задолженность зависимым организациям, долгосрочная</description>
+            <code>40832</code>
+            <accountType>Passive</accountType>
+            <order>40832</order>
+            <accountingFlags>ChartOfAccounts.Бюджетирование.AccountingFlag.Валютный</accountingFlags>
+          </childItems>
+          <childItems id="ffe5c643-49cc-4e56-bca1-ff470b1b6ea2">
+            <name>ЗадолженностьСовместнымЮрЛицамДолгосрочная</name>
+            <description>Задолженность совместно контролируемым юридическим лицам, долгосрочная</description>
+            <code>40833</code>
+            <accountType>Passive</accountType>
+            <order>40833</order>
+            <accountingFlags>ChartOfAccounts.Бюджетирование.AccountingFlag.Валютный</accountingFlags>
+          </childItems>
+        </childItems>
+      </childItems>
+      <childItems id="958181f5-5386-4381-ae92-837ac05da5ad">
+        <name>ПрочиеОбязательстваДолгосрочные</name>
+        <description>Прочие обязательства, долгосрочные</description>
+        <code>409</code>
+        <accountType>Passive</accountType>
+        <order>409</order>
+        <accountingFlags>ChartOfAccounts.Бюджетирование.AccountingFlag.Валютный</accountingFlags>
+        <childItems id="df0c19f6-5334-48eb-90ac-d71a7ce71fea">
+          <name>ОбязательстваПоФинансовойАрендеДолгосрочные</name>
+          <description>Обязательства по финансовой аренде, долгосрочные</description>
+          <code>4091</code>
+          <accountType>Passive</accountType>
+          <order>4091</order>
+          <accountingFlags>ChartOfAccounts.Бюджетирование.AccountingFlag.Валютный</accountingFlags>
+        </childItems>
+      </childItems>
+    </items>
+    <items id="bc695263-5284-409a-82c1-2528b5e0f35c">
+      <name>ТекущиеОбязательства</name>
+      <description>Текущие обязательства</description>
+      <code>500</code>
+      <accountType>Passive</accountType>
+      <order>500</order>
+      <childItems id="bf6a7a58-c0bf-43b2-b6c9-61de134ea602">
+        <name>КредитыЗаймыПроцентныеТекущие</name>
+        <description>Кредиты и займы, включающие выплату процентов, текущие</description>
+        <code>501</code>
+        <accountType>Passive</accountType>
+        <order>501</order>
+        <accountingFlags>ChartOfAccounts.Бюджетирование.AccountingFlag.Валютный</accountingFlags>
+        <childItems id="dd0c9ace-210f-48bc-af24-bf40b33c8233">
+          <name>КредитыБанковТекущие</name>
+          <description>Кредиты банков, текущие</description>
+          <code>5011</code>
+          <accountType>Passive</accountType>
+          <order>5011</order>
+          <accountingFlags>ChartOfAccounts.Бюджетирование.AccountingFlag.Валютный</accountingFlags>
+          <childItems id="ac4b3878-4053-11d8-9685-0050ba83c28e">
+            <name>КредитыТекущиеБезПроцентовНеВалютные</name>
+            <description>Долгосрочные кредиты без учета процентов в валюте отчетности</description>
+            <code>50111</code>
+            <accountType>Passive</accountType>
+            <order>50111</order>
+          </childItems>
+          <childItems id="ac4b3892-4053-11d8-9685-0050ba83c28e">
+            <name>ПроцентыПоКредитамТекущимНеВалютные</name>
+            <description>Проценты по текущим кредитам в валюте отчетности</description>
+            <code>50112</code>
+            <accountType>Passive</accountType>
+            <order>50112</order>
+          </childItems>
+          <childItems id="ac4b38ac-4053-11d8-9685-0050ba83c28e">
+            <name>КредитыТекущиеБезПроцентовВалютные</name>
+            <description>Текущие кредиты без учета процентов в инвалюте</description>
+            <code>50113</code>
+            <accountType>Passive</accountType>
+            <order>50113</order>
+          </childItems>
+          <childItems id="ac4b38c6-4053-11d8-9685-0050ba83c28e">
+            <name>ПроцентыПоКредитамТекущимВалютные</name>
+            <description>Проценты по текущим кредитам в инвалюте</description>
+            <code>50114</code>
+            <accountType>Passive</accountType>
+            <order>50114</order>
+          </childItems>
+        </childItems>
+        <childItems id="729372b6-36dc-4390-9ebe-49a2f266198f">
+          <name>ЗаймыОбеспеченныеТекущие</name>
+          <description>Займы обеспеченные, текущие</description>
+          <code>5012</code>
+          <accountType>Passive</accountType>
+          <order>5012</order>
+          <accountingFlags>ChartOfAccounts.Бюджетирование.AccountingFlag.Валютный</accountingFlags>
+        </childItems>
+        <childItems id="d2852ddd-2745-4e2a-9605-bcc86c738d42">
+          <name>КонвертируемыеЗаймыТекущие</name>
+          <description>Конвертируемые займы, текущие</description>
+          <code>5013</code>
+          <accountType>Passive</accountType>
+          <order>5013</order>
+          <accountingFlags>ChartOfAccounts.Бюджетирование.AccountingFlag.Валютный</accountingFlags>
+        </childItems>
+        <childItems id="edbb223a-56a5-474d-8cff-2098b7f96a45">
+          <name>ОбязательстваПоВыкупуАкцийТекущие</name>
+          <description>Обязательства по выкупу акций, текущие</description>
+          <code>5014</code>
+          <accountType>Passive</accountType>
+          <order>5014</order>
+          <accountingFlags>ChartOfAccounts.Бюджетирование.AccountingFlag.Валютный</accountingFlags>
+        </childItems>
+        <childItems id="6f8acf4c-7325-43c2-b314-2aee53572034">
+          <name>ТекущиеЛизинговыеПлатежи</name>
+          <description>Текущие лизинговые платежи</description>
+          <code>5015</code>
+          <accountType>Passive</accountType>
+          <order>5015</order>
+          <accountingFlags>ChartOfAccounts.Бюджетирование.AccountingFlag.Валютный</accountingFlags>
+        </childItems>
+        <childItems id="efa3ea8a-2d00-4ed6-bc25-a85402a883f0">
+          <name>БанковскиеОвердрафты</name>
+          <description>Банковские овердрафты</description>
+          <code>5016</code>
+          <accountType>Passive</accountType>
+          <order>5016</order>
+          <accountingFlags>ChartOfAccounts.Бюджетирование.AccountingFlag.Валютный</accountingFlags>
+        </childItems>
+        <childItems id="c123b1b4-cf0d-4306-b5a0-3447647de58b">
+          <name>ПрочиеТекущиеЗаймы</name>
+          <description>Прочие текущие займы</description>
+          <code>5017</code>
+          <accountType>Passive</accountType>
+          <order>5017</order>
+          <accountingFlags>ChartOfAccounts.Бюджетирование.AccountingFlag.Валютный</accountingFlags>
+          <childItems id="ac4b38e0-4053-11d8-9685-0050ba83c28e">
+            <name>ЗаймыТекущиеПрочиеБезУчетаПроцентовНеВалютные</name>
+            <description>Займы текущие прочие без учета процентов в валюте отчетности</description>
+            <code>50171</code>
+            <accountType>Passive</accountType>
+            <order>50171</order>
+          </childItems>
+          <childItems id="ac4b390c-4053-11d8-9685-0050ba83c28e">
+            <name>ПроцентыПоПрочимТекущимЗаймамНеВалютные</name>
+            <description>Проценты по прочим текущим займам не валютные</description>
+            <code>50172</code>
+            <accountType>Passive</accountType>
+            <order>50172</order>
+          </childItems>
+          <childItems id="ac4b3926-4053-11d8-9685-0050ba83c28e">
+            <name>ЗаймыТекущиеПрочиеБезУчетаПроцентовВалютные</name>
+            <description>Займы текущие прочие без учета процентов в инвалюте</description>
+            <code>50173</code>
+            <accountType>Passive</accountType>
+            <order>50173</order>
+          </childItems>
+          <childItems id="ac4b3940-4053-11d8-9685-0050ba83c28e">
+            <name>ПроцентыПоПрочимТекущимЗаймамВалютные</name>
+            <description>Проценты по прочим текущим займам в инвалюте</description>
+            <code>50174</code>
+            <accountType>Passive</accountType>
+            <order>50174</order>
+          </childItems>
+        </childItems>
+      </childItems>
+      <childItems id="fa77a98e-3ec7-4e68-8de1-d1eb07da60c8">
+        <name>ТекущиеЗаймыБеспроцентные</name>
+        <description>Текущие займы беспроцентные</description>
+        <code>502</code>
+        <accountType>Passive</accountType>
+        <order>502</order>
+        <accountingFlags>ChartOfAccounts.Бюджетирование.AccountingFlag.Валютный</accountingFlags>
+        <childItems id="ac4b396c-4053-11d8-9685-0050ba83c28e">
+          <name>ТекущиеЗаймыБеспроцентныеНеВалютные</name>
+          <description>Текущие займы беспроцентные в валюте отчетности</description>
+          <code>5021</code>
+          <accountType>Passive</accountType>
+          <order>5021</order>
+        </childItems>
+        <childItems id="ac4b3986-4053-11d8-9685-0050ba83c28e">
+          <name>ТекущиеЗаймыБеспроцентныеВалютные</name>
+          <description>Текущие займы беспроцентные в инвалюте</description>
+          <code>5022</code>
+          <accountType>Passive</accountType>
+          <order>5022</order>
+        </childItems>
+      </childItems>
+      <childItems id="f1acf479-8031-4575-880b-e6149885395d">
+        <name>ОтложенныеДоходыТекущие</name>
+        <description>Отложенные доходы, текущие</description>
+        <code>503</code>
+        <accountType>Passive</accountType>
+        <order>503</order>
+        <accountingFlags>ChartOfAccounts.Бюджетирование.AccountingFlag.Валютный</accountingFlags>
+        <childItems id="e7f08a5c-e5ca-440b-848a-85bbe8aa1987">
+          <name>ПравительственныеСубсидииТекущие</name>
+          <description>Правительственные субсидии, текущие</description>
+          <code>5031</code>
+          <accountType>Passive</accountType>
+          <order>5031</order>
+          <accountingFlags>ChartOfAccounts.Бюджетирование.AccountingFlag.Валютный</accountingFlags>
+        </childItems>
+        <childItems id="f7e2f270-f050-414b-8f2d-02797f158f74">
+          <name>ПрочиеОтложенныеДоходыТекущие</name>
+          <description>Прочие отложенные доходы, текущие</description>
+          <code>5032</code>
+          <accountType>Passive</accountType>
+          <order>5032</order>
+          <accountingFlags>ChartOfAccounts.Бюджетирование.AccountingFlag.Валютный</accountingFlags>
+        </childItems>
+      </childItems>
+      <childItems id="09e14983-1a8a-4752-a1b8-b886bbc65e93">
+        <name>РезервыПредстоящихПлатежейТекущие</name>
+        <description>Резервы предстоящих платежей, текущие</description>
+        <code>504</code>
+        <accountType>Passive</accountType>
+        <order>504</order>
+        <childItems id="bf838402-650f-4c5a-87a9-f98d1b2fcc00">
+          <name>РезервПоГарантийнымОбязательствамТекущий</name>
+          <description>Резерв по гарантийным обязательствам, текущий</description>
+          <code>5041</code>
+          <accountType>Passive</accountType>
+          <order>5041</order>
+        </childItems>
+        <childItems id="de9818e2-f8e0-4dd4-8c92-589d2a8c6412">
+          <name>РезервНаРеструктуризациюТекущий</name>
+          <description>Резерв на реструктуризацию, текущий</description>
+          <code>5042</code>
+          <accountType>Passive</accountType>
+          <order>5042</order>
+        </childItems>
+        <childItems id="f1ac4568-fb28-40d3-87ce-aabb369a63ba">
+          <name>РезервПоСудебнымРазбирательствамТекущий</name>
+          <description>Резерв по судебным разбирательствам, текущий</description>
+          <code>5043</code>
+          <accountType>Passive</accountType>
+          <order>5043</order>
+        </childItems>
+        <childItems id="09ed8bdf-816c-4db0-a54b-949fbc68a491">
+          <name>РезервПоРазовымКонтрактамТекущий</name>
+          <description>Резерв по разовым контрактам, текущий</description>
+          <code>5044</code>
+          <order>5044</order>
+        </childItems>
+        <childItems id="b0de3bf2-1a4a-4fbd-aaec-3a0fad1ac2c9">
+          <name>ПрочиеТекущиеРезервыПредстоящихПлатежей</name>
+          <description>Прочие текущие резервы предстоящих платежей</description>
+          <code>5045</code>
+          <accountType>Passive</accountType>
+          <order>5045</order>
+        </childItems>
+      </childItems>
+      <childItems id="7b33ef4b-6e94-4e7b-87a8-0a7321a6cdf5">
+        <name>ОбязательстваПоОплатеТрудаТекущие</name>
+        <description>Обязательства по оплате труда, текущие</description>
+        <code>505</code>
+        <accountType>Passive</accountType>
+        <order>505</order>
+        <accountingFlags>ChartOfAccounts.Бюджетирование.AccountingFlag.Валютный</accountingFlags>
+      </childItems>
+      <childItems id="5b153ef5-5b23-4f95-86e3-5d28fa5c0592">
+        <name>ОбязательстваПоПенсионнымПланамТекущие</name>
+        <description>Обязательства по пенсионным планам, текущие</description>
+        <code>506</code>
+        <accountType>Passive</accountType>
+        <order>506</order>
+        <accountingFlags>ChartOfAccounts.Бюджетирование.AccountingFlag.Валютный</accountingFlags>
+      </childItems>
+      <childItems id="ea336dae-be8e-4da6-92d4-0c265523900c">
+        <name>ТекущиеНалогиКУплате</name>
+        <description>Текущие налоги к уплате</description>
+        <code>508</code>
+        <accountType>Passive</accountType>
+        <order>508</order>
+        <childItems id="45d78e93-3857-4ed0-8fe3-f95aea1ee7f1">
+          <name>НДСКУплате</name>
+          <description>НДС к уплате</description>
+          <code>5081</code>
+          <accountType>Passive</accountType>
+          <order>5081</order>
+        </childItems>
+        <childItems id="56455fdd-336c-48ef-b0e6-4de05277e054">
+          <name>НалогНаПрибыльКУплате</name>
+          <description>Налог на прибыль к уплате</description>
+          <code>5082</code>
+          <accountType>Passive</accountType>
+          <order>5082</order>
+        </childItems>
+        <childItems id="bc941100-edf0-4cce-b248-418510ba92e4">
+          <name>НДФЛКУплате</name>
+          <description>НДФЛ к уплате</description>
+          <code>5083</code>
+          <accountType>Passive</accountType>
+          <order>5083</order>
+        </childItems>
+        <childItems id="e893196f-055c-488b-ae18-47412e83eab5">
+          <name>ЕдиныйНалогКУплате</name>
+          <description>Единый налог к уплате</description>
+          <code>5084</code>
+          <accountType>Passive</accountType>
+          <order>5084</order>
+        </childItems>
+        <childItems id="e5b08970-175f-413d-8364-a14239431834">
+          <name>АкцизКУплате</name>
+          <description>Акциз к уплате</description>
+          <code>5085</code>
+          <accountType>Passive</accountType>
+          <order>5085</order>
+        </childItems>
+        <childItems id="4abe1709-89fe-43af-9325-dce5f0ef2307">
+          <name>ПрочиеНалогиКУплате</name>
+          <description>Прочие налоги к уплате</description>
+          <code>5089</code>
+          <accountType>Passive</accountType>
+          <order>5089</order>
+        </childItems>
+      </childItems>
+      <childItems id="1c30fe47-b138-42f6-92cc-8310d729b896">
+        <name>ТекущаяКредиторскаяЗадолженность</name>
+        <description>Текущая кредиторская задолженность</description>
+        <code>509</code>
+        <accountType>Passive</accountType>
+        <order>509</order>
+        <accountingFlags>ChartOfAccounts.Бюджетирование.AccountingFlag.Валютный</accountingFlags>
+        <extDimensionTypes>
+          <characteristicType>ChartOfCharacteristicTypes.ВидыСубконтоБюджетирования.Контрагенты</characteristicType>
+          <extDimensionAccountingFlags>ChartOfAccounts.Бюджетирование.ExtDimensionAccountingFlag.Суммовой</extDimensionAccountingFlags>
+          <extDimensionAccountingFlags>ChartOfAccounts.Бюджетирование.ExtDimensionAccountingFlag.Валютный</extDimensionAccountingFlags>
+        </extDimensionTypes>
+        <childItems id="8e2e38d2-4baf-4463-8de1-8c7d4067583a">
+          <name>РасчетыСПоставщикамиИПодрядчикамиТекущие</name>
+          <description>Расчеты с поставщиками и подрядчиками, текущие</description>
+          <code>5091</code>
+          <accountType>Passive</accountType>
+          <order>5091</order>
+          <accountingFlags>ChartOfAccounts.Бюджетирование.AccountingFlag.Валютный</accountingFlags>
+          <extDimensionTypes>
+            <characteristicType>ChartOfCharacteristicTypes.ВидыСубконтоБюджетирования.Контрагенты</characteristicType>
+            <extDimensionAccountingFlags>ChartOfAccounts.Бюджетирование.ExtDimensionAccountingFlag.Суммовой</extDimensionAccountingFlags>
+            <extDimensionAccountingFlags>ChartOfAccounts.Бюджетирование.ExtDimensionAccountingFlag.Валютный</extDimensionAccountingFlags>
+          </extDimensionTypes>
+        </childItems>
+        <childItems id="b4bc3cd7-123f-446f-8ede-e8ab1c63d50a">
+          <name>ЗадолженностьСвязанныхСторонКУплате</name>
+          <description>Задолженность связанных сторон к уплате</description>
+          <code>5092</code>
+          <accountType>Passive</accountType>
+          <order>5092</order>
+          <accountingFlags>ChartOfAccounts.Бюджетирование.AccountingFlag.Валютный</accountingFlags>
+          <childItems id="6514924a-be19-4352-b20f-17ff908b7de8">
+            <name>ЗадолженностьДочернимОрганизациямТекущая</name>
+            <description>Задолженность дочерним организациям, текущая</description>
+            <code>50921</code>
+            <accountType>Passive</accountType>
+            <order>50921</order>
+            <accountingFlags>ChartOfAccounts.Бюджетирование.AccountingFlag.Валютный</accountingFlags>
+          </childItems>
+          <childItems id="2f33d33e-f067-42ad-bf58-b7790bb86bb2">
+            <name>ЗадолженностьЗависимымОрганизациямТекущая</name>
+            <description>Задолженность зависимым организациям, текущая</description>
+            <code>50922</code>
+            <accountType>Passive</accountType>
+            <order>50922</order>
+            <accountingFlags>ChartOfAccounts.Бюджетирование.AccountingFlag.Валютный</accountingFlags>
+          </childItems>
+          <childItems id="7690d7e4-2a36-4cf1-abd3-9739bee028db">
+            <name>ЗадолженностьСовместнымЮрЛицамТекущая</name>
+            <description>Задолженность совместно контролируемым юридическим лицам, текущая</description>
+            <code>50923</code>
+            <accountType>Passive</accountType>
+            <order>50923</order>
+            <accountingFlags>ChartOfAccounts.Бюджетирование.AccountingFlag.Валютный</accountingFlags>
+          </childItems>
+        </childItems>
+        <childItems id="ac84cf42-9c6c-41b9-ae27-81f6820c4534">
+          <name>ПрочиеСчетаКОплатеТекущие</name>
+          <description>Прочие счета к оплате, текущие</description>
+          <code>5093</code>
+          <accountType>Passive</accountType>
+          <order>5093</order>
+          <accountingFlags>ChartOfAccounts.Бюджетирование.AccountingFlag.Валютный</accountingFlags>
+          <extDimensionTypes>
+            <characteristicType>ChartOfCharacteristicTypes.ВидыСубконтоБюджетирования.Контрагенты</characteristicType>
+            <extDimensionAccountingFlags>ChartOfAccounts.Бюджетирование.ExtDimensionAccountingFlag.Суммовой</extDimensionAccountingFlags>
+            <extDimensionAccountingFlags>ChartOfAccounts.Бюджетирование.ExtDimensionAccountingFlag.Валютный</extDimensionAccountingFlags>
+          </extDimensionTypes>
+        </childItems>
+      </childItems>
+      <childItems id="3dce9da4-92d3-45d3-af63-0ef11c2822e9">
+        <name>ПрочиеОбязательстваТекущие</name>
+        <description>Прочие обязательства, текущие</description>
+        <code>510</code>
+        <accountType>Passive</accountType>
+        <order>510</order>
+        <accountingFlags>ChartOfAccounts.Бюджетирование.AccountingFlag.Валютный</accountingFlags>
+        <childItems id="969a887b-044e-4ee5-ad2e-74039a731ba5">
+          <name>НачисленныеРасходы</name>
+          <description>Начисленные расходы</description>
+          <code>5101</code>
+          <accountType>Passive</accountType>
+          <order>5101</order>
+        </childItems>
+        <childItems id="63dc131a-0e2e-4e60-80f2-e7890cead097">
+          <name>ДивидендыКВыплате</name>
+          <description>Дивиденды к выплате</description>
+          <code>5102</code>
+          <accountType>Passive</accountType>
+          <order>5102</order>
+        </childItems>
+        <childItems id="c3beaa99-dc00-4cf7-b1aa-aa17eb4f810a">
+          <name>ЗадолженностьЗаВыкупленныеСобственныеАкции</name>
+          <description>Задолженность за выкупленные собственные акции</description>
+          <code>5103</code>
+          <accountType>ActivePassive</accountType>
+          <order>5103</order>
+        </childItems>
+      </childItems>
+      <childItems id="4ebfe328-88e9-46cf-a1ce-f39bd9ec0d1a">
+        <name>ВнутрихозяйственныеРасчеты</name>
+        <description>Внутрихозяйственные расчеты</description>
+        <code>511</code>
+        <accountType>ActivePassive</accountType>
+        <order>511</order>
+      </childItems>
+    </items>
+    <items id="8af62ee0-f9e0-4580-9585-7f07d29244fe">
+      <name>Выручка</name>
+      <description>Выручка</description>
+      <code>600</code>
+      <accountType>Passive</accountType>
+      <order>600</order>
+      <extDimensionTypes>
+        <characteristicType>ChartOfCharacteristicTypes.ВидыСубконтоБюджетирования.Проекты</characteristicType>
+        <extDimensionAccountingFlags>ChartOfAccounts.Бюджетирование.ExtDimensionAccountingFlag.Суммовой</extDimensionAccountingFlags>
+      </extDimensionTypes>
+      <extDimensionTypes>
+        <characteristicType>ChartOfCharacteristicTypes.ВидыСубконтоБюджетирования.ЦФО</characteristicType>
+        <extDimensionAccountingFlags>ChartOfAccounts.Бюджетирование.ExtDimensionAccountingFlag.Суммовой</extDimensionAccountingFlags>
+      </extDimensionTypes>
+      <extDimensionTypes>
+        <characteristicType>ChartOfCharacteristicTypes.ВидыСубконтоБюджетирования.Номенклатура</characteristicType>
+        <extDimensionAccountingFlags>ChartOfAccounts.Бюджетирование.ExtDimensionAccountingFlag.Суммовой</extDimensionAccountingFlags>
+        <extDimensionAccountingFlags>ChartOfAccounts.Бюджетирование.ExtDimensionAccountingFlag.Валютный</extDimensionAccountingFlags>
+      </extDimensionTypes>
+    </items>
+    <items id="f8d70454-e7b9-4d98-bb30-4407bf130a57">
+      <name>РасходыНаПродажу</name>
+      <description>Расходы на продажу</description>
+      <code>700</code>
+      <order>700</order>
+      <extDimensionTypes>
+        <characteristicType>ChartOfCharacteristicTypes.ВидыСубконтоБюджетирования.Проекты</characteristicType>
+        <extDimensionAccountingFlags>ChartOfAccounts.Бюджетирование.ExtDimensionAccountingFlag.Суммовой</extDimensionAccountingFlags>
+      </extDimensionTypes>
+      <extDimensionTypes>
+        <characteristicType>ChartOfCharacteristicTypes.ВидыСубконтоБюджетирования.ЦФО</characteristicType>
+        <extDimensionAccountingFlags>ChartOfAccounts.Бюджетирование.ExtDimensionAccountingFlag.Суммовой</extDimensionAccountingFlags>
+      </extDimensionTypes>
+      <extDimensionTypes>
+        <characteristicType>ChartOfCharacteristicTypes.ВидыСубконтоБюджетирования.Номенклатура</characteristicType>
+        <extDimensionAccountingFlags>ChartOfAccounts.Бюджетирование.ExtDimensionAccountingFlag.Суммовой</extDimensionAccountingFlags>
+      </extDimensionTypes>
+      <childItems id="647c9a20-d279-420b-a206-57570dd79aef">
+        <name>СебестоимостьПродаж</name>
+        <description>Себестоимость продаж</description>
+        <code>701</code>
+        <order>701</order>
+        <extDimensionTypes>
+          <characteristicType>ChartOfCharacteristicTypes.ВидыСубконтоБюджетирования.Проекты</characteristicType>
+          <extDimensionAccountingFlags>ChartOfAccounts.Бюджетирование.ExtDimensionAccountingFlag.Суммовой</extDimensionAccountingFlags>
+        </extDimensionTypes>
+        <extDimensionTypes>
+          <characteristicType>ChartOfCharacteristicTypes.ВидыСубконтоБюджетирования.ЦФО</characteristicType>
+          <extDimensionAccountingFlags>ChartOfAccounts.Бюджетирование.ExtDimensionAccountingFlag.Суммовой</extDimensionAccountingFlags>
+        </extDimensionTypes>
+        <extDimensionTypes>
+          <characteristicType>ChartOfCharacteristicTypes.ВидыСубконтоБюджетирования.Номенклатура</characteristicType>
+          <extDimensionAccountingFlags>ChartOfAccounts.Бюджетирование.ExtDimensionAccountingFlag.Суммовой</extDimensionAccountingFlags>
+        </extDimensionTypes>
+      </childItems>
+    </items>
+    <items id="0ff644ad-d235-4d27-b18b-78a284cffc69">
+      <name>ПрочиеДоходыИРасходы</name>
+      <description>Прочие доходы и расходы</description>
+      <code>800</code>
+      <accountType>Passive</accountType>
+      <order>800</order>
+      <childItems id="7576cbbf-f4ac-4d0d-a792-8f8c8cff56a0">
+        <name>ПрочиеДоходы</name>
+        <description>Прочие доходы</description>
+        <code>801</code>
+        <accountType>Passive</accountType>
+        <order>801</order>
+        <extDimensionTypes>
+          <characteristicType>ChartOfCharacteristicTypes.ВидыСубконтоБюджетирования.Проекты</characteristicType>
+          <extDimensionAccountingFlags>ChartOfAccounts.Бюджетирование.ExtDimensionAccountingFlag.Суммовой</extDimensionAccountingFlags>
+          <extDimensionAccountingFlags>ChartOfAccounts.Бюджетирование.ExtDimensionAccountingFlag.Количественный</extDimensionAccountingFlags>
+          <extDimensionAccountingFlags>ChartOfAccounts.Бюджетирование.ExtDimensionAccountingFlag.Валютный</extDimensionAccountingFlags>
+        </extDimensionTypes>
+        <extDimensionTypes>
+          <characteristicType>ChartOfCharacteristicTypes.ВидыСубконтоБюджетирования.ЦФО</characteristicType>
+          <extDimensionAccountingFlags>ChartOfAccounts.Бюджетирование.ExtDimensionAccountingFlag.Суммовой</extDimensionAccountingFlags>
+          <extDimensionAccountingFlags>ChartOfAccounts.Бюджетирование.ExtDimensionAccountingFlag.Количественный</extDimensionAccountingFlags>
+          <extDimensionAccountingFlags>ChartOfAccounts.Бюджетирование.ExtDimensionAccountingFlag.Валютный</extDimensionAccountingFlags>
+        </extDimensionTypes>
+        <childItems id="3cf71655-7d6a-4ffe-ba93-0c81b779d14e">
+          <name>ОперационныеДоходы</name>
+          <description>Операционные доходы</description>
+          <code>8011</code>
+          <accountType>Passive</accountType>
+          <order>8011</order>
+          <childItems id="b76b251e-7b77-4e42-90f9-62e2b3932f67">
+            <name>ОперационныеДоходыСоСвязаннымиСторонами</name>
+            <description>Операционные доходы со связанными сторонами</description>
+            <code>80111</code>
+            <accountType>Passive</accountType>
+            <order>80111</order>
+          </childItems>
+          <childItems id="631e6cbc-694c-4465-8b41-306a91c487b7">
+            <name>ДоходОтОперационнойКурсовойРазницы</name>
+            <description>Доход от операционной курсовой разницы</description>
+            <code>80112</code>
+            <accountType>Passive</accountType>
+            <order>80112</order>
+          </childItems>
+          <childItems id="f8f9a10b-dd5c-43d0-ad8f-d499cdbddaef">
+            <name>ПрочиеОперационныеДоходы</name>
+            <description>Прочие операционные доходы</description>
+            <code>80119</code>
+            <accountType>Passive</accountType>
+            <order>80119</order>
+          </childItems>
+        </childItems>
+        <childItems id="cf2c5dd2-39dc-44e0-a5d2-bad62e2e4ace">
+          <name>НеоперационныеДоходы</name>
+          <description>Неоперационные доходы</description>
+          <code>8012</code>
+          <accountType>Passive</accountType>
+          <order>8012</order>
+          <childItems id="a2882609-c90b-4dda-920f-8e8117fc56ee">
+            <name>НеоперационныеДоходыСоСвязаннымиСторонами</name>
+            <description>Прочие доходы по опер. со связанными сторонами</description>
+            <code>80121</code>
+            <accountType>Passive</accountType>
+            <order>80121</order>
+          </childItems>
+          <childItems id="9e88ac7f-15ce-4b0c-9794-0ad916a2f706">
+            <name>ПрибыльОтАссоциированныхКомпаний</name>
+            <description>Прибыль от ассоциированных компаний</description>
+            <code>80122</code>
+            <accountType>Passive</accountType>
+            <order>80122</order>
+          </childItems>
+          <childItems id="b58b5d5f-7d7c-4878-ab68-a6be0d658afa">
+            <name>ДоходОтНеоперационнойКурсовойРазницы</name>
+            <description>Доход от неоперационной курсовой разницы</description>
+            <code>80123</code>
+            <accountType>Passive</accountType>
+            <order>80123</order>
+          </childItems>
+          <childItems id="87aff527-deec-43e7-b7fd-114f4be4a74d">
+            <name>ДоходыПоИнвестициям</name>
+            <description>Доходы по инвестициям</description>
+            <code>80124</code>
+            <accountType>Passive</accountType>
+            <order>80124</order>
+          </childItems>
+          <childItems id="bfc606d8-5276-49cd-a6e4-92ff4c1c93c2">
+            <name>ПрочиеНеоперационныеДоходы</name>
+            <description>Прочие неоперационные доходы</description>
+            <code>80129</code>
+            <accountType>Passive</accountType>
+            <order>80129</order>
+          </childItems>
+        </childItems>
+      </childItems>
+      <childItems id="abca30e9-3857-4652-8c30-46b706e9686e">
+        <name>ПрочиеРасходы</name>
+        <description>Прочие расходы</description>
+        <code>802</code>
+        <order>802</order>
+        <extDimensionTypes>
+          <characteristicType>ChartOfCharacteristicTypes.ВидыСубконтоБюджетирования.Проекты</characteristicType>
+          <extDimensionAccountingFlags>ChartOfAccounts.Бюджетирование.ExtDimensionAccountingFlag.Суммовой</extDimensionAccountingFlags>
+          <extDimensionAccountingFlags>ChartOfAccounts.Бюджетирование.ExtDimensionAccountingFlag.Количественный</extDimensionAccountingFlags>
+          <extDimensionAccountingFlags>ChartOfAccounts.Бюджетирование.ExtDimensionAccountingFlag.Валютный</extDimensionAccountingFlags>
+        </extDimensionTypes>
+        <extDimensionTypes>
+          <characteristicType>ChartOfCharacteristicTypes.ВидыСубконтоБюджетирования.ЦФО</characteristicType>
+          <extDimensionAccountingFlags>ChartOfAccounts.Бюджетирование.ExtDimensionAccountingFlag.Суммовой</extDimensionAccountingFlags>
+          <extDimensionAccountingFlags>ChartOfAccounts.Бюджетирование.ExtDimensionAccountingFlag.Количественный</extDimensionAccountingFlags>
+          <extDimensionAccountingFlags>ChartOfAccounts.Бюджетирование.ExtDimensionAccountingFlag.Валютный</extDimensionAccountingFlags>
+        </extDimensionTypes>
+        <childItems id="4db6ac58-340c-43a0-9cc6-7d1cc6051dd3">
+          <name>ОперационныеРасходы</name>
+          <description>Операционные расходы</description>
+          <code>8021</code>
+          <order>8021</order>
+          <childItems id="087914f6-1a02-4f4e-b302-e7f0df1971a1">
+            <name>ОперационныеРасходыСоСвязаннымиСторонами</name>
+            <description>Операционные расходы со связанными сторонами</description>
+            <code>80211</code>
+            <order>80211</order>
+          </childItems>
+          <childItems id="b4060750-00de-433c-bd72-87b71906fca1">
+            <name>АдминистративныеРасходы</name>
+            <description>Административные расходы</description>
+            <code>80212</code>
+            <order>80212</order>
+          </childItems>
+          <childItems id="45e39dd8-59ad-4356-a59a-d925f97e7618">
+            <name>РасходыНаСбыт</name>
+            <description>Расходы на сбыт</description>
+            <code>80213</code>
+            <order>80213</order>
+          </childItems>
+          <childItems id="6e3515a3-08f3-4bb8-a023-bf90ae6c31f1">
+            <name>РасходыНаИсследованияИРазработки</name>
+            <description>Расходы на исследования и разработки</description>
+            <code>80214</code>
+            <order>80214</order>
+          </childItems>
+          <childItems id="3d9aaa6a-9707-453d-b4bc-82014fbddcb3">
+            <name>РасходыОтОперационнойКурсовойРазницы</name>
+            <description>Расходы от операционной курсовой разницы</description>
+            <code>80215</code>
+            <order>80215</order>
+          </childItems>
+          <childItems id="fdbca084-8beb-4ee8-a803-ac8173084671">
+            <name>ПрочиеОперационныеРасходы</name>
+            <description>Прочие операционные расходы</description>
+            <code>80219</code>
+            <order>80219</order>
+          </childItems>
+        </childItems>
+        <childItems id="0978ec16-e078-4034-8bde-59406fd7c3a5">
+          <name>НеоперационныеРасходы</name>
+          <description>Неоперационные расходы</description>
+          <code>8022</code>
+          <order>8022</order>
+          <childItems id="0584bee5-0b97-4a79-9a6f-ba4b59adaf17">
+            <name>НеоперационныеРасходыСоСвязаннымиСторонами</name>
+            <description>Прочие расходы по опер. со связанными сторонами</description>
+            <code>80221</code>
+            <order>80221</order>
+          </childItems>
+          <childItems id="5e2cb39e-5220-4335-8f25-c6826d5b7402">
+            <name>УбытокОтАссоциированныхКомпаний</name>
+            <description>Убыток от ассоциированных компаний</description>
+            <code>80222</code>
+            <order>80222   </order>
+          </childItems>
+          <childItems id="30b6a1dc-9105-4a08-b578-134324c42e76">
+            <name>РасходыОтСниженияСтоимостиАктивов</name>
+            <description>Расходы от снижения стоимости активов</description>
+            <code>80223</code>
+            <order>80223</order>
+          </childItems>
+          <childItems id="dcd96b8b-704a-450f-86ec-811362806d8d">
+            <name>ОтчисленияВОценочныеРезервы</name>
+            <description>Отчисления в оценочные резервы</description>
+            <code>80224</code>
+            <order>80224</order>
+          </childItems>
+          <childItems id="43c13d59-e58c-4d26-8e61-8b95744b0a41">
+            <name>РасходыОтНеоперационнойКурсовойРазницы</name>
+            <description>Расходы от неоперационной курсовой разницы</description>
+            <code>80225</code>
+            <order>80225</order>
+          </childItems>
+          <childItems id="d6a54935-d5f9-4818-84be-75db699979ec">
+            <name>РасходыПоИнвестициям</name>
+            <description>Расходы по инвестициям</description>
+            <code>80226</code>
+            <order>80226</order>
+          </childItems>
+          <childItems id="3dbbcf5e-1dcb-4d12-b65f-9edc93137fc2">
+            <name>ФинансовыеРасходы</name>
+            <description>Финансовые расходы</description>
+            <code>80227</code>
+            <order>80227</order>
+          </childItems>
+          <childItems id="982db412-2b22-4793-8813-7a42fbe4e4b0">
+            <name>ПрочиеНеоперационныеРасходы</name>
+            <description>Прочие неоперационные расходы</description>
+            <code>80229</code>
+            <order>80229</order>
+          </childItems>
+        </childItems>
+      </childItems>
+    </items>
+    <items id="de77cf5a-6729-424f-9268-fed79307a465">
+      <name>ПрибылиИУбытки</name>
+      <description>Прибыли и убытки</description>
+      <code>900</code>
+      <accountType>Passive</accountType>
+      <order>900</order>
+      <extDimensionTypes>
+        <characteristicType>ChartOfCharacteristicTypes.ВидыСубконтоБюджетирования.Проекты</characteristicType>
+        <extDimensionAccountingFlags>ChartOfAccounts.Бюджетирование.ExtDimensionAccountingFlag.Суммовой</extDimensionAccountingFlags>
+      </extDimensionTypes>
+      <extDimensionTypes>
+        <characteristicType>ChartOfCharacteristicTypes.ВидыСубконтоБюджетирования.ЦФО</characteristicType>
+        <extDimensionAccountingFlags>ChartOfAccounts.Бюджетирование.ExtDimensionAccountingFlag.Суммовой</extDimensionAccountingFlags>
+      </extDimensionTypes>
+      <childItems id="44ba3d2a-bc2b-41b9-97b7-c94b8b0c4ba2">
+        <name>ПрибыльУбытокДоНалогообложения</name>
+        <description>Прибыль убыток до налогообложения</description>
+        <code>901</code>
+        <accountType>Passive</accountType>
+        <order>901</order>
+      </childItems>
+      <childItems id="6c89d529-2525-4fd2-a512-65273fc18748">
+        <name>НалогНаПрибыль</name>
+        <description>Налог на прибыль</description>
+        <code>902</code>
+        <accountType>Passive</accountType>
+        <order>902</order>
+      </childItems>
+      <childItems id="9535c4e4-4412-4dd2-b5e1-18c254815082">
+        <name>ДоляМеньшинстваВПрибылиИУбытки</name>
+        <description>Доля меньшинства</description>
+        <code>904</code>
+        <accountType>Passive</accountType>
+        <order>904</order>
+      </childItems>
+      <childItems id="2113cd8b-79f9-4b47-aa05-a6a151ed712b">
+        <name>СуммарныеДоходыИРасходы</name>
+        <description>Суммарные доходы и расходы</description>
+        <code>999</code>
+        <order>999</order>
+      </childItems>
+    </items>
+  </predefined>
+  <editType>InDialog</editType>
+  <choiceMode>BothWays</choiceMode>
+  <defaultObjectForm>ChartOfAccounts.Бюджетирование.Form.ФормаСчета</defaultObjectForm>
+  <defaultListForm>ChartOfAccounts.Бюджетирование.Form.ФормаСписка</defaultListForm>
+  <defaultChoiceForm>ChartOfAccounts.Бюджетирование.Form.ФормаВыбора</defaultChoiceForm>
+  <autoOrderByCode>true</autoOrderByCode>
+  <orderLength>8</orderLength>
+  <attributes uuid="22beff62-d6cf-4ff7-8855-58f68bd3d574">
+    <name>ИсточникДанныхДляФакта</name>
+    <synonym>
+      <key>ru</key>
+      <value>Источник данных для факта</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.ИсточникиДанныхДляРасчетовБюджетирования</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+  </attributes>
+  <attributes uuid="f5c84cb4-fcef-4266-b482-e8532993a9cd">
+    <name>ПоказательИсточникаДанныхДляФактаСум</name>
+    <synonym>
+      <key>ru</key>
+      <value>Показатель источника данных для факта сум</value>
+    </synonym>
+    <comment>Показатель источника данных расчетов бюджетирования, который будет использоваться для получения фактических данных</comment>
+    <type>
+      <types>String</types>
+      <stringQualifiers>
+        <length>100</length>
+      </stringQualifiers>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+  </attributes>
+  <attributes uuid="f8d5717e-f71d-4ea6-9228-5ece985c60bf">
+    <name>СпособОпределенияВалютыОборотаФакт</name>
+    <synonym>
+      <key>ru</key>
+      <value>Способ определения валюты оборота факт</value>
+    </synonym>
+    <comment>Способ определения валюты оборота при получении фактических данных</comment>
+    <type>
+      <types>EnumRef.СпособыОпределенияВалютыОборотаПоСтатье</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+  </attributes>
+  <attributes uuid="bbb9fecc-44da-4bad-9c94-dae8140fce7d">
+    <name>ПоказательИсточникаДанныхДляФактаКол</name>
+    <synonym>
+      <key>ru</key>
+      <value>Показатель источника данных для факта кол</value>
+    </synonym>
+    <comment>Показатель источника данных расчетов бюджетирования, который будет использоваться для получения фактических данных</comment>
+    <type>
+      <types>String</types>
+      <stringQualifiers>
+        <length>100</length>
+      </stringQualifiers>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+  </attributes>
+  <attributes uuid="d5318de4-ea64-4c10-a200-c8ae90065aed">
+    <name>КоэффициентДляФактаСум</name>
+    <synonym>
+      <key>ru</key>
+      <value>Коэффициент для факта (сум)</value>
+    </synonym>
+    <type>
+      <types>Number</types>
+      <numberQualifiers>
+        <precision>15</precision>
+        <scale>2</scale>
+      </numberQualifiers>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+  </attributes>
+  <attributes uuid="6531646f-7468-485e-ac2c-121a87b88024">
+    <name>КоэффициентДляФактаКол</name>
+    <synonym>
+      <key>ru</key>
+      <value>Коэффициент для факта (кол)</value>
+    </synonym>
+    <type>
+      <types>Number</types>
+      <numberQualifiers>
+        <precision>15</precision>
+        <scale>2</scale>
+      </numberQualifiers>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+  </attributes>
+  <accountingFlags uuid="1084081f-5e0f-444a-8206-322f69423390">
+    <name>Валютный</name>
+    <synonym>
+      <key>ru</key>
+      <value>Валютный</value>
+    </synonym>
+    <type>
+      <types>Boolean</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:UndefinedValue"/>
+  </accountingFlags>
+  <accountingFlags uuid="6402bb1f-7856-4adb-8a89-6cbd6e712f6c">
+    <name>Количественный</name>
+    <synonym>
+      <key>ru</key>
+      <value>Количественный</value>
+    </synonym>
+    <type>
+      <types>Boolean</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:UndefinedValue"/>
+  </accountingFlags>
+  <extDimensionAccountingFlags uuid="74d264de-bdc0-4aee-b899-e8999ad54518">
+    <name>Суммовой</name>
+    <synonym>
+      <key>ru</key>
+      <value>Суммовой</value>
+    </synonym>
+    <type>
+      <types>Boolean</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:UndefinedValue"/>
+  </extDimensionAccountingFlags>
+  <extDimensionAccountingFlags uuid="ec372b50-0745-479d-985e-4a52ee7617ba">
+    <name>Количественный</name>
+    <synonym>
+      <key>ru</key>
+      <value>Количественный</value>
+    </synonym>
+    <type>
+      <types>Boolean</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:UndefinedValue"/>
+  </extDimensionAccountingFlags>
+  <extDimensionAccountingFlags uuid="a99f974a-f763-4224-8bf6-b586b22aaf4d">
+    <name>Валютный</name>
+    <synonym>
+      <key>ru</key>
+      <value>Валютный</value>
+    </synonym>
+    <type>
+      <types>Boolean</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:UndefinedValue"/>
+  </extDimensionAccountingFlags>
+  <forms uuid="98fd2a95-1ef3-46fa-8658-656b2ff83034">
+    <name>ФормаСписка</name>
+    <synonym>
+      <key>ru</key>
+      <value>Форма списка</value>
+    </synonym>
+    <formType>Ordinary</formType>
+    <usePurposes>PersonalComputer</usePurposes>
+    <usePurposes>MobileDevice</usePurposes>
+  </forms>
+  <forms uuid="5131f8ae-19d4-49c8-806e-5214c0f5d124">
+    <name>ФормаВыбора</name>
+    <synonym>
+      <key>ru</key>
+      <value>Форма выбора</value>
+    </synonym>
+    <formType>Ordinary</formType>
+    <usePurposes>PersonalComputer</usePurposes>
+    <usePurposes>MobileDevice</usePurposes>
+  </forms>
+  <forms uuid="6958829a-3cfc-4328-b869-348a65d2f757">
+    <name>ФормаСчета</name>
+    <synonym>
+      <key>ru</key>
+      <value>Форма счета</value>
+    </synonym>
+    <formType>Ordinary</formType>
+    <usePurposes>PersonalComputer</usePurposes>
+    <usePurposes>MobileDevice</usePurposes>
+  </forms>
+</mdclass:ChartOfAccounts>

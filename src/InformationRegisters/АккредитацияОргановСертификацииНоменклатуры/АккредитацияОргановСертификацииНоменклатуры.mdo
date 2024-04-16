@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:InformationRegister xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:core="http://g5.1c.ru/v8/dt/mcore" xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="9ea3009a-3b1a-411e-a7d7-e19872e38721">
+  <producedTypes>
+    <selectionType typeId="a7f9cf33-47ee-475e-a7c6-7e28de34a0b3" valueTypeId="3adf120a-f77a-486f-a54c-2b81405b8032"/>
+    <listType typeId="f76eb362-820e-4699-932e-709295139d9f" valueTypeId="91ad9b02-46c2-42e5-afa7-2a74be171acf"/>
+    <managerType typeId="0cd6dd92-d88e-4891-ba45-04d7f987b135" valueTypeId="f24f2ff8-2039-42f1-a088-a2c6fc4f2027"/>
+    <recordSetType typeId="b18d6c85-fc94-4ac4-b81b-0d6fb9f9617e" valueTypeId="b2e3dbd0-26b7-4aa9-bddb-b18b5fc48980"/>
+    <recordKeyType typeId="235d5d48-4d1a-4235-acb9-552c26430b00" valueTypeId="b0f82cd8-279e-47db-b747-beb7360cd38c"/>
+    <recordType typeId="a76db6be-e8dd-491d-b401-8dd925520e65" valueTypeId="fc90927c-4abc-4a0a-87ab-f09d5d1a1c4c"/>
+    <recordManagerType typeId="e183c826-22a1-45cd-8d91-ed6f437b04a8" valueTypeId="5bddba2a-7788-4fa5-92e7-6efce0b12396"/>
+  </producedTypes>
+  <name>АккредитацияОргановСертификацииНоменклатуры</name>
+  <synonym>
+    <key>ru</key>
+    <value>Аккредитация органов сертификации номенклатуры</value>
+  </synonym>
+  <comment>Регистр предназначен для хранения информации об аттестатах аккредитации органов сертификации</comment>
+  <defaultListForm>InformationRegister.АккредитацияОргановСертификацииНоменклатуры.Form.ФормаСписка</defaultListForm>
+  <informationRegisterPeriodicity>Day</informationRegisterPeriodicity>
+  <mainFilterOnPeriod>true</mainFilterOnPeriod>
+  <help>
+    <pages>
+      <lang>ru</lang>
+    </pages>
+  </help>
+  <resources uuid="07cddc78-13e2-4ab0-b1a5-7e9f5a71d4e4">
+    <name>НомерАттестата</name>
+    <synonym>
+      <key>ru</key>
+      <value>Номер аттестата</value>
+    </synonym>
+    <comment>Номер аттестата аккредитации</comment>
+    <type>
+      <types>String</types>
+      <stringQualifiers>
+        <length>50</length>
+      </stringQualifiers>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:StringValue">
+      <value></value>
+    </fillValue>
+  </resources>
+  <resources uuid="e8406af9-a61c-44c5-90ac-40aabd4bff92">
+    <name>ДатаОкончания</name>
+    <synonym>
+      <key>ru</key>
+      <value>Дата окончания</value>
+    </synonym>
+    <comment>Дата окончания срока действия аттестата аккредитации</comment>
+    <type>
+      <types>Date</types>
+      <dateQualifiers>
+        <dateFractions>Date</dateFractions>
+      </dateQualifiers>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:UndefinedValue"/>
+  </resources>
+  <dimensions uuid="a1627a77-c619-4b48-b093-3ffe40740a48">
+    <name>Контрагент</name>
+    <synonym>
+      <key>ru</key>
+      <value>Контрагент</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.Контрагенты</types>
+      <types>CatalogRef.Организации</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <mainFilter>true</mainFilter>
+  </dimensions>
+  <forms uuid="849fdcc0-e1b1-426c-b14a-d7147c342059">
+    <name>ФормаСписка</name>
+    <synonym>
+      <key>ru</key>
+      <value>Форма списка</value>
+    </synonym>
+    <formType>Ordinary</formType>
+    <usePurposes>PersonalComputer</usePurposes>
+    <usePurposes>MobileDevice</usePurposes>
+  </forms>
+</mdclass:InformationRegister>

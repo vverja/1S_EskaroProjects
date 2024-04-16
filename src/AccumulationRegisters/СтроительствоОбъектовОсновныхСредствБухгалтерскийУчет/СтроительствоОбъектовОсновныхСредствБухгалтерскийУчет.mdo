@@ -1,0 +1,172 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:AccumulationRegister xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:core="http://g5.1c.ru/v8/dt/mcore" xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="caa0eaff-7f92-43a4-a856-90da343d2c92">
+  <producedTypes>
+    <selectionType typeId="23477926-1204-4bde-9880-eb7944cd3955" valueTypeId="4d05fa02-f96a-49fd-8df2-32ffdc574753"/>
+    <listType typeId="b01f5313-7ca4-47f4-beec-4f912296c110" valueTypeId="8a5a4413-1cf9-4bae-bcdb-a8b0e2863e56"/>
+    <managerType typeId="8393170c-94e1-425c-9f7d-d2dab48e4588" valueTypeId="3de93792-349a-4ab4-aef5-850fec67aaca"/>
+    <recordSetType typeId="d304fd04-affa-4169-a2ff-540a63c35d44" valueTypeId="76f1e65e-c701-4af6-ae0c-afbb53e8dbe7"/>
+    <recordKeyType typeId="7244b8e9-274e-417d-aee6-2016f8cecf91" valueTypeId="7e69a618-1970-4c68-bd89-4e952b16be8f"/>
+    <recordType typeId="895f476e-53ca-487d-b1a0-e80bb08ebc76" valueTypeId="ece63a42-9ed1-4751-a2d1-d7ae834768a5"/>
+  </producedTypes>
+  <name>СтроительствоОбъектовОсновныхСредствБухгалтерскийУчет</name>
+  <synonym>
+    <key>ru</key>
+    <value>Строительство (монтаж) ОС в бухгалтерском и налоговом учете</value>
+  </synonym>
+  <comment>(Регл) для учета сумм и налогового кредита по объектам ОС</comment>
+  <enableTotalsSplitting>true</enableTotalsSplitting>
+  <resources uuid="57ca1977-db7d-4b42-bc8b-54ffb3f977c7">
+    <name>Стоимость</name>
+    <synonym>
+      <key>ru</key>
+      <value>Стоимость (БУ)</value>
+    </synonym>
+    <type>
+      <types>Number</types>
+      <numberQualifiers>
+        <precision>15</precision>
+        <scale>2</scale>
+      </numberQualifiers>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+  </resources>
+  <resources uuid="036fd673-3c9b-45ef-92b7-583d62456a0b">
+    <name>СтоимостьНУ</name>
+    <synonym>
+      <key>ru</key>
+      <value>Стоимость (НУ)</value>
+    </synonym>
+    <type>
+      <types>Number</types>
+      <numberQualifiers>
+        <precision>15</precision>
+        <scale>2</scale>
+      </numberQualifiers>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+  </resources>
+  <resources uuid="eff55d69-388c-4ada-9272-47bcc62d488c">
+    <name>НДСВходящий</name>
+    <synonym>
+      <key>ru</key>
+      <value>НДС входящий</value>
+    </synonym>
+    <comment>Вся сумма НДС, выставленная нам поставщиком, независимо от наличия у нас права на налоговый кредит</comment>
+    <type>
+      <types>Number</types>
+      <numberQualifiers>
+        <precision>15</precision>
+        <scale>2</scale>
+      </numberQualifiers>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+  </resources>
+  <resources uuid="18cbcabb-8b5a-4f53-85d5-2a91dc081c08">
+    <name>НДСКредит</name>
+    <synonym>
+      <key>ru</key>
+      <value>НДС кредит</value>
+    </synonym>
+    <comment>НДС, который включен в налоговый кредит</comment>
+    <type>
+      <types>Number</types>
+      <numberQualifiers>
+        <precision>15</precision>
+        <scale>2</scale>
+      </numberQualifiers>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+  </resources>
+  <attributes uuid="0de3de4b-af6a-49fe-ad6f-9e81618c7ebd">
+    <name>НалоговоеНазначениеПоФакту</name>
+    <synonym>
+      <key>ru</key>
+      <value>Налоговое назначение по факту</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.НалоговыеНазначенияАктивовИЗатрат</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+  </attributes>
+  <attributes uuid="4160f7b3-9cfe-478c-8aa1-db250252d0c6">
+    <name>ВидРегламентнойОперации</name>
+    <synonym>
+      <key>ru</key>
+      <value>Вид регламентной операции</value>
+    </synonym>
+    <type>
+      <types>EnumRef.ВидыРегламентныхОпераций</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+  </attributes>
+  <dimensions uuid="7f563482-29fa-470e-b3b1-e7c5479ee0fe">
+    <name>Организация</name>
+    <synonym>
+      <key>ru</key>
+      <value>Организация</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.Организации</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <indexing>Index</indexing>
+    <fullTextSearch>Use</fullTextSearch>
+    <useInTotals>true</useInTotals>
+  </dimensions>
+  <dimensions uuid="48c3c2a3-0551-4387-bbd8-3e3855a694c2">
+    <name>СчетУчета</name>
+    <synonym>
+      <key>ru</key>
+      <value>Счет учета (БУ)</value>
+    </synonym>
+    <type>
+      <types>ChartOfAccountsRef.Хозрасчетный</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <useInTotals>true</useInTotals>
+  </dimensions>
+  <dimensions uuid="5086465d-b119-4f54-a35f-5505a540d016">
+    <name>НалоговоеНазначение</name>
+    <synonym>
+      <key>ru</key>
+      <value>Налоговое назначение</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.НалоговыеНазначенияАктивовИЗатрат</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <useInTotals>true</useInTotals>
+  </dimensions>
+  <dimensions uuid="a9ec6ef7-b98e-4d83-95e6-ddb32f25db3f">
+    <name>ОбъектСтроительства</name>
+    <synonym>
+      <key>ru</key>
+      <value>Объект строительства</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.ОбъектыСтроительства</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <indexing>Index</indexing>
+    <fullTextSearch>Use</fullTextSearch>
+    <useInTotals>true</useInTotals>
+  </dimensions>
+</mdclass:AccumulationRegister>

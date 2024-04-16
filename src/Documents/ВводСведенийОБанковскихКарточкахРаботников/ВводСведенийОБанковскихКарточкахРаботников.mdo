@@ -1,0 +1,257 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:Document xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:core="http://g5.1c.ru/v8/dt/mcore" xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="99540765-7600-4f4e-8f5f-39a1fb0ce60a">
+  <producedTypes>
+    <objectType typeId="aaf9efd5-b886-491d-99de-9b50a076bf54" valueTypeId="5917993f-55ce-4662-8501-08fa30638742"/>
+    <refType typeId="52430f97-bc65-4518-90a6-f1bd3736e704" valueTypeId="767dfd5d-6838-48e7-a33e-bf6d49ab16fd"/>
+    <selectionType typeId="e555839e-e83c-4f82-9cb1-a8eadbc815f6" valueTypeId="23f35e8c-0d58-4ee2-b4b6-7f31a5f854e5"/>
+    <listType typeId="46c084a1-4199-41dc-bd70-4956ef892da1" valueTypeId="3d0beec7-5946-4381-a799-96ec61873707"/>
+    <managerType typeId="42cd2364-df0f-4831-ae39-1033748fbbd6" valueTypeId="b48b5515-e9bb-4a12-b39c-3c525148330e"/>
+  </producedTypes>
+  <name>ВводСведенийОБанковскихКарточкахРаботников</name>
+  <synonym>
+    <key>ru</key>
+    <value>Ввод сведений о банковских карточках работников</value>
+  </synonym>
+  <comment>(Регл) Ввод сведений о карточках работников</comment>
+  <inputByString>Document.ВводСведенийОБанковскихКарточкахРаботников.StandardAttribute.Number</inputByString>
+  <fullTextSearchOnInputByString>DontUse</fullTextSearchOnInputByString>
+  <basedOn>Document.ПриемНаРаботуВОрганизацию</basedOn>
+  <createOnInput>Use</createOnInput>
+  <includeHelpInContents>true</includeHelpInContents>
+  <help>
+    <pages>
+      <lang>ru</lang>
+    </pages>
+    <pages>
+      <lang>uk</lang>
+    </pages>
+  </help>
+  <fullTextSearch>Use</fullTextSearch>
+  <numberType>String</numberType>
+  <numberLength>11</numberLength>
+  <numberPeriodicity>Year</numberPeriodicity>
+  <checkUnique>true</checkUnique>
+  <autonumbering>true</autonumbering>
+  <defaultObjectForm>Document.ВводСведенийОБанковскихКарточкахРаботников.Form.ФормаДокумента</defaultObjectForm>
+  <defaultListForm>Document.ВводСведенийОБанковскихКарточкахРаботников.Form.ФормаСписка</defaultListForm>
+  <defaultChoiceForm>Document.ВводСведенийОБанковскихКарточкахРаботников.Form.ФормаВыбора</defaultChoiceForm>
+  <realTimePosting>Deny</realTimePosting>
+  <registerRecordsDeletion>AutoDelete</registerRecordsDeletion>
+  <registerRecordsWritingOnPost>WriteModified</registerRecordsWritingOnPost>
+  <registerRecords>InformationRegister.ПараметрыВыплатыЗПРаботников</registerRecords>
+  <attributes uuid="6cc15ff7-cd32-4884-b38a-9d0578f1e39b">
+    <name>Организация</name>
+    <synonym>
+      <key>ru</key>
+      <value>Организация</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.Организации</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <indexing>Index</indexing>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+  </attributes>
+  <attributes uuid="ddf45276-4cf8-413a-81ee-deccd6b36d1d">
+    <name>Комментарий</name>
+    <synonym>
+      <key>ru</key>
+      <value>Комментарий</value>
+    </synonym>
+    <comment>Любая дополнительная информация</comment>
+    <type>
+      <types>String</types>
+      <stringQualifiers/>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+  </attributes>
+  <attributes uuid="dbc06306-f653-4075-bc9c-ce3647a366ce">
+    <name>Ответственный</name>
+    <synonym>
+      <key>ru</key>
+      <value>Ответственный</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.Пользователи</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+  </attributes>
+  <attributes uuid="6c1a9ecf-ce71-40a6-b387-f1ba590a96a0">
+    <name>КраткийСоставДокумента</name>
+    <synonym>
+      <key>ru</key>
+      <value>Краткий состав документа</value>
+    </synonym>
+    <type>
+      <types>String</types>
+      <stringQualifiers>
+        <length>100</length>
+      </stringQualifiers>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+  </attributes>
+  <forms uuid="e2b34e01-b498-41c3-b097-e9c3940af3f7">
+    <name>ФормаДокумента</name>
+    <synonym>
+      <key>ru</key>
+      <value>Форма документа</value>
+    </synonym>
+    <formType>Ordinary</formType>
+    <usePurposes>PersonalComputer</usePurposes>
+    <usePurposes>MobileDevice</usePurposes>
+  </forms>
+  <forms uuid="cd8b460e-1c96-49aa-b662-f9d7bdaee57c">
+    <name>ФормаСписка</name>
+    <synonym>
+      <key>ru</key>
+      <value>Форма списка</value>
+    </synonym>
+    <formType>Ordinary</formType>
+    <usePurposes>PersonalComputer</usePurposes>
+    <usePurposes>MobileDevice</usePurposes>
+  </forms>
+  <forms uuid="dcd7eced-f9bd-4b9f-8d02-a72babc64f68">
+    <name>ФормаВыбора</name>
+    <synonym>
+      <key>ru</key>
+      <value>Форма выбора</value>
+    </synonym>
+    <formType>Ordinary</formType>
+    <usePurposes>PersonalComputer</usePurposes>
+    <usePurposes>MobileDevice</usePurposes>
+  </forms>
+  <tabularSections uuid="766b8865-0675-45bf-9031-1111ef697d14">
+    <producedTypes>
+      <objectType typeId="f728d6aa-8e21-4737-b3a9-4a8b772e071d" valueTypeId="9739289b-2fc6-4c0e-bdda-ab326cec505f"/>
+      <rowType typeId="99fddd7f-e412-429d-aec9-0abfa102a9f8" valueTypeId="348d0c21-9256-4ad3-b8bd-90621f7fc987"/>
+    </producedTypes>
+    <name>РаботникиОрганизации</name>
+    <synonym>
+      <key>ru</key>
+      <value>Работники организации</value>
+    </synonym>
+    <attributes uuid="83583c09-26e8-44ac-8a46-fb9c57535da1">
+      <name>Сотрудник</name>
+      <synonym>
+        <key>ru</key>
+        <value>Сотрудник</value>
+      </synonym>
+      <type>
+        <types>CatalogRef.СотрудникиОрганизаций</types>
+      </type>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <dataHistory>Use</dataHistory>
+      <fullTextSearch>Use</fullTextSearch>
+    </attributes>
+    <attributes uuid="145d93e4-26f4-4ab8-b9dd-a804dd85400e">
+      <name>ДатаДействия</name>
+      <synonym>
+        <key>ru</key>
+        <value>Дата действия</value>
+      </synonym>
+      <type>
+        <types>Date</types>
+        <dateQualifiers>
+          <dateFractions>Date</dateFractions>
+        </dateQualifiers>
+      </type>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <dataHistory>Use</dataHistory>
+      <fullTextSearch>Use</fullTextSearch>
+    </attributes>
+    <attributes uuid="c038b008-52a2-46c4-ab4f-857d45793e14">
+      <name>Банк</name>
+      <synonym>
+        <key>ru</key>
+        <value>Банк</value>
+      </synonym>
+      <type>
+        <types>CatalogRef.Контрагенты</types>
+      </type>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <dataHistory>Use</dataHistory>
+      <indexing>Index</indexing>
+      <fullTextSearch>Use</fullTextSearch>
+    </attributes>
+    <attributes uuid="13fe49e9-661f-4e88-9111-b9cf8d2c3542">
+      <name>НомерКарточки</name>
+      <synonym>
+        <key>ru</key>
+        <value>Номер карточки</value>
+      </synonym>
+      <type>
+        <types>String</types>
+        <stringQualifiers>
+          <length>16</length>
+        </stringQualifiers>
+      </type>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <dataHistory>Use</dataHistory>
+      <fullTextSearch>Use</fullTextSearch>
+    </attributes>
+    <attributes uuid="5fb2fbab-1f98-4c3d-9359-73bda75b4696">
+      <name>СпособВыплаты</name>
+      <synonym>
+        <key>ru</key>
+        <value>Способ выплаты</value>
+      </synonym>
+      <type>
+        <types>EnumRef.СпособыВыплатыЗарплаты</types>
+      </type>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <dataHistory>Use</dataHistory>
+      <fullTextSearch>Use</fullTextSearch>
+    </attributes>
+    <attributes uuid="08ce31cd-9377-4c3f-9ddc-07e9f3b6b1f1">
+      <name>ФизЛицо</name>
+      <synonym>
+        <key>ru</key>
+        <value>Физическое лицо</value>
+      </synonym>
+      <type>
+        <types>CatalogRef.ФизическиеЛица</types>
+      </type>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <dataHistory>Use</dataHistory>
+      <fullTextSearch>Use</fullTextSearch>
+    </attributes>
+    <attributes uuid="43a8af0c-d3a4-4933-808e-beb44b671cd7">
+      <name>IBAN</name>
+      <synonym>
+        <key>ru</key>
+        <value>IBAN</value>
+      </synonym>
+      <type>
+        <types>String</types>
+        <stringQualifiers>
+          <length>34</length>
+        </stringQualifiers>
+      </type>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <dataHistory>Use</dataHistory>
+      <fullTextSearch>Use</fullTextSearch>
+    </attributes>
+  </tabularSections>
+</mdclass:Document>

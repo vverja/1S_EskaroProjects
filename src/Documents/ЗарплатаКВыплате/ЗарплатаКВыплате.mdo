@@ -1,0 +1,212 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:Document xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:core="http://g5.1c.ru/v8/dt/mcore" xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="8bd582b8-ca18-4e43-ae37-3836c5b705f0">
+  <producedTypes>
+    <objectType typeId="774229e5-4b96-439a-88ef-7f42454cc73b" valueTypeId="60aaf7cd-6e2c-4136-83e6-dc8f5804b15d"/>
+    <refType typeId="3dc40703-3281-4afe-9f7c-9fc0033c4afb" valueTypeId="7484516e-5957-4aa1-a7b8-af85794e6fad"/>
+    <selectionType typeId="904f6f01-2bbb-4e9e-bb7d-c6d160f5c7c8" valueTypeId="04184a59-b81b-4ae1-801e-33d7ff7f85fa"/>
+    <listType typeId="90aaa6fc-4cbf-4517-bc5b-122d8d2bdcba" valueTypeId="eb3d5cd0-239b-47b7-9ecc-e6d8e27d683e"/>
+    <managerType typeId="f28d4633-6f74-494a-a7e9-e265e752554e" valueTypeId="1b704bbb-42a3-40cc-b422-52fbac2c4af5"/>
+  </producedTypes>
+  <name>ЗарплатаКВыплате</name>
+  <synonym>
+    <key>ru</key>
+    <value>Зарплата к выплате</value>
+  </synonym>
+  <comment>(Упр)</comment>
+  <inputByString>Document.ЗарплатаКВыплате.StandardAttribute.Number</inputByString>
+  <fullTextSearchOnInputByString>DontUse</fullTextSearchOnInputByString>
+  <createOnInput>Use</createOnInput>
+  <includeHelpInContents>true</includeHelpInContents>
+  <help>
+    <pages>
+      <lang>ru</lang>
+    </pages>
+  </help>
+  <fullTextSearch>Use</fullTextSearch>
+  <numberType>String</numberType>
+  <numberLength>11</numberLength>
+  <numberPeriodicity>Year</numberPeriodicity>
+  <checkUnique>true</checkUnique>
+  <autonumbering>true</autonumbering>
+  <defaultObjectForm>Document.ЗарплатаКВыплате.Form.ФормаДокумента</defaultObjectForm>
+  <defaultListForm>Document.ЗарплатаКВыплате.Form.ФормаСписка</defaultListForm>
+  <defaultChoiceForm>Document.ЗарплатаКВыплате.Form.ФормаВыбора</defaultChoiceForm>
+  <posting>Deny</posting>
+  <realTimePosting>Deny</realTimePosting>
+  <registerRecordsDeletion>AutoDelete</registerRecordsDeletion>
+  <registerRecordsWritingOnPost>WriteModified</registerRecordsWritingOnPost>
+  <attributes uuid="23714e8f-6330-4ce3-a594-e86c813bed62">
+    <name>Ответственный</name>
+    <synonym>
+      <key>ru</key>
+      <value>Ответственный</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.Пользователи</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+  </attributes>
+  <attributes uuid="61ca5fc9-6b37-4cb1-8642-a82c9383e682">
+    <name>Комментарий</name>
+    <synonym>
+      <key>ru</key>
+      <value>Комментарий</value>
+    </synonym>
+    <comment>Любая дополнительная информация</comment>
+    <type>
+      <types>String</types>
+      <stringQualifiers/>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+  </attributes>
+  <attributes uuid="29159347-4f3e-4e41-91a1-4155f66e594c">
+    <name>ХарактерВыплаты</name>
+    <synonym>
+      <key>ru</key>
+      <value>Характер выплаты</value>
+    </synonym>
+    <type>
+      <types>EnumRef.ХарактерВыплатыЗарплаты</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+  </attributes>
+  <attributes uuid="c09d8fe5-5832-4bf2-bc6e-82ded84eb5f4">
+    <name>Подразделение</name>
+    <synonym>
+      <key>ru</key>
+      <value>Подразделение</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.Подразделения</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+  </attributes>
+  <attributes uuid="3c020332-d2c3-4b3b-ab96-2c057765a568">
+    <name>КраткийСоставДокумента</name>
+    <synonym>
+      <key>ru</key>
+      <value>Краткий состав документа</value>
+    </synonym>
+    <type>
+      <types>String</types>
+      <stringQualifiers>
+        <length>100</length>
+      </stringQualifiers>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+  </attributes>
+  <forms uuid="525ea654-c3f5-439b-9964-15aa7b11a790">
+    <name>ФормаДокумента</name>
+    <synonym>
+      <key>ru</key>
+      <value>Форма документа</value>
+    </synonym>
+    <formType>Ordinary</formType>
+    <usePurposes>PersonalComputer</usePurposes>
+    <usePurposes>MobileDevice</usePurposes>
+  </forms>
+  <forms uuid="2eb64ce4-a10e-4c48-aaea-e9d1db0d1ae1">
+    <name>ФормаСписка</name>
+    <synonym>
+      <key>ru</key>
+      <value>Форма списка</value>
+    </synonym>
+    <formType>Ordinary</formType>
+    <usePurposes>PersonalComputer</usePurposes>
+    <usePurposes>MobileDevice</usePurposes>
+  </forms>
+  <forms uuid="b3bce378-737d-49be-a293-2cdcaf4a1750">
+    <name>ФормаВыбора</name>
+    <synonym>
+      <key>ru</key>
+      <value>Форма выбора</value>
+    </synonym>
+    <formType>Ordinary</formType>
+    <usePurposes>PersonalComputer</usePurposes>
+    <usePurposes>MobileDevice</usePurposes>
+  </forms>
+  <tabularSections uuid="fcc341d6-5eea-438c-b191-cdb894076807">
+    <producedTypes>
+      <objectType typeId="6e128495-f4b5-4472-bf20-8fc7f167e99d" valueTypeId="15db038b-6ff8-4d90-8bc7-8cf723a74958"/>
+      <rowType typeId="dac1589e-93c6-4dec-b327-404ccaaeb893" valueTypeId="ddace498-1c19-47a6-91ae-4cfad00c8f80"/>
+    </producedTypes>
+    <name>Зарплата</name>
+    <synonym>
+      <key>ru</key>
+      <value>Зарплата</value>
+    </synonym>
+    <attributes uuid="f061ba78-7b0c-43ee-b8e4-6414b6ff2018">
+      <name>Физлицо</name>
+      <synonym>
+        <key>ru</key>
+        <value>Физлицо</value>
+      </synonym>
+      <type>
+        <types>CatalogRef.ФизическиеЛица</types>
+      </type>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <dataHistory>Use</dataHistory>
+      <fullTextSearch>Use</fullTextSearch>
+    </attributes>
+    <attributes uuid="dd221be1-24e2-4d83-bcb8-3a70fdba7c45">
+      <name>Сумма</name>
+      <synonym>
+        <key>ru</key>
+        <value>Сумма</value>
+      </synonym>
+      <type>
+        <types>Number</types>
+        <numberQualifiers>
+          <precision>15</precision>
+          <scale>2</scale>
+        </numberQualifiers>
+      </type>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <dataHistory>Use</dataHistory>
+      <fullTextSearch>Use</fullTextSearch>
+    </attributes>
+    <attributes uuid="d451616d-3682-448e-8d02-9e08af119874">
+      <name>Авторасчет</name>
+      <synonym>
+        <key>ru</key>
+        <value>Авторасчет</value>
+      </synonym>
+      <type>
+        <types>Boolean</types>
+      </type>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <dataHistory>Use</dataHistory>
+      <fullTextSearch>Use</fullTextSearch>
+    </attributes>
+  </tabularSections>
+  <templates uuid="992ce406-cd7c-40e9-a492-99c3f471d246">
+    <name>Макет</name>
+    <synonym>
+      <key>ru</key>
+      <value>Макет</value>
+    </synonym>
+  </templates>
+</mdclass:Document>

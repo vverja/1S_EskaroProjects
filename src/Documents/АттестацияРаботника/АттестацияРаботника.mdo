@@ -1,0 +1,193 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:Document xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:core="http://g5.1c.ru/v8/dt/mcore" xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="0ade6cd4-8515-4842-aaae-53aae71c7183">
+  <producedTypes>
+    <objectType typeId="0271d5dc-1e15-4dd8-8571-8d335a86d29c" valueTypeId="c26c7fd3-4f2e-48c3-be97-98af27c6b9b2"/>
+    <refType typeId="2b38a84f-856c-4053-9b06-6b7d4c8af65a" valueTypeId="03b03471-4f82-4f24-b3b3-c0ab42a51d5a"/>
+    <selectionType typeId="90a8b3fc-e62f-4a6d-8d68-f5cce91150cc" valueTypeId="af1e2f7f-4b31-4972-b6a2-f11e286f9d54"/>
+    <listType typeId="c4a72df4-2a9c-47da-8d28-cc1bba2915c6" valueTypeId="af2be21d-ac99-4741-b24b-b4ca2bcc2cb1"/>
+    <managerType typeId="d085e262-5579-439a-b66a-8ac1e1c401a4" valueTypeId="4ae652a3-9410-4eb4-888f-73561bff3bfc"/>
+  </producedTypes>
+  <name>АттестацияРаботника</name>
+  <synonym>
+    <key>ru</key>
+    <value>Аттестация работника</value>
+  </synonym>
+  <comment>(Упр)</comment>
+  <inputByString>Document.АттестацияРаботника.StandardAttribute.Number</inputByString>
+  <fullTextSearchOnInputByString>DontUse</fullTextSearchOnInputByString>
+  <createOnInput>Use</createOnInput>
+  <includeHelpInContents>true</includeHelpInContents>
+  <help>
+    <pages>
+      <lang>ru</lang>
+    </pages>
+  </help>
+  <fullTextSearch>Use</fullTextSearch>
+  <numberType>String</numberType>
+  <numberLength>11</numberLength>
+  <numberPeriodicity>Year</numberPeriodicity>
+  <checkUnique>true</checkUnique>
+  <autonumbering>true</autonumbering>
+  <defaultObjectForm>Document.АттестацияРаботника.Form.ФормаДокумента</defaultObjectForm>
+  <defaultListForm>Document.АттестацияРаботника.Form.ФормаСписка</defaultListForm>
+  <defaultChoiceForm>Document.АттестацияРаботника.Form.ФормаВыбора</defaultChoiceForm>
+  <realTimePosting>Deny</realTimePosting>
+  <registerRecordsDeletion>AutoDelete</registerRecordsDeletion>
+  <registerRecordsWritingOnPost>WriteModified</registerRecordsWritingOnPost>
+  <registerRecords>InformationRegister.ОценкиКомпетенцийРаботников</registerRecords>
+  <attributes uuid="df5d64c5-f24b-44d2-b1fd-103ffe9b6853">
+    <name>Физлицо</name>
+    <synonym>
+      <key>ru</key>
+      <value>Физлицо</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.ФизическиеЛица</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+  </attributes>
+  <attributes uuid="bebbc6d3-fc8c-486a-987a-c3ff5e5d5df4">
+    <name>Ответственный</name>
+    <synonym>
+      <key>ru</key>
+      <value>Ответственный</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.Пользователи</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+  </attributes>
+  <attributes uuid="54ebd63b-deee-4776-a42f-0e877f741fad">
+    <name>Комментарий</name>
+    <synonym>
+      <key>ru</key>
+      <value>Комментарий</value>
+    </synonym>
+    <comment>(Общ) Любая дополнительная информация</comment>
+    <type>
+      <types>String</types>
+      <stringQualifiers/>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+  </attributes>
+  <attributes uuid="8a38002f-ed2c-4244-ad44-6f536f1247cf">
+    <name>Сотрудник</name>
+    <synonym>
+      <key>ru</key>
+      <value>Сотрудник</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.СотрудникиОрганизаций</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+  </attributes>
+  <forms uuid="1d4009d2-4736-4602-ad45-a0fab26181d6">
+    <name>ФормаДокумента</name>
+    <synonym>
+      <key>ru</key>
+      <value>Форма документа</value>
+    </synonym>
+    <formType>Ordinary</formType>
+    <usePurposes>PersonalComputer</usePurposes>
+    <usePurposes>MobileDevice</usePurposes>
+  </forms>
+  <forms uuid="c8d2924c-8e2e-495c-9d57-3b87332e0706">
+    <name>ФормаСписка</name>
+    <synonym>
+      <key>ru</key>
+      <value>Форма списка</value>
+    </synonym>
+    <formType>Ordinary</formType>
+    <usePurposes>PersonalComputer</usePurposes>
+    <usePurposes>MobileDevice</usePurposes>
+  </forms>
+  <forms uuid="ccd9505e-ad9c-4f6e-8cd8-b4fe831b6929">
+    <name>ФормаВыбора</name>
+    <synonym>
+      <key>ru</key>
+      <value>Форма выбора</value>
+    </synonym>
+    <formType>Ordinary</formType>
+    <usePurposes>PersonalComputer</usePurposes>
+    <usePurposes>MobileDevice</usePurposes>
+  </forms>
+  <tabularSections uuid="91580e96-8de8-4462-93f8-aea232aec3cc">
+    <producedTypes>
+      <objectType typeId="bad7f4b3-e504-4c52-9e24-cae40c482887" valueTypeId="5a24130d-2de8-4f43-80ff-1e4c36fe2b38"/>
+      <rowType typeId="19da97c8-0ae4-448a-85a7-0f474bf0e8da" valueTypeId="415bf7aa-f2d7-4e6a-9013-cf5bf1eb65d4"/>
+    </producedTypes>
+    <name>СписокКомпетенций</name>
+    <synonym>
+      <key>ru</key>
+      <value>Список компетенций</value>
+    </synonym>
+    <attributes uuid="8aa29073-4b6d-427c-9d00-99a9d24f03af">
+      <name>Компетенция</name>
+      <synonym>
+        <key>ru</key>
+        <value>Компетенция</value>
+      </synonym>
+      <type>
+        <types>CatalogRef.КомпетенцииРаботников</types>
+      </type>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <dataHistory>Use</dataHistory>
+      <fullTextSearch>Use</fullTextSearch>
+    </attributes>
+    <attributes uuid="bb1c2795-c5f2-46eb-aafe-02bceab8f380">
+      <name>Оценка</name>
+      <synonym>
+        <key>ru</key>
+        <value>Оценка</value>
+      </synonym>
+      <type>
+        <types>CatalogRef.СоставОценочныхШкалКомпетенций</types>
+      </type>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <dataHistory>Use</dataHistory>
+      <fullTextSearch>Use</fullTextSearch>
+    </attributes>
+    <attributes uuid="0bad5542-1496-4f5d-861e-16009ddbe3ab">
+      <name>ДатаОценки</name>
+      <synonym>
+        <key>ru</key>
+        <value>Дата оценки</value>
+      </synonym>
+      <type>
+        <types>Date</types>
+        <dateQualifiers>
+          <dateFractions>Date</dateFractions>
+        </dateQualifiers>
+      </type>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <dataHistory>Use</dataHistory>
+      <fullTextSearch>Use</fullTextSearch>
+    </attributes>
+  </tabularSections>
+  <templates uuid="8d80ee46-4920-4237-9ce6-0d3cf11473d0">
+    <name>Макет</name>
+    <synonym>
+      <key>ru</key>
+      <value>Макет</value>
+    </synonym>
+  </templates>
+</mdclass:Document>

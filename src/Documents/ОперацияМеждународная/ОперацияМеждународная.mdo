@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:Document xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:core="http://g5.1c.ru/v8/dt/mcore" xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="bcfab6fe-3ed0-48dc-956b-ba75194e868a">
+  <producedTypes>
+    <objectType typeId="709960b9-8858-427a-8ff6-a42e05e45cc5" valueTypeId="44df2487-e853-4c96-8b02-985e04b98aab"/>
+    <refType typeId="a482687b-c553-4636-8431-9eaeef9f50b3" valueTypeId="90f5790f-25eb-4996-9dec-af63935cadfd"/>
+    <selectionType typeId="981e929a-60f1-43a4-b993-9976f8427fba" valueTypeId="5a82ff0c-7ed0-4c9f-a0a9-d6656197787e"/>
+    <listType typeId="10aea2be-dd96-4251-b4b3-58b34f986831" valueTypeId="c082c8ff-56fd-4ad2-84a6-470ff9bd9f4a"/>
+    <managerType typeId="d6886f22-30fe-43d1-b3bb-e90035cb3050" valueTypeId="96d48a43-5f7c-4040-8da6-9b97f950c034"/>
+  </producedTypes>
+  <name>ОперацияМеждународная</name>
+  <synonym>
+    <key>ru</key>
+    <value>Операция международная</value>
+  </synonym>
+  <comment>(Упр)</comment>
+  <inputByString>Document.ОперацияМеждународная.StandardAttribute.Number</inputByString>
+  <fullTextSearchOnInputByString>DontUse</fullTextSearchOnInputByString>
+  <createOnInput>Use</createOnInput>
+  <includeHelpInContents>true</includeHelpInContents>
+  <help>
+    <pages>
+      <lang>ru</lang>
+    </pages>
+  </help>
+  <fullTextSearch>Use</fullTextSearch>
+  <numberType>String</numberType>
+  <numberLength>11</numberLength>
+  <numberPeriodicity>Year</numberPeriodicity>
+  <checkUnique>true</checkUnique>
+  <autonumbering>true</autonumbering>
+  <defaultObjectForm>Document.ОперацияМеждународная.Form.ФормаДокумента</defaultObjectForm>
+  <defaultListForm>Document.ОперацияМеждународная.Form.ФормаСписка</defaultListForm>
+  <defaultChoiceForm>Document.ОперацияМеждународная.Form.ФормаВыбора</defaultChoiceForm>
+  <posting>Deny</posting>
+  <registerRecordsDeletion>AutoDeleteOff</registerRecordsDeletion>
+  <registerRecordsWritingOnPost>WriteModified</registerRecordsWritingOnPost>
+  <sequenceFilling>AutoFillOff</sequenceFilling>
+  <registerRecords>AccountingRegister.Международный</registerRecords>
+  <attributes uuid="2dc116e9-110d-4fcb-b3ca-220bb9c9fd10">
+    <name>Организация</name>
+    <synonym>
+      <key>ru</key>
+      <value>Организация</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.Организации</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <indexing>Index</indexing>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+  </attributes>
+  <attributes uuid="b8ba1f53-6198-4017-9316-41d145fd9302">
+    <name>СуммаОперации</name>
+    <synonym>
+      <key>ru</key>
+      <value>Сумма операции</value>
+    </synonym>
+    <type>
+      <types>Number</types>
+      <numberQualifiers>
+        <precision>15</precision>
+        <scale>2</scale>
+      </numberQualifiers>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+  </attributes>
+  <attributes uuid="3806b90c-2db8-4484-84b3-b70afdb9d663">
+    <name>Комментарий</name>
+    <synonym>
+      <key>ru</key>
+      <value>Комментарий</value>
+    </synonym>
+    <comment>Любая дополнительная информация</comment>
+    <type>
+      <types>String</types>
+      <stringQualifiers/>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+  </attributes>
+  <attributes uuid="45b50234-5df3-4571-a3bc-c326e00ffb1a">
+    <name>Ответственный</name>
+    <synonym>
+      <key>ru</key>
+      <value>Ответственный</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.Пользователи</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+  </attributes>
+  <forms uuid="cc60a926-0655-4a8a-9b25-ac603d0c1086">
+    <name>ФормаДокумента</name>
+    <synonym>
+      <key>ru</key>
+      <value>Форма документа</value>
+    </synonym>
+    <formType>Ordinary</formType>
+    <usePurposes>PersonalComputer</usePurposes>
+    <usePurposes>MobileDevice</usePurposes>
+  </forms>
+  <forms uuid="87972c57-e19b-4f28-a3e6-82942079085f">
+    <name>ФормаСписка</name>
+    <synonym>
+      <key>ru</key>
+      <value>Форма списка</value>
+    </synonym>
+    <formType>Ordinary</formType>
+    <usePurposes>PersonalComputer</usePurposes>
+    <usePurposes>MobileDevice</usePurposes>
+  </forms>
+  <forms uuid="343e2061-704e-4bdc-b4c2-e26913c62d2e">
+    <name>ФормаВыбора</name>
+    <synonym>
+      <key>ru</key>
+      <value>Форма выбора</value>
+    </synonym>
+    <formType>Ordinary</formType>
+    <usePurposes>PersonalComputer</usePurposes>
+    <usePurposes>MobileDevice</usePurposes>
+  </forms>
+</mdclass:Document>

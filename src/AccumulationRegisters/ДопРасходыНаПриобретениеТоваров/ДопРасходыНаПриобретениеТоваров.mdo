@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:AccumulationRegister xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:core="http://g5.1c.ru/v8/dt/mcore" xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="8242496d-9bc1-490d-8a90-40b708c0e51a">
+  <producedTypes>
+    <selectionType typeId="5945c066-0869-469a-8ca3-13ffc5489563" valueTypeId="f9d3525b-6575-4a8a-96a1-57215514a2b8"/>
+    <listType typeId="91cb642e-3b48-4655-85ef-d698ad7d1504" valueTypeId="1590dae1-1aa3-42bd-966f-ab1c68a947d3"/>
+    <managerType typeId="a90062c7-cb64-4d9d-bfbb-7ce35264bdfc" valueTypeId="ffdd5446-91f3-4547-9d92-3ad8475e535f"/>
+    <recordSetType typeId="f377b1d3-e0e6-4252-8421-2c5195ca9c48" valueTypeId="3a5e8fa7-7aed-475d-876b-d2ef03db8d48"/>
+    <recordKeyType typeId="00df8b6a-2779-4f5f-a931-172bd3a3af2d" valueTypeId="d555fa58-5f19-48db-9595-3405290f02ee"/>
+    <recordType typeId="d5f48be5-27c7-4ac3-8357-43cc997d8dee" valueTypeId="f8eec063-506c-4f3d-aadb-af7c1d34920a"/>
+  </producedTypes>
+  <name>ДопРасходыНаПриобретениеТоваров</name>
+  <synonym>
+    <key>ru</key>
+    <value>Доп. расходы на приобретение товаров, подлежащие распределению</value>
+  </synonym>
+  <enableTotalsSplitting>true</enableTotalsSplitting>
+  <resources uuid="ffcb98b9-919b-4f5c-9171-696b6c8c805b">
+    <name>Сумма</name>
+    <synonym>
+      <key>ru</key>
+      <value>Сумма расхода</value>
+    </synonym>
+    <type>
+      <types>Number</types>
+      <numberQualifiers>
+        <precision>15</precision>
+        <scale>2</scale>
+      </numberQualifiers>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+  </resources>
+  <attributes uuid="24e75204-10e6-4ca6-a767-d4fd959d7280">
+    <name>СписаниеПартий</name>
+    <synonym>
+      <key>ru</key>
+      <value>Списание партий</value>
+    </synonym>
+    <comment>Регламентный документ, сформировавший движения</comment>
+    <type>
+      <types>Boolean</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+  </attributes>
+  <dimensions uuid="d5f8d267-9279-44c7-bae3-de043e983d0c">
+    <name>Номенклатура</name>
+    <synonym>
+      <key>ru</key>
+      <value>Номенклатура</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.Номенклатура</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <useInTotals>true</useInTotals>
+  </dimensions>
+  <dimensions uuid="c4f3382b-5654-4d88-a4cd-be2ee076121b">
+    <name>ХарактеристикаНоменклатуры</name>
+    <synonym>
+      <key>ru</key>
+      <value>Характеристика номенклатуры</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.ХарактеристикиНоменклатуры</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <useInTotals>true</useInTotals>
+  </dimensions>
+  <dimensions uuid="97d0ebb8-af77-4b38-b692-155c5efa7f8c">
+    <name>СерияНоменклатуры</name>
+    <synonym>
+      <key>ru</key>
+      <value>Серия номенклатуры</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.СерииНоменклатуры</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <useInTotals>true</useInTotals>
+  </dimensions>
+</mdclass:AccumulationRegister>

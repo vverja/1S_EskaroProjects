@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:InformationRegister xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:core="http://g5.1c.ru/v8/dt/mcore" xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="56d17845-2300-4ff9-9d34-a72ae92bbf4f">
+  <producedTypes>
+    <selectionType typeId="5383cf9e-100b-4610-8eec-f29c71e907d2" valueTypeId="573ca7f4-58e6-4fcc-9938-e4ed49628101"/>
+    <listType typeId="a44f277c-71ca-44e5-8f9a-f1e504218d98" valueTypeId="af187400-aafa-4a44-af63-93b0f0ba8684"/>
+    <managerType typeId="f27880c9-b6ff-4cd4-9c31-49d2fcb963f7" valueTypeId="c0a41a88-36d9-4e5d-8162-ad92a30459b7"/>
+    <recordSetType typeId="9364fe42-87ea-41df-9913-c826b28566b5" valueTypeId="73a592c8-0903-4cd1-8e50-aa7092f5e796"/>
+    <recordKeyType typeId="517fde8e-2119-4374-89e3-106347979837" valueTypeId="0137c081-282d-4ff4-9213-abde3f91002a"/>
+    <recordType typeId="c22f3919-7031-42c6-a502-bf021ce3a3d2" valueTypeId="a2a1c37d-8b3a-4f18-9d0a-6f881e6062ce"/>
+    <recordManagerType typeId="3984e326-73bd-4c65-91ed-548eb066416f" valueTypeId="4bd19931-3769-4243-8624-b2ec6e437fe1"/>
+  </producedTypes>
+  <name>СобытияОС</name>
+  <synonym>
+    <key>ru</key>
+    <value>События основного средства (упр. учет)</value>
+  </synonym>
+  <comment>(Упр)  Регистр, который показывает события по упр. учету ОС. Данные вносятся только документами. Из этого регистра берется номер и название документа события.</comment>
+  <informationRegisterPeriodicity>RecorderPosition</informationRegisterPeriodicity>
+  <writeMode>RecorderSubordinate</writeMode>
+  <help>
+    <pages>
+      <lang>ru</lang>
+    </pages>
+  </help>
+  <resources uuid="f4c72742-4fe8-49a7-a862-f0a149941aff">
+    <name>НазваниеДокумента</name>
+    <synonym>
+      <key>ru</key>
+      <value>Название документа события</value>
+    </synonym>
+    <comment>(Упр)</comment>
+    <type>
+      <types>String</types>
+      <stringQualifiers>
+        <length>50</length>
+      </stringQualifiers>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:StringValue">
+      <value></value>
+    </fillValue>
+  </resources>
+  <resources uuid="5b74bd42-3c56-42ba-b06d-a324308fbe4a">
+    <name>НомерДокумента</name>
+    <synonym>
+      <key>ru</key>
+      <value>Номер документа события</value>
+    </synonym>
+    <comment>(Упр)</comment>
+    <type>
+      <types>String</types>
+      <stringQualifiers>
+        <length>11</length>
+      </stringQualifiers>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:StringValue">
+      <value></value>
+    </fillValue>
+  </resources>
+  <resources uuid="547b6e3d-e6a0-4fae-b953-e08447a8deac">
+    <name>СуммаЗатрат</name>
+    <synonym>
+      <key>ru</key>
+      <value>Сумма затрат</value>
+    </synonym>
+    <comment>(Упр)</comment>
+    <type>
+      <types>Number</types>
+      <numberQualifiers>
+        <precision>15</precision>
+        <scale>2</scale>
+        <nonNegative>true</nonNegative>
+      </numberQualifiers>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:UndefinedValue"/>
+  </resources>
+  <dimensions uuid="1a2b4508-e0b4-4413-b7f7-8b15ce058b1a">
+    <name>ОсновноеСредство</name>
+    <synonym>
+      <key>ru</key>
+      <value>Основное средство</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.ОсновныеСредства</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillFromFillingValue>true</fillFromFillingValue>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <master>true</master>
+    <mainFilter>true</mainFilter>
+  </dimensions>
+  <dimensions uuid="7a58e791-4090-4e09-804e-e4b81d41362d">
+    <name>Событие</name>
+    <synonym>
+      <key>ru</key>
+      <value>Событие</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.СобытияОС</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <mainFilter>true</mainFilter>
+  </dimensions>
+</mdclass:InformationRegister>

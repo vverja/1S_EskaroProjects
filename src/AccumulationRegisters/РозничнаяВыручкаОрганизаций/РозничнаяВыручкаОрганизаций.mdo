@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:AccumulationRegister xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:core="http://g5.1c.ru/v8/dt/mcore" xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="cf1675e9-abb3-4874-aefd-edbd1c1d54dc">
+  <producedTypes>
+    <selectionType typeId="be4b2993-febc-4f35-b9fb-b0da37d0ba71" valueTypeId="bd969324-b8ea-4cf5-9ccb-9e267e67a408"/>
+    <listType typeId="16261dc4-bb37-410b-8500-d6e1622946ed" valueTypeId="d8ba6ae3-8d8a-4574-b1a2-38bc0928e562"/>
+    <managerType typeId="11747fc8-59d9-4898-aaeb-9070c5d3b8aa" valueTypeId="3077ac08-5919-400a-81db-2a5afabbd98c"/>
+    <recordSetType typeId="b0f7649d-d60c-4fe3-89e4-f00c5a8073c2" valueTypeId="00d698f3-187d-4c44-8b91-2f4e304016a4"/>
+    <recordKeyType typeId="68d02438-8ee1-4a81-85a1-bce486074ec7" valueTypeId="9847e89c-8bab-4700-83b7-436c953c86a2"/>
+    <recordType typeId="91687cb2-77df-47d2-9e05-122823159583" valueTypeId="7c4b0b68-205c-4b0c-b98d-dea09b4af774"/>
+  </producedTypes>
+  <name>РозничнаяВыручкаОрганизаций</name>
+  <synonym>
+    <key>ru</key>
+    <value>Розничная выручка организаций</value>
+  </synonym>
+  <comment>(Регл)</comment>
+  <enableTotalsSplitting>true</enableTotalsSplitting>
+  <resources uuid="547a031c-def1-4627-81e2-3ad3096b212e">
+    <name>Сумма</name>
+    <synonym>
+      <key>ru</key>
+      <value>Сумма</value>
+    </synonym>
+    <comment>Сумма в валюте ведения бухгалтерского  учета со всеми налогами</comment>
+    <type>
+      <types>Number</types>
+      <numberQualifiers>
+        <precision>15</precision>
+        <scale>2</scale>
+      </numberQualifiers>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+  </resources>
+  <resources uuid="c08a5c4f-3707-4fe0-b9ee-445d21b51637">
+    <name>СуммаНДС</name>
+    <synonym>
+      <key>ru</key>
+      <value>Сумма НДС</value>
+    </synonym>
+    <type>
+      <types>Number</types>
+      <numberQualifiers>
+        <precision>15</precision>
+        <scale>2</scale>
+      </numberQualifiers>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+  </resources>
+  <dimensions uuid="8e0e653c-b1b4-49af-83dd-1c0089870d5a">
+    <name>Организация</name>
+    <synonym>
+      <key>ru</key>
+      <value>Организация</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.Организации</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <useInTotals>true</useInTotals>
+  </dimensions>
+  <dimensions uuid="32541c79-cfc2-4646-b97b-f9092e1c5665">
+    <name>РозничнаяТочка</name>
+    <synonym>
+      <key>ru</key>
+      <value>Розничная точка</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.КассыККМ</types>
+      <types>CatalogRef.Склады</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <useInTotals>true</useInTotals>
+  </dimensions>
+  <dimensions uuid="05ea1840-c0e0-4160-82f7-8e577cb67411">
+    <name>СтавкаНДС</name>
+    <synonym>
+      <key>ru</key>
+      <value>Ставка НДС</value>
+    </synonym>
+    <type>
+      <types>EnumRef.СтавкиНДС</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <useInTotals>true</useInTotals>
+  </dimensions>
+  <dimensions uuid="6987e204-b3db-4638-b059-47fa41964aa3">
+    <name>ВидРозничнойВыручки</name>
+    <synonym>
+      <key>ru</key>
+      <value>Вид розничной выручки</value>
+    </synonym>
+    <comment>Разделяет суммы на полученные от реализации и на выплаченные в качестве возвратов</comment>
+    <type>
+      <types>EnumRef.РасчетыВозврат</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <useInTotals>true</useInTotals>
+  </dimensions>
+</mdclass:AccumulationRegister>

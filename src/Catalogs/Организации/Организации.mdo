@@ -1,0 +1,362 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:Catalog xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:core="http://g5.1c.ru/v8/dt/mcore" xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="e3a94823-f310-49c2-a6d7-7ee41eabfaf1">
+  <producedTypes>
+    <objectType typeId="45b4ae8c-3474-4259-9649-20db943819ff" valueTypeId="291593e3-2848-47d2-9718-1563d970f973"/>
+    <refType typeId="a86305d7-b8a1-4312-901f-2ade3efdb351" valueTypeId="e3e64cf2-d237-4c41-b84c-3d576ab19ee3"/>
+    <selectionType typeId="3526be00-4c2e-4dea-a99c-cff836794d35" valueTypeId="3e06838b-8845-48d4-b7d6-1e28c45b18e2"/>
+    <listType typeId="a31e9035-d23e-4188-b245-667491fc027e" valueTypeId="92ac8bc1-6b5c-4ee6-a01b-3f98c43d059b"/>
+    <managerType typeId="77e6ff32-ade9-4aa1-8267-9ea771d7a98b" valueTypeId="03ae4ecc-f86b-4cdf-aa8f-cbba8505757c"/>
+  </producedTypes>
+  <name>Организации</name>
+  <synonym>
+    <key>ru</key>
+    <value>Организации</value>
+  </synonym>
+  <comment>(Общ)</comment>
+  <useStandardCommands>true</useStandardCommands>
+  <inputByString>Catalog.Организации.StandardAttribute.Description</inputByString>
+  <inputByString>Catalog.Организации.StandardAttribute.Code</inputByString>
+  <fullTextSearchOnInputByString>DontUse</fullTextSearchOnInputByString>
+  <createOnInput>DontUse</createOnInput>
+  <includeHelpInContents>true</includeHelpInContents>
+  <help>
+    <pages>
+      <lang>ru</lang>
+    </pages>
+  </help>
+  <fullTextSearch>Use</fullTextSearch>
+  <objectPresentation>
+    <key>ru</key>
+    <value>Организация</value>
+  </objectPresentation>
+  <extendedObjectPresentation>
+    <key>ru</key>
+    <value>Организация</value>
+  </extendedObjectPresentation>
+  <listPresentation>
+    <key>ru</key>
+    <value>Организации</value>
+  </listPresentation>
+  <extendedListPresentation>
+    <key>ru</key>
+    <value>Организации</value>
+  </extendedListPresentation>
+  <explanation>
+    <key>ru</key>
+    <value>Перечень организаций, входящих в состав предприятия</value>
+  </explanation>
+  <levelCount>1</levelCount>
+  <foldersOnTop>true</foldersOnTop>
+  <codeLength>9</codeLength>
+  <descriptionLength>50</descriptionLength>
+  <codeType>String</codeType>
+  <checkUnique>true</checkUnique>
+  <autonumbering>true</autonumbering>
+  <defaultPresentation>AsDescription</defaultPresentation>
+  <editType>InDialog</editType>
+  <quickChoice>true</quickChoice>
+  <choiceMode>QuickChoice</choiceMode>
+  <defaultObjectForm>Catalog.Организации.Form.ФормаЭлемента</defaultObjectForm>
+  <defaultListForm>Catalog.Организации.Form.ФормаСписка</defaultListForm>
+  <defaultChoiceForm>Catalog.Организации.Form.ФормаВыбора</defaultChoiceForm>
+  <auxiliaryObjectForm>Catalog.Организации.Form.ФормаЭлементаУправляемая</auxiliaryObjectForm>
+  <auxiliaryListForm>Catalog.Организации.Form.ФормаСпискаУправляемая</auxiliaryListForm>
+  <auxiliaryChoiceForm>Catalog.Организации.Form.ФормаВыбораУправляемая</auxiliaryChoiceForm>
+  <attributes uuid="c393405d-5ad6-48cf-b303-85c81993ad42">
+    <name>Префикс</name>
+    <synonym>
+      <key>ru</key>
+      <value>Префикс</value>
+    </synonym>
+    <comment>(Общ)</comment>
+    <type>
+      <types>String</types>
+      <stringQualifiers>
+        <length>3</length>
+      </stringQualifiers>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+  </attributes>
+  <attributes uuid="15d81c78-b262-4dbf-8d72-217ac787fce5">
+    <name>ГоловнаяОрганизация</name>
+    <synonym>
+      <key>ru</key>
+      <value>Головная организация</value>
+    </synonym>
+    <comment>(Общ)</comment>
+    <type>
+      <types>CatalogRef.Организации</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <choiceParameters>
+      <name>Отбор.ЮрФизЛицо</name>
+      <value xsi:type="core:ReferenceValue">
+        <value>Enum.ЮрФизЛицо.EnumValue.ЮрЛицо</value>
+      </value>
+    </choiceParameters>
+    <choiceParameters>
+      <name>Отбор.ГоловнаяОрганизация</name>
+      <value xsi:type="core:ReferenceValue">
+        <value>Catalog.Организации.EmptyRef</value>
+      </value>
+    </choiceParameters>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+  </attributes>
+  <attributes uuid="e3a6046d-2c07-4cad-b8f8-cf042f598091">
+    <name>НаименованиеПолное</name>
+    <synonym>
+      <key>ru</key>
+      <value>Полное наименование</value>
+    </synonym>
+    <comment>(Общ)</comment>
+    <type>
+      <types>String</types>
+      <stringQualifiers/>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+  </attributes>
+  <attributes uuid="0237d60e-116b-4724-bb2e-97d18fe236fb">
+    <name>ЮрФизЛицо</name>
+    <synonym>
+      <key>ru</key>
+      <value>Юр. / физ. лицо</value>
+    </synonym>
+    <comment>(Общ)</comment>
+    <type>
+      <types>EnumRef.ЮрФизЛицо</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fillValue xsi:type="core:ReferenceValue">
+      <value>Enum.ЮрФизЛицо.EnumValue.ЮрЛицо</value>
+    </fillValue>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+  </attributes>
+  <attributes uuid="86a54af2-d7d7-4ae7-a094-ac312263ecd2">
+    <name>ОсновнойБанковскийСчет</name>
+    <synonym>
+      <key>ru</key>
+      <value>Основной банковский счет</value>
+    </synonym>
+    <comment>(Общ)</comment>
+    <type>
+      <types>CatalogRef.БанковскиеСчета</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <choiceParameterLinks>
+      <name>Отбор.Владелец</name>
+      <changeMode>DontChange</changeMode>
+      <field>Catalog.Организации.StandardAttribute.Ref</field>
+    </choiceParameterLinks>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+  </attributes>
+  <attributes uuid="89b3dc84-1075-4f74-b92b-638ba11767ec">
+    <name>НаименованиеПлательщикаПриПеречисленииНалогов</name>
+    <synonym>
+      <key>ru</key>
+      <value>Наименование плательщика при перечислении налогов</value>
+    </synonym>
+    <type>
+      <types>String</types>
+      <stringQualifiers>
+        <length>150</length>
+      </stringQualifiers>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+  </attributes>
+  <attributes uuid="8281f41f-f072-4c83-8bb1-770795be02c8">
+    <name>ИндивидуальныйПредприниматель</name>
+    <synonym>
+      <key>ru</key>
+      <value>Индивидуальный предприниматель</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.ФизическиеЛица</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+  </attributes>
+  <attributes uuid="b4d930f4-f729-4716-8e90-3af7880e3f4f">
+    <name>ОтражатьВРегламентированномУчете</name>
+    <synonym>
+      <key>ru</key>
+      <value>Отражать в регламентированном учете</value>
+    </synonym>
+    <comment>(Общ)</comment>
+    <type>
+      <types>Boolean</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+  </attributes>
+  <attributes uuid="16b930f4-0a00-4b25-b552-b8aace3bd20b">
+    <name>БанковскийСчетДляРасчетовСФСС</name>
+    <synonym>
+      <key>ru</key>
+      <value>Банковский счет для расчетов с ФСС</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.БанковскиеСчета</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+  </attributes>
+  <attributes uuid="0576a9f4-802f-4841-8c9c-798f032fdd1e">
+    <name>ДатаНачалаИспользованияЗвит1С</name>
+    <synonym>
+      <key>ru</key>
+      <value>Дата начала использования &quot;1С-Звит&quot;</value>
+    </synonym>
+    <synonym>
+      <key>uk</key>
+      <value>Дата початку використання &quot;1С-Звіт&quot;</value>
+    </synonym>
+    <type>
+      <types>Date</types>
+      <dateQualifiers>
+        <dateFractions>Date</dateFractions>
+      </dateQualifiers>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+  </attributes>
+  <attributes uuid="1ec3009d-c3e8-4733-96ea-4617756b437e">
+    <name>ДоговорКрафтПокупаетУОрганизации</name>
+    <synonym>
+      <key>ru</key>
+      <value>Договор &quot;Крафт покупает у организации&quot;</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.ДоговорыКонтрагентов</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+  </attributes>
+  <attributes uuid="781f0670-5840-4c3a-8dff-f42ad5bcc352">
+    <name>ДоговорОрганизацияПродаетКрафту</name>
+    <synonym>
+      <key>ru</key>
+      <value>Договор &quot;Организация продает Крафту&quot;</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.ДоговорыКонтрагентов</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+  </attributes>
+  <attributes uuid="2d17c796-b035-4a3e-bdb5-ef3405176104">
+    <name>GLN</name>
+    <synonym>
+      <key>ru</key>
+      <value>GLN</value>
+    </synonym>
+    <type>
+      <types>String</types>
+      <stringQualifiers>
+        <length>25</length>
+      </stringQualifiers>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fillValue xsi:type="core:StringValue">
+      <value></value>
+    </fillValue>
+    <indexing>Index</indexing>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+  </attributes>
+  <forms uuid="b198aabe-909e-4d07-aaca-4cbcee1ef7e7">
+    <name>ФормаСписка</name>
+    <synonym>
+      <key>ru</key>
+      <value>Форма списка</value>
+    </synonym>
+    <formType>Ordinary</formType>
+    <usePurposes>PersonalComputer</usePurposes>
+    <usePurposes>MobileDevice</usePurposes>
+  </forms>
+  <forms uuid="7bbdbebf-e1b0-432a-864b-43b4b64b3e6d">
+    <name>ФормаВыбора</name>
+    <synonym>
+      <key>ru</key>
+      <value>Форма выбора</value>
+    </synonym>
+    <formType>Ordinary</formType>
+    <usePurposes>PersonalComputer</usePurposes>
+    <usePurposes>MobileDevice</usePurposes>
+  </forms>
+  <forms uuid="998d8100-3684-4d1c-b665-b3b6dc699dbc">
+    <name>ФормаЭлемента</name>
+    <synonym>
+      <key>ru</key>
+      <value>Форма элемента</value>
+    </synonym>
+    <formType>Ordinary</formType>
+    <usePurposes>PersonalComputer</usePurposes>
+    <usePurposes>MobileDevice</usePurposes>
+  </forms>
+  <forms uuid="55b5ee0d-255b-4da6-b3b6-3aa1d8c7f9fd">
+    <name>ФормаСпискаУправляемая</name>
+    <synonym>
+      <key>ru</key>
+      <value>Форма списка управляемая</value>
+    </synonym>
+    <usePurposes>PersonalComputer</usePurposes>
+    <usePurposes>MobileDevice</usePurposes>
+  </forms>
+  <forms uuid="184286f4-2807-4926-824a-4564187391d6">
+    <name>ФормаВыбораУправляемая</name>
+    <synonym>
+      <key>ru</key>
+      <value>Форма выбора управляемая</value>
+    </synonym>
+    <usePurposes>PersonalComputer</usePurposes>
+    <usePurposes>MobileDevice</usePurposes>
+  </forms>
+  <forms uuid="ddbab84a-79fa-4a6a-a197-cb69ed07a9fe">
+    <name>ФормаЭлементаУправляемая</name>
+    <synonym>
+      <key>ru</key>
+      <value>Форма элемента управляемая</value>
+    </synonym>
+    <usePurposes>PersonalComputer</usePurposes>
+    <usePurposes>MobileDevice</usePurposes>
+  </forms>
+</mdclass:Catalog>

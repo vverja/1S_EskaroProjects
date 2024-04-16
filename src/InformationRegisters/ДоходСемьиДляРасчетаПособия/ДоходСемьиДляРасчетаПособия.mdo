@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:InformationRegister xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:core="http://g5.1c.ru/v8/dt/mcore" xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="98af00e2-3798-4d85-a207-4d4144c7f397">
+  <producedTypes>
+    <selectionType typeId="693cea0c-ce3a-4f64-b22d-7b33ecb8f18c" valueTypeId="06a23533-e3c1-494f-a562-1b1ae5f621b6"/>
+    <listType typeId="ab6771a3-8212-45cc-ab71-cd6062e0922e" valueTypeId="4d02dd9a-1b82-4f3e-8c2e-e7c7beda6f78"/>
+    <managerType typeId="d23b2f3d-6aff-4f8f-83d8-b06a057523b9" valueTypeId="eb932f41-8e5d-425a-9b20-c4299fce114c"/>
+    <recordSetType typeId="f91a9d02-e2ff-4d4b-8bea-49ff62c92865" valueTypeId="9421e420-c2cd-4116-9590-3659f4629437"/>
+    <recordKeyType typeId="ea4a230f-ca59-47b6-834c-c54a47070b6c" valueTypeId="4cee262b-9828-498a-b742-eb87349b422e"/>
+    <recordType typeId="feaf9521-9008-462b-a253-c634bad1408d" valueTypeId="d8410e2c-0ff1-4417-9424-66e857cab6b7"/>
+    <recordManagerType typeId="2331552a-a887-4f2c-b181-57d2fc6c7be1" valueTypeId="bc38d461-8f29-45d9-ba3c-e9393ba6bdb9"/>
+  </producedTypes>
+  <name>ДоходСемьиДляРасчетаПособия</name>
+  <synonym>
+    <key>ru</key>
+    <value>Доход семьи для расчета пособия</value>
+  </synonym>
+  <defaultListForm>InformationRegister.ДоходСемьиДляРасчетаПособия.Form.ФормаСписка</defaultListForm>
+  <writeMode>RecorderSubordinate</writeMode>
+  <resources uuid="d0c7401c-bc58-4ca5-bdf4-2398bebd47b2">
+    <name>СреднемесячныйДоходСемьи</name>
+    <synonym>
+      <key>ru</key>
+      <value>Среднемесячный доход семьи</value>
+    </synonym>
+    <type>
+      <types>Number</types>
+      <numberQualifiers>
+        <precision>15</precision>
+        <scale>2</scale>
+        <nonNegative>true</nonNegative>
+      </numberQualifiers>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:UndefinedValue"/>
+  </resources>
+  <dimensions uuid="aea9a97e-a0b5-4058-834c-8b084ff4db2e">
+    <name>Организация</name>
+    <synonym>
+      <key>ru</key>
+      <value>Организация</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.Организации</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillFromFillingValue>true</fillFromFillingValue>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <mainFilter>true</mainFilter>
+  </dimensions>
+  <dimensions uuid="9352adbc-3ff1-49af-9f3a-6a5a1f7694d8">
+    <name>Физлицо</name>
+    <synonym>
+      <key>ru</key>
+      <value>Физлицо</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.ФизическиеЛица</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillFromFillingValue>true</fillFromFillingValue>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <mainFilter>true</mainFilter>
+  </dimensions>
+  <dimensions uuid="8e14d28e-e188-4f2d-be56-24c8bab61d1d">
+    <name>ДатаДействия</name>
+    <synonym>
+      <key>ru</key>
+      <value>Дата действия</value>
+    </synonym>
+    <type>
+      <types>Date</types>
+      <dateQualifiers>
+        <dateFractions>Date</dateFractions>
+      </dateQualifiers>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillFromFillingValue>true</fillFromFillingValue>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <mainFilter>true</mainFilter>
+  </dimensions>
+  <forms uuid="38c6dfba-7665-4cc9-987a-96e242edd07e">
+    <name>ФормаСписка</name>
+    <synonym>
+      <key>ru</key>
+      <value>Форма списка</value>
+    </synonym>
+    <formType>Ordinary</formType>
+    <usePurposes>PersonalComputer</usePurposes>
+    <usePurposes>MobileDevice</usePurposes>
+  </forms>
+</mdclass:InformationRegister>

@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:InformationRegister xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:core="http://g5.1c.ru/v8/dt/mcore" xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="695e1816-8192-4cbc-807f-49793e4bf61d">
+  <producedTypes>
+    <selectionType typeId="1ac60428-b7ba-4eff-96d2-a972b1657ff8" valueTypeId="fe84ea1f-5cdd-4c71-8f5a-2dfa63d9b49a"/>
+    <listType typeId="88c0edbc-a2c8-48b0-b50f-79668ea0403a" valueTypeId="aabcc420-8e77-4211-81c0-42fa1443648b"/>
+    <managerType typeId="b35d4dbd-873a-4826-8bb4-5c8e240f1ff3" valueTypeId="8134e5c2-46ca-471b-a1a7-e568dd4ef7d6"/>
+    <recordSetType typeId="07d059d6-1fa8-41b1-955f-08a3bfe06161" valueTypeId="ae6d0385-a05d-4468-90a2-ac4866589f93"/>
+    <recordKeyType typeId="b86de995-35e5-442c-a720-d0bea5200d9e" valueTypeId="40e6b8d5-fa9c-4d4c-acb1-b667e92fa47e"/>
+    <recordType typeId="a858a901-0577-437c-b744-d59677234bde" valueTypeId="6915bd6d-6ae4-4e63-aaf6-806b0cb69aee"/>
+    <recordManagerType typeId="1267f2ce-e3de-4a17-9c1e-a2b320eed810" valueTypeId="7297deb1-0300-432a-b1c5-85f0272bce7b"/>
+  </producedTypes>
+  <name>ПоказателиПриНормальнойМощностиОрганизаций</name>
+  <synonym>
+    <key>ru</key>
+    <value>Показатели при нормальной мощности организаций</value>
+  </synonym>
+  <comment>(Регл)</comment>
+  <defaultListForm>InformationRegister.ПоказателиПриНормальнойМощностиОрганизаций.Form.ФормаСписка</defaultListForm>
+  <informationRegisterPeriodicity>Month</informationRegisterPeriodicity>
+  <mainFilterOnPeriod>true</mainFilterOnPeriod>
+  <help>
+    <pages>
+      <lang>ru</lang>
+    </pages>
+  </help>
+  <resources uuid="9c1830ac-f38f-46a1-9a2c-ee75dba92326">
+    <name>БазаРаспределения</name>
+    <synonym>
+      <key>ru</key>
+      <value>База распределения</value>
+    </synonym>
+    <type>
+      <types>Number</types>
+      <numberQualifiers>
+        <precision>16</precision>
+        <scale>3</scale>
+        <nonNegative>true</nonNegative>
+      </numberQualifiers>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:UndefinedValue"/>
+  </resources>
+  <resources uuid="e6ce2132-a31d-45bf-acc9-8c9bc1ad908d">
+    <name>СуммаПостоянныхЗатрат</name>
+    <synonym>
+      <key>ru</key>
+      <value>Сумма постоянных затрат</value>
+    </synonym>
+    <type>
+      <types>Number</types>
+      <numberQualifiers>
+        <precision>16</precision>
+        <scale>2</scale>
+      </numberQualifiers>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:UndefinedValue"/>
+  </resources>
+  <dimensions uuid="dd06362e-5b6b-47d9-b329-c30a00376000">
+    <name>СтатьяЗатрат</name>
+    <synonym>
+      <key>ru</key>
+      <value>Статья затрат</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.СтатьиЗатрат</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillFromFillingValue>true</fillFromFillingValue>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <master>true</master>
+    <mainFilter>true</mainFilter>
+  </dimensions>
+  <dimensions uuid="f99d2ad4-f9d6-4cc2-a402-193e9418b682">
+    <name>Подразделение</name>
+    <synonym>
+      <key>ru</key>
+      <value>Подразделение</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.ПодразделенияОрганизаций</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillFromFillingValue>true</fillFromFillingValue>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <master>true</master>
+    <mainFilter>true</mainFilter>
+  </dimensions>
+  <forms uuid="5fb265e6-0827-429c-a1f9-83eed483dca9">
+    <name>ФормаСписка</name>
+    <synonym>
+      <key>ru</key>
+      <value>Форма списка</value>
+    </synonym>
+    <formType>Ordinary</formType>
+    <usePurposes>PersonalComputer</usePurposes>
+    <usePurposes>MobileDevice</usePurposes>
+  </forms>
+</mdclass:InformationRegister>

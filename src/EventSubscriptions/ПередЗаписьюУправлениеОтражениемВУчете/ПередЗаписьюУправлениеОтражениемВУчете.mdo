@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:EventSubscription xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="2aef0702-1f26-4d13-a418-88752e5b963e">
+  <name>ПередЗаписьюУправлениеОтражениемВУчете</name>
+  <synonym>
+    <key>ru</key>
+    <value>Перед записью управление отражением в учете</value>
+  </synonym>
+  <source>
+    <types>DocumentObject.ТребованиеНакладная</types>
+    <types>DocumentObject.УслугиСобственнымПодразделениям</types>
+    <types>DocumentObject.ИнвентаризацияНЗП</types>
+    <types>DocumentObject.ОприходованиеМатериаловИзПроизводства</types>
+    <types>DocumentObject.РеализацияТоваровУслуг</types>
+    <types>DocumentObject.ВыпускПродукции</types>
+    <types>DocumentObject.ПоступлениеТоваровУслуг</types>
+    <types>DocumentObject.ПеремещениеТоваров</types>
+  </source>
+  <event>BeforeWrite</event>
+  <handler>CommonModule.ЗаполнениеДокументовУП.ПередЗаписьюУправлениеОтражениемВУчете</handler>
+</mdclass:EventSubscription>

@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:InformationRegister xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:core="http://g5.1c.ru/v8/dt/mcore" xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="060f2f57-43db-4da1-9dd6-4c5269532d97">
+  <producedTypes>
+    <selectionType typeId="d01d66ce-8794-43b3-8adc-2ffc646d5118" valueTypeId="c7c3bbc3-6a6b-4720-964d-0425a45bd3af"/>
+    <listType typeId="396dc678-df5d-4894-9195-eb1421807d0b" valueTypeId="48cd371b-af98-4427-ab22-bbcfb2fd69ff"/>
+    <managerType typeId="a8460761-8241-4ae7-a6be-2469ee074d4c" valueTypeId="c8dbd7ce-6422-46d9-8174-c5fdf598d030"/>
+    <recordSetType typeId="7d0539b3-aab3-4772-adeb-4ee1f9ae1127" valueTypeId="192ac598-bd27-439d-9e29-675fcd5c6793"/>
+    <recordKeyType typeId="6be204a7-f21a-447a-8624-c55fe4dce243" valueTypeId="a4e8f0c0-556a-4430-bbdb-fcbe7d255832"/>
+    <recordType typeId="8e676b50-7b6b-4744-9389-dc1ae29c3c11" valueTypeId="ad3b247f-2456-47d3-9d63-1433d04c114b"/>
+    <recordManagerType typeId="31869036-0dfa-4520-98fd-1d416d627564" valueTypeId="8ec4a9e3-445d-4f12-b7d6-b523881a8aa2"/>
+  </producedTypes>
+  <name>ШкалаСтавокНалогов</name>
+  <synonym>
+    <key>ru</key>
+    <value>Шкала ставок налогов</value>
+  </synonym>
+  <defaultListForm>InformationRegister.ШкалаСтавокНалогов.Form.ФормаСписка</defaultListForm>
+  <informationRegisterPeriodicity>Day</informationRegisterPeriodicity>
+  <mainFilterOnPeriod>true</mainFilterOnPeriod>
+  <help>
+    <pages>
+      <lang>ru</lang>
+    </pages>
+  </help>
+  <resources uuid="df85ec1b-9ffd-4d92-b6db-b1479e835f35">
+    <name>СтатьяНалоговойДекларации</name>
+    <synonym>
+      <key>ru</key>
+      <value>Статья налоговой декларации</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.СтатьиНалоговыхДеклараций</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:UndefinedValue"/>
+  </resources>
+  <resources uuid="4ae1f0bf-5222-405d-9182-2ad3192105bf">
+    <name>Ставка</name>
+    <synonym>
+      <key>ru</key>
+      <value>Ставка</value>
+    </synonym>
+    <type>
+      <types>Number</types>
+      <numberQualifiers>
+        <precision>10</precision>
+        <scale>4</scale>
+      </numberQualifiers>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:UndefinedValue"/>
+  </resources>
+  <resources uuid="7decac60-21af-414d-961e-896020f847ba">
+    <name>Порог</name>
+    <synonym>
+      <key>ru</key>
+      <value>Порог</value>
+    </synonym>
+    <type>
+      <types>Number</types>
+      <numberQualifiers>
+        <precision>15</precision>
+        <scale>2</scale>
+      </numberQualifiers>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:UndefinedValue"/>
+  </resources>
+  <dimensions uuid="c635ca7f-ef24-4b13-bf0c-ff27f7e15a14">
+    <name>Налог</name>
+    <synonym>
+      <key>ru</key>
+      <value>Налог</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.Налоги</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <denyIncompleteValues>true</denyIncompleteValues>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillFromFillingValue>true</fillFromFillingValue>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <master>true</master>
+    <mainFilter>true</mainFilter>
+  </dimensions>
+  <dimensions uuid="683387e1-e997-46f6-9bf7-a9c3ddfbd3df">
+    <name>НомерПорога</name>
+    <synonym>
+      <key>ru</key>
+      <value>Номер порога</value>
+    </synonym>
+    <type>
+      <types>EnumRef.ПорогиШкалыСтавокНалогов</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <denyIncompleteValues>true</denyIncompleteValues>
+    <indexing>Index</indexing>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillFromFillingValue>true</fillFromFillingValue>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <mainFilter>true</mainFilter>
+  </dimensions>
+  <dimensions uuid="c7328dce-a7b5-4f69-bf12-221e35cf65e1">
+    <name>Организация</name>
+    <synonym>
+      <key>ru</key>
+      <value>Организация</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.Организации</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillFromFillingValue>true</fillFromFillingValue>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <mainFilter>true</mainFilter>
+  </dimensions>
+  <forms uuid="4289f6be-6a5f-4d68-b87a-20d4ed6a5da0">
+    <name>ФормаСписка</name>
+    <synonym>
+      <key>ru</key>
+      <value>Форма списка</value>
+    </synonym>
+    <formType>Ordinary</formType>
+    <usePurposes>PersonalComputer</usePurposes>
+    <usePurposes>MobileDevice</usePurposes>
+  </forms>
+  <templates uuid="6cd35352-7f32-40d4-a731-ca8491bc8e4a">
+    <name>НачальноеЗаполнение</name>
+    <synonym>
+      <key>ru</key>
+      <value>Начальное заполнение</value>
+    </synonym>
+  </templates>
+</mdclass:InformationRegister>

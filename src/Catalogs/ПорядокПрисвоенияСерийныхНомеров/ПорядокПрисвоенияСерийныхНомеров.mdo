@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:Catalog xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:core="http://g5.1c.ru/v8/dt/mcore" xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="ed667600-e8b8-4af5-86d4-0d54cffbad32">
+  <producedTypes>
+    <objectType typeId="1f16f3bc-ade8-4a81-af45-e59077c4963c" valueTypeId="e8527bea-0955-4292-a3be-8e28dd6b82f8"/>
+    <refType typeId="0f4c8264-a6c6-4174-b4ea-1d8149727785" valueTypeId="99915ed0-f713-4ff9-82ad-9fd10c5faf3a"/>
+    <selectionType typeId="bfd006e0-c481-4e85-9bbe-8f62269352b3" valueTypeId="a08e2d73-f846-476e-bfe0-45b3b2fa0e8c"/>
+    <listType typeId="ac0139b1-3201-4ad6-a20b-bfb4d4f4495b" valueTypeId="529eb866-4209-48c1-9351-5b1eb359df7d"/>
+    <managerType typeId="f3474923-42bd-4c0f-b4ae-6ae2cc18d377" valueTypeId="d9484471-378d-48e8-b41a-f499e31b52ce"/>
+  </producedTypes>
+  <name>ПорядокПрисвоенияСерийныхНомеров</name>
+  <synonym>
+    <key>ru</key>
+    <value>Порядок присвоения серийных номеров</value>
+  </synonym>
+  <inputByString>Catalog.ПорядокПрисвоенияСерийныхНомеров.StandardAttribute.Description</inputByString>
+  <inputByString>Catalog.ПорядокПрисвоенияСерийныхНомеров.StandardAttribute.Code</inputByString>
+  <fullTextSearchOnInputByString>DontUse</fullTextSearchOnInputByString>
+  <createOnInput>Use</createOnInput>
+  <fullTextSearch>Use</fullTextSearch>
+  <levelCount>2</levelCount>
+  <foldersOnTop>true</foldersOnTop>
+  <codeLength>9</codeLength>
+  <descriptionLength>50</descriptionLength>
+  <codeType>String</codeType>
+  <checkUnique>true</checkUnique>
+  <autonumbering>true</autonumbering>
+  <defaultPresentation>AsDescription</defaultPresentation>
+  <editType>InDialog</editType>
+  <choiceMode>BothWays</choiceMode>
+  <defaultObjectForm>Catalog.ПорядокПрисвоенияСерийныхНомеров.Form.ФормаЭлемента</defaultObjectForm>
+  <defaultListForm>Catalog.ПорядокПрисвоенияСерийныхНомеров.Form.ФормаСписка</defaultListForm>
+  <defaultChoiceForm>Catalog.ПорядокПрисвоенияСерийныхНомеров.Form.ФормаВыбора</defaultChoiceForm>
+  <attributes uuid="89de9929-41ec-4da3-8aed-424327d30b6c">
+    <name>Комментарий</name>
+    <synonym>
+      <key>ru</key>
+      <value>Комментарий</value>
+    </synonym>
+    <comment>(Общ) Любая дополнительная информация</comment>
+    <type>
+      <types>String</types>
+      <stringQualifiers/>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+  </attributes>
+  <tabularSections uuid="b53c3aa1-f251-4200-9648-bce59b16aa35">
+    <producedTypes>
+      <objectType typeId="6eeb893e-310f-41d5-96f8-7883a1d13074" valueTypeId="803f2946-4847-4a18-bde4-b8aa68515463"/>
+      <rowType typeId="be38f113-ddff-4166-a43b-e556350be37a" valueTypeId="d2b2d19f-53a1-471e-9ac9-b1e91d989e28"/>
+    </producedTypes>
+    <name>РазрядыСерийногоНомера</name>
+    <synonym>
+      <key>ru</key>
+      <value>Разряды серийного номера</value>
+    </synonym>
+    <attributes uuid="4313ee0a-cf20-4400-b4ad-8f7a33dd14c6">
+      <name>РазмерРазряда</name>
+      <synonym>
+        <key>ru</key>
+        <value>Размер разряда</value>
+      </synonym>
+      <type>
+        <types>Number</types>
+        <numberQualifiers>
+          <precision>2</precision>
+          <nonNegative>true</nonNegative>
+        </numberQualifiers>
+      </type>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <dataHistory>Use</dataHistory>
+      <fullTextSearch>Use</fullTextSearch>
+    </attributes>
+    <attributes uuid="cc4319ee-95b0-4e79-b137-f65119653b17">
+      <name>ТипРазряда</name>
+      <synonym>
+        <key>ru</key>
+        <value>Тип разряда</value>
+      </synonym>
+      <type>
+        <types>EnumRef.ТипыЗначенийРазрядов</types>
+      </type>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <dataHistory>Use</dataHistory>
+      <fullTextSearch>Use</fullTextSearch>
+    </attributes>
+    <attributes uuid="08aad28c-816a-4a0f-a61e-31d22d3bcad6">
+      <name>Источник</name>
+      <synonym>
+        <key>ru</key>
+        <value>Источник</value>
+      </synonym>
+      <type>
+        <types>EnumRef.ИсточникиЗначенийРазрядов</types>
+      </type>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <dataHistory>Use</dataHistory>
+      <fullTextSearch>Use</fullTextSearch>
+    </attributes>
+    <attributes uuid="d4e565d9-2409-4fdf-97a2-d193af309968">
+      <name>Значение</name>
+      <synonym>
+        <key>ru</key>
+        <value>Значение / свойство</value>
+      </synonym>
+      <type>
+        <types>EnumRef.РазделителиРазрядовСерийногоНомера</types>
+        <types>EnumRef.ВидыЗначенийРазрядов</types>
+        <types>String</types>
+        <types>Number</types>
+        <types>CatalogRef.ВидыСчетчиковДляЗначенийРазрядов</types>
+        <types>EnumRef.ФорматыДатаВремениЗначенияРазряда</types>
+        <types>ChartOfCharacteristicTypesRef.СвойстваОбъектов</types>
+        <numberQualifiers>
+          <precision>20</precision>
+        </numberQualifiers>
+        <stringQualifiers>
+          <length>20</length>
+        </stringQualifiers>
+      </type>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <dataHistory>Use</dataHistory>
+      <fullTextSearch>Use</fullTextSearch>
+    </attributes>
+  </tabularSections>
+  <forms uuid="951d2445-61b6-4ab2-aa6e-f26fda3f809e">
+    <name>ФормаЭлемента</name>
+    <synonym>
+      <key>ru</key>
+      <value>Форма элемента</value>
+    </synonym>
+    <formType>Ordinary</formType>
+    <usePurposes>PersonalComputer</usePurposes>
+    <usePurposes>MobileDevice</usePurposes>
+  </forms>
+  <forms uuid="3c64d969-9870-426c-8f58-7cd1aac2ba23">
+    <name>ФормаСписка</name>
+    <synonym>
+      <key>ru</key>
+      <value>Форма списка</value>
+    </synonym>
+    <formType>Ordinary</formType>
+    <usePurposes>PersonalComputer</usePurposes>
+    <usePurposes>MobileDevice</usePurposes>
+  </forms>
+  <forms uuid="1574a2ea-9b9e-4650-84d0-75be1a08fb73">
+    <name>ФормаВыбора</name>
+    <synonym>
+      <key>ru</key>
+      <value>Форма выбора</value>
+    </synonym>
+    <formType>Ordinary</formType>
+    <usePurposes>PersonalComputer</usePurposes>
+    <usePurposes>MobileDevice</usePurposes>
+  </forms>
+</mdclass:Catalog>

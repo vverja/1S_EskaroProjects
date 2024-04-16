@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:AccumulationRegister xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:core="http://g5.1c.ru/v8/dt/mcore" xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="ed5987d9-466c-4424-b761-96cfa1f8d40e">
+  <producedTypes>
+    <selectionType typeId="51e4ff24-e7e8-4e42-a43b-05b50dd48187" valueTypeId="6730a250-b9a2-46aa-baf3-5fc37f0ae7a2"/>
+    <listType typeId="ddda830e-db00-47a8-a76d-bf35f9f15d82" valueTypeId="b230f576-cd28-48d6-aacd-73d2d3bd7bf5"/>
+    <managerType typeId="099d50aa-c888-487c-8449-5e1ce712dd3f" valueTypeId="bbdcbe74-12ef-4308-9a8c-5cd83f540a10"/>
+    <recordSetType typeId="90655033-688f-4ba7-b54a-8a98c6c6e102" valueTypeId="ef7a3277-da64-4e71-8bdb-925a8171b536"/>
+    <recordKeyType typeId="5720f75e-6fe0-4769-b701-d3a50b71f81f" valueTypeId="91960e6f-eb79-40ea-8dfa-c600fa53f913"/>
+    <recordType typeId="2df78341-c1dc-4b92-a28d-7dfb8ea857b0" valueTypeId="6398fb8f-0d1d-4072-94ad-ce43bc0b4a04"/>
+  </producedTypes>
+  <name>КнигаПродаж</name>
+  <synonym>
+    <key>ru</key>
+    <value>Книга продаж</value>
+  </synonym>
+  <registerType>Turnovers</registerType>
+  <enableTotalsSplitting>true</enableTotalsSplitting>
+  <resources uuid="4461771d-5e3b-4e7f-8a0c-0abef242cfb8">
+    <name>БазаНДС</name>
+    <synonym>
+      <key>ru</key>
+      <value>База НДС</value>
+    </synonym>
+    <type>
+      <types>Number</types>
+      <numberQualifiers>
+        <precision>15</precision>
+        <scale>2</scale>
+      </numberQualifiers>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+  </resources>
+  <resources uuid="d6a97a20-877b-4a42-a8be-fc03a71aaf34">
+    <name>НДС</name>
+    <synonym>
+      <key>ru</key>
+      <value>НДС</value>
+    </synonym>
+    <type>
+      <types>Number</types>
+      <numberQualifiers>
+        <precision>15</precision>
+        <scale>2</scale>
+      </numberQualifiers>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+  </resources>
+  <attributes uuid="ebedcdb7-7eb0-4838-b8bc-f8bc985cb5b8">
+    <name>ДатаРасчетов</name>
+    <synonym>
+      <key>ru</key>
+      <value>Дата расчетов</value>
+    </synonym>
+    <type>
+      <types>Date</types>
+      <dateQualifiers>
+        <dateFractions>Date</dateFractions>
+      </dateQualifiers>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+  </attributes>
+  <attributes uuid="fadd1291-eed5-41a6-ab8d-79012b29ad2c">
+    <name>ФормаРасчетов</name>
+    <synonym>
+      <key>ru</key>
+      <value>Форма расчетов</value>
+    </synonym>
+    <type>
+      <types>String</types>
+      <stringQualifiers>
+        <length>50</length>
+      </stringQualifiers>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+  </attributes>
+  <attributes uuid="6f8562cf-3575-4403-bb13-335cd6c43995">
+    <name>ПродажаНижеОбычнойЦены</name>
+    <synonym>
+      <key>ru</key>
+      <value>Продажа ниже обычной цены</value>
+    </synonym>
+    <type>
+      <types>Boolean</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+  </attributes>
+  <dimensions uuid="e59e2b21-398d-47a7-a1e0-74bbd2a69c25">
+    <name>Организация</name>
+    <synonym>
+      <key>ru</key>
+      <value>Организация</value>
+    </synonym>
+    <comment>(Общ)</comment>
+    <type>
+      <types>CatalogRef.Организации</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <useInTotals>true</useInTotals>
+  </dimensions>
+  <dimensions uuid="d15c4c34-3a4e-44e6-9e4d-be3da6631bbd">
+    <name>СтатьяКнигиПродаж</name>
+    <synonym>
+      <key>ru</key>
+      <value>Статья книги продаж</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.СтатьиНалоговыхДеклараций</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <indexing>Index</indexing>
+    <fullTextSearch>Use</fullTextSearch>
+    <useInTotals>true</useInTotals>
+  </dimensions>
+  <dimensions uuid="4b4bd9f0-1129-446d-9e36-cd0ff1c98e13">
+    <name>ДоговорКонтрагента</name>
+    <synonym>
+      <key>ru</key>
+      <value>Договор контрагента</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.ДоговорыКонтрагентов</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <indexing>Index</indexing>
+    <fullTextSearch>Use</fullTextSearch>
+    <useInTotals>true</useInTotals>
+  </dimensions>
+  <dimensions uuid="8af6b7ac-ea61-4121-a12e-fd64cbfa125c">
+    <name>СтавкаНДС</name>
+    <synonym>
+      <key>ru</key>
+      <value>Ставка НДС</value>
+    </synonym>
+    <type>
+      <types>EnumRef.СтавкиНДС</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <useInTotals>true</useInTotals>
+  </dimensions>
+</mdclass:AccumulationRegister>

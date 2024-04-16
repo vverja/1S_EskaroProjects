@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:AccumulationRegister xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:core="http://g5.1c.ru/v8/dt/mcore" xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="471c10bb-86a6-4746-8cb6-105f73ea63c8">
+  <producedTypes>
+    <selectionType typeId="89043601-2939-4135-9a57-1d179073280c" valueTypeId="e3060b46-f7e2-4e24-a794-0c1699055aa3"/>
+    <listType typeId="c02be9c6-2041-44ca-9126-c2740990c53d" valueTypeId="70d9ed55-85a6-440e-b896-b1c685c0e734"/>
+    <managerType typeId="d65a68e7-aaa2-4c94-a81c-ce2c7f29d171" valueTypeId="1a049dfc-6441-4647-aa9d-ff68274ec583"/>
+    <recordSetType typeId="9986bb0b-442f-4b03-ab10-c852020f3be5" valueTypeId="b2d766f4-c359-4d4e-b1ef-a0f1613d8615"/>
+    <recordKeyType typeId="adb3443d-a33c-4fc9-8aed-647639fd0a5a" valueTypeId="7450e5cf-9761-4dd8-abde-96ac7ac47f15"/>
+    <recordType typeId="d310019f-19e4-452c-ae16-4d74df89019a" valueTypeId="20d1f328-f2ce-4816-8bf6-07c9c549edc0"/>
+  </producedTypes>
+  <name>ПланируемыеЗатратыНаПерсонал</name>
+  <synonym>
+    <key>ru</key>
+    <value>Планируемые затраты на персонал</value>
+  </synonym>
+  <registerType>Turnovers</registerType>
+  <enableTotalsSplitting>true</enableTotalsSplitting>
+  <resources uuid="095949a1-d70d-4948-b646-7e2e13ccc5a8">
+    <name>Сумма</name>
+    <synonym>
+      <key>ru</key>
+      <value>Сумма в валюте документа</value>
+    </synonym>
+    <comment>Сумма в валюте документа</comment>
+    <type>
+      <types>Number</types>
+      <numberQualifiers>
+        <precision>15</precision>
+        <scale>2</scale>
+      </numberQualifiers>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+  </resources>
+  <attributes uuid="82afe6db-b1a8-43b0-9338-8baa40fabd4a">
+    <name>Валюта</name>
+    <synonym>
+      <key>ru</key>
+      <value>Валюта</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.Валюты</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+  </attributes>
+  <dimensions uuid="80fb7615-80b2-4d24-91ee-934e5750b509">
+    <name>Сценарий</name>
+    <synonym>
+      <key>ru</key>
+      <value>Сценарий</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.СценарииПланирования</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <denyIncompleteValues>true</denyIncompleteValues>
+    <indexing>Index</indexing>
+    <fullTextSearch>Use</fullTextSearch>
+    <useInTotals>true</useInTotals>
+  </dimensions>
+  <dimensions uuid="2140288b-b311-4e6f-ae10-9d83b8bad2b2">
+    <name>Подразделение</name>
+    <synonym>
+      <key>ru</key>
+      <value>Подразделение</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.ПодразделенияОрганизаций</types>
+      <types>CatalogRef.Подразделения</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <indexing>Index</indexing>
+    <fullTextSearch>Use</fullTextSearch>
+    <useInTotals>true</useInTotals>
+  </dimensions>
+  <dimensions uuid="1092c209-b694-4b34-bb1d-bc96e2e45e8a">
+    <name>СтатьяЗатрат</name>
+    <synonym>
+      <key>ru</key>
+      <value>Статья затрат</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.СтатьиЗатрат</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <useInTotals>true</useInTotals>
+  </dimensions>
+</mdclass:AccumulationRegister>

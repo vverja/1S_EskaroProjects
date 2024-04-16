@@ -1,0 +1,170 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:AccountingRegister xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:core="http://g5.1c.ru/v8/dt/mcore" xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="7c24042a-bc5e-4560-9340-635c57d90c6e">
+  <producedTypes>
+    <selectionType typeId="cc15fb16-1cba-4c66-8e35-403f699e4c7d" valueTypeId="37156cf0-17e7-406e-adba-317b245df899"/>
+    <listType typeId="bba7e493-12fb-4875-9c61-6c8e92873a24" valueTypeId="05c2283d-d975-41cc-b0bb-b1613bc30b1f"/>
+    <managerType typeId="0248ad79-fd9e-432f-b498-2853a896b077" valueTypeId="33edf3af-d42c-4eed-9404-bd8c227978cd"/>
+    <recordSetType typeId="db03f2de-2304-41ed-bc16-6ac83011ba59" valueTypeId="fd2b50fe-b7a8-4ccb-9d02-bea917818eb2"/>
+    <recordKeyType typeId="89d9185a-8ced-4bfa-83ef-d4579d76df3e" valueTypeId="c71facda-e5ac-4d3f-80ef-65a46b195e7e"/>
+    <recordType typeId="ab7890a0-6f5f-4e7a-a71e-de21e5112804" valueTypeId="8efb8938-6a2a-445a-8403-0c7669c37520"/>
+    <extDimensionsType typeId="616b1e80-006a-4563-bbce-ab5531855aa3" valueTypeId="f4c8bea9-1f30-467e-a3b3-043e48589a8d"/>
+  </producedTypes>
+  <name>Международный</name>
+  <synonym>
+    <key>ru</key>
+    <value>Международный учет</value>
+  </synonym>
+  <comment>(Упр)</comment>
+  <includeHelpInContents>true</includeHelpInContents>
+  <help>
+    <pages>
+      <lang>ru</lang>
+    </pages>
+  </help>
+  <chartOfAccounts>ChartOfAccounts.Международный</chartOfAccounts>
+  <correspondence>true</correspondence>
+  <defaultListForm>AccountingRegister.Международный.Form.ФормаСписка</defaultListForm>
+  <enableTotalsSplitting>true</enableTotalsSplitting>
+  <dimensions uuid="209b410f-92e8-4e71-b9d6-458628d32973">
+    <name>Организация</name>
+    <synonym>
+      <key>ru</key>
+      <value>Организация</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.Организации</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <indexing>Index</indexing>
+    <fullTextSearch>Use</fullTextSearch>
+    <balance>true</balance>
+  </dimensions>
+  <dimensions uuid="fe3bc770-4988-45d2-a5f8-07fba89c6c27">
+    <name>Валюта</name>
+    <synonym>
+      <key>ru</key>
+      <value>Валюта</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.Валюты</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <accountingFlag>ChartOfAccounts.Международный.AccountingFlag.Валютный</accountingFlag>
+  </dimensions>
+  <resources uuid="633c25e5-4409-446a-b3c8-aecb01e2b0a4">
+    <name>Сумма</name>
+    <synonym>
+      <key>ru</key>
+      <value>Сумма</value>
+    </synonym>
+    <type>
+      <types>Number</types>
+      <numberQualifiers>
+        <precision>15</precision>
+        <scale>2</scale>
+      </numberQualifiers>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <balance>true</balance>
+    <extDimensionAccountingFlag>ChartOfAccounts.Международный.ExtDimensionAccountingFlag.Суммовой</extDimensionAccountingFlag>
+  </resources>
+  <resources uuid="40ea14a3-b6cf-467b-9029-a3e6b3f2b0f8">
+    <name>ВалютнаяСумма</name>
+    <synonym>
+      <key>ru</key>
+      <value>Валютная сумма</value>
+    </synonym>
+    <type>
+      <types>Number</types>
+      <numberQualifiers>
+        <precision>15</precision>
+        <scale>2</scale>
+      </numberQualifiers>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <accountingFlag>ChartOfAccounts.Международный.AccountingFlag.Валютный</accountingFlag>
+    <extDimensionAccountingFlag>ChartOfAccounts.Международный.ExtDimensionAccountingFlag.Валютный</extDimensionAccountingFlag>
+  </resources>
+  <resources uuid="9890bdab-3e4a-4408-955c-8f78c905e722">
+    <name>Количество</name>
+    <synonym>
+      <key>ru</key>
+      <value>Количество</value>
+    </synonym>
+    <type>
+      <types>Number</types>
+      <numberQualifiers>
+        <precision>15</precision>
+        <scale>3</scale>
+      </numberQualifiers>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <accountingFlag>ChartOfAccounts.Международный.AccountingFlag.Количественный</accountingFlag>
+    <extDimensionAccountingFlag>ChartOfAccounts.Международный.ExtDimensionAccountingFlag.Количественный</extDimensionAccountingFlag>
+  </resources>
+  <attributes uuid="96381259-24ef-4279-9402-c4b656d6d7eb">
+    <name>Содержание</name>
+    <synonym>
+      <key>ru</key>
+      <value>Содержание</value>
+    </synonym>
+    <type>
+      <types>String</types>
+      <stringQualifiers>
+        <length>150</length>
+      </stringQualifiers>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+  </attributes>
+  <attributes uuid="1eebb9d1-a204-4af7-8ffe-a6861cc47536">
+    <name>ПервичныйДокумент</name>
+    <synonym>
+      <key>ru</key>
+      <value>Первичный документ</value>
+    </synonym>
+    <type>
+      <types>DocumentRef</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+  </attributes>
+  <attributes uuid="130453ce-bbd5-416e-8a41-56e989ba7448">
+    <name>НомерЖурнала</name>
+    <synonym>
+      <key>ru</key>
+      <value>Номер журнала</value>
+    </synonym>
+    <type>
+      <types>String</types>
+      <stringQualifiers>
+        <length>3</length>
+      </stringQualifiers>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <indexing>Index</indexing>
+    <fullTextSearch>Use</fullTextSearch>
+  </attributes>
+  <forms uuid="cfef49e4-dc20-4bcd-aba3-d12fc91a644f">
+    <name>ФормаСписка</name>
+    <synonym>
+      <key>ru</key>
+      <value>Форма списка</value>
+    </synonym>
+    <formType>Ordinary</formType>
+    <usePurposes>PersonalComputer</usePurposes>
+    <usePurposes>MobileDevice</usePurposes>
+  </forms>
+</mdclass:AccountingRegister>

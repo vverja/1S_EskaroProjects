@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:AccumulationRegister xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:core="http://g5.1c.ru/v8/dt/mcore" xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="875892ff-a6d2-439c-b776-a0986a46793a">
+  <producedTypes>
+    <selectionType typeId="af84b7d8-4939-4e8b-9145-863268ef8c00" valueTypeId="d169575a-5b47-4e78-a5b4-ed399337b7b2"/>
+    <listType typeId="0646efa9-55d6-4e93-a499-51b1bed5cb13" valueTypeId="8da14cdd-d647-4041-b334-d0e9b611a48b"/>
+    <managerType typeId="d781490b-7226-4804-a672-ddb73fa8b5a3" valueTypeId="4ca9c15c-f894-468b-8ea8-9362a9d6f93f"/>
+    <recordSetType typeId="71304294-45ca-44f4-bd53-2aed08507ba2" valueTypeId="f85c6efb-d038-4a19-abb9-b224f67e75cf"/>
+    <recordKeyType typeId="e6f8019d-fb25-412c-b33a-d84f151c956a" valueTypeId="02a5a602-90f7-40c1-806d-14b73ca31ce9"/>
+    <recordType typeId="13f2ce58-e307-4aa0-848b-a1424565fe1a" valueTypeId="4bffdb20-ef73-4c03-8836-60f205145928"/>
+  </producedTypes>
+  <name>ПродажиПоДисконтнымКартам</name>
+  <synonym>
+    <key>ru</key>
+    <value>Продажи по дисконтным картам</value>
+  </synonym>
+  <comment>(Упр)</comment>
+  <registerType>Turnovers</registerType>
+  <enableTotalsSplitting>true</enableTotalsSplitting>
+  <resources uuid="9b1264f5-2716-450d-9653-c59ea4df8cdd">
+    <name>Сумма</name>
+    <synonym>
+      <key>ru</key>
+      <value>Сумма</value>
+    </synonym>
+    <type>
+      <types>Number</types>
+      <numberQualifiers>
+        <precision>15</precision>
+        <scale>2</scale>
+      </numberQualifiers>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+  </resources>
+  <dimensions uuid="f7c4cca3-bc0a-41e7-8e4c-2e0bd4ae8bca">
+    <name>ДисконтнаяКарта</name>
+    <synonym>
+      <key>ru</key>
+      <value>Дисконтная карта</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.ИнформационныеКарты</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <useInTotals>true</useInTotals>
+  </dimensions>
+  <dimensions uuid="6d902985-08ca-4543-a05e-b9073bfd9573">
+    <name>ВладелецДисконтнойКарты</name>
+    <synonym>
+      <key>ru</key>
+      <value>Владелец дисконтной карты</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.Контрагенты</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <indexing>Index</indexing>
+    <fullTextSearch>Use</fullTextSearch>
+    <useInTotals>true</useInTotals>
+  </dimensions>
+</mdclass:AccumulationRegister>

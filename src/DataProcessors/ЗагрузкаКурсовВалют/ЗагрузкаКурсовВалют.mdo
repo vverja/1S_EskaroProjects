@@ -1,0 +1,233 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:DataProcessor xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:core="http://g5.1c.ru/v8/dt/mcore" xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="20a3794e-cad5-4634-b398-ac547b3f08d4">
+  <producedTypes>
+    <objectType typeId="a70d48f8-3673-4d14-b461-b58e30e5420a" valueTypeId="77afcdba-3ad5-415a-b43e-905d476d649c"/>
+    <managerType typeId="7f037084-8241-49f6-a636-ba6596546cec" valueTypeId="c3b83da0-c4ea-4d6b-9a6b-3516cd412d8c"/>
+  </producedTypes>
+  <name>ЗагрузкаКурсовВалют</name>
+  <synonym>
+    <key>ru</key>
+    <value>Загрузка курсов валют</value>
+  </synonym>
+  <synonym>
+    <key>uk</key>
+    <value>Завантаження курсів валют</value>
+  </synonym>
+  <comment>Загрузка курсов валют с сайта finance.ua</comment>
+  <defaultForm>DataProcessor.ЗагрузкаКурсовВалют.Form.Форма</defaultForm>
+  <includeHelpInContents>true</includeHelpInContents>
+  <help>
+    <pages>
+      <lang>ru</lang>
+    </pages>
+    <pages>
+      <lang>uk</lang>
+    </pages>
+  </help>
+  <attributes uuid="9bb15fe0-ddca-4546-81fa-79260bc8a06f">
+    <name>НачДата</name>
+    <synonym>
+      <key>ru</key>
+      <value>Нач дата</value>
+    </synonym>
+    <synonym>
+      <key>uk</key>
+      <value>Поч дата</value>
+    </synonym>
+    <type>
+      <types>Date</types>
+      <dateQualifiers>
+        <dateFractions>Date</dateFractions>
+      </dateQualifiers>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </attributes>
+  <attributes uuid="493daf7b-ade6-47ec-848c-41d0616b55cf">
+    <name>КонДата</name>
+    <synonym>
+      <key>ru</key>
+      <value>Кон дата</value>
+    </synonym>
+    <synonym>
+      <key>uk</key>
+      <value>Кін дата</value>
+    </synonym>
+    <type>
+      <types>Date</types>
+      <dateQualifiers>
+        <dateFractions>Date</dateFractions>
+      </dateQualifiers>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </attributes>
+  <attributes uuid="9980cfcb-f464-41e2-82e8-8fbdc612a200">
+    <name>КодДоступа</name>
+    <synonym>
+      <key>ru</key>
+      <value>Код доступа</value>
+    </synonym>
+    <synonym>
+      <key>uk</key>
+      <value>Код доступу</value>
+    </synonym>
+    <type>
+      <types>String</types>
+      <stringQualifiers>
+        <length>32</length>
+        <fixed>true</fixed>
+      </stringQualifiers>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </attributes>
+  <attributes uuid="bb0c7270-1f95-45bc-9b8d-8c3dec36b884">
+    <name>БукваДиска</name>
+    <synonym>
+      <key>ru</key>
+      <value>Буква диска</value>
+    </synonym>
+    <synonym>
+      <key>uk</key>
+      <value>Буква диску</value>
+    </synonym>
+    <type>
+      <types>String</types>
+      <stringQualifiers>
+        <length>1</length>
+      </stringQualifiers>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </attributes>
+  <attributes uuid="bccb3b66-a946-4b48-a0e6-15b90b28c3d0">
+    <name>ИмяПользователя</name>
+    <synonym>
+      <key>ru</key>
+      <value>Имя пользователя</value>
+    </synonym>
+    <synonym>
+      <key>uk</key>
+      <value>Ім'я користувача</value>
+    </synonym>
+    <type>
+      <types>String</types>
+      <stringQualifiers>
+        <length>100</length>
+      </stringQualifiers>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </attributes>
+  <attributes uuid="44eddcd9-e083-4bf8-9e45-32ed08715d90">
+    <name>ПарольПользователя</name>
+    <synonym>
+      <key>ru</key>
+      <value>Пароль пользователя</value>
+    </synonym>
+    <synonym>
+      <key>uk</key>
+      <value>Пароль користувача</value>
+    </synonym>
+    <type>
+      <types>String</types>
+      <stringQualifiers>
+        <length>100</length>
+      </stringQualifiers>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </attributes>
+  <tabularSections uuid="53f29baf-e257-43d8-96f5-029e49ff4f4d">
+    <producedTypes>
+      <objectType typeId="9d285e0b-9996-4d20-837d-338b780045de" valueTypeId="1fefe493-f069-4228-ae49-a03da282d0c3"/>
+      <rowType typeId="02c5bfc2-aebb-42df-8144-35fba090d3f3" valueTypeId="efeb180f-cc2a-4af7-8c4b-a59030f220ea"/>
+    </producedTypes>
+    <name>СписокВалют</name>
+    <synonym>
+      <key>ru</key>
+      <value>Список валют</value>
+    </synonym>
+    <synonym>
+      <key>uk</key>
+      <value>Список валют</value>
+    </synonym>
+    <attributes uuid="4ccb7c4f-0532-490c-94cb-ad82c4462b4c">
+      <name>Валюта</name>
+      <synonym>
+        <key>ru</key>
+        <value>Валюта</value>
+      </synonym>
+      <synonym>
+        <key>uk</key>
+        <value>Валюта</value>
+      </synonym>
+      <type>
+        <types>CatalogRef.Валюты</types>
+      </type>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <fillValue xsi:type="core:UndefinedValue"/>
+    </attributes>
+    <attributes uuid="d27c0c8d-eb5b-411c-be8c-7e99646b7949">
+      <name>Пометка</name>
+      <synonym>
+        <key>ru</key>
+        <value>Пометка</value>
+      </synonym>
+      <synonym>
+        <key>uk</key>
+        <value>Позначка</value>
+      </synonym>
+      <type>
+        <types>Boolean</types>
+      </type>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <fillValue xsi:type="core:UndefinedValue"/>
+    </attributes>
+  </tabularSections>
+  <forms uuid="c83f31c1-9ba5-4d5a-933a-3b8cc68b4e3c">
+    <name>Форма</name>
+    <synonym>
+      <key>ru</key>
+      <value>Форма</value>
+    </synonym>
+    <synonym>
+      <key>uk</key>
+      <value>Форма</value>
+    </synonym>
+    <formType>Ordinary</formType>
+    <usePurposes>PersonalComputer</usePurposes>
+    <usePurposes>MobileDevice</usePurposes>
+  </forms>
+  <forms uuid="03f13571-6f1b-4c1c-8200-2c52dcbeb942">
+    <name>ФормаОшибки</name>
+    <synonym>
+      <key>ru</key>
+      <value>Форма ошибки</value>
+    </synonym>
+    <synonym>
+      <key>uk</key>
+      <value>Форма помилки</value>
+    </synonym>
+    <formType>Ordinary</formType>
+    <usePurposes>PersonalComputer</usePurposes>
+    <usePurposes>MobileDevice</usePurposes>
+  </forms>
+  <forms uuid="646f0d53-a2f5-45fd-a3ce-6461fde53ddd">
+    <name>ФормаОжидания</name>
+    <synonym>
+      <key>ru</key>
+      <value>Форма ожидания</value>
+    </synonym>
+    <synonym>
+      <key>uk</key>
+      <value>Форма очікування</value>
+    </synonym>
+    <formType>Ordinary</formType>
+    <usePurposes>PersonalComputer</usePurposes>
+    <usePurposes>MobileDevice</usePurposes>
+  </forms>
+</mdclass:DataProcessor>

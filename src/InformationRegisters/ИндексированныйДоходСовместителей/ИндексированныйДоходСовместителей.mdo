@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:InformationRegister xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:core="http://g5.1c.ru/v8/dt/mcore" xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="cf2e698e-3772-4c03-aae3-d6aa8234e6b9">
+  <producedTypes>
+    <selectionType typeId="80d23262-6329-4456-8b33-1979eb08371d" valueTypeId="945e7217-8483-4231-922d-4e4f359b7694"/>
+    <listType typeId="2c69e5a8-3c67-40b6-b648-6b8701026fbc" valueTypeId="a26a02d2-cf5c-47a4-8d80-c247a87493f0"/>
+    <managerType typeId="805c78e7-92d0-4292-bb9b-3c28bd08dff1" valueTypeId="3159fd7f-fbd3-4f43-8c63-e8390dc5844e"/>
+    <recordSetType typeId="9b6dd2a0-94bc-4573-9dea-7d226b828f18" valueTypeId="89868a74-114d-41c5-b105-f74d05e46ef2"/>
+    <recordKeyType typeId="ad77e972-dd35-469d-86aa-c023c852727b" valueTypeId="31298065-fa64-4522-b16b-ee67f6df691c"/>
+    <recordType typeId="3bdcda51-781d-4df8-930f-96f14c965576" valueTypeId="43160b85-7990-4027-8395-059406785e02"/>
+    <recordManagerType typeId="b33e30d6-809c-4d80-b468-682856987b71" valueTypeId="77ebf8be-0734-4c3d-80a6-921938be93a8"/>
+  </producedTypes>
+  <name>ИндексированныйДоходСовместителей</name>
+  <synonym>
+    <key>ru</key>
+    <value>Индексированный доход совместителей</value>
+  </synonym>
+  <defaultListForm>InformationRegister.ИндексированныйДоходСовместителей.Form.ФормаСписка</defaultListForm>
+  <informationRegisterPeriodicity>Month</informationRegisterPeriodicity>
+  <writeMode>RecorderSubordinate</writeMode>
+  <resources uuid="df239feb-e299-4aea-9057-01db5fda6b9e">
+    <name>БазаИндексации</name>
+    <synonym>
+      <key>ru</key>
+      <value>База индексации</value>
+    </synonym>
+    <type>
+      <types>Number</types>
+      <numberQualifiers>
+        <precision>15</precision>
+        <scale>2</scale>
+        <nonNegative>true</nonNegative>
+      </numberQualifiers>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:UndefinedValue"/>
+  </resources>
+  <resources uuid="e65fd939-e6b3-486b-9e14-4a213a88aaf4">
+    <name>Индексация</name>
+    <synonym>
+      <key>ru</key>
+      <value>Индексация</value>
+    </synonym>
+    <type>
+      <types>Number</types>
+      <numberQualifiers>
+        <precision>15</precision>
+        <scale>2</scale>
+      </numberQualifiers>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:UndefinedValue"/>
+  </resources>
+  <dimensions uuid="80f67db4-ac73-40df-a613-b7b941ea44ca">
+    <name>Организация</name>
+    <synonym>
+      <key>ru</key>
+      <value>Организация</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.Организации</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <indexing>Index</indexing>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillFromFillingValue>true</fillFromFillingValue>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <mainFilter>true</mainFilter>
+  </dimensions>
+  <dimensions uuid="cc32bb49-8dba-4cbc-b029-b3d9b8b5e0fa">
+    <name>ДатаДействия</name>
+    <synonym>
+      <key>ru</key>
+      <value>Дата действия</value>
+    </synonym>
+    <type>
+      <types>Date</types>
+      <dateQualifiers>
+        <dateFractions>Date</dateFractions>
+      </dateQualifiers>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillFromFillingValue>true</fillFromFillingValue>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <mainFilter>true</mainFilter>
+  </dimensions>
+  <dimensions uuid="71625e17-dd85-4666-85d2-185345e45d37">
+    <name>Сотрудник</name>
+    <synonym>
+      <key>ru</key>
+      <value>Сотрудник</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.СотрудникиОрганизаций</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillFromFillingValue>true</fillFromFillingValue>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <mainFilter>true</mainFilter>
+  </dimensions>
+  <forms uuid="9e0208dd-1bb7-454a-a273-944851666208">
+    <name>ФормаСписка</name>
+    <synonym>
+      <key>ru</key>
+      <value>Форма списка</value>
+    </synonym>
+    <formType>Ordinary</formType>
+    <usePurposes>PersonalComputer</usePurposes>
+    <usePurposes>MobileDevice</usePurposes>
+  </forms>
+</mdclass:InformationRegister>

@@ -1,0 +1,168 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:AccumulationRegister xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:core="http://g5.1c.ru/v8/dt/mcore" xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="b6746019-bba6-4f4d-9481-57cfd9b4a333">
+  <producedTypes>
+    <selectionType typeId="f66f833f-b77f-4035-940f-66934e3835e5" valueTypeId="b02f4e0b-7d50-46a1-87e6-e7c12850adf1"/>
+    <listType typeId="0cf482f3-4b52-4b96-a8a5-f9874399bd71" valueTypeId="1c9fc4cc-26c3-45d9-a3fb-cfd77f2da730"/>
+    <managerType typeId="e6d17732-5e5f-4139-b38a-e0494ef5b653" valueTypeId="ac317888-3868-49d2-acad-d09186ddeb1b"/>
+    <recordSetType typeId="6fcf582d-5fc0-47d3-baca-3e6fb40ea4e1" valueTypeId="8f6be87b-90c9-4573-8878-be8b74a0c75d"/>
+    <recordKeyType typeId="f5516a0c-181f-4a07-99e5-a218e403e9db" valueTypeId="be8c3823-fc55-4bbb-b211-d20362ed0916"/>
+    <recordType typeId="aec97095-07d8-4eef-b2df-35ceff5a06e4" valueTypeId="06294428-0918-4b4d-a694-44b09360f99c"/>
+  </producedTypes>
+  <name>КонтролируемыеЗначенияБюджетов</name>
+  <synonym>
+    <key>ru</key>
+    <value>Контролируемые значения бюджетов</value>
+  </synonym>
+  <comment>(Упр)</comment>
+  <registerType>Turnovers</registerType>
+  <enableTotalsSplitting>true</enableTotalsSplitting>
+  <resources uuid="e0a4523e-f245-416f-a6c2-7b8e35a12428">
+    <name>СуммаСценарияКонтроль</name>
+    <synonym>
+      <key>ru</key>
+      <value>Сумма сценария контроль</value>
+    </synonym>
+    <comment>Сумма в валюте сценария</comment>
+    <type>
+      <types>Number</types>
+      <numberQualifiers>
+        <precision>15</precision>
+        <scale>2</scale>
+      </numberQualifiers>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+  </resources>
+  <resources uuid="5a46b16c-c894-474f-89aa-c45a451d1fde">
+    <name>СуммаСценарияИсполнение</name>
+    <synonym>
+      <key>ru</key>
+      <value>Сумма сценария исполнение</value>
+    </synonym>
+    <comment>Сумма в валюте сценария</comment>
+    <type>
+      <types>Number</types>
+      <numberQualifiers>
+        <precision>15</precision>
+        <scale>2</scale>
+      </numberQualifiers>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+  </resources>
+  <dimensions uuid="2d99066f-ba39-4cb6-8d41-7210279ef4a7">
+    <name>Сценарий</name>
+    <synonym>
+      <key>ru</key>
+      <value>Сценарий</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.СценарииПланирования</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <useInTotals>true</useInTotals>
+  </dimensions>
+  <dimensions uuid="8a098543-587b-495f-a711-1329af8607eb">
+    <name>КонтролирующийСценарий</name>
+    <synonym>
+      <key>ru</key>
+      <value>Контролирующий сценарий</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.СценарииПланирования</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <useInTotals>true</useInTotals>
+  </dimensions>
+  <dimensions uuid="e5ec2a98-b0e4-469e-b0f7-69358c6d7c22">
+    <name>ИспользованиеКонтролируемогоЗначения</name>
+    <synonym>
+      <key>ru</key>
+      <value>Использование контролируемого значения</value>
+    </synonym>
+    <type>
+      <types>EnumRef.ИспользованиеКонтролируемыхЗначенийБюджетов</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <useInTotals>true</useInTotals>
+  </dimensions>
+  <dimensions uuid="af1e673a-1df5-4ff1-b453-f5383976db1b">
+    <name>СтатьяОборотов</name>
+    <synonym>
+      <key>ru</key>
+      <value>Статья оборотов</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.СтатьиОборотовПоБюджетам</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <useInTotals>true</useInTotals>
+  </dimensions>
+  <dimensions uuid="2d0b68c7-5b54-4df2-949e-7102c93ed919">
+    <name>ЦФО</name>
+    <synonym>
+      <key>ru</key>
+      <value>ЦФО</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.Подразделения</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <useInTotals>true</useInTotals>
+  </dimensions>
+  <dimensions uuid="bb365d72-62ab-4a68-9f41-ef5eba0760a7">
+    <name>Проект</name>
+    <synonym>
+      <key>ru</key>
+      <value>Проект</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.Проекты</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <useInTotals>true</useInTotals>
+  </dimensions>
+  <dimensions uuid="fb062b27-a05e-4b49-b470-1a22cc34781f">
+    <name>Контрагент</name>
+    <synonym>
+      <key>ru</key>
+      <value>Контрагент</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.Контрагенты</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <useInTotals>true</useInTotals>
+  </dimensions>
+  <dimensions uuid="1ba3fceb-110f-4cb1-8dfb-a965cbc6e066">
+    <name>Номенклатура</name>
+    <synonym>
+      <key>ru</key>
+      <value>Номенклатура</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.НоменклатурныеГруппы</types>
+      <types>CatalogRef.Номенклатура</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <useInTotals>true</useInTotals>
+  </dimensions>
+</mdclass:AccumulationRegister>
